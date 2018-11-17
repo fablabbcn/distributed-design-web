@@ -1,47 +1,53 @@
 <?php
 /**
- * Template part for Members layout 
+ * Template part for Members layout
  */
+
+$list    = get_sub_field( 'List' );
+$caption = get_sub_field( 'caption' );
 
 ?>
 
-<?php $list = get_sub_field('List'); 
-$caption = get_sub_field('caption'); ?>
-<?php if ($caption): ?>
+
+<?php if ( $caption ) : ?>
 	<header class="page-header">
 		<div class="container-fluid">
-			<h2><?php echo $caption ?></h2>
+			<h2><?php echo $caption; ?></h2>
 		</div>
-	</header><!-- / page-header -->
+	</header>
 <?php endif ?>
 
-<?php if ($list): ?>
-<ul class="member-list">
-	<?php foreach ($list as $key => $item): ?>
+<?php if ( $list ) : ?>
+	<ul class="member-list">
+	<?php foreach ( $list as $key => $item ) : ?>
+
 		<li>
 			<div class="hold">
 				<?php
 
 				$link_html = '<a href="#">';
 
-				if ($item['add_link']) {
-					if ($item['link']['external_link']) {
-						$link_html = '<a class="link-to" href="'.$item['link']['url'].'" target="_blank">';
-					} else {
-						$link_html = '<a class="link-to" href="'.$item['link']['page_link'].'">';
-					}
-				} ?>
-				<?php echo $link_html; ?><?php echo $item['title'] ?></a>
-				<?php if ($item['text'] ): ?>					
-					<div class="descr">
-						<div class="descr-in">
-							<?php echo $item['text'] ?>
-						</div>
-					</div>					
-				<?php endif ?>
-				
+				if ( $item['add_link'] ) {
+					$link_html = $item['link']['external_link']
+						? '<a class="link-to" href="' . $item['link']['url'] . '" target="_blank">'
+						: '<a class="link-to" href="' . $item['link']['page_link'] . '">';
+				}
+
+				echo $link_html;
+				echo $item['title'];
+				echo '</a>';
+
+				?>
+
+			<?php if ( $item['text'] ) : ?>
+				<div class="descr">
+					<div class="descr-in"><?php echo $item['text']; ?></div>
+				</div>
+			<?php endif ?>
+
 			</div>
-		</li>	
+		</li>
+
 	<?php endforeach ?>
-</ul><!-- / member-list -->
+	</ul>
 <?php endif ?>

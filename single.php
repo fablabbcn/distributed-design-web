@@ -2,126 +2,115 @@
 /**
  * The template for displaying all single posts
  */
-get_header();
+get_header(); ?>
 
 
-?>
-
-	<div class="base-col">
-		<header class="resources-header">
-			<div class="bootstrap-wrapper">
-				<div class="row resources-filter">
-					<div class="col-12 tl today-date">
-						<?php the_title('<h1>','</h1>'); ?>
-					</div>
+<div class="base-col">
+	<header class="resources-header">
+		<div class="bootstrap-wrapper">
+			<div class="row resources-filter">
+				<div class="col-12 tl today-date">
+					<?php the_title( '<h1>', '</h1>' ); ?>
 				</div>
 			</div>
-		</header>
-	</div><!-- / base-col -->
-	<div class="col">
+		</div>
+	</header>
+</div>
 
-</div><!-- / col -->
+<div class="col"></div>
 
-		<?php while ( have_posts() ) : the_post(); /* Start the Loop */?>
+
+<?php while ( have_posts() ) : ?>
+	<?php the_post(); ?>
+
+	<div class="cf bootstrap-wrapper post-content">
+		<div class="row row-eq-height">
+			<div class="fl single_first-column">
+				<p class="b"><?php the_field( 'left_column_heading' ); ?></p>
+				<p>-</p>
+				<p><?php the_field( 'left_column_subheading' ); ?></p>
+				<p class="absolute bottom-2 b"><?php the_field( 'left_column_bottom' ); ?></p>
+			</div>
+			<div class="fl single_second-column" style="background: url('<?php the_post_thumbnail_url(); ?>') center no-repeat; background-size: cover;">
+				<?php the_post_thumbnail(); ?>
+			</div>
+			<div class="fl single_third-column">
+				<a href="/news">
+					<span class="goback-icon"><?php include get_template_directory() . '/assets/images/read-more.svg'; ?></span>
+					<p class="b dib goback-text">Back</p>
+				</a>
+			</div>
+		</div>
+	</div>
+
+
+	<?php while ( the_flexible_field( 'post_content' ) ) : ?>
+
+		<?php if ( 'text_content' == get_row_layout() ) : ?>
 
 			<div class="cf bootstrap-wrapper post-content">
 				<div class="row row-eq-height">
-			    <div class="fl single_first-column">
-			      <p class="b"><?php the_field('left_column_heading'); ?></p>
-						<p>-</p>
-						<p><?php the_field('left_column_subheading'); ?></p>
-						<p class="absolute bottom-2 b"><?php the_field('left_column_bottom'); ?></p>
-			    </div>
-			    <div class="fl single_second-column" style="background: url('<?php the_post_thumbnail_url(); ?>') center no-repeat; background-size: cover;">
-						<?php the_post_thumbnail(); ?>
-			    </div>
-					<div class="fl single_third-column">
-						 <a href="/news"><span class="goback-icon"><?php include( get_template_directory() . '/assets/images/read-more.svg'); ?></span><p class="b dib goback-text">Back</p></a>
-			    </div>
+					<div class="fl single_first-column">&nbsp;</div>
+					<div class="fl single_second-column content-column"><?php the_sub_field( 'text' ); ?></div>
+					<div class="fl single_third-column">&nbsp;</div>
 				</div>
-		  </div>
+			</div>
 
 
-			<?php while(the_flexible_field("post_content")): ?>
+		<?php elseif ( 'image_content' == get_row_layout() ) : ?>
 
-				<?php if(get_row_layout() == "text_content"): ?>
-
-					<div class="cf bootstrap-wrapper post-content">
-						<div class="row row-eq-height">
-							<div class="fl single_first-column">
-								&nbsp;
-							</div>
-							<div class="fl single_second-column content-column">
-								<?php the_sub_field("text"); ?>
-							</div>
-							<div class="fl single_third-column">
-								&nbsp;
-							</div>
-						</div>
+			<div class="cf bootstrap-wrapper post-content">
+				<div class="row row-eq-height">
+					<div class="fl single_first-column">
+						<p class="b"><?php the_sub_field( 'heading' ); ?></p>
+						<p>-</p>
+						<p><?php the_sub_field( 'sub_heading' ); ?></p>
+						<p class="absolute bottom-2 b"><?php the_sub_field( 'bottom' ); ?></p>
 					</div>
+					<div class="fl single_second-column" style="background: url('<?php the_sub_field( 'image' ); ?>') center no-repeat; background-size: cover;">
+						<?php the_post_thumbnail(); ?>
+					</div>
+					<div class="fl single_third-column">&nbsp;</div>
+				</div>
+			</div>
 
-				<?php elseif(get_row_layout() == "image_content"): ?>
 
-					<div class="cf bootstrap-wrapper post-content">
-						<div class="row row-eq-height">
-					    <div class="fl single_first-column">
-					      <p class="b"><?php the_sub_field("heading"); ?></p>
-								<p>-</p>
-								<p><?php the_sub_field("sub_heading"); ?></p>
-								<p class="absolute bottom-2 b"><?php the_sub_field("bottom"); ?></p>
-					    </div>
-					    <div class="fl single_second-column" style="background: url('<?php the_sub_field('image'); ?>') center no-repeat; background-size: cover;">
-								<?php the_post_thumbnail(); ?>
-					    </div>
-							<div class="fl single_third-column">
-								 &nbsp;
-					    </div>
+		<?php elseif ( 'slider_content' == get_row_layout() ) : ?>
+
+			<div class="cf bootstrap-wrapper post-content">
+				<div class="row row-eq-height">
+					<div class="fl single_first-column">
+						<p class="b"><?php the_sub_field( 'heading' ); ?></p>
+						<p>-</p>
+						<p><?php the_sub_field( 'sub_heading' ); ?></p>
+						<p class="absolute bottom-2 b"><?php the_sub_field( 'bottom' ); ?></p>
+					</div>
+					<div class="fl single_slider-column">
+						<?php $images = get_sub_field( 'image' ); ?>
+					<?php if ( $images ) : ?>
+						<div class="post-slider">
+						<?php foreach ( $images as $image ) : ?>
+							<div><img src="<?php echo $image['url']; ?>"/></div>
+						<?php endforeach; ?>
 						</div>
-				  </div>
-
-				<?php elseif(get_row_layout() == "slider_content"): ?>
-
-					<div class="cf bootstrap-wrapper post-content">
-						<div class="row row-eq-height">
-					    <div class="fl single_first-column">
-					      <p class="b"><?php the_sub_field("heading"); ?></p>
-								<p>-</p>
-								<p><?php the_sub_field("sub_heading"); ?></p>
-								<p class="absolute bottom-2 b"><?php the_sub_field("bottom"); ?></p>
-					    </div>
-					    <div class="fl single_slider-column">
+					<?php endif; ?>
+					</div>
+					<div class="fl single_third-column">&nbsp;</div>
+				</div>
+			</div>
 
 
-								<?php $images = get_sub_field('image');
-
-									if( $images ): ?>
-									    <div class="post-slider">
-						            <?php foreach( $images as $image ): ?>
-						               <div><img src="<?php echo $image['url']; ?>"/></div>
-						            <?php endforeach; ?>
-									    </div>
-									 <?php endif; ?>
+		<?php endif; ?>
+	<?php endwhile; ?>
+<?php endwhile; ?>
 
 
-					    </div>
-							<div class="fl single_third-column">
-								 &nbsp;
-					    </div>
-						</div>
-				  </div>
+<?php if ( have_rows( 'flexible_content', get_option( 'page_on_front' ) ) ) : ?>
+<?php while ( have_rows( 'flexible_content', get_option( 'page_on_front' ) ) ) : ?>
+	<?php the_row(); ?>
+	<?php set_query_var( 'layout', $layout ); ?>
+	<?php get_template_part( 'template-parts/blocks/acf-flexible-content/layout', 'logos' ); ?>
+<?php endwhile; ?>
+<?php endif; ?>
 
-
-				<?php endif; ?>
-
-			<?php endwhile; ?>
-
-
-		<?php endwhile; ?>
-
-		<?php if( have_rows('flexible_content', get_option('page_on_front')) ):
-		      while ( have_rows('flexible_content', get_option('page_on_front')) ) : the_row(); ?>
-		      <?php set_query_var('layout', $layout); ?>
-		      <?php get_template_part( 'template-parts/blocks/acf-flexible-content/layout', 'logos');  ?>
-		      <?php endwhile;
-		  endif;  ?>
 <?php get_footer(); ?>

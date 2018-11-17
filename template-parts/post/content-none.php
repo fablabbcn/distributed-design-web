@@ -6,4 +6,4 @@
 ?>
 
 
-<h1><?php _e( 'Nothing was found', 'ddmp' ); ?></h1>				
+<h1><?php _e( 'Nothing was found', 'ddmp' ); ?></h1>
