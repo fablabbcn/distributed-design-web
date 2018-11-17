@@ -1,13 +1,13 @@
 .bootstrap-wrapper {
   /**
- * Bootstrap overrides
- */
+   * Bootstrap overrides
+   */
 }
 
 .bootstrap-wrapper .clearfix::after {
   display: block;
   clear: both;
-  content: "";
+  content: '';
 }
 
 .bootstrap-wrapper .visible {

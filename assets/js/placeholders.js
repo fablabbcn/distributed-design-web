@@ -2,46 +2,43 @@
  * @see http://github.com/NV/placeholder.js
  */
 jQuery.fn.textPlaceholder = function () {
+  return this.each(function () {
+    var that = this
 
-	return this.each(function(){
+    if (that.placeholder && 'placeholder' in document.createElement(that.tagName)) return
 
-		var that = this;
+    var placeholder = that.getAttribute('placeholder')
+    var input = jQuery(that)
 
-		if (that.placeholder && 'placeholder' in document.createElement(that.tagName)) return;
+    if (that.value === '' || that.value == placeholder) {
+      input.addClass('text-placeholder')
+      that.value = placeholder
+    }
 
-		var placeholder = that.getAttribute('placeholder');
-		var input = jQuery(that);
+    input.focus(function () {
+      if (input.hasClass('text-placeholder')) {
+        this.value = ''
+        input.removeClass('text-placeholder')
+      }
+    })
 
-		if (that.value === '' || that.value == placeholder) {
-			input.addClass('text-placeholder');
-			that.value = placeholder;
-		}
+    input.blur(function () {
+      if (this.value === '') {
+        input.addClass('text-placeholder')
+        this.value = placeholder
+      } else {
+        input.removeClass('text-placeholder')
+      }
+    })
 
-		input.focus(function(){
-			if (input.hasClass('text-placeholder')) {
-				this.value = '';
-				input.removeClass('text-placeholder')
-			}
-		});
+    that.form && jQuery(that.form).submit(function () {
+      if (input.hasClass('text-placeholder')) {
+        that.value = ''
+      }
+    })
+  })
+}
 
-		input.blur(function(){
-			if (this.value === '') {
-				input.addClass('text-placeholder');
-				this.value = placeholder;
-			} else {
-				input.removeClass('text-placeholder');
-			}
-		});
-
-		that.form && jQuery(that.form).submit(function(){
-			if (input.hasClass('text-placeholder')) {
-				that.value = '';
-			}
-		});
-
-	});
-
-};
-$(document).ready(function(){
-	$("[placeholder]").textPlaceholder();
-});
+jQuery(document).ready(function () {
+  jQuery('[placeholder]').textPlaceholder()
+})
