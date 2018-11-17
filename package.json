@@ -1,0 +1,54 @@
+{
+  "name": "llos-template",
+  "version": "0.1.0",
+  "description": "LLOS& WordPress theme template",
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "repository": "git+https://gitlab.com/llos/template.git",
+  "keywords": [
+    "llos&",
+    "wordpress",
+    "template",
+    "theme"
+  ],
+  "author": "LLOS&",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/llos/template/issues"
+  },
+  "homepage": "https://gitlab.com/llos/template#README",
+  "dependencies": {
+    "swiper": "^4.4.1"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.1.0",
+    "autoprefixer": "^9.3.1",
+    "del": "^3.0.0",
+    "eslint": "^5.7.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-wp-pot": "^2.3.2",
+    "perfectionist": "^2.4.0",
+    "postcss-easing-gradients": "^3.0.1",
+    "postcss-fontpath": "^1.0.0",
+    "postcss-import": "^12.0.1",
+    "postcss-inline-svg": "^3.1.1",
+    "postcss-preset-env": "^6.2.0",
+    "purgecss-with-wordpress": "^1.0.0",
+    "stylelint": "^9.6.0",
+    "stylelint-config-standard": "^18.2.0",
+    "tailwindcss": "^0.6.6"
+  },
+  "main": "index.js"
+}
