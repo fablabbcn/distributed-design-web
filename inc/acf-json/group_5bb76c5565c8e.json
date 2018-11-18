@@ -1,6 +1,6 @@
 {
     "key": "group_5bb76c5565c8e",
-    "title": "News",
+    "title": "Post: News",
     "fields": [
         {
             "key": "field_5bb76c5af2013",
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542560674
+    "modified": 1542564076
 }

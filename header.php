@@ -20,7 +20,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/beefup@1.1.7/dist/js/jquery.beefup.min.js"></script>
 	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class( 'leading-normal font-aileron' ); ?>>
 
 	<b class="animsition-loading"></b>
 

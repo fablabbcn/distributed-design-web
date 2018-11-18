@@ -20,8 +20,13 @@ const colors = {
   'transparent': 'transparent',
   'current': 'currentColor',
   'inherit': 'inherit',
-  'black': '#000',
-  'white': '#fff',
+  'black': 'black',
+  'white': 'white',
+  'red': 'red',
+  'lime': 'lime',
+  'cyan': 'cyan',
+  'magenta': 'magenta',
+  'yellow': 'yellow',
 }
 
 const spacing = {
@@ -73,7 +78,8 @@ module.exports = {
   },
 
   fonts: {
-    'sans': [
+    'aileron': [
+      'Aileron',
       'system-ui',
       'BlinkMacSystemFont',
       '-apple-system',
@@ -87,25 +93,20 @@ module.exports = {
       'Helvetica Neue',
       'sans-serif',
     ],
-    'serif': [
-      'Constantia',
-      'Lucida Bright',
-      'Lucidabright',
-      'Lucida Serif',
-      'Lucida',
-      'DejaVu Serif',
-      'Bitstream Vera Serif',
-      'Liberation Serif',
-      'Georgia',
-      'serif',
-    ],
-    'mono': [
-      'Menlo',
-      'Monaco',
-      'Consolas',
-      'Liberation Mono',
-      'Courier New',
-      'monospace',
+    'nimbus': [
+      'NimbusSanL',
+      'system-ui',
+      'BlinkMacSystemFont',
+      '-apple-system',
+      'Segoe UI',
+      'Roboto',
+      'Oxygen',
+      'Ubuntu',
+      'Cantarell',
+      'Fira Sans',
+      'Droid Sans',
+      'Helvetica Neue',
+      'sans-serif',
     ],
   },
 
@@ -135,8 +136,8 @@ module.exports = {
 
   leading: {
     'none': 1,
-    'tight': 1.25,
-    'normal': 1.5,
+    // 'tight': 1.1,
+    'normal': 1.2,
     'loose': 2,
   },
 
@@ -285,7 +286,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: false,
-    backgroundColors: [],
+    backgroundColors: ['group-hover'],
     backgroundPosition: false,
     backgroundRepeat: false,
     backgroundSize: false,

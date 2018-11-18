@@ -5,14 +5,14 @@ module.exports = {
   rules: {
     'at-rule-empty-line-before': [
       'always', {
-        'except': ['blockless-after-same-name-blockless', 'first-nested'],
-        'ignore': ['after-comment'],
-        'ignoreAtRules': ['apply', 'screen'],
+        except: ['inside-block', 'blockless-after-same-name-blockless', 'first-nested'],
+        ignore: ['after-comment'],
+        ignoreAtRules: ['apply', 'screen', 'font-face'],
       },
     ],
     'at-rule-no-unknown': [
       true, {
-        'ignoreAtRules': ['tailwind', 'variants', 'responsive', 'apply', 'screen'],
+        ignoreAtRules: ['tailwind', 'variants', 'responsive', 'apply', 'screen'],
       },
     ],
     'property-no-unknown': [

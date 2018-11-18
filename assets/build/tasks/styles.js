@@ -2,7 +2,7 @@ var gulp = require('gulp')
 var rename = require('gulp-rename')
 var postcss = require('gulp-postcss')
 var atImport = require('postcss-import')
-// var fontPath = require('postcss-fontpath')
+var fontPath = require('postcss-fontpath')
 var tailwindcss = require('tailwindcss')
 // var easingGradients = require('postcss-easing-gradients')
 var inlineSvg = require('postcss-inline-svg')
@@ -76,7 +76,7 @@ function styles () {
   return gulp.src(paths.src)
     .pipe(postcss([
       atImport(config.atImport),
-      // fontPath(config.fontPath),
+      fontPath(config.fontPath),
       tailwindcss(config.tailwind),
       // easingGradients(config.easingGradients),
       // inlineSvg(config.inlineSvg),

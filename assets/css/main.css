@@ -1,3 +1,115 @@
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 100;
+  font-style: normal;
+  src: url("../fonts/aileron/Aileron-UltraLight-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/aileron/Aileron-Thin-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 300;
+  font-style: normal;
+  src: url("../fonts/aileron/Aileron-Light-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/aileron/Aileron-Regular-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/aileron/Aileron-SemiBold-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 700;
+  font-style: normal;
+  src: url("../fonts/aileron/Aileron-Bold-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 800;
+  font-style: normal;
+  src: url("../fonts/aileron/Aileron-Heavy-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 900;
+  font-style: normal;
+  src: url("../fonts/aileron/Aileron-Black-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 100;
+  font-style: italic;
+  src: url("../fonts/aileron/Aileron-UltraLight-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 200;
+  font-style: italic;
+  src: url("../fonts/aileron/Aileron-Thin-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 300;
+  font-style: italic;
+  src: url("../fonts/aileron/Aileron-Light-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 400;
+  font-style: italic;
+  src: url("../fonts/aileron/Aileron-Regular-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 600;
+  font-style: italic;
+  src: url("../fonts/aileron/Aileron-SemiBold-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 700;
+  font-style: italic;
+  src: url("../fonts/aileron/Aileron-Bold-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 800;
+  font-style: italic;
+  src: url("../fonts/aileron/Aileron-Heavy-webfont.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'Aileron';
+  font-weight: 900;
+  font-style: italic;
+  src: url("../fonts/aileron/Aileron-Black-webfont.woff") format('woff');
+}
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -579,11 +691,71 @@ table {
 }
 
 .bg-black {
-  background-color: #000;
+  background-color: black;
 }
 
 .bg-white {
-  background-color: #fff;
+  background-color: white;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-lime {
+  background-color: lime;
+}
+
+.bg-cyan {
+  background-color: cyan;
+}
+
+.bg-magenta {
+  background-color: magenta;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.group:hover .group-hover\:bg-transparent {
+  background-color: transparent;
+}
+
+.group:hover .group-hover\:bg-current {
+  background-color: currentColor;
+}
+
+.group:hover .group-hover\:bg-inherit {
+  background-color: inherit;
+}
+
+.group:hover .group-hover\:bg-black {
+  background-color: black;
+}
+
+.group:hover .group-hover\:bg-white {
+  background-color: white;
+}
+
+.group:hover .group-hover\:bg-red {
+  background-color: red;
+}
+
+.group:hover .group-hover\:bg-lime {
+  background-color: lime;
+}
+
+.group:hover .group-hover\:bg-cyan {
+  background-color: cyan;
+}
+
+.group:hover .group-hover\:bg-magenta {
+  background-color: magenta;
+}
+
+.group:hover .group-hover\:bg-yellow {
+  background-color: yellow;
 }
 
 .border-collapse {
@@ -607,11 +779,31 @@ table {
 }
 
 .border-black {
-  border-color: #000;
+  border-color: black;
 }
 
 .border-white {
-  border-color: #fff;
+  border-color: white;
+}
+
+.border-red {
+  border-color: red;
+}
+
+.border-lime {
+  border-color: lime;
+}
+
+.border-cyan {
+  border-color: cyan;
+}
+
+.border-magenta {
+  border-color: magenta;
+}
+
+.border-yellow {
+  border-color: yellow;
 }
 
 .border-0 {
@@ -978,16 +1170,12 @@ table {
   flex-shrink: 0;
 }
 
-.font-sans {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.font-aileron {
+  font-family: Aileron, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.font-serif {
-  font-family: Constantia, Lucida Bright, Lucidabright, Lucida Serif, Lucida, DejaVu Serif, Bitstream Vera Serif, Liberation Serif, Georgia, serif;
-}
-
-.font-mono {
-  font-family: Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+.font-nimbus {
+  font-family: NimbusSanL, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 .font-hairline {
@@ -1102,12 +1290,8 @@ table {
   line-height: 1;
 }
 
-.leading-tight {
-  line-height: 1.25;
-}
-
 .leading-normal {
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .leading-loose {
@@ -2752,11 +2936,31 @@ table {
 }
 
 .text-black {
-  color: #000;
+  color: black;
 }
 
 .text-white {
-  color: #fff;
+  color: white;
+}
+
+.text-red {
+  color: red;
+}
+
+.text-lime {
+  color: lime;
+}
+
+.text-cyan {
+  color: cyan;
+}
+
+.text-magenta {
+  color: magenta;
+}
+
+.text-yellow {
+  color: yellow;
 }
 
 .hover\:text-transparent:hover {
@@ -2772,11 +2976,31 @@ table {
 }
 
 .hover\:text-black:hover {
-  color: #000;
+  color: black;
 }
 
 .hover\:text-white:hover {
-  color: #fff;
+  color: white;
+}
+
+.hover\:text-red:hover {
+  color: red;
+}
+
+.hover\:text-lime:hover {
+  color: lime;
+}
+
+.hover\:text-cyan:hover {
+  color: cyan;
+}
+
+.hover\:text-magenta:hover {
+  color: magenta;
+}
+
+.hover\:text-yellow:hover {
+  color: yellow;
 }
 
 .text-xs {
@@ -3454,12 +3678,8 @@ table {
     line-height: 1;
   }
 
-  .sm\:leading-tight {
-    line-height: 1.25;
-  }
-
   .sm\:leading-normal {
-    line-height: 1.5;
+    line-height: 1.2;
   }
 
   .sm\:leading-loose {
@@ -5004,11 +5224,31 @@ table {
   }
 
   .sm\:text-black {
-    color: #000;
+    color: black;
   }
 
   .sm\:text-white {
-    color: #fff;
+    color: white;
+  }
+
+  .sm\:text-red {
+    color: red;
+  }
+
+  .sm\:text-lime {
+    color: lime;
+  }
+
+  .sm\:text-cyan {
+    color: cyan;
+  }
+
+  .sm\:text-magenta {
+    color: magenta;
+  }
+
+  .sm\:text-yellow {
+    color: yellow;
   }
 
   .sm\:hover\:text-transparent:hover {
@@ -5024,11 +5264,31 @@ table {
   }
 
   .sm\:hover\:text-black:hover {
-    color: #000;
+    color: black;
   }
 
   .sm\:hover\:text-white:hover {
-    color: #fff;
+    color: white;
+  }
+
+  .sm\:hover\:text-red:hover {
+    color: red;
+  }
+
+  .sm\:hover\:text-lime:hover {
+    color: lime;
+  }
+
+  .sm\:hover\:text-cyan:hover {
+    color: cyan;
+  }
+
+  .sm\:hover\:text-magenta:hover {
+    color: magenta;
+  }
+
+  .sm\:hover\:text-yellow:hover {
+    color: yellow;
   }
 
   .sm\:text-xs {
@@ -5598,12 +5858,8 @@ table {
     line-height: 1;
   }
 
-  .md\:leading-tight {
-    line-height: 1.25;
-  }
-
   .md\:leading-normal {
-    line-height: 1.5;
+    line-height: 1.2;
   }
 
   .md\:leading-loose {
@@ -7148,11 +7404,31 @@ table {
   }
 
   .md\:text-black {
-    color: #000;
+    color: black;
   }
 
   .md\:text-white {
-    color: #fff;
+    color: white;
+  }
+
+  .md\:text-red {
+    color: red;
+  }
+
+  .md\:text-lime {
+    color: lime;
+  }
+
+  .md\:text-cyan {
+    color: cyan;
+  }
+
+  .md\:text-magenta {
+    color: magenta;
+  }
+
+  .md\:text-yellow {
+    color: yellow;
   }
 
   .md\:hover\:text-transparent:hover {
@@ -7168,11 +7444,31 @@ table {
   }
 
   .md\:hover\:text-black:hover {
-    color: #000;
+    color: black;
   }
 
   .md\:hover\:text-white:hover {
-    color: #fff;
+    color: white;
+  }
+
+  .md\:hover\:text-red:hover {
+    color: red;
+  }
+
+  .md\:hover\:text-lime:hover {
+    color: lime;
+  }
+
+  .md\:hover\:text-cyan:hover {
+    color: cyan;
+  }
+
+  .md\:hover\:text-magenta:hover {
+    color: magenta;
+  }
+
+  .md\:hover\:text-yellow:hover {
+    color: yellow;
   }
 
   .md\:text-xs {
@@ -7742,12 +8038,8 @@ table {
     line-height: 1;
   }
 
-  .lg\:leading-tight {
-    line-height: 1.25;
-  }
-
   .lg\:leading-normal {
-    line-height: 1.5;
+    line-height: 1.2;
   }
 
   .lg\:leading-loose {
@@ -9292,11 +9584,31 @@ table {
   }
 
   .lg\:text-black {
-    color: #000;
+    color: black;
   }
 
   .lg\:text-white {
-    color: #fff;
+    color: white;
+  }
+
+  .lg\:text-red {
+    color: red;
+  }
+
+  .lg\:text-lime {
+    color: lime;
+  }
+
+  .lg\:text-cyan {
+    color: cyan;
+  }
+
+  .lg\:text-magenta {
+    color: magenta;
+  }
+
+  .lg\:text-yellow {
+    color: yellow;
   }
 
   .lg\:hover\:text-transparent:hover {
@@ -9312,11 +9624,31 @@ table {
   }
 
   .lg\:hover\:text-black:hover {
-    color: #000;
+    color: black;
   }
 
   .lg\:hover\:text-white:hover {
-    color: #fff;
+    color: white;
+  }
+
+  .lg\:hover\:text-red:hover {
+    color: red;
+  }
+
+  .lg\:hover\:text-lime:hover {
+    color: lime;
+  }
+
+  .lg\:hover\:text-cyan:hover {
+    color: cyan;
+  }
+
+  .lg\:hover\:text-magenta:hover {
+    color: magenta;
+  }
+
+  .lg\:hover\:text-yellow:hover {
+    color: yellow;
   }
 
   .lg\:text-xs {
@@ -9886,12 +10218,8 @@ table {
     line-height: 1;
   }
 
-  .xl\:leading-tight {
-    line-height: 1.25;
-  }
-
   .xl\:leading-normal {
-    line-height: 1.5;
+    line-height: 1.2;
   }
 
   .xl\:leading-loose {
@@ -11436,11 +11764,31 @@ table {
   }
 
   .xl\:text-black {
-    color: #000;
+    color: black;
   }
 
   .xl\:text-white {
-    color: #fff;
+    color: white;
+  }
+
+  .xl\:text-red {
+    color: red;
+  }
+
+  .xl\:text-lime {
+    color: lime;
+  }
+
+  .xl\:text-cyan {
+    color: cyan;
+  }
+
+  .xl\:text-magenta {
+    color: magenta;
+  }
+
+  .xl\:text-yellow {
+    color: yellow;
   }
 
   .xl\:hover\:text-transparent:hover {
@@ -11456,11 +11804,31 @@ table {
   }
 
   .xl\:hover\:text-black:hover {
-    color: #000;
+    color: black;
   }
 
   .xl\:hover\:text-white:hover {
-    color: #fff;
+    color: white;
+  }
+
+  .xl\:hover\:text-red:hover {
+    color: red;
+  }
+
+  .xl\:hover\:text-lime:hover {
+    color: lime;
+  }
+
+  .xl\:hover\:text-cyan:hover {
+    color: cyan;
+  }
+
+  .xl\:hover\:text-magenta:hover {
+    color: magenta;
+  }
+
+  .xl\:hover\:text-yellow:hover {
+    color: yellow;
   }
 
   .xl\:text-xs {
