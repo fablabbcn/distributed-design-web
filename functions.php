@@ -120,3 +120,6 @@ require get_parent_theme_file_path( '/inc/duplicate_post.php' );
 
 // Shortcodes
 require get_parent_theme_file_path( '/inc/shortcodes.php' );
+
+// ACF
+require get_parent_theme_file_path( '/inc/acf.php' );
