@@ -1,12 +1,12 @@
 var gulp = require('gulp')
 var rename = require('gulp-rename')
 var postcss = require('gulp-postcss')
-// var atImport = require('postcss-import')
+var atImport = require('postcss-import')
 // var fontPath = require('postcss-fontpath')
 var tailwindcss = require('tailwindcss')
 // var easingGradients = require('postcss-easing-gradients')
 var inlineSvg = require('postcss-inline-svg')
-// var presetEnv = require('postcss-preset-env')
+var presetEnv = require('postcss-preset-env')
 var purgecss = require('@fullhuman/postcss-purgecss')
 var purgecssWordpress = require('purgecss-with-wordpress')
 var autoprefixer = require('autoprefixer')
@@ -20,15 +20,16 @@ class TailwindExtractor {
 }
 
 var paths = {
-  src: 'assets/css/tailwind-setup.pcss',
+  src: 'assets/css/main.pcss',
+  partials: 'assets/css/**/*.pcss',
   dest: 'assets/css/',
-  name: 'tailwind.css',
+  name: 'main.css',
   config: 'tailwind.js',
 }
 
 var config = {
   atImport: {
-    path: ['assets/css'],
+    path: [paths.dest],
   },
   fontPath: {
     checkFiles: true,
@@ -74,12 +75,12 @@ var config = {
 function styles () {
   return gulp.src(paths.src)
     .pipe(postcss([
-      // atImport(config.atImport),
+      atImport(config.atImport),
       // fontPath(config.fontPath),
       tailwindcss(config.tailwind),
       // easingGradients(config.easingGradients),
       // inlineSvg(config.inlineSvg),
-      // presetEnv(config.presetEnv),
+      presetEnv(config.presetEnv),
       // purgecss(config.purgecss),
       autoprefixer(config.autoprefixer),
       perfectionist(config.perfectionist),
@@ -92,6 +93,7 @@ function watchStyles () {
   return gulp.watch([
     paths.config,
     paths.src,
+    paths.partials,
   ], styles)
 }
 

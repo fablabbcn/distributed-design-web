@@ -24,7 +24,7 @@
 
 	<b class="animsition-loading"></b>
 
-	<div class="wrapper loading">
+	<div class="wrapper loading flex flex-col">
 		<header id="header">
 			<div class="container-fluid">
 

@@ -4,7 +4,7 @@
  */
 ?>
 
-<main class="info-section">
+<main class="info-section flex-grow">
 
 	<article class="base-col">
 		<header class="page-header">

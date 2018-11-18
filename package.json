@@ -20,16 +20,16 @@
   },
   "homepage": "https://gitlab.com/llos/template#README",
   "dependencies": {
-    "swiper": "^4.4.1"
+    "swiper": "^4.4.2"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
     "autoprefixer": "^9.3.1",
     "del": "^3.0.0",
-    "eslint": "^5.7.0",
+    "eslint": "^5.9.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "gulp": "^4.0.0",
@@ -44,11 +44,11 @@
     "postcss-fontpath": "^1.0.0",
     "postcss-import": "^12.0.1",
     "postcss-inline-svg": "^3.1.1",
-    "postcss-preset-env": "^6.2.0",
+    "postcss-preset-env": "^6.4.0",
     "purgecss-with-wordpress": "^1.0.0",
-    "stylelint": "^9.6.0",
+    "stylelint": "^9.8.0",
     "stylelint-config-standard": "^18.2.0",
-    "tailwindcss": "^0.6.6"
+    "tailwindcss": "^0.7.2"
   },
   "main": "index.js"
 }
