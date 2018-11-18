@@ -105,12 +105,7 @@ get_header(); ?>
 <?php endwhile; ?>
 
 
-<?php if ( have_rows( 'flexible_content', get_option( 'page_on_front' ) ) ) : ?>
-<?php while ( have_rows( 'flexible_content', get_option( 'page_on_front' ) ) ) : ?>
-	<?php the_row(); ?>
-	<?php set_query_var( 'layout', $layout ); ?>
-	<?php get_template_part( 'template-parts/blocks/acf-flexible-content/layout', 'logos' ); ?>
-<?php endwhile; ?>
-<?php endif; ?>
+<?php set_query_var( 'layout', $layout ); ?>
+<?php get_template_part( 'template-parts/logos' ); ?>
 
 <?php get_footer(); ?>
