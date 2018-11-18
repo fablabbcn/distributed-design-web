@@ -15,7 +15,8 @@ $contact_info = get_theme_mod( 'theme_contact', ( '
 			<div class="footer-address"><?php _e( $contact_info, 'ddmp' ); ?></div>
 			<div class="footer-founding">
 				<span class="tc">
-					<img src="http://distributeddesign.eu/wp-content/uploads/2018/05/CE_LOGO_WEB_RIGHT_small.png" />
+					<img src="http://distributeddesign.eu/wp-content/uploads/2018/05/CE_LOGO_WEB_RIGHT_small.png"
+						alt="Co-funded by the Creative European Programme of the European Union" />
 				</span>
 			</div>
 		</footer>
