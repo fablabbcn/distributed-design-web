@@ -1,0 +1,149 @@
+/* footer */
+#footer {
+	border-top: 2px solid $border-color;
+	.top-part {
+		border-bottom: 2px solid $border-color;
+		text-transform: uppercase;
+		@include media('>=desktop') {
+			@include display-flex();
+		}
+		> * {
+			@include media('>=desktop') {
+				@include flex(0 1 auto);
+				@include display-flex();
+			}
+		}
+		.col {
+			@include media('<desktop') {
+				padding: 10px $grid-gutter-width-mobile/2;
+			}
+			@include media('>=phone', '<desktop') {
+				border-bottom: 2px solid $border-color;
+			}
+			@include media('>=desktop') {
+				width: 396px;
+				text-align: center;
+			}
+		}
+		.logo {
+			font-size: 14px;
+			line-height: 17px;
+			font-family: $poppins;
+			@include media('<desktop') {
+				font-size: 12px;
+			}
+			@include media('>=desktop') {
+				@include display-flex();
+				@include align-items(center);
+				@include justify-content(center);
+				letter-spacing: .04em;
+				width: 100%;
+			}
+			&:hover,
+			&:focus {
+				color: inherit;
+				background-color: $red;
+			}
+			strong {
+				font-weight: 600;
+				margin-right: 3px;
+			}
+		}
+		nav {
+			font-size: 16px;
+			line-height: 21px;
+			@include media('<desktop') {
+				margin-left: -2px;
+				font-size: 12px;
+				line-height: 1.25em;
+			}
+			@include media('<phone') {
+				font-size: 10px;
+			}
+			@include media('>=desktop') {
+				width: calc(100% - 396px);
+			}
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				width: 100%;
+				@include display-flex();
+				@include media('<phone') {
+					@include flex-wrap(wrap);
+				}
+				> li {
+					@include flex(0 1 100%);
+					@include display-flex();
+					border-left: 2px solid $border-color;
+					@include media('<phone') {
+						@include flex(1 1 auto);
+						border-top: 2px solid $border-color;
+					}
+					&.active {
+						> a {
+							color: inherit;
+							background-color: $red;
+						}
+					}
+					> a {
+						display: block;
+						width: 100%;
+						padding: 15px 10px;
+						text-align: center;
+						@include media('<desktop') {
+							padding-top: 11px;
+							padding-bottom: 11px;
+						}
+						&:hover,
+						&:focus {
+							color: inherit;
+							background-color: $red;
+						}
+					}
+				}
+			}
+		}
+	}
+	.bottom-part {
+		text-align: center;
+		font-size: 17px;
+		line-height: 20px;
+		padding-top: 32px;
+		padding-bottom: 23px;
+		@include media('<desktop') {
+			font-size: 12px;
+			line-height: 1.25em;
+			padding-top: 17px;
+			padding-bottom: 18px;
+		}
+		p {
+			margin-bottom: 10px;
+			letter-spacing: -.02em;
+		}
+		.str {
+			display: inline-block;
+			vertical-align: top;
+			&:before {
+				content: '';
+				display: inline-block;
+				vertical-align: top;
+				position: relative;
+				top: 10px;
+				width: 2px;
+				height: 2px;
+				border: 1px solid;
+				margin: 0 4px 0 0;
+				@include media('<desktop') {
+					top: 7px;
+					margin-right: 3px;
+				}
+			}
+			&:first-child {
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+}
