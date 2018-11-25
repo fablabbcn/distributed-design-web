@@ -1,6 +1,10 @@
 (function ($) {
   'use strict'
 
+  // Bind Event Handlers
+  $(document).on('click', '[data-clip]', handleDataClip)
+  $(document).on('click', '[data-toggle]', handleDataToggle)
+
   var screenRes_ = {
     isDesktop: true,
     isTablet: false,
@@ -162,3 +166,64 @@
     })
   })
 })(jQuery)
+
+/**
+ * Data Functions
+ */
+
+function handleDataClip (event) {
+  var button = this
+  var targets = getTargets(button, 'clip')
+  jQuery.each(targets, function (index, object) {
+    var classes = 'clip'
+    var target = jQuery(object.id)
+    var isClipped = target.hasClass(classes)
+    target.toggleClass('clip', !isClipped)
+    button.blur()
+  })
+}
+
+function handleDataToggle (event) {
+  var targets = getTargets(this, 'toggle')
+  jQuery.each(targets, function (index, object) {
+    var classes = {
+      on: getClasses('flex block', object.mq),
+      off: getClasses('hidden', object.mq),
+    }
+    var target = jQuery(object.id)
+    var isHidden = target.hasClass(classes.off)
+
+    target
+      .toggleClass(classes.on.join(' '), isHidden)
+      .toggleClass(classes.off.join(' '), !isHidden)
+  })
+}
+
+/**
+ * Helpers
+ */
+
+function getTargets (node, dataAttrName) {
+  var targetIds = getTargetIds(node, dataAttrName)
+  return targetIds.map(function (target) {
+    var _target$split$reverse = target.split(':').reverse()
+    var id = _target$split$reverse[0]
+    var mq = _target$split$reverse[1]
+    return { mq: mq, id: '[id*="' + id + '"]' }
+  })
+}
+
+function getTargetIds (node, dataAttrName) {
+  return node
+    .getAttribute('data-' + dataAttrName)
+    .split(',')
+    .map(function (targetId) {
+      return targetId.trim()
+    })
+}
+
+function getClasses (cssClasses, mediaQuery) {
+  return cssClasses.split(' ').map(function (cssClass) {
+    return mediaQuery ? mediaQuery + ':' + cssClass : cssClass
+  })
+}

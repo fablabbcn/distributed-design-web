@@ -280,7 +280,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: false,
-    backgroundColors: ['group-hover'],
+    backgroundColors: ['hover', 'group-hover'],
     backgroundPosition: false,
     backgroundRepeat: false,
     backgroundSize: false,

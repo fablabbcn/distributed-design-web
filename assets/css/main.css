@@ -718,6 +718,46 @@ table {
   background-color: yellow;
 }
 
+.hover\:bg-transparent:hover {
+  background-color: transparent;
+}
+
+.hover\:bg-current:hover {
+  background-color: currentColor;
+}
+
+.hover\:bg-inherit:hover {
+  background-color: inherit;
+}
+
+.hover\:bg-black:hover {
+  background-color: black;
+}
+
+.hover\:bg-white:hover {
+  background-color: white;
+}
+
+.hover\:bg-red:hover {
+  background-color: red;
+}
+
+.hover\:bg-lime:hover {
+  background-color: lime;
+}
+
+.hover\:bg-cyan:hover {
+  background-color: cyan;
+}
+
+.hover\:bg-magenta:hover {
+  background-color: magenta;
+}
+
+.hover\:bg-yellow:hover {
+  background-color: yellow;
+}
+
 .group:hover .group-hover\:bg-transparent {
   background-color: transparent;
 }
@@ -3255,6 +3295,34 @@ table {
   background-color: rgba(255, 255, 0, 0.3);
 }
 
+.hover\:bg-black-30:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hover\:bg-white-30:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hover\:bg-red-30:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.hover\:bg-lime-30:hover {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.hover\:bg-cyan-30:hover {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+.hover\:bg-magenta-30:hover {
+  background-color: rgba(255, 0, 255, 0.3);
+}
+
+.hover\:bg-yellow-30:hover {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
 .group:hover .group-hover\:bg-black-30 {
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -3308,6 +3376,34 @@ table {
 }
 
 .bg-yellow-70 {
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+.hover\:bg-black-70:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hover\:bg-white-70:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hover\:bg-red-70:hover {
+  background-color: rgba(255, 0, 0, 0.7);
+}
+
+.hover\:bg-lime-70:hover {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+
+.hover\:bg-cyan-70:hover {
+  background-color: rgba(0, 255, 255, 0.7);
+}
+
+.hover\:bg-magenta-70:hover {
+  background-color: rgba(255, 0, 255, 0.7);
+}
+
+.hover\:bg-yellow-70:hover {
   background-color: rgba(255, 255, 0, 0.7);
 }
 

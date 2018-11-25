@@ -373,7 +373,8 @@ a img.aligncenter {
   margin-left: -1px;
 }
 
-.resources-header h1 {
+.resources-header h1,
+.resources-header h2 {
   line-height: 26px;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   padding: 13px 20px;
@@ -381,10 +382,12 @@ a img.aligncenter {
   font-size: 24px;
 }
 
-.resources-header h1, .resources-header h2, .resources-header h3 {
+.resources-header h1,
+.resources-header h2,
+.resources-header h3 {
   margin-top: 0;
   margin-bottom: 0;
-  letter-spacing: .02em;
+  letter-spacing: 0.02em;
   font-weight: 400;
   line-height: 21px;
 }

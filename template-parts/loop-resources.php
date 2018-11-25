@@ -1,21 +1,42 @@
 <?php
 
-query_posts( 'post_type=resources&order=ASC' );
+$key = 0;
+
+$posts_give_term = new WP_Query( array(
+	'post_type'      => 'resources',
+	'posts_per_page' => '-1',
+	'order'          => 'ASC',
+	'tax_query'      => array(
+		array(
+			'taxonomy' => 'resources_category',
+			'field'    => 'slug',
+			'terms'    => $term,
+		),
+	),
+) );
 
 ?>
 
 
-<?php if ( have_posts() ) : ?>
-<?php while ( have_posts() ) : ?>
-	<?php the_post(); ?>
+<?php if ( $posts_give_term->have_posts() ) : ?>
+<?php while ( $posts_give_term->have_posts() ) : ?>
+	<?php $posts_give_term->the_post(); ?>
+	<?php
 
-	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	$terms     = get_the_terms( get_the_ID(), 'resources_category' );
+	$cat_slugs = array_map( function ( $term ) {
+		return $term->slug;
+	}, $terms );
+
+	?>
+
+	<article data-cat="<?php echo esc_attr( implode( ', ', $cat_slugs ) ); ?>" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="resources-item">
 			<div class="bootstrap-wrapper beefup">
 
 				<div class="row">
 					<div class="number-column tc">
-						<p><?php echo get_post_meta( $post->ID, 'incr_number', true ); ?></p>
+						<p><?php echo ++$key; ?></p>
 					</div>
 					<div class="title-column tl ttu fw6 beefup__head">
 						<p><?php the_title(); ?></p>
@@ -44,8 +65,6 @@ query_posts( 'post_type=resources&order=ASC' );
 			</div>
 		</div>
 	</article>
-	<!-- /article -->
 
 <?php endwhile; ?>
-
 <?php endif; ?>
