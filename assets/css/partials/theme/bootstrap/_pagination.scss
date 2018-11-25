@@ -2,10 +2,10 @@
 // Pagination (multiple pages)
 // --------------------------------------------------
 .pagination {
-  display: inline-block;
-  padding-left: 0;
   margin: $line-height-computed 0;
   border-radius: $border-radius-base;
+  position: absolute;
+  bottom: -105px;
 
   > li {
     display: inline; // Remove list-style and block-level defaults

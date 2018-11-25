@@ -1,191 +1,192 @@
 /* statistics */
 .statistics {
-	position: relative;
-	margin-bottom: 72px;
-	@include media('>=desktop') {
-		@include display-flex();
-		margin-bottom: 124px;
-	}
-	&:before {
-		content: '';
-		position: absolute;
-		top: 100%;
-		left: 0;
-		right: 0;
-		border-bottom: 2px solid $border-color;
-		background: url('#{$images}bg-decor.png') repeat-x 50% 0;
-		background-size: auto 100%;
-		height: 72px;
-		@include media('>=desktop') {
-			height: 124px;
-		}
-	}
-	> * {
-		@include media('>=desktop') {
-			@include flex(0 1 auto);
-		}
-	}
-	&.active {
-		.col {
-			@include media('<desktop') {
-				visibility: visible;
-				opacity: 1;
-			}
-		}
-	}
-	.col {
-		border-bottom: 2px solid $border-color;
-		@include media('<desktop') {
-			@include position-side();
-			z-index: 5;
-			background: $gray;
-			visibility: hidden;
-			opacity: 0;
-			transition: opacity .3s ease;
-			overflow-y: auto;
-		}
-		@include media('>=desktop') {
-			width: 41.21%;
-		}
-	}
-	.tab-pane {
-		padding: 12px 20px 10px $grid-gutter-width/2;
-		font-weight: 700;
-		font-size: 23px;
-		line-height: 26px;
-		@include media('<desktop') {
-			padding-top: 8px;
-			padding-left: $grid-gutter-width-mobile/2;
-			padding-right: 30px;
-			font-size: 15px;
-			line-height: 1.2em;
-		}
-		.heading {
-			@include media('<desktop') {
-				float: left;
-				width: 30vw;
-			}
-		}
-		.btn-close {
-			position: absolute;
-			top: 1px;
-			right: 7px;
-			width: 24px;
-			height: 24px;
-			&:before {
-				content: '';
-				@include position-side();
-				@include rotate(45deg);
-				margin: auto;
-				width: 11px;
-				height: 11px;
-				border-style: solid;
-				border-width: 0 1px 1px 0;
-			}
-			@include media('>=desktop') {
-				display: none;
-			}
-		}
-		.holder {
-			@include media('<desktop') {
-				padding-left: 32.5vw;
-			}
-		}
-		ul {
-			list-style: none;
-			margin: 0 -20px 0 0;
-			padding: 0;
-			font-size: 0;
-			line-height: 0;
-			@include media('>=desktop') {
-				margin-top: 10px;
-				margin-left: -10px;
-			}
-		}
-		li {
-			display: inline-block;
-			vertical-align: top;
-			width: 50%;
-			font-size: 23px;
-			line-height: 26px;
-			padding: 0 20px 3px 0;
-			@include media('<desktop') {
-				font-size: 15px;
-				line-height: 1.2em;
-			}
-			@include media('>=desktop') {
-				padding-left: 10px;
-			}
-		}
-	}
-	.nav {
-		@include display-flex();
-		@include flex-wrap(wrap);
-		@include media('<desktop') {
-			margin-left: -2px;
-		}
-		@include media('>=desktop') {
-			width: 58.79%;
-		}
-		&:before,
-		&:after {
-			display: none;
-		}
-		> li {
-			@include flex(0 1 33.33%);
-			@include display-flex();
-			border: solid $border-color;
-			border-width: 0 0 2px 2px;
-			min-width: 33.33%;
-			max-width: 33.33%;
-			&.active {
-				> a {
-					color: inherit;
-					background-color: $red;
-				}
-			}
-			> a {
-				position: relative;
-				@include flex(0 1 100%);
-				@include display-flex();
-				@include align-items(center);
-				@include justify-content(center);
-				padding: 24px 10px 29px;
-				background: $gray;
-				@include media('<desktop') {
-					padding: 25px 5px 10px;
-				}
-				&:focus,
-				&:hover {
-					color: inherit;
-					background-color: $red;
-				}
-				.small {
-					position: absolute;
-					top: 0;
-					left: 0;
-					font-weight: 300;
-					font-size: 14px;
-					line-height: 17px;
-					font-family: $favorit;
-					padding: 6px 11px;
-					@include media('<desktop') {
-						font-size: 12px;
-						line-height: 15px;
-						padding-left: $grid-gutter-width-mobile/2;
-					}
-				}
-				.value {
-					letter-spacing: -.04em;
-					font-weight: 700;
-					font-size: 114px;
-					line-height: 1em;
-					font-family: $oswald;
-					@include media('<desktop') {
-						font-size: 65px;
-					}
-				}
-			}
-		}
-	}
+  position: relative;
+  margin-bottom: 72px;
+  @include media('>=desktop') {
+    @include display-flex();
+    margin-bottom: 124px;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-bottom: 2px solid $border-color;
+    background: url('#{$images}bg-decor.svg') repeat-x 50% -3px;
+    background-size: auto 105%;
+    height: 72px;
+    -webkit-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+    @include media('>=desktop') {
+      height: 124px;
+    }
+  }
+  > * {
+    @include media('>=desktop') {
+      @include flex(0 1 auto);
+    }
+  }
+  &.active {
+    .col {
+      @include media('<desktop') {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  .col {
+    border-bottom: 2px solid $border-color;
+    @include media('<desktop') {
+      @include position-side();
+      z-index: 5;
+      background: $gray;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity .3s ease;
+      overflow-y: auto;
+    }
+    @include media('>=desktop') {
+      width: 41.21%;
+    }
+  }
+  .tab-pane {
+    padding: 12px 20px 10px $grid-gutter-width/2;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 26px;
+    @include media('<desktop') {
+      padding-top: 8px;
+      padding-left: $grid-gutter-width-mobile/2;
+      padding-right: 30px;
+      font-size: 15px;
+      line-height: 1.2em;
+    }
+    .heading {
+      @include media('<desktop') {
+        float: left;
+        width: 30vw;
+      }
+    }
+    .btn-close {
+      position: absolute;
+      top: 1px;
+      right: 7px;
+      width: 24px;
+      height: 24px;
+      &:before {
+        content: '';
+        @include position-side();
+        @include rotate(45deg);
+        margin: auto;
+        width: 11px;
+        height: 11px;
+        border-style: solid;
+        border-width: 0 1px 1px 0;
+      }
+      @include media('>=desktop') {
+        display: none;
+      }
+    }
+    .holder {
+      @include media('<desktop') {
+        padding-left: 32.5vw;
+      }
+    }
+    ul {
+      list-style: none;
+      margin: 0 -20px 0 0;
+      padding: 0;
+      font-size: 0;
+      line-height: 0;
+      @include media('>=desktop') {
+        margin-top: 10px;
+        margin-left: -10px;
+      }
+    }
+    li {
+      display: inline-block;
+      vertical-align: top;
+      width: 50%;
+      font-size: 23px;
+      line-height: 26px;
+      padding: 0 20px 3px 0;
+      @include media('<desktop') {
+        font-size: 15px;
+        line-height: 1.2em;
+      }
+      @include media('>=desktop') {
+        padding-left: 10px;
+      }
+    }
+  }
+  .nav {
+    @include display-flex();
+    @include flex-wrap(wrap);
+    @include media('<desktop') {
+      margin-left: -2px;
+    }
+    @include media('>=desktop') {
+      width: 58.79%;
+    }
+    &:before,
+    &:after {
+      display: none;
+    }
+    > li {
+      @include flex(0 1 33.33%);
+      @include display-flex();
+      border: solid $border-color;
+      border-width: 0 0 2px 2px;
+      min-width: 33.33%;
+      max-width: 33.33%;
+      &.active {
+        > a {
+          color: inherit;
+          background-color: $red;
+        }
+      }
+      > a {
+        position: relative;
+        @include flex(0 1 100%);
+        @include display-flex();
+        @include align-items(center);
+        @include justify-content(center);
+        padding: 24px 10px 29px;
+        background: $gray;
+        @include media('<desktop') {
+          padding: 25px 5px 10px;
+        }
+        &:focus,
+        &:hover {
+          color: inherit;
+          background-color: $red;
+        }
+        .small {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 17px;
+          padding: 6px 11px;
+          @include media('<desktop') {
+            font-size: 12px;
+            line-height: 15px;
+            padding-left: $grid-gutter-width-mobile/2;
+          }
+        }
+        .value {
+          letter-spacing: -.04em;
+          font-weight: 700;
+          font-size: 5vw;
+          line-height: 1em;
+          font-family: $oswald;
+          // @include media('<desktop') {
+          //   font-size: 65px;
+          // }
+        }
+      }
+    }
+  }
 }

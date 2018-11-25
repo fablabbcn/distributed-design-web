@@ -46,7 +46,6 @@ select {
 }
 .wrapper {
 	position: relative;
-	overflow: hidden;
 	min-height: 100vh;
 	padding-top: 54px;
 	@include media("<desktop") {
@@ -62,15 +61,15 @@ select {
 }
 h1,
 .h1 {
-	
+
 }
 h2,
 .h2 {
-	
+
 }
 h3,
 .h3 {
-	
+
 }
 
 .slick {

@@ -1,5 +1,6 @@
 var gulp = require('gulp')
 var rename = require('gulp-rename')
+var sass = require('gulp-sass')
 var postcss = require('gulp-postcss')
 var atImport = require('postcss-import')
 var fontPath = require('postcss-fontpath')
@@ -97,5 +98,19 @@ function watchStyles () {
   ], styles)
 }
 
+function stylesSass () {
+  return gulp.src('assets/css/theme.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('assets/css/'))
+}
+
+function watchStylesSass () {
+  return gulp.watch([
+    'assets/css/**/*.scss',
+  ], stylesSass)
+}
+
 exports.default = styles
 exports.watch = watchStyles
+exports.stylesSass = stylesSass
+exports.watchStylesSass = watchStylesSass
