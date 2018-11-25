@@ -7,7 +7,7 @@
 			<div class="bootstrap-wrapper">
 				<div class="row resources-filter">
 					<div class="col-12 tl today-date">
-						<h1 class="ph3 ttu">Latest news of Distributed Design</h1>
+						<h1 class="ph3 ttu"><?php echo 'talent' === get_post_type() ? 'Creative Talent' : 'Latest news of Distributed Design'; ?></h1>
 					</div>
 				</div>
 			</div>
@@ -38,14 +38,10 @@
 	</div>
 
 <?php else : ?>
-	<section class="flex flex-grow w-full">
-		<ul class="list-reset flex flex-1 flex-wrap">
+	<section class="flex flex-grow w-full overflow-x-hidden">
+		<ul class="list-reset flex flex-1 flex-wrap -mt-px -mx-px">
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
-			<li class="w-full md:w-1/2"><?php get_template_part( 'template-parts/post/content', get_post_type() ); ?></li>
-			<li class="w-full md:w-1/2"><?php get_template_part( 'template-parts/post/content', get_post_type() ); ?></li>
-			<li class="w-full md:w-1/2"><?php get_template_part( 'template-parts/post/content', get_post_type() ); ?></li>
-			<li class="w-full md:w-1/2"><?php get_template_part( 'template-parts/post/content', get_post_type() ); ?></li>
 			<li class="w-full md:w-1/2"><?php get_template_part( 'template-parts/post/content', get_post_type() ); ?></li>
 		<?php endwhile ?>
 		</ul>

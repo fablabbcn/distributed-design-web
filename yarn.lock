@@ -942,6 +942,14 @@ color@3.0.x:
     color-convert "^1.9.1"
     color-string "^1.5.2"
 
+color@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/color/-/color-3.1.0.tgz#d8e9fb096732875774c84bf922815df0308d0ffc"
+  integrity sha512-CwyopLkuRYO5ei2EpzpIh6LqJMt6Mt+jZhO5VI5f/wJLZriXQE32/SSqzmrh+QB+AZT81Cj8yv+7zwToW8ahZg==
+  dependencies:
+    color-convert "^1.9.1"
+    color-string "^1.5.2"
+
 colornames@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/colornames/-/colornames-1.1.1.tgz#f8889030685c7c4ff9e2a559f5077eb76a816f96"
@@ -6054,6 +6062,18 @@ table@^5.0.0, table@^5.0.2:
     lodash "^4.17.10"
     slice-ansi "1.0.0"
     string-width "^2.1.1"
+
+tailwindcss-alpha@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/tailwindcss-alpha/-/tailwindcss-alpha-0.1.2.tgz#fedf141e6ffc78bcd63ca3da055d596765e1fadd"
+  integrity sha512-7dvKpw4lVV/kKIzjdMoDZIqWELrNwA4wgPjx0QVISCvxaJXkLd1y3tWL/ZAjfu16Hxl5xTLZYgZCse8AwNoQVA==
+  dependencies:
+    color "^3.0.0"
+
+tailwindcss-object-fit@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss-object-fit/-/tailwindcss-object-fit-1.0.1.tgz#97efd5132aba6a8cc33df5c0c66f52866217c493"
+  integrity sha512-kHDow8Gl+/WJ2FJNylgo34fKmlqpJ5Nj+nRCSPeHRkH5UfNg7DgkP8RTEPKwj6zNNjw+50j17vacA/mCo8wMRg==
 
 tailwindcss@^0.7.2:
   version "0.7.2"

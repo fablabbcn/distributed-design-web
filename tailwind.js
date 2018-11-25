@@ -29,23 +29,18 @@ const colors = {
   'yellow': 'yellow',
 }
 
-const spacing = {
+let scaleObject = {}
+const scale = { step: 5, limit: 60 }
+Array(scale.limit / scale.step).fill()
+  .map((x, i) => (i + 1) * scale.step + 'px')
+  .forEach((value, key) => {
+    scaleObject[(key + 1) * scale.step] = value
+  })
+
+const spacing = global.Object.assign({
   'px': '1px',
   '0': '0',
-  '1': '0.25rem',
-  '2': '0.5rem',
-  '3': '0.75rem',
-  '4': '1rem',
-  '5': '1.25rem',
-  '6': '1.5rem',
-  '8': '2rem',
-  '10': '2.5rem',
-  '12': '3rem',
-  '16': '4rem',
-  '20': '5rem',
-  '24': '6rem',
-  '32': '8rem',
-}
+}, scaleObject)
 
 const sizing = {
   'auto': 'auto',
@@ -71,7 +66,7 @@ module.exports = {
   colors: colors,
 
   screens: {
-    'sm': '576px',
+    'sm': '360px',
     'md': '768px',
     'lg': '992px',
     'xl': '1200px',
@@ -250,9 +245,8 @@ module.exports = {
 
   opacity: {
     '0': '0',
-    '25': '.25',
-    '50': '.5',
-    '75': '.75',
+    '30': '0.3',
+    '70': '0.7',
     '100': '1',
   },
 
@@ -310,7 +304,7 @@ module.exports = {
     minHeight: ['responsive'],
     minWidth: ['responsive'],
     negativeMargin: ['responsive'],
-    opacity: [],
+    opacity: ['hover', 'group-hover'],
     outline: ['focus'],
     overflow: [],
     padding: ['responsive'],
@@ -353,6 +347,8 @@ module.exports = {
     //   center: true,
     //   padding: '1rem',
     // }),
+    require('tailwindcss-object-fit')(),
+    require('tailwindcss-alpha')(),
   ],
 
   /*

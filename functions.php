@@ -10,6 +10,7 @@ function load_the_theme_settings() {
 		add_image_size( 'full-screen-thumbnails', 2000, null, true );
 		add_image_size( 'container-thumbnails', 1090, null, true );
 		add_image_size( 'post-list-thumbnails', 768, null, true );
+		add_image_size( 'post-list-thumbnails-square', 768, 768, true );
 		add_image_size( 'icon-thumbnails', 300, null, true );
 
 		// Add supports
