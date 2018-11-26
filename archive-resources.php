@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<article class="">
+<article class="flex-1">
 
 	<div class="base-col">
 
