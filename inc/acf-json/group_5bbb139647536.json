@@ -298,6 +298,13 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "talent"
+            }
         ]
     ],
     "menu_order": 0,
@@ -308,5 +315,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542560672
+    "modified": 1543259852
 }
