@@ -4,6 +4,7 @@
   // Bind Event Handlers
   $(document).on('click', '[data-clip]', handleDataClip)
   $(document).on('click', '[data-toggle]', handleDataToggle)
+  $(document).on('click', '.resources-filter [data-clip]', handleResourcesFilters)
 
   var screenRes_ = {
     isDesktop: true,
@@ -166,6 +167,18 @@
     })
   })
 })(jQuery)
+
+/**
+ * Global Functions
+ */
+
+function handleResourcesFilters () {
+  var classes = 'bg-lime'
+  jQuery('.resources-filter [data-clip]')
+    .removeClass(classes)
+    .filter(this)
+    .addClass(classes)
+}
 
 /**
  * Data Functions
