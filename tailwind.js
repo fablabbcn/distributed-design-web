@@ -304,6 +304,8 @@ module.exports = {
     minHeight: ['responsive'],
     minWidth: ['responsive'],
     negativeMargin: ['responsive'],
+    objectFit: [],
+    objectPosition: false,
     opacity: ['hover', 'group-hover'],
     outline: ['focus'],
     overflow: [],
@@ -343,11 +345,6 @@ module.exports = {
   */
 
   plugins: [
-    // require('tailwindcss/plugins/container')({
-    //   center: true,
-    //   padding: '1rem',
-    // }),
-    require('tailwindcss-object-fit')(),
     require('tailwindcss-alpha')(),
   ],
 

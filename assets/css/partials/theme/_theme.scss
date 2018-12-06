@@ -15,36 +15,60 @@
 }
 
 .current_page_parent.current-menu-item {
-  background: #e6e6e6;
+  background: $gray;
 }
 
 .current-menu-item {
-  background: #f93838;
+  background: $red;
   color: inherit;
 }
 
-.menu-item-object-resources.active {
-  background: #00ff00;
+.menu-item.current-menu-item > a[href*="about"],
+#main-nav .base > .menu-item > a[href*="about"]:hover,
+#main-nav .base > .menu-item > a[href*="about"]:focus {
+  background: $red;
   color: inherit;
+  text-decoration: none;
 }
 
+.menu-item-object-resources.active,
 #main-nav .base > .menu-item-object-resources > a:hover,
 #main-nav .base > .menu-item-object-resources > a:focus {
-  background: #00ff00;
+  background: $lime;
   color: inherit;
   text-decoration: none;
 }
 
+.news-archive.current-menu-item,
 #main-nav .base > .news-archive > a:hover,
 #main-nav .base > .news-archive > a:focus {
-  background: #00ffff;
+  background: $cyan;
   color: inherit;
   text-decoration: none;
 }
 
-.news-archive.current-menu-item {
-  background: #00ffff;
+.events-archive.current-menu-item,
+#main-nav .base > .events-archive > a:hover,
+#main-nav .base > .events-archive > a:focus {
+  background: $magenta;
   color: inherit;
+  text-decoration: none;
+}
+
+.talent-archive.current-menu-item,
+#main-nav .base > .talent-archive > a:hover,
+#main-nav .base > .talent-archive > a:focus {
+  background: $yellow;
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu-item.current-menu-item > a[href*="contact"],
+#main-nav .base > .menu-item > a[href*="contact"]:hover,
+#main-nav .base > .menu-item > a[href*="contact"]:focus {
+  background: $white;
+  color: inherit;
+  text-decoration: none;
 }
 
 @media (min-width: 992px) {

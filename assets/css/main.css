@@ -2276,6 +2276,31 @@ table {
   margin-left: -1px;
 }
 
+.object-contain {
+  -o-object-fit: contain;
+  object-fit: contain;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.object-fill {
+  -o-object-fit: fill;
+  object-fit: fill;
+}
+
+.object-none {
+  -o-object-fit: none;
+  object-fit: none;
+}
+
+.object-scale-down {
+  -o-object-fit: scale-down;
+  object-fit: scale-down;
+}
+
 .opacity-0 {
   opacity: 0;
 }
@@ -3240,31 +3265,6 @@ table {
 
 .z-auto {
   z-index: auto;
-}
-
-.object-contain {
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
-.object-cover {
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
-.object-fill {
-  -o-object-fit: fill;
-  object-fit: fill;
-}
-
-.object-none {
-  -o-object-fit: none;
-  object-fit: none;
-}
-
-.object-scale {
-  -o-object-fit: scale-down;
-  object-fit: scale-down;
 }
 
 .bg-black-30 {

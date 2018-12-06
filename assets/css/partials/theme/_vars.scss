@@ -11,11 +11,11 @@ $oswald: 'Oswald', Arial, Helvetica, sans-serif;
 $poppins: 'Poppins', sans-serif;
 
 $breakpoints: (
-	phone: 360px,
-	tablet: 768px,
-	desktop: 992px,
-	minscroll: 1025px,
-	mddesktop: 1200px
+  phone: 360px,
+  tablet: 768px,
+  desktop: 992px,
+  minscroll: 1025px,
+  mddesktop: 1200px
 );
 
 // colors
@@ -24,6 +24,10 @@ $black: #000;
 $dark-gray: #222221;
 $gray: #e6e6e6;
 $red: #f93838;
+$lime: #0f0;
+$cyan: #0ff;
+$magenta: #f0f;
+$yellow: #ff0;
 
 $border-color: $dark-gray;
 
