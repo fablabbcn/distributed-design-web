@@ -10,7 +10,7 @@ var paths = {
 }
 
 var config = {
-  textDomain: 'llos',
+  textDomain: 'ddmp',
   twigFiles: 'views/**/*.twig',
   phpFiles: '**/*.php',
   cacheFolder: 'views/cache',

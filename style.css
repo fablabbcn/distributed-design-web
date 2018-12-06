@@ -1,6 +1,15 @@
 /*
-Theme Name: DDMP
+  Theme Name: DDMP
+  Theme URI: http://llos.co
+  Description: Distributed Design Market Platform
+  Author: LLOS&
+  Author URI: https://nestor.rip
+  Version: 0.1.0
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Text Domain: ddmp
 */
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
