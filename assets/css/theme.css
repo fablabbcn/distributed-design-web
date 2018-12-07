@@ -6021,7 +6021,7 @@ select:focus {
     margin: auto;
     width: 20px;
     height: 20px;
-    border: solid #222221;
+    border: solid #222;
     border-width: 2px 2px 0 0; }
 
 .slick-prev {
@@ -6107,7 +6107,7 @@ select:focus {
       flex: 0 1 auto; } }
 
 .page-header {
-  border-bottom: 2px solid #222221;
+  border-bottom: 2px solid #222;
   padding-top: 20px;
   padding-bottom: 17px;
   margin-top: 0;
@@ -6146,10 +6146,10 @@ select:focus {
   background: #e6e6e6; }
   @media (max-width: 991px) {
     .scrolled #header {
-      box-shadow: 0 2px 0 0 #222221; } }
+      box-shadow: 0 2px 0 0 #222; } }
   @media (min-width: 992px) {
     #header {
-      border-bottom: 2px solid #222221; } }
+      border-bottom: 2px solid #222; } }
   #header .container-fluid {
     padding-left: 0;
     padding-right: 0;
@@ -6240,7 +6240,7 @@ select:focus {
       @media (min-width: 992px) {
         #header .navbar-brand:before {
           height: 145px;
-          border: solid #222221;
+          border: solid #222;
           border-width: 0 2px 2px 0; } }
     #header .navbar-brand:after {
       width: 190px;
@@ -6281,7 +6281,7 @@ select:focus {
     padding: 5px 2px;
     border: 0;
     border-radius: 0;
-    color: #222221; }
+    color: #222; }
     @media (max-width: 991px) {
       #header .navbar-toggle {
         display: block; } }
@@ -6356,7 +6356,7 @@ select:focus {
     @media (max-width: 991px) {
       #main-nav .base {
         display: block;
-        border-top: 2px solid #222221; } }
+        border-top: 2px solid #222; } }
     @media (min-width: 992px) {
       #main-nav .base {
         display: -ms-flexbox;
@@ -6368,13 +6368,13 @@ select:focus {
         margin-left: -2px; } }
     @media (max-width: 991px) {
       #main-nav .base > li {
-        border-bottom: 2px solid #222221; } }
+        border-bottom: 2px solid #222; } }
     @media (min-width: 992px) {
       #main-nav .base > li {
         -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;
         flex: 0 1 100%;
-        border-left: 2px solid #222221; } }
+        border-left: 2px solid #222; } }
     #main-nav .base > li > a {
       display: block;
       position: relative;
@@ -6396,9 +6396,9 @@ select:focus {
 
 /* footer */
 #footer {
-  border-top: 2px solid #222221; }
+  border-top: 2px solid #222; }
   #footer .top-part {
-    border-bottom: 2px solid #222221;
+    border-bottom: 2px solid #222;
     text-transform: uppercase; }
     @media (min-width: 992px) {
       #footer .top-part {
@@ -6419,7 +6419,7 @@ select:focus {
 
 @media (min-width: 360px) and (max-width: 991px) {
   #footer .top-part .col {
-    border-bottom: 2px solid #222221; } }
+    border-bottom: 2px solid #222; } }
     @media (min-width: 992px) {
       #footer .top-part .col {
         width: 396px;
@@ -6489,13 +6489,13 @@ select:focus {
           display: -ms-flexbox;
           display: -webkit-flex;
           display: flex;
-          border-left: 2px solid #222221; }
+          border-left: 2px solid #222; }
           @media (max-width: 359px) {
             #footer .top-part nav ul > li {
               -webkit-flex: 1 1 auto;
               -ms-flex: 1 1 auto;
               flex: 1 1 auto;
-              border-top: 2px solid #222221; } }
+              border-top: 2px solid #222; } }
           #footer .top-part nav ul > li.active > a {
             color: inherit;
             background-color: #f93838; }
@@ -6548,7 +6548,7 @@ select:focus {
 
 /* info-section */
 .info-section {
-  border-bottom: 2px solid #222221; }
+  border-bottom: 2px solid #222; }
   @media (min-width: 992px) {
     .info-section {
       display: -ms-flexbox;
@@ -6561,7 +6561,7 @@ select:focus {
       flex: 0 1 auto; } }
   .info-section .col {
     padding: 115px 20px 10px 46px;
-    border-right: 2px solid #222221;
+    border-right: 2px solid #222;
     transition: background .3s ease; }
     @media (max-width: 991px) {
       .info-section .col {
@@ -6596,7 +6596,7 @@ select:focus {
 /* intro-slider */
 .intro-slider {
   width: 100%;
-  border-bottom: 2px solid #222221; }
+  border-bottom: 2px solid #222; }
   .intro-slider .slick-track {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -6637,7 +6637,7 @@ select:focus {
       padding-left: 16px;
       padding-right: 16px;
       text-align: center;
-      border-bottom: 2px solid #222221; } }
+      border-bottom: 2px solid #222; } }
   @media (min-width: 1025px) {
     .notice {
       text-align: center; } }
@@ -6697,7 +6697,7 @@ select:focus {
     top: 100%;
     left: 0;
     right: 0;
-    border-bottom: 2px solid #222221;
+    border-bottom: 2px solid #222;
     background: url("../images/bg-decor.svg") repeat-x 50% -3px;
     background-size: auto 105%;
     height: 72px;
@@ -6716,7 +6716,7 @@ select:focus {
       visibility: visible;
       opacity: 1; } }
   .statistics .col {
-    border-bottom: 2px solid #222221; }
+    border-bottom: 2px solid #222; }
     @media (max-width: 991px) {
       .statistics .col {
         position: absolute;
@@ -6823,7 +6823,7 @@ select:focus {
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex;
-      border: solid #222221;
+      border: solid #222;
       border-width: 0 0 2px 2px;
       min-width: 33.33%;
       max-width: 33.33%; }
@@ -6909,7 +6909,7 @@ select:focus {
     right: 0;
     bottom: 0;
     height: 2px;
-    background: #222221; }
+    background: #222; }
   .member-list > li {
     -webkit-flex: 0 1 20%;
     -ms-flex: 0 1 20%;
@@ -6919,7 +6919,7 @@ select:focus {
     min-width: 20%;
     max-width: 20%;
     min-height: 168px;
-    border: solid #222221;
+    border: solid #222;
     border-width: 0 2px 2px 0;
     background: #e6e6e6; }
     @media (max-width: 991px) {
@@ -6937,7 +6937,7 @@ select:focus {
         right: -2px; } }
     .member-list > li .hold {
       position: absolute;
-      border: 2px solid #222221;
+      border: 2px solid #222;
       overflow: hidden;
       background: #e6e6e6; }
       @media (max-width: 991px) {
@@ -7014,7 +7014,7 @@ select:focus {
             padding: 0 16px 5px; } }
         @media (min-width: 992px) {
           .member-list > li .descr-in {
-            border-top: 2px solid #222221; } }
+            border-top: 2px solid #222; } }
     .member-list > li a {
       display: -ms-flexbox;
       display: -webkit-flex;
@@ -7065,7 +7065,7 @@ select:focus {
 
 /* fund-info */
 .fund-info {
-  border-bottom: 2px solid #222221;
+  border-bottom: 2px solid #222;
   font-size: 19px;
   line-height: 22px;
   padding-top: 36px;

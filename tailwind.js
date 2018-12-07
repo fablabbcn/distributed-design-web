@@ -20,13 +20,17 @@ const colors = {
   'transparent': 'transparent',
   'current': 'currentColor',
   'inherit': 'inherit',
+
   'black': 'black',
+  'dark-gray': '#222',
+  'gray': '#e6e6e6',
   'white': 'white',
-  'red': 'red',
-  'lime': 'lime',
-  'cyan': 'cyan',
-  'magenta': 'magenta',
-  'yellow': 'yellow',
+
+  'red': '#f93838',
+  'lime': '#0f0',
+  'cyan': '#0ff',
+  'magenta': '#f0f',
+  'yellow': '#ff0',
 }
 
 let scaleObject = {}
@@ -153,7 +157,7 @@ module.exports = {
   },
 
   borderWidths: {
-    default: '1px',
+    default: '2px',
     '0': '0',
   },
 

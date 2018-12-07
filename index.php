@@ -3,6 +3,7 @@
 <article class="stickit">
 
 	<div class="base-col">
+
 		<header class="resources-header">
 			<div class="bootstrap-wrapper">
 				<div class="row resources-filter">
@@ -12,10 +13,14 @@
 				</div>
 			</div>
 		</header>
-		<div class="col-12 tl ttu resources-search">
-			<span class="search-icon"><?php include get_template_directory() . '/assets/images/search.svg'; ?></span>
-			<?php get_search_form(); ?>
+
+		<div class="px-40 py-20 bg-gray border-b <?php echo $post_type; ?>-search">
+			<div class="flex items-center">
+				<span class="search-icon"><?php include get_template_directory() . '/assets/images/search.svg'; ?></span>
+				<?php get_search_form(); ?>
+			</div>
 		</div>
+
 	</div>
 
 	<div class="col"></div>

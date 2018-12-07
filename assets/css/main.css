@@ -694,28 +694,36 @@ table {
   background-color: black;
 }
 
+.bg-dark-gray {
+  background-color: #222;
+}
+
+.bg-gray {
+  background-color: #e6e6e6;
+}
+
 .bg-white {
   background-color: white;
 }
 
 .bg-red {
-  background-color: red;
+  background-color: #f93838;
 }
 
 .bg-lime {
-  background-color: lime;
+  background-color: #0f0;
 }
 
 .bg-cyan {
-  background-color: cyan;
+  background-color: #0ff;
 }
 
 .bg-magenta {
-  background-color: magenta;
+  background-color: #f0f;
 }
 
 .bg-yellow {
-  background-color: yellow;
+  background-color: #ff0;
 }
 
 .hover\:bg-transparent:hover {
@@ -734,28 +742,36 @@ table {
   background-color: black;
 }
 
+.hover\:bg-dark-gray:hover {
+  background-color: #222;
+}
+
+.hover\:bg-gray:hover {
+  background-color: #e6e6e6;
+}
+
 .hover\:bg-white:hover {
   background-color: white;
 }
 
 .hover\:bg-red:hover {
-  background-color: red;
+  background-color: #f93838;
 }
 
 .hover\:bg-lime:hover {
-  background-color: lime;
+  background-color: #0f0;
 }
 
 .hover\:bg-cyan:hover {
-  background-color: cyan;
+  background-color: #0ff;
 }
 
 .hover\:bg-magenta:hover {
-  background-color: magenta;
+  background-color: #f0f;
 }
 
 .hover\:bg-yellow:hover {
-  background-color: yellow;
+  background-color: #ff0;
 }
 
 .group:hover .group-hover\:bg-transparent {
@@ -774,28 +790,36 @@ table {
   background-color: black;
 }
 
+.group:hover .group-hover\:bg-dark-gray {
+  background-color: #222;
+}
+
+.group:hover .group-hover\:bg-gray {
+  background-color: #e6e6e6;
+}
+
 .group:hover .group-hover\:bg-white {
   background-color: white;
 }
 
 .group:hover .group-hover\:bg-red {
-  background-color: red;
+  background-color: #f93838;
 }
 
 .group:hover .group-hover\:bg-lime {
-  background-color: lime;
+  background-color: #0f0;
 }
 
 .group:hover .group-hover\:bg-cyan {
-  background-color: cyan;
+  background-color: #0ff;
 }
 
 .group:hover .group-hover\:bg-magenta {
-  background-color: magenta;
+  background-color: #f0f;
 }
 
 .group:hover .group-hover\:bg-yellow {
-  background-color: yellow;
+  background-color: #ff0;
 }
 
 .border-collapse {
@@ -822,28 +846,36 @@ table {
   border-color: black;
 }
 
+.border-dark-gray {
+  border-color: #222;
+}
+
+.border-gray {
+  border-color: #e6e6e6;
+}
+
 .border-white {
   border-color: white;
 }
 
 .border-red {
-  border-color: red;
+  border-color: #f93838;
 }
 
 .border-lime {
-  border-color: lime;
+  border-color: #0f0;
 }
 
 .border-cyan {
-  border-color: cyan;
+  border-color: #0ff;
 }
 
 .border-magenta {
-  border-color: magenta;
+  border-color: #f0f;
 }
 
 .border-yellow {
-  border-color: yellow;
+  border-color: #ff0;
 }
 
 .border-0 {
@@ -851,7 +883,7 @@ table {
 }
 
 .border {
-  border-width: 1px;
+  border-width: 2px;
 }
 
 .border-t-0 {
@@ -871,19 +903,19 @@ table {
 }
 
 .border-t {
-  border-top-width: 1px;
+  border-top-width: 2px;
 }
 
 .border-r {
-  border-right-width: 1px;
+  border-right-width: 2px;
 }
 
 .border-b {
-  border-bottom-width: 1px;
+  border-bottom-width: 2px;
 }
 
 .border-l {
-  border-left-width: 1px;
+  border-left-width: 2px;
 }
 
 .cursor-auto {
@@ -2942,28 +2974,36 @@ table {
   color: black;
 }
 
+.text-dark-gray {
+  color: #222;
+}
+
+.text-gray {
+  color: #e6e6e6;
+}
+
 .text-white {
   color: white;
 }
 
 .text-red {
-  color: red;
+  color: #f93838;
 }
 
 .text-lime {
-  color: lime;
+  color: #0f0;
 }
 
 .text-cyan {
-  color: cyan;
+  color: #0ff;
 }
 
 .text-magenta {
-  color: magenta;
+  color: #f0f;
 }
 
 .text-yellow {
-  color: yellow;
+  color: #ff0;
 }
 
 .hover\:text-transparent:hover {
@@ -2982,28 +3022,36 @@ table {
   color: black;
 }
 
+.hover\:text-dark-gray:hover {
+  color: #222;
+}
+
+.hover\:text-gray:hover {
+  color: #e6e6e6;
+}
+
 .hover\:text-white:hover {
   color: white;
 }
 
 .hover\:text-red:hover {
-  color: red;
+  color: #f93838;
 }
 
 .hover\:text-lime:hover {
-  color: lime;
+  color: #0f0;
 }
 
 .hover\:text-cyan:hover {
-  color: cyan;
+  color: #0ff;
 }
 
 .hover\:text-magenta:hover {
-  color: magenta;
+  color: #f0f;
 }
 
 .hover\:text-yellow:hover {
-  color: yellow;
+  color: #ff0;
 }
 
 .text-xs {
@@ -3271,12 +3319,20 @@ table {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.bg-dark-gray-30 {
+  background-color: rgba(34, 34, 34, 0.3);
+}
+
+.bg-gray-30 {
+  background-color: rgba(230, 230, 230, 0.3);
+}
+
 .bg-white-30 {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .bg-red-30 {
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: rgba(249, 56, 56, 0.3);
 }
 
 .bg-lime-30 {
@@ -3299,12 +3355,20 @@ table {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.hover\:bg-dark-gray-30:hover {
+  background-color: rgba(34, 34, 34, 0.3);
+}
+
+.hover\:bg-gray-30:hover {
+  background-color: rgba(230, 230, 230, 0.3);
+}
+
 .hover\:bg-white-30:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .hover\:bg-red-30:hover {
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: rgba(249, 56, 56, 0.3);
 }
 
 .hover\:bg-lime-30:hover {
@@ -3327,12 +3391,20 @@ table {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.group:hover .group-hover\:bg-dark-gray-30 {
+  background-color: rgba(34, 34, 34, 0.3);
+}
+
+.group:hover .group-hover\:bg-gray-30 {
+  background-color: rgba(230, 230, 230, 0.3);
+}
+
 .group:hover .group-hover\:bg-white-30 {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .group:hover .group-hover\:bg-red-30 {
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: rgba(249, 56, 56, 0.3);
 }
 
 .group:hover .group-hover\:bg-lime-30 {
@@ -3355,12 +3427,20 @@ table {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.bg-dark-gray-70 {
+  background-color: rgba(34, 34, 34, 0.7);
+}
+
+.bg-gray-70 {
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
 .bg-white-70 {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
 .bg-red-70 {
-  background-color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(249, 56, 56, 0.7);
 }
 
 .bg-lime-70 {
@@ -3383,12 +3463,20 @@ table {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.hover\:bg-dark-gray-70:hover {
+  background-color: rgba(34, 34, 34, 0.7);
+}
+
+.hover\:bg-gray-70:hover {
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
 .hover\:bg-white-70:hover {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
 .hover\:bg-red-70:hover {
-  background-color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(249, 56, 56, 0.7);
 }
 
 .hover\:bg-lime-70:hover {
@@ -3411,12 +3499,20 @@ table {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.group:hover .group-hover\:bg-dark-gray-70 {
+  background-color: rgba(34, 34, 34, 0.7);
+}
+
+.group:hover .group-hover\:bg-gray-70 {
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
 .group:hover .group-hover\:bg-white-70 {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
 .group:hover .group-hover\:bg-red-70 {
-  background-color: rgba(255, 0, 0, 0.7);
+  background-color: rgba(249, 56, 56, 0.7);
 }
 
 .group:hover .group-hover\:bg-lime-70 {
@@ -5308,28 +5404,36 @@ table {
     color: black;
   }
 
+  .sm\:text-dark-gray {
+    color: #222;
+  }
+
+  .sm\:text-gray {
+    color: #e6e6e6;
+  }
+
   .sm\:text-white {
     color: white;
   }
 
   .sm\:text-red {
-    color: red;
+    color: #f93838;
   }
 
   .sm\:text-lime {
-    color: lime;
+    color: #0f0;
   }
 
   .sm\:text-cyan {
-    color: cyan;
+    color: #0ff;
   }
 
   .sm\:text-magenta {
-    color: magenta;
+    color: #f0f;
   }
 
   .sm\:text-yellow {
-    color: yellow;
+    color: #ff0;
   }
 
   .sm\:hover\:text-transparent:hover {
@@ -5348,28 +5452,36 @@ table {
     color: black;
   }
 
+  .sm\:hover\:text-dark-gray:hover {
+    color: #222;
+  }
+
+  .sm\:hover\:text-gray:hover {
+    color: #e6e6e6;
+  }
+
   .sm\:hover\:text-white:hover {
     color: white;
   }
 
   .sm\:hover\:text-red:hover {
-    color: red;
+    color: #f93838;
   }
 
   .sm\:hover\:text-lime:hover {
-    color: lime;
+    color: #0f0;
   }
 
   .sm\:hover\:text-cyan:hover {
-    color: cyan;
+    color: #0ff;
   }
 
   .sm\:hover\:text-magenta:hover {
-    color: magenta;
+    color: #f0f;
   }
 
   .sm\:hover\:text-yellow:hover {
-    color: yellow;
+    color: #ff0;
   }
 
   .sm\:text-xs {
@@ -7398,28 +7510,36 @@ table {
     color: black;
   }
 
+  .md\:text-dark-gray {
+    color: #222;
+  }
+
+  .md\:text-gray {
+    color: #e6e6e6;
+  }
+
   .md\:text-white {
     color: white;
   }
 
   .md\:text-red {
-    color: red;
+    color: #f93838;
   }
 
   .md\:text-lime {
-    color: lime;
+    color: #0f0;
   }
 
   .md\:text-cyan {
-    color: cyan;
+    color: #0ff;
   }
 
   .md\:text-magenta {
-    color: magenta;
+    color: #f0f;
   }
 
   .md\:text-yellow {
-    color: yellow;
+    color: #ff0;
   }
 
   .md\:hover\:text-transparent:hover {
@@ -7438,28 +7558,36 @@ table {
     color: black;
   }
 
+  .md\:hover\:text-dark-gray:hover {
+    color: #222;
+  }
+
+  .md\:hover\:text-gray:hover {
+    color: #e6e6e6;
+  }
+
   .md\:hover\:text-white:hover {
     color: white;
   }
 
   .md\:hover\:text-red:hover {
-    color: red;
+    color: #f93838;
   }
 
   .md\:hover\:text-lime:hover {
-    color: lime;
+    color: #0f0;
   }
 
   .md\:hover\:text-cyan:hover {
-    color: cyan;
+    color: #0ff;
   }
 
   .md\:hover\:text-magenta:hover {
-    color: magenta;
+    color: #f0f;
   }
 
   .md\:hover\:text-yellow:hover {
-    color: yellow;
+    color: #ff0;
   }
 
   .md\:text-xs {
@@ -9488,28 +9616,36 @@ table {
     color: black;
   }
 
+  .lg\:text-dark-gray {
+    color: #222;
+  }
+
+  .lg\:text-gray {
+    color: #e6e6e6;
+  }
+
   .lg\:text-white {
     color: white;
   }
 
   .lg\:text-red {
-    color: red;
+    color: #f93838;
   }
 
   .lg\:text-lime {
-    color: lime;
+    color: #0f0;
   }
 
   .lg\:text-cyan {
-    color: cyan;
+    color: #0ff;
   }
 
   .lg\:text-magenta {
-    color: magenta;
+    color: #f0f;
   }
 
   .lg\:text-yellow {
-    color: yellow;
+    color: #ff0;
   }
 
   .lg\:hover\:text-transparent:hover {
@@ -9528,28 +9664,36 @@ table {
     color: black;
   }
 
+  .lg\:hover\:text-dark-gray:hover {
+    color: #222;
+  }
+
+  .lg\:hover\:text-gray:hover {
+    color: #e6e6e6;
+  }
+
   .lg\:hover\:text-white:hover {
     color: white;
   }
 
   .lg\:hover\:text-red:hover {
-    color: red;
+    color: #f93838;
   }
 
   .lg\:hover\:text-lime:hover {
-    color: lime;
+    color: #0f0;
   }
 
   .lg\:hover\:text-cyan:hover {
-    color: cyan;
+    color: #0ff;
   }
 
   .lg\:hover\:text-magenta:hover {
-    color: magenta;
+    color: #f0f;
   }
 
   .lg\:hover\:text-yellow:hover {
-    color: yellow;
+    color: #ff0;
   }
 
   .lg\:text-xs {
@@ -11578,28 +11722,36 @@ table {
     color: black;
   }
 
+  .xl\:text-dark-gray {
+    color: #222;
+  }
+
+  .xl\:text-gray {
+    color: #e6e6e6;
+  }
+
   .xl\:text-white {
     color: white;
   }
 
   .xl\:text-red {
-    color: red;
+    color: #f93838;
   }
 
   .xl\:text-lime {
-    color: lime;
+    color: #0f0;
   }
 
   .xl\:text-cyan {
-    color: cyan;
+    color: #0ff;
   }
 
   .xl\:text-magenta {
-    color: magenta;
+    color: #f0f;
   }
 
   .xl\:text-yellow {
-    color: yellow;
+    color: #ff0;
   }
 
   .xl\:hover\:text-transparent:hover {
@@ -11618,28 +11770,36 @@ table {
     color: black;
   }
 
+  .xl\:hover\:text-dark-gray:hover {
+    color: #222;
+  }
+
+  .xl\:hover\:text-gray:hover {
+    color: #e6e6e6;
+  }
+
   .xl\:hover\:text-white:hover {
     color: white;
   }
 
   .xl\:hover\:text-red:hover {
-    color: red;
+    color: #f93838;
   }
 
   .xl\:hover\:text-lime:hover {
-    color: lime;
+    color: #0f0;
   }
 
   .xl\:hover\:text-cyan:hover {
-    color: cyan;
+    color: #0ff;
   }
 
   .xl\:hover\:text-magenta:hover {
-    color: magenta;
+    color: #f0f;
   }
 
   .xl\:hover\:text-yellow:hover {
-    color: yellow;
+    color: #ff0;
   }
 
   .xl\:text-xs {

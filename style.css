@@ -406,21 +406,6 @@ a img.aligncenter {
   line-height: 21px;
 }
 
-.resources-search {
-  border-top: 2px solid #222221;
-  border-bottom: 2px solid #222221;
-  margin-top: -2px;
-  padding: 20px 40px;
-  background: #e6e6e6;
-}
-
-.resources-heading {
-  padding: 20px 40px;
-  border-top: 2px solid #222221;
-  border-bottom: 2px solid #222221;
-  margin-top: -2px;
-}
-
 .stickit {
   position: sticky;
   top: -37px;
