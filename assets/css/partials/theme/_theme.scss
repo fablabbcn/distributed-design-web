@@ -74,8 +74,8 @@
 @media (min-width: 992px) {
   .tabs-header,
   .resources-header {
-    margin-left: 27.93%;
-    // border-left: 2px solid;
+    margin-left: calc(27.93% - 1px);
+    border-left: 2px solid;
   }
 }
 

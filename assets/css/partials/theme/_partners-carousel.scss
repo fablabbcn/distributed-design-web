@@ -1,22 +1,21 @@
 /* partners-carousel */
 .partners-carousel {
-  padding-left: 30px;
-  padding-right: 30px;
   @include media('>=desktop') {
-    padding-top: 22px;
-    margin-bottom: 28px;
     border-top: 2px solid;
     margin-top: -2px;
   }
+
   .slick {
     &-track {
       @include display-flex();
       @include align-items(center);
-      &:before,
-      &:after {
+
+      &::before,
+      &::after {
         display: none;
       }
     }
+
     &-slide {
       padding-left: 48px;
       padding-right: 48px;
@@ -25,10 +24,13 @@
         padding-left: 3px;
         padding-right: 3px;
       }
+
       img {
         vertical-align: top;
+        max-width: 220px;
+        max-height: 100px;
         @include media('<desktop') {
-          @include scale(.565);
+          @include scale(0.565);
         }
       }
     }

@@ -12,12 +12,10 @@ $contact_info = get_theme_mod( 'theme_contact', ( '
 
 
 		<footer id="footer">
-			<div class="footer-address"><?php _e( $contact_info, 'ddmp' ); ?></div>
-			<div class="footer-founding">
-				<span class="tc">
-					<img src="http://distributeddesign.eu/wp-content/uploads/2018/05/CE_LOGO_WEB_RIGHT_small.png"
-						alt="Co-funded by the Creative European Programme of the European Union" />
-				</span>
+			<div class="footer-address py-20 px-40 border-b"><?php _e( $contact_info, 'ddmp' ); ?></div>
+			<div class="footer-founding flex justify-center p-40">
+				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images'; ?>/ce-logo.png"
+					alt="Co-funded by the Creative European Programme of the European Union" />
 			</div>
 		</footer>
 

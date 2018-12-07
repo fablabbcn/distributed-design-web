@@ -10,7 +10,7 @@ $logos = get_sub_field( 'logos' );
 
 <?php if ( $logos ) : ?>
 
-	<aside class="partners-carousel">
+	<aside class="partners-carousel px-30 lg:py-30">
 	<?php foreach ( $logos as $key => $image ) : ?>
 
 		<div class="slide-item">

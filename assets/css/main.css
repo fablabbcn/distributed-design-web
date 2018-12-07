@@ -1250,6 +1250,10 @@ table {
   font-family: NimbusSanL, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.font-oswald {
+  font-family: Oswald, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -1430,6 +1434,10 @@ table {
   margin: 1px;
 }
 
+.m-border {
+  margin: 2px;
+}
+
 .my-0 {
   margin-top: 0;
   margin-bottom: 0;
@@ -1578,6 +1586,16 @@ table {
 .mx-px {
   margin-left: 1px;
   margin-right: 1px;
+}
+
+.my-border {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.mx-border {
+  margin-left: 2px;
+  margin-right: 2px;
 }
 
 .mt-0 {
@@ -1820,6 +1838,22 @@ table {
   margin-left: 1px;
 }
 
+.mt-border {
+  margin-top: 2px;
+}
+
+.mr-border {
+  margin-right: 2px;
+}
+
+.mb-border {
+  margin-bottom: 2px;
+}
+
+.ml-border {
+  margin-left: 2px;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -1942,6 +1976,10 @@ table {
 
 .-m-px {
   margin: -1px;
+}
+
+.-m-border {
+  margin: -2px;
 }
 
 .-my-0 {
@@ -2082,6 +2120,16 @@ table {
 .-mx-px {
   margin-left: -1px;
   margin-right: -1px;
+}
+
+.-my-border {
+  margin-top: -2px;
+  margin-bottom: -2px;
+}
+
+.-mx-border {
+  margin-left: -2px;
+  margin-right: -2px;
 }
 
 .-mt-0 {
@@ -2308,6 +2356,22 @@ table {
   margin-left: -1px;
 }
 
+.-mt-border {
+  margin-top: -2px;
+}
+
+.-mr-border {
+  margin-right: -2px;
+}
+
+.-mb-border {
+  margin-bottom: -2px;
+}
+
+.-ml-border {
+  margin-left: -2px;
+}
+
 .object-contain {
   -o-object-fit: contain;
   object-fit: contain;
@@ -2501,6 +2565,10 @@ table {
   padding: 1px;
 }
 
+.p-border {
+  padding: 2px;
+}
+
 .py-0 {
   padding-top: 0;
   padding-bottom: 0;
@@ -2639,6 +2707,16 @@ table {
 .px-px {
   padding-left: 1px;
   padding-right: 1px;
+}
+
+.py-border {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.px-border {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .pt-0 {
@@ -2865,6 +2943,22 @@ table {
   padding-left: 1px;
 }
 
+.pt-border {
+  padding-top: 2px;
+}
+
+.pr-border {
+  padding-right: 2px;
+}
+
+.pb-border {
+  padding-bottom: 2px;
+}
+
+.pl-border {
+  padding-left: 2px;
+}
+
 .pointer-events-none {
   pointer-events: none;
 }
@@ -3054,40 +3148,8 @@ table {
   color: #ff0;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-}
-
-.text-base {
-  font-size: 1rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
+.text-24 {
+  font-size: 24px;
 }
 
 .italic {
@@ -4013,6 +4075,10 @@ table {
     margin: 1px;
   }
 
+  .sm\:m-border {
+    margin: 2px;
+  }
+
   .sm\:my-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -4161,6 +4227,16 @@ table {
   .sm\:mx-px {
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .sm\:my-border {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .sm\:mx-border {
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   .sm\:mt-0 {
@@ -4403,6 +4479,22 @@ table {
     margin-left: 1px;
   }
 
+  .sm\:mt-border {
+    margin-top: 2px;
+  }
+
+  .sm\:mr-border {
+    margin-right: 2px;
+  }
+
+  .sm\:mb-border {
+    margin-bottom: 2px;
+  }
+
+  .sm\:ml-border {
+    margin-left: 2px;
+  }
+
   .sm\:max-h-full {
     max-height: 100%;
   }
@@ -4525,6 +4617,10 @@ table {
 
   .sm\:-m-px {
     margin: -1px;
+  }
+
+  .sm\:-m-border {
+    margin: -2px;
   }
 
   .sm\:-my-0 {
@@ -4665,6 +4761,16 @@ table {
   .sm\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .sm\:-my-border {
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+  .sm\:-mx-border {
+    margin-left: -2px;
+    margin-right: -2px;
   }
 
   .sm\:-mt-0 {
@@ -4891,6 +4997,22 @@ table {
     margin-left: -1px;
   }
 
+  .sm\:-mt-border {
+    margin-top: -2px;
+  }
+
+  .sm\:-mr-border {
+    margin-right: -2px;
+  }
+
+  .sm\:-mb-border {
+    margin-bottom: -2px;
+  }
+
+  .sm\:-ml-border {
+    margin-left: -2px;
+  }
+
   .sm\:p-0 {
     padding: 0;
   }
@@ -4945,6 +5067,10 @@ table {
 
   .sm\:p-px {
     padding: 1px;
+  }
+
+  .sm\:p-border {
+    padding: 2px;
   }
 
   .sm\:py-0 {
@@ -5085,6 +5211,16 @@ table {
   .sm\:px-px {
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .sm\:py-border {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .sm\:px-border {
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .sm\:pt-0 {
@@ -5311,6 +5447,22 @@ table {
     padding-left: 1px;
   }
 
+  .sm\:pt-border {
+    padding-top: 2px;
+  }
+
+  .sm\:pr-border {
+    padding-right: 2px;
+  }
+
+  .sm\:pb-border {
+    padding-bottom: 2px;
+  }
+
+  .sm\:pl-border {
+    padding-left: 2px;
+  }
+
   .sm\:static {
     position: static;
   }
@@ -5484,40 +5636,8 @@ table {
     color: #ff0;
   }
 
-  .sm\:text-xs {
-    font-size: 0.75rem;
-  }
-
-  .sm\:text-sm {
-    font-size: 0.875rem;
-  }
-
-  .sm\:text-base {
-    font-size: 1rem;
-  }
-
-  .sm\:text-lg {
-    font-size: 1.125rem;
-  }
-
-  .sm\:text-xl {
-    font-size: 1.25rem;
-  }
-
-  .sm\:text-2xl {
-    font-size: 1.5rem;
-  }
-
-  .sm\:text-3xl {
-    font-size: 1.875rem;
-  }
-
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-  }
-
-  .sm\:text-5xl {
-    font-size: 3rem;
+  .sm\:text-24 {
+    font-size: 24px;
   }
 
   .sm\:w-1 {
@@ -6119,6 +6239,10 @@ table {
     margin: 1px;
   }
 
+  .md\:m-border {
+    margin: 2px;
+  }
+
   .md\:my-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -6267,6 +6391,16 @@ table {
   .md\:mx-px {
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .md\:my-border {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .md\:mx-border {
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   .md\:mt-0 {
@@ -6509,6 +6643,22 @@ table {
     margin-left: 1px;
   }
 
+  .md\:mt-border {
+    margin-top: 2px;
+  }
+
+  .md\:mr-border {
+    margin-right: 2px;
+  }
+
+  .md\:mb-border {
+    margin-bottom: 2px;
+  }
+
+  .md\:ml-border {
+    margin-left: 2px;
+  }
+
   .md\:max-h-full {
     max-height: 100%;
   }
@@ -6631,6 +6781,10 @@ table {
 
   .md\:-m-px {
     margin: -1px;
+  }
+
+  .md\:-m-border {
+    margin: -2px;
   }
 
   .md\:-my-0 {
@@ -6771,6 +6925,16 @@ table {
   .md\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .md\:-my-border {
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+  .md\:-mx-border {
+    margin-left: -2px;
+    margin-right: -2px;
   }
 
   .md\:-mt-0 {
@@ -6997,6 +7161,22 @@ table {
     margin-left: -1px;
   }
 
+  .md\:-mt-border {
+    margin-top: -2px;
+  }
+
+  .md\:-mr-border {
+    margin-right: -2px;
+  }
+
+  .md\:-mb-border {
+    margin-bottom: -2px;
+  }
+
+  .md\:-ml-border {
+    margin-left: -2px;
+  }
+
   .md\:p-0 {
     padding: 0;
   }
@@ -7051,6 +7231,10 @@ table {
 
   .md\:p-px {
     padding: 1px;
+  }
+
+  .md\:p-border {
+    padding: 2px;
   }
 
   .md\:py-0 {
@@ -7191,6 +7375,16 @@ table {
   .md\:px-px {
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .md\:py-border {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .md\:px-border {
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .md\:pt-0 {
@@ -7417,6 +7611,22 @@ table {
     padding-left: 1px;
   }
 
+  .md\:pt-border {
+    padding-top: 2px;
+  }
+
+  .md\:pr-border {
+    padding-right: 2px;
+  }
+
+  .md\:pb-border {
+    padding-bottom: 2px;
+  }
+
+  .md\:pl-border {
+    padding-left: 2px;
+  }
+
   .md\:static {
     position: static;
   }
@@ -7590,40 +7800,8 @@ table {
     color: #ff0;
   }
 
-  .md\:text-xs {
-    font-size: 0.75rem;
-  }
-
-  .md\:text-sm {
-    font-size: 0.875rem;
-  }
-
-  .md\:text-base {
-    font-size: 1rem;
-  }
-
-  .md\:text-lg {
-    font-size: 1.125rem;
-  }
-
-  .md\:text-xl {
-    font-size: 1.25rem;
-  }
-
-  .md\:text-2xl {
-    font-size: 1.5rem;
-  }
-
-  .md\:text-3xl {
-    font-size: 1.875rem;
-  }
-
-  .md\:text-4xl {
-    font-size: 2.25rem;
-  }
-
-  .md\:text-5xl {
-    font-size: 3rem;
+  .md\:text-24 {
+    font-size: 24px;
   }
 
   .md\:w-1 {
@@ -8225,6 +8403,10 @@ table {
     margin: 1px;
   }
 
+  .lg\:m-border {
+    margin: 2px;
+  }
+
   .lg\:my-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -8373,6 +8555,16 @@ table {
   .lg\:mx-px {
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .lg\:my-border {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .lg\:mx-border {
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   .lg\:mt-0 {
@@ -8615,6 +8807,22 @@ table {
     margin-left: 1px;
   }
 
+  .lg\:mt-border {
+    margin-top: 2px;
+  }
+
+  .lg\:mr-border {
+    margin-right: 2px;
+  }
+
+  .lg\:mb-border {
+    margin-bottom: 2px;
+  }
+
+  .lg\:ml-border {
+    margin-left: 2px;
+  }
+
   .lg\:max-h-full {
     max-height: 100%;
   }
@@ -8737,6 +8945,10 @@ table {
 
   .lg\:-m-px {
     margin: -1px;
+  }
+
+  .lg\:-m-border {
+    margin: -2px;
   }
 
   .lg\:-my-0 {
@@ -8877,6 +9089,16 @@ table {
   .lg\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .lg\:-my-border {
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+  .lg\:-mx-border {
+    margin-left: -2px;
+    margin-right: -2px;
   }
 
   .lg\:-mt-0 {
@@ -9103,6 +9325,22 @@ table {
     margin-left: -1px;
   }
 
+  .lg\:-mt-border {
+    margin-top: -2px;
+  }
+
+  .lg\:-mr-border {
+    margin-right: -2px;
+  }
+
+  .lg\:-mb-border {
+    margin-bottom: -2px;
+  }
+
+  .lg\:-ml-border {
+    margin-left: -2px;
+  }
+
   .lg\:p-0 {
     padding: 0;
   }
@@ -9157,6 +9395,10 @@ table {
 
   .lg\:p-px {
     padding: 1px;
+  }
+
+  .lg\:p-border {
+    padding: 2px;
   }
 
   .lg\:py-0 {
@@ -9297,6 +9539,16 @@ table {
   .lg\:px-px {
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .lg\:py-border {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .lg\:px-border {
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .lg\:pt-0 {
@@ -9523,6 +9775,22 @@ table {
     padding-left: 1px;
   }
 
+  .lg\:pt-border {
+    padding-top: 2px;
+  }
+
+  .lg\:pr-border {
+    padding-right: 2px;
+  }
+
+  .lg\:pb-border {
+    padding-bottom: 2px;
+  }
+
+  .lg\:pl-border {
+    padding-left: 2px;
+  }
+
   .lg\:static {
     position: static;
   }
@@ -9696,40 +9964,8 @@ table {
     color: #ff0;
   }
 
-  .lg\:text-xs {
-    font-size: 0.75rem;
-  }
-
-  .lg\:text-sm {
-    font-size: 0.875rem;
-  }
-
-  .lg\:text-base {
-    font-size: 1rem;
-  }
-
-  .lg\:text-lg {
-    font-size: 1.125rem;
-  }
-
-  .lg\:text-xl {
-    font-size: 1.25rem;
-  }
-
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-  }
-
-  .lg\:text-4xl {
-    font-size: 2.25rem;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
+  .lg\:text-24 {
+    font-size: 24px;
   }
 
   .lg\:w-1 {
@@ -10331,6 +10567,10 @@ table {
     margin: 1px;
   }
 
+  .xl\:m-border {
+    margin: 2px;
+  }
+
   .xl\:my-0 {
     margin-top: 0;
     margin-bottom: 0;
@@ -10479,6 +10719,16 @@ table {
   .xl\:mx-px {
     margin-left: 1px;
     margin-right: 1px;
+  }
+
+  .xl\:my-border {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .xl\:mx-border {
+    margin-left: 2px;
+    margin-right: 2px;
   }
 
   .xl\:mt-0 {
@@ -10721,6 +10971,22 @@ table {
     margin-left: 1px;
   }
 
+  .xl\:mt-border {
+    margin-top: 2px;
+  }
+
+  .xl\:mr-border {
+    margin-right: 2px;
+  }
+
+  .xl\:mb-border {
+    margin-bottom: 2px;
+  }
+
+  .xl\:ml-border {
+    margin-left: 2px;
+  }
+
   .xl\:max-h-full {
     max-height: 100%;
   }
@@ -10843,6 +11109,10 @@ table {
 
   .xl\:-m-px {
     margin: -1px;
+  }
+
+  .xl\:-m-border {
+    margin: -2px;
   }
 
   .xl\:-my-0 {
@@ -10983,6 +11253,16 @@ table {
   .xl\:-mx-px {
     margin-left: -1px;
     margin-right: -1px;
+  }
+
+  .xl\:-my-border {
+    margin-top: -2px;
+    margin-bottom: -2px;
+  }
+
+  .xl\:-mx-border {
+    margin-left: -2px;
+    margin-right: -2px;
   }
 
   .xl\:-mt-0 {
@@ -11209,6 +11489,22 @@ table {
     margin-left: -1px;
   }
 
+  .xl\:-mt-border {
+    margin-top: -2px;
+  }
+
+  .xl\:-mr-border {
+    margin-right: -2px;
+  }
+
+  .xl\:-mb-border {
+    margin-bottom: -2px;
+  }
+
+  .xl\:-ml-border {
+    margin-left: -2px;
+  }
+
   .xl\:p-0 {
     padding: 0;
   }
@@ -11263,6 +11559,10 @@ table {
 
   .xl\:p-px {
     padding: 1px;
+  }
+
+  .xl\:p-border {
+    padding: 2px;
   }
 
   .xl\:py-0 {
@@ -11403,6 +11703,16 @@ table {
   .xl\:px-px {
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .xl\:py-border {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .xl\:px-border {
+    padding-left: 2px;
+    padding-right: 2px;
   }
 
   .xl\:pt-0 {
@@ -11629,6 +11939,22 @@ table {
     padding-left: 1px;
   }
 
+  .xl\:pt-border {
+    padding-top: 2px;
+  }
+
+  .xl\:pr-border {
+    padding-right: 2px;
+  }
+
+  .xl\:pb-border {
+    padding-bottom: 2px;
+  }
+
+  .xl\:pl-border {
+    padding-left: 2px;
+  }
+
   .xl\:static {
     position: static;
   }
@@ -11802,40 +12128,8 @@ table {
     color: #ff0;
   }
 
-  .xl\:text-xs {
-    font-size: 0.75rem;
-  }
-
-  .xl\:text-sm {
-    font-size: 0.875rem;
-  }
-
-  .xl\:text-base {
-    font-size: 1rem;
-  }
-
-  .xl\:text-lg {
-    font-size: 1.125rem;
-  }
-
-  .xl\:text-xl {
-    font-size: 1.25rem;
-  }
-
-  .xl\:text-2xl {
-    font-size: 1.5rem;
-  }
-
-  .xl\:text-3xl {
-    font-size: 1.875rem;
-  }
-
-  .xl\:text-4xl {
-    font-size: 2.25rem;
-  }
-
-  .xl\:text-5xl {
-    font-size: 3rem;
+  .xl\:text-24 {
+    font-size: 24px;
   }
 
   .xl\:w-1 {
