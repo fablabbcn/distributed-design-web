@@ -5959,11 +5959,12 @@ input[type="submit"]::-moz-focus-inner {
   border: none;
   padding: 0; }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none; }
 
-q:before,
-q:after {
+q::before,
+q::after {
   content: ''; }
 
 a {
@@ -6010,7 +6011,7 @@ select:focus {
   background: none;
   font-size: 0;
   line-height: 0; }
-  .slick-arrow:before {
+  .slick-arrow::before {
     content: '';
     position: absolute;
     top: 0;
@@ -6025,7 +6026,7 @@ select:focus {
 
 .slick-prev {
   left: 7px; }
-  .slick-prev:before {
+  .slick-prev::before {
     -webkit-transform: rotate(-135deg);
     -ms-transform: rotate(-135deg);
     -o-transform: rotate(-135deg);
@@ -6033,7 +6034,7 @@ select:focus {
 
 .slick-next {
   right: 7px; }
-  .slick-next:before {
+  .slick-next::before {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
@@ -6063,7 +6064,7 @@ select:focus {
         margin-left: 4px;
         margin-right: 4px; } }
     .slick-dots > li.slick-active button {
-      opacity: .19; }
+      opacity: 0.19; }
   .slick-dots button {
     display: block;
     width: 8px;
@@ -6080,7 +6081,7 @@ select:focus {
         width: 5px;
         height: 5px; } }
     .slick-dots button:hover {
-      opacity: .19; }
+      opacity: 0.19; }
 
 @media (max-width: 991px) {
   .row {
@@ -6118,15 +6119,19 @@ select:focus {
   @media (min-width: 992px) {
     .page-header {
       text-transform: uppercase; } }
-  .page-header h1, .page-header h2, .page-header h3 {
+  .page-header h1,
+  .page-header h2,
+  .page-header h3 {
     margin-top: 0;
     margin-bottom: 0;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
     font-weight: 400;
     font-size: 16px;
     line-height: 21px; }
     @media (max-width: 991px) {
-      .page-header h1, .page-header h2, .page-header h3 {
+      .page-header h1,
+      .page-header h2,
+      .page-header h3 {
         font-weight: 700;
         font-size: 12px;
         line-height: 1.25em; } }
@@ -7183,9 +7188,9 @@ select:focus {
   text-decoration: none; }
 
 @media (min-width: 992px) {
+  .tabs-header,
   .resources-header {
-    margin-left: 27.93%;
-    border-left: 2px solid; } }
+    margin-left: 27.93%; } }
 
 .number-column {
   width: 28.45%;
@@ -7288,6 +7293,8 @@ select:focus {
     margin-top: -2px !important; }
   .stickit {
     top: -41px !important; }
+  .tabs-header h1,
+  .tabs-header h2,
   .resources-header h1,
   .resources-header h2 {
     font-size: 20px !important; }

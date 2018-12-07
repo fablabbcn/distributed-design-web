@@ -72,9 +72,10 @@
 }
 
 @media (min-width: 992px) {
+  .tabs-header,
   .resources-header {
     margin-left: 27.93%;
-    border-left: 2px solid;
+    // border-left: 2px solid;
   }
 }
 
@@ -210,9 +211,12 @@
     top: -41px !important;
   }
 
-  .resources-header h1,
-  .resources-header h2 {
-    font-size: 20px !important;
+  .tabs-header,
+  .resources-header {
+    h1,
+    h2 {
+      font-size: 20px !important;
+    }
   }
 
   .resources-filter {

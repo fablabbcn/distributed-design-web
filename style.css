@@ -382,6 +382,8 @@ a img.aligncenter {
   margin-left: -1px;
 }
 
+.tabs-header h1,
+.tabs-header h2,
 .resources-header h1,
 .resources-header h2 {
   line-height: 26px;
@@ -391,6 +393,9 @@ a img.aligncenter {
   font-size: 24px;
 }
 
+.tabs-header h1,
+.tabs-header h2,
+.tabs-header h3,
 .resources-header h1,
 .resources-header h2,
 .resources-header h3 {

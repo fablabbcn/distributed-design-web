@@ -1,4 +1,4 @@
-<header class="<?php echo $post_type; ?>-header">
+<header class="tabs-header <?php echo $post_type; ?>-header">
 
     <h1 class="clip"><?php echo $post_type_object->label; ?></h1>
 
