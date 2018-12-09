@@ -3,7 +3,7 @@
 
     <div id="<?php echo $post_type; ?>-list-<?php echo $term; ?>" class="<?php echo 0 === $key ? '' : 'clip'; ?>">
         <?php set_query_var( 'term', $term ); ?>
-        <?php get_template_part( "template-parts/loop-$post_type" ); ?>
+        <?php get_template_part( "template-parts/archive/loop-$post_type" ); ?>
     </div>
 
 <?php endforeach; ?>

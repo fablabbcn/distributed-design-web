@@ -5,10 +5,6 @@
   transition: all 0.2s ease;
 }
 
-.beefup:hover {
-  background: #0f0;
-}
-
 .beefup:first-child {
   margin-top: 0;
 }
@@ -22,10 +18,6 @@
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-}
-
-.beefup__head:hover {
-  background: #0f0;
 }
 
 .beefup__head::after {
@@ -44,19 +36,13 @@
   width: 0;
 }
 
-.beefup__body {
-  border-top: 2px solid;
-  background-color: #e6e6e6 !important;
-}
-
 .beefup.is-open > .beefup__head::after {
   border-width: 0 10px 10px;
   border-color: transparent transparent #ffc100;
 }
 
-.beefup.is-open {
-  background: #0f0;
-}
+.beefup.is-open.resources-item > *:first-child { background: #0f0; }
+.beefup.is-open.tribe_events-item > *:first-child { background: #f0f; }
 
 .beefup.is-open > .row > .download-column:hover {
   background-color: #e6e6e6 !important;

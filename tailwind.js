@@ -50,20 +50,9 @@ const spacing = global.Object.assign({
 const sizing = {
   'auto': 'auto',
   'px': '1px',
-  '1': '0.25rem',
-  '2': '0.5rem',
-  '3': '0.75rem',
-  '4': '1rem',
-  '5': '1.25rem',
-  '6': '1.5rem',
-  '8': '2rem',
-  '10': '2.5rem',
-  '12': '3rem',
-  '16': '4rem',
-  '24': '6rem',
-  '32': '8rem',
-  '48': '12rem',
-  '64': '16rem',
+  '15': '15px',
+  '20': '20px',
+  '25': '25px',
 }
 
 module.exports = {
@@ -126,6 +115,10 @@ module.exports = {
   },
 
   textSizes: {
+    '15': '15px',
+    '17': '17px',
+    '20': '20px',
+    '22': '22px',
     '24': '24px',
   },
 
@@ -358,6 +351,9 @@ module.exports = {
 
   plugins: [
     require('tailwindcss-alpha')(),
+    require('tailwindcss-inset')({
+      insets: { 'full': '100%' },
+    }),
   ],
 
   /*

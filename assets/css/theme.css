@@ -6121,7 +6121,7 @@ select:focus {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
-    #header .container-fluid:before, #header .container-fluid:after {
+    #header .container-fluid::before, #header .container-fluid::after {
       display: none; }
     #header .container-fluid > * {
       -webkit-flex: 0 1 auto;
@@ -6130,8 +6130,8 @@ select:focus {
   #header .navbar-header {
     margin-left: 0;
     margin-right: 0;
-    transition: width .3s ease; }
-    #header .navbar-header:before, #header .navbar-header:after {
+    transition: width 0.3s ease; }
+    #header .navbar-header::before, #header .navbar-header::after {
       display: none; }
     @media (max-width: 991px) {
       #header .navbar-header {
@@ -6191,42 +6191,42 @@ select:focus {
     #header .navbar-brand:hover, #header .navbar-brand:focus {
       background-color: #f93838;
       color: inherit; }
-    #header .navbar-brand:before, #header .navbar-brand:after {
+    #header .navbar-brand::before, #header .navbar-brand::after {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       z-index: 2;
-      transition: all .3s ease; }
-    #header .navbar-brand:before {
+      transition: all 0.3s ease; }
+    #header .navbar-brand::before {
       background: #e6e6e6;
       height: 81px; }
       @media (min-width: 992px) {
-        #header .navbar-brand:before {
+        #header .navbar-brand::before {
           height: 145px;
           border: solid #222;
           border-width: 0 2px 2px 0; } }
-    #header .navbar-brand:after {
+    #header .navbar-brand::after {
       width: 190px;
       height: 92px;
       background: url("../images/logo.svg") no-repeat;
       background-size: 100% auto; }
       @media (max-width: 991px) {
-        #header .navbar-brand:after {
+        #header .navbar-brand::after {
           width: 109px;
           height: 54px;
           margin-top: 13px;
           margin-left: 12px; } }
       @media (min-width: 992px) {
-        #header .navbar-brand:after {
+        #header .navbar-brand::after {
           margin-top: 23px;
           margin-left: auto;
           margin-right: auto; } }
     @media (max-width: 991px) {
       .scrolled #header .navbar-brand {
         width: 130px; } }
-    .scrolled #header .navbar-brand:before, .scrolled #header .navbar-brand:after {
+    .scrolled #header .navbar-brand::before, .scrolled #header .navbar-brand::after {
       -webkit-transform: translate(0, -200%);
       -ms-transform: translate(0, -200%);
       -o-transform: translate(0, -200%);
@@ -6234,7 +6234,7 @@ select:focus {
     @media (max-width: 991px) {
       .opened-menu #header .navbar-brand {
         width: 130px; }
-        .opened-menu #header .navbar-brand:before, .opened-menu #header .navbar-brand:after {
+        .opened-menu #header .navbar-brand::before, .opened-menu #header .navbar-brand::after {
           -webkit-transform: translate(0, -200%);
           -ms-transform: translate(0, -200%);
           -o-transform: translate(0, -200%);
@@ -6256,7 +6256,7 @@ select:focus {
       height: 2px;
       border-radius: 0;
       border-bottom: 2px solid;
-      transition: all .3s ease; }
+      transition: all 0.3s ease; }
       #header .navbar-toggle .icon-bar + .icon-bar {
         margin-top: 8px; }
       .opened-menu #header .navbar-toggle .icon-bar:nth-child(1) {
@@ -6282,7 +6282,7 @@ select:focus {
   font-size: 16px;
   line-height: 21px;
   flex-grow: 1 !important;
-  transition: width .3s ease; }
+  transition: width 0.3s ease; }
   @media (max-width: 991px) {
     #main-nav {
       display: -ms-flexbox;
@@ -6306,7 +6306,7 @@ select:focus {
       text-align: left;
       font-size: 26px;
       line-height: 35px;
-      transition: margin .3s ease; }
+      transition: margin 0.3s ease; }
       .opened-menu #main-nav {
         margin-right: 0; } }
   @media (min-width: 992px) {
@@ -7154,8 +7154,7 @@ select:focus {
 @media (min-width: 992px) {
   .tabs-header,
   .resources-header {
-    margin-left: calc(27.93% - 1px);
-    border-left: 2px solid; } }
+    margin-left: calc(27.93% - 1px); } }
 
 .number-column {
   width: 28.45%;

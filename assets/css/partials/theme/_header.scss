@@ -6,6 +6,7 @@
   right: 0;
   z-index: 100;
   background: $gray;
+
   @include media('<desktop') {
     @at-root .scrolled & {
       box-shadow: 0 2px 0 0 $border-color;
@@ -14,24 +15,30 @@
   @include media('>=desktop') {
     border-bottom: 2px solid $border-color;
   }
+
   .container-fluid {
     padding-left: 0;
     padding-right: 0;
-    &:before,
-    &:after {
+
+    &::before,
+    &::after {
       display: none;
     }
+
     @include display-flex();
+
     > * {
       @include flex(0 1 auto);
     }
   }
+
   .navbar-header {
     margin-left: 0;
     margin-right: 0;
-    transition: width .3s ease;
-    &:before,
-    &:after {
+    transition: width 0.3s ease;
+
+    &::before,
+    &::after {
       display: none;
     }
 
@@ -40,8 +47,10 @@
       width: 100%;
       @include clearfix();
     }
+
     @include media('>=desktop') {
       width: 28.03%;
+
       @at-root .scrolled & {
         /* width: 38.67%; */
         .navbar-brand {
@@ -60,6 +69,7 @@
       }
     }
   }
+
   .navbar-brand {
     position: relative;
     padding: 10px;
@@ -68,6 +78,7 @@
     height: auto;
     font: 600 16px/32px $poppins;
     text-transform: uppercase;
+
     @include media('<desktop') {
       font-weight: 400;
       font-size: 26px;
@@ -77,36 +88,42 @@
       padding-right: $grid-gutter-width-mobile/2;
       padding-bottom: 14px;
     }
+
     @include media('>=desktop') {
       width: 100%;
       height: 52px;
       text-align: center;
     }
+
     em {
       font-style: normal;
     }
+
     span {
       display: inline-block;
       vertical-align: top;
       max-width: 100%;
       @include text-overflow();
     }
+
     &:hover,
     &:focus {
       background-color: $red;
       color: inherit;
     }
-    &:before,
-    &:after {
+
+    &::before,
+    &::after {
       content: '';
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       z-index: 2;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
-    &:before {
+
+    &::before {
       background: $gray;
       height: 81px;
       @include media('>=desktop') {
@@ -115,7 +132,8 @@
         border-width: 0 2px 2px 0;
       }
     }
-    &:after {
+
+    &::after {
       width: 190px;
       height: 92px;
       background: url('#{$images}logo.svg') no-repeat;
@@ -132,25 +150,30 @@
         margin-right: auto;
       }
     }
+
     @at-root .scrolled & {
       @include media('<desktop') {
         width: 130px;
       }
-      &:before,
-      &:after {
+
+      &::before,
+      &::after {
         @include translate(0, -200%);
       }
     }
+
     @at-root .opened-menu & {
       @include media('<desktop') {
         width: 130px;
-        &:before,
-        &:after {
+
+        &::before,
+        &::after {
           @include translate(0, -200%);
         }
       }
     }
   }
+
   .navbar-toggle {
     margin: 9px 12px 5px 10px;
     width: 32px;
@@ -162,24 +185,29 @@
     @include media('<desktop') {
       display: block;
     }
+
     .icon-bar {
       position: relative;
       width: 28px;
       height: 2px;
       border-radius: 0;
       border-bottom: 2px solid;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
+
       & + .icon-bar {
         margin-top: 8px;
       }
+
       @at-root .opened-menu & {
         &:nth-child(1) {
           top: 10px;
           @include rotate(45deg);
         }
+
         &:nth-child(2) {
           opacity: 0;
         }
+
         &:nth-child(3) {
           top: -10px;
           @include rotate(-45deg);
@@ -197,7 +225,8 @@
   font-size: 16px;
   line-height: 21px;
   flex-grow: 1 !important;
-  transition: width .3s ease;
+  transition: width 0.3s ease;
+
   @include media('<desktop') {
     @include display-flex();
     @include flex-direction(column);
@@ -215,40 +244,49 @@
     text-align: left;
     font-size: 26px;
     line-height: 35px;
-    transition: margin .3s ease;
+    transition: margin 0.3s ease;
+
     @at-root .opened-menu & {
       margin-right: 0;
     }
   }
+
   @include media('>=desktop') {
     width: 71.97%;
+
     @at-root .scrolled & {
       width: 61.33%;
     }
   }
+
   .base {
     list-style: none;
     margin: 0;
     padding: 0;
+
     @include media('<desktop') {
       display: block;
       // margin-top: auto;
       // margin-bottom: auto;
       border-top: 2px solid $border-color;
     }
+
     @include media('>=desktop') {
       @include display-flex();
       @include flex(0 1 100%);
       margin-left: -2px;
     }
+
     > li {
       @include media('<desktop') {
         border-bottom: 2px solid $border-color;
       }
+
       @include media('>=desktop') {
         @include flex(0 1 100%);
         border-left: 2px solid $border-color;
       }
+
       > a {
         display: block;
         position: relative;
@@ -257,6 +295,7 @@
         @include media('<desktop') {
           padding: 7px $grid-gutter-width-mobile/2;
         }
+
         &:hover,
         &:focus {
           background: $red;
@@ -277,6 +316,7 @@
 .opened-menu {
   overflow: hidden;
   height: 100%;
+
   .wrapper {
     height: 100%;
   }

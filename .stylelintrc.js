@@ -7,7 +7,7 @@ module.exports = {
       'always', {
         except: ['inside-block', 'blockless-after-same-name-blockless', 'first-nested'],
         ignore: ['after-comment'],
-        ignoreAtRules: ['apply', 'screen', 'font-face', 'include'],
+        ignoreAtRules: ['apply', 'screen', 'font-face', 'include', 'at-root'],
       },
     ],
     'at-rule-no-unknown': [

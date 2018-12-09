@@ -346,19 +346,6 @@ a img.aligncenter {
   margin-left: 0 !important;
 }
 
-.filter-item {
-  border-bottom: 2px solid #222221;
-  padding-top: 20px;
-  padding-bottom: 22px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.filter-right {
-  border-left: 2px solid #222221;
-  margin-left: -1px;
-}
-
 .tabs-header h1,
 .tabs-header h2,
 .resources-header h1,
