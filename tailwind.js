@@ -115,11 +115,15 @@ module.exports = {
   },
 
   textSizes: {
+    '12': '12px',
     '15': '15px',
+    '16': '16px',
     '17': '17px',
+    '19': '19px',
     '20': '20px',
     '22': '22px',
     '24': '24px',
+    '29': '29px',
   },
 
   fontWeights: {
@@ -293,7 +297,7 @@ module.exports = {
     borderCollapse: [],
     borderColors: [],
     borderRadius: false,
-    borderStyle: false,
+    borderStyle: [],
     borderWidths: [],
     cursor: [],
     display: ['responsive'],

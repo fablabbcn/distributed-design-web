@@ -11,10 +11,10 @@ $contact_info = get_theme_mod( 'theme_contact', ( '
 ?>
 
 
-		<footer id="footer">
+		<footer id="footer" class="mt-auto">
 			<div class="footer-address py-20 px-40 border-b"><?php _e( $contact_info, 'ddmp' ); ?></div>
-			<div class="footer-founding flex justify-center p-40">
-				<img src="<?php echo get_stylesheet_directory_uri() . '/assets/images'; ?>/ce-logo.png"
+			<div class="footer-founding p-40">
+				<img class="block mx-auto" src="<?php echo get_stylesheet_directory_uri() . '/assets/images'; ?>/ce-logo.png"
 					alt="Co-funded by the Creative European Programme of the European Union" />
 			</div>
 		</footer>

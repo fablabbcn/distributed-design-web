@@ -27,6 +27,7 @@
 
 </article>
 
+
 <?php if ( 'post' === get_post_type() ) : ?>
 	<div class="info-section">
 		<div class="bootstrap-wrapper">
@@ -41,6 +42,9 @@
 			</div>
 		</div>
 	</div>
+
+	<?php get_template_part( 'template-parts/forms/login' ); ?>
+
 
 <?php else : ?>
 	<section class="flex flex-grow w-full overflow-x-hidden">

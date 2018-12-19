@@ -886,6 +886,22 @@ table {
   border-color: #ff0;
 }
 
+.border-solid {
+  border-style: solid;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-none {
+  border-style: none;
+}
+
 .border-0 {
   border-width: 0;
 }
@@ -3132,12 +3148,24 @@ table {
   color: #ff0;
 }
 
+.text-12 {
+  font-size: 12px;
+}
+
 .text-15 {
   font-size: 15px;
 }
 
+.text-16 {
+  font-size: 16px;
+}
+
 .text-17 {
   font-size: 17px;
+}
+
+.text-19 {
+  font-size: 19px;
 }
 
 .text-20 {
@@ -3150,6 +3178,10 @@ table {
 
 .text-24 {
   font-size: 24px;
+}
+
+.text-29 {
+  font-size: 29px;
 }
 
 .italic {
@@ -5571,12 +5603,24 @@ table {
     color: #ff0;
   }
 
+  .sm\:text-12 {
+    font-size: 12px;
+  }
+
   .sm\:text-15 {
     font-size: 15px;
   }
 
+  .sm\:text-16 {
+    font-size: 16px;
+  }
+
   .sm\:text-17 {
     font-size: 17px;
+  }
+
+  .sm\:text-19 {
+    font-size: 19px;
   }
 
   .sm\:text-20 {
@@ -5589,6 +5633,10 @@ table {
 
   .sm\:text-24 {
     font-size: 24px;
+  }
+
+  .sm\:text-29 {
+    font-size: 29px;
   }
 
   .sm\:w-15 {
@@ -7663,12 +7711,24 @@ table {
     color: #ff0;
   }
 
+  .md\:text-12 {
+    font-size: 12px;
+  }
+
   .md\:text-15 {
     font-size: 15px;
   }
 
+  .md\:text-16 {
+    font-size: 16px;
+  }
+
   .md\:text-17 {
     font-size: 17px;
+  }
+
+  .md\:text-19 {
+    font-size: 19px;
   }
 
   .md\:text-20 {
@@ -7681,6 +7741,10 @@ table {
 
   .md\:text-24 {
     font-size: 24px;
+  }
+
+  .md\:text-29 {
+    font-size: 29px;
   }
 
   .md\:w-15 {
@@ -9755,12 +9819,24 @@ table {
     color: #ff0;
   }
 
+  .lg\:text-12 {
+    font-size: 12px;
+  }
+
   .lg\:text-15 {
     font-size: 15px;
   }
 
+  .lg\:text-16 {
+    font-size: 16px;
+  }
+
   .lg\:text-17 {
     font-size: 17px;
+  }
+
+  .lg\:text-19 {
+    font-size: 19px;
   }
 
   .lg\:text-20 {
@@ -9773,6 +9849,10 @@ table {
 
   .lg\:text-24 {
     font-size: 24px;
+  }
+
+  .lg\:text-29 {
+    font-size: 29px;
   }
 
   .lg\:w-15 {
@@ -11847,12 +11927,24 @@ table {
     color: #ff0;
   }
 
+  .xl\:text-12 {
+    font-size: 12px;
+  }
+
   .xl\:text-15 {
     font-size: 15px;
   }
 
+  .xl\:text-16 {
+    font-size: 16px;
+  }
+
   .xl\:text-17 {
     font-size: 17px;
+  }
+
+  .xl\:text-19 {
+    font-size: 19px;
   }
 
   .xl\:text-20 {
@@ -11865,6 +11957,10 @@ table {
 
   .xl\:text-24 {
     font-size: 24px;
+  }
+
+  .xl\:text-29 {
+    font-size: 29px;
   }
 
   .xl\:w-15 {
