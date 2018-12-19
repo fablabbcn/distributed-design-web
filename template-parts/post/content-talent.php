@@ -6,7 +6,7 @@
 $winer   = get_field( 'winner' );
 $project = get_field( 'project' );
 
-$dl_classes = 'flex flex-col flex-grow justify-center p-10 md:p-15 border';
+$dl_classes = 'flex flex-col flex-grow justify-center p-10 md:p-15 border-px';
 $dt_classes = 'leading-normal font-light';
 $dd_classes = 'leading-normal font-semibold';
 
@@ -17,7 +17,7 @@ $dd_classes = 'leading-normal font-semibold';
 	<a class="flex w-full hover:text-inherit" href="<?php the_permalink(); ?>">
 
 		<div class="relative flex flex-col w-full bg-black">
-			<?php the_post_thumbnail( 'post-list-thumbnails-square', array( 'class' => 'block w-full h-full group-hover:opacity-70 border object-cover' ) ); ?>
+			<?php the_post_thumbnail( 'post-list-thumbnails-square', array( 'class' => 'block w-full h-full group-hover:opacity-70 border-px object-cover' ) ); ?>
 		</div>
 
 		<div class="flex flex-col w-full group-hover:bg-yellow">

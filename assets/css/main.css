@@ -894,6 +894,10 @@ table {
   border-width: 2px;
 }
 
+.border-px {
+  border-width: 1px;
+}
+
 .border-t-0 {
   border-top-width: 0;
 }
@@ -924,6 +928,22 @@ table {
 
 .border-l {
   border-left-width: 2px;
+}
+
+.border-t-px {
+  border-top-width: 1px;
+}
+
+.border-r-px {
+  border-right-width: 1px;
+}
+
+.border-b-px {
+  border-bottom-width: 1px;
+}
+
+.border-l-px {
+  border-left-width: 1px;
 }
 
 .cursor-auto {
