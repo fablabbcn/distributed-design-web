@@ -25,11 +25,11 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: footer copy.php:5, header.php:35
+#: footer copy.php:5, header.php:36
 msgid "Distributed Design"
 msgstr ""
 
-#: footer copy.php:5, header.php:35
+#: footer copy.php:5, header.php:36
 msgid "Market Platform"
 msgstr ""
 
@@ -53,8 +53,12 @@ msgstr ""
 msgid "Add widgets here to appear in your sidebar on blog posts"
 msgstr ""
 
-#: header.php:34
+#: header.php:35
 msgid "DDMP"
+msgstr ""
+
+#: template-archive-events.php:2
+msgid "Events Archive"
 msgstr ""
 
 #: template-parts/post/content-none.php:9
