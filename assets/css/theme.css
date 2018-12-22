@@ -6527,7 +6527,7 @@ select:focus {
   .info-section .col {
     padding: 115px 20px 10px 46px;
     border-right: 2px solid #222;
-    transition: background .3s ease; }
+    transition: background 0.3s ease; }
     @media (max-width: 991px) {
       .info-section .col {
         position: relative;
@@ -6535,7 +6535,7 @@ select:focus {
         padding-top: 11px;
         padding-left: 16px;
         padding-right: 16px; }
-        .info-section .col:before {
+        .info-section .col::before {
           content: '';
           position: absolute;
           top: -1px;
@@ -6566,15 +6566,12 @@ select:focus {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex; }
-    .intro-slider .slick-track:before, .intro-slider .slick-track:after {
+    .intro-slider .slick-track::before, .intro-slider .slick-track::after {
       display: none; }
   .intro-slider .slick-slide {
     height: auto; }
   .intro-slider figure {
-    position: relative;
-    height: 0;
-    margin: 0;
-    padding: 0 0 74.76%; }
+    margin: 0; }
     @media (max-width: 991px) {
       .intro-slider figure {
         min-height: 349px; } }
@@ -6593,7 +6590,7 @@ select:focus {
 .notice {
   font: 900 65px/56px "Aileron", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
-  letter-spacing: -.045em;
+  letter-spacing: -0.045em;
   padding: 16px 26px; }
   @media (max-width: 991px) {
     .notice {
@@ -6621,18 +6618,22 @@ select:focus {
   @media (max-width: 991px) {
     .heading {
       margin-bottom: 6px; } }
-  .heading h1, .heading h2, .heading h3 {
+  .heading h1,
+  .heading h2,
+  .heading h3 {
     font-weight: 400;
     font-size: 17px;
     line-height: 20px;
     margin-top: 0;
     margin-bottom: 10px; }
     @media (max-width: 991px) {
-      .heading h1, .heading h2, .heading h3 {
+      .heading h1,
+      .heading h2,
+      .heading h3 {
         font-size: 12px;
         line-height: 1.25em;
         margin-bottom: 1px; } }
-  .heading:before {
+  .heading::before {
     content: '';
     position: absolute;
     left: 0;
@@ -6641,7 +6642,7 @@ select:focus {
     height: 3px;
     border-bottom: 3px solid; }
     @media (max-width: 991px) {
-      .heading:before {
+      .heading::before {
         width: 5px;
         height: 2px;
         border-bottom-width: 2px; } }
