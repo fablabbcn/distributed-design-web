@@ -15,7 +15,7 @@ $post_type_object = get_post_type_object( $post_type );
 
     <h1 class="clip"><?php echo $post_type_object->label; ?></h1>
 
-    <div class="flex <?php echo $post_type; ?>-filter">
+    <div class="flex tab-filters <?php echo $post_type; ?>-filter">
     <?php foreach ( $terms as $key => $term ) : ?>
         <?php $button_clip  = get_button_clip( $terms, $term, 'list', 'get_term_slug' ); ?>
         <?php $button_class = implode( ' ', [ "flex-1 py-20 hover:bg-$color border-b border-l", 0 === $key ? "bg-$color" : '' ] ); ?>

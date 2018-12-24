@@ -4,7 +4,7 @@
   // Bind Event Handlers
   $(document).on('click', '[data-clip]', handleDataClip)
   $(document).on('click', '[data-toggle]', handleDataToggle)
-  $(document).on('click', '.resources-filter [data-clip]', handleResourcesFilters)
+  $(document).on('click', '.tab-filters [data-clip]', handleResourcesFilters)
 
   var screenRes_ = {
     isDesktop: true,
@@ -173,11 +173,18 @@
  */
 
 function handleResourcesFilters () {
-  var classes = 'bg-lime'
-  jQuery('.resources-filter [data-clip]')
-    .removeClass(classes)
+  var classes = {
+    resources: 'bg-lime',
+    tribe_events: 'bg-magenta',
+  }
+
+  var tabs = jQuery('.tab-filters')
+  var type = tabs.attr('class').split(' ')[2].split('-filter')[0]
+
+  tabs.find('[data-clip]')
+    .removeClass(classes[type])
     .filter(this)
-    .addClass(classes)
+    .addClass(classes[type])
 }
 
 /**
