@@ -252,7 +252,7 @@
   }
 
   @include media('>=desktop') {
-    width: 71.97%;
+    width: calc(100% - 28.45%);
 
     @at-root .scrolled & {
       width: 61.33%;

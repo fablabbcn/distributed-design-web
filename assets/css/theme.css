@@ -6311,7 +6311,7 @@ select:focus {
         margin-right: 0; } }
   @media (min-width: 992px) {
     #main-nav {
-      width: 71.97%; }
+      width: calc(100% - 28.45%); }
       .scrolled #main-nav {
         width: 61.33%; } }
   #main-nav .base {
@@ -7155,7 +7155,7 @@ select:focus {
 @media (min-width: 992px) {
   .tabs-header,
   .resources-header {
-    margin-left: calc(27.93% - 1px); } }
+    margin-left: 28.45%; } }
 
 .number-column {
   width: 28.45%;

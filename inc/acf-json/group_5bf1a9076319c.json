@@ -32,7 +32,8 @@
                     },
                     "choices": {
                         "designer": "Designer",
-                        "maker": "Maker"
+                        "maker": "Maker",
+                        "team": "Team"
                     },
                     "allow_null": 0,
                     "default_value": "",
@@ -229,5 +230,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543170294
+    "modified": 1545389947
 }
