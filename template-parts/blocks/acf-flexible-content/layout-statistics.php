@@ -45,18 +45,18 @@ $caption = get_sub_field( 'caption' );
 
 	<ul class="nav tabset" role="tablist">
 	<?php foreach ( $items as $key => $item ) : ?>
-	<?php if ( $item['number'] ) : ?>
-		<?php $id = "tabs-0$layout-0$key"; ?>
-		<?php // echo (($key == 0) ? 'class="active"' : ''); ?>
+		<?php if ( $item['number'] ) : ?>
+			<?php $id = "tabs-0$layout-0$key"; ?>
+			<?php // echo (($key == 0) ? 'class="active"' : ''); ?>
 
-		<li role="presentation">
-			<a href="#<?php echo $id; ?>" aria-controls="<?php echo $id; ?>" role="tab" data-toggle="tab">
-				<span class="small"><?php echo $item['title']; ?></span>
-				<span class="value"><?php echo $item['number']; ?></span>
-			</a>
-		</li>
+			<li role="presentation">
+				<a href="#<?php echo $id; ?>" aria-controls="<?php echo $id; ?>" role="tab" data-toggle="tab">
+					<span class="small"><?php echo $item['title']; ?></span>
+					<span class="value"><?php echo $item['number']; ?></span>
+				</a>
+			</li>
 
-	<?php endif; ?>
+		<?php endif; ?>
 	<?php endforeach ?>
 	</ul>
 

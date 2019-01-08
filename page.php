@@ -7,19 +7,19 @@ get_header(); ?>
 
 
 <?php if ( have_posts() ) : ?>
-<?php while ( have_posts() ) : ?>
-	<?php the_post(); ?>
+	<?php while ( have_posts() ) : ?>
+		<?php the_post(); ?>
 
-	<?php if ( is_front_page() ) : ?>
-		<?php get_template_part( 'template-parts/page/content', 'frontpage' ); ?>
+		<?php if ( is_front_page() ) : ?>
+			<?php get_template_part( 'template-parts/page/content', 'frontpage' ); ?>
 
-	<?php else : ?>
-		<?php get_template_part( 'template-parts/page/content', 'page' ); ?>
+		<?php else : ?>
+			<?php get_template_part( 'template-parts/page/content', 'page' ); ?>
 
-	<?php endif ?>
+		<?php endif ?>
 
 
-<?php endwhile; ?>
+	<?php endwhile; ?>
 <?php else : ?>
 	<div class="container">
 		<div class="page-content text-center">

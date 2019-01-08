@@ -7,7 +7,7 @@ $posts_given_term = new WP_Query( array(
 	'posts_per_page' => '-1',
 	'order'          => 'ASC',
 	// 'year'           => 2018,
-	'meta_query' => array(),
+	'meta_query'     => array(),
 	// 'tax_query'      => array(
 	// 	array(
 	// 		'taxonomy' => $taxonomy,
@@ -38,7 +38,7 @@ $tribe_query = tribe_get_events( array(
 	<?php setup_postdata( $post ); ?>
 	<?php
 
-	$terms     = get_the_terms( get_the_ID(), $taxonomy );
+	$terms = get_the_terms( get_the_ID(), $taxonomy );
 	// $cat_slugs = array_map( function ( $term ) {
 	// 	return $term->slug;
 	// }, $terms );
@@ -48,7 +48,7 @@ $tribe_query = tribe_get_events( array(
 
 	$month      = tribe_get_start_date( null, false, 'm' );
 	$date       = date( 'F', strtotime( "$month/01/2019" ) );
-	$is_current = $date === date( 'F' );
+	$is_current = date( 'F' ) === $date;
 
 	$item_classes = implode( ' ', [
 		$is_current ? '' : 'clip',
@@ -57,7 +57,7 @@ $tribe_query = tribe_get_events( array(
 
 	?>
 
-	<article id="<?php echo $post_type  . '-event-' . tribe_get_start_date( null, false, 'm' ); ?>-<?php the_ID(); ?>"
+	<article id="<?php echo $post_type . '-event-' . tribe_get_start_date( null, false, 'm' ); ?>-<?php the_ID(); ?>"
 		class="<?php echo esc_attr( $item_classes ); ?>">
 		<div class="beefup <?php echo $post_type; ?>-item">
 
