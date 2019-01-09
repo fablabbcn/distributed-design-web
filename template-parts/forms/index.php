@@ -19,8 +19,6 @@ $form_classes = array(
 
 ?>
 
-<pre><?php var_dump( get_post_type_object( $post_type ) ); ?></pre>
-
 
 <div class="z-10 md:px-25">
 	<div class="<?php echo esc_attr( $form_classes['container'] ); ?>">
