@@ -43,8 +43,6 @@
 		</div>
 	</div>
 
-	<?php get_template_part( 'template-parts/forms/login' ); ?>
-
 
 <?php else : ?>
 	<section class="flex flex-grow w-full overflow-x-hidden">
@@ -57,8 +55,11 @@
 		<?php wp_pagenavi(); ?>
 	</section>
 
+
 <?php endif; ?>
 
+
+<?php get_template_part( 'template-parts/forms/index' ); ?>
 
 <?php set_query_var( 'layout', $layout ); ?>
 <?php get_template_part( 'template-parts/logos' ); ?>

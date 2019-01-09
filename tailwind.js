@@ -21,10 +21,10 @@ const colors = {
   'current': 'currentColor',
   'inherit': 'inherit',
 
-  'black': 'black',
+  'black': '#000',
   'dark-gray': '#222',
   'gray': '#e6e6e6',
-  'white': 'white',
+  'white': '#fff',
 
   'red': '#f93838',
   'lime': '#0f0',

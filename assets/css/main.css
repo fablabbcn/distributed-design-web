@@ -699,7 +699,7 @@ table {
 }
 
 .bg-black {
-  background-color: black;
+  background-color: #000;
 }
 
 .bg-dark-gray {
@@ -711,7 +711,7 @@ table {
 }
 
 .bg-white {
-  background-color: white;
+  background-color: #fff;
 }
 
 .bg-red {
@@ -747,7 +747,7 @@ table {
 }
 
 .hover\:bg-black:hover {
-  background-color: black;
+  background-color: #000;
 }
 
 .hover\:bg-dark-gray:hover {
@@ -759,7 +759,7 @@ table {
 }
 
 .hover\:bg-white:hover {
-  background-color: white;
+  background-color: #fff;
 }
 
 .hover\:bg-red:hover {
@@ -795,7 +795,7 @@ table {
 }
 
 .group:hover .group-hover\:bg-black {
-  background-color: black;
+  background-color: #000;
 }
 
 .group:hover .group-hover\:bg-dark-gray {
@@ -807,7 +807,7 @@ table {
 }
 
 .group:hover .group-hover\:bg-white {
-  background-color: white;
+  background-color: #fff;
 }
 
 .group:hover .group-hover\:bg-red {
@@ -851,7 +851,7 @@ table {
 }
 
 .border-black {
-  border-color: black;
+  border-color: #000;
 }
 
 .border-dark-gray {
@@ -863,7 +863,7 @@ table {
 }
 
 .border-white {
-  border-color: white;
+  border-color: #fff;
 }
 
 .border-red {
@@ -3065,7 +3065,7 @@ table {
 }
 
 .text-black {
-  color: black;
+  color: #000;
 }
 
 .text-dark-gray {
@@ -3077,7 +3077,7 @@ table {
 }
 
 .text-white {
-  color: white;
+  color: #fff;
 }
 
 .text-red {
@@ -3113,7 +3113,7 @@ table {
 }
 
 .hover\:text-black:hover {
-  color: black;
+  color: #000;
 }
 
 .hover\:text-dark-gray:hover {
@@ -3125,7 +3125,7 @@ table {
 }
 
 .hover\:text-white:hover {
-  color: white;
+  color: #fff;
 }
 
 .hover\:text-red:hover {
@@ -3602,6 +3602,106 @@ table {
 
 .inset-l-full {
   left: 100%;
+}
+
+body.page-id-2 .text-primary {
+  color: #f93838;
+}
+
+body.page-id-2 .hover\:text-primary:hover {
+  color: #f93838;
+}
+
+body.page-id-2 .bg-primary {
+  background-color: #f93838;
+}
+
+body.page-id-2 .hover\:bg-primary:hover {
+  background-color: #f93838;
+}
+
+body.post-type-archive-resources .text-primary {
+  color: #0f0;
+}
+
+body.post-type-archive-resources .hover\:text-primary:hover {
+  color: #0f0;
+}
+
+body.post-type-archive-resources .bg-primary {
+  background-color: #0f0;
+}
+
+body.post-type-archive-resources .hover\:bg-primary:hover {
+  background-color: #0f0;
+}
+
+body.blog .text-primary {
+  color: #0ff;
+}
+
+body.blog .hover\:text-primary:hover {
+  color: #0ff;
+}
+
+body.blog .bg-primary {
+  background-color: #0ff;
+}
+
+body.blog .hover\:bg-primary:hover {
+  background-color: #0ff;
+}
+
+body.page-template-template-archive-events .text-primary {
+  color: #f0f;
+}
+
+body.page-template-template-archive-events .hover\:text-primary:hover {
+  color: #f0f;
+}
+
+body.page-template-template-archive-events .bg-primary {
+  background-color: #f0f;
+}
+
+body.page-template-template-archive-events .hover\:bg-primary:hover {
+  background-color: #f0f;
+}
+
+body.post-type-archive-talent .text-primary {
+  color: #ff0;
+}
+
+body.post-type-archive-talent .hover\:text-primary:hover {
+  color: #ff0;
+}
+
+body.post-type-archive-talent .bg-primary {
+  background-color: #ff0;
+}
+
+body.post-type-archive-talent .hover\:bg-primary:hover {
+  background-color: #ff0;
+}
+
+body.page-id-13 .text-primary {
+  color: #fff;
+}
+
+body.page-id-13 .hover\:text-primary:hover {
+  color: #fff;
+}
+
+body.page-id-13 .bg-primary {
+  background-color: #fff;
+}
+
+body.page-id-13 .hover\:bg-primary:hover {
+  background-color: #fff;
+}
+
+[id*="form-submit"] [type="radio"]:checked + label {
+  background-color: #fff;
 }
 
 @media (min-width: 360px) {
@@ -5520,7 +5620,7 @@ table {
   }
 
   .sm\:text-black {
-    color: black;
+    color: #000;
   }
 
   .sm\:text-dark-gray {
@@ -5532,7 +5632,7 @@ table {
   }
 
   .sm\:text-white {
-    color: white;
+    color: #fff;
   }
 
   .sm\:text-red {
@@ -5568,7 +5668,7 @@ table {
   }
 
   .sm\:hover\:text-black:hover {
-    color: black;
+    color: #000;
   }
 
   .sm\:hover\:text-dark-gray:hover {
@@ -5580,7 +5680,7 @@ table {
   }
 
   .sm\:hover\:text-white:hover {
-    color: white;
+    color: #fff;
   }
 
   .sm\:hover\:text-red:hover {
@@ -7628,7 +7728,7 @@ table {
   }
 
   .md\:text-black {
-    color: black;
+    color: #000;
   }
 
   .md\:text-dark-gray {
@@ -7640,7 +7740,7 @@ table {
   }
 
   .md\:text-white {
-    color: white;
+    color: #fff;
   }
 
   .md\:text-red {
@@ -7676,7 +7776,7 @@ table {
   }
 
   .md\:hover\:text-black:hover {
-    color: black;
+    color: #000;
   }
 
   .md\:hover\:text-dark-gray:hover {
@@ -7688,7 +7788,7 @@ table {
   }
 
   .md\:hover\:text-white:hover {
-    color: white;
+    color: #fff;
   }
 
   .md\:hover\:text-red:hover {
@@ -9736,7 +9836,7 @@ table {
   }
 
   .lg\:text-black {
-    color: black;
+    color: #000;
   }
 
   .lg\:text-dark-gray {
@@ -9748,7 +9848,7 @@ table {
   }
 
   .lg\:text-white {
-    color: white;
+    color: #fff;
   }
 
   .lg\:text-red {
@@ -9784,7 +9884,7 @@ table {
   }
 
   .lg\:hover\:text-black:hover {
-    color: black;
+    color: #000;
   }
 
   .lg\:hover\:text-dark-gray:hover {
@@ -9796,7 +9896,7 @@ table {
   }
 
   .lg\:hover\:text-white:hover {
-    color: white;
+    color: #fff;
   }
 
   .lg\:hover\:text-red:hover {
@@ -11844,7 +11944,7 @@ table {
   }
 
   .xl\:text-black {
-    color: black;
+    color: #000;
   }
 
   .xl\:text-dark-gray {
@@ -11856,7 +11956,7 @@ table {
   }
 
   .xl\:text-white {
-    color: white;
+    color: #fff;
   }
 
   .xl\:text-red {
@@ -11892,7 +11992,7 @@ table {
   }
 
   .xl\:hover\:text-black:hover {
-    color: black;
+    color: #000;
   }
 
   .xl\:hover\:text-dark-gray:hover {
@@ -11904,7 +12004,7 @@ table {
   }
 
   .xl\:hover\:text-white:hover {
-    color: white;
+    color: #fff;
   }
 
   .xl\:hover\:text-red:hover {

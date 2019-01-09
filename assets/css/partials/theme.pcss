@@ -1,0 +1,47 @@
+body {
+  &.page-id-2 {
+    & .text-primary { @apply text-red; }
+    & .hover\:text-primary:hover { @apply text-red; }
+    & .bg-primary { @apply bg-red; }
+    & .hover\:bg-primary:hover { @apply bg-red; }
+  }
+
+  &.post-type-archive-resources {
+    & .text-primary { @apply text-lime; }
+    & .hover\:text-primary:hover { @apply text-lime; }
+    & .bg-primary { @apply bg-lime; }
+    & .hover\:bg-primary:hover { @apply bg-lime; }
+  }
+
+  &.blog {
+    & .text-primary { @apply text-cyan; }
+    & .hover\:text-primary:hover { @apply text-cyan; }
+    & .bg-primary { @apply bg-cyan; }
+    & .hover\:bg-primary:hover { @apply bg-cyan; }
+  }
+
+  &.page-template-template-archive-events {
+    & .text-primary { @apply text-magenta; }
+    & .hover\:text-primary:hover { @apply text-magenta; }
+    & .bg-primary { @apply bg-magenta; }
+    & .hover\:bg-primary:hover { @apply bg-magenta; }
+  }
+
+  &.post-type-archive-talent {
+    & .text-primary { @apply text-yellow; }
+    & .hover\:text-primary:hover { @apply text-yellow; }
+    & .bg-primary { @apply bg-yellow; }
+    & .hover\:bg-primary:hover { @apply bg-yellow; }
+  }
+
+  &.page-id-13 {
+    & .text-primary { @apply text-white; }
+    & .hover\:text-primary:hover { @apply text-white; }
+    & .bg-primary { @apply bg-white; }
+    & .hover\:bg-primary:hover { @apply bg-white; }
+  }
+}
+
+[id*="form-submit"] {
+  & [type="radio"]:checked + label { @apply bg-white; }
+}

@@ -60,6 +60,8 @@ function get_button_clip( $terms, $term, $pad, $get_callback ) {
 </article>
 
 
+<?php get_template_part( 'template-parts/forms/index' ); ?>
+
 <?php set_query_var( 'layout', $layout ); ?>
 <?php get_template_part( 'template-parts/logos' ); ?>
 
