@@ -1,19 +1,36 @@
-<div class="<?php echo esc_attr( $form_classes['input_container'] ); ?>">
-	<label for="" class="<?php echo esc_attr( $form_classes['label'] ); ?>">Headline</label>
-	<input type="text" name="" id="" class="<?php echo esc_attr( $form_classes['input'] ); ?>">
-</div>
+<?php
 
-<div class="<?php echo esc_attr( $form_classes['input_container'] ); ?>">
-	<label for="" class="<?php echo esc_attr( $form_classes['label'] ); ?>">Organization</label>
-	<input type="text" name="" id="" class="<?php echo esc_attr( $form_classes['input'] ); ?>">
-</div>
+$default_classes = array(
+	'div'   => $form_classes['input_container'],
+	'label' => $form_classes['label'],
+	'input' => $form_classes['input'],
+);
 
-<div class="<?php echo esc_attr( $form_classes['input_container'] ); ?>">
-	<label for="" class="<?php echo esc_attr( $form_classes['label'] ); ?>">Date</label>
-	<input type="date" name="" id="" class="<?php echo esc_attr( $form_classes['input'] ); ?>">
-</div>
+$inputs = array(
+	array(
+		'label'   => 'Headline',
+		'type'    => 'text',
+		'classes' => $default_classes,
+	),
+	array(
+		'label'   => 'Organization',
+		'type'    => 'text',
+		'classes' => $default_classes,
+	),
+	array(
+		'label'   => 'Date',
+		'type'    => 'date',
+		'classes' => $default_classes,
+	),
+	array(
+		'label'   => 'Link',
+		'type'    => 'url',
+		'classes' => $default_classes,
+	),
+);
 
-<div class="<?php echo esc_attr( $form_classes['input_container'] ); ?>">
-	<label for="" class="<?php echo esc_attr( $form_classes['label'] ); ?>">Link</label>
-	<input type="url" name="" id="" class="<?php echo esc_attr( $form_classes['input'] ); ?>">
-</div>
+
+foreach ( $inputs as $key => $input ) {
+	set_query_var( 'input', $input );
+	get_template_part( 'template-parts/forms/-input' );
+}

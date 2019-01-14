@@ -31,8 +31,9 @@ $form_classes = array(
 
 			<div id="<?php echo esc_attr( $form_id ); ?>" class="clip absolute pin-x pin-b">
 				<button data-clip="<?php echo esc_attr( $form_id ); ?>" class="fixed pin w-full h-full bg-black-20 cursor-pointer"></button>
-				<form action="" class="<?php echo esc_attr( $form_classes['form'] ); ?>">
+				<form action="" class="<?php echo esc_attr( $form_classes['form'] ); ?>" enctype="multipart/form-data">
 
+					<?php set_query_var( 'form_id', $form_id ); ?>
 					<?php set_query_var( 'post_type', $post_type ); ?>
 					<?php set_query_var( 'form_classes', $form_classes ); ?>
 					<?php get_template_part( $form_path ); ?>

@@ -1,14 +1,35 @@
-<div class="w-full mb-20 px-10">
-	<label for="" class="<?php echo esc_attr( $form_classes['label'] ); ?>">About</label>
-	<textarea name="" id="" cols="30" rows="16" class="<?php echo esc_attr( $form_classes['input'] ); ?>"></textarea>
-</div>
+<?php
 
-<div class="<?php echo esc_attr( $form_classes['input_container'] ); ?>">
-	<label for="" class="<?php echo esc_attr( $form_classes['label'] ); ?>">Head Photo</label>
-	<input type="file" name="" id="">
-</div>
+$default_classes = array(
+	'div'   => $form_classes['input_container'],
+	'label' => $form_classes['label'],
+	'input' => $form_classes['input'],
+);
 
-<div class="<?php echo esc_attr( $form_classes['input_container'] ); ?>">
-	<label for="" class="<?php echo esc_attr( $form_classes['label'] ); ?>">Artic Photos</label>
-	<input type="file" name="" id="">
-</div>
+$inputs = array(
+	array(
+		'label'   => 'About',
+		'type'    => 'textarea',
+		'classes' => array(
+			'div'   => 'w-full mb-20 px-10',
+			'label' => $form_classes['label'],
+			'input' => $form_classes['input'],
+		),
+	),
+	array(
+		'label'   => 'Head Photo',
+		'type'    => 'file',
+		'classes' => $default_classes,
+	),
+	array(
+		'label'   => 'Article Photos',
+		'type'    => 'file',
+		'classes' => $default_classes,
+	),
+);
+
+
+foreach ( $inputs as $key => $input ) {
+	set_query_var( 'input', $input );
+	get_template_part( 'template-parts/forms/-input' );
+}
