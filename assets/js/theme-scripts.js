@@ -57,16 +57,20 @@
 function ajaxPostShare (event) {
   event.preventDefault()
 
+  var result = new FormData(this.querySelector('form'))
+  result.append('action', 'post_share')
+
   jQuery.ajax({
     async: false,
     url: wpHelper.ajaxUrl,
     type: 'POST',
-    data: {
-      action: 'post_share',
-      post: buildPostArray(),
-    },
+    data: result,
+
+    processData: false,
+    contentType: false,
+
     success: function (data) {
-      console.log('Keep it a 100', data)
+      console.log('Keep it a 💯', data)
 
       // Prevent users from changing their definition
       // jQuery('#input-content, #input-author')
@@ -75,38 +79,15 @@ function ajaxPostShare (event) {
 
       // Show disclaimer message
       // toggleInputMessages('success')
+
+      // Clear the form to prevent resubmission.
     },
-    error: function (data) {
-      console.error('It was all good just a week ago…', data)
+    error: function (jqXHR, textStatus, errorThrown) {
+      console.error('It was all good just a week ago…')
+      console.error([ jqXHR, textStatus, errorThrown ])
 
       // Show disclaimer message
       // toggleInputMessages('error')
     },
   })
-}
-
-function buildPostArray () {
-  var form = jQuery('[id*="form-submit"]')
-  var postType = form.attr('id').split('form-submit-').join('')
-  var fields = form.find('[name*="' + postType + '"]')
-
-  var getName = function (index, field) { return field.getAttribute('name') }
-  var removeDuplicateNames = function (name, index) { return fieldNames.indexOf(name) === index }
-
-  var result = {}
-  var fieldNames = fields.map(getName).toArray()
-  var names = fieldNames.filter(removeDuplicateNames)
-  var values = names.map(function (name, index) {
-    var element = document.querySelector('[name=' + name + ']')
-    var checked = document.querySelector('[name=' + name + ']:checked')
-    return element.type === 'radio'
-      ? checked ? checked.value : ''
-      : element.value
-  })
-
-  names.forEach(function (name, index) {
-    result[name] = values[index]
-  })
-
-  return result
 }

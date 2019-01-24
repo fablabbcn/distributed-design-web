@@ -179,12 +179,20 @@ function handleResourcesFilters () {
   }
 
   var tabs = jQuery('.tab-filters')
-  var type = tabs.attr('class').split(' ')[2].split('-filter')[0]
+  var type = tabs.attr('class')
+    .split(' ')[2]
+    .split('-filter')[0]
 
   tabs.find('[data-clip]')
     .removeClass(classes[type])
     .filter(this)
     .addClass(classes[type])
+
+  // TODO: Move to new method since it has to be linked to month selectors, not years
+  // if (type === 'tribe_events') {
+  //   jQuery('[data-clip="event-months"]')
+  //     .text()
+  // }
 }
 
 /**

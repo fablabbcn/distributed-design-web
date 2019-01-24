@@ -25,6 +25,7 @@ $inputs = array(
 		'label'   => 'Article Photos',
 		'type'    => 'file',
 		'classes' => $default_classes,
+		'attr'    => 'multiple',
 	),
 );
 

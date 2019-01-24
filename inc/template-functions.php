@@ -78,8 +78,7 @@ add_filter( 'wp_ajax_post_share', 'post_share' );
 function post_share() {
 	// var_dump( $_POST );
 
-	$ajax_post  = $_POST['post'];
-	$array_keys = array_keys( $ajax_post );
+	$array_keys = array_keys( $_POST );
 	$post_type  = explode( '-', $array_keys[0] )[0];
 
 	/**
@@ -88,12 +87,11 @@ function post_share() {
 	switch ( $post_type ) {
 		case 'post':
 			$post_array = array(
-				'post_title' => $ajax_post[ "$post_type-headline" ],
+				'post_title' => $_POST[ "$post_type-headline" ],
 				'meta_input' => array(
-					'headline'     => $ajax_post[ "$post_type-headline" ],
-					'organization' => $ajax_post[ "$post_type-organization" ],
-					'date'         => $ajax_post[ "$post_type-date" ],
-					'link'         => $ajax_post[ "$post_type-link" ],
+					'left_column_heading'    => $_POST[ "$post_type-organization" ],
+					'left_column_subheading' => $_POST[ "$post_type-date" ],
+					'left_column_bottom'     => $_POST[ "$post_type-link" ],
 				),
 			);
 
@@ -101,14 +99,14 @@ function post_share() {
 
 		case 'talent':
 			$post_array = array(
-				'post_title' => $ajax_post['talent-name'],
+				'post_title' => $_POST[ "$post_type-name" ],
 				'meta_input' => array(
-					'winner_title'        => $ajax_post[ "$post_type-title" ],
-					'winner_name'         => $ajax_post[ "$post_type-name" ],
-					'winner_profession'   => $ajax_post[ "$post_type-profession" ],
-					'winner_organization' => $ajax_post[ "$post_type-organization" ],
-					'project_name'        => $ajax_post[ "$post_type-project-name" ],
-					'project_link'        => $ajax_post[ "$post_type-link" ],
+					'winner_title'        => $_POST[ "$post_type-title" ],
+					'winner_name'         => $_POST[ "$post_type-name" ],
+					'winner_profession'   => $_POST[ "$post_type-profession" ],
+					'winner_organization' => $_POST[ "$post_type-organization" ],
+					'project_name'        => $_POST[ "$post_type-project-name" ],
+					'project_link'        => $_POST[ "$post_type-link" ],
 				),
 			);
 
@@ -116,14 +114,9 @@ function post_share() {
 
 		case 'tribe_events':
 			$post_array = array(
-				'post_title' => $ajax_post[ "$post_type-name" ],
+				'post_title' => $_POST[ "$post_type-event-title" ],
 				'meta_input' => array(
-					'winner_title'        => $ajax_post[ "$post_type-title" ],
-					'winner_name'         => $ajax_post[ "$post_type-name" ],
-					'winner_profession'   => $ajax_post[ "$post_type-profession" ],
-					'winner_organization' => $ajax_post[ "$post_type-organization" ],
-					'project_name'        => $ajax_post[ "$post_type-project-name" ],
-					'project_link'        => $ajax_post[ "$post_type-link" ],
+					'_EventURL' => $_POST[ "$post_type-link" ],
 				),
 			);
 
@@ -131,80 +124,174 @@ function post_share() {
 
 	}
 
+	$post_array['meta_input']['article_content'] = $_POST[ "$post_type-about" ];
+	$post_array['meta_input']['article_images']  = get_article_images( $_FILES[ "$post_type-article-photos" ], $post_id );
+
 	$post_array['post_type']   = $post_type;
 	$post_array['post_author'] = 2; // llos
-	$post_array['post_status'] = 'publish';
-
-	$post_array['meta_input']['article_content'] = $ajax_post[ "$post_type-about" ];
-	// $post_array['meta_input']['article_images']  = $ajax_post[ "$post_type-head-photo" ];
-	// $post_array['meta_input']['article_images']  = $ajax_post[ "$post_type-article-photos" ];
+	$post_array['post_status'] = 'draft';
 
 	/**
-	 * Upload images to the site
+	 * Insert the post into the database
 	 */
-	// $upload_dir  = wp_upload_dir();
-	// $upload_path = str_replace( '/', DIRECTORY_SEPARATOR, $upload_dir['path'] ) . DIRECTORY_SEPARATOR;
-
-	// $img = str_replace( 'data:image/png;base64,', '', $thumbnail );
-	// $img = str_replace( ' ', '+', $img );
-
-	// $decoded         = base64_decode( $img );
-	// $filename        = 'textshot.png';
-	// $hashed_filename = md5( $filename . microtime() ) . '_' . $filename;
-	// $image_upload    = file_put_contents( $upload_path . $hashed_filename, $decoded );
-
-	// /* Handle uploaded file */
-	// if ( ! function_exists( 'wp_handle_sideload' ) ) {
-	// 	require_once( ABSPATH . 'wp-admin/includes/file.php' ); }
-	// /* Without that I'm getting a debug error!? */
-	// if ( ! function_exists( 'wp_get_current_user' ) ) {
-	// 	require_once( ABSPATH . 'wp-includes/pluggable.php' ); }
-
-	// $file             = array();
-	// $file['error']    = '';
-	// $file['tmp_name'] = $upload_path . $hashed_filename;
-	// $file['name']     = $hashed_filename;
-	// $file['type']     = 'image/png';
-	// $file['size']     = filesize( $upload_path . $hashed_filename );
-
-	// // upload file to server
-	// $file_return = wp_handle_sideload( $file, array( 'test_form' => false ) );
-
-	// $filename   = $file_return['file'];
-	// $attachment = array(
-	// 	'post_mime_type' => $file_return['type'],
-	// 	'post_title'     => preg_replace( '/\.[^.]+$/', '', basename( $filename ) ),
-	// 	'post_content'   => '',
-	// 	'post_status'    => 'inherit',
-	// 	'guid'           => $upload_dir['url'] . '/' . basename( $filename ),
-	// );
-
-	// require_once( ABSPATH . 'wp-admin/includes/image.php' );
-
-	// // Insert the image into the media library
-	// $attach_id   = wp_insert_attachment( $attachment, $filename, 289 );
-	// $attach_data = wp_generate_attachment_metadata( $attach_id, $filename );
-	// wp_update_attachment_metadata( $attach_id, $attach_data );
-
-	// Insert the post into the database
 	$post_id = wp_insert_post( $post_array );
 
 	if ( $post_id ) {
-		// add_post_meta( $post_id, 'text', $ajax_post['title'] );
-		// add_post_meta( $post_id, 'image_ID', $attach_id );
-		// add_post_meta( $post_id, '_thumbnail_id', $attach_id );
+		$featured_file = get_featured_image( $_FILES[ "$post_type-head-photo" ], $post_id );
 
-		// Return post info
+		/**
+		 * Return post info
+		 */
 		wp_send_json(array(
-			'ajax' => $ajax_post,
-			'id'   => $post_id,
-			'post' => $post_array,
-			// 'post_url'   => get_permalink( $post_id ),
-			// 'post_title' => get_the_title( $post_id ),
-			// 'image_url'  => get_the_post_thumbnail_url( $post_id, 'full' ),
+			'id'     => $post_id,
+			'post'   => $post_array,
+			'type'   => $post_type,
+			'_files' => $_FILES,
+			'_post'  => $_POST,
 		));
 	}
 
 	die();
+
+}
+
+
+/**
+* Uploads an image to the media library.
+*/
+function handle_image_upload( $file_name, $file_location ) {
+	return wp_upload_bits(
+		$file_name, null,
+		@file_get_contents( $file_location )
+	);
+}
+
+
+/**
+ * Upload article images
+ */
+function get_article_images( $files, $post_id ) {
+	if ( $files['name'][0] ) {
+		$article_images     = array();
+		$acf_article_images = array();
+
+		foreach ( $files['name'] as $key => $value ) {
+			$image = handle_image_upload(
+				$files['name'][ $key ],
+				$files['tmp_name'][ $key ]
+			);
+
+			// Unnecessarily setting as featured image to ensure attachment_url_to_postid() returns media id.
+			generate_featured_image( $image['url'], $post_id );
+
+			$article_images[]     = $image;
+			$acf_article_images[] = attachment_url_to_postid( $image['url'] );
+		}
+
+		return $acf_article_images;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * Upload featured image
+ *
+ * https://tommcfarlin.com/upload-files-in-wordpress/
+ * https://tommcfarlin.com/programmatically-delete-files-wordpress-associated-meta-data/
+ *
+ */
+function get_featured_image( $file, $post_id ) {
+	if ( $file['name'] ) {
+		$featured_image = handle_image_upload(
+			$file['name'],
+			$file['tmp_name']
+		);
+
+		return generate_featured_image( $featured_image['url'], $post_id );
+	} else {
+		return false;
+	}
+}
+
+
+
+/**
+* Downloads an image from the specified URL and attaches it to a post as a post thumbnail.
+*
+* @param string $image_url  The URL of the image to download.
+* @param int    $post_id    The post ID the post thumbnail is to be associated with.
+* @return string|WP_Error Attachment ID, WP_Error object otherwise.
+*
+* https://wordpress.stackexchange.com/a/41300/120928
+*
+*/
+function generate_featured_image( $image_url, $post_id ) {
+	$upload_dir = wp_upload_dir();
+	$image_data = file_get_contents( $image_url );
+	$filename   = basename( $image_url );
+	$file       = wp_mkdir_p( $upload_dir['path'] )
+		? $upload_dir['path'] . '/' . $filename
+		: $upload_dir['basedir'] . '/' . $filename;
+
+	file_put_contents( $file, $image_data );
+
+	$wp_filetype = wp_check_filetype( $filename, null );
+	$attachment  = array(
+		'post_mime_type' => $wp_filetype['type'],
+		'post_title'     => sanitize_file_name( $filename ),
+		'post_content'   => '',
+		'post_status'    => 'inherit',
+	);
+
+	require_once ABSPATH . 'wp-admin/includes/image.php';
+
+	$attach_id   = wp_insert_attachment( $attachment, $file, $post_id );
+	$attach_data = wp_generate_attachment_metadata( $attach_id, $file );
+
+	$res1 = wp_update_attachment_metadata( $attach_id, $attach_data );
+	$res2 = set_post_thumbnail( $post_id, $attach_id );
+
+	return $res2;
+}
+
+/**
+* Downloads an image from the specified URL and attaches it to a post as a post thumbnail.
+*
+* @param string $file    The URL of the image to download.
+* @param int    $post_id The post ID the post thumbnail is to be associated with.
+* @param string $desc    Optional. Description of the image.
+* @return string|WP_Error Attachment ID, WP_Error object otherwise.
+*
+* https://wordpress.stackexchange.com/a/41300/120928
+*
+*/
+function generate_featured_image_alt( $file, $post_id, $desc ) {
+	// Set variables for storage, fix file filename for query strings.
+	preg_match( '/[^\?]+\.(jpe?g|jpe|gif|png)\b/i', $file, $matches );
+	if ( ! $matches ) {
+		return new WP_Error( 'image_sideload_failed', __( 'Invalid image URL' ) );
+	}
+
+	$file_array = array(
+		'name'     => basename( $matches[0] ),
+		'tmp_name' => download_url( $file ),
+	);
+
+	// If error storing temporarily, return the error.
+	if ( is_wp_error( $file_array['tmp_name'] ) ) {
+		return $file_array['tmp_name'];
+	}
+
+	// Do the validation and storage stuff.
+	$id = media_handle_sideload( $file_array, $post_id, $desc );
+
+	// If error storing permanently, unlink.
+	if ( is_wp_error( $id ) ) {
+		@unlink( $file_array['tmp_name'] );
+		return $id;
+	}
+
+	return set_post_thumbnail( $post_id, $id );
 
 }
