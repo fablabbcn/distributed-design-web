@@ -116,6 +116,7 @@ module.exports = {
 
   textSizes: {
     '12': '12px',
+    '14': '14px',
     '15': '15px',
     '16': '16px',
     '17': '17px',
@@ -124,6 +125,7 @@ module.exports = {
     '22': '22px',
     '24': '24px',
     '29': '29px',
+    '5vw': '5vw',
   },
 
   fontWeights: {
@@ -300,11 +302,11 @@ module.exports = {
     borderStyle: [],
     borderWidths: [],
     cursor: [],
-    display: ['responsive'],
-    flexbox: ['responsive'],
+    display: ['responsive', 'hover', 'group-hover'],
+    flexbox: ['responsive', 'hover', 'group-hover'],
     float: false,
     fonts: [],
-    fontWeights: [],
+    fontWeights: ['responsive'],
     height: ['responsive'],
     leading: ['responsive'],
     lists: ['responsive'],
@@ -330,7 +332,7 @@ module.exports = {
     textAlign: ['responsive'],
     textColors: ['responsive', 'hover'],
     textSizes: ['responsive'],
-    textStyle: [],
+    textStyle: ['responsive'],
     tracking: false,
     userSelect: false,
     verticalAlign: false,
@@ -358,6 +360,10 @@ module.exports = {
     require('tailwindcss-alpha')(),
     require('tailwindcss-inset')({
       insets: { 'full': '100%' },
+    }),
+    require('tailwindcss-multi-column')({
+      variants: ['responsive'],
+      counts: [1, 2],
     }),
   ],
 

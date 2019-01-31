@@ -19,7 +19,7 @@
     initDefaultSlider()
     initFundInfo()
     initPartnersCarousel()
-    initStatistics()
+    // initStatistics()
     initMemberList()
   })
 
@@ -41,6 +41,7 @@
 
       if ($img.length) {
         $(this).css('background-image', 'url(' + $img.attr('src') + ')')
+        // Removed an !important from this class. Might cause issues.
         $img.addClass('hidden')
       }
     })
@@ -49,7 +50,7 @@
   function initHeader () {
     var $header = $('#header')
     var $btnMenu = $header.find('.navbar-toggle')
-    var $mainNav = $('#main-nav')
+    // var $mainNav = $('#main-nav')
 
     $btnMenu.on('click', function (e) {
       e.preventDefault()
@@ -97,22 +98,22 @@
 
   function initStatistics () {
     var $statistics = $('.statistics')
-    var $nav = $statistics.find('.nav')
+    var $nav = $statistics.find('.tab-set')
     var $link = $nav.find(' > li > a')
 
+    // Does things on mousemove
     $link.on('mouseenter', function (e) {
       $(this).trigger('click')
-    }).on('shown.bs.tab', function (e) {
-      activateActiveStatistics()
-    }).on('hidden.bs.tab', function (e) {
-      deactivateActiveStatistics()
+    }).on('shown.bs.tab, hidden.bs.tab', function (e) {
+      $statistics.toggleClass('active', e.type === 'shown')
     })
 
+    // Does things on click
     $statistics.find('.tab-pane .btn-close').on('click', function (e) {
       e.preventDefault()
+
       var $pane = $(this).closest('.tab-pane')
-      var id = $pane.attr('id')
-      var $opener = $nav.find('[aria-controls="' + id + '"]')
+      var $opener = $nav.find('[aria-controls="' + $pane.attr('id') + '"]')
 
       if (screenRes_.isTablet || screenRes_.isMobile) {
         $opener.closest('li').removeClass('active')
@@ -121,14 +122,6 @@
         $opener.trigger({ type: 'hidden.bs.tab' })
       }
     })
-
-    function activateActiveStatistics () {
-      $statistics.addClass('active')
-    }
-
-    function deactivateActiveStatistics () {
-      $statistics.removeClass('active')
-    }
   }
 
   function initMemberList () {

@@ -12,7 +12,7 @@ module.exports = {
     ],
     'at-rule-no-unknown': [
       true, {
-        ignoreAtRules: ['tailwind', 'variants', 'responsive', 'apply', 'screen', 'include'],
+        ignoreAtRules: ['tailwind', 'variants', 'responsive', 'apply', 'screen', 'include', 'mixin', 'if', 'else'],
       },
     ],
     'property-no-unknown': [

@@ -228,42 +228,90 @@
                             "button_label": "",
                             "sub_fields": [
                                 {
-                                    "key": "field_5af41914426cd",
-                                    "label": "Title",
-                                    "name": "title",
-                                    "type": "text",
+                                    "key": "field_5c533c8c8909f",
+                                    "label": "Cover",
+                                    "name": "cover",
+                                    "type": "group",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5af41928426ce",
-                                    "label": "Number",
-                                    "name": "number",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5af41914426cd",
+                                            "label": "Title",
+                                            "name": "title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_5af41928426ce",
+                                            "label": "Number",
+                                            "name": "number",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_5c533cad890a0",
+                                            "label": "Color",
+                                            "name": "color",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "black": "Black",
+                                                "dark-gray": "Dark Gray",
+                                                "gray": "Gray",
+                                                "white": "White",
+                                                "red": "Red",
+                                                "lime": "Lime",
+                                                "cyan": "Cyan",
+                                                "magenta": "Magenta",
+                                                "yellow": "Yellow"
+                                            },
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "default_value": "red",
+                                            "layout": "horizontal",
+                                            "return_format": "value",
+                                            "save_other_choice": 0
+                                        }
+                                    ]
                                 },
                                 {
                                     "key": "field_5af41955426cf",
@@ -274,7 +322,7 @@
                                     "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
-                                        "width": "",
+                                        "width": "50",
                                         "class": "",
                                         "id": ""
                                     },
@@ -698,5 +746,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542560676
+    "modified": 1548959808
 }
