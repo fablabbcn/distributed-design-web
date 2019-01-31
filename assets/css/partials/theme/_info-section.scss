@@ -64,7 +64,10 @@
 /* intro-slider */
 .intro-slider {
   width: 100%;
-  border-bottom: 2px solid $border-color;
+
+  @include media('<desktop') {
+    border-bottom: 2px solid $border-color;
+  }
 
   .slick {
     &-track {
