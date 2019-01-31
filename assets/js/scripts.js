@@ -132,22 +132,37 @@
   }
 
   function initMemberList () {
-    var $list = $('.member-list')
-    var $opener = $list.find('a, button')
+    var handleOpener = function (e) {
+      var clickInside = $(e.target).parents('.member-list').length
 
-    $opener.on('click', function (e) {
-      var $li = $(this).closest('li')
+      if (!clickInside) {
+        // Close all sections
+        $('.member-list li').removeClass('active')
 
-      if (!$li.is('.active') || !$(this).hasClass('link-to')) {
-        e.preventDefault()
+        // Remove listener to close on click outside
+        $(window).off('click', handleOpener)
+      } else {
+        // Add listener to close on click outside
+        $(window).on('click', handleOpener)
+
+        // Handle active section
+        var $li = $(this).closest('li')
+        var hasLinkTo = $(this).hasClass('link-to')
+        var isActive = $li.is('.active')
+
+        if (!isActive || !hasLinkTo) {
+          e.preventDefault()
+        }
+
+        if (!isActive) {
+          $li.siblings('li').removeClass('active')
+        }
+
+        $li.toggleClass('active')
       }
+    }
 
-      if (!$li.is('.active')) {
-        $li.siblings('li').removeClass('active')
-      }
-
-      $li.toggleClass('active')
-    })
+    $('.member-list').find('a, button').on('click', handleOpener)
   }
 
   $('.beefup').beefup({
