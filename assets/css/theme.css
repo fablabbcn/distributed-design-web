@@ -6516,6 +6516,7 @@ select:focus {
   border-bottom: 2px solid #222; }
   @media (min-width: 992px) {
     .info-section {
+      height: calc(100vh - 52px);
       display: -ms-flexbox;
       display: -webkit-flex;
       display: flex; } }

@@ -29,7 +29,8 @@ input:-ms-input-placeholder { color: #000; }
 .intro-slider .slide-item,
 .intro-slider figure img {
   /* height: calc(100vh - 200px); */
-  height: calc(100vh - 52px);
+  /* height: calc(100vh - 52px); */
+  height: 100%;
 }
 
 .intro-slider figure img {
