@@ -133,7 +133,7 @@
 
   function initMemberList () {
     var $list = $('.member-list')
-    var $opener = $list.find('a')
+    var $opener = $list.find('a, button')
 
     $opener.on('click', function (e) {
       var $li = $(this).closest('li')

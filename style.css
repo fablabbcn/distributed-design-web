@@ -43,11 +43,6 @@ input:-ms-input-placeholder { color: #000; }
   display: none;
 }
 
-.member-list > li.active .hold a {
-  border-bottom: 0;
-  margin-bottom: 0;
-}
-
 .pagination-wrap {
   text-align: right;
 }
