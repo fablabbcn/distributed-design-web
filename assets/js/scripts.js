@@ -16,12 +16,11 @@
     checkScreenSize()
     imgToBg()
     initHeader()
-    initIntroSlider()
+    initDefaultSlider()
     initFundInfo()
     initPartnersCarousel()
     initStatistics()
     initMemberList()
-    initPostsSlider()
   })
 
   $(window).on('resize', function () {
@@ -66,19 +65,13 @@
     $('body').toggleClass('opened-menu')
   }
 
-  function initIntroSlider () {
-    $('.intro-slider').slick({
+  function initDefaultSlider () {
+    $('.intro-slider, .post-slider').slick({
       arrows: false,
       dots: true,
       fade: true,
-    })
-  }
-
-  function initPostsSlider () {
-    $('.post-slider').slick({
-      arrows: false,
-      dots: true,
-      fade: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
     })
   }
 
