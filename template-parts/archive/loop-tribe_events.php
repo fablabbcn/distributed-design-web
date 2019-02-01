@@ -2,28 +2,28 @@
 
 $key = 0;
 
-$posts_given_term = new WP_Query( array(
-	'post_type'      => 'tribe_events',
-	'posts_per_page' => '-1',
-	'order'          => 'ASC',
-	// 'year'           => 2018,
-	'meta_query'     => array(),
-	// 'tax_query'      => array(
-	// 	array(
-	// 		'taxonomy' => $taxonomy,
-	// 		'field'    => 'slug',
-	// 		'terms'    => $term,
-	// 	),
-	// ),
-) );
+// $posts_given_term = new WP_Query( array(
+// 	'post_type'      => 'tribe_events',
+// 	'posts_per_page' => '-1',
+// 	'order'          => 'ASC',
+// 	// 'year'           => 2018,
+// 	'meta_query'     => array(),
+// 	// 'tax_query'      => array(
+// 	// 	array(
+// 	// 		'taxonomy' => $taxonomy,
+// 	// 		'field'    => 'slug',
+// 	// 		'terms'    => $term,
+// 	// 	),
+// 	// ),
+// ) );
 
 $tribe_query = tribe_get_events( array(
 	'posts_per_page' => '-1',
 	'order'          => 'ASC',
 
 	'eventDisplay'   => 'custom',
-	'start_date'     => '2018-01-01',
-	'end_date'       => '2018-12-31',
+	'start_date'     => "$term-01-01",
+	'end_date'       => "$term-12-31",
 ) );
 
 // var_dump( $posts_given_term->posts ); THIS WAS THE GOOD ONE
