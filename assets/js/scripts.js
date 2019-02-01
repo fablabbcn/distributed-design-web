@@ -181,7 +181,7 @@ function handleResourcesFilters () {
 
   var tabs = jQuery('.tab-filters')
   var type = tabs.attr('class')
-    .split(' ')[2]
+    .split(' ')[1]
     .split('-filter')[0]
 
   tabs.find('[data-clip]')
