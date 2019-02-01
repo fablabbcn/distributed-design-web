@@ -44,10 +44,8 @@
 .beefup.is-open.resources-item > *:first-child { background: #0f0; }
 .beefup.is-open.tribe_events-item > *:first-child { background: #f0f; }
 
-.beefup > .row > .title-column > .arrow-down { transition: transform 0.25s ease-in-out; }
-.beefup.is-open > .row > .title-column > .arrow-down { transform: rotate(180deg); }
-
-.beefup.is-open > .row > .download-column:hover { background-color: #e6e6e6 !important; }
+.beefup p + svg { transition: transform 0.25s ease-in-out; }
+.beefup.is-open p + svg { transform: rotate(180deg); }
 
 .beefup__left-col {
   width: 28.45%;

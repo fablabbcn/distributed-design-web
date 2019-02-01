@@ -337,28 +337,9 @@ a img.aligncenter {
   opacity: 0;
 }
 
-.resources-filter {
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
-
 .tabs-header h1,
 .tabs-header h2,
-.resources-header h1,
-.resources-header h2 {
-  line-height: 26px;
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
-  padding: 13px 20px;
-  text-transform: uppercase;
-  font-size: 24px;
-}
-
-.tabs-header h1,
-.tabs-header h2,
-.tabs-header h3,
-.resources-header h1,
-.resources-header h2,
-.resources-header h3 {
+.tabs-header h3 {
   margin-top: 0;
   margin-bottom: 0;
   letter-spacing: 0.02em;

@@ -53,7 +53,7 @@ $button_classes = 'flex justify-center items-center p-10 bg-white border rounded
 				<dt class="clip"><?php echo $link['social_network']['label']; ?></dt>
 				<dd class="px-10 leading-none">
 					<a class="flex w-50 h-50 p-10 bg-white border rounded-full" href="<?php echo $link['url']; ?>">
-						<svg class="fill-current"><use xlink:href="#<?php echo $link['social_network']['value']; ?>" /></svg>
+						<svg class="fill-current"><use xlink:href="#social-<?php echo $link['social_network']['value']; ?>" /></svg>
 					</a>
 				</dd>
 

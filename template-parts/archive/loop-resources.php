@@ -15,6 +15,9 @@ $posts_given_term = new WP_Query( array(
 	),
 ) );
 
+$cell_classes = 'px-15 lg:px-25 py-20 lg:py-30 text-center uppercase border-black border-r-px border-l-px';
+$svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
+
 // var_dump( $post_type, $taxonomy, $term );
 
 ?>
@@ -35,18 +38,26 @@ $posts_given_term = new WP_Query( array(
 		<article data-cat="<?php echo esc_attr( implode( ', ', $cat_slugs ) ); ?>" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="bootstrap-wrapper beefup <?php echo $post_type; ?>-item">
 
-				<div class="row hover:bg-lime">
-					<div class="number-column tc">
+				<div class="flex -mx-px hover:bg-lime">
+
+					<div class="flex-0 hidden lg:block <?php echo esc_attr( $cell_classes ); ?>" style="width: 28%;">
 						<p><?php echo ++$key; ?></p>
 					</div>
-					<div class="title-column tl ttu fw6 beefup__head">
-						<p><?php the_title(); ?></p>
-						<span class="arrow-down"><?php include get_template_directory() . '/assets/images/caret.svg'; ?></span>
-					</div>
-					<div class="weight-column col-1 tc">
+
+					<button class="flex flex-1 items-baseline w-3/5 <?php echo esc_attr( $cell_classes ); ?> beefup__head">
+						<p class="mr-auto text-left font-bold truncate"><?php the_title(); ?></p>
+						<svg class="<?php echo esc_attr( $svg_classes ); ?>"><use xlink:href="#caret" /></svg>
+					</button>
+
+					<div class="w-1/5 lg:w-1/10 <?php echo esc_attr( $cell_classes ); ?>">
 						<p><?php the_field( 'file_weight' ); ?></p>
 					</div>
-					<a href="<?php the_field( 'file_url' ); ?>" class="download-column col-1 tc"></a>
+
+					<a class="w-1/5 lg:w-1/10 <?php echo esc_attr( $cell_classes ); ?>" href="<?php the_field( 'file_url' ); ?>">
+						<span class="clip">Download</span>
+						<svg class="<?php echo esc_attr( $svg_classes ); ?>"><use xlink:href="#download" /></svg>
+					</a>
+
 				</div>
 
 				<div class="beefup__body border-t">

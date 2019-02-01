@@ -4077,6 +4077,10 @@ table {
   width: 83.33333%;
 }
 
+.w-1\/10 {
+  width: 10%;
+}
+
 .w-full {
   width: 100%;
 }
@@ -7519,6 +7523,10 @@ body.page-id-13 .hover\:bg-primary:hover {
     width: 83.33333%;
   }
 
+  .sm\:w-1\/10 {
+    width: 10%;
+  }
+
   .sm\:w-full {
     width: 100%;
   }
@@ -10593,6 +10601,10 @@ body.page-id-13 .hover\:bg-primary:hover {
 
   .md\:w-5\/6 {
     width: 83.33333%;
+  }
+
+  .md\:w-1\/10 {
+    width: 10%;
   }
 
   .md\:w-full {
@@ -13671,6 +13683,10 @@ body.page-id-13 .hover\:bg-primary:hover {
     width: 83.33333%;
   }
 
+  .lg\:w-1\/10 {
+    width: 10%;
+  }
+
   .lg\:w-full {
     width: 100%;
   }
@@ -16745,6 +16761,10 @@ body.page-id-13 .hover\:bg-primary:hover {
 
   .xl\:w-5\/6 {
     width: 83.33333%;
+  }
+
+  .xl\:w-1\/10 {
+    width: 10%;
   }
 
   .xl\:w-full {

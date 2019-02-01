@@ -7017,13 +7017,8 @@ select:focus {
   text-decoration: none; }
 
 @media (min-width: 992px) {
-  .tabs-header,
-  .resources-header {
+  .tabs-header {
     margin-left: 27.85%; } }
-
-.number-column {
-  width: 28.45%;
-  border-right: 2px solid; }
 
 .single_first-column {
   width: 28.5%;
@@ -7063,23 +7058,6 @@ select:focus {
   text-transform: uppercase;
   font-family: "Oswald", Arial, Helvetica, sans-serif;
   margin-bottom: 25px; }
-
-.title-column {
-  width: 54%; }
-
-.number-column,
-.title-column,
-.weight-column,
-.download-column {
-  padding: 40px; }
-
-.title-column,
-.weight-column {
-  border-right: 2px solid; }
-
-.download-column {
-  background: url("../images/download.svg") no-repeat center center;
-  background-size: 25% 25%; }
 
 .arrow-down {
   display: block;
@@ -7122,20 +7100,11 @@ select:focus {
     margin-top: -2px !important; }
   .stickit {
     top: -41px !important; }
-  .tabs-header h1,
-  .tabs-header h2,
-  .resources-header h1,
-  .resources-header h2 {
-    font-size: 20px !important; }
   .resources-filter {
     margin-top: 35px;
     border-top: 2px solid; }
   .stickit-resources {
     top: -136px !important; }
-  .title-column {
-    width: 50% !important; }
-  .number-column {
-    width: 14.45% !important; }
   .arrow-down {
     width: 18px !important;
     margin-top: -19px !important; }
