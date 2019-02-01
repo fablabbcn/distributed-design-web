@@ -28,6 +28,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "template-contact.php"
             }
         ]
     ],
@@ -39,5 +44,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1542560666
+    "modified": 1549023960
 }

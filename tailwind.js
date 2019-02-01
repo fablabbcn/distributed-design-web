@@ -53,6 +53,8 @@ const sizing = {
   '15': '15px',
   '20': '20px',
   '25': '25px',
+  '40': '40px',
+  '50': '50px',
 }
 
 module.exports = {
@@ -124,7 +126,11 @@ module.exports = {
     '20': '20px',
     '22': '22px',
     '24': '24px',
+    '28': '28px',
     '29': '29px',
+    '41': '41px',
+    '53': '53px',
+    '92': '92px',
     '5vw': '5vw',
   },
 
@@ -195,6 +201,7 @@ module.exports = {
   }, sizing),
 
   height: global.Object.assign({
+    '0': '0',
     'full': '100%',
     'screen': '100vh',
   }, sizing),
@@ -211,15 +218,7 @@ module.exports = {
   },
 
   maxWidth: {
-    'xs': '20rem',
-    'sm': '30rem',
-    'md': '40rem',
-    'lg': '50rem',
-    'xl': '60rem',
-    '2xl': '70rem',
-    '3xl': '80rem',
-    '4xl': '90rem',
-    '5xl': '100rem',
+    '90': '90px',
     'full': '100%',
   },
 
@@ -298,9 +297,9 @@ module.exports = {
     backgroundSize: false,
     borderCollapse: [],
     borderColors: [],
-    borderRadius: false,
-    borderStyle: [],
-    borderWidths: [],
+    borderRadius: [],
+    borderStyle: ['responsive'],
+    borderWidths: ['responsive'],
     cursor: [],
     display: ['responsive', 'hover', 'group-hover'],
     flexbox: ['responsive', 'hover', 'group-hover'],
@@ -333,7 +332,7 @@ module.exports = {
     textColors: ['responsive', 'hover'],
     textSizes: ['responsive'],
     textStyle: ['responsive'],
-    tracking: false,
+    tracking: [],
     userSelect: false,
     verticalAlign: false,
     visibility: false,

@@ -49,7 +49,7 @@
 		<ul class="list-reset flex flex-1 flex-wrap -mt-px -mx-px">
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
-			<li class="w-full md:w-1/2"><?php get_template_part( 'template-parts/post/content', get_post_type() ); ?></li>
+			<li class="flex w-full md:w-1/2"><?php get_template_part( 'template-parts/post/content', get_post_type() ); ?></li>
 		<?php endwhile ?>
 		</ul>
 		<?php wp_pagenavi(); ?>

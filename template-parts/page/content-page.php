@@ -9,7 +9,7 @@
 	<article class="base-col">
 
 		<header class="page-header py-20 px-40 text-24 font-oswald uppercase border-b">
-			<h1><?php the_title(); ?></h1>
+			<h1 class="text-20 lg:text-41 leading-normal"><?php the_title(); ?></h1>
 		</header>
 
 		<div class="page-content"><?php the_content(); ?></div>

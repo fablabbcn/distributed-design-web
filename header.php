@@ -23,6 +23,8 @@
 </head>
 <body <?php body_class( 'leading-normal font-aileron' ); ?>>
 
+	<div class="clip" aria-hidden="true"><?php include_once 'assets/img/icons.svg'; ?></div>
+
 	<b class="animsition-loading"></b>
 
 	<div class="wrapper loading flex flex-col">

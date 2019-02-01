@@ -3,7 +3,7 @@
 // Enqueue style and js
 function the_theme_scripts() {
 
-	wp_enqueue_style( 'fonts-Oswald', 'https://fonts.googleapis.com/css?family=Oswald:700' );
+	wp_enqueue_style( 'fonts-Oswald', 'https://fonts.googleapis.com/css?family=Oswald:300,500,700' );
 	wp_enqueue_style( 'fonts-Poppins', 'https://fonts.googleapis.com/css?family=Poppins:400,600' );
 	wp_enqueue_style( 'tachyons', 'https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css' );
 
