@@ -51,7 +51,7 @@ $tribe_query = tribe_get_events( array(
 	$is_current = date( 'F' ) === $date;
 
 	$item_classes = implode( ' ', [
-		$is_current ? '' : 'clip',
+		// $is_current ? '' : 'clip',
 		'border-b',
 	] );
 
