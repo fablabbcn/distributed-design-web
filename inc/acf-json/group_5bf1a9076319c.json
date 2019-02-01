@@ -21,7 +21,7 @@
                     "key": "field_5bf1aa297606c",
                     "label": "Title",
                     "name": "title",
-                    "type": "button_group",
+                    "type": "radio",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -36,9 +36,11 @@
                         "team": "Team"
                     },
                     "allow_null": 0,
+                    "other_choice": 0,
                     "default_value": "",
                     "layout": "horizontal",
-                    "return_format": "label"
+                    "return_format": "value",
+                    "save_other_choice": 0
                 },
                 {
                     "key": "field_5bf1aa0f7606b",
@@ -169,5 +171,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548344552
+    "modified": 1549044461
 }
