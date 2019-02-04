@@ -19,7 +19,7 @@ $input['name'] = false === strpos( $input['attr'], 'multiple' ) ? $input['id'] :
 		name="<?php echo esc_attr( $input['name'] ); ?>"
 		id="<?php echo esc_attr( $input['id'] ); ?>"
 		class="<?php echo esc_attr( $input['classes']['input'] ); ?>"
-		<?php echo $input['attr']; ?>
+		<?php echo esc_attr( $input['attr'] ); ?>
 	></textarea>
 
 <?php else : ?>
@@ -28,7 +28,7 @@ $input['name'] = false === strpos( $input['attr'], 'multiple' ) ? $input['id'] :
 		name="<?php echo esc_attr( $input['name'] ); ?>"
 		id="<?php echo esc_attr( $input['id'] ); ?>"
 		class="<?php echo esc_attr( $input['classes']['input'] ); ?>"
-		<?php echo $input['attr']; ?>
+		<?php echo esc_attr( $input['attr'] ); ?>
 	>
 <?php endif; ?>
 

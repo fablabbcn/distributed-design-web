@@ -28,11 +28,14 @@ $items       = get_sub_field( 'items' );
 
 					<li class="group w-1/3 border-b border-l" role="presentation">
 						<?php
-						$cover_classes = implode( ' ', array(
-							'flex flex-col pt-10 px-15 lg:px-10 pb-20 lg:pb-30',
-							'hover:bg-' . $item['cover']['color'],
-							'cursor-pointer',
-						) );
+						$cover_classes = implode(
+							' ',
+							array(
+								'flex flex-col pt-10 px-15 lg:px-10 pb-20 lg:pb-30',
+								'hover:bg-' . $item['cover']['color'],
+								'cursor-pointer',
+							)
+						);
 						?>
 
 						<div class="<?php echo esc_attr( $cover_classes ); ?>">

@@ -46,7 +46,7 @@ get_header(); ?>
 
 	<?php while ( the_flexible_field( 'post_content' ) ) : ?>
 
-		<?php if ( 'text_content' == get_row_layout() ) : ?>
+		<?php if ( 'text_content' === get_row_layout() ) : ?>
 
 			<div class="cf bootstrap-wrapper post-content">
 				<div class="row row-eq-height">
@@ -57,7 +57,7 @@ get_header(); ?>
 			</div>
 
 
-		<?php elseif ( 'image_content' == get_row_layout() ) : ?>
+		<?php elseif ( 'image_content' === get_row_layout() ) : ?>
 
 			<div class="cf bootstrap-wrapper post-content">
 				<div class="row row-eq-height">
@@ -75,7 +75,7 @@ get_header(); ?>
 			</div>
 
 
-		<?php elseif ( 'slider_content' == get_row_layout() ) : ?>
+		<?php elseif ( 'slider_content' === get_row_layout() ) : ?>
 
 			<div class="cf bootstrap-wrapper post-content">
 				<div class="row row-eq-height">
@@ -90,7 +90,7 @@ get_header(); ?>
 					<?php if ( $images ) : ?>
 						<div class="post-slider">
 						<?php foreach ( $images as $image ) : ?>
-							<div><img src="<?php echo $image['url']; ?>"/></div>
+							<div><img src="<?php echo esc_attr( $image['url'] ); ?>"/></div>
 						<?php endforeach; ?>
 						</div>
 					<?php endif; ?>

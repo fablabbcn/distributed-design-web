@@ -18,7 +18,7 @@ $button_classes = 'flex justify-center items-center p-10 bg-white border rounded
 
 	<header class="w-full font-oswald uppercase border-b">
 		<h1 class="lg:w-3/4 lg:ml-auto p-20 lg:px-40 text-16 lg:text-20 lg:text-41 leading-normal lg:border-l" style="width: 72.15%;">
-			<?php echo $header['alt_title'] ?: get_the_title(); ?>
+			<?php echo $header['alt_title'] ?: esc_html( get_the_title() ); ?>
 		</h1>
 	</header>
 
@@ -32,15 +32,15 @@ $button_classes = 'flex justify-center items-center p-10 bg-white border rounded
 
 			<header class="flex -mx-10 pb-20 border-b lg:border-b-0">
 
-				<h2 class="w-full px-10" style="font: inherit;"><?php echo $contact['email']['text']; ?></h2>
+				<h2 class="w-full px-10" style="font: inherit;"><?php echo esc_html( $contact['email']['text'] ); ?></h2>
 
 				<div class="w-full px-10">
 					<div class="max-w-90 ml-auto">
 						<p class="relative h-0 text-28 tracking-normal font-medium" style="padding-bottom: 100%;">
 							<a class="invisible <?php echo esc_attr( $button_classes ); ?>"
-								href="mailto:<?php echo $contact['email']['address']; ?>">Here</a>
+								href="mailto:<?php echo esc_attr( $contact['email']['address'] ); ?>">Here</a>
 							<a class="absolute pin w-full h-full <?php echo esc_attr( $button_classes ); ?>"
-								href="mailto:<?php echo $contact['email']['address']; ?>">Here</a>
+								href="mailto:<?php echo esc_attr( $contact['email']['address'] ); ?>">Here</a>
 						</p>
 					</div>
 				</div>
@@ -50,10 +50,10 @@ $button_classes = 'flex justify-center items-center p-10 bg-white border rounded
 			<dl class="flex flex-wrap justify-between lg:justify-start mt-auto -mx-10 pt-20">
 			<?php foreach ( $contact['social']['links'] as $link ) : ?>
 
-				<dt class="clip"><?php echo $link['social_network']['label']; ?></dt>
+				<dt class="clip"><?php echo esc_html( $link['social_network']['label'] ); ?></dt>
 				<dd class="px-10 leading-none">
-					<a class="flex w-50 h-50 p-10 bg-white border rounded-full" href="<?php echo $link['url']; ?>">
-						<svg class="fill-current"><use xlink:href="#social-<?php echo $link['social_network']['value']; ?>" /></svg>
+					<a class="flex w-50 h-50 p-10 bg-white border rounded-full" href="<?php echo esc_attr( $link['url'] ); ?>">
+						<svg class="fill-current"><use xlink:href="#social-<?php echo esc_attr( $link['social_network']['value'] ); ?>" /></svg>
 					</a>
 				</dd>
 

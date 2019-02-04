@@ -17,7 +17,7 @@ $dd_classes = 'leading-normal font-semibold';
 ?>
 
 
-<div data-some="<?php echo ( $wp_query->current_post ) % 4; ?>"  id="post-<?php the_ID(); ?>" class="group flex w-full">
+<div id="post-<?php the_ID(); ?>" class="group flex w-full">
 	<a class="<?php echo esc_attr( $a_classes ); ?>" href="<?php the_permalink(); ?>">
 
 		<div class="relative flex flex-col w-full bg-black">

@@ -6,6 +6,7 @@
 if ( ! is_active_sidebar( 'default-sidebar' ) ) {
 	return;
 }
+
 ?>
 
 <div class="default-sidebar">

@@ -17,7 +17,7 @@
 				<p class="b ttu"><?php the_title(); ?></p>
 				—
 				<p><?php the_field( 'subtitle' ); ?></p>
-				<p class="absolute bottom-1 dib b">Read More<!--<span class="dib ml-3 read-more-icon"><?php include get_template_directory() . '/assets/images/read-more.svg'; ?></span>--></p>
+				<p class="absolute bottom-1 dib b">Read More<!--<span class="dib ml-3 read-more-icon"><?php require get_template_directory() . '/assets/images/read-more.svg'; ?></span>--></p>
 			</div>
 
 		</div>

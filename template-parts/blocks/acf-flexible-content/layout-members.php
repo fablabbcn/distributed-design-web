@@ -10,7 +10,7 @@ $list        = get_sub_field( 'List' );
 ?>
 
 
-<?php if ( $caption or $list ) : ?>
+<?php if ( $caption || $list ) : ?>
 	<section id="members">
 
 		<?php set_query_var( 'caption', $caption ); ?>
@@ -34,13 +34,13 @@ $list        = get_sub_field( 'List' );
 					}
 
 					// echo $link_html . $item['title'] . '</a>';
-					echo '<button class="font-oswald box-border">' . $item['title'] . '</button>';
+					echo '<button class="font-oswald box-border">' . esc_html( $item['title'] ) . '</button>';
 
 					?>
 
 				<?php if ( $item['text'] ) : ?>
 					<div class="descr">
-						<div class="descr-in"><?php echo $item['text']; ?></div>
+						<div class="descr-in"><?php echo esc_html( $item['text'] ); ?></div>
 					</div>
 				<?php endif ?>
 

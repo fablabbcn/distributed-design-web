@@ -2,23 +2,23 @@
 
 $key = 0;
 
-$posts_given_term = new WP_Query( array(
-	'post_type'      => $post_type,
-	'posts_per_page' => '-1',
-	'order'          => 'ASC',
-	'tax_query'      => array(
-		array(
-			'taxonomy' => $taxonomy,
-			'field'    => 'slug',
-			'terms'    => $term,
+$posts_given_term = new WP_Query(
+	array(
+		'post_type'      => $post_type,
+		'posts_per_page' => '-1',
+		'order'          => 'ASC',
+		'tax_query'      => array(
+			array(
+				'taxonomy' => $taxonomy,
+				'field'    => 'slug',
+				'terms'    => $term,
+			),
 		),
-	),
-) );
+	)
+);
 
 $cell_classes = 'px-15 lg:px-25 py-20 lg:py-30 text-center uppercase border-black border-r-px border-l-px';
 $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
-
-// var_dump( $post_type, $taxonomy, $term );
 
 ?>
 
@@ -29,9 +29,12 @@ $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
 		$posts_given_term->the_post();
 
 		$terms     = get_the_terms( get_the_ID(), $taxonomy );
-		$cat_slugs = array_map( function ( $term ) {
-			return $term->slug;
-		}, $terms );
+		$cat_slugs = array_map(
+			function ( $term ) {
+					return $term->slug;
+			},
+			$terms
+		);
 
 		?>
 

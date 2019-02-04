@@ -23,7 +23,7 @@
 </head>
 <body <?php body_class( 'leading-normal font-aileron' ); ?>>
 
-	<div class="clip" aria-hidden="true"><?php include_once 'assets/img/icons.svg'; ?></div>
+	<div class="clip" aria-hidden="true"><?php require_once 'assets/img/icons.svg'; ?></div>
 
 	<b class="animsition-loading"></b>
 
@@ -34,8 +34,11 @@
 				<div class="navbar-header">
 					<a href="<?php echo esc_url( home_url() ); ?>" class="navbar-brand">
 						<span>
-							<em class="hidden-md hidden-lg"><?php _e( 'DDMP', 'ddmp' ); ?></em>
-							<em class="hidden-xs hidden-sm"><strong><?php _e( 'Distributed Design', 'ddmp' ); ?></strong> <?php _e( 'Market Platform', 'ddmp' ); ?></em>
+							<em class="hidden-md hidden-lg"><?php esc_html_e( 'DDMP', 'ddmp' ); ?></em>
+							<em class="hidden-xs hidden-sm">
+								<strong><?php esc_html_e( 'Distributed Design', 'ddmp' ); ?></strong>
+								<?php esc_html_e( 'Market Platform', 'ddmp' ); ?>
+							</em>
 						</span>
 					</a>
 					<a href="#main-nav" class="navbar-toggle">
@@ -49,11 +52,13 @@
 				<nav id="main-nav">
 					<?php
 
-					wp_nav_menu( array(
-						'theme_location' => 'primary',
-						'container'      => false,
-						'menu_class'     => 'base',
-					) );
+					wp_nav_menu(
+						array(
+							'theme_location' => 'primary',
+							'container'      => false,
+							'menu_class'     => 'base',
+						)
+					);
 
 					?>
 				</nav>

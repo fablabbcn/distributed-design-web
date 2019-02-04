@@ -142,13 +142,15 @@ function post_share() {
 		/**
 		 * Return post info
 		 */
-		wp_send_json(array(
-			'id'     => $post_id,
-			'post'   => $post_array,
-			'type'   => $post_type,
-			'_files' => $_FILES,
-			'_post'  => $_POST,
-		));
+		wp_send_json(
+			array(
+				'id'     => $post_id,
+				'post'   => $post_array,
+				'type'   => $post_type,
+				'_files' => $_FILES,
+				'_post'  => $_POST,
+			)
+		);
 	}
 
 	die();
@@ -161,7 +163,8 @@ function post_share() {
 */
 function handle_image_upload( $file_name, $file_location ) {
 	return wp_upload_bits(
-		$file_name, null,
+		$file_name,
+		null,
 		@file_get_contents( $file_location )
 	);
 }

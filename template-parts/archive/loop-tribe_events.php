@@ -17,14 +17,16 @@ $key = 0;
 // 	// ),
 // ) );
 
-$tribe_query = tribe_get_events( array(
-	'posts_per_page' => '-1',
-	'order'          => 'ASC',
+$tribe_query = tribe_get_events(
+	array(
+		'posts_per_page' => '-1',
+		'order'          => 'ASC',
 
-	'eventDisplay'   => 'custom',
-	'start_date'     => "$term-01-01",
-	'end_date'       => "$term-12-31",
-) );
+		'eventDisplay'   => 'custom',
+		'start_date'     => "$term-01-01",
+		'end_date'       => "$term-12-31",
+	)
+);
 
 // var_dump( $posts_given_term->posts ); THIS WAS THE GOOD ONE
 
@@ -39,6 +41,7 @@ $tribe_query = tribe_get_events( array(
 	<?php
 
 	$terms = get_the_terms( get_the_ID(), $taxonomy );
+
 	// $cat_slugs = array_map( function ( $term ) {
 	// 	return $term->slug;
 	// }, $terms );
@@ -50,10 +53,13 @@ $tribe_query = tribe_get_events( array(
 	$date       = date( 'F', strtotime( "$month/01/2019" ) );
 	$is_current = date( 'F' ) === $date;
 
-	$item_classes = implode( ' ', [
-		// $is_current ? '' : 'clip',
-		'border-b',
-	] );
+	$item_classes = implode(
+		' ',
+		[
+			// $is_current ? '' : 'clip',
+			'border-b',
+		]
+	);
 
 	?>
 

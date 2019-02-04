@@ -31,10 +31,16 @@ function get_button_clip( $terms, $term, $pad, $get_callback ) {
 	$terms_slugs = array_map( 'get_term_slug', $terms );
 	$terms_diff  = array_diff( $terms_slugs, [ $get_callback( $term ) ] );
 
-	$button_clip = implode( ', ', array_map( function ( $term ) use ( $pad ) {
-		global $post_type;
-		return "$post_type-$pad-$term";
-	}, array_merge( [ '' ], $terms_diff ) ) );
+	$button_clip = implode(
+		', ',
+		array_map(
+			function ( $term ) use ( $pad ) {
+				global $post_type;
+				return "$post_type-$pad-$term";
+			},
+			array_merge( [ '' ], $terms_diff )
+		)
+	);
 
 	return $button_clip;
 }

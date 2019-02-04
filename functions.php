@@ -19,10 +19,12 @@ function load_the_theme_settings() {
 	}
 
 	if ( function_exists( 'register_nav_menus' ) ) {
-		register_nav_menus( array(
-			'primary'   => __( 'Primary Navigation', 'ddmp' ),
-			'secondary' => __( 'Secondary Navigation', 'ddmp' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary'   => __( 'Primary Navigation', 'ddmp' ),
+				'secondary' => __( 'Secondary Navigation', 'ddmp' ),
+			)
+		);
 	}
 
 	// Set count revision on 5
@@ -58,7 +60,7 @@ function html5_search_form( $form ) {
 	return ( '
 		<section class="search">
 			<form role="search" method="get" id="search-form" action="' . home_url( '/' ) . '" >
-				<label class="screen-reader-text" for="s">' . __( '', 'domain' ) . '</label>
+				<label class="screen-reader-text" for="s">' . esc_html__( '', 'domain' ) . '</label>
 				<input type="search" value="' . get_search_query() . '" name="s" id="s" placeholder="Search" />
 				<input type="submit" id="searchsubmit" value="' . esc_attr__( 'Go', 'domain' ) . '" />
 			</form>
@@ -76,15 +78,17 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 // Register widget area
 function the_theme_widgets_init() {
-	register_sidebar( array(
-		'name'          => __( 'Default Sidebar', 'ddmp' ),
-		'id'            => 'default-sidebar',
-		'description'   => __( 'Add widgets here to appear in your sidebar on blog posts', 'ddmp' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => __( 'Default Sidebar', 'ddmp' ),
+			'id'            => 'default-sidebar',
+			'description'   => __( 'Add widgets here to appear in your sidebar on blog posts', 'ddmp' ),
+			'before_widget' => '<section id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</section>',
+			'before_title'  => '<h2 class="widget-title">',
+			'after_title'   => '</h2>',
+		)
+	);
 }
 add_action( 'widgets_init', 'the_theme_widgets_init' );
 

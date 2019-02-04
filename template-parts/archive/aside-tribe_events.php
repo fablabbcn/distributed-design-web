@@ -1,8 +1,11 @@
 <?php
 
-$months = array_map( function ( $month ) {
-	return str_pad( $month, 2, '0', STR_PAD_LEFT );
-}, range( 1, 12 ) );
+$months = array_map(
+	function ( $month ) {
+			return str_pad( $month, 2, '0', STR_PAD_LEFT );
+	},
+	range( 1, 12 )
+);
 
 ?>
 
@@ -11,7 +14,7 @@ $months = array_map( function ( $month ) {
 
 	<div class="px-40 py-20 bg-gray border-b" style="width: 28.45%;">
 		<div class="flex items-center">
-			<span class="search-icon"><?php include get_template_directory() . '/assets/images/search.svg'; ?></span>
+			<span class="search-icon"><?php require get_template_directory() . '/assets/images/search.svg'; ?></span>
 			<?php get_search_form(); ?>
 		</div>
 	</div>
@@ -22,7 +25,7 @@ $months = array_map( function ( $month ) {
 		<p class="text-20 font-bold">
 			<button data-clip="event-months" class="flex uppercase">
 				<span class="mr-10"><?php echo date( 'F' ); ?></span>
-				<span class="w-20"><?php include get_template_directory() . '/assets/images/caret.svg'; ?></span>
+				<span class="w-20"><?php require get_template_directory() . '/assets/images/caret.svg'; ?></span>
 			</button>
 		</p>
 

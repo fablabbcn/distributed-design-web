@@ -17,7 +17,7 @@ $content = get_sub_field( 'content' );
 		<div class="intro-slider">
 		<?php foreach ( $slider['images'] as $key => $image ) : ?>
 			<div class="slide-item">
-				<figure><img src="<?php echo $image['sizes']['container-thumbnails']; ?>" alt="<?php echo $image['alt']; ?>"></figure>
+				<figure><img src="<?php echo $image['sizes']['container-thumbnails']; ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>"></figure>
 			</div>
 		<?php endforeach ?>
 		</div>
@@ -25,22 +25,22 @@ $content = get_sub_field( 'content' );
 
 	<?php if ( $slider['caption'] ) : ?>
 		<div class="notice">
-			<p><?php echo $slider['caption']; ?></p>
+			<p><?php echo esc_html( $slider['caption'] ); ?></p>
 		</div>
 	<?php endif ?>
 
 	</div>
 
 <?php if ( $content ) : ?>
-	<div class="col" <?php echo $content['page_link'] ? 'data-link-href="' . $content['page_link'] . '"' : ''; ?>>
+	<div class="col" <?php echo $content['page_link'] ? 'data-link-href="' . esc_attr( $content['page_link'] ) . '"' : ''; ?>>
 
 	<?php if ( $content['title'] ) : ?>
 		<header class="heading">
-			<h1><?php echo $content['title']; ?></h1>
+			<h1><?php echo esc_html( $content['title'] ); ?></h1>
 		</header>
 	<?php endif ?>
 
-		<?php echo $content['text']; ?>
+		<?php echo esc_html( $content['text'] ); ?>
 
 	</div>
 <?php endif ?>
