@@ -72,7 +72,7 @@ function special_nav_class( $classes, $menu_item = null ) {
 
 
 // Custom posts per page per custom post types.
-add_action( 'pre_get_posts', 'set_posts_per_page_for_cpt' );
+// add_action( 'pre_get_posts', 'set_posts_per_page_for_cpt' );
 function set_posts_per_page_for_cpt( $query ) {
 	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'talent' ) ) {
 		$query->set( 'posts_per_page', '8' );
