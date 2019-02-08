@@ -3,7 +3,7 @@
   border-bottom: 2px solid $border-color;
 
   @include media('>=desktop') {
-    height: calc(100vh - 52px);
+    min-height: calc(100vh - 52px);
     @include display-flex();
   }
 
