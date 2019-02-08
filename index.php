@@ -4,15 +4,8 @@
 
 	<div class="base-col">
 
-		<header class="resources-header">
-			<div class="bootstrap-wrapper">
-				<div class="row resources-filter">
-					<div class="col-12 tl today-date">
-						<h1 class="ph3 ttu"><?php echo 'talent' === get_post_type() ? 'Creative Talent' : 'Latest news of Distributed Design'; ?></h1>
-					</div>
-				</div>
-			</div>
-		</header>
+		<?php set_query_var( 'title', 'talent' === get_post_type() ? 'Creative Talent' : 'Latest news of Distributed Design' ); ?>
+		<?php get_template_part( 'template-parts/page/header' ); ?>
 
 		<div class="px-40 py-20 bg-gray border-b <?php echo esc_attr( $post_type ); ?>-search">
 			<div class="flex items-center">
