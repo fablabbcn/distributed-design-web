@@ -1,27 +1,13 @@
 <?php get_header(); ?>
 
-<article class="stickit">
 
-	<div class="base-col">
-
-		<?php set_query_var( 'title', 'talent' === get_post_type() ? 'Creative Talent' : 'Latest news of Distributed Design' ); ?>
-		<?php get_template_part( 'template-parts/page/header' ); ?>
-
-		<div class="px-40 py-20 bg-gray border-b <?php echo esc_attr( $post_type ); ?>-search">
-			<div class="flex items-center">
-				<span class="search-icon"><?php require get_template_directory() . '/assets/images/search.svg'; ?></span>
-				<?php get_search_form(); ?>
-			</div>
-		</div>
-
-	</div>
-
-	<div class="col"></div>
-
-</article>
+<?php set_query_var( 'title', 'talent' === get_post_type() ? 'Creative Talent' : 'Latest news of Distributed Design' ); ?>
+<?php get_template_part( 'template-parts/page/header' ); ?>
 
 
 <?php if ( 'post' === get_post_type() ) : ?>
+	<?php get_template_part( 'template-parts/blocks/search' ); ?>
+
 	<div class="info-section">
 		<div class="bootstrap-wrapper">
 			<div class="row margin-0">
@@ -38,6 +24,7 @@
 
 
 <?php else : ?>
+	<?php get_template_part( 'template-parts/archive/aside', $post_type ); ?>
 	<section class="flex flex-grow w-full overflow-x-hidden">
 		<ul class="list-reset flex flex-1 flex-wrap -mt-px -mx-px">
 		<?php while ( have_posts() ) : ?>
