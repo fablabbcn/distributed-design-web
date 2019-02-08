@@ -40,7 +40,7 @@ $content = get_sub_field( 'content' );
 		</header>
 	<?php endif ?>
 
-		<?php echo esc_html( $content['text'] ); ?>
+		<?php echo $content['text']; ?>
 
 	</div>
 <?php endif ?>
