@@ -71,6 +71,16 @@ function special_nav_class( $classes, $menu_item = null ) {
 } add_filter( 'nav_menu_css_class', 'special_nav_class', 10, 2 );
 
 
+// Custom posts per page per custom post types.
+add_action( 'pre_get_posts', 'set_posts_per_page_for_cpt' );
+function set_posts_per_page_for_cpt( $query ) {
+	if ( ! is_admin() && $query->is_main_query() && is_post_type_archive( 'talent' ) ) {
+		$query->set( 'posts_per_page', '8' );
+	}
+}
+
+
+
 // AJAX Create Share.
 add_filter( 'wp_ajax_nopriv_post_share', 'post_share' );
 add_filter( 'wp_ajax_post_share', 'post_share' );
