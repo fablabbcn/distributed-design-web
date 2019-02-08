@@ -11,14 +11,18 @@ $contact_info = get_theme_mod(
 ' )
 );
 
+$logo = array(
+	'src' => get_stylesheet_directory_uri() . '/assets/images/ce-logo.png',
+	'alt' => 'Co-funded by the Creative European Programme of the European Union',
+);
+
 ?>
 
 
 		<footer id="footer" class="mt-auto">
-			<div class="footer-address py-20 px-40 border-b"><?php esc_html_e( $contact_info, 'ddmp' ); ?></div>
+			<div class="footer-address py-20 px-40 border-b"><?php _e( $contact_info, 'ddmp' ); ?></div>
 			<div class="footer-founding p-40">
-				<img class="block mx-auto" src="<?php echo esc_attr( get_stylesheet_directory_uri() . '/assets/images' ); ?>/ce-logo.png"
-					alt="Co-funded by the Creative European Programme of the European Union" />
+				<img class="block mx-auto" src="<?php echo esc_attr( $logo['src'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
 			</div>
 		</footer>
 
