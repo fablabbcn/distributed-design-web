@@ -10,7 +10,7 @@ $months = array_map(
 ?>
 
 
-<aside class="flex flex-col-reverse md:flex-row -mt-border border-t">
+<aside class="relative flex flex-col-reverse md:flex-row -mt-border border-t">
 
 	<div class="px-40 py-20 bg-gray border-b" style="width: 28.45%;">
 		<div class="flex items-center">
