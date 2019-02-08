@@ -112,19 +112,19 @@ function the_theme_no_generator() {
 
 
 // Enqueue scripts and styles.
-require get_parent_theme_file_path( '/inc/enqueues.php' );
+require get_parent_theme_file_path( '/includes/enqueues.php' );
 
 // Additional features to allow styling of the templates.
-require get_parent_theme_file_path( '/inc/template-functions.php' );
+require get_parent_theme_file_path( '/includes/template-functions.php' );
 
 // Customizer additions.
-require get_parent_theme_file_path( '/inc/customizer.php' );
+require get_parent_theme_file_path( '/includes/customizer.php' );
 
 // Duplicate post
-require get_parent_theme_file_path( '/inc/duplicate_post.php' );
+require get_parent_theme_file_path( '/includes/duplicate_post.php' );
 
 // Shortcodes
-require get_parent_theme_file_path( '/inc/shortcodes.php' );
+require get_parent_theme_file_path( '/includes/shortcodes.php' );
 
 // ACF
-require get_parent_theme_file_path( '/inc/acf.php' );
+require get_parent_theme_file_path( '/includes/acf.php' );

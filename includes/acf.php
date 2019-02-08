@@ -12,7 +12,7 @@ if ( ! function_exists( 'llos_acf_json_save_point' ) ) {
 	add_filter( 'acf/settings/save_json', 'llos_acf_json_save_point' );
 
 	function llos_acf_json_save_point( $path ) {
-		$path = get_stylesheet_directory() . '/inc/acf-json';
+		$path = get_stylesheet_directory() . '/includes/acf-json';
 		return $path;
 	}
 }
@@ -24,7 +24,7 @@ if ( ! function_exists( 'llos_acf_json_load_point' ) ) {
 
 	function llos_acf_json_load_point( $paths ) {
 		unset( $paths[0] );
-		$paths[] = get_stylesheet_directory() . '/inc/acf-json';
+		$paths[] = get_stylesheet_directory() . '/includes/acf-json';
 		return $paths;
 	}
 }
