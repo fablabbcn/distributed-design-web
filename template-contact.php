@@ -17,7 +17,7 @@ $button_classes = 'flex justify-center items-center p-10 bg-white border rounded
 <main class="flex flex-col flex-grow">
 
 	<?php set_query_var( 'title', $header['alt_title'] ?: get_the_title() ); ?>
-	<?php get_template_part( 'template-parts/page/header' ); ?>
+	<?php get_template_part( 'template-parts/blocks/header' ); ?>
 
 	<div class="flex flex-wrap flex-grow lg:px-20 text-53 leading-none tracking-tight font-oswald font-light uppercase">
 

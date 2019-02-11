@@ -5,19 +5,8 @@
 get_header(); ?>
 
 
-<div class="base-col">
-	<header class="resources-header">
-		<div class="bootstrap-wrapper">
-			<div class="row resources-filter">
-				<div class="col-12 tl today-date">
-					<?php the_title( '<h1>', '</h1>' ); ?>
-				</div>
-			</div>
-		</div>
-	</header>
-</div>
-
-<div class="col"></div>
+<?php set_query_var( 'title', get_the_title() ); ?>
+<?php get_template_part( 'template-parts/blocks/header' ); ?>
 
 
 <?php while ( have_posts() ) : ?>

@@ -2,7 +2,7 @@
 
 
 <?php set_query_var( 'title', 'talent' === get_post_type() ? 'Creative Talent' : 'Latest news of Distributed Design' ); ?>
-<?php get_template_part( 'template-parts/page/header' ); ?>
+<?php get_template_part( 'template-parts/blocks/header' ); ?>
 
 
 <?php if ( 'post' === get_post_type() ) : ?>
