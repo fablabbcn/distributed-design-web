@@ -15,12 +15,12 @@ $logos = get_sub_field( 'logos' );
 
 		<div class="slide-item">
 		<?php if ( $image['link'] ) : ?>
-			<a href="<?php echo $image['link']; ?>" target="_blank">
-				<img src="<?php echo $image['image']['sizes']['icon-thumbnails']; ?>" alt="<?php echo $image['image']['alt']; ?>">
+			<a href="<?php echo esc_attr( $image['link'] ); ?>" target="_blank">
+				<img src="<?php echo esc_attr( $image['image']['sizes']['icon-thumbnails'] ); ?>" alt="<?php echo esc_attr( $image['image']['alt'] ); ?>">
 			</a>
 
 		<?php else : ?>
-			<img src="<?php echo $image['image']['sizes']['icon-thumbnails']; ?>" alt="<?php echo $image['image']['alt']; ?>">
+			<img src="<?php echo esc_attr( $image['image']['sizes']['icon-thumbnails'] ); ?>" alt="<?php echo esc_attr( $image['image']['alt'] ); ?>">
 
 		<?php endif ?>
 		</div>

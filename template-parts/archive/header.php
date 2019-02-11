@@ -13,9 +13,9 @@ $post_type_object = get_post_type_object( $post_type );
 
 <header class="tabs-header overflow-hidden">
 
-	<h1 class="clip"><?php echo $post_type_object->label; ?></h1>
+	<h1 class="clip"><?php echo wp_kses_post( $post_type_object->label ); ?></h1>
 
-	<div class="tab-filters <?php echo $post_type; ?>-filter flex -mx-px">
+	<div class="tab-filters <?php echo esc_attr( $post_type ); ?>-filter flex -mx-px">
 	<?php foreach ( $terms as $key => $term ) : ?>
 		<?php $button_clip = get_button_clip( $terms, $term, 'list', 'get_term_slug' ); ?>
 		<?php $button_class = implode( ' ', [ "flex-1 -mx-px lg:py-20 hover:bg-$color border-r border-l", 0 === $key ? "bg-$color" : '' ] ); ?>

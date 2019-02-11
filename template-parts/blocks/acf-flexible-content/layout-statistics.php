@@ -10,7 +10,7 @@ $items       = get_sub_field( 'items' );
 ?>
 
 
-<?php if ( $caption or $items ) : ?>
+<?php if ( $caption || $items ) : ?>
 	<section id="statistics">
 
 		<?php set_query_var( 'caption', $caption ); ?>
@@ -39,13 +39,15 @@ $items       = get_sub_field( 'items' );
 						?>
 
 						<div class="<?php echo esc_attr( $cover_classes ); ?>">
-							<p class="text-12 lg:text-14 leading-normal font-light"><?php echo $item['cover']['title']; ?></p>
-							<p class="text-5vw leading-none tracking-tight text-center font-bold font-oswald"><?php echo $item['cover']['number']; ?></p>
+							<p class="text-12 lg:text-14 leading-normal font-light">
+								<?php echo wp_kses_post( $item['cover']['title'] ); ?></p>
+							<p class="text-5vw leading-none tracking-tight text-center font-bold font-oswald">
+								<?php echo wp_kses_post( $item['cover']['number'] ); ?></p>
 						</div>
 
 						<div class="absolute pin-y pin-l hidden group-hover:block w-full lg:w-2/5 py-10 pr-20 pl-45">
-							<header class="heading"><h2><?php echo $item['cover']['title']; ?></h2></header>
-							<div><?php echo str_replace( array( '<ul' ), array( '<ul class="list-reset lg:col-count-2"' ), $item['text'] ); ?></div>
+							<header class="heading"><h2><?php echo wp_kses_post( $item['cover']['title'] ); ?></h2></header>
+							<div><?php echo wp_kses_post( str_replace( array( '<ul' ), array( '<ul class="list-reset lg:col-count-2"' ), $item['text'] ) ); ?></div>
 						</div>
 
 					</li>

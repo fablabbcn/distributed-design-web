@@ -63,13 +63,13 @@ $tribe_query = tribe_get_events(
 
 	?>
 
-	<article id="<?php echo $post_type . '-event-' . tribe_get_start_date( null, false, 'm' ); ?>-<?php the_ID(); ?>"
+	<article id="<?php echo esc_attr( $post_type ) . '-event-' . esc_attr( tribe_get_start_date( null, false, 'm' ) ); ?>-<?php the_ID(); ?>"
 		class="<?php echo esc_attr( $item_classes ); ?>">
-		<div class="beefup <?php echo $post_type; ?>-item">
+		<div class="beefup <?php echo esc_attr( $post_type ); ?>-item">
 
 			<header class="flex hover:bg-magenta text-24">
 				<div class="flex-no-shrink p-40 text-center" style="width: 28.45%;">
-					<p><time><?php echo tribe_get_start_date( null, false, 'd/m/y' ); ?></time></p>
+					<p><time><?php echo wp_kses_post( tribe_get_start_date( null, false, 'd/m/y' ) ); ?></time></p>
 				</div>
 				<button class="flex-grow p-40 text-left border-l beefup__head">
 					<p class="font-bold"><?php the_title(); ?></p>
@@ -88,9 +88,9 @@ $tribe_query = tribe_get_events(
 
 						<section class="flex font-bold border-b">
 							<p class="flex-1 py-10 px-30 border-r">
-								<time><?php echo tribe_get_start_date( null, false, 'F jS' ); ?></time>
+								<time><?php echo wp_kses_post( tribe_get_start_date( null, false, 'F jS' ) ); ?></time>
 								<span> — </span>
-								<time><?php echo tribe_get_end_date( null, false, 'F jS' ); ?></time>
+								<time><?php echo wp_kses_post( tribe_get_end_date( null, false, 'F jS' ) ); ?></time>
 							</p>
 							<p class="flex-0 py-10 px-30">
 								<a class="hover:text-magenta text-17 font-oswald uppercase" href="<?php the_permalink(); ?>">Read More</a>
@@ -98,8 +98,10 @@ $tribe_query = tribe_get_events(
 						</section>
 
 						<section class="flex flex-col md:flex-row -mx-15 px-30 py-20">
-							<div class="w-full px-15"><?php echo str_replace( array( '<p' ), array( '<p class="mb-10"' ), get_field( 'content_left' ) ); ?></div>
-							<div class="w-full px-15"><?php echo str_replace( array( '<p' ), array( '<p class="mb-10"' ), get_field( 'content_right' ) ); ?></div>
+							<div class="w-full px-15">
+								<?php echo wp_kses_post( str_replace( array( '<p' ), array( '<p class="mb-10"' ), get_field( 'content_left' ) ) ); ?></div>
+							<div class="w-full px-15">
+								<?php echo wp_kses_post( str_replace( array( '<p' ), array( '<p class="mb-10"' ), get_field( 'content_right' ) ) ); ?></div>
 						</section>
 
 					</div>

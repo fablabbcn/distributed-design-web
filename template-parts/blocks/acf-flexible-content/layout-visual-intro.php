@@ -17,7 +17,7 @@ $content = get_sub_field( 'content' );
 		<div class="intro-slider">
 		<?php foreach ( $slider['images'] as $key => $image ) : ?>
 			<div class="slide-item">
-				<figure><img src="<?php echo $image['sizes']['container-thumbnails']; ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>"></figure>
+				<figure><img src="<?php echo esc_attr( $image['sizes']['container-thumbnails'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>"></figure>
 			</div>
 		<?php endforeach ?>
 		</div>
@@ -40,7 +40,7 @@ $content = get_sub_field( 'content' );
 		</header>
 	<?php endif ?>
 
-		<?php echo $content['text']; ?>
+		<?php echo wp_kses_post( $content['text'] ); ?>
 
 	</div>
 <?php endif ?>

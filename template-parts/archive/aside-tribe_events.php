@@ -24,7 +24,7 @@ $months = array_map(
 		<p class="text-22 font-oswald font-bold">Distributed Design Event Calendar</p>
 		<p class="text-20 font-bold">
 			<button data-clip="event-months" class="flex uppercase">
-				<span class="mr-10"><?php echo date( 'F' ); ?></span>
+				<span class="mr-10"><?php echo esc_html( date( 'F' ) ); ?></span>
 				<span class="w-20"><?php require get_template_directory() . '/assets/images/caret.svg'; ?></span>
 			</button>
 		</p>
@@ -40,7 +40,7 @@ $months = array_map(
 
 				<li class="flex border-b">
 					<button data-clip="<?php echo esc_attr( $button_clip ); ?>"
-						class="<?php echo esc_attr( $button_classes ); ?>"><?php echo $date; ?></button>
+						class="<?php echo esc_attr( $button_classes ); ?>"><?php echo esc_html( $date ); ?></button>
 				</li>
 
 			<?php endforeach; ?>
