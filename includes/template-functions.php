@@ -308,3 +308,37 @@ function generate_featured_image_alt( $file, $post_id, $desc ) {
 	return set_post_thumbnail( $post_id, $id );
 
 }
+
+
+/**
+ * Login users via rest-API
+ */
+add_action( 'rest_api_init', 'register_api_hooks' );
+
+function register_api_hooks() {
+	register_rest_route(
+		'nug/v1',
+		'/login/',
+		array(
+			'methods'  => 'GET',
+			'callback' => 'login',
+		)
+	);
+}
+
+function login( $request ) {
+	$user = wp_signon(
+		array(
+			'user_login'    => $request['username'],
+			'user_password' => $request['password'],
+			'remember'      => true,
+		),
+		false
+	);
+
+	// if ( is_wp_error( $user ) ) {
+	// 	echo $user->get_error_message();
+	// }
+
+	return $user;
+}

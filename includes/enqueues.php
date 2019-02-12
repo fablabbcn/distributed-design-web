@@ -32,6 +32,7 @@ function the_theme_scripts() {
 		'homeUrl'  => home_url(),
 		'homePath' => get_stylesheet_directory_uri(),
 		'ajaxUrl'  => admin_url( 'admin-ajax.php' ),
+		'apiUrl'   => get_rest_url(),
 	);
 
 	wp_enqueue_script( 'theme-scripts', get_template_directory_uri() . '/assets/js/theme-scripts.js', $js_names, false, true );

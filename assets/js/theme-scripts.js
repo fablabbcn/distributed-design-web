@@ -16,8 +16,9 @@
       window.location.href = $(this).data('link-href')
     })
 
-    var form = jQuery('[id*="form-submit"]')
-    form.on('submit', ajaxPostShare)
+    // Forms: Login && Submit
+    jQuery('[id*="form-login"]').on('submit', ajaxLoginUser)
+    jQuery('[id*="form-submit"]').on('submit', ajaxPostShare)
   })
 
   function goToHash (url) {
@@ -54,10 +55,40 @@
 /**
  * AJAX
  */
+function ajaxLoginUser (event) {
+  event.preventDefault()
+
+  var form = this.querySelector('form')
+  var result = new FormData(form)
+
+  jQuery.ajax({
+    async: false,
+    type: 'GET',
+    url: [
+      wpHelper.apiUrl + 'nug/v1/login?',
+      'username=' + encodeURIComponent(result.get('username')),
+      '&password=' + encodeURIComponent(result.get('password')),
+    ].join(''),
+
+    success: function (data) {
+      location.reload()
+    },
+    error: function (jqXHR, textStatus, errorThrown) {
+      var paragraph = form.querySelector('p:last-of-type')
+      var text = jqXHR.responseJSON
+        ? jqXHR.responseJSON.message
+        : 'Please, fill the form and try again. ' + paragraph.innerHTML
+
+      paragraph.innerHTML = text
+    },
+  })
+}
+
 function ajaxPostShare (event) {
   event.preventDefault()
 
-  var result = new FormData(this.querySelector('form'))
+  var form = this.querySelector('form')
+  var result = new FormData(form)
   result.append('action', 'post_share')
 
   jQuery.ajax({
