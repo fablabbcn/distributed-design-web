@@ -6,12 +6,14 @@
 table {
   background-color: $table-bg;
 }
+
 caption {
   padding-top: $table-cell-padding;
   padding-bottom: $table-cell-padding;
   color: $text-muted;
   text-align: left;
 }
+
 th {
   text-align: left;
 }
@@ -97,6 +99,7 @@ th {
       }
     }
   }
+
   > thead > tr {
     > th,
     > td {

@@ -11,11 +11,13 @@
     + .panel-collapse > .panel-body {
       border-top-color: $border;
     }
+
     .badge {
       color: $heading-bg-color;
       background-color: $heading-text-color;
     }
   }
+
   & > .panel-footer {
     + .panel-collapse > .panel-body {
       border-bottom-color: $border;
