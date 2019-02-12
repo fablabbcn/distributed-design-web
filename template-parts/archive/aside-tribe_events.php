@@ -12,7 +12,7 @@ $months = array_map(
 
 <aside class="relative flex flex-col-reverse md:flex-row -mt-border border-t">
 
-	<div class="px-40 py-20 bg-gray border-b" style="width: 28.45%;">
+	<div class="px-40 py-20 bg-gray border-b" style="width: 27.9%;">
 		<div class="flex items-center">
 			<span class="search-icon"><?php require get_template_directory() . '/assets/images/search.svg'; ?></span>
 			<?php get_search_form(); ?>
@@ -24,7 +24,7 @@ $months = array_map(
 		<p class="text-22 font-oswald font-bold">Distributed Design Event Calendar</p>
 		<p class="text-20 font-bold">
 			<button data-clip="event-months" class="flex uppercase">
-				<span class="mr-10"><?php echo esc_html( date( 'F' ) ); ?></span>
+				<span class="mr-10">Month</span>
 				<span class="w-20"><?php require get_template_directory() . '/assets/images/caret.svg'; ?></span>
 			</button>
 		</p>
@@ -36,10 +36,10 @@ $months = array_map(
 				<?php $is_current = date( 'F' ) === $date; ?>
 				<?php $button_clip = get_button_clip( $months, $month, 'event', 'get_term_month' ); ?>
 				<?php $button_classes = 'flex w-full px-20 py-10 hover:bg-magenta uppercase'; ?>
-				<?php $button_classes = $is_current ? "$button_classes font-bold" : $button_classes; ?>
+				<?php // $button_classes = $is_current ? "$button_classes font-bold" : $button_classes; ?>
 
 				<li class="flex border-b">
-					<button data-clip="<?php echo esc_attr( $button_clip ); ?>"
+					<button data-clip="event-months, <?php echo esc_attr( $button_clip ); ?>"
 						class="<?php echo esc_attr( $button_classes ); ?>"><?php echo esc_html( $date ); ?></button>
 				</li>
 

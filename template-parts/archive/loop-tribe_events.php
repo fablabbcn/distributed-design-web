@@ -68,7 +68,7 @@ $tribe_query = tribe_get_events(
 		<div class="beefup <?php echo esc_attr( $post_type ); ?>-item">
 
 			<header class="flex hover:bg-magenta text-24">
-				<div class="flex-no-shrink p-40 text-center" style="width: 28.45%;">
+				<div class="flex-no-shrink p-40 text-center" style="width: 27.9%;">
 					<p><time><?php echo wp_kses_post( tribe_get_start_date( null, false, 'd/m/y' ) ); ?></time></p>
 				</div>
 				<button class="flex-grow p-40 text-left border-l beefup__head">
@@ -80,7 +80,7 @@ $tribe_query = tribe_get_events(
 			<div class="beefup__body flex text-15 border-t">
 				<div class="flex w-full">
 
-					<figure class="flex-no-shrink" style="width: 28.45%;">
+					<figure class="flex-no-shrink" style="width: 27.9%;">
 						<?php echo get_the_post_thumbnail( null, 'post-thumbnail', array( 'class' => 'w-full h-full object-cover' ) ); ?>
 					</figure>
 
