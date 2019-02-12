@@ -20,7 +20,7 @@ $logo = array(
 
 
 		<footer id="footer" class="mt-auto">
-			<div class="footer-address py-20 px-40 border-b"><?php wp_kses_post( $contact_info ); ?></div>
+			<div class="footer-address py-20 px-40 border-b"><?php echo wp_kses_post( $contact_info ); ?></div>
 			<div class="footer-founding p-40">
 				<img class="block mx-auto" src="<?php echo esc_attr( $logo['src'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
 			</div>
