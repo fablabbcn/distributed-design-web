@@ -292,7 +292,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: false,
-    backgroundColors: ['hover', 'group-hover'],
+    backgroundColors: ['hover', 'group-hover', 'group-focus'],
     backgroundPosition: false,
     backgroundRepeat: false,
     backgroundSize: false,
@@ -302,8 +302,8 @@ module.exports = {
     borderStyle: ['responsive'],
     borderWidths: ['responsive'],
     cursor: [],
-    display: ['responsive', 'hover', 'group-hover'],
-    flexbox: ['responsive', 'hover', 'group-hover'],
+    display: ['responsive', 'hover', 'group-hover', 'group-focus'],
+    flexbox: ['responsive', 'hover', 'group-hover', 'group-focus'],
     float: false,
     fonts: [],
     fontWeights: ['responsive'],
@@ -357,6 +357,13 @@ module.exports = {
   */
 
   plugins: [
+    function ({ addVariant }) {
+      addVariant('group-focus', ({ modifySelectors, separator }) => {
+        return modifySelectors(({ className }) => {
+          return `.group:focus .group-focus${separator}${className}`
+        })
+      })
+    },
     require('tailwindcss-alpha')(),
     require('tailwindcss-inset')({
       insets: { 'full': '100%' },

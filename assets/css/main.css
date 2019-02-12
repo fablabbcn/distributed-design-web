@@ -830,6 +830,54 @@ table {
   background-color: #ff0;
 }
 
+.group:focus .group-focus\:bg-transparent {
+  background-color: transparent;
+}
+
+.group:focus .group-focus\:bg-current {
+  background-color: currentColor;
+}
+
+.group:focus .group-focus\:bg-inherit {
+  background-color: inherit;
+}
+
+.group:focus .group-focus\:bg-black {
+  background-color: #000;
+}
+
+.group:focus .group-focus\:bg-dark-gray {
+  background-color: #222;
+}
+
+.group:focus .group-focus\:bg-gray {
+  background-color: #e6e6e6;
+}
+
+.group:focus .group-focus\:bg-white {
+  background-color: #fff;
+}
+
+.group:focus .group-focus\:bg-red {
+  background-color: #f93838;
+}
+
+.group:focus .group-focus\:bg-lime {
+  background-color: #0f0;
+}
+
+.group:focus .group-focus\:bg-cyan {
+  background-color: #0ff;
+}
+
+.group:focus .group-focus\:bg-magenta {
+  background-color: #f0f;
+}
+
+.group:focus .group-focus\:bg-yellow {
+  background-color: #ff0;
+}
+
 .border-collapse {
   border-collapse: collapse;
 }
@@ -1199,6 +1247,34 @@ table {
 }
 
 .group:hover .group-hover\:hidden {
+  display: none;
+}
+
+.group:focus .group-focus\:block {
+  display: block;
+}
+
+.group:focus .group-focus\:inline-block {
+  display: inline-block;
+}
+
+.group:focus .group-focus\:inline {
+  display: inline;
+}
+
+.group:focus .group-focus\:table {
+  display: table;
+}
+
+.group:focus .group-focus\:table-row {
+  display: table-row;
+}
+
+.group:focus .group-focus\:table-cell {
+  display: table-cell;
+}
+
+.group:focus .group-focus\:hidden {
   display: none;
 }
 
@@ -2013,6 +2089,278 @@ table {
 }
 
 .group:hover .group-hover\:flex-no-shrink {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+
+.group:focus .group-focus\:flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.group:focus .group-focus\:inline-flex {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.group:focus .group-focus\:flex-row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.group:focus .group-focus\:flex-row-reverse {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.group:focus .group-focus\:flex-col {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.group:focus .group-focus\:flex-col-reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+  -moz-box-orient: vertical;
+  -moz-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.group:focus .group-focus\:flex-wrap {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.group:focus .group-focus\:flex-wrap-reverse {
+  -webkit-flex-wrap: wrap-reverse;
+  -ms-flex-wrap: wrap-reverse;
+  flex-wrap: wrap-reverse;
+}
+
+.group:focus .group-focus\:flex-no-wrap {
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.group:focus .group-focus\:items-start {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -moz-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.group:focus .group-focus\:items-end {
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -moz-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.group:focus .group-focus\:items-center {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.group:focus .group-focus\:items-baseline {
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+  -moz-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
+.group:focus .group-focus\:items-stretch {
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -moz-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.group:focus .group-focus\:self-auto {
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+}
+
+.group:focus .group-focus\:self-start {
+  -webkit-align-self: flex-start;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+}
+
+.group:focus .group-focus\:self-end {
+  -webkit-align-self: flex-end;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.group:focus .group-focus\:self-center {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
+.group:focus .group-focus\:self-stretch {
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+}
+
+.group:focus .group-focus\:justify-start {
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.group:focus .group-focus\:justify-end {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.group:focus .group-focus\:justify-center {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.group:focus .group-focus\:justify-between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.group:focus .group-focus\:justify-around {
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.group:focus .group-focus\:content-center {
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.group:focus .group-focus\:content-start {
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.group:focus .group-focus\:content-end {
+  -webkit-align-content: flex-end;
+  -ms-flex-line-pack: end;
+  align-content: flex-end;
+}
+
+.group:focus .group-focus\:content-between {
+  -webkit-align-content: space-between;
+  -ms-flex-line-pack: justify;
+  align-content: space-between;
+}
+
+.group:focus .group-focus\:content-around {
+  -webkit-align-content: space-around;
+  -ms-flex-line-pack: distribute;
+  align-content: space-around;
+}
+
+.group:focus .group-focus\:flex-1 {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0%;
+  -moz-box-flex: 1;
+  -ms-flex: 1 1 0%;
+  flex: 1 1 0%;
+}
+
+.group:focus .group-focus\:flex-auto {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -moz-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.group:focus .group-focus\:flex-initial {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -moz-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.group:focus .group-focus\:flex-none {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -moz-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+}
+
+.group:focus .group-focus\:flex-grow {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.group:focus .group-focus\:flex-shrink {
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.group:focus .group-focus\:flex-no-grow {
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -moz-box-flex: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+}
+
+.group:focus .group-focus\:flex-no-shrink {
   -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
@@ -4233,6 +4581,42 @@ table {
   background-color: rgba(255, 255, 0, 0.3);
 }
 
+.group:focus .group-focus\:bg-black-30 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.group:focus .group-focus\:bg-dark-gray-30 {
+  background-color: rgba(34, 34, 34, 0.3);
+}
+
+.group:focus .group-focus\:bg-gray-30 {
+  background-color: rgba(230, 230, 230, 0.3);
+}
+
+.group:focus .group-focus\:bg-white-30 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.group:focus .group-focus\:bg-red-30 {
+  background-color: rgba(249, 56, 56, 0.3);
+}
+
+.group:focus .group-focus\:bg-lime-30 {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.group:focus .group-focus\:bg-cyan-30 {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+.group:focus .group-focus\:bg-magenta-30 {
+  background-color: rgba(255, 0, 255, 0.3);
+}
+
+.group:focus .group-focus\:bg-yellow-30 {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
 .bg-black-70 {
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -4338,6 +4722,42 @@ table {
 }
 
 .group:hover .group-hover\:bg-yellow-70 {
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+.group:focus .group-focus\:bg-black-70 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.group:focus .group-focus\:bg-dark-gray-70 {
+  background-color: rgba(34, 34, 34, 0.7);
+}
+
+.group:focus .group-focus\:bg-gray-70 {
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
+.group:focus .group-focus\:bg-white-70 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.group:focus .group-focus\:bg-red-70 {
+  background-color: rgba(249, 56, 56, 0.7);
+}
+
+.group:focus .group-focus\:bg-lime-70 {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+
+.group:focus .group-focus\:bg-cyan-70 {
+  background-color: rgba(0, 255, 255, 0.7);
+}
+
+.group:focus .group-focus\:bg-magenta-70 {
+  background-color: rgba(255, 0, 255, 0.7);
+}
+
+.group:focus .group-focus\:bg-yellow-70 {
   background-color: rgba(255, 255, 0, 0.7);
 }
 
@@ -4857,6 +5277,34 @@ body.page-id-13 .hover\:bg-primary:hover {
   }
 
   .group:hover .sm\:group-hover\:hidden {
+    display: none;
+  }
+
+  .group:focus .sm\:group-focus\:block {
+    display: block;
+  }
+
+  .group:focus .sm\:group-focus\:inline-block {
+    display: inline-block;
+  }
+
+  .group:focus .sm\:group-focus\:inline {
+    display: inline;
+  }
+
+  .group:focus .sm\:group-focus\:table {
+    display: table;
+  }
+
+  .group:focus .sm\:group-focus\:table-row {
+    display: table-row;
+  }
+
+  .group:focus .sm\:group-focus\:table-cell {
+    display: table-cell;
+  }
+
+  .group:focus .sm\:group-focus\:hidden {
     display: none;
   }
 
@@ -5671,6 +6119,278 @@ body.page-id-13 .hover\:bg-primary:hover {
   }
 
   .group:hover .sm\:group-hover\:flex-no-shrink {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .group:focus .sm\:group-focus\:flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .group:focus .sm\:group-focus\:inline-flex {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  .group:focus .sm\:group-focus\:flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .group:focus .sm\:group-focus\:flex-row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .group:focus .sm\:group-focus\:flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .group:focus .sm\:group-focus\:flex-col-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .group:focus .sm\:group-focus\:flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .group:focus .sm\:group-focus\:flex-wrap-reverse {
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  .group:focus .sm\:group-focus\:flex-no-wrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .group:focus .sm\:group-focus\:items-start {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .group:focus .sm\:group-focus\:items-end {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .group:focus .sm\:group-focus\:items-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .group:focus .sm\:group-focus\:items-baseline {
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -moz-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+
+  .group:focus .sm\:group-focus\:items-stretch {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  .group:focus .sm\:group-focus\:self-auto {
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+  }
+
+  .group:focus .sm\:group-focus\:self-start {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .group:focus .sm\:group-focus\:self-end {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .group:focus .sm\:group-focus\:self-center {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .group:focus .sm\:group-focus\:self-stretch {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  .group:focus .sm\:group-focus\:justify-start {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .group:focus .sm\:group-focus\:justify-end {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .group:focus .sm\:group-focus\:justify-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .group:focus .sm\:group-focus\:justify-between {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .group:focus .sm\:group-focus\:justify-around {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .group:focus .sm\:group-focus\:content-center {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+
+  .group:focus .sm\:group-focus\:content-start {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  }
+
+  .group:focus .sm\:group-focus\:content-end {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+  }
+
+  .group:focus .sm\:group-focus\:content-between {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+  }
+
+  .group:focus .sm\:group-focus\:content-around {
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+  }
+
+  .group:focus .sm\:group-focus\:flex-1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+  }
+
+  .group:focus .sm\:group-focus\:flex-auto {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  .group:focus .sm\:group-focus\:flex-initial {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .group:focus .sm\:group-focus\:flex-none {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -moz-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .group:focus .sm\:group-focus\:flex-grow {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+
+  .group:focus .sm\:group-focus\:flex-shrink {
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+
+  .group:focus .sm\:group-focus\:flex-no-grow {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -moz-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+
+  .group:focus .sm\:group-focus\:flex-no-shrink {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -7940,6 +8660,34 @@ body.page-id-13 .hover\:bg-primary:hover {
     display: none;
   }
 
+  .group:focus .md\:group-focus\:block {
+    display: block;
+  }
+
+  .group:focus .md\:group-focus\:inline-block {
+    display: inline-block;
+  }
+
+  .group:focus .md\:group-focus\:inline {
+    display: inline;
+  }
+
+  .group:focus .md\:group-focus\:table {
+    display: table;
+  }
+
+  .group:focus .md\:group-focus\:table-row {
+    display: table-row;
+  }
+
+  .group:focus .md\:group-focus\:table-cell {
+    display: table-cell;
+  }
+
+  .group:focus .md\:group-focus\:hidden {
+    display: none;
+  }
+
   .md\:flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -8751,6 +9499,278 @@ body.page-id-13 .hover\:bg-primary:hover {
   }
 
   .group:hover .md\:group-hover\:flex-no-shrink {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .group:focus .md\:group-focus\:flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .group:focus .md\:group-focus\:inline-flex {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  .group:focus .md\:group-focus\:flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .group:focus .md\:group-focus\:flex-row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .group:focus .md\:group-focus\:flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .group:focus .md\:group-focus\:flex-col-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .group:focus .md\:group-focus\:flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .group:focus .md\:group-focus\:flex-wrap-reverse {
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  .group:focus .md\:group-focus\:flex-no-wrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .group:focus .md\:group-focus\:items-start {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .group:focus .md\:group-focus\:items-end {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .group:focus .md\:group-focus\:items-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .group:focus .md\:group-focus\:items-baseline {
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -moz-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+
+  .group:focus .md\:group-focus\:items-stretch {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  .group:focus .md\:group-focus\:self-auto {
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+  }
+
+  .group:focus .md\:group-focus\:self-start {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .group:focus .md\:group-focus\:self-end {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .group:focus .md\:group-focus\:self-center {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .group:focus .md\:group-focus\:self-stretch {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  .group:focus .md\:group-focus\:justify-start {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .group:focus .md\:group-focus\:justify-end {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .group:focus .md\:group-focus\:justify-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .group:focus .md\:group-focus\:justify-between {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .group:focus .md\:group-focus\:justify-around {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .group:focus .md\:group-focus\:content-center {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+
+  .group:focus .md\:group-focus\:content-start {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  }
+
+  .group:focus .md\:group-focus\:content-end {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+  }
+
+  .group:focus .md\:group-focus\:content-between {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+  }
+
+  .group:focus .md\:group-focus\:content-around {
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+  }
+
+  .group:focus .md\:group-focus\:flex-1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+  }
+
+  .group:focus .md\:group-focus\:flex-auto {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  .group:focus .md\:group-focus\:flex-initial {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .group:focus .md\:group-focus\:flex-none {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -moz-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .group:focus .md\:group-focus\:flex-grow {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+
+  .group:focus .md\:group-focus\:flex-shrink {
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+
+  .group:focus .md\:group-focus\:flex-no-grow {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -moz-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+
+  .group:focus .md\:group-focus\:flex-no-shrink {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -11020,6 +12040,34 @@ body.page-id-13 .hover\:bg-primary:hover {
     display: none;
   }
 
+  .group:focus .lg\:group-focus\:block {
+    display: block;
+  }
+
+  .group:focus .lg\:group-focus\:inline-block {
+    display: inline-block;
+  }
+
+  .group:focus .lg\:group-focus\:inline {
+    display: inline;
+  }
+
+  .group:focus .lg\:group-focus\:table {
+    display: table;
+  }
+
+  .group:focus .lg\:group-focus\:table-row {
+    display: table-row;
+  }
+
+  .group:focus .lg\:group-focus\:table-cell {
+    display: table-cell;
+  }
+
+  .group:focus .lg\:group-focus\:hidden {
+    display: none;
+  }
+
   .lg\:flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -11831,6 +12879,278 @@ body.page-id-13 .hover\:bg-primary:hover {
   }
 
   .group:hover .lg\:group-hover\:flex-no-shrink {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .group:focus .lg\:group-focus\:flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .group:focus .lg\:group-focus\:inline-flex {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  .group:focus .lg\:group-focus\:flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .group:focus .lg\:group-focus\:flex-row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .group:focus .lg\:group-focus\:flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .group:focus .lg\:group-focus\:flex-col-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .group:focus .lg\:group-focus\:flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .group:focus .lg\:group-focus\:flex-wrap-reverse {
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  .group:focus .lg\:group-focus\:flex-no-wrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .group:focus .lg\:group-focus\:items-start {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .group:focus .lg\:group-focus\:items-end {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .group:focus .lg\:group-focus\:items-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .group:focus .lg\:group-focus\:items-baseline {
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -moz-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+
+  .group:focus .lg\:group-focus\:items-stretch {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  .group:focus .lg\:group-focus\:self-auto {
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+  }
+
+  .group:focus .lg\:group-focus\:self-start {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .group:focus .lg\:group-focus\:self-end {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .group:focus .lg\:group-focus\:self-center {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .group:focus .lg\:group-focus\:self-stretch {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  .group:focus .lg\:group-focus\:justify-start {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .group:focus .lg\:group-focus\:justify-end {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .group:focus .lg\:group-focus\:justify-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .group:focus .lg\:group-focus\:justify-between {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .group:focus .lg\:group-focus\:justify-around {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .group:focus .lg\:group-focus\:content-center {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+
+  .group:focus .lg\:group-focus\:content-start {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  }
+
+  .group:focus .lg\:group-focus\:content-end {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+  }
+
+  .group:focus .lg\:group-focus\:content-between {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+  }
+
+  .group:focus .lg\:group-focus\:content-around {
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+  }
+
+  .group:focus .lg\:group-focus\:flex-1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+  }
+
+  .group:focus .lg\:group-focus\:flex-auto {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  .group:focus .lg\:group-focus\:flex-initial {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .group:focus .lg\:group-focus\:flex-none {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -moz-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .group:focus .lg\:group-focus\:flex-grow {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+
+  .group:focus .lg\:group-focus\:flex-shrink {
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+
+  .group:focus .lg\:group-focus\:flex-no-grow {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -moz-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+
+  .group:focus .lg\:group-focus\:flex-no-shrink {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;
@@ -14100,6 +15420,34 @@ body.page-id-13 .hover\:bg-primary:hover {
     display: none;
   }
 
+  .group:focus .xl\:group-focus\:block {
+    display: block;
+  }
+
+  .group:focus .xl\:group-focus\:inline-block {
+    display: inline-block;
+  }
+
+  .group:focus .xl\:group-focus\:inline {
+    display: inline;
+  }
+
+  .group:focus .xl\:group-focus\:table {
+    display: table;
+  }
+
+  .group:focus .xl\:group-focus\:table-row {
+    display: table-row;
+  }
+
+  .group:focus .xl\:group-focus\:table-cell {
+    display: table-cell;
+  }
+
+  .group:focus .xl\:group-focus\:hidden {
+    display: none;
+  }
+
   .xl\:flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -14911,6 +16259,278 @@ body.page-id-13 .hover\:bg-primary:hover {
   }
 
   .group:hover .xl\:group-hover\:flex-no-shrink {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+
+  .group:focus .xl\:group-focus\:flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .group:focus .xl\:group-focus\:inline-flex {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  .group:focus .xl\:group-focus\:flex-row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .group:focus .xl\:group-focus\:flex-row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+
+  .group:focus .xl\:group-focus\:flex-col {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-box-orient: vertical;
+    -moz-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+
+  .group:focus .xl\:group-focus\:flex-col-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+    -moz-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+
+  .group:focus .xl\:group-focus\:flex-wrap {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .group:focus .xl\:group-focus\:flex-wrap-reverse {
+    -webkit-flex-wrap: wrap-reverse;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
+  }
+
+  .group:focus .xl\:group-focus\:flex-no-wrap {
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .group:focus .xl\:group-focus\:items-start {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
+
+  .group:focus .xl\:group-focus\:items-end {
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+  .group:focus .xl\:group-focus\:items-center {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .group:focus .xl\:group-focus\:items-baseline {
+    -webkit-box-align: baseline;
+    -webkit-align-items: baseline;
+    -moz-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+  }
+
+  .group:focus .xl\:group-focus\:items-stretch {
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -moz-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+  }
+
+  .group:focus .xl\:group-focus\:self-auto {
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+  }
+
+  .group:focus .xl\:group-focus\:self-start {
+    -webkit-align-self: flex-start;
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+  }
+
+  .group:focus .xl\:group-focus\:self-end {
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+  }
+
+  .group:focus .xl\:group-focus\:self-center {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+  }
+
+  .group:focus .xl\:group-focus\:self-stretch {
+    -webkit-align-self: stretch;
+    -ms-flex-item-align: stretch;
+    align-self: stretch;
+  }
+
+  .group:focus .xl\:group-focus\:justify-start {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .group:focus .xl\:group-focus\:justify-end {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+
+  .group:focus .xl\:group-focus\:justify-center {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .group:focus .xl\:group-focus\:justify-between {
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .group:focus .xl\:group-focus\:justify-around {
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .group:focus .xl\:group-focus\:content-center {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+  }
+
+  .group:focus .xl\:group-focus\:content-start {
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+  }
+
+  .group:focus .xl\:group-focus\:content-end {
+    -webkit-align-content: flex-end;
+    -ms-flex-line-pack: end;
+    align-content: flex-end;
+  }
+
+  .group:focus .xl\:group-focus\:content-between {
+    -webkit-align-content: space-between;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+  }
+
+  .group:focus .xl\:group-focus\:content-around {
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+  }
+
+  .group:focus .xl\:group-focus\:flex-1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0%;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+  }
+
+  .group:focus .xl\:group-focus\:flex-auto {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -moz-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+  .group:focus .xl\:group-focus\:flex-initial {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -moz-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+  }
+
+  .group:focus .xl\:group-focus\:flex-none {
+    -webkit-box-flex: 0;
+    -webkit-flex: none;
+    -moz-box-flex: 0;
+    -ms-flex: none;
+    flex: none;
+  }
+
+  .group:focus .xl\:group-focus\:flex-grow {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -moz-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+
+  .group:focus .xl\:group-focus\:flex-shrink {
+    -webkit-flex-shrink: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+  }
+
+  .group:focus .xl\:group-focus\:flex-no-grow {
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+    -moz-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+
+  .group:focus .xl\:group-focus\:flex-no-shrink {
     -webkit-flex-shrink: 0;
     -ms-flex-negative: 0;
     flex-shrink: 0;

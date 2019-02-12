@@ -13,27 +13,27 @@ $post_id = get_the_ID();
 	<?php while ( have_rows( 'flexible_content', $post_id ) ) : ?>
 		<?php the_row(); ?>
 
-		<?php if ( get_row_layout() == 'visual_intro' ) : ?>
+		<?php if ( 'visual_intro' === get_row_layout() ) : ?>
 			<?php set_query_var( 'layout', $layout ); ?>
 			<?php get_template_part( 'template-parts/blocks/acf-flexible-content/layout', 'visual-intro' ); ?>
 
 
-		<?php elseif ( get_row_layout() == 'statistics' ) : ?>
+		<?php elseif ( 'statistics' === get_row_layout() ) : ?>
 			<?php set_query_var( 'layout', $layout ); ?>
 			<?php get_template_part( 'template-parts/blocks/acf-flexible-content/layout', 'statistics' ); ?>
 
 
-		<?php elseif ( get_row_layout() == 'members' ) : ?>
+		<?php elseif ( 'members' === get_row_layout() ) : ?>
 			<?php set_query_var( 'layout', $layout ); ?>
 			<?php get_template_part( 'template-parts/blocks/acf-flexible-content/layout', 'members' ); ?>
 
 
-		<?php elseif ( get_row_layout() == 'two_columns' ) : ?>
+		<?php elseif ( 'two_columns' === get_row_layout() ) : ?>
 			<?php set_query_var( 'layout', $layout ); ?>
 			<?php get_template_part( 'template-parts/blocks/acf-flexible-content/layout', 'two-columns' ); ?>
 
 
-		<?php elseif ( get_row_layout() == 'logos' ) : ?>
+		<?php elseif ( 'logos' === get_row_layout() ) : ?>
 			<?php if ( get_sub_field( 'same_homepage' ) && ! is_front_page() ) : ?>
 				<?php set_query_var( 'layout', $layout ); ?>
 				<?php get_template_part( 'template-parts/logos' ); ?>
@@ -44,7 +44,7 @@ $post_id = get_the_ID();
 			<?php endif ?>
 
 
-		<?php elseif ( get_row_layout() == 'editor' ) : ?>
+		<?php elseif ( 'editor' === get_row_layout() ) : ?>
 			<div class="container"><?php the_sub_field( 'content' ); ?></div>
 
 

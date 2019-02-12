@@ -7,6 +7,18 @@ $caption     = get_sub_field( 'caption' );
 $description = get_sub_field( 'description' );
 $items       = get_sub_field( 'items' );
 
+$get_cover_classes = function ( $item ) {
+	return implode(
+		' ',
+		array(
+			'flex flex-col w-full',
+			'pt-10 px-15 lg:px-10 pb-20 lg:pb-30',
+			'group-hover:bg-' . $item['cover']['color'],
+			'group-focus:bg-' . $item['cover']['color'],
+		)
+	);
+};
+
 ?>
 
 
@@ -23,33 +35,23 @@ $items       = get_sub_field( 'items' );
 			<ul class="tab-set list-reset flex flex-wrap w-full lg:w-3/5 ml-auto -mb-border" role="tablist">
 			<?php foreach ( $items as $key => $item ) : ?>
 				<?php if ( $item['cover']['number'] ) : ?>
-					<?php $id = "tabs-0$layout-0$key"; ?>
-					<?php // echo (($key == 0) ? 'class="active"' : ''); ?>
 
-					<li class="group w-1/3 border-b border-l" role="presentation">
-						<?php
-						$cover_classes = implode(
-							' ',
-							array(
-								'flex flex-col pt-10 px-15 lg:px-10 pb-20 lg:pb-30',
-								'hover:bg-' . $item['cover']['color'],
-								'cursor-pointer',
-							)
-						);
-						?>
+					<li class="w-1/3 border-b border-l" role="presentation">
+						<button class="group flex w-full text-left">
 
-						<div class="<?php echo esc_attr( $cover_classes ); ?>">
-							<p class="text-12 lg:text-14 leading-normal font-light">
-								<?php echo wp_kses_post( $item['cover']['title'] ); ?></p>
-							<p class="text-5vw leading-none tracking-tight text-center font-bold font-oswald">
-								<?php echo wp_kses_post( $item['cover']['number'] ); ?></p>
-						</div>
+							<div class="<?php echo esc_attr( $get_cover_classes( $item ) ); ?>">
+								<p class="text-12 lg:text-14 leading-normal font-light">
+									<?php echo wp_kses_post( $item['cover']['title'] ); ?></p>
+								<p class="text-5vw leading-none tracking-tight text-center font-bold font-oswald">
+									<?php echo wp_kses_post( $item['cover']['number'] ); ?></p>
+							</div>
 
-						<div class="absolute pin-y pin-l hidden group-hover:block w-full lg:w-2/5 py-10 pr-20 pl-45">
-							<header class="heading"><h2><?php echo wp_kses_post( $item['cover']['title'] ); ?></h2></header>
-							<div><?php echo wp_kses_post( str_replace( array( '<ul' ), array( '<ul class="list-reset lg:col-count-2"' ), $item['text'] ) ); ?></div>
-						</div>
+							<div class="absolute pin-y pin-l hidden group-hover:block group-focus:block w-full lg:w-2/5 py-10 pr-20 pl-45 bg-gray">
+								<header class="heading"><h2><?php echo wp_kses_post( $item['cover']['title'] ); ?></h2></header>
+								<div><?php echo wp_kses_post( str_replace( array( '<ul' ), array( '<ul class="list-reset lg:col-count-2"' ), $item['text'] ) ); ?></div>
+							</div>
 
+						</button>
 					</li>
 
 				<?php endif; ?>
