@@ -357,13 +357,8 @@ module.exports = {
   */
 
   plugins: [
-    function ({ addVariant }) {
-      addVariant('group-focus', ({ modifySelectors, separator }) => {
-        return modifySelectors(({ className }) => {
-          return `.group:focus .group-focus${separator}${className}`
-        })
-      })
-    },
+    require('tailwindcss-interaction-variants')(),
+
     require('tailwindcss-alpha')(),
     require('tailwindcss-inset')({
       insets: { 'full': '100%' },

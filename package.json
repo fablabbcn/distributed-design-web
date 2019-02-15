@@ -52,6 +52,7 @@
     "tailwindcss": "^0.7.3",
     "tailwindcss-alpha": "^0.1.4",
     "tailwindcss-inset": "^1.0.0",
+    "tailwindcss-interaction-variants": "^1.0.0",
     "tailwindcss-multi-column": "^0.2.0"
   },
   "main": "index.js"

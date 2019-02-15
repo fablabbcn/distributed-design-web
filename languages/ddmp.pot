@@ -1,4 +1,4 @@
-# Copyright (C) 2018 ddmp
+# Copyright (C) 2019 ddmp
 # This file is distributed under the same license as the ddmp package.
 msgid ""
 msgstr ""
@@ -25,40 +25,44 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: footer copy.php:5, header.php:36
+#: footer copy.php:5, header.php:39
 msgid "Distributed Design"
 msgstr ""
 
-#: footer copy.php:5, header.php:36
+#: footer copy.php:5, header.php:40
 msgid "Market Platform"
 msgstr ""
 
-#: footer copy.php:22, footer.php:15
+#: footer copy.php:22
 msgid "$contact_info"
 msgstr ""
 
-#: functions.php:23
+#: functions.php:24
 msgid "Primary Navigation"
 msgstr ""
 
-#: functions.php:24
+#: functions.php:25
 msgid "Secondary Navigation"
 msgstr ""
 
-#: functions.php:80
+#: functions.php:83
 msgid "Default Sidebar"
 msgstr ""
 
-#: functions.php:82
+#: functions.php:85
 msgid "Add widgets here to appear in your sidebar on blog posts"
 msgstr ""
 
-#: header.php:35
+#: header.php:37
 msgid "DDMP"
 msgstr ""
 
 #: template-archive-events.php:2
 msgid "Events Archive"
+msgstr ""
+
+#: template-contact.php:2
+msgid "Contact"
 msgstr ""
 
 #: template-parts/post/content-none.php:9

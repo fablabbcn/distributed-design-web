@@ -6136,6 +6136,13 @@ tailwindcss-inset@^1.0.0:
   resolved "https://registry.yarnpkg.com/tailwindcss-inset/-/tailwindcss-inset-1.0.0.tgz#4416b8ed26a2a3f3cc6f94f670ca0fa58353dbc4"
   integrity sha512-sruzufZgC9ket0QUN/87U3DN5td/zzIYDD4cyhLckFGsjTEuGdJpDunWgsmHXpJVTfsyWdzi8lsopcPOWAhsrA==
 
+tailwindcss-interaction-variants@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-interaction-variants/-/tailwindcss-interaction-variants-1.0.0.tgz#85370e272b5365090fd83e2ad6a607f415da487d"
+  integrity sha512-HhTyil7E6eZcfRFtit8ViPnLp5QRrSg/s++gIZu0Nj2oqXiK1zESqVaJl12j5gNNkCxDUpwO0iyZxya/Gs6dww==
+  dependencies:
+    lodash "^4.17.11"
+
 tailwindcss-multi-column@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/tailwindcss-multi-column/-/tailwindcss-multi-column-0.2.0.tgz#2390ba326c0e0b2081a8f7b435a2f2da0c832114"
