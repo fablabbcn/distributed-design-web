@@ -5,6 +5,7 @@
   $(document).on('click', '[data-clip]', handleDataClip)
   $(document).on('click', '[data-toggle]', handleDataToggle)
   $(document).on('click', '.tab-filters [data-clip]', handleResourcesFilters)
+  $(document).on('click', '[data-clip*="event-months"]', handleMonthlyFilters)
 
   var screenRes_ = {
     isDesktop: true,
@@ -194,6 +195,16 @@ function handleResourcesFilters () {
   //   jQuery('[data-clip="event-months"]')
   //     .text()
   // }
+}
+
+function handleMonthlyFilters () {
+  var eventLists = jQuery('[id*="tribe_events-list-"]')
+  var visibleLists = eventLists.filter(':not(.clip)')
+  var events = visibleLists.find('[id*="tribe_events-event-"]')
+  var visibleEvents = events.filter(':not(.clip)')
+
+  var noEventsPlaceholder = jQuery('#tribe_events-empty')
+  noEventsPlaceholder.toggleClass('clip', visibleEvents.length > 0)
 }
 
 /**

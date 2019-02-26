@@ -675,6 +675,10 @@ table {
   box-sizing: content-box;
 }
 
+.bg-events-empty {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E %3Cg fill='none' fill-rule='evenodd' stroke='%23000'%3E %3Cpath d='M0 0h50v50H0zM100 0h50v50h-50zM0 50h50v50H0zM100 50h50v50h-50zM50 0h50v50H50zM200 50h-50V0h50zM100 100H50V50h50zM150 50h50v50h-50zM200 50c0-27.6142375-22.385763-50-50-50M100 50c0 27.6142375 22.385763 50 50 50M50 100c27.6142375 0 50-22.3857625 50-50M50 0C22.3857625 0 0 22.3857625 0 50M150 50c0-27.6142375-22.385763-50-50-50M150 50c0 27.6142375 22.385763 50 50 50M50 50c27.6142375 0 50-22.3857625 50-50M50 50C22.3857625 50 0 72.3857625 0 100'/%3E %3C/g%3E %3C/svg%3E ");
+}
+
 .list-reset {
   list-style: none;
   padding: 0;
@@ -876,6 +880,79 @@ table {
 
 .group:focus .group-focus\:bg-yellow {
   background-color: #ff0;
+}
+
+.bg-bottom {
+  background-position: bottom;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-left {
+  background-position: left;
+}
+
+.bg-left-bottom {
+  background-position: left bottom;
+}
+
+.bg-left-top {
+  background-position: left top;
+}
+
+.bg-right {
+  background-position: right;
+}
+
+.bg-right-bottom {
+  background-position: right bottom;
+}
+
+.bg-right-top {
+  background-position: right top;
+}
+
+.bg-top {
+  background-position: top;
+}
+
+.bg-repeat {
+  background-repeat: repeat;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat-x {
+  background-repeat: repeat-x;
+}
+
+.bg-repeat-y {
+  background-repeat: repeat-y;
+}
+
+.bg-auto {
+  -webkit-background-size: auto auto;
+  -moz-background-size: auto;
+  -o-background-size: auto;
+  background-size: auto;
+}
+
+.bg-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-contain {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
 }
 
 .border-collapse {
@@ -4250,6 +4327,10 @@ table {
 
 .text-29 {
   font-size: 29px;
+}
+
+.text-36 {
+  font-size: 36px;
 }
 
 .text-41 {
@@ -8117,6 +8198,10 @@ body.page-id-13 .hover\:bg-primary:hover {
     font-size: 29px;
   }
 
+  .sm\:text-36 {
+    font-size: 36px;
+  }
+
   .sm\:text-41 {
     font-size: 41px;
   }
@@ -11495,6 +11580,10 @@ body.page-id-13 .hover\:bg-primary:hover {
 
   .md\:text-29 {
     font-size: 29px;
+  }
+
+  .md\:text-36 {
+    font-size: 36px;
   }
 
   .md\:text-41 {
@@ -14877,6 +14966,10 @@ body.page-id-13 .hover\:bg-primary:hover {
     font-size: 29px;
   }
 
+  .lg\:text-36 {
+    font-size: 36px;
+  }
+
   .lg\:text-41 {
     font-size: 41px;
   }
@@ -18255,6 +18348,10 @@ body.page-id-13 .hover\:bg-primary:hover {
 
   .xl\:text-29 {
     font-size: 29px;
+  }
+
+  .xl\:text-36 {
+    font-size: 36px;
   }
 
   .xl\:text-41 {

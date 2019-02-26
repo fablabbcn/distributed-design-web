@@ -9,4 +9,21 @@
 	</div>
 
 <?php endforeach; ?>
+
+	<div id="<?php echo esc_attr( $post_type . '-empty' ); ?>" class="clip">
+
+		<div class="border-l" style="margin-left: 27.9%;">
+
+			<div class="p-40 text-36 uppercase">
+				<header class="font-bold"><p>Sorry!</p></header>
+				<p>There's no events. Try choosing a different month.</p>
+			</div>
+
+			<div class="flex -mx-border bg-events-empty bg-left bg-contain border-t-px border-b-px"
+			style="height: 160px; background-repeat: round;"></div>
+
+		</div>
+
+	</div>
+
 </div>
