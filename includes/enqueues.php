@@ -40,6 +40,26 @@ function the_theme_scripts() {
 
 } add_action( 'wp_enqueue_scripts', 'the_theme_scripts' );
 
+// Add website favicons.
+if ( ! function_exists( 'the_theme_favicons' ) ) {
+	function the_theme_favicons() {
+		$favicon_dir = get_template_directory_uri() . '/assets/img/favicon'; ?>
+
+		<link rel="apple-touch-icon" sizes="180x180" href="<?php echo esc_url( $favicon_dir ); ?>/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url( $favicon_dir ); ?>/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url( $favicon_dir ); ?>/favicon-16x16.png">
+		<link rel="manifest" href="<?php echo esc_url( $favicon_dir ); ?>/site.webmanifest">
+		<link rel="mask-icon" href="<?php echo esc_url( $favicon_dir ); ?>/safari-pinned-tab.svg" color="#e6e6e6">
+		<link rel="shortcut icon" href="<?php echo esc_url( $favicon_dir ); ?>/favicon.ico">
+		<meta name="apple-mobile-web-app-title" content="DDMP">
+		<meta name="application-name" content="DDMP">
+		<meta name="msapplication-TileColor" content="#e6e6e6">
+		<meta name="msapplication-config" content="<?php echo esc_url( $favicon_dir ); ?>/browserconfig.xml">
+		<meta name="theme-color" content="#e6e6e6">
+		<?php
+	} add_action( 'wp_head', 'the_theme_favicons' );
+}
+
 //Enqueue admin style and scripts function
 function the_theme_enqueue_admin_styles_scripts() {
 	wp_enqueue_style( 'admin-styles', get_stylesheet_directory_uri() . '/assets/css/admin-styles.css' );
