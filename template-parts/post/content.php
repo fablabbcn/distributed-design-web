@@ -9,7 +9,7 @@
 	<div id="post-<?php the_ID(); ?>" class="grid-item">
 		<div class="cf post-cont relative">
 
-			<div class="fl w-100 post-left" style="background: url('<?php the_post_thumbnail_url(); ?>') center no-repeat; background-size: cover;">
+			<div class="fl w-100 post-left bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 				<?php the_post_thumbnail(); ?>
 			</div>
 

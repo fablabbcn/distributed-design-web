@@ -60,7 +60,7 @@ get_header(); ?>
 							<p><?php the_sub_field( 'sub_heading' ); ?></p>
 							<p class="absolute bottom-2 b"><?php the_sub_field( 'bottom' ); ?></p>
 						</div>
-						<div class="fl single_second-column bg-center bg-cover" style="background: url('<?php the_sub_field( 'image' ); ?>');">
+						<div class="fl single_second-column bg-center bg-cover" style="background-image: url('<?php the_sub_field( 'image' ); ?>');">
 							<?php the_post_thumbnail(); ?>
 						</div>
 						<div class="fl single_third-column">&nbsp;</div>
