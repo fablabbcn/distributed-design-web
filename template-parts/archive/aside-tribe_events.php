@@ -13,7 +13,7 @@ $months = array_map(
 <aside class="relative flex flex-col-reverse md:flex-row -mt-border border-t">
 
 	<div class="px-40 py-20 bg-gray border-b" style="width: 27.9%;">
-		<div class="flex items-center">
+		<div class="flex items-center opacity-30 pointer-events-none">
 			<span class="search-icon"><?php require get_template_directory() . '/assets/images/search.svg'; ?></span>
 			<?php get_search_form(); ?>
 		</div>

@@ -60,9 +60,9 @@ function html5_search_form( $form ) {
 	return ( '
 		<section class="search">
 			<form role="search" method="get" id="search-form" action="' . home_url( '/' ) . '" >
-				<label class="screen-reader-text" for="s">' . esc_html__( '', 'domain' ) . '</label>
+				<label class="screen-reader-text" for="s">' . esc_html__( 'Search Query', 'ddmp' ) . '</label>
 				<input type="search" value="' . get_search_query() . '" name="s" id="s" placeholder="Search" />
-				<input type="submit" id="searchsubmit" value="' . esc_attr__( 'Go', 'domain' ) . '" />
+				<input type="submit" id="searchsubmit" value="' . esc_attr__( 'Go', 'ddmp' ) . '" />
 			</form>
 		</section>
 	' );
