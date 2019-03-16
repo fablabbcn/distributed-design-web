@@ -9,7 +9,7 @@ $tab_taxonomies = array(
 
 $taxonomy = $tab_taxonomies[ $post_type ];
 $terms    = 'tribe_events' === $post_type
-	? array( '2018', '2019' )
+	? array( '2019', '2018' )
 	: get_terms( $taxonomy );
 
 function get_term_slug( $term ) {
