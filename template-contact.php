@@ -6,7 +6,7 @@ $header  = get_field( 'header' );
 $content = get_field( 'content' );
 $contact = get_field( 'contact' );
 
-$button_classes = 'flex justify-center items-center p-10 bg-white border rounded-full';
+$button_classes = 'flex justify-center items-center p-10 bg-white text-center border rounded-full';
 
 ?>
 

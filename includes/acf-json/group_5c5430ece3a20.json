@@ -177,7 +177,7 @@
                                     "key": "field_5c54323d2d834",
                                     "label": "Social Network",
                                     "name": "social_network",
-                                    "type": "radio",
+                                    "type": "select",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -190,14 +190,17 @@
                                         "facebook": "Facebook",
                                         "instagram": "Instagram",
                                         "twitter": "Twitter",
+                                        "linkedin": "LinkedIn",
+                                        "pinterest": "Pinterest",
                                         "youtube": "YouTube"
                                     },
+                                    "default_value": [],
                                     "allow_null": 0,
-                                    "other_choice": 0,
-                                    "default_value": "",
-                                    "layout": "horizontal",
+                                    "multiple": 0,
+                                    "ui": 0,
                                     "return_format": "array",
-                                    "save_other_choice": 0
+                                    "ajax": 0,
+                                    "placeholder": ""
                                 },
                                 {
                                     "key": "field_5c5432322d833",
@@ -239,5 +242,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1552758481
+    "modified": 1552763557
 }
