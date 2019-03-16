@@ -19,14 +19,12 @@
     "url": "https://gitlab.com/llos/template/issues"
   },
   "homepage": "https://gitlab.com/llos/template#README",
-  "dependencies": {
-    "swiper": "^4.4.6"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
-    "autoprefixer": "^9.4.9",
-    "del": "^3.0.0",
-    "eslint": "^5.14.1",
+    "autoprefixer": "^9.5.0",
+    "del": "^4.0.0",
+    "eslint": "^5.15.2",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
@@ -45,7 +43,7 @@
     "postcss-fontpath": "^1.0.0",
     "postcss-import": "^12.0.1",
     "postcss-inline-svg": "^3.1.1",
-    "postcss-preset-env": "^6.5.0",
+    "postcss-preset-env": "^6.6.0",
     "purgecss-with-wordpress": "^1.0.0",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",
