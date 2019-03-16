@@ -20,7 +20,7 @@ $key = 0;
 $tribe_query = tribe_get_events(
 	array(
 		'posts_per_page' => '-1',
-		'order'          => 'ASC',
+		'order'          => 'DESC',
 
 		'eventDisplay'   => 'custom',
 		'start_date'     => "$term-01-01",
