@@ -1045,8 +1045,8 @@ th {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-*:before,
-*:after {
+*::before,
+*::after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -1071,8 +1071,7 @@ textarea {
   line-height: inherit; }
 
 a {
-  color: #000;
-  text-decoration: none; }
+  color: #000; }
   a:hover, a:focus {
     color: #f93838;
     text-decoration: underline; }
@@ -1117,14 +1116,16 @@ hr {
   border-top: 1px solid #eeeeee; }
 
 .sr-only {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
-  padding: 0;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0; }
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; }
 
 .sr-only-focusable:active, .sr-only-focusable:focus {
   position: static;
@@ -6345,10 +6346,6 @@ select:focus {
       @media (max-width: 991px) {
         #main-nav .base > li > a {
           padding: 7px 16px; } }
-      #main-nav .base > li > a:hover, #main-nav .base > li > a:focus {
-        background: #f93838;
-        color: inherit;
-        text-decoration: none; }
 
 .opened-menu {
   overflow: hidden;
@@ -6974,47 +6971,44 @@ select:focus {
   background: #f93838;
   color: inherit; }
 
+#main-nav .base > .menu-item > a {
+  text-decoration: none; }
+
+.menu-item.current-menu-item > a,
+#main-nav .base > .menu-item > a:hover,
+#main-nav .base > .menu-item > a:focus {
+  color: inherit;
+  background: #f93838; }
+
 .menu-item.current-menu-item > a[href*="about"],
 #main-nav .base > .menu-item > a[href*="about"]:hover,
 #main-nav .base > .menu-item > a[href*="about"]:focus {
-  background: #f93838;
-  color: inherit;
-  text-decoration: none; }
+  background: #f93838; }
 
 .menu-item.current-menu-item > a[href*="resources"],
 #main-nav .base > .menu-item > a[href*="resources"]:hover,
 #main-nav .base > .menu-item > a[href*="resources"]:focus {
-  background: #0f0;
-  color: inherit;
-  text-decoration: none; }
+  background: #0f0; }
 
 .menu-item.current-menu-item > a[href*="news"],
 #main-nav .base > .menu-item > a[href*="news"]:hover,
 #main-nav .base > .menu-item > a[href*="news"]:focus {
-  background: #0ff;
-  color: inherit;
-  text-decoration: none; }
+  background: #0ff; }
 
 .menu-item.current-menu-item > a[href*="events"],
 #main-nav .base > .menu-item > a[href*="events"]:hover,
 #main-nav .base > .menu-item > a[href*="events"]:focus {
-  background: #f0f;
-  color: inherit;
-  text-decoration: none; }
+  background: #f0f; }
 
 .menu-item.current-menu-item > a[href*="talent"],
 #main-nav .base > .menu-item > a[href*="talent"]:hover,
 #main-nav .base > .menu-item > a[href*="talent"]:focus {
-  background: #ff0;
-  color: inherit;
-  text-decoration: none; }
+  background: #ff0; }
 
 .menu-item.current-menu-item > a[href*="contact"],
 #main-nav .base > .menu-item > a[href*="contact"]:hover,
 #main-nav .base > .menu-item > a[href*="contact"]:focus {
-  background: #fff;
-  color: inherit;
-  text-decoration: none; }
+  background: #fff; }
 
 @media (min-width: 992px) {
   .tabs-header {

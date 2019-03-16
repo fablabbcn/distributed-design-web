@@ -2,7 +2,6 @@
 // Scaffolding
 // --------------------------------------------------
 
-
 // Reset the box-sizing
 //
 // Heads up! This reset may cause conflicts with some third-party widgets.
@@ -11,17 +10,17 @@
 * {
   @include box-sizing(border-box);
 }
-*:before,
-*:after {
+
+*::before,
+*::after {
   @include box-sizing(border-box);
 }
-
 
 // Body reset
 
 html {
   font-size: 10px;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -42,12 +41,9 @@ textarea {
   line-height: inherit;
 }
 
-
 // Links
-
 a {
   color: $link-color;
-  text-decoration: none;
 
   &:hover,
   &:focus {
@@ -60,35 +56,22 @@ a {
   }
 }
 
-
 // Figures
 //
 // We reset this here because previously Normalize had no `figure` margins. This
 // ensures we don't break anyone's use of the element.
-
-figure {
-  margin: 0;
-}
-
+figure { margin: 0; }
 
 // Images
-
-img {
-  vertical-align: middle;
-}
+img { vertical-align: middle; }
 
 // Responsive images (ensure images don't scale beyond their parents)
-.img-responsive {
-  @include img-responsive;
-}
+.img-responsive { @include img-responsive; }
 
 // Rounded corners
-.img-rounded {
-  border-radius: $border-radius-large;
-}
+.img-rounded { border-radius: $border-radius-large; }
 
 // Image thumbnails
-//
 // Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
 .img-thumbnail {
   padding: $thumbnail-padding;
@@ -96,7 +79,7 @@ img {
   background-color: $thumbnail-bg;
   border: 1px solid $thumbnail-border;
   border-radius: $thumbnail-border-radius;
-  @include transition(all .2s ease-in-out);
+  @include transition(all 0.2s ease-in-out);
 
   // Keep them at most 100% wide
   @include img-responsive(inline-block);
@@ -107,30 +90,27 @@ img {
   border-radius: 50%; // set radius in percents
 }
 
-
 // Horizontal rules
-
 hr {
-  margin-top:    $line-height-computed;
+  margin-top: $line-height-computed;
   margin-bottom: $line-height-computed;
   border: 0;
   border-top: 1px solid $hr-border;
 }
 
-
 // Only display content to screen readers
-//
 // See: http://a11yproject.com/posts/how-to-hide-content
-
 .sr-only {
-  position: absolute;
-  width: 1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
   height: 1px;
   margin: -1px;
-  padding: 0;
   overflow: hidden;
-  clip: rect(0,0,0,0);
-  border: 0;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
 // Use in conjunction with .sr-only to only display content when it's focused.

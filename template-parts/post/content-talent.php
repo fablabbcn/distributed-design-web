@@ -9,7 +9,7 @@ $project = get_field( 'project' );
 $mod     = ( $wp_query->current_post ) % 4;
 $is_even = 0 === $mod || 1 === $mod;
 
-$a_classes  = implode( ' ', array( 'flex', $is_even ? 'flex-row' : 'flex-row-reverse', 'w-full hover:text-inherit' ) );
+$a_classes  = implode( ' ', array( 'flex', $is_even ? 'flex-row' : 'flex-row-reverse', 'w-full hover:text-inherit no-underline' ) );
 $dl_classes = 'flex flex-col flex-grow justify-center p-10 md:p-15 border-px';
 $dt_classes = 'leading-normal font-light';
 $dd_classes = 'leading-normal font-semibold';

@@ -23,52 +23,51 @@
   color: inherit;
 }
 
+#main-nav .base > .menu-item > a {
+  text-decoration: none;
+}
+
+.menu-item.current-menu-item > a,
+#main-nav .base > .menu-item > a:hover,
+#main-nav .base > .menu-item > a:focus {
+  color: inherit;
+  background: $red;
+}
+
 .menu-item.current-menu-item > a[href*="about"],
 #main-nav .base > .menu-item > a[href*="about"]:hover,
 #main-nav .base > .menu-item > a[href*="about"]:focus {
   background: $red;
-  color: inherit;
-  text-decoration: none;
 }
 
 .menu-item.current-menu-item > a[href*="resources"],
 #main-nav .base > .menu-item > a[href*="resources"]:hover,
 #main-nav .base > .menu-item > a[href*="resources"]:focus {
   background: $lime;
-  color: inherit;
-  text-decoration: none;
 }
 
 .menu-item.current-menu-item > a[href*="news"],
 #main-nav .base > .menu-item > a[href*="news"]:hover,
 #main-nav .base > .menu-item > a[href*="news"]:focus {
   background: $cyan;
-  color: inherit;
-  text-decoration: none;
 }
 
 .menu-item.current-menu-item > a[href*="events"],
 #main-nav .base > .menu-item > a[href*="events"]:hover,
 #main-nav .base > .menu-item > a[href*="events"]:focus {
   background: $magenta;
-  color: inherit;
-  text-decoration: none;
 }
 
 .menu-item.current-menu-item > a[href*="talent"],
 #main-nav .base > .menu-item > a[href*="talent"]:hover,
 #main-nav .base > .menu-item > a[href*="talent"]:focus {
   background: $yellow;
-  color: inherit;
-  text-decoration: none;
 }
 
 .menu-item.current-menu-item > a[href*="contact"],
 #main-nav .base > .menu-item > a[href*="contact"]:hover,
 #main-nav .base > .menu-item > a[href*="contact"]:focus {
   background: $white;
-  color: inherit;
-  text-decoration: none;
 }
 
 @media (min-width: 992px) {

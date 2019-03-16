@@ -266,8 +266,6 @@
 
     @include media('<desktop') {
       display: block;
-      // margin-top: auto;
-      // margin-bottom: auto;
       border-top: 2px solid $border-color;
     }
 
@@ -295,22 +293,9 @@
         @include media('<desktop') {
           padding: 7px $grid-gutter-width-mobile/2;
         }
-
-        &:hover,
-        &:focus {
-          background: $red;
-          color: inherit;
-          text-decoration: none;
-        }
       }
-      // &.active {
-      //   > a {
-      //     background: $red;
-      //     color: inherit;
-      //   }
-      // }
     }
-  } // base
+  }
 }
 
 .opened-menu {

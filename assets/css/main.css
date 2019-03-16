@@ -5063,84 +5063,150 @@ table {
   column-span: all;
 }
 
-body.page-id-2 .text-primary {
-  color: #f93838;
+body.blog .post-content a, body.single-post .post-content a {
+  text-decoration: underline;
 }
 
-body.page-id-2 .hover\:text-primary:hover {
-  color: #f93838;
+body.blog .post-content a:hover, body.blog .post-content a:focus, body.single-post .post-content a:hover, body.single-post .post-content a:focus {
+  color: #0ff;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+  text-decoration-color: transparent;
 }
 
-body.page-id-2 .bg-primary {
-  background-color: #f93838;
-}
-
-body.page-id-2 .hover\:bg-primary:hover {
-  background-color: #f93838;
-}
-
-body.post-type-archive-resources .text-primary {
-  color: #0f0;
-}
-
-body.post-type-archive-resources .hover\:text-primary:hover {
-  color: #0f0;
-}
-
-body.post-type-archive-resources .bg-primary {
-  background-color: #0f0;
-}
-
-body.post-type-archive-resources .hover\:bg-primary:hover {
-  background-color: #0f0;
-}
-
-body.blog .text-primary {
+body.blog .text-primary, body.single-post .text-primary {
   color: #0ff;
 }
 
-body.blog .hover\:text-primary:hover {
+body.blog .hover\:text-primary:hover, body.single-post .hover\:text-primary:hover {
   color: #0ff;
 }
 
-body.blog .bg-primary {
+body.blog .bg-primary, body.single-post .bg-primary {
   background-color: #0ff;
 }
 
-body.blog .hover\:bg-primary:hover {
+body.blog .hover\:bg-primary:hover, body.single-post .hover\:bg-primary:hover {
   background-color: #0ff;
 }
 
-body.page-template-template-archive-events .text-primary {
+body.page .post-content a, body.page-id-2 .post-content a {
+  text-decoration: underline;
+}
+
+body.page .post-content a:hover, body.page .post-content a:focus, body.page-id-2 .post-content a:hover, body.page-id-2 .post-content a:focus {
+  color: #f93838;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+body.page .text-primary, body.page-id-2 .text-primary {
+  color: #f93838;
+}
+
+body.page .hover\:text-primary:hover, body.page-id-2 .hover\:text-primary:hover {
+  color: #f93838;
+}
+
+body.page .bg-primary, body.page-id-2 .bg-primary {
+  background-color: #f93838;
+}
+
+body.page .hover\:bg-primary:hover, body.page-id-2 .hover\:bg-primary:hover {
+  background-color: #f93838;
+}
+
+body.post-type-archive-resources .post-content a, body.single-resources .post-content a {
+  text-decoration: underline;
+}
+
+body.post-type-archive-resources .post-content a:hover, body.post-type-archive-resources .post-content a:focus, body.single-resources .post-content a:hover, body.single-resources .post-content a:focus {
+  color: #0f0;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+body.post-type-archive-resources .text-primary, body.single-resources .text-primary {
+  color: #0f0;
+}
+
+body.post-type-archive-resources .hover\:text-primary:hover, body.single-resources .hover\:text-primary:hover {
+  color: #0f0;
+}
+
+body.post-type-archive-resources .bg-primary, body.single-resources .bg-primary {
+  background-color: #0f0;
+}
+
+body.post-type-archive-resources .hover\:bg-primary:hover, body.single-resources .hover\:bg-primary:hover {
+  background-color: #0f0;
+}
+
+body.page-template-template-archive-events .post-content a, body.single-tribe_events .post-content a {
+  text-decoration: underline;
+}
+
+body.page-template-template-archive-events .post-content a:hover, body.page-template-template-archive-events .post-content a:focus, body.single-tribe_events .post-content a:hover, body.single-tribe_events .post-content a:focus {
+  color: #f0f;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+body.page-template-template-archive-events .text-primary, body.single-tribe_events .text-primary {
   color: #f0f;
 }
 
-body.page-template-template-archive-events .hover\:text-primary:hover {
+body.page-template-template-archive-events .hover\:text-primary:hover, body.single-tribe_events .hover\:text-primary:hover {
   color: #f0f;
 }
 
-body.page-template-template-archive-events .bg-primary {
+body.page-template-template-archive-events .bg-primary, body.single-tribe_events .bg-primary {
   background-color: #f0f;
 }
 
-body.page-template-template-archive-events .hover\:bg-primary:hover {
+body.page-template-template-archive-events .hover\:bg-primary:hover, body.single-tribe_events .hover\:bg-primary:hover {
   background-color: #f0f;
 }
 
-body.post-type-archive-talent .text-primary {
+body.post-type-archive-talent .post-content a, body.single-talent .post-content a {
+  text-decoration: underline;
+}
+
+body.post-type-archive-talent .post-content a:hover, body.post-type-archive-talent .post-content a:focus, body.single-talent .post-content a:hover, body.single-talent .post-content a:focus {
+  color: #ff0;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+body.post-type-archive-talent .text-primary, body.single-talent .text-primary {
   color: #ff0;
 }
 
-body.post-type-archive-talent .hover\:text-primary:hover {
+body.post-type-archive-talent .hover\:text-primary:hover, body.single-talent .hover\:text-primary:hover {
   color: #ff0;
 }
 
-body.post-type-archive-talent .bg-primary {
+body.post-type-archive-talent .bg-primary, body.single-talent .bg-primary {
   background-color: #ff0;
 }
 
-body.post-type-archive-talent .hover\:bg-primary:hover {
+body.post-type-archive-talent .hover\:bg-primary:hover, body.single-talent .hover\:bg-primary:hover {
   background-color: #ff0;
+}
+
+body.page-id-13 .post-content a {
+  text-decoration: underline;
+}
+
+body.page-id-13 .post-content a:hover, body.page-id-13 .post-content a:focus {
+  color: #fff;
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+  text-decoration-color: transparent;
 }
 
 body.page-id-13 .text-primary {
