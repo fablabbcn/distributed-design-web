@@ -1,5 +1,9 @@
 <?php
 
+// SocialMedia
+require_once get_template_directory() . '/includes/lib/class-socialmedia.php';
+
+
 // Sets up theme
 function load_the_theme_settings() {
 

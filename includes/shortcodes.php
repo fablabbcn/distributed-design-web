@@ -20,6 +20,10 @@ add_filter( 'widget_text', 'filter_site_url' );
 // Round Button.
 if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 	function ddmp_shortcode_button_link( $attrs, $content = null ) {
+		$parsed_site_url = wp_parse_url( site_url() )['host'];
+		$parsed_code_url = wp_parse_url( $attrs['url'] ?: $attrs['href'] )['host'];
+		$is_external     = $parsed_site_url !== $parsed_code_url;
+
 		$classes = array(
 			$attrs['class'] ?: false,
 			'flex justify-center items-center',
@@ -27,11 +31,17 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 			'p-10 bg-white text-center no-underline border rounded-full overflow-hidden',
 		);
 
+		$link_attrs = array(
+			'class'  => 'class="' . implode( ' ', array_filter( $classes ) ) . '"',
+			'href'   => 'href="' . ( $attrs['url'] ?: $attrs['href'] ) . '"',
+			'target' => 'target="' . ( $is_external ? '_blank' : '_self' ) . '"',
+		);
+
 		return $attrs['icon'] || $content ? (
-			'<a class="' . implode( ' ', array_filter( $classes ) ) . '" href="' . esc_attr( $attrs['url'] ?: $attrs['href'] ) . '">' .
+			"<a {$link_attrs['class']} {$link_attrs['href']} {$link_attrs['target']}>" .
 				( $attrs['icon']
-					? ( '<svg class="fill-current"><use xlink:href="#social-' . esc_attr( $attrs['icon'] ) . '" /></svg>' )
-					: ( '<span>' . wp_kses_post( $content ?: $attrs['label'] ) . '</span>' )
+					? ( '<svg class="fill-current"><use xlink:href="#social-' . $attrs['icon'] . '" /></svg>' )
+					: ( '<span>' . $content ?: $attrs['label'] . '</span>' )
 				) .
 			'</a>'
 		) : false;

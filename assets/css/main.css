@@ -5063,7 +5063,7 @@ table {
   column-span: all;
 }
 
-body.blog .post-content a, body.single-post .post-content a {
+body.blog .post-content a:not(.no-underline), body.single-post .post-content a:not(.no-underline) {
   text-decoration: underline;
 }
 
@@ -5090,7 +5090,7 @@ body.blog .hover\:bg-primary:hover, body.single-post .hover\:bg-primary:hover {
   background-color: #0ff;
 }
 
-body.page .post-content a, body.page-id-2 .post-content a {
+body.page .post-content a:not(.no-underline), body.page-id-2 .post-content a:not(.no-underline) {
   text-decoration: underline;
 }
 
@@ -5117,7 +5117,7 @@ body.page .hover\:bg-primary:hover, body.page-id-2 .hover\:bg-primary:hover {
   background-color: #f93838;
 }
 
-body.post-type-archive-resources .post-content a, body.single-resources .post-content a {
+body.post-type-archive-resources .post-content a:not(.no-underline), body.single-resources .post-content a:not(.no-underline) {
   text-decoration: underline;
 }
 
@@ -5144,7 +5144,7 @@ body.post-type-archive-resources .hover\:bg-primary:hover, body.single-resources
   background-color: #0f0;
 }
 
-body.page-template-template-archive-events .post-content a, body.single-tribe_events .post-content a {
+body.page-template-template-archive-events .post-content a:not(.no-underline), body.single-tribe_events .post-content a:not(.no-underline) {
   text-decoration: underline;
 }
 
@@ -5171,7 +5171,7 @@ body.page-template-template-archive-events .hover\:bg-primary:hover, body.single
   background-color: #f0f;
 }
 
-body.post-type-archive-talent .post-content a, body.single-talent .post-content a {
+body.post-type-archive-talent .post-content a:not(.no-underline), body.single-talent .post-content a:not(.no-underline) {
   text-decoration: underline;
 }
 
@@ -5198,7 +5198,7 @@ body.post-type-archive-talent .hover\:bg-primary:hover, body.single-talent .hove
   background-color: #ff0;
 }
 
-body.page-id-13 .post-content a {
+body.page-id-13 .post-content a:not(.no-underline) {
   text-decoration: underline;
 }
 

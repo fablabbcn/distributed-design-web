@@ -14,21 +14,24 @@ get_header(); ?>
 
 	<div class="cf bootstrap-wrapper post-content">
 		<div class="row row-eq-height">
+
 			<div class="fl single_first-column">
 				<p class="b"><?php the_field( 'left_column_heading' ); ?></p>
 				<p>-</p>
 				<p><?php the_field( 'left_column_subheading' ); ?></p>
 				<p class="absolute bottom-2 b"><?php the_field( 'left_column_bottom' ); ?></p>
 			</div>
-			<div class="fl single_second-column" style="background: url('<?php the_post_thumbnail_url(); ?>') center no-repeat; background-size: cover;">
+
+			<div class="fl single_second-column bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
 				<?php the_post_thumbnail(); ?>
 			</div>
-			<div class="fl single_third-column">
-				<a href="/news">
-					<span class="goback-icon"><?php include get_template_directory() . '/assets/images/read-more.svg'; ?></span>
-					<p class="b dib goback-text">Back</p>
-				</a>
-			</div>
+
+			<aside class="fl single_third-column text-center">
+				<?php get_template_part( 'template-parts/post/aside', 'navigation' ); ?>
+				<hr class="flex my-20 -mx-40 border-t border-current">
+				<?php get_template_part( 'template-parts/post/aside', 'share' ); ?>
+			</aside>
+
 		</div>
 	</div>
 

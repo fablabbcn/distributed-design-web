@@ -342,3 +342,12 @@ function login( $request ) {
 
 	return $user;
 }
+
+
+/**
+ * Social-Media Links Generator 2000.
+ */
+function get_social_links( $args ) {
+	$social_media = new SocialMedia();
+	return $social_media->get_links( $args );
+}

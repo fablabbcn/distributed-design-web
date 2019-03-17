@@ -2,7 +2,7 @@ body {
   &.blog,
   &.single-post {
     & .post-content {
-      & a { @apply underline; }
+      & a:not(.no-underline) { @apply underline; }
       & a:matches(:hover, :focus) {
         color: config('colors.cyan');
         text-decoration-color: transparent;
@@ -18,7 +18,7 @@ body {
   &.page,
   &.page-id-2 {
     & .post-content {
-      & a { @apply underline; }
+      & a:not(.no-underline) { @apply underline; }
       & a:matches(:hover, :focus) {
         color: config('colors.red');
         text-decoration-color: transparent;
@@ -34,7 +34,7 @@ body {
   &.post-type-archive-resources,
   &.single-resources {
     & .post-content {
-      & a { @apply underline; }
+      & a:not(.no-underline) { @apply underline; }
       & a:matches(:hover, :focus) {
         color: config('colors.lime');
         text-decoration-color: transparent;
@@ -50,7 +50,7 @@ body {
   &.page-template-template-archive-events,
   &.single-tribe_events {
     & .post-content {
-      & a { @apply underline; }
+      & a:not(.no-underline) { @apply underline; }
       & a:matches(:hover, :focus) {
         color: config('colors.magenta');
         text-decoration-color: transparent;
@@ -66,7 +66,7 @@ body {
   &.post-type-archive-talent,
   &.single-talent {
     & .post-content {
-      & a { @apply underline; }
+      & a:not(.no-underline) { @apply underline; }
       & a:matches(:hover, :focus) {
         color: config('colors.yellow');
         text-decoration-color: transparent;
@@ -81,7 +81,7 @@ body {
 
   &.page-id-13 {
     & .post-content {
-      & a { @apply underline; }
+      & a:not(.no-underline) { @apply underline; }
       & a:matches(:hover, :focus) {
         color: config('colors.white');
         text-decoration-color: transparent;
