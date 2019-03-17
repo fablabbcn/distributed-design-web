@@ -34,10 +34,9 @@ $button_classes = 'flex justify-center items-center p-10 bg-white text-center bo
 				<div class="w-full px-10">
 					<div class="max-w-90 ml-auto">
 						<p class="relative h-0 text-28 tracking-normal font-medium" style="padding-bottom: 100%;">
-							<a class="invisible <?php echo esc_attr( $button_classes ); ?>"
-								href="mailto:<?php echo esc_attr( $contact['email']['address'] ); ?>">Here</a>
-							<a class="absolute pin w-full h-full <?php echo esc_attr( $button_classes ); ?>"
-								href="mailto:<?php echo esc_attr( $contact['email']['address'] ); ?>">Here</a>
+							<?php $email = "mailto:{$contact['email']['address']}"; ?>
+							<?php echo do_shortcode( '[button_link url="' . $email . '" class="invisible"]Here[/button_link]' ); ?>
+							<?php echo do_shortcode( '[button_link url="' . $email . '" class="absolute pin w-full h-full"]Here[/button_link]' ); ?>
 						</p>
 					</div>
 				</div>
@@ -45,13 +44,11 @@ $button_classes = 'flex justify-center items-center p-10 bg-white text-center bo
 			</header>
 
 			<dl class="flex flex-wrap justify-between lg:justify-start mt-auto -mx-10 pt-20">
-			<?php foreach ( $contact['social']['links'] as $link ) : ?>
+			<?php foreach ( $contact['social']['links'] as $social_link ) : ?>
 
-				<dt class="clip"><?php echo esc_html( $link['social_network']['label'] ); ?></dt>
+				<dt class="clip"><?php echo esc_html( $social_link['social_network']['label'] ); ?></dt>
 				<dd class="px-10 leading-none">
-					<a class="flex w-50 h-50 p-10 bg-white border rounded-full" href="<?php echo esc_attr( $link['url'] ); ?>">
-						<svg class="fill-current"><use xlink:href="#social-<?php echo esc_attr( $link['social_network']['value'] ); ?>" /></svg>
-					</a>
+					<?php echo do_shortcode( '[button_link url="' . $social_link['url'] . '" icon="' . $social_link['social_network']['value'] . '"]' ); ?>
 				</dd>
 
 			<?php endforeach; ?>

@@ -21,16 +21,17 @@ add_filter( 'widget_text', 'filter_site_url' );
 if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 	function ddmp_shortcode_button_link( $attrs, $content = null ) {
 		$classes = array(
-			'relative flex justify-center',
-			$attrs['icon'] ? 'w-50 h-50' : '',
-			'p-10 bg-white text-center no-underline border rounded-full',
+			$attrs['class'] ?: false,
+			'flex justify-center items-center',
+			$attrs['icon'] ? 'w-50 h-50' : false,
+			'p-10 bg-white text-center no-underline border rounded-full overflow-hidden',
 		);
 
 		return $attrs['icon'] || $content ? (
-			'<a class="' . implode( ' ', $classes ) . '" href="' . esc_attr( $attrs['url'] ?: $attrs['href'] ) . '">' .
+			'<a class="' . implode( ' ', array_filter( $classes ) ) . '" href="' . esc_attr( $attrs['url'] ?: $attrs['href'] ) . '">' .
 				( $attrs['icon']
 					? ( '<svg class="fill-current"><use xlink:href="#social-' . esc_attr( $attrs['icon'] ) . '" /></svg>' )
-					: ( '<span>' . wp_kses_post( $content ) . '</span>' )
+					: ( '<span>' . wp_kses_post( $content ?: $attrs['label'] ) . '</span>' )
 				) .
 			'</a>'
 		) : false;
