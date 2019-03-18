@@ -51,7 +51,6 @@
   function initHeader () {
     var $header = $('#header')
     var $btnMenu = $header.find('.navbar-toggle')
-    // var $mainNav = $('#main-nav')
 
     $btnMenu.on('click', function (e) {
       e.preventDefault()

@@ -1231,34 +1231,7 @@ small,
 mark,
 .mark {
   background-color: #fcf8e3;
-  padding: .2em; }
-
-.text-left {
-  text-align: left; }
-
-.text-right {
-  text-align: right; }
-
-.text-center {
-  text-align: center; }
-
-.text-justify {
-  text-align: justify; }
-
-.text-nowrap {
-  white-space: nowrap; }
-
-.text-lowercase {
-  text-transform: lowercase; }
-
-.text-uppercase, .initialism {
-  text-transform: uppercase; }
-
-.text-capitalize {
-  text-transform: capitalize; }
-
-.text-muted {
-  color: #777777; }
+  padding: 0.2em; }
 
 .text-primary {
   color: #337ab7; }
@@ -1395,7 +1368,8 @@ abbr[data-original-title] {
   border-bottom: 1px dotted #777777; }
 
 .initialism {
-  font-size: 90%; }
+  font-size: 90%;
+  text-transform: uppercase; }
 
 blockquote {
   padding: 15.5px 31px;
@@ -6274,9 +6248,6 @@ select:focus {
 
 /* main-nav */
 #main-nav {
-  position: relative;
-  text-transform: uppercase;
-  text-align: center;
   font-size: 16px;
   line-height: 21px;
   flex-grow: 1 !important;

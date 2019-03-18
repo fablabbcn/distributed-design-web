@@ -49,7 +49,7 @@
 					</a>
 				</div>
 
-				<nav id="main-nav">
+				<nav id="main-nav" class="relative text-center uppercase">
 					<?php
 
 					wp_nav_menu(
