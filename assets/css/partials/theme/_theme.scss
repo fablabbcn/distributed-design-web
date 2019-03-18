@@ -48,7 +48,10 @@
 
 .menu-item.current-menu-item > a[href*="news"],
 #main-nav .base > .menu-item > a[href*="news"]:hover,
-#main-nav .base > .menu-item > a[href*="news"]:focus {
+#main-nav .base > .menu-item > a[href*="news"]:focus,
+.menu-item.current-menu-item > a[href*="blog"],
+#main-nav .base > .menu-item > a[href*="blog"]:hover,
+#main-nav .base > .menu-item > a[href*="blog"]:focus {
   background: $cyan;
 }
 
