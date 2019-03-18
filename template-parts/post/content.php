@@ -14,7 +14,7 @@
 			</div>
 
 			<div class="fl w-100 post-right">
-				<p class="b ttu"><?php the_title(); ?></p>
+				<p class="font-bold uppercase"><?php the_title(); ?></p>
 				—
 				<p><?php the_field( 'subtitle' ); ?></p>
 				<p class="absolute bottom-1 dib b">Read More<!--<span class="dib ml-3 read-more-icon"><?php require get_template_directory() . '/assets/images/read-more.svg'; ?></span>--></p>

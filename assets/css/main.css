@@ -5063,6 +5063,15 @@ table {
   column-span: all;
 }
 
+.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+  font-family: Oswald, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  text-transform: uppercase;
+}
+
+[id*="form-submit"] [type="radio"]:checked + label {
+  background-color: #fff;
+}
+
 body.blog .post-content a:not(.no-underline), body.single-post .post-content a:not(.no-underline) {
   text-decoration: underline;
 }
@@ -5222,10 +5231,6 @@ body.page-id-13 .bg-primary {
 }
 
 body.page-id-13 .hover\:bg-primary:hover {
-  background-color: #fff;
-}
-
-[id*="form-submit"] [type="radio"]:checked + label {
   background-color: #fff;
 }
 
