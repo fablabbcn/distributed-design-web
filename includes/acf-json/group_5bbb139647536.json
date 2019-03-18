@@ -1,6 +1,6 @@
 {
     "key": "group_5bbb139647536",
-    "title": "Post Content",
+    "title": "Post: Flexible Content",
     "fields": [
         {
             "key": "field_5bbb30e3215d3",
@@ -322,5 +322,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1552758308
+    "modified": 1552912062
 }

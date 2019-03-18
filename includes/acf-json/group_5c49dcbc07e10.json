@@ -7,7 +7,7 @@
             "label": "Article",
             "name": "article",
             "type": "group",
-            "instructions": "This is the information collected through the submission form. Make sure to use it inside the Post Content blocks to show it on the front-end.",
+            "instructions": "This is the information collected through the submission form. Make sure to use it inside the Post: Flexible Content blocks to show it on the front-end.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -95,5 +95,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1548344547
+    "modified": 1552912136
 }
