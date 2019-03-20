@@ -114,6 +114,39 @@ function the_theme_no_generator() {
 } add_filter( 'the_generator', 'the_theme_no_generator' );
 
 
+function get_term_slug( $term ) {
+	return is_object( $term ) ? $term->slug : $term;
+}
+
+function get_term_name( $term ) {
+	return is_object( $term ) ? $term->name : $term;
+}
+
+function get_term_month( $term ) {
+	$month = date( 'm', strtotime( "$term/01/2019" ) );
+	return $month;
+}
+
+function get_button_clip( $terms, $term, $pad, $get_callback ) {
+	global $post_type;
+
+	$terms_slugs = array_map( 'get_term_slug', $terms );
+	$terms_diff  = array_diff( $terms_slugs, [ $get_callback( $term ) ] );
+
+	$button_clip = implode(
+		', ',
+		array_map(
+			function ( $term ) use ( $pad ) {
+				global $post_type;
+				return "$post_type-$pad-$term";
+			},
+			array_merge( [ '' ], $terms_diff )
+		)
+	);
+
+	return $button_clip;
+}
+
 
 // Enqueue scripts and styles.
 require get_parent_theme_file_path( '/includes/enqueues.php' );
