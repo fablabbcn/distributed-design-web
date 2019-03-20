@@ -12,23 +12,7 @@ $content = get_sub_field( 'content' );
 <article class="info-section">
 
 	<div class="base-col">
-
-	<?php if ( $slider['images'] ) : ?>
-		<div class="intro-slider">
-		<?php foreach ( $slider['images'] as $key => $image ) : ?>
-			<div class="slide-item">
-				<figure><img src="<?php echo esc_attr( $image['sizes']['container-thumbnails'] ); ?>" alt="<?php echo esc_attr( $image['alt'] ); ?>"></figure>
-			</div>
-		<?php endforeach ?>
-		</div>
-	<?php endif ?>
-
-	<?php if ( $slider['caption'] ) : ?>
-		<div class="notice">
-			<p><?php echo esc_html( $slider['caption'] ); ?></p>
-		</div>
-	<?php endif ?>
-
+		<?php require locate_template( 'template-parts/blocks/slider.php' ); ?>
 	</div>
 
 <?php if ( $content ) : ?>

@@ -3,9 +3,6 @@
  * Template part for displaying posts
  */
 
-$winer   = get_field( 'winner' );
-$project = get_field( 'project' );
-
 $mod     = ( $wp_query->current_post ) % 4;
 $is_even = 0 === $mod || 1 === $mod;
 
@@ -27,23 +24,23 @@ $dd_classes = 'leading-normal font-semibold';
 		<div class="flex flex-col w-full group-hocus:bg-yellow">
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
-				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php echo esc_html( $winer['title'] ); ?></dt>
-				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( $winer['name'] ); ?></dd>
+				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php echo esc_html( get_field( 'title' ) ); ?></dt>
+				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( get_field( 'name' ) ); ?></dd>
 			</dl>
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
 				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php echo esc_html( 'Project' ); ?></dt>
-				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( $project['name'] ); ?></dd>
+				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( get_field( 'project' )['name'] ); ?></dd>
 			</dl>
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
 				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php echo esc_html( 'Profession' ); ?></dt>
-				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( $winer['profession'] ); ?></dd>
+				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( get_field( 'profession' ) ); ?></dd>
 			</dl>
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
 				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php echo esc_html( 'Organization' ); ?></dt>
-				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( $winer['organization'] ); ?></dd>
+				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( get_field( 'organization' )['name'] ); ?></dd>
 			</dl>
 
 		</div>

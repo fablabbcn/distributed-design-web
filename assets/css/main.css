@@ -4445,6 +4445,10 @@ table {
   font-size: 17px;
 }
 
+.text-18 {
+  font-size: 18px;
+}
+
 .text-19 {
   font-size: 19px;
 }
@@ -8535,6 +8539,10 @@ body.page-id-13 .hover\:bg-primary:hover {
     font-size: 17px;
   }
 
+  .sm\:text-18 {
+    font-size: 18px;
+  }
+
   .sm\:text-19 {
     font-size: 19px;
   }
@@ -11977,6 +11985,10 @@ body.page-id-13 .hover\:bg-primary:hover {
 
   .md\:text-17 {
     font-size: 17px;
+  }
+
+  .md\:text-18 {
+    font-size: 18px;
   }
 
   .md\:text-19 {
@@ -15423,6 +15435,10 @@ body.page-id-13 .hover\:bg-primary:hover {
     font-size: 17px;
   }
 
+  .lg\:text-18 {
+    font-size: 18px;
+  }
+
   .lg\:text-19 {
     font-size: 19px;
   }
@@ -18865,6 +18881,10 @@ body.page-id-13 .hover\:bg-primary:hover {
 
   .xl\:text-17 {
     font-size: 17px;
+  }
+
+  .xl\:text-18 {
+    font-size: 18px;
   }
 
   .xl\:text-19 {

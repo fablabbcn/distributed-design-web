@@ -12,97 +12,114 @@ get_header(); ?>
 <?php while ( have_posts() ) : ?>
 	<?php the_post(); ?>
 
-	<div class="cf bootstrap-wrapper post-content">
-		<div class="row row-eq-height">
+	<?php if ( 'talent' !== $post_type ) : ?>
+		<section class="cf bootstrap-wrapper post-content">
+			<div class="row row-eq-height">
 
-			<div class="fl single_first-column">
-				<p class="b"><?php the_field( 'left_column_heading' ); ?></p>
-				<p>-</p>
-				<p><?php the_field( 'left_column_subheading' ); ?></p>
-				<p class="absolute bottom-2 b"><?php the_field( 'left_column_bottom' ); ?></p>
-			</div>
-
-			<div class="fl single_second-column bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
-				<?php the_post_thumbnail(); ?>
-			</div>
-
-			<aside class="fl single_third-column text-center">
-				<?php get_template_part( 'template-parts/post/aside', 'navigation' ); ?>
-				<hr class="flex my-20 -mx-40 border-t border-current">
-				<?php get_template_part( 'template-parts/post/aside', 'share' ); ?>
-			</aside>
-
-		</div>
-	</div>
-
-
-	<?php while ( the_flexible_field( 'post_content' ) ) : ?>
-
-		<?php if ( 'text_content' === get_row_layout() ) : ?>
-			<?php if ( get_sub_field( 'text' ) ) : ?>
-
-				<div class="cf bootstrap-wrapper post-content">
-					<div class="row row-eq-height">
-						<div class="fl single_first-column">&nbsp;</div>
-						<div class="fl single_second-column content-column"><?php the_sub_field( 'text' ); ?></div>
-						<div class="fl single_third-column">&nbsp;</div>
-					</div>
+				<div class="fl single_first-column">
+					<p class="b"><?php the_field( 'left_column_heading' ); ?></p>
+					<p>-</p>
+					<p><?php the_field( 'left_column_subheading' ); ?></p>
+					<p class="absolute bottom-2 b"><?php the_field( 'left_column_bottom' ); ?></p>
 				</div>
 
-			<?php endif; ?>
-
-
-		<?php elseif ( 'image_content' === get_row_layout() ) : ?>
-			<?php if ( get_sub_field( 'heading' ) || get_sub_field( 'sub_heading' ) || get_sub_field( 'bottom' ) || get_sub_field( 'image' ) ) : ?>
-
-				<div class="cf bootstrap-wrapper post-content">
-					<div class="row row-eq-height">
-						<div class="fl single_first-column">
-							<p class="b"><?php the_sub_field( 'heading' ); ?></p>
-							<p>-</p>
-							<p><?php the_sub_field( 'sub_heading' ); ?></p>
-							<p class="absolute bottom-2 b"><?php the_sub_field( 'bottom' ); ?></p>
-						</div>
-						<div class="fl single_second-column bg-center bg-cover" style="background-image: url('<?php the_sub_field( 'image' ); ?>');">
-							<?php the_post_thumbnail(); ?>
-						</div>
-						<div class="fl single_third-column">&nbsp;</div>
-					</div>
+				<div class="fl single_second-column bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
+					<?php the_post_thumbnail(); ?>
 				</div>
 
-			<?php endif; ?>
+				<aside class="fl single_third-column text-center">
+					<?php get_template_part( 'template-parts/post/aside', 'navigation' ); ?>
+					<hr class="flex my-20 -mx-40 border-t border-current">
+					<?php get_template_part( 'template-parts/post/aside', 'share' ); ?>
+				</aside>
 
+			</div>
+		</section>
 
-		<?php elseif ( 'slider_content' === get_row_layout() ) : ?>
-			<?php if ( get_sub_field( 'heading' ) || get_sub_field( 'sub_heading' ) || get_sub_field( 'bottom' ) || get_sub_field( 'image' ) ) : ?>
+	<?php else : ?>
+		<section class="cf bootstrap-wrapper post-content">
+			<div class="row row-eq-height">
 
-				<div class="cf bootstrap-wrapper post-content">
-					<div class="row row-eq-height">
-						<div class="fl single_first-column">
-							<p class="b"><?php the_sub_field( 'heading' ); ?></p>
-							<p>-</p>
-							<p><?php the_sub_field( 'sub_heading' ); ?></p>
-							<p class="absolute bottom-2 b"><?php the_sub_field( 'bottom' ); ?></p>
+				<div class="fl single_first-column flex flex-col">
+					<?php get_template_part( 'template-parts/post/talent', 'info' ); ?>
+				</div>
+
+				<div class="fl single_second-column flex flex-col">
+					<?php $slider = array( 'images' => get_field( 'featured_image_alt' ) ?: array() ); ?>
+					<?php require locate_template( 'template-parts/blocks/slider.php' ); ?>
+					<?php if ( get_field( 'subtitle' ) ) : ?>
+						<div class="mt-auto px-15 lg:px-40 py-20 border-t">
+							<div class="text-36 font-oswald uppercase"><?php the_field( 'subtitle' ); ?></div>
 						</div>
-						<div class="fl single_slider-column">
-							<?php $images = get_sub_field( 'image' ); ?>
-						<?php if ( $images ) : ?>
-							<div class="post-slider">
-							<?php foreach ( $images as $image ) : ?>
-								<div><img src="<?php echo esc_attr( $image['url'] ); ?>"/></div>
-							<?php endforeach; ?>
+					<?php endif; ?>
+				</div>
+
+				<aside class="fl single_third-column text-center">
+					<?php get_template_part( 'template-parts/post/aside', 'navigation' ); ?>
+					<hr class="flex my-20 -mx-40 border-t border-current">
+					<?php get_template_part( 'template-parts/post/aside', 'share' ); ?>
+				</aside>
+
+			</div>
+		</section>
+
+	<?php endif; ?>
+
+
+	<?php if ( have_rows( 'post_content' ) ) : ?>
+		<?php while ( have_rows( 'post_content' ) ) : ?>
+			<?php if ( count( array_filter( the_row() ) ) > 1 ) : ?>
+
+				<section class="cf bootstrap-wrapper post-content">
+					<div class="row row-eq-height">
+
+						<?php if ( 'text_content' === get_row_layout() ) : ?>
+							<div class="fl single_first-column">&nbsp;</div>
+							<div class="fl single_second-column content-column"><?php the_sub_field( 'text' ); ?></div>
+							<div class="fl single_third-column">&nbsp;</div>
+
+
+						<?php elseif ( 'image_content' === get_row_layout() ) : ?>
+							<div class="fl single_first-column">
+								<p class="b"><?php the_sub_field( 'heading' ); ?></p>
+								<p>-</p>
+								<p><?php the_sub_field( 'sub_heading' ); ?></p>
+								<p class="absolute bottom-2 b"><?php the_sub_field( 'bottom' ); ?></p>
 							</div>
+							<div class="fl single_second-column bg-center bg-cover" style="background-image: url('<?php the_sub_field( 'image' ); ?>');">
+								<?php the_post_thumbnail(); ?>
+							</div>
+							<div class="fl single_third-column">&nbsp;</div>
+
+
+						<?php elseif ( 'slider_content' === get_row_layout() ) : ?>
+							<div class="fl single_first-column">
+								<p class="b"><?php the_sub_field( 'heading' ); ?></p>
+								<p>-</p>
+								<p><?php the_sub_field( 'sub_heading' ); ?></p>
+								<p class="absolute bottom-2 b"><?php the_sub_field( 'bottom' ); ?></p>
+							</div>
+							<div class="fl single_slider-column">
+								<?php $images = get_sub_field( 'image' ); ?>
+								<?php if ( $images ) : ?>
+									<div class="post-slider">
+									<?php foreach ( $images as $image ) : ?>
+										<div><img src="<?php echo esc_attr( $image['url'] ); ?>"/></div>
+									<?php endforeach; ?>
+									</div>
+								<?php endif; ?>
+							</div>
+							<div class="fl single_third-column">&nbsp;</div>
+
+
 						<?php endif; ?>
-						</div>
-						<div class="fl single_third-column">&nbsp;</div>
 					</div>
-				</div>
+				</section>
 
 			<?php endif; ?>
+		<?php endwhile; ?>
+	<?php endif; ?>
 
-
-		<?php endif; ?>
-	<?php endwhile; ?>
 <?php endwhile; ?>
 
 

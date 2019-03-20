@@ -3,9 +3,91 @@
     "title": "Post: Talent",
     "fields": [
         {
-            "key": "field_5bf1a927f1aca",
-            "label": "Person",
-            "name": "winner",
+            "key": "field_5bf1aa297606c",
+            "label": "Title",
+            "name": "title",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "designer": "Designer",
+                "maker": "Maker",
+                "team": "Team"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "horizontal",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_5bf1aa0f7606b",
+            "label": "Name",
+            "name": "name",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5bf1a932f1acc",
+            "label": "Profession",
+            "name": "profession",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c927ec3dece1",
+            "label": "City",
+            "name": "city",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c92830617d7c",
+            "label": "Organization",
+            "name": "organization",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -15,35 +97,10 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
             "sub_fields": [
                 {
-                    "key": "field_5bf1aa297606c",
-                    "label": "Title",
-                    "name": "title",
-                    "type": "radio",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "designer": "Designer",
-                        "maker": "Maker",
-                        "team": "Team"
-                    },
-                    "allow_null": 0,
-                    "other_choice": 0,
-                    "default_value": "",
-                    "layout": "horizontal",
-                    "return_format": "value",
-                    "save_other_choice": 0
-                },
-                {
-                    "key": "field_5bf1aa0f7606b",
+                    "key": "field_5c92830617d7d",
                     "label": "Name",
                     "name": "name",
                     "type": "text",
@@ -62,10 +119,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_5bf1a932f1acc",
-                    "label": "Profession",
-                    "name": "profession",
-                    "type": "text",
+                    "key": "field_5c92830617d7e",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "url",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -75,29 +132,7 @@
                         "id": ""
                     },
                     "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5bf1a938f1acd",
-                    "label": "Organization",
-                    "name": "organization",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "50",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "placeholder": ""
                 }
             ]
         },
@@ -114,7 +149,7 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
+            "layout": "table",
             "sub_fields": [
                 {
                     "key": "field_5bf1a9ed76069",
@@ -152,6 +187,43 @@
                     "placeholder": ""
                 }
             ]
+        },
+        {
+            "key": "field_5c9283a90c40c",
+            "label": "Social Media",
+            "name": "social_media",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5c927f1cd5d16"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
+            "key": "field_5c927efadece2",
+            "label": "Website",
+            "name": "website",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -166,10 +238,10 @@
     "menu_order": 0,
     "position": "normal",
     "style": "default",
-    "label_placement": "top",
+    "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1549044461
+    "modified": 1553106008
 }
