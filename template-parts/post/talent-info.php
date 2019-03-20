@@ -1,7 +1,9 @@
 <section class="flex flex-col">
 
 	<header>
-		<figure class="-mt-20 -mx-40 mb-20"><?php the_post_thumbnail(); ?></figure>
+		<figure class="-mt-20 -mx-40 mb-20">
+			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'block w-full' ) ); ?>
+		</figure>
 		<p class="flex flex-wrap items-baseline">
 			<span class="text-36 font-oswald uppercase"><?php the_field( 'name' ); ?></span>
 			<span class="ml-10 capitalize">(<?php the_field( 'title' ); ?>)</span>
