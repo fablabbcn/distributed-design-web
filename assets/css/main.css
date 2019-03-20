@@ -882,6 +882,66 @@ table {
   background-color: #ff0;
 }
 
+.group:hover .group-hocus\:bg-transparent,
+.group:focus .group-hocus\:bg-transparent {
+  background-color: transparent;
+}
+
+.group:hover .group-hocus\:bg-current,
+.group:focus .group-hocus\:bg-current {
+  background-color: currentColor;
+}
+
+.group:hover .group-hocus\:bg-inherit,
+.group:focus .group-hocus\:bg-inherit {
+  background-color: inherit;
+}
+
+.group:hover .group-hocus\:bg-black,
+.group:focus .group-hocus\:bg-black {
+  background-color: #000;
+}
+
+.group:hover .group-hocus\:bg-dark-gray,
+.group:focus .group-hocus\:bg-dark-gray {
+  background-color: #222;
+}
+
+.group:hover .group-hocus\:bg-gray,
+.group:focus .group-hocus\:bg-gray {
+  background-color: #e6e6e6;
+}
+
+.group:hover .group-hocus\:bg-white,
+.group:focus .group-hocus\:bg-white {
+  background-color: #fff;
+}
+
+.group:hover .group-hocus\:bg-red,
+.group:focus .group-hocus\:bg-red {
+  background-color: #f93838;
+}
+
+.group:hover .group-hocus\:bg-lime,
+.group:focus .group-hocus\:bg-lime {
+  background-color: #0f0;
+}
+
+.group:hover .group-hocus\:bg-cyan,
+.group:focus .group-hocus\:bg-cyan {
+  background-color: #0ff;
+}
+
+.group:hover .group-hocus\:bg-magenta,
+.group:focus .group-hocus\:bg-magenta {
+  background-color: #f0f;
+}
+
+.group:hover .group-hocus\:bg-yellow,
+.group:focus .group-hocus\:bg-yellow {
+  background-color: #ff0;
+}
+
 .bg-bottom {
   background-position: bottom;
 }
@@ -3582,6 +3642,26 @@ table {
   opacity: 1;
 }
 
+.group:hover .group-hocus\:opacity-0,
+.group:focus .group-hocus\:opacity-0 {
+  opacity: 0;
+}
+
+.group:hover .group-hocus\:opacity-30,
+.group:focus .group-hocus\:opacity-30 {
+  opacity: 0.3;
+}
+
+.group:hover .group-hocus\:opacity-70,
+.group:focus .group-hocus\:opacity-70 {
+  opacity: 0.7;
+}
+
+.group:hover .group-hocus\:opacity-100,
+.group:focus .group-hocus\:opacity-100 {
+  opacity: 1;
+}
+
 .outline-none {
   outline: 0;
 }
@@ -4285,6 +4365,66 @@ table {
   color: #ff0;
 }
 
+.hocus\:text-transparent:hover,
+.hocus\:text-transparent:focus {
+  color: transparent;
+}
+
+.hocus\:text-current:hover,
+.hocus\:text-current:focus {
+  color: currentColor;
+}
+
+.hocus\:text-inherit:hover,
+.hocus\:text-inherit:focus {
+  color: inherit;
+}
+
+.hocus\:text-black:hover,
+.hocus\:text-black:focus {
+  color: #000;
+}
+
+.hocus\:text-dark-gray:hover,
+.hocus\:text-dark-gray:focus {
+  color: #222;
+}
+
+.hocus\:text-gray:hover,
+.hocus\:text-gray:focus {
+  color: #e6e6e6;
+}
+
+.hocus\:text-white:hover,
+.hocus\:text-white:focus {
+  color: #fff;
+}
+
+.hocus\:text-red:hover,
+.hocus\:text-red:focus {
+  color: #f93838;
+}
+
+.hocus\:text-lime:hover,
+.hocus\:text-lime:focus {
+  color: #0f0;
+}
+
+.hocus\:text-cyan:hover,
+.hocus\:text-cyan:focus {
+  color: #0ff;
+}
+
+.hocus\:text-magenta:hover,
+.hocus\:text-magenta:focus {
+  color: #f0f;
+}
+
+.hocus\:text-yellow:hover,
+.hocus\:text-yellow:focus {
+  color: #ff0;
+}
+
 .text-12 {
   font-size: 12px;
 }
@@ -4698,6 +4838,51 @@ table {
   background-color: rgba(255, 255, 0, 0.3);
 }
 
+.group:hover .group-hocus\:bg-black-30,
+.group:focus .group-hocus\:bg-black-30 {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.group:hover .group-hocus\:bg-dark-gray-30,
+.group:focus .group-hocus\:bg-dark-gray-30 {
+  background-color: rgba(34, 34, 34, 0.3);
+}
+
+.group:hover .group-hocus\:bg-gray-30,
+.group:focus .group-hocus\:bg-gray-30 {
+  background-color: rgba(230, 230, 230, 0.3);
+}
+
+.group:hover .group-hocus\:bg-white-30,
+.group:focus .group-hocus\:bg-white-30 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.group:hover .group-hocus\:bg-red-30,
+.group:focus .group-hocus\:bg-red-30 {
+  background-color: rgba(249, 56, 56, 0.3);
+}
+
+.group:hover .group-hocus\:bg-lime-30,
+.group:focus .group-hocus\:bg-lime-30 {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.group:hover .group-hocus\:bg-cyan-30,
+.group:focus .group-hocus\:bg-cyan-30 {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+.group:hover .group-hocus\:bg-magenta-30,
+.group:focus .group-hocus\:bg-magenta-30 {
+  background-color: rgba(255, 0, 255, 0.3);
+}
+
+.group:hover .group-hocus\:bg-yellow-30,
+.group:focus .group-hocus\:bg-yellow-30 {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
 .bg-black-70 {
   background-color: rgba(0, 0, 0, 0.7);
 }
@@ -4839,6 +5024,51 @@ table {
 }
 
 .group:focus .group-focus\:bg-yellow-70 {
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+.group:hover .group-hocus\:bg-black-70,
+.group:focus .group-hocus\:bg-black-70 {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.group:hover .group-hocus\:bg-dark-gray-70,
+.group:focus .group-hocus\:bg-dark-gray-70 {
+  background-color: rgba(34, 34, 34, 0.7);
+}
+
+.group:hover .group-hocus\:bg-gray-70,
+.group:focus .group-hocus\:bg-gray-70 {
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
+.group:hover .group-hocus\:bg-white-70,
+.group:focus .group-hocus\:bg-white-70 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.group:hover .group-hocus\:bg-red-70,
+.group:focus .group-hocus\:bg-red-70 {
+  background-color: rgba(249, 56, 56, 0.7);
+}
+
+.group:hover .group-hocus\:bg-lime-70,
+.group:focus .group-hocus\:bg-lime-70 {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+
+.group:hover .group-hocus\:bg-cyan-70,
+.group:focus .group-hocus\:bg-cyan-70 {
+  background-color: rgba(0, 255, 255, 0.7);
+}
+
+.group:hover .group-hocus\:bg-magenta-70,
+.group:focus .group-hocus\:bg-magenta-70 {
+  background-color: rgba(255, 0, 255, 0.7);
+}
+
+.group:hover .group-hocus\:bg-yellow-70,
+.group:focus .group-hocus\:bg-yellow-70 {
   background-color: rgba(255, 255, 0, 0.7);
 }
 
@@ -8222,6 +8452,66 @@ body.page-id-13 .hover\:bg-primary:hover {
   }
 
   .sm\:hover\:text-yellow:hover {
+    color: #ff0;
+  }
+
+  .sm\:hocus\:text-transparent:hover,
+  .sm\:hocus\:text-transparent:focus {
+    color: transparent;
+  }
+
+  .sm\:hocus\:text-current:hover,
+  .sm\:hocus\:text-current:focus {
+    color: currentColor;
+  }
+
+  .sm\:hocus\:text-inherit:hover,
+  .sm\:hocus\:text-inherit:focus {
+    color: inherit;
+  }
+
+  .sm\:hocus\:text-black:hover,
+  .sm\:hocus\:text-black:focus {
+    color: #000;
+  }
+
+  .sm\:hocus\:text-dark-gray:hover,
+  .sm\:hocus\:text-dark-gray:focus {
+    color: #222;
+  }
+
+  .sm\:hocus\:text-gray:hover,
+  .sm\:hocus\:text-gray:focus {
+    color: #e6e6e6;
+  }
+
+  .sm\:hocus\:text-white:hover,
+  .sm\:hocus\:text-white:focus {
+    color: #fff;
+  }
+
+  .sm\:hocus\:text-red:hover,
+  .sm\:hocus\:text-red:focus {
+    color: #f93838;
+  }
+
+  .sm\:hocus\:text-lime:hover,
+  .sm\:hocus\:text-lime:focus {
+    color: #0f0;
+  }
+
+  .sm\:hocus\:text-cyan:hover,
+  .sm\:hocus\:text-cyan:focus {
+    color: #0ff;
+  }
+
+  .sm\:hocus\:text-magenta:hover,
+  .sm\:hocus\:text-magenta:focus {
+    color: #f0f;
+  }
+
+  .sm\:hocus\:text-yellow:hover,
+  .sm\:hocus\:text-yellow:focus {
     color: #ff0;
   }
 
@@ -11609,6 +11899,66 @@ body.page-id-13 .hover\:bg-primary:hover {
     color: #ff0;
   }
 
+  .md\:hocus\:text-transparent:hover,
+  .md\:hocus\:text-transparent:focus {
+    color: transparent;
+  }
+
+  .md\:hocus\:text-current:hover,
+  .md\:hocus\:text-current:focus {
+    color: currentColor;
+  }
+
+  .md\:hocus\:text-inherit:hover,
+  .md\:hocus\:text-inherit:focus {
+    color: inherit;
+  }
+
+  .md\:hocus\:text-black:hover,
+  .md\:hocus\:text-black:focus {
+    color: #000;
+  }
+
+  .md\:hocus\:text-dark-gray:hover,
+  .md\:hocus\:text-dark-gray:focus {
+    color: #222;
+  }
+
+  .md\:hocus\:text-gray:hover,
+  .md\:hocus\:text-gray:focus {
+    color: #e6e6e6;
+  }
+
+  .md\:hocus\:text-white:hover,
+  .md\:hocus\:text-white:focus {
+    color: #fff;
+  }
+
+  .md\:hocus\:text-red:hover,
+  .md\:hocus\:text-red:focus {
+    color: #f93838;
+  }
+
+  .md\:hocus\:text-lime:hover,
+  .md\:hocus\:text-lime:focus {
+    color: #0f0;
+  }
+
+  .md\:hocus\:text-cyan:hover,
+  .md\:hocus\:text-cyan:focus {
+    color: #0ff;
+  }
+
+  .md\:hocus\:text-magenta:hover,
+  .md\:hocus\:text-magenta:focus {
+    color: #f0f;
+  }
+
+  .md\:hocus\:text-yellow:hover,
+  .md\:hocus\:text-yellow:focus {
+    color: #ff0;
+  }
+
   .md\:text-12 {
     font-size: 12px;
   }
@@ -14993,6 +15343,66 @@ body.page-id-13 .hover\:bg-primary:hover {
     color: #ff0;
   }
 
+  .lg\:hocus\:text-transparent:hover,
+  .lg\:hocus\:text-transparent:focus {
+    color: transparent;
+  }
+
+  .lg\:hocus\:text-current:hover,
+  .lg\:hocus\:text-current:focus {
+    color: currentColor;
+  }
+
+  .lg\:hocus\:text-inherit:hover,
+  .lg\:hocus\:text-inherit:focus {
+    color: inherit;
+  }
+
+  .lg\:hocus\:text-black:hover,
+  .lg\:hocus\:text-black:focus {
+    color: #000;
+  }
+
+  .lg\:hocus\:text-dark-gray:hover,
+  .lg\:hocus\:text-dark-gray:focus {
+    color: #222;
+  }
+
+  .lg\:hocus\:text-gray:hover,
+  .lg\:hocus\:text-gray:focus {
+    color: #e6e6e6;
+  }
+
+  .lg\:hocus\:text-white:hover,
+  .lg\:hocus\:text-white:focus {
+    color: #fff;
+  }
+
+  .lg\:hocus\:text-red:hover,
+  .lg\:hocus\:text-red:focus {
+    color: #f93838;
+  }
+
+  .lg\:hocus\:text-lime:hover,
+  .lg\:hocus\:text-lime:focus {
+    color: #0f0;
+  }
+
+  .lg\:hocus\:text-cyan:hover,
+  .lg\:hocus\:text-cyan:focus {
+    color: #0ff;
+  }
+
+  .lg\:hocus\:text-magenta:hover,
+  .lg\:hocus\:text-magenta:focus {
+    color: #f0f;
+  }
+
+  .lg\:hocus\:text-yellow:hover,
+  .lg\:hocus\:text-yellow:focus {
+    color: #ff0;
+  }
+
   .lg\:text-12 {
     font-size: 12px;
   }
@@ -18374,6 +18784,66 @@ body.page-id-13 .hover\:bg-primary:hover {
   }
 
   .xl\:hover\:text-yellow:hover {
+    color: #ff0;
+  }
+
+  .xl\:hocus\:text-transparent:hover,
+  .xl\:hocus\:text-transparent:focus {
+    color: transparent;
+  }
+
+  .xl\:hocus\:text-current:hover,
+  .xl\:hocus\:text-current:focus {
+    color: currentColor;
+  }
+
+  .xl\:hocus\:text-inherit:hover,
+  .xl\:hocus\:text-inherit:focus {
+    color: inherit;
+  }
+
+  .xl\:hocus\:text-black:hover,
+  .xl\:hocus\:text-black:focus {
+    color: #000;
+  }
+
+  .xl\:hocus\:text-dark-gray:hover,
+  .xl\:hocus\:text-dark-gray:focus {
+    color: #222;
+  }
+
+  .xl\:hocus\:text-gray:hover,
+  .xl\:hocus\:text-gray:focus {
+    color: #e6e6e6;
+  }
+
+  .xl\:hocus\:text-white:hover,
+  .xl\:hocus\:text-white:focus {
+    color: #fff;
+  }
+
+  .xl\:hocus\:text-red:hover,
+  .xl\:hocus\:text-red:focus {
+    color: #f93838;
+  }
+
+  .xl\:hocus\:text-lime:hover,
+  .xl\:hocus\:text-lime:focus {
+    color: #0f0;
+  }
+
+  .xl\:hocus\:text-cyan:hover,
+  .xl\:hocus\:text-cyan:focus {
+    color: #0ff;
+  }
+
+  .xl\:hocus\:text-magenta:hover,
+  .xl\:hocus\:text-magenta:focus {
+    color: #f0f;
+  }
+
+  .xl\:hocus\:text-yellow:hover,
+  .xl\:hocus\:text-yellow:focus {
     color: #ff0;
   }
 
