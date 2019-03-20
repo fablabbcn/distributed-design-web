@@ -68,7 +68,7 @@
 
   function initDefaultSlider () {
     $('.intro-slider, .post-slider').slick({
-      arrows: false,
+      arrows: true,
       dots: true,
       fade: true,
       autoplay: true,
