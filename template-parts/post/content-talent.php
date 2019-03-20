@@ -24,23 +24,23 @@ $dd_classes = 'leading-normal font-semibold';
 		<div class="flex flex-col w-full group-hocus:bg-yellow">
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
-				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php echo esc_html( get_field( 'title' ) ); ?></dt>
-				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( get_field( 'name' ) ); ?></dd>
+				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php the_field( 'title' ); ?></dt>
+				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php the_field( 'name' ); ?></dd>
 			</dl>
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
-				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php echo esc_html( 'Project' ); ?></dt>
-				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( get_field( 'project' )['name'] ); ?></dd>
+				<dt class="<?php echo esc_attr( $dt_classes ); ?>">Project</dt>
+				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php the_field( 'project' ); ?></dd>
 			</dl>
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
-				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php echo esc_html( 'Profession' ); ?></dt>
-				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( get_field( 'profession' ) ); ?></dd>
+				<dt class="<?php echo esc_attr( $dt_classes ); ?>">Profession</dt>
+				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php the_field( 'profession' ); ?></dd>
 			</dl>
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
-				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php echo esc_html( 'Organization' ); ?></dt>
-				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php echo esc_html( get_field( 'organization' )['name'] ); ?></dd>
+				<dt class="<?php echo esc_attr( $dt_classes ); ?>">Organization</dt>
+				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php the_field( 'organization' ); ?></dd>
 			</dl>
 
 		</div>

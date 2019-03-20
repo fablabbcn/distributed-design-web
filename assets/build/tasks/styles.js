@@ -46,6 +46,9 @@ var config = {
   presetEnv: {
     stage: 0,
     autoprefixer: false,
+    features: {
+      'nesting-rules': { bubble: 'variants' },
+    },
   },
   purgecss: {
     content: ['**/*.php', './views/**.*twig', './assets/**/*.pcss', './assets/**/*.svg', './assets/**/*.js'],

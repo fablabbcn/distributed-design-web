@@ -294,7 +294,7 @@ module.exports = {
   modules: {
     appearance: ['responsive'],
     backgroundAttachment: false,
-    backgroundColors: ['hover', 'group-hover', 'group-focus', 'group-hocus'],
+    backgroundColors: ['hover', 'hocus', 'group-hover', 'group-focus', 'group-hocus'],
     backgroundPosition: [],
     backgroundRepeat: [],
     backgroundSize: [],

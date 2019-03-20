@@ -2,26 +2,23 @@
 
 	<header>
 		<figure class="-mt-20 -mx-40 mb-20">
-			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'block w-full' ) ); ?>
+			<?php echo wp_get_attachment_image( get_field( 'image' ), 'post-thumbnail', false, array( 'class' => 'block w-full' ) ); ?>
 		</figure>
-		<p class="flex flex-wrap items-baseline">
-			<span class="text-36 font-oswald uppercase"><?php the_field( 'name' ); ?></span>
-			<span class="ml-10 capitalize">(<?php the_field( 'title' ); ?>)</span>
-		</p>
+		<p class="text-36 font-oswald uppercase"><?php the_field( 'name' ); ?></p>
 	</header>
 
-	<div class="my-20 text-18">
+	<div class="my-20">
 		<?php if ( get_field( 'profession' ) ) : ?>
-			<p class=""><span class="font-bold">Profession:</span> <?php echo wp_kses_post( get_field( 'profession' ) ); ?></p>
+			<p class=""><span class="font-bold">Profession:</span> <?php the_field( 'profession' ); ?></p>
 		<?php endif; ?>
-		<?php if ( get_field( 'project' )['name'] ) : ?>
-			<p class=""><span class="font-bold">Project:</span> <?php echo wp_kses_post( get_field( 'project' )['name'] ); ?></p>
+		<?php if ( get_field( 'project' ) ) : ?>
+			<p class=""><span class="font-bold">Project:</span> <?php the_field( 'project' ); ?></p>
 		<?php endif; ?>
 		<?php if ( get_field( 'city' ) ) : ?>
-			<p class=""><span class="font-bold">Based in:</span> <?php echo wp_kses_post( get_field( 'city' ) ); ?></p>
+			<p class=""><span class="font-bold">Based in:</span> <?php the_field( 'city' ); ?></p>
 		<?php endif; ?>
-		<?php if ( get_field( 'organization' )['name'] ) : ?>
-			<p class=""><span class="font-bold">Works at:</span> <?php echo wp_kses_post( get_field( 'organization' )['name'] ); ?></p>
+		<?php if ( get_field( 'organization' ) ) : ?>
+			<p class=""><span class="font-bold">Works at:</span> <?php the_field( 'organization' ); ?></p>
 		<?php endif; ?>
 	</div>
 
@@ -31,10 +28,10 @@
 	</div>
 
 	<p class="font-oswald text-center uppercase">
-		<a class="block w-full my-20 px-20 py-10 no-underline border"
-			href="<?php echo esc_url( get_field( 'project' )['link'] ); ?>">View Project</a>
-		<a class="block w-full my-20 px-20 py-10 no-underline border"
-			href="<?php echo esc_url( get_field( 'website' ) ); ?>">Visit Web</a>
+		<?php foreach ( get_field( 'buttons' ) as $button ) : ?>
+			<a class="block w-full my-20 px-20 py-10 hocus:text-black hocus:bg-primary no-underline border"
+				href="<?php echo esc_url( $button['url'] ); ?>"><?php echo esc_html( $button['label'] ); ?></a>
+		<?php endforeach; ?>
 	</p>
 
 </section>

@@ -786,6 +786,66 @@ table {
   background-color: #ff0;
 }
 
+.hocus\:bg-transparent:hover,
+.hocus\:bg-transparent:focus {
+  background-color: transparent;
+}
+
+.hocus\:bg-current:hover,
+.hocus\:bg-current:focus {
+  background-color: currentColor;
+}
+
+.hocus\:bg-inherit:hover,
+.hocus\:bg-inherit:focus {
+  background-color: inherit;
+}
+
+.hocus\:bg-black:hover,
+.hocus\:bg-black:focus {
+  background-color: #000;
+}
+
+.hocus\:bg-dark-gray:hover,
+.hocus\:bg-dark-gray:focus {
+  background-color: #222;
+}
+
+.hocus\:bg-gray:hover,
+.hocus\:bg-gray:focus {
+  background-color: #e6e6e6;
+}
+
+.hocus\:bg-white:hover,
+.hocus\:bg-white:focus {
+  background-color: #fff;
+}
+
+.hocus\:bg-red:hover,
+.hocus\:bg-red:focus {
+  background-color: #f93838;
+}
+
+.hocus\:bg-lime:hover,
+.hocus\:bg-lime:focus {
+  background-color: #0f0;
+}
+
+.hocus\:bg-cyan:hover,
+.hocus\:bg-cyan:focus {
+  background-color: #0ff;
+}
+
+.hocus\:bg-magenta:hover,
+.hocus\:bg-magenta:focus {
+  background-color: #f0f;
+}
+
+.hocus\:bg-yellow:hover,
+.hocus\:bg-yellow:focus {
+  background-color: #ff0;
+}
+
 .group:hover .group-hover\:bg-transparent {
   background-color: transparent;
 }
@@ -4770,6 +4830,51 @@ table {
   background-color: rgba(255, 255, 0, 0.3);
 }
 
+.hocus\:bg-black-30:hover,
+.hocus\:bg-black-30:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.hocus\:bg-dark-gray-30:hover,
+.hocus\:bg-dark-gray-30:focus {
+  background-color: rgba(34, 34, 34, 0.3);
+}
+
+.hocus\:bg-gray-30:hover,
+.hocus\:bg-gray-30:focus {
+  background-color: rgba(230, 230, 230, 0.3);
+}
+
+.hocus\:bg-white-30:hover,
+.hocus\:bg-white-30:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.hocus\:bg-red-30:hover,
+.hocus\:bg-red-30:focus {
+  background-color: rgba(249, 56, 56, 0.3);
+}
+
+.hocus\:bg-lime-30:hover,
+.hocus\:bg-lime-30:focus {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+.hocus\:bg-cyan-30:hover,
+.hocus\:bg-cyan-30:focus {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+.hocus\:bg-magenta-30:hover,
+.hocus\:bg-magenta-30:focus {
+  background-color: rgba(255, 0, 255, 0.3);
+}
+
+.hocus\:bg-yellow-30:hover,
+.hocus\:bg-yellow-30:focus {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
 .group:hover .group-hover\:bg-black-30 {
   background-color: rgba(0, 0, 0, 0.3);
 }
@@ -4956,6 +5061,51 @@ table {
 }
 
 .hover\:bg-yellow-70:hover {
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+.hocus\:bg-black-70:hover,
+.hocus\:bg-black-70:focus {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.hocus\:bg-dark-gray-70:hover,
+.hocus\:bg-dark-gray-70:focus {
+  background-color: rgba(34, 34, 34, 0.7);
+}
+
+.hocus\:bg-gray-70:hover,
+.hocus\:bg-gray-70:focus {
+  background-color: rgba(230, 230, 230, 0.7);
+}
+
+.hocus\:bg-white-70:hover,
+.hocus\:bg-white-70:focus {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.hocus\:bg-red-70:hover,
+.hocus\:bg-red-70:focus {
+  background-color: rgba(249, 56, 56, 0.7);
+}
+
+.hocus\:bg-lime-70:hover,
+.hocus\:bg-lime-70:focus {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+
+.hocus\:bg-cyan-70:hover,
+.hocus\:bg-cyan-70:focus {
+  background-color: rgba(0, 255, 255, 0.7);
+}
+
+.hocus\:bg-magenta-70:hover,
+.hocus\:bg-magenta-70:focus {
+  background-color: rgba(255, 0, 255, 0.7);
+}
+
+.hocus\:bg-yellow-70:hover,
+.hocus\:bg-yellow-70:focus {
   background-color: rgba(255, 255, 0, 0.7);
 }
 
@@ -5302,169 +5452,137 @@ table {
   text-transform: uppercase;
 }
 
+.post-content a:not(.no-underline) {
+  text-decoration: underline;
+}
+
+.post-content a:not([class*="text-"]):hover, .post-content a:not([class*="text-"]):focus {
+  -webkit-text-decoration-color: transparent;
+  -moz-text-decoration-color: transparent;
+  text-decoration-color: transparent;
+}
+
+body.blog .post-content a:not([class*="text-"]):hover, body.single-post .post-content a:not([class*="text-"]):hover, body.blog .post-content a:not([class*="text-"]):focus, body.single-post .post-content a:not([class*="text-"]):focus {
+  color: #0ff;
+}
+
+body.page .post-content a:not([class*="text-"]):hover, body.page-id-2 .post-content a:not([class*="text-"]):hover, body.page .post-content a:not([class*="text-"]):focus, body.page-id-2 .post-content a:not([class*="text-"]):focus {
+  color: #f93838;
+}
+
+body.post-type-archive-resources .post-content a:not([class*="text-"]):hover, body.single-resources .post-content a:not([class*="text-"]):hover, body.post-type-archive-resources .post-content a:not([class*="text-"]):focus, body.single-resources .post-content a:not([class*="text-"]):focus {
+  color: #0f0;
+}
+
+body.page-template-template-archive-events .post-content a:not([class*="text-"]):hover, body.single-tribe_events .post-content a:not([class*="text-"]):hover, body.page-template-template-archive-events .post-content a:not([class*="text-"]):focus, body.single-tribe_events .post-content a:not([class*="text-"]):focus {
+  color: #f0f;
+}
+
+body.post-type-archive-talent .post-content a:not([class*="text-"]):hover, body.single-talent .post-content a:not([class*="text-"]):hover, body.post-type-archive-talent .post-content a:not([class*="text-"]):focus, body.single-talent .post-content a:not([class*="text-"]):focus {
+  color: #ff0;
+}
+
+body.page-id-13 .post-content a:not([class*="text-"]):hover, body.page-id-13 .post-content a:not([class*="text-"]):focus {
+  color: #fff;
+}
+
+body.blog .text-primary a:not([class*="text-"]), body.single-post .text-primary a:not([class*="text-"]) {
+  color: #0ff;
+}
+
+body.page .text-primary a:not([class*="text-"]), body.page-id-2 .text-primary a:not([class*="text-"]) {
+  color: #f93838;
+}
+
+body.post-type-archive-resources .text-primary a:not([class*="text-"]), body.single-resources .text-primary a:not([class*="text-"]) {
+  color: #0f0;
+}
+
+body.page-template-template-archive-events .text-primary a:not([class*="text-"]), body.single-tribe_events .text-primary a:not([class*="text-"]) {
+  color: #f0f;
+}
+
+body.post-type-archive-talent .text-primary a:not([class*="text-"]), body.single-talent .text-primary a:not([class*="text-"]) {
+  color: #ff0;
+}
+
+body.page-id-13 .text-primary a:not([class*="text-"]) {
+  color: #fff;
+}
+
+body.blog .bg-primary a:not([class*="bg-"]), body.single-post .bg-primary a:not([class*="bg-"]) {
+  background-color: #0ff;
+}
+
+body.page .bg-primary a:not([class*="bg-"]), body.page-id-2 .bg-primary a:not([class*="bg-"]) {
+  background-color: #f93838;
+}
+
+body.post-type-archive-resources .bg-primary a:not([class*="bg-"]), body.single-resources .bg-primary a:not([class*="bg-"]) {
+  background-color: #0f0;
+}
+
+body.page-template-template-archive-events .bg-primary a:not([class*="bg-"]), body.single-tribe_events .bg-primary a:not([class*="bg-"]) {
+  background-color: #f0f;
+}
+
+body.post-type-archive-talent .bg-primary a:not([class*="bg-"]), body.single-talent .bg-primary a:not([class*="bg-"]) {
+  background-color: #ff0;
+}
+
+body.page-id-13 .bg-primary a:not([class*="bg-"]) {
+  background-color: #fff;
+}
+
+body.blog .hocus\:text-primary a:not([class*="text-"]):hover, body.single-post .hocus\:text-primary a:not([class*="text-"]):hover, body.blog .hocus\:text-primary a:not([class*="text-"]):focus, body.single-post .hocus\:text-primary a:not([class*="text-"]):focus {
+  color: #0ff;
+}
+
+body.page .hocus\:text-primary a:not([class*="text-"]):hover, body.page-id-2 .hocus\:text-primary a:not([class*="text-"]):hover, body.page .hocus\:text-primary a:not([class*="text-"]):focus, body.page-id-2 .hocus\:text-primary a:not([class*="text-"]):focus {
+  color: #f93838;
+}
+
+body.post-type-archive-resources .hocus\:text-primary a:not([class*="text-"]):hover, body.single-resources .hocus\:text-primary a:not([class*="text-"]):hover, body.post-type-archive-resources .hocus\:text-primary a:not([class*="text-"]):focus, body.single-resources .hocus\:text-primary a:not([class*="text-"]):focus {
+  color: #0f0;
+}
+
+body.page-template-template-archive-events .hocus\:text-primary a:not([class*="text-"]):hover, body.single-tribe_events .hocus\:text-primary a:not([class*="text-"]):hover, body.page-template-template-archive-events .hocus\:text-primary a:not([class*="text-"]):focus, body.single-tribe_events .hocus\:text-primary a:not([class*="text-"]):focus {
+  color: #f0f;
+}
+
+body.post-type-archive-talent .hocus\:text-primary a:not([class*="text-"]):hover, body.single-talent .hocus\:text-primary a:not([class*="text-"]):hover, body.post-type-archive-talent .hocus\:text-primary a:not([class*="text-"]):focus, body.single-talent .hocus\:text-primary a:not([class*="text-"]):focus {
+  color: #ff0;
+}
+
+body.page-id-13 .hocus\:text-primary a:not([class*="text-"]):hover, body.page-id-13 .hocus\:text-primary a:not([class*="text-"]):focus {
+  color: #fff;
+}
+
+body.blog .hocus\:bg-primary a:not([class*="bg-"]):hover, body.single-post .hocus\:bg-primary a:not([class*="bg-"]):hover, body.blog .hocus\:bg-primary a:not([class*="bg-"]):focus, body.single-post .hocus\:bg-primary a:not([class*="bg-"]):focus {
+  background-color: #0ff;
+}
+
+body.page .hocus\:bg-primary a:not([class*="bg-"]):hover, body.page-id-2 .hocus\:bg-primary a:not([class*="bg-"]):hover, body.page .hocus\:bg-primary a:not([class*="bg-"]):focus, body.page-id-2 .hocus\:bg-primary a:not([class*="bg-"]):focus {
+  background-color: #f93838;
+}
+
+body.post-type-archive-resources .hocus\:bg-primary a:not([class*="bg-"]):hover, body.single-resources .hocus\:bg-primary a:not([class*="bg-"]):hover, body.post-type-archive-resources .hocus\:bg-primary a:not([class*="bg-"]):focus, body.single-resources .hocus\:bg-primary a:not([class*="bg-"]):focus {
+  background-color: #0f0;
+}
+
+body.page-template-template-archive-events .hocus\:bg-primary a:not([class*="bg-"]):hover, body.single-tribe_events .hocus\:bg-primary a:not([class*="bg-"]):hover, body.page-template-template-archive-events .hocus\:bg-primary a:not([class*="bg-"]):focus, body.single-tribe_events .hocus\:bg-primary a:not([class*="bg-"]):focus {
+  background-color: #f0f;
+}
+
+body.post-type-archive-talent .hocus\:bg-primary a:not([class*="bg-"]):hover, body.single-talent .hocus\:bg-primary a:not([class*="bg-"]):hover, body.post-type-archive-talent .hocus\:bg-primary a:not([class*="bg-"]):focus, body.single-talent .hocus\:bg-primary a:not([class*="bg-"]):focus {
+  background-color: #ff0;
+}
+
+body.page-id-13 .hocus\:bg-primary a:not([class*="bg-"]):hover, body.page-id-13 .hocus\:bg-primary a:not([class*="bg-"]):focus {
+  background-color: #fff;
+}
+
 [id*="form-submit"] [type="radio"]:checked + label {
-  background-color: #fff;
-}
-
-body.blog .post-content a:not(.no-underline), body.single-post .post-content a:not(.no-underline) {
-  text-decoration: underline;
-}
-
-body.blog .post-content a:hover, body.blog .post-content a:focus, body.single-post .post-content a:hover, body.single-post .post-content a:focus {
-  color: #0ff;
-  -webkit-text-decoration-color: transparent;
-  -moz-text-decoration-color: transparent;
-  text-decoration-color: transparent;
-}
-
-body.blog .text-primary, body.single-post .text-primary {
-  color: #0ff;
-}
-
-body.blog .hover\:text-primary:hover, body.single-post .hover\:text-primary:hover {
-  color: #0ff;
-}
-
-body.blog .bg-primary, body.single-post .bg-primary {
-  background-color: #0ff;
-}
-
-body.blog .hover\:bg-primary:hover, body.single-post .hover\:bg-primary:hover {
-  background-color: #0ff;
-}
-
-body.page .post-content a:not(.no-underline), body.page-id-2 .post-content a:not(.no-underline) {
-  text-decoration: underline;
-}
-
-body.page .post-content a:hover, body.page .post-content a:focus, body.page-id-2 .post-content a:hover, body.page-id-2 .post-content a:focus {
-  color: #f93838;
-  -webkit-text-decoration-color: transparent;
-  -moz-text-decoration-color: transparent;
-  text-decoration-color: transparent;
-}
-
-body.page .text-primary, body.page-id-2 .text-primary {
-  color: #f93838;
-}
-
-body.page .hover\:text-primary:hover, body.page-id-2 .hover\:text-primary:hover {
-  color: #f93838;
-}
-
-body.page .bg-primary, body.page-id-2 .bg-primary {
-  background-color: #f93838;
-}
-
-body.page .hover\:bg-primary:hover, body.page-id-2 .hover\:bg-primary:hover {
-  background-color: #f93838;
-}
-
-body.post-type-archive-resources .post-content a:not(.no-underline), body.single-resources .post-content a:not(.no-underline) {
-  text-decoration: underline;
-}
-
-body.post-type-archive-resources .post-content a:hover, body.post-type-archive-resources .post-content a:focus, body.single-resources .post-content a:hover, body.single-resources .post-content a:focus {
-  color: #0f0;
-  -webkit-text-decoration-color: transparent;
-  -moz-text-decoration-color: transparent;
-  text-decoration-color: transparent;
-}
-
-body.post-type-archive-resources .text-primary, body.single-resources .text-primary {
-  color: #0f0;
-}
-
-body.post-type-archive-resources .hover\:text-primary:hover, body.single-resources .hover\:text-primary:hover {
-  color: #0f0;
-}
-
-body.post-type-archive-resources .bg-primary, body.single-resources .bg-primary {
-  background-color: #0f0;
-}
-
-body.post-type-archive-resources .hover\:bg-primary:hover, body.single-resources .hover\:bg-primary:hover {
-  background-color: #0f0;
-}
-
-body.page-template-template-archive-events .post-content a:not(.no-underline), body.single-tribe_events .post-content a:not(.no-underline) {
-  text-decoration: underline;
-}
-
-body.page-template-template-archive-events .post-content a:hover, body.page-template-template-archive-events .post-content a:focus, body.single-tribe_events .post-content a:hover, body.single-tribe_events .post-content a:focus {
-  color: #f0f;
-  -webkit-text-decoration-color: transparent;
-  -moz-text-decoration-color: transparent;
-  text-decoration-color: transparent;
-}
-
-body.page-template-template-archive-events .text-primary, body.single-tribe_events .text-primary {
-  color: #f0f;
-}
-
-body.page-template-template-archive-events .hover\:text-primary:hover, body.single-tribe_events .hover\:text-primary:hover {
-  color: #f0f;
-}
-
-body.page-template-template-archive-events .bg-primary, body.single-tribe_events .bg-primary {
-  background-color: #f0f;
-}
-
-body.page-template-template-archive-events .hover\:bg-primary:hover, body.single-tribe_events .hover\:bg-primary:hover {
-  background-color: #f0f;
-}
-
-body.post-type-archive-talent .post-content a:not(.no-underline), body.single-talent .post-content a:not(.no-underline) {
-  text-decoration: underline;
-}
-
-body.post-type-archive-talent .post-content a:hover, body.post-type-archive-talent .post-content a:focus, body.single-talent .post-content a:hover, body.single-talent .post-content a:focus {
-  color: #ff0;
-  -webkit-text-decoration-color: transparent;
-  -moz-text-decoration-color: transparent;
-  text-decoration-color: transparent;
-}
-
-body.post-type-archive-talent .text-primary, body.single-talent .text-primary {
-  color: #ff0;
-}
-
-body.post-type-archive-talent .hover\:text-primary:hover, body.single-talent .hover\:text-primary:hover {
-  color: #ff0;
-}
-
-body.post-type-archive-talent .bg-primary, body.single-talent .bg-primary {
-  background-color: #ff0;
-}
-
-body.post-type-archive-talent .hover\:bg-primary:hover, body.single-talent .hover\:bg-primary:hover {
-  background-color: #ff0;
-}
-
-body.page-id-13 .post-content a:not(.no-underline) {
-  text-decoration: underline;
-}
-
-body.page-id-13 .post-content a:hover, body.page-id-13 .post-content a:focus {
-  color: #fff;
-  -webkit-text-decoration-color: transparent;
-  -moz-text-decoration-color: transparent;
-  text-decoration-color: transparent;
-}
-
-body.page-id-13 .text-primary {
-  color: #fff;
-}
-
-body.page-id-13 .hover\:text-primary:hover {
-  color: #fff;
-}
-
-body.page-id-13 .bg-primary {
-  background-color: #fff;
-}
-
-body.page-id-13 .hover\:bg-primary:hover {
   background-color: #fff;
 }
 

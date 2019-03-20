@@ -1,110 +1,38 @@
 .post-content {
   & :matches(h1, h2, h3, h4, h5, h6) { @apply font-oswald uppercase; }
+  & a:not(.no-underline) { @apply underline; }
+
+  & a:not([class*="text-"]):matches(:hover, :focus) {
+    text-decoration-color: transparent;
+    @nest body:matches(.blog, .single-post) & { color: config('colors.cyan'); }
+    @nest body:matches(.page, .page-id-2) & { color: config('colors.red'); }
+    @nest body:matches(.post-type-archive-resources, .single-resources) & { color: config('colors.lime'); }
+    @nest body:matches(.page-template-template-archive-events, .single-tribe_events) & { color: config('colors.magenta'); }
+    @nest body:matches(.post-type-archive-talent, .single-talent) & { color: config('colors.yellow'); }
+    @nest body:matches(.page-id-13) & { color: config('colors.white'); }
+  }
+}
+
+@variants hocus {
+  .text-primary a:not([class*="text-"]) {
+    @nest body:matches(.blog, .single-post) & { @apply text-cyan; }
+    @nest body:matches(.page, .page-id-2) & { @apply text-red; }
+    @nest body:matches(.post-type-archive-resources, .single-resources) & { @apply text-lime; }
+    @nest body:matches(.page-template-template-archive-events, .single-tribe_events) & { @apply text-magenta; }
+    @nest body:matches(.post-type-archive-talent, .single-talent) & { @apply text-yellow; }
+    @nest body:matches(.page-id-13) & { @apply text-white; }
+  }
+
+  .bg-primary a:not([class*="bg-"]) {
+    @nest body:matches(.blog, .single-post) & { @apply bg-cyan; }
+    @nest body:matches(.page, .page-id-2) & { @apply bg-red; }
+    @nest body:matches(.post-type-archive-resources, .single-resources) & { @apply bg-lime; }
+    @nest body:matches(.page-template-template-archive-events, .single-tribe_events) & { @apply bg-magenta; }
+    @nest body:matches(.post-type-archive-talent, .single-talent) & { @apply bg-yellow; }
+    @nest body:matches(.page-id-13) & { @apply bg-white; }
+  }
 }
 
 [id*="form-submit"] {
   & [type="radio"]:checked + label { @apply bg-white; }
-}
-
-body {
-  &.blog,
-  &.single-post {
-    & .post-content {
-      & a:not(.no-underline) { @apply underline; }
-
-      & a:matches(:hover, :focus) {
-        color: config('colors.cyan');
-        text-decoration-color: transparent;
-      }
-    }
-
-    & .text-primary { @apply text-cyan; }
-    & .hover\:text-primary:hover { @apply text-cyan; }
-    & .bg-primary { @apply bg-cyan; }
-    & .hover\:bg-primary:hover { @apply bg-cyan; }
-  }
-
-  &.page,
-  &.page-id-2 {
-    & .post-content {
-      & a:not(.no-underline) { @apply underline; }
-
-      & a:matches(:hover, :focus) {
-        color: config('colors.red');
-        text-decoration-color: transparent;
-      }
-    }
-
-    & .text-primary { @apply text-red; }
-    & .hover\:text-primary:hover { @apply text-red; }
-    & .bg-primary { @apply bg-red; }
-    & .hover\:bg-primary:hover { @apply bg-red; }
-  }
-
-  &.post-type-archive-resources,
-  &.single-resources {
-    & .post-content {
-      & a:not(.no-underline) { @apply underline; }
-
-      & a:matches(:hover, :focus) {
-        color: config('colors.lime');
-        text-decoration-color: transparent;
-      }
-    }
-
-    & .text-primary { @apply text-lime; }
-    & .hover\:text-primary:hover { @apply text-lime; }
-    & .bg-primary { @apply bg-lime; }
-    & .hover\:bg-primary:hover { @apply bg-lime; }
-  }
-
-  &.page-template-template-archive-events,
-  &.single-tribe_events {
-    & .post-content {
-      & a:not(.no-underline) { @apply underline; }
-
-      & a:matches(:hover, :focus) {
-        color: config('colors.magenta');
-        text-decoration-color: transparent;
-      }
-    }
-
-    & .text-primary { @apply text-magenta; }
-    & .hover\:text-primary:hover { @apply text-magenta; }
-    & .bg-primary { @apply bg-magenta; }
-    & .hover\:bg-primary:hover { @apply bg-magenta; }
-  }
-
-  &.post-type-archive-talent,
-  &.single-talent {
-    & .post-content {
-      & a:not(.no-underline) { @apply underline; }
-
-      & a:matches(:hover, :focus) {
-        color: config('colors.yellow');
-        text-decoration-color: transparent;
-      }
-    }
-
-    & .text-primary { @apply text-yellow; }
-    & .hover\:text-primary:hover { @apply text-yellow; }
-    & .bg-primary { @apply bg-yellow; }
-    & .hover\:bg-primary:hover { @apply bg-yellow; }
-  }
-
-  &.page-id-13 {
-    & .post-content {
-      & a:not(.no-underline) { @apply underline; }
-
-      & a:matches(:hover, :focus) {
-        color: config('colors.white');
-        text-decoration-color: transparent;
-      }
-    }
-
-    & .text-primary { @apply text-white; }
-    & .hover\:text-primary:hover { @apply text-white; }
-    & .bg-primary { @apply bg-white; }
-    & .hover\:bg-primary:hover { @apply bg-white; }
-  }
 }
