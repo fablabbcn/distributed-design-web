@@ -24,7 +24,7 @@ $dd_classes = 'leading-normal font-semibold';
 		<div class="flex flex-col w-full group-hocus:bg-yellow">
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
-				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php the_field( 'title' ); ?></dt>
+				<dt class="<?php echo esc_attr( $dt_classes ); ?>"><?php the_field( 'profession' ); ?></dt>
 				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php the_field( 'name' ); ?></dd>
 			</dl>
 
