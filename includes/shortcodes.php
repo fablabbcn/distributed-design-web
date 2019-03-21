@@ -28,7 +28,7 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 			$attrs['class'] ?: false,
 			'flex justify-center items-center',
 			$attrs['icon'] ? 'w-50 h-50' : false,
-			'p-10 bg-white text-center no-underline border rounded-full overflow-hidden',
+			'p-10 bg-white hocus:text-black hocus:bg-primary text-center no-underline border rounded-full overflow-hidden',
 		);
 
 		$link_attrs = array(

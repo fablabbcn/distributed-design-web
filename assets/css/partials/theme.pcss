@@ -14,7 +14,7 @@
 }
 
 @variants hocus {
-  .text-primary a:not([class*="text-"]) {
+  .text-primary {
     @nest body:matches(.blog, .single-post) & { @apply text-cyan; }
     @nest body:matches(.page, .page-id-2) & { @apply text-red; }
     @nest body:matches(.post-type-archive-resources, .single-resources) & { @apply text-lime; }
@@ -23,7 +23,7 @@
     @nest body:matches(.page-id-13) & { @apply text-white; }
   }
 
-  .bg-primary a:not([class*="bg-"]) {
+  .bg-primary {
     @nest body:matches(.blog, .single-post) & { @apply bg-cyan; }
     @nest body:matches(.page, .page-id-2) & { @apply bg-red; }
     @nest body:matches(.post-type-archive-resources, .single-resources) & { @apply bg-lime; }

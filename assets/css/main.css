@@ -5486,99 +5486,99 @@ body.page-id-13 .post-content a:not([class*="text-"]):hover, body.page-id-13 .po
   color: #fff;
 }
 
-body.blog .text-primary a:not([class*="text-"]), body.single-post .text-primary a:not([class*="text-"]) {
+body.blog .text-primary, body.single-post .text-primary {
   color: #0ff;
 }
 
-body.page .text-primary a:not([class*="text-"]), body.page-id-2 .text-primary a:not([class*="text-"]) {
+body.page .text-primary, body.page-id-2 .text-primary {
   color: #f93838;
 }
 
-body.post-type-archive-resources .text-primary a:not([class*="text-"]), body.single-resources .text-primary a:not([class*="text-"]) {
+body.post-type-archive-resources .text-primary, body.single-resources .text-primary {
   color: #0f0;
 }
 
-body.page-template-template-archive-events .text-primary a:not([class*="text-"]), body.single-tribe_events .text-primary a:not([class*="text-"]) {
+body.page-template-template-archive-events .text-primary, body.single-tribe_events .text-primary {
   color: #f0f;
 }
 
-body.post-type-archive-talent .text-primary a:not([class*="text-"]), body.single-talent .text-primary a:not([class*="text-"]) {
+body.post-type-archive-talent .text-primary, body.single-talent .text-primary {
   color: #ff0;
 }
 
-body.page-id-13 .text-primary a:not([class*="text-"]) {
+body.page-id-13 .text-primary {
   color: #fff;
 }
 
-body.blog .bg-primary a:not([class*="bg-"]), body.single-post .bg-primary a:not([class*="bg-"]) {
+body.blog .bg-primary, body.single-post .bg-primary {
   background-color: #0ff;
 }
 
-body.page .bg-primary a:not([class*="bg-"]), body.page-id-2 .bg-primary a:not([class*="bg-"]) {
+body.page .bg-primary, body.page-id-2 .bg-primary {
   background-color: #f93838;
 }
 
-body.post-type-archive-resources .bg-primary a:not([class*="bg-"]), body.single-resources .bg-primary a:not([class*="bg-"]) {
+body.post-type-archive-resources .bg-primary, body.single-resources .bg-primary {
   background-color: #0f0;
 }
 
-body.page-template-template-archive-events .bg-primary a:not([class*="bg-"]), body.single-tribe_events .bg-primary a:not([class*="bg-"]) {
+body.page-template-template-archive-events .bg-primary, body.single-tribe_events .bg-primary {
   background-color: #f0f;
 }
 
-body.post-type-archive-talent .bg-primary a:not([class*="bg-"]), body.single-talent .bg-primary a:not([class*="bg-"]) {
+body.post-type-archive-talent .bg-primary, body.single-talent .bg-primary {
   background-color: #ff0;
 }
 
-body.page-id-13 .bg-primary a:not([class*="bg-"]) {
+body.page-id-13 .bg-primary {
   background-color: #fff;
 }
 
-body.blog .hocus\:text-primary a:not([class*="text-"]):hover, body.single-post .hocus\:text-primary a:not([class*="text-"]):hover, body.blog .hocus\:text-primary a:not([class*="text-"]):focus, body.single-post .hocus\:text-primary a:not([class*="text-"]):focus {
+body.blog .hocus\:text-primary:hover, body.single-post .hocus\:text-primary:hover, body.blog .hocus\:text-primary:focus, body.single-post .hocus\:text-primary:focus {
   color: #0ff;
 }
 
-body.page .hocus\:text-primary a:not([class*="text-"]):hover, body.page-id-2 .hocus\:text-primary a:not([class*="text-"]):hover, body.page .hocus\:text-primary a:not([class*="text-"]):focus, body.page-id-2 .hocus\:text-primary a:not([class*="text-"]):focus {
+body.page .hocus\:text-primary:hover, body.page-id-2 .hocus\:text-primary:hover, body.page .hocus\:text-primary:focus, body.page-id-2 .hocus\:text-primary:focus {
   color: #f93838;
 }
 
-body.post-type-archive-resources .hocus\:text-primary a:not([class*="text-"]):hover, body.single-resources .hocus\:text-primary a:not([class*="text-"]):hover, body.post-type-archive-resources .hocus\:text-primary a:not([class*="text-"]):focus, body.single-resources .hocus\:text-primary a:not([class*="text-"]):focus {
+body.post-type-archive-resources .hocus\:text-primary:hover, body.single-resources .hocus\:text-primary:hover, body.post-type-archive-resources .hocus\:text-primary:focus, body.single-resources .hocus\:text-primary:focus {
   color: #0f0;
 }
 
-body.page-template-template-archive-events .hocus\:text-primary a:not([class*="text-"]):hover, body.single-tribe_events .hocus\:text-primary a:not([class*="text-"]):hover, body.page-template-template-archive-events .hocus\:text-primary a:not([class*="text-"]):focus, body.single-tribe_events .hocus\:text-primary a:not([class*="text-"]):focus {
+body.page-template-template-archive-events .hocus\:text-primary:hover, body.single-tribe_events .hocus\:text-primary:hover, body.page-template-template-archive-events .hocus\:text-primary:focus, body.single-tribe_events .hocus\:text-primary:focus {
   color: #f0f;
 }
 
-body.post-type-archive-talent .hocus\:text-primary a:not([class*="text-"]):hover, body.single-talent .hocus\:text-primary a:not([class*="text-"]):hover, body.post-type-archive-talent .hocus\:text-primary a:not([class*="text-"]):focus, body.single-talent .hocus\:text-primary a:not([class*="text-"]):focus {
+body.post-type-archive-talent .hocus\:text-primary:hover, body.single-talent .hocus\:text-primary:hover, body.post-type-archive-talent .hocus\:text-primary:focus, body.single-talent .hocus\:text-primary:focus {
   color: #ff0;
 }
 
-body.page-id-13 .hocus\:text-primary a:not([class*="text-"]):hover, body.page-id-13 .hocus\:text-primary a:not([class*="text-"]):focus {
+body.page-id-13 .hocus\:text-primary:hover, body.page-id-13 .hocus\:text-primary:focus {
   color: #fff;
 }
 
-body.blog .hocus\:bg-primary a:not([class*="bg-"]):hover, body.single-post .hocus\:bg-primary a:not([class*="bg-"]):hover, body.blog .hocus\:bg-primary a:not([class*="bg-"]):focus, body.single-post .hocus\:bg-primary a:not([class*="bg-"]):focus {
+body.blog .hocus\:bg-primary:hover, body.single-post .hocus\:bg-primary:hover, body.blog .hocus\:bg-primary:focus, body.single-post .hocus\:bg-primary:focus {
   background-color: #0ff;
 }
 
-body.page .hocus\:bg-primary a:not([class*="bg-"]):hover, body.page-id-2 .hocus\:bg-primary a:not([class*="bg-"]):hover, body.page .hocus\:bg-primary a:not([class*="bg-"]):focus, body.page-id-2 .hocus\:bg-primary a:not([class*="bg-"]):focus {
+body.page .hocus\:bg-primary:hover, body.page-id-2 .hocus\:bg-primary:hover, body.page .hocus\:bg-primary:focus, body.page-id-2 .hocus\:bg-primary:focus {
   background-color: #f93838;
 }
 
-body.post-type-archive-resources .hocus\:bg-primary a:not([class*="bg-"]):hover, body.single-resources .hocus\:bg-primary a:not([class*="bg-"]):hover, body.post-type-archive-resources .hocus\:bg-primary a:not([class*="bg-"]):focus, body.single-resources .hocus\:bg-primary a:not([class*="bg-"]):focus {
+body.post-type-archive-resources .hocus\:bg-primary:hover, body.single-resources .hocus\:bg-primary:hover, body.post-type-archive-resources .hocus\:bg-primary:focus, body.single-resources .hocus\:bg-primary:focus {
   background-color: #0f0;
 }
 
-body.page-template-template-archive-events .hocus\:bg-primary a:not([class*="bg-"]):hover, body.single-tribe_events .hocus\:bg-primary a:not([class*="bg-"]):hover, body.page-template-template-archive-events .hocus\:bg-primary a:not([class*="bg-"]):focus, body.single-tribe_events .hocus\:bg-primary a:not([class*="bg-"]):focus {
+body.page-template-template-archive-events .hocus\:bg-primary:hover, body.single-tribe_events .hocus\:bg-primary:hover, body.page-template-template-archive-events .hocus\:bg-primary:focus, body.single-tribe_events .hocus\:bg-primary:focus {
   background-color: #f0f;
 }
 
-body.post-type-archive-talent .hocus\:bg-primary a:not([class*="bg-"]):hover, body.single-talent .hocus\:bg-primary a:not([class*="bg-"]):hover, body.post-type-archive-talent .hocus\:bg-primary a:not([class*="bg-"]):focus, body.single-talent .hocus\:bg-primary a:not([class*="bg-"]):focus {
+body.post-type-archive-talent .hocus\:bg-primary:hover, body.single-talent .hocus\:bg-primary:hover, body.post-type-archive-talent .hocus\:bg-primary:focus, body.single-talent .hocus\:bg-primary:focus {
   background-color: #ff0;
 }
 
-body.page-id-13 .hocus\:bg-primary a:not([class*="bg-"]):hover, body.page-id-13 .hocus\:bg-primary a:not([class*="bg-"]):focus {
+body.page-id-13 .hocus\:bg-primary:hover, body.page-id-13 .hocus\:bg-primary:focus {
   background-color: #fff;
 }
 
