@@ -161,12 +161,6 @@
   $('.beefup').beefup({
     openSingle: true,
   })
-
-  $('.grid').imagesLoaded(function () {
-    $('.grid').packery({
-      itemSelector: '.grid-item',
-    })
-  })
 })(jQuery)
 
 /**

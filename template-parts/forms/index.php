@@ -20,7 +20,7 @@ $form_classes = array(
 ?>
 
 
-<div class="z-10 md:px-25">
+<section class="z-10 md:px-25">
 	<div class="<?php echo esc_attr( $form_classes['container'] ); ?>">
 
 		<div class="relative">
@@ -50,4 +50,4 @@ $form_classes = array(
 		</div>
 
 	</div>
-</div>
+</section>

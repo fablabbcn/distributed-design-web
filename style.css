@@ -43,10 +43,6 @@ input:-ms-input-placeholder { color: #000; }
   display: none;
 }
 
-.pagination-wrap {
-  text-align: right;
-}
-
 .page-content {
   padding: 40px 20px;
 }
@@ -432,20 +428,6 @@ input#s {
   min-height: 300px;
 }
 
-.grid {
-  width: 101vw;
-  margin-bottom: 100px;
-}
-
-.grid a:hover {
-  color: black !important;
-}
-
-.grid-item {
-  width: 25%;
-  transition: all 0.25s ease;
-}
-
 .post-cont:hover .post-right {
   visibility: visible;
   opacity: 1;
@@ -457,10 +439,6 @@ input#s {
 }
 
 @media all and (max-width: 480px) {
-  .grid-item {
-    width: 100%;
-  }
-
   .post-left,
   .post-right {
     border-right: 0 !important;
@@ -470,20 +448,3 @@ input#s {
     margin-top: -2px;
   }
 }
-
-@media all and (min-width: 480px) and (max-width: 768px) {
-  .grid-item {
-    width: 50%;
-  }
-}
-
-/*
-.grid-item:nth-child(4n), .grid-item:nth-child(4n - 1) > .post-cont  > .post-left {
-  float: right;
-  border-right: 0;
-}
-
-.grid-item:nth-child(4n), .grid-item:nth-child(4n - 1) > .post-cont  > .post-right {
-  border-right: 2px solid;
-}
-*/

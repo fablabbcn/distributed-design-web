@@ -37,26 +37,6 @@ add_filter( 'post_thumbnail_html', 'the_theme_remove_thumbnail_dimensions', 10 )
 add_filter( 'image_send_to_editor', 'the_theme_remove_thumbnail_dimensions', 10 );
 
 
-// Customize wp pagenavi.
-function the_theme_wp_pagenavi( $html ) {
-	$out = '';
-
-	$out = str_replace( '<div', '', $html );
-	$out = str_replace( 'class="wp-pagenavi">', '', $out );
-	$out = str_replace( '<a', '<li><a', $out );
-	$out = str_replace( '</a>', '</a></li>', $out );
-	$out = str_replace( '<span', '<li><span', $out );
-	$out = str_replace( '</span>', '</span></li>', $out );
-	$out = str_replace( '</div>', '', $out );
-
-	return ( '
-		<nav class="pagination-wrap">
-			<ul class="pagination">' . $out . '</ul>
-		</nav>
-	' );
-} add_filter( 'wp_pagenavi', 'the_theme_wp_pagenavi', 10, 2 );
-
-
 // Add active class.
 function special_nav_class( $classes, $menu_item = null ) {
 	if ( in_array( 'current-menu-item', $classes ) || in_array( 'current-menu-ancestor', $classes ) ) {

@@ -6271,6 +6271,11 @@ tailwindcss-alpha@^0.1.4:
   dependencies:
     color "^3.0.0"
 
+tailwindcss-aspect-ratio@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/tailwindcss-aspect-ratio/-/tailwindcss-aspect-ratio-1.0.1.tgz#63079a14558cb6aa4f8c73a1fd24d268f3a9efed"
+  integrity sha512-8DjET4+vVNY/JYHEjjcGLxJAzmuVLVeNcU99RtW7BdWocywfiYErMuhfcYXk+rCn0hEISCdpY388yjDGTwX56g==
+
 tailwindcss-inset@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/tailwindcss-inset/-/tailwindcss-inset-1.0.0.tgz#4416b8ed26a2a3f3cc6f94f670ca0fa58353dbc4"

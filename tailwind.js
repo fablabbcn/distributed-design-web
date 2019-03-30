@@ -369,6 +369,9 @@ module.exports = {
       variants: ['responsive'],
       counts: [1, 2],
     }),
+    require('tailwindcss-aspect-ratio')({
+      ratios: { '1/1': [1, 1] },
+    }),
   ],
 
   /*

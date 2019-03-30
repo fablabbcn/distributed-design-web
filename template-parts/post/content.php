@@ -2,24 +2,26 @@
 /**
  * Template part for displaying posts
  */
+
+$thumbnail_attrs = array(
+	'style' => 'z-index: -10;',
+	'class' => 'absolute pin w-full h-full object-cover group-hover:opacity-30',
+)
+
 ?>
 
 
-<a href="<?php the_permalink(); ?>">
-	<div id="post-<?php the_ID(); ?>" class="grid-item">
-		<div class="cf post-cont relative">
+<div id="post-<?php the_ID(); ?>" class="relative aspect-ratio-1/1 w-full h-0 bg-primary border-px border-solid overflow-hidden">
+	<a class="group z-10 absolute pin flex w-full h-full p-20 hover:text-black" href="<?php the_permalink(); ?>">
 
-			<div class="fl w-100 post-left bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
-				<?php the_post_thumbnail(); ?>
-			</div>
+		<?php the_post_thumbnail( 'post-thumbnail', $thumbnail_attrs ); ?>
 
-			<div class="fl w-100 post-right">
-				<p class="font-bold uppercase"><?php the_title(); ?></p>
-				—
-				<p><?php the_field( 'subtitle' ); ?></p>
-				<p class="absolute bottom-1 dib b">Read More<!--<span class="dib ml-3 read-more-icon"><?php require get_template_directory() . '/assets/images/read-more.svg'; ?></span>--></p>
-			</div>
-
+		<div class="flex flex-col flex-1 opacity-0 group-hover:opacity-100">
+			<p class="font-bold uppercase"><?php the_title(); ?></p>
+			<p>—</p>
+			<p><?php the_field( 'subtitle' ); ?></p>
+			<p class="mt-auto font-bold">Read More</p>
 		</div>
-	</div>
-</a>
+
+	</a>
+</div>
