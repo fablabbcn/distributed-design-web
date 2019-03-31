@@ -3654,6 +3654,51 @@ table {
   object-fit: scale-down;
 }
 
+.object-bottom {
+  -o-object-position: bottom;
+  object-position: bottom;
+}
+
+.object-center {
+  -o-object-position: center;
+  object-position: center;
+}
+
+.object-left {
+  -o-object-position: left;
+  object-position: left;
+}
+
+.object-left-bottom {
+  -o-object-position: left bottom;
+  object-position: left bottom;
+}
+
+.object-left-top {
+  -o-object-position: left top;
+  object-position: left top;
+}
+
+.object-right {
+  -o-object-position: right;
+  object-position: right;
+}
+
+.object-right-bottom {
+  -o-object-position: right bottom;
+  object-position: right bottom;
+}
+
+.object-right-top {
+  -o-object-position: right top;
+  object-position: right top;
+}
+
+.object-top {
+  -o-object-position: top;
+  object-position: top;
+}
+
 .opacity-0 {
   opacity: 0;
 }
