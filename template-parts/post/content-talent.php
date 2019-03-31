@@ -6,10 +6,11 @@
 $mod     = ( $wp_query->current_post ) % 4;
 $is_even = 0 === $mod || 1 === $mod;
 
-$a_classes  = implode( ' ', array( 'flex', $is_even ? 'flex-row' : 'flex-row-reverse', 'w-full hocus:text-inherit no-underline' ) );
-$dl_classes = 'flex flex-col flex-grow justify-center p-10 md:p-15 border-px';
-$dt_classes = 'leading-normal font-light capitalize';
-$dd_classes = 'leading-normal font-semibold';
+$a_classes   = implode( ' ', array( 'flex', $is_even ? 'flex-row' : 'flex-row-reverse', 'w-full hocus:text-inherit no-underline' ) );
+$img_classes = 'block w-full h-full group-hocus:opacity-70 border-px object-cover';
+$dl_classes  = 'flex flex-col flex-grow justify-center p-10 md:p-15 border-px';
+$dt_classes  = 'leading-normal font-light capitalize';
+$dd_classes  = 'leading-normal font-semibold';
 
 ?>
 
@@ -18,7 +19,7 @@ $dd_classes = 'leading-normal font-semibold';
 	<a class="group <?php echo esc_attr( $a_classes ); ?>" href="<?php the_permalink(); ?>">
 
 		<div class="relative flex flex-col w-full bg-black">
-			<?php the_post_thumbnail( 'post-list-thumbnails-square', array( 'class' => 'block w-full h-full group-hocus:opacity-70 border-px object-cover' ) ); ?>
+			<?php the_post_thumbnail( 'post-list-thumbnails-square', array( 'class' => $img_classes ) ); ?>
 		</div>
 
 		<div class="flex flex-col w-full group-hocus:bg-yellow">
