@@ -11,8 +11,8 @@ $thumbnail_attrs = array(
 ?>
 
 
-<div id="post-<?php the_ID(); ?>" class="relative aspect-ratio-1/1 w-full h-0 bg-primary border-px border-solid overflow-hidden">
-	<a class="group z-10 absolute pin flex w-full h-full p-20 hover:text-black" href="<?php the_permalink(); ?>">
+<div id="post-<?php the_ID(); ?>" class="relative aspect-ratio-1/1 w-full h-0 border-px border-solid overflow-hidden">
+	<a class="group z-10 absolute pin flex w-full h-full p-20 hover:text-black bg-primary-70 hocus:bg-primary" href="<?php the_permalink(); ?>">
 
 		<?php the_post_thumbnail( 'post-thumbnail', $thumbnail_attrs ); ?>
 

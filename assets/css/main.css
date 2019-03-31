@@ -5538,6 +5538,54 @@ body.page-id-13 .bg-primary {
   background-color: #fff;
 }
 
+body.blog .bg-primary-30, body.single-post .bg-primary-30 {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+body.page .bg-primary-30, body.page-id-2 .bg-primary-30 {
+  background-color: rgba(249, 56, 56, 0.3);
+}
+
+body.post-type-archive-resources .bg-primary-30, body.single-resources .bg-primary-30 {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+body.page-template-template-archive-events .bg-primary-30, body.single-tribe_events .bg-primary-30 {
+  background-color: rgba(255, 0, 255, 0.3);
+}
+
+body.post-type-archive-talent .bg-primary-30, body.single-talent .bg-primary-30 {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+body.page-id-13 .bg-primary-30 {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+body.blog .bg-primary-70, body.single-post .bg-primary-70 {
+  background-color: rgba(0, 255, 255, 0.7);
+}
+
+body.page .bg-primary-70, body.page-id-2 .bg-primary-70 {
+  background-color: rgba(249, 56, 56, 0.7);
+}
+
+body.post-type-archive-resources .bg-primary-70, body.single-resources .bg-primary-70 {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+
+body.page-template-template-archive-events .bg-primary-70, body.single-tribe_events .bg-primary-70 {
+  background-color: rgba(255, 0, 255, 0.7);
+}
+
+body.post-type-archive-talent .bg-primary-70, body.single-talent .bg-primary-70 {
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+body.page-id-13 .bg-primary-70 {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
 body.blog .hocus\:text-primary:hover, body.single-post .hocus\:text-primary:hover, body.blog .hocus\:text-primary:focus, body.single-post .hocus\:text-primary:focus {
   color: #0ff;
 }
@@ -5584,6 +5632,54 @@ body.post-type-archive-talent .hocus\:bg-primary:hover, body.single-talent .hocu
 
 body.page-id-13 .hocus\:bg-primary:hover, body.page-id-13 .hocus\:bg-primary:focus {
   background-color: #fff;
+}
+
+body.blog .hocus\:bg-primary-30:hover, body.single-post .hocus\:bg-primary-30:hover, body.blog .hocus\:bg-primary-30:focus, body.single-post .hocus\:bg-primary-30:focus {
+  background-color: rgba(0, 255, 255, 0.3);
+}
+
+body.page .hocus\:bg-primary-30:hover, body.page-id-2 .hocus\:bg-primary-30:hover, body.page .hocus\:bg-primary-30:focus, body.page-id-2 .hocus\:bg-primary-30:focus {
+  background-color: rgba(249, 56, 56, 0.3);
+}
+
+body.post-type-archive-resources .hocus\:bg-primary-30:hover, body.single-resources .hocus\:bg-primary-30:hover, body.post-type-archive-resources .hocus\:bg-primary-30:focus, body.single-resources .hocus\:bg-primary-30:focus {
+  background-color: rgba(0, 255, 0, 0.3);
+}
+
+body.page-template-template-archive-events .hocus\:bg-primary-30:hover, body.single-tribe_events .hocus\:bg-primary-30:hover, body.page-template-template-archive-events .hocus\:bg-primary-30:focus, body.single-tribe_events .hocus\:bg-primary-30:focus {
+  background-color: rgba(255, 0, 255, 0.3);
+}
+
+body.post-type-archive-talent .hocus\:bg-primary-30:hover, body.single-talent .hocus\:bg-primary-30:hover, body.post-type-archive-talent .hocus\:bg-primary-30:focus, body.single-talent .hocus\:bg-primary-30:focus {
+  background-color: rgba(255, 255, 0, 0.3);
+}
+
+body.page-id-13 .hocus\:bg-primary-30:hover, body.page-id-13 .hocus\:bg-primary-30:focus {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+body.blog .hocus\:bg-primary-70:hover, body.single-post .hocus\:bg-primary-70:hover, body.blog .hocus\:bg-primary-70:focus, body.single-post .hocus\:bg-primary-70:focus {
+  background-color: rgba(0, 255, 255, 0.7);
+}
+
+body.page .hocus\:bg-primary-70:hover, body.page-id-2 .hocus\:bg-primary-70:hover, body.page .hocus\:bg-primary-70:focus, body.page-id-2 .hocus\:bg-primary-70:focus {
+  background-color: rgba(249, 56, 56, 0.7);
+}
+
+body.post-type-archive-resources .hocus\:bg-primary-70:hover, body.single-resources .hocus\:bg-primary-70:hover, body.post-type-archive-resources .hocus\:bg-primary-70:focus, body.single-resources .hocus\:bg-primary-70:focus {
+  background-color: rgba(0, 255, 0, 0.7);
+}
+
+body.page-template-template-archive-events .hocus\:bg-primary-70:hover, body.single-tribe_events .hocus\:bg-primary-70:hover, body.page-template-template-archive-events .hocus\:bg-primary-70:focus, body.single-tribe_events .hocus\:bg-primary-70:focus {
+  background-color: rgba(255, 0, 255, 0.7);
+}
+
+body.post-type-archive-talent .hocus\:bg-primary-70:hover, body.single-talent .hocus\:bg-primary-70:hover, body.post-type-archive-talent .hocus\:bg-primary-70:focus, body.single-talent .hocus\:bg-primary-70:focus {
+  background-color: rgba(255, 255, 0, 0.7);
+}
+
+body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-70:focus {
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 [id*="form-submit"] [type="radio"]:checked + label {

@@ -31,6 +31,24 @@
     @nest body:matches(.post-type-archive-talent, .single-talent) & { @apply bg-yellow; }
     @nest body:matches(.page-id-13) & { @apply bg-white; }
   }
+
+  .bg-primary-30 {
+    @nest body:matches(.blog, .single-post) & { @apply bg-cyan-30; }
+    @nest body:matches(.page, .page-id-2) & { @apply bg-red-30; }
+    @nest body:matches(.post-type-archive-resources, .single-resources) & { @apply bg-lime-30; }
+    @nest body:matches(.page-template-template-archive-events, .single-tribe_events) & { @apply bg-magenta-30; }
+    @nest body:matches(.post-type-archive-talent, .single-talent) & { @apply bg-yellow-30; }
+    @nest body:matches(.page-id-13) & { @apply bg-white-30; }
+  }
+
+  .bg-primary-70 {
+    @nest body:matches(.blog, .single-post) & { @apply bg-cyan-70; }
+    @nest body:matches(.page, .page-id-2) & { @apply bg-red-70; }
+    @nest body:matches(.post-type-archive-resources, .single-resources) & { @apply bg-lime-70; }
+    @nest body:matches(.page-template-template-archive-events, .single-tribe_events) & { @apply bg-magenta-70; }
+    @nest body:matches(.post-type-archive-talent, .single-talent) & { @apply bg-yellow-70; }
+    @nest body:matches(.page-id-13) & { @apply bg-white-70; }
+  }
 }
 
 [id*="form-submit"] {
