@@ -7,8 +7,6 @@ get_header();
 
 $is_single_event = is_single() && 'page' === get_post_type() && 'tribe_events' === $post_type;
 
-var_dump( get_the_title() );
-
 ?>
 
 
