@@ -40,7 +40,7 @@ $dd_classes  = 'leading-normal font-semibold';
 			</dl>
 
 			<dl class="<?php echo esc_attr( $dl_classes ); ?>">
-				<dt class="<?php echo esc_attr( $dt_classes ); ?>">Organization</dt>
+				<dt class="<?php echo esc_attr( $dt_classes ); ?>">Platform Member</dt>
 				<dd class="<?php echo esc_attr( $dd_classes ); ?>"><?php the_field( 'organization' ); ?></dd>
 			</dl>
 

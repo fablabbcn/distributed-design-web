@@ -18,7 +18,7 @@
 			<p class=""><span class="font-bold">Based in:</span> <?php the_field( 'city' ); ?></p>
 		<?php endif; ?>
 		<?php if ( get_field( 'organization' ) ) : ?>
-			<p class=""><span class="font-bold">Works at:</span> <?php the_field( 'organization' ); ?></p>
+			<p class=""><span class="font-bold">Platform Member:</span> <?php the_field( 'organization' ); ?></p>
 		<?php endif; ?>
 	</div>
 
