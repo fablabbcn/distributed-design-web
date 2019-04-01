@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for Statistics layout
+ * ⛔️ Template part for Statistics layout
  */
 
 $caption     = get_sub_field( 'caption' );

@@ -13,7 +13,7 @@ get_header(); ?>
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 
-		<section class="cf bootstrap-wrapper post-content">
+		<section class="cf bootstrap-wrapper post-content rich-text">
 			<div class="row row-eq-height">
 
 				<?php if ( 'talent' !== $post_type ) : ?>
@@ -62,7 +62,7 @@ get_header(); ?>
 			<?php while ( have_rows( 'post_content' ) ) : ?>
 				<?php if ( count( array_filter( the_row() ) ) > 1 ) : ?>
 
-					<section class="cf bootstrap-wrapper post-content">
+					<section class="cf bootstrap-wrapper post-content rich-text">
 						<div class="row row-eq-height">
 
 							<?php if ( 'text_content' === get_row_layout() ) : ?>
@@ -117,7 +117,6 @@ get_header(); ?>
 </main>
 
 
-<?php set_query_var( 'layout', $layout ); ?>
 <?php get_template_part( 'template-parts/logos' ); ?>
 
 <?php get_footer(); ?>

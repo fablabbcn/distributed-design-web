@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for Two columns layout
+ * ⛔️ Template part for Two columns layout
  */
 
 ?>

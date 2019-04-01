@@ -35,7 +35,6 @@ $terms    = 'tribe_events' === $post_type
 
 <?php get_template_part( 'template-parts/forms/index' ); ?>
 
-<?php set_query_var( 'layout', $layout ); ?>
 <?php get_template_part( 'template-parts/logos' ); ?>
 
 <?php get_footer(); ?>

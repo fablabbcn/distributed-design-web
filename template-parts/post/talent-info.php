@@ -28,7 +28,7 @@
 	</div>
 
 	<p class="font-oswald text-center uppercase">
-		<?php foreach ( get_field( 'buttons' ) as $button ) : ?>
+		<?php foreach ( get_field( 'buttons' ) ?: array() as $button ) : ?>
 			<a class="block w-full my-20 px-20 py-10 hocus:text-black hocus:bg-primary no-underline border"
 				href="<?php echo esc_url( $button['url'] ); ?>"><?php echo esc_html( $button['label'] ); ?></a>
 		<?php endforeach; ?>

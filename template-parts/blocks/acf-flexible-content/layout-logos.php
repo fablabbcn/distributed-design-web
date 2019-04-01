@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying Logos
+ * ⛔️ Template part for displaying Logos
  */
 
 $logos = get_sub_field( 'logos' );

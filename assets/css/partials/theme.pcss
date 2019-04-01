@@ -1,5 +1,7 @@
-.post-content {
+.rich-text {
   & :matches(h1, h2, h3, h4, h5, h6) { @apply font-oswald uppercase; }
+  & p + p { @apply mt-20; }
+
   & a:not(.no-underline) { @apply underline; }
 
   & a:not([class*="text-"]):matches(:hover, :focus) {

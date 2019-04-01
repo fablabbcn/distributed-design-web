@@ -5496,42 +5496,46 @@ table {
   padding-top: 100%;
 }
 
-.post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 {
+.rich-text h1, .rich-text h2, .rich-text h3, .rich-text h4, .rich-text h5, .rich-text h6 {
   font-family: Oswald, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-transform: uppercase;
 }
 
-.post-content a:not(.no-underline) {
+.rich-text p + p {
+  margin-top: 20px;
+}
+
+.rich-text a:not(.no-underline) {
   text-decoration: underline;
 }
 
-.post-content a:not([class*="text-"]):hover, .post-content a:not([class*="text-"]):focus {
+.rich-text a:not([class*="text-"]):hover, .rich-text a:not([class*="text-"]):focus {
   -webkit-text-decoration-color: transparent;
   -moz-text-decoration-color: transparent;
   text-decoration-color: transparent;
 }
 
-body.blog .post-content a:not([class*="text-"]):hover, body.single-post .post-content a:not([class*="text-"]):hover, body.blog .post-content a:not([class*="text-"]):focus, body.single-post .post-content a:not([class*="text-"]):focus {
+body.blog .rich-text a:not([class*="text-"]):hover, body.single-post .rich-text a:not([class*="text-"]):hover, body.blog .rich-text a:not([class*="text-"]):focus, body.single-post .rich-text a:not([class*="text-"]):focus {
   color: #0ff;
 }
 
-body.page .post-content a:not([class*="text-"]):hover, body.page-id-2 .post-content a:not([class*="text-"]):hover, body.page .post-content a:not([class*="text-"]):focus, body.page-id-2 .post-content a:not([class*="text-"]):focus {
+body.page .rich-text a:not([class*="text-"]):hover, body.page-id-2 .rich-text a:not([class*="text-"]):hover, body.page .rich-text a:not([class*="text-"]):focus, body.page-id-2 .rich-text a:not([class*="text-"]):focus {
   color: #f93838;
 }
 
-body.post-type-archive-resources .post-content a:not([class*="text-"]):hover, body.single-resources .post-content a:not([class*="text-"]):hover, body.post-type-archive-resources .post-content a:not([class*="text-"]):focus, body.single-resources .post-content a:not([class*="text-"]):focus {
+body.post-type-archive-resources .rich-text a:not([class*="text-"]):hover, body.single-resources .rich-text a:not([class*="text-"]):hover, body.post-type-archive-resources .rich-text a:not([class*="text-"]):focus, body.single-resources .rich-text a:not([class*="text-"]):focus {
   color: #0f0;
 }
 
-body.page-template-template-archive-events .post-content a:not([class*="text-"]):hover, body.single-tribe_events .post-content a:not([class*="text-"]):hover, body.page-template-template-archive-events .post-content a:not([class*="text-"]):focus, body.single-tribe_events .post-content a:not([class*="text-"]):focus {
+body.page-template-template-archive-events .rich-text a:not([class*="text-"]):hover, body.single-tribe_events .rich-text a:not([class*="text-"]):hover, body.page-template-template-archive-events .rich-text a:not([class*="text-"]):focus, body.single-tribe_events .rich-text a:not([class*="text-"]):focus {
   color: #f0f;
 }
 
-body.post-type-archive-talent .post-content a:not([class*="text-"]):hover, body.single-talent .post-content a:not([class*="text-"]):hover, body.post-type-archive-talent .post-content a:not([class*="text-"]):focus, body.single-talent .post-content a:not([class*="text-"]):focus {
+body.post-type-archive-talent .rich-text a:not([class*="text-"]):hover, body.single-talent .rich-text a:not([class*="text-"]):hover, body.post-type-archive-talent .rich-text a:not([class*="text-"]):focus, body.single-talent .rich-text a:not([class*="text-"]):focus {
   color: #ff0;
 }
 
-body.page-id-13 .post-content a:not([class*="text-"]):hover, body.page-id-13 .post-content a:not([class*="text-"]):focus {
+body.page-id-13 .rich-text a:not([class*="text-"]):hover, body.page-id-13 .rich-text a:not([class*="text-"]):focus {
   color: #fff;
 }
 

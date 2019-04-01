@@ -4,22 +4,17 @@
  */
 ?>
 
-<main class="info-section flex-grow">
+<main class="flex-grow">
 
-	<article class="base-col">
+	<article class="">
 
-		<header class="page-header py-20 px-40 text-24 font-oswald uppercase border-b">
-			<h1 class="text-20 lg:text-41 leading-normal"><?php the_title(); ?></h1>
-		</header>
+		<?php set_query_var( 'title', get_the_title() ); ?>
+		<?php get_template_part( 'template-parts/blocks/header' ); ?>
 
-		<div class="page-content"><?php the_content(); ?></div>
+		<div class="rich-text">
+			<?php get_template_part( 'template-parts/blocks/acf-flexible-content/content' ); ?>
+		</div>
 
 	</article>
 
-	<aside class="col">
-		<p><strong><?php the_field( 'subtitle' ); ?></strong></p>
-	</aside>
-
 </main>
-
-<?php get_template_part( 'template-parts/blocks/acf-flexible-content/content' ); ?>

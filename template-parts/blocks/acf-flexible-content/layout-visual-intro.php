@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for Visual intro layout
+ * ⛔️ Template part for Visual intro layout
  */
 
 $slider  = get_sub_field( 'slider' );
