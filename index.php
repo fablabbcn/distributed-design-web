@@ -32,6 +32,4 @@
 </main>
 
 
-<?php get_template_part( 'template-parts/logos' ); ?>
-
 <?php get_footer(); ?>

@@ -17,8 +17,6 @@ if ( $is_single_event ) {
 
 	get_template_part( 'template-parts/forms/index' );
 
-	get_template_part( 'template-parts/logos' );
-
 } elseif ( have_posts() ) {
 	while ( have_posts() ) {
 		the_post();

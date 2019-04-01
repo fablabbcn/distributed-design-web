@@ -2,9 +2,9 @@
 
 
 // Register options page.
-// if ( function_exists( 'acf_add_options_page' ) ) {
-// 	acf_add_options_page();
-// }
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page();
+}
 
 
 // Set a new location to save ACF field group JSON.
