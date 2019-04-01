@@ -19,7 +19,7 @@ $classes = array(
 ?>
 
 
-<aside class="fl single_third-column text-center">
+<aside class="text-center">
 
 	<nav>
 		<a class="flex justify-center items-center no-underline" href="<?php echo esc_url( get_post_type_archive_link( $post_type ) ); ?>">

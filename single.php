@@ -13,47 +13,12 @@ get_header(); ?>
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 
+
 		<section class="cf bootstrap-wrapper post-content rich-text">
 			<div class="row row-eq-height">
-
-				<?php if ( 'talent' !== $post_type ) : ?>
-					<div class="fl single_first-column">
-						<p class="b"><?php the_field( 'left_column_heading' ); ?></p>
-						<p>-</p>
-						<p><?php the_field( 'left_column_subheading' ); ?></p>
-						<p class="absolute bottom-2 b"><?php the_field( 'left_column_bottom' ); ?></p>
-					</div>
-
-				<?php else : ?>
-					<div class="fl single_first-column">
-						<?php get_template_part( 'template-parts/post/talent', 'info' ); ?>
-					</div>
-
-				<?php endif; ?>
-
-
-				<?php if ( get_field( 'featured_image_alt' ) ) : ?>
-					<div class="fl single_second-column flex flex-col">
-						<?php $slider = array( 'images' => get_field( 'featured_image_alt' ) ?: array() ); ?>
-						<?php require locate_template( 'template-parts/blocks/slider.php' ); ?>
-						<?php if ( get_field( 'subtitle' ) ) : ?>
-							<div class="mt-auto px-15 lg:px-40 py-20 border-t">
-								<div class="text-36 font-oswald uppercase"><?php the_field( 'subtitle' ); ?></div>
-							</div>
-						<?php endif; ?>
-					</div>
-
-				<?php else : ?>
-					<div class="fl single_second-column bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
-						<?php the_post_thumbnail(); ?>
-					</div>
-
-				<?php endif; ?>
-
-
-				<?php get_template_part( 'template-parts/post/aside' ); ?>
-
-
+				<div class="fl single_first-column"><?php get_template_part( 'template-parts/singular/side' ); ?></div>
+				<div class="fl single_second-column flex flex-col"><?php get_template_part( 'template-parts/singular/hero' ); ?></div>
+				<div class="fl single_third-column"><?php get_template_part( 'template-parts/post/aside' ); ?></div>
 			</div>
 		</section>
 

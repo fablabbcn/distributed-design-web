@@ -17,13 +17,15 @@ if ( $is_single_event ) {
 
 	get_template_part( 'template-parts/forms/index' );
 
-} elseif ( have_posts() ) {
-	while ( have_posts() ) {
-		the_post();
-		get_template_part( 'template-parts/page/content', is_front_page() ? 'frontpage' : 'page' );
-	}
 } else {
-	get_template_part( 'template-parts/post/content', 'none' );
+	if ( have_posts() ) {
+		while ( have_posts() ) {
+			the_post();
+			get_template_part( 'template-parts/page/content', is_front_page() ? 'frontpage' : 'page' );
+		}
+	} else {
+		get_template_part( 'template-parts/post/content', 'none' );
+	}
 }
 
 
