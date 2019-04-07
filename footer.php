@@ -27,7 +27,7 @@ $logo = array(
 
 	</div>
 
-	<?php wp_footer(); ?>
+	<div id="wp-footer"><?php wp_footer(); ?></div>
 
 </body>
 </html>
