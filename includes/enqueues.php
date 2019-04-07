@@ -14,10 +14,10 @@ function the_theme_scripts() {
 
 	wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/assets/css/main.css', null, time() );
 
-	wp_enqueue_script( 'bootstrap-min', get_stylesheet_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'accordion', get_stylesheet_directory_uri() . '/assets/js/accordion.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'slick-min', get_stylesheet_directory_uri() . '/assets/js/slick.min.js', array( 'jquery' ), false, true );
-	// wp_enqueue_script( 'placeholders', get_stylesheet_directory_uri() . '/assets/js/placeholders.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'bootstrap-min', get_stylesheet_directory_uri() . '/assets/js/vendor/bootstrap.min.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'accordion', get_stylesheet_directory_uri() . '/assets/js/vendor/accordion.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'slick-min', get_stylesheet_directory_uri() . '/assets/js/vendor/slick.min.js', array( 'jquery' ), false, true );
+	// wp_enqueue_script( 'placeholders', get_stylesheet_directory_uri() . '/assets/js/vendor/placeholders.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), time(), true );
 
 	$js_names = array(
@@ -35,8 +35,8 @@ function the_theme_scripts() {
 		'apiUrl'   => get_rest_url(),
 	);
 
-	wp_enqueue_script( 'theme-scripts', get_template_directory_uri() . '/assets/js/theme-scripts.js', $js_names, false, true );
-	wp_localize_script( 'theme-scripts', 'wpHelper', $localize_arr );
+	wp_enqueue_script( 'theme', get_template_directory_uri() . '/assets/js/theme.js', $js_names, false, true );
+	wp_localize_script( 'theme', 'wpHelper', $localize_arr );
 
 } add_action( 'wp_enqueue_scripts', 'the_theme_scripts' );
 
