@@ -5,7 +5,7 @@
 
 		<figure class="slide-item">
 			<?php if ( $logo['link'] ) : ?>
-			<a href="<?php echo esc_attr( $logo['link'] ); ?>" target="_blank">
+			<a href="<?php echo esc_attr( $logo['link']['url'] ); ?>" target="<?php echo esc_attr( $logo['link']['target'] ); ?>">
 				<img src="<?php echo esc_attr( $logo['image']['sizes']['icon-thumbnails'] ); ?>" alt="<?php echo esc_attr( $logo['image']['alt'] ); ?>">
 			</a>
 
