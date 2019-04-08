@@ -2,7 +2,18 @@
 /**
  * The template for displaying all single posts
  */
-get_header(); ?>
+
+get_header();
+
+$s_classes = array(
+	'columns' => array(
+		array( 'w-full lg:w-1/3 p-20 lg:px-40 border-t' ),
+		array( 'w-full lg:w-2/3 flex-1 p-20 lg:px-40 border-t lg:border-l' ),
+		array( 'w-full lg:w-auto p-20 lg:px-40 border-t lg:border-l' ),
+	),
+);
+
+?>
 
 
 <main>
@@ -13,14 +24,24 @@ get_header(); ?>
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 
+		<?php if ( 'talent' === $post_type ) : ?>
+			<section class="post-content rich-text">
+				<div class="flex flex-wrap lg:flex-no-wrap">
+					<div class="<?php the_classes( $s_classes['columns'][0] ); ?>"><?php get_template_part( 'template-parts/singular/side' ); ?></div>
+					<div class="<?php the_classes( $s_classes['columns'][1] ); ?>"><?php get_template_part( 'template-parts/singular/hero' ); ?></div>
+					<div class="<?php the_classes( $s_classes['columns'][2] ); ?>"><?php get_template_part( 'template-parts/post/aside' ); ?></div>
+				</div>
+			</section>
 
-		<section class="cf bootstrap-wrapper post-content rich-text">
-			<div class="row row-eq-height">
-				<div class="fl single_first-column"><?php get_template_part( 'template-parts/singular/side' ); ?></div>
-				<div class="fl single_second-column flex flex-col"><?php get_template_part( 'template-parts/singular/hero' ); ?></div>
-				<div class="fl single_third-column"><?php get_template_part( 'template-parts/post/aside' ); ?></div>
-			</div>
-		</section>
+		<?php else : ?>
+			<section class="cf bootstrap-wrapper post-content rich-text">
+				<div class="row row-eq-height">
+					<div class="fl single_first-column"><?php get_template_part( 'template-parts/singular/side' ); ?></div>
+					<div class="fl single_second-column flex flex-col"><?php get_template_part( 'template-parts/singular/hero' ); ?></div>
+					<div class="fl single_third-column"><?php get_template_part( 'template-parts/post/aside' ); ?></div>
+				</div>
+			</section>
+		<?php endif; ?>
 
 
 		<?php if ( have_rows( 'post_content' ) ) : ?>

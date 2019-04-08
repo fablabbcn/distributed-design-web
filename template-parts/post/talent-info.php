@@ -1,7 +1,7 @@
 <section class="flex flex-col">
 
 	<header>
-		<figure class="-mt-20 -mx-40 mb-20">
+		<figure class="-mt-20 -mx-20 lg:-mx-40 mb-20">
 			<?php echo wp_get_attachment_image( get_field( 'image' ), 'post-thumbnail', false, array( 'class' => 'block w-full' ) ); ?>
 		</figure>
 		<p class="text-36 font-oswald uppercase"><?php the_field( 'name' ); ?></p>
@@ -9,16 +9,16 @@
 
 	<div class="my-20">
 		<?php if ( get_field( 'profession' ) ) : ?>
-			<p class=""><span class="font-bold">Profession:</span> <?php the_field( 'profession' ); ?></p>
+			<p style="margin-top: 0;"><span class="font-bold">Profession:</span> <?php the_field( 'profession' ); ?></p>
 		<?php endif; ?>
 		<?php if ( get_field( 'project' ) ) : ?>
-			<p class=""><span class="font-bold">Project:</span> <?php the_field( 'project' ); ?></p>
+			<p style="margin-top: 0;"><span class="font-bold">Project:</span> <?php the_field( 'project' ); ?></p>
 		<?php endif; ?>
 		<?php if ( get_field( 'city' ) ) : ?>
-			<p class=""><span class="font-bold">Based in:</span> <?php the_field( 'city' ); ?></p>
+			<p style="margin-top: 0;"><span class="font-bold">Based in:</span> <?php the_field( 'city' ); ?></p>
 		<?php endif; ?>
 		<?php if ( get_field( 'organization' ) ) : ?>
-			<p class=""><span class="font-bold">Platform Member:</span> <?php the_field( 'organization' ); ?></p>
+			<p style="margin-top: 0;"><span class="font-bold">Platform Member:</span> <?php the_field( 'organization' ); ?></p>
 		<?php endif; ?>
 	</div>
 

@@ -7,7 +7,7 @@
 	</div>
 
 <?php else : ?>
-	<div><?php get_template_part( 'template-parts/post/talent', 'info' ); ?></div>
+	<?php get_template_part( 'template-parts/post/talent', 'info' ); ?>
 
 
 <?php endif; ?>
