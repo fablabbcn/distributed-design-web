@@ -8,8 +8,7 @@ $description = get_sub_field( 'description' );
 $items       = get_sub_field( 'items' );
 
 $get_cover_classes = function ( $item ) {
-	return implode(
-		' ',
+	return get_the_classes(
 		array(
 			'flex flex-col w-full',
 			'pt-10 px-15 lg:px-10 pb-20 lg:pb-30',

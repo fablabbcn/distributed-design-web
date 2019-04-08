@@ -30,10 +30,10 @@ $classes = array(
 
 	<hr class="flex my-20 -mx-40 border-t border-current">
 
-	<dl class="<?php echo esc_attr( implode( ' ', array_filter( $classes['dl'] ) ) ); ?>">
-		<dt class="<?php echo esc_attr( implode( ' ', array_filter( $classes['dt'] ) ) ); ?>">Share</dt>
+	<dl class="<?php the_classes( $classes['dl'] ); ?>">
+		<dt class="<?php the_classes( $classes['dt'] ); ?>">Share</dt>
 		<?php foreach ( $social_networks as $key => $social_network ) : ?>
-			<dd class="<?php echo esc_attr( implode( ' ', array_filter( $classes['dd'] ) ) ); ?>">
+			<dd class="<?php the_classes( $classes['dd'] ); ?>">
 				<?php echo do_shortcode( '[button_link url="' . $social_links[ $social_network ] . '" icon="' . $social_network . '"]' ); ?>
 			</dd>
 		<?php endforeach; ?>

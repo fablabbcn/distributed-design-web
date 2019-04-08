@@ -53,18 +53,15 @@ $tribe_query = tribe_get_events(
 	$date       = date( 'F', strtotime( "$month/01/2019" ) );
 	$is_current = date( 'F' ) === $date;
 
-	$item_classes = implode(
-		' ',
-		[
-			// $is_current ? '' : 'clip',
-			'border-b',
-		]
+	$item_classes = array(
+		// $is_current ? '' : 'clip',
+		'border-b',
 	);
 
 	?>
 
 	<article id="<?php echo esc_attr( $post_type ) . '-event-' . esc_attr( tribe_get_start_date( null, false, 'm' ) ); ?>-<?php the_ID(); ?>"
-		class="<?php echo esc_attr( $item_classes ); ?>">
+		class="<?php the_classes( $item_classes ); ?>">
 		<div class="beefup <?php echo esc_attr( $post_type ); ?>-item">
 
 			<header class="flex hover:bg-magenta text-24">
