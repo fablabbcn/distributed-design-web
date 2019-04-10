@@ -19,7 +19,7 @@ $dd_classes  = array( 'leading-normal font-semibold' );
 	<a class="group <?php the_classes( $a_classes ); ?>" href="<?php the_permalink(); ?>">
 
 		<div class="relative flex flex-col w-full bg-black">
-			<?php the_post_thumbnail( 'post-list-thumbnails-square', array( 'class' => $img_classes ) ); ?>
+			<?php the_post_thumbnail( 'post-list-thumbnails-square', array( 'class' => get_the_classes( $img_classes ) ) ); ?>
 		</div>
 
 		<div class="flex flex-col w-full group-hocus:bg-yellow">
