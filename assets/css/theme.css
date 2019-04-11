@@ -6681,24 +6681,26 @@ select:focus {
   width: 28.5%;
   padding: 20px 40px;
   position: relative;
-  border-top: 2px solid;
-  border-bottom: 2px solid; }
+  border-top: 2px solid; }
 
 .single_second-column {
   width: 62%;
-  border: 2px solid; }
+  border-top: 2px solid;
+  border-left: 2px solid; }
 
 .single_second-column img {
   visibility: hidden; }
 
 .single_slider-column {
   width: 62%;
-  border: 2px solid; }
+  border-top: 2px solid;
+  border-left: 2px solid; }
 
 .single_third-column {
   width: 9%;
   padding: 20px 40px;
-  position: relative; }
+  position: relative;
+  border-left: 2px solid; }
 
 .post-content {
   width: 100%;

@@ -24,6 +24,7 @@ devDependencies:
   postcss-import: 12.0.1
   postcss-inline-svg: 3.1.1
   postcss-preset-env: 6.6.0
+  postcss-single-line: 1.0.0
   purgecss-with-wordpress: 1.0.0
   stylelint: 9.10.1
   stylelint-config-standard: 18.2.0
@@ -5060,6 +5061,10 @@ packages:
       node: '>=4'
     resolution:
       integrity: sha512-36P2QR59jDTOAiIkqEprfJDsoNrvwFei3eCqKd1Y0tUsBimsq39BLp7RD+JWny3WgB1zGhJX8XVePwm9k4wdBg==
+  /postcss-single-line/1.0.0:
+    dev: true
+    resolution:
+      integrity: sha1-OY9zVYPhYnGaQWmVJUwP3fxlptk=
   /postcss-syntax/0.36.2_postcss@7.0.14:
     dependencies:
       postcss: 7.0.14
@@ -7002,6 +7007,7 @@ specifiers:
   postcss-import: ^12.0.1
   postcss-inline-svg: ^3.1.1
   postcss-preset-env: ^6.6.0
+  postcss-single-line: ^1.0.0
   purgecss-with-wordpress: ^1.0.0
   stylelint: ^9.10.1
   stylelint-config-standard: ^18.2.0

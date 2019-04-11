@@ -25,7 +25,7 @@ $s_classes = array(
 		<?php the_post(); ?>
 
 		<section class="post-content rich-text">
-			<div class="flex flex-wrap lg:flex-no-wrap">
+			<div data-layout class="flex flex-wrap lg:flex-no-wrap">
 				<div class="<?php the_classes( $s_classes['columns'][0] ); ?>"><?php get_template_part( 'template-parts/singular/side' ); ?></div>
 				<div class="<?php the_classes( $s_classes['columns'][1] ); ?>"><?php get_template_part( 'template-parts/singular/hero' ); ?></div>
 				<div class="<?php the_classes( $s_classes['columns'][2] ); ?>"><?php get_template_part( 'template-parts/post/aside' ); ?></div>
@@ -38,7 +38,7 @@ $s_classes = array(
 				<?php if ( count( array_filter( the_row() ) ) > 1 ) : ?>
 
 					<section class="cf bootstrap-wrapper post-content rich-text">
-						<div class="row row-eq-height">
+						<div data-layout class="row row-eq-height">
 
 							<?php if ( 'text_content' === get_row_layout() ) : ?>
 								<div class="fl single_first-column">&nbsp;</div>

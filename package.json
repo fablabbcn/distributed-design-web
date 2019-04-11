@@ -45,6 +45,7 @@
     "postcss-import": "^12.0.1",
     "postcss-inline-svg": "^3.1.1",
     "postcss-preset-env": "^6.6.0",
+    "postcss-single-line": "^1.0.0",
     "purgecss-with-wordpress": "^1.0.0",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0",

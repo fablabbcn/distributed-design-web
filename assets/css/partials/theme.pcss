@@ -56,3 +56,13 @@
 [id*="form-submit"] {
   & [type="radio"]:checked + label { @apply bg-white; }
 }
+
+[data-layout] {
+  @screen lg {
+    @apply mx-0 !important;
+    & > * { box-sizing: border-box; }
+    & > :nth-child(1) { width: calc(28% - 1px) !important; }
+    & > :nth-child(2) { width: calc(63% + 1px) !important; }
+    & > :nth-child(3) { width: 9% !important; }
+  }
+}

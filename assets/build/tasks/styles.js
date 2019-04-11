@@ -88,6 +88,7 @@ function styles () {
       // purgecss(config.purgecss),
       autoprefixer(config.autoprefixer),
       perfectionist(config.perfectionist),
+      require('postcss-single-line'),
     ]))
     .pipe(rename(paths.name))
     .pipe(gulp.dest(paths.dest))

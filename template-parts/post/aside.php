@@ -11,9 +11,9 @@ $social_links    = get_social_links(
 );
 
 $classes = array(
-	'dl' => array( 'flex flex-col justify-center items-center' ),
-	'dt' => array( 'font-oswald font-normal uppercase' ),
-	'dd' => array( 'mt-10' ),
+	'dl' => array( 'flex lg:flex-col lg:justify-center items-center' ),
+	'dt' => array( 'mr-10 lg:mr-0 font-oswald font-normal uppercase' ),
+	'dd' => array( 'm-5 lg:m-0 lg:mt-10' ),
 );
 
 ?>
@@ -28,7 +28,7 @@ $classes = array(
 		</a>
 	</nav>
 
-	<hr class="flex my-20 -mx-40 border-t border-current">
+	<hr class="flex my-20 -mx-20 lg:-mx-40 border-t border-current">
 
 	<dl class="<?php the_classes( $classes['dl'] ); ?>">
 		<dt class="<?php the_classes( $classes['dt'] ); ?>">Share</dt>
