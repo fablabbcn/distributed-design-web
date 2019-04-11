@@ -2,19 +2,16 @@
 
 ## Usage
 
-Just fork this repository, run `yarn` to install all of the dependencies and you should be ready to go.
+Just fork this repository, run `pnpm` to install all of the dependencies and you should be ready to go.
 
-### Default: `gulp`
-Will run the default task (`gulp build`).
-
-### Build: `gulp build`
+### Build: `pnpm run build`
 Will run all of the following tasks sequentially:
-- **`gulp build:styles`:** processes `tailwind-setup.pcss` using PostCSS and a bunch of plugins
-- **`gulp build:icons`:** processes any files on `/assets/img/icons/*.svg` and creates a sprite
-- **`gulp build:pot`:** looks for translatable strings on `*.tiwg` files and creates a `theme.pot` file
+- **`pnpm run build:styles`:** processes `main.pcss` using PostCSS and a bunch of plugins
+- **`pnpm run build:icons`:** processes any files on `/assets/img/icons/*.svg` and creates a sprite
+- **`pnpm run build:pot`:** looks for translatable strings on `*.twig` files and creates a `theme.pot` file
 
-### Watch: `gulp watch`
+### Watch: `pnpm run watch`
 Will watch all of the paths and config files and run the necessary tasks when anything changes:
-- **`gulp watch:styles`:** will run `gulp build:styles` if anything changes
-- **`gulp watch:icons`:** will run `gulp build:icons` if anything changes
-- **`gulp watch:pot`:** will run `gulp build:pot` if anything changes
+- **`pnpm run watch:styles`:** will run `pnpm run build:styles` if anything changes
+- **`pnpm run watch:icons`:** will run `pnpm run build:icons` if anything changes
+- **`pnpm run watch:pot`:** will run `pnpm run build:pot` if anything changes
