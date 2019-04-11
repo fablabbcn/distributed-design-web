@@ -2,36 +2,13 @@
 
 $key = 0;
 
-// $posts_given_term = new WP_Query( array(
-// 	'post_type'      => 'tribe_events',
-// 	'posts_per_page' => '-1',
-// 	'order'          => 'ASC',
-// 	// 'year'           => 2018,
-// 	'meta_query'     => array(),
-// 	// 'tax_query'      => array(
-// 	// 	array(
-// 	// 		'taxonomy' => $taxonomy,
-// 	// 		'field'    => 'slug',
-// 	// 		'terms'    => $term,
-// 	// 	),
-// 	// ),
-// ) );
-
 $tribe_query = tribe_get_events(
 	array(
 		'posts_per_page' => '-1',
 		'order'          => 'DESC',
-
-		'eventDisplay'   => 'custom',
-		'start_date'     => "$term-01-01",
-		'end_date'       => "$term-12-31",
+		'eventDisplay'   => $term->slug,
 	)
 );
-
-// var_dump( $posts_given_term->posts ); THIS WAS THE GOOD ONE
-
-// var_dump( $tribe_query );
-// var_dump( $post_type, $taxonomy, $term );
 
 ?>
 
@@ -40,15 +17,7 @@ $tribe_query = tribe_get_events(
 	<?php setup_postdata( $post ); ?>
 	<?php
 
-	$terms = get_the_terms( get_the_ID(), $taxonomy );
-
-	// $cat_slugs = array_map( function ( $term ) {
-	// 	return $term->slug;
-	// }, $terms );
-
-	// var_dump( $terms, $taxonomy );
-
-
+	$terms      = get_the_terms( get_the_ID(), $taxonomy );
 	$month      = tribe_get_start_date( null, false, 'm' );
 	$date       = date( 'F', strtotime( "$month/01/2019" ) );
 	$is_current = date( 'F' ) === $date;

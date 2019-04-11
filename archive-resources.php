@@ -8,9 +8,18 @@ $tab_taxonomies = array(
 );
 
 $taxonomy = $tab_taxonomies[ $post_type ];
-$terms    = 'tribe_events' === $post_type
-	? array( '2019', '2018' )
-	: get_terms( $taxonomy );
+$terms    = 'tribe_events' !== $post_type
+	? get_terms( $taxonomy )
+	: array(
+		(object) [
+			'name' => 'Upcoming',
+			'slug' => 'upcoming',
+		],
+		(object) [
+			'name' => 'Past',
+			'slug' => 'past',
+		],
+	);
 
 ?>
 
