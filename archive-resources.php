@@ -12,12 +12,14 @@ $terms    = 'tribe_events' !== $post_type
 	? get_terms( $taxonomy )
 	: array(
 		(object) [
-			'name' => 'Upcoming',
-			'slug' => 'upcoming',
+			'name'  => 'Upcoming',
+			'slug'  => 'upcoming',
+			'order' => 'ASC',
 		],
 		(object) [
-			'name' => 'Past',
-			'slug' => 'past',
+			'name'  => 'Past',
+			'slug'  => 'past',
+			'order' => 'DESC',
 		],
 	);
 
