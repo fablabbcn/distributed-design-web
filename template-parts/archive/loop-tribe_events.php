@@ -6,7 +6,8 @@ $tribe_query = tribe_get_events(
 	array(
 		'posts_per_page' => '-1',
 		'order'          => $term->order,
-		'eventDisplay'   => $term->slug,
+		'start_date'     => $term->start_date,
+		'end_date'       => $term->end_date,
 	)
 );
 
