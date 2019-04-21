@@ -122,6 +122,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_5cbc5379af607",
+            "label": "Workplace",
+            "name": "workplace",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5c9283a90c40c",
             "label": "Social Media",
             "name": "social_media",
@@ -216,5 +235,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1553117346
+    "modified": 1555846019
 }

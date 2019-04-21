@@ -20,6 +20,9 @@
 		<?php if ( get_field( 'organization' ) ) : ?>
 			<p style="margin-top: 0;"><span class="font-bold">Platform Member:</span> <?php the_field( 'organization' ); ?></p>
 		<?php endif; ?>
+		<?php if ( get_field( 'workplace' ) ) : ?>
+			<p style="margin-top: 0;"><span class="font-bold">Works at:</span> <?php the_field( 'workplace' ); ?></p>
+		<?php endif; ?>
 	</div>
 
 	<div class="flex flex-wrap -mx-5 mt-15">
