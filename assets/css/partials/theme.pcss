@@ -58,6 +58,10 @@
 }
 
 [data-layout] {
+  &:not(:nth-of-type(1)) > :nth-child(3) {
+    @apply hidden !important;
+  }
+
   @screen lg {
     @apply mx-0 !important;
     & > * { box-sizing: border-box; }
