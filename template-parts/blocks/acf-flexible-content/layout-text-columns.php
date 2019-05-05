@@ -19,7 +19,7 @@ $_columns  = get_sub_field( 'columns' );
 	<div class="lg:flex lg:w-3/4 ml-auto p-10 lg:border-l">
 		<?php foreach ( $_columns as $_column ) : ?>
 			<?php $classes = array( 'w-full p-10', $_column['styles'] ? 'font-oswald uppercase' : '' ); ?>
-			<div class="<?php the_classes( $classes ); ?>"><?php echo wp_kses_post( $_column['text'] ); ?></div>
+			<div class="<?php the_classes( $classes ); ?>"><?php wp_kses_ddmp( $_column['text'] ); ?></div>
 		<?php endforeach; ?>
 	</div>
 

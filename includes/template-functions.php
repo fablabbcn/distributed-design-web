@@ -58,3 +58,19 @@ function set_posts_per_page_for_cpt( $query ) {
 		$query->set( 'posts_per_page', '8' );
 	}
 }
+
+
+/**
+ * Custom wp_kses function:
+ * Allows using [button_link] shortcodes inside the_content.
+ */
+function wp_kses_ddmp( $content ) {
+	$svg_args = array(
+		'svg' => array( 'class' => true ),
+		'use' => array( 'xlink:href' => true ),
+	);
+
+	$allowed_tags = array_merge( wp_kses_allowed_html( 'post' ), $svg_args );
+
+	echo wp_kses( $content, $allowed_tags );
+}
