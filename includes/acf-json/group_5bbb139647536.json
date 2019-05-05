@@ -4,7 +4,7 @@
     "fields": [
         {
             "key": "field_5bbb13d66f46c",
-            "label": "Post Content Repeater",
+            "label": "Post Content",
             "name": "post_content",
             "type": "flexible_content",
             "instructions": "",
@@ -229,7 +229,7 @@
                     "max": ""
                 }
             },
-            "button_label": "Add Row",
+            "button_label": "Add Block",
             "min": "",
             "max": ""
         }
@@ -265,5 +265,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1554056456
+    "modified": 1556729172
 }

@@ -35,7 +35,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -54,7 +54,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -73,7 +73,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -175,7 +175,7 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": 0,
+            "min": 1,
             "max": 0,
             "layout": "table",
             "button_label": "",
@@ -235,5 +235,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1555846019
+    "modified": 1556729105
 }

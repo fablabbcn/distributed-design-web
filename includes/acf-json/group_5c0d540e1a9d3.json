@@ -1,6 +1,6 @@
 {
     "key": "group_5c0d540e1a9d3",
-    "title": "Post: Events",
+    "title": "Post: Events Archive",
     "fields": [
         {
             "key": "field_5c0d540e20762",
@@ -82,5 +82,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1544377379
+    "modified": 1556794075
 }

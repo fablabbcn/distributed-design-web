@@ -3,6 +3,50 @@
     "title": "Post: Header",
     "fields": [
         {
+            "key": "field_5c8d435957b2b",
+            "label": "Featured Image (Alternative)",
+            "name": "featured_image_alt",
+            "type": "gallery",
+            "instructions": "If provided, this will be used instead of the default featured image inside posts. You can add both images and videos to this gallery. If more than one file is selected, it'll show a slider.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "min": "",
+            "max": "",
+            "insert": "append",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5af44e4d71158",
+            "label": "Subtitle",
+            "name": "subtitle",
+            "type": "wysiwyg",
+            "instructions": "Only used on Posts and Talent.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
             "key": "field_5ca1056c5a9a3",
             "label": "Left Column",
             "name": "left_column",
@@ -75,50 +119,6 @@
                     "maxlength": ""
                 }
             ]
-        },
-        {
-            "key": "field_5c8d435957b2b",
-            "label": "Featured Image (Alternative)",
-            "name": "featured_image_alt",
-            "type": "gallery",
-            "instructions": "If provided, this will be used instead of the default featured image inside posts. You can add both images and videos to this gallery. If more than one file is selected, it'll show a slider.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "min": "",
-            "max": "",
-            "insert": "append",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5af44e4d71158",
-            "label": "Subtitle",
-            "name": "subtitle",
-            "type": "wysiwyg",
-            "instructions": "Only used on Posts and Talent.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 0
         }
     ],
     "location": [
@@ -164,5 +164,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1554056710
+    "modified": 1556739414
 }

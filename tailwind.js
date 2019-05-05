@@ -183,6 +183,7 @@ module.exports = {
 
   borderRadius: {
     default: '0.25rem',
+    '0': '0',
     'full': '9999px',
   },
 
@@ -259,6 +260,9 @@ module.exports = {
 
   opacity: {
     '0': '0',
+    '2': '0.025',
+    '5': '0.05',
+    '10': '0.1',
     '30': '0.3',
     '70': '0.7',
     '100': '1',
@@ -338,7 +342,7 @@ module.exports = {
     tracking: [],
     userSelect: false,
     verticalAlign: false,
-    visibility: false,
+    visibility: [],
     whitespace: [],
     width: ['responsive'],
     zIndex: [],
@@ -361,7 +365,9 @@ module.exports = {
   plugins: [
     require('tailwindcss-interaction-variants')(),
 
-    require('tailwindcss-alpha')(),
+    require('tailwindcss-alpha')({
+      modules: { backgroundColors: true, textColors: true },
+    }),
     require('tailwindcss-inset')({
       insets: { 'full': '100%' },
     }),

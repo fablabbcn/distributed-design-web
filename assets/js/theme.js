@@ -18,7 +18,7 @@
 
     // Forms: Login && Submit
     jQuery('[id*="form-login"]').on('submit', ajaxLoginUser)
-    jQuery('[id*="form-submit"]').on('submit', ajaxPostShare)
+    // jQuery('[id*="form-submit"]').on('submit', ajaxPostShare)
   })
 
   function goToHash (url) {

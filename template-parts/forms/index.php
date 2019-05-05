@@ -17,6 +17,60 @@ $form_classes = array(
 	'radio'           => 'flex-grow w-full mb-0 mx-5 p-20 text-16 md:text-17 text-center font-medium uppercase border cursor-pointer',
 );
 
+$form_settings = array(
+	'post'         => array(
+		'form'         => false,
+		'post_id'      => 'new_post',
+		'post_title'   => true,
+		'post_content' => false,
+		'field_groups' => array(
+			'group_5af44e07d13fc',
+			'group_5bbb139647536',
+		),
+		'new_post'     => array(
+			'post_type'   => $post_type,
+			'post_author' => 2,
+			'post_status' => 'draft',
+		),
+	),
+	'talent'       => array(
+		'form'         => false,
+		'post_id'      => 'new_post',
+		'post_title'   => true,
+		'post_content' => false,
+		'field_groups' => array(
+			'group_5af44e07d13fc',
+			'group_5bf1a9076319c',
+			'group_5bbb139647536',
+		),
+		'new_post'     => array(
+			'post_type'   => $post_type,
+			'post_author' => 2,
+			'post_status' => 'draft',
+		),
+	),
+	'tribe_events' => array(
+		'form'         => false,
+		'post_id'      => 'new_post',
+
+		'post_title'   => true,
+		'post_content' => false,
+		'field_groups' => array(
+			'group_5af44e07d13fc',
+			'group_5c0d540e1a9d3',
+			'group_5bbb139647536',
+			'group_5ccacc99d6a1d', // Last field-group to prevent tabs from hiding the content group 🤷‍♂️
+		),
+		// 'fields'       => false,
+
+		'new_post'     => array(
+			'post_type'   => $post_type,
+			'post_author' => 2,
+			'post_status' => 'draft',
+		),
+	),
+);
+
 ?>
 
 
@@ -31,18 +85,19 @@ $form_classes = array(
 
 			<div id="<?php echo esc_attr( $form_id ); ?>" class="clip absolute pin-x pin-b">
 				<button data-clip="<?php echo esc_attr( $form_id ); ?>" class="fixed pin w-full h-full bg-black-20 cursor-pointer"></button>
-				<form action="" method="post" class="<?php echo esc_attr( $form_classes['form'] ); ?>" enctype="multipart/form-data">
+
+				<form id="acf-form" class="acf-form <?php echo esc_attr( $form_classes['form'] ); ?>" action="" method="post" enctype="multipart/form-data">
+
+					<?php acf_form( $form_settings[ $post_type ] ); ?>
 
 					<?php set_query_var( 'form_id', $form_id ); ?>
 					<?php set_query_var( 'post_type', $post_type ); ?>
 					<?php set_query_var( 'form_classes', $form_classes ); ?>
-					<?php get_template_part( $form_path ); ?>
+					<?php // get_template_part( $form_path ); ?>
 
-					<div class="-mt-border">
-						<button type="submit" class="<?php echo esc_attr( $form_classes['button'] ); ?>">
-							<span><?php echo esc_attr( is_user_logged_in() ? 'Submit' : 'Sign In' ); ?></span>
-						</button>
-					</div>
+					<button type="submit" class="<?php echo esc_attr( $form_classes['button'] ); ?>">
+						<span><?php echo esc_attr( is_user_logged_in() ? 'Submit' : 'Sign In' ); ?></span>
+					</button>
 
 				</form>
 			</div>

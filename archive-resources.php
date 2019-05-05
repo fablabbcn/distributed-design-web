@@ -30,6 +30,7 @@ $terms    = 'tribe_events' !== $post_type
 ?>
 
 
+<?php acf_form_head(); ?>
 <?php get_header(); ?>
 
 <article class="flex-1">
