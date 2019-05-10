@@ -10,9 +10,9 @@ $post = $_post ?: $post;
 
 $s_classes = array(
 	'columns' => array(
-		array( 'w-full lg:w-1/4 p-20 lg:px-40 border-t' ),
-		array( 'w-full lg:w-3/4 p-20 lg:px-40 border-t lg:border-l' ),
-		array( 'w-full lg:w-auto p-20 lg:px-40 border-t lg:border-l' ),
+		array( 'flex flex-col w-full lg:w-1/4 p-20 lg:px-40 border-t' ),
+		array( 'flex flex-col w-full lg:w-3/4 p-20 lg:px-40 border-t lg:border-l' ),
+		array( 'flex flex-col w-full lg:w-auto p-20 lg:px-40 border-t lg:border-l' ),
 	),
 );
 

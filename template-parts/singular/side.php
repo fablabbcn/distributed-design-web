@@ -1,5 +1,5 @@
 <?php if ( 'talent' !== $post_type ) : ?>
-	<div>
+	<div class="relative flex-1">
 		<p class="b"><?php the_field( 'left_column_heading' ); ?></p>
 		<p>-</p>
 		<p><?php the_field( 'left_column_subheading' ); ?></p>
