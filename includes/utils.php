@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Handle classes arrays.
+ * Handle className arrays.
  */
 function get_the_classes( $classes ) {
 	return implode( ' ', array_filter( $classes ) );
@@ -9,6 +9,20 @@ function get_the_classes( $classes ) {
 
 function the_classes( $classes ) {
 	echo esc_attr( get_the_classes( $classes ) );
+}
+
+
+/**
+ * Handle template names.
+ */
+function get_page_template_id( $template ) {
+	return get_pages(
+		array(
+			'meta_key'     => '_wp_page_template',
+			'meta_value'   => "template-$template.php",
+			'hierarchical' => false,
+		)
+	);
 }
 
 
