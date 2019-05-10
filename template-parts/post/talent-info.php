@@ -1,3 +1,16 @@
+<?php
+
+$talent_features = array(
+	array( 'profession', 'Profession:' ),
+	array( 'project', 'Project:' ),
+	array( 'city', 'Based in:' ),
+	array( 'organization', 'Platform Member:' ),
+	array( 'workplace', 'Works at:' ),
+);
+
+?>
+
+
 <section class="flex flex-col">
 
 	<header>
@@ -8,30 +21,21 @@
 	</header>
 
 	<div class="my-20">
-		<?php if ( get_field( 'profession' ) ) : ?>
-			<p style="margin-top: 0;"><span class="font-bold">Profession:</span> <?php the_field( 'profession' ); ?></p>
-		<?php endif; ?>
-		<?php if ( get_field( 'project' ) ) : ?>
-			<p style="margin-top: 0;"><span class="font-bold">Project:</span> <?php the_field( 'project' ); ?></p>
-		<?php endif; ?>
-		<?php if ( get_field( 'city' ) ) : ?>
-			<p style="margin-top: 0;"><span class="font-bold">Based in:</span> <?php the_field( 'city' ); ?></p>
-		<?php endif; ?>
-		<?php if ( get_field( 'organization' ) ) : ?>
-			<p style="margin-top: 0;"><span class="font-bold">Platform Member:</span> <?php the_field( 'organization' ); ?></p>
-		<?php endif; ?>
-		<?php if ( get_field( 'workplace' ) ) : ?>
-			<p style="margin-top: 0;"><span class="font-bold">Works at:</span> <?php the_field( 'workplace' ); ?></p>
-		<?php endif; ?>
+		<?php foreach ( $talent_features as $talent_feature ) : ?>
+			<p style="margin-top: 0;">
+				<span class="font-bold"><?php echo esc_html( $talent_feature[1] ); ?></span>
+				<span><?php the_field( $talent_feature[0] ); ?></span>
+			</p>
+		<?php endforeach; ?>
 	</div>
 
 	<div class="flex flex-wrap -mx-5 mt-15">
-		<?php $social_links = get_field( 'social_media' )['links']; ?>
-		<?php require locate_template( 'template-parts/blocks/social-links.php' ); ?>
+			<?php $social_links = get_field( 'social_media' )['links']; ?>
+			<?php require locate_template( 'template-parts/blocks/social-links.php' ); ?>
 	</div>
 
 	<p class="font-oswald text-center uppercase">
-		<?php foreach ( get_field( 'buttons' ) ?: array() as $button ) : ?>
+			<?php foreach ( get_field( 'buttons' ) ?: array() as $button ) : ?>
 			<a class="block w-full my-20 px-20 py-10 hocus:text-black hocus:bg-primary no-underline border"
 				href="<?php echo esc_url( $button['url'] ); ?>"><?php echo esc_html( $button['label'] ); ?></a>
 		<?php endforeach; ?>
