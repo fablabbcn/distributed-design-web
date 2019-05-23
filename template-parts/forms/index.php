@@ -88,13 +88,16 @@ $form_settings = array(
 
 				<form id="acf-form" class="acf-form <?php echo esc_attr( $form_classes['form'] ); ?>" action="" method="post" enctype="multipart/form-data">
 
-					<?php acf_form( $form_settings[ $post_type ] ); ?>
+					<?php if ( is_user_logged_in() ) : ?>
+						<?php acf_form( $form_settings[ $post_type ] ); ?>
 
-					<?php set_query_var( 'form_id', $form_id ); ?>
-					<?php set_query_var( 'post_type', $post_type ); ?>
-					<?php set_query_var( 'form_classes', $form_classes ); ?>
-					<?php // get_template_part( $form_path ); ?>
+					<?php else : ?>
+						<?php set_query_var( 'form_id', $form_id ); ?>
+						<?php set_query_var( 'post_type', $post_type ); ?>
+						<?php set_query_var( 'form_classes', $form_classes ); ?>
+						<?php get_template_part( $form_path ); ?>
 
+					<?php endif; ?>
 					<button type="submit" class="<?php echo esc_attr( $form_classes['button'] ); ?>">
 						<span><?php echo esc_attr( is_user_logged_in() ? 'Submit' : 'Sign In' ); ?></span>
 					</button>
