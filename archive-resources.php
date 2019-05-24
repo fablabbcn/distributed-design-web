@@ -30,7 +30,6 @@ $terms    = 'tribe_events' !== $post_type
 ?>
 
 
-<?php acf_form_head(); ?>
 <?php get_header(); ?>
 
 <article class="flex-1">
@@ -47,9 +46,5 @@ $terms    = 'tribe_events' !== $post_type
 	<?php // <div class="col"></div> ?>
 
 </article>
-
-
-<?php get_template_part( 'template-parts/forms/index' ); ?>
-
 
 <?php get_footer(); ?>
