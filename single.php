@@ -26,12 +26,13 @@ $s_classes = array(
 
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
+		<?php $post = $_post ?: $post; ?>
 
 		<section class="post-content rich-text">
 			<div data-layout class="flex flex-wrap lg:flex-no-wrap">
-				<div class="<?php the_classes( $s_classes['columns'][0] ); ?>"><?php get_template_part( 'template-parts/singular/side' ); ?></div>
-				<div class="<?php the_classes( $s_classes['columns'][1] ); ?>"><?php get_template_part( 'template-parts/singular/hero' ); ?></div>
-				<div class="<?php the_classes( $s_classes['columns'][2] ); ?>"><?php get_template_part( 'template-parts/post/aside' ); ?></div>
+				<div class="<?php the_classes( $s_classes['columns'][0] ); ?>"><?php include locate_template( 'template-parts/singular/side.php' ); ?></div>
+				<div class="<?php the_classes( $s_classes['columns'][1] ); ?>"><?php include locate_template( 'template-parts/singular/hero.php' ); ?></div>
+				<div class="<?php the_classes( $s_classes['columns'][2] ); ?>"><?php include locate_template( 'template-parts/post/aside.php' ); ?></div>
 			</div>
 		</section>
 
