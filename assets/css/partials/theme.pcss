@@ -58,9 +58,9 @@
 }
 
 [data-layout] {
-  &:not(:nth-of-type(1)) > :nth-child(3) {
-    @apply hidden !important;
-  }
+  @nest .bootstrap-wrapper & > :nth-child(1) { width: calc(35% - 1px) !important; }
+  @nest .bootstrap-wrapper & > :nth-child(2) { width: calc(65% + 1px) !important; }
+  @nest .bootstrap-wrapper & > :nth-child(3) { @apply hidden !important; }
 
   @screen lg {
     @apply mx-0 !important;

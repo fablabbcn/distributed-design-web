@@ -25,36 +25,20 @@ msgstr ""
 msgid "Oops! That page can&rsquo;t be found."
 msgstr ""
 
-#: footer copy.php:5, header.php:39
+#: header.php:37
+msgid "DDMP"
+msgstr ""
+
+#: header.php:39
 msgid "Distributed Design"
 msgstr ""
 
-#: footer copy.php:5, header.php:40
+#: header.php:40
 msgid "Market Platform"
 msgstr ""
 
-#: footer copy.php:22
-msgid "$contact_info"
-msgstr ""
-
-#: functions.php:24
-msgid "Primary Navigation"
-msgstr ""
-
-#: functions.php:25
-msgid "Secondary Navigation"
-msgstr ""
-
-#: functions.php:83
-msgid "Default Sidebar"
-msgstr ""
-
-#: functions.php:85
-msgid "Add widgets here to appear in your sidebar on blog posts"
-msgstr ""
-
-#: header.php:37
-msgid "DDMP"
+#: single-event.php:3
+msgid "Single Event"
 msgstr ""
 
 #: template-archive-events.php:2
@@ -65,6 +49,30 @@ msgstr ""
 msgid "Contact"
 msgstr ""
 
-#: template-parts/post/content-none.php:9
+#: includes/setup.php:24
+msgid "Primary Navigation"
+msgstr ""
+
+#: includes/setup.php:25
+msgid "Secondary Navigation"
+msgstr ""
+
+#: includes/setup.php:63
+msgid "Search Query"
+msgstr ""
+
+#: includes/setup.php:65
+msgid "Go"
+msgstr ""
+
+#: includes/setup.php:83
+msgid "Default Sidebar"
+msgstr ""
+
+#: includes/setup.php:85
+msgid "Add widgets here to appear in your sidebar on blog posts"
+msgstr ""
+
+#: template-parts/post/content-none.php:11
 msgid "Nothing was found"
 msgstr ""
