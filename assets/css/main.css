@@ -5005,10 +5005,24 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
 [id*="form-submit"] [type="radio"]:checked + label { background-color: #fff; }
 
+.bootstrap-wrapper [data-layout] > * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .bootstrap-wrapper [data-layout] > :nth-child(1) {
   width: -webkit-calc(35% - 1px) !important;
   width: -moz-calc(35% - 1px) !important;
   width: calc(35% - 1px) !important;
+}
+
+@media (min-width: 992px) {
+  .bootstrap-wrapper [data-layout] > :nth-child(1) {
+    width: -webkit-calc(28% - 1px) !important;
+    width: -moz-calc(28% - 1px) !important;
+    width: calc(28% - 1px) !important;
+  }
 }
 
 .bootstrap-wrapper [data-layout] > :nth-child(2) {
@@ -5017,7 +5031,22 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   width: calc(65% + 1px) !important;
 }
 
+@media (min-width: 992px) {
+  .bootstrap-wrapper [data-layout] > :nth-child(2) {
+    width: -webkit-calc(63% + 1px) !important;
+    width: -moz-calc(63% + 1px) !important;
+    width: calc(63% + 1px) !important;
+  }
+}
+
 .bootstrap-wrapper [data-layout] > :nth-child(3) { display: none !important; }
+
+@media (min-width: 992px) {
+  .bootstrap-wrapper [data-layout] > :nth-child(3) {
+    width: 9% !important;
+    display: block !important;
+  }
+}
 
 @media (min-width: 992px) {
   [data-layout] {

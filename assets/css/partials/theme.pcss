@@ -58,9 +58,22 @@
 }
 
 [data-layout] {
-  @nest .bootstrap-wrapper & > :nth-child(1) { width: calc(35% - 1px) !important; }
-  @nest .bootstrap-wrapper & > :nth-child(2) { width: calc(65% + 1px) !important; }
-  @nest .bootstrap-wrapper & > :nth-child(3) { @apply hidden !important; }
+  @nest .bootstrap-wrapper & > * { box-sizing: border-box; }
+  @nest .bootstrap-wrapper & > :nth-child(1) {
+    width: calc(35% - 1px) !important;
+    @screen lg { width: calc(28% - 1px) !important; }
+  }
+  @nest .bootstrap-wrapper & > :nth-child(2) {
+    width: calc(65% + 1px) !important;
+    @screen lg { width: calc(63% + 1px) !important; }
+  }
+  @nest .bootstrap-wrapper & > :nth-child(3) {
+    @apply hidden !important;
+    @screen lg {
+      width: 9% !important;
+      @apply block !important;
+    }
+  }
 
   @screen lg {
     @apply mx-0 !important;
