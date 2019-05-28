@@ -182,7 +182,7 @@
             "sub_fields": [
                 {
                     "key": "field_5c92abfaf5e9c",
-                    "label": "Name",
+                    "label": "Button Text",
                     "name": "label",
                     "type": "text",
                     "instructions": "e.g Project website, Wikifactory, GitHub…",
@@ -235,5 +235,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559055683
+    "modified": 1559057554
 }

@@ -53,7 +53,7 @@
                 },
                 {
                     "key": "field_5c927f1d005aa",
-                    "label": "Url",
+                    "label": "URL",
                     "name": "url",
                     "type": "url",
                     "instructions": "",
@@ -87,5 +87,5 @@
     "hide_on_screen": "",
     "active": 0,
     "description": "",
-    "modified": 1556729134
+    "modified": 1559057564
 }
