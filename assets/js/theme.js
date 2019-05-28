@@ -12,13 +12,17 @@
       goToHash(window.location.href)
     }
 
+    if (getQueryVariable('updated') === 'true') {
+      window.alert('Your post has been successfully submitted and it\'s being reviewed by our team.')
+      window.history.replaceState({}, document.title, window.location.href.split(window.location.search).join(''))
+    }
+
     $('[data-link-href]').on('click', function () {
       window.location.href = $(this).data('link-href')
     })
 
     // Forms: Login && Submit
     jQuery('[id*="form-login"]').on('submit', ajaxLoginUser)
-    // jQuery('[id*="form-submit"]').on('submit', ajaxPostShare)
   })
 
   function goToHash (url) {
@@ -84,41 +88,14 @@ function ajaxLoginUser (event) {
   })
 }
 
-function ajaxPostShare (event) {
-  event.preventDefault()
+function getQueryVariable (variable) {
+  var query = window.location.search.substring(1)
+  var vars = query.split('&')
 
-  var form = this.querySelector('form')
-  var result = new FormData(form)
-  result.append('action', 'post_share')
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split('=')
+    if (pair[0] === variable) return pair[1]
+  }
 
-  jQuery.ajax({
-    async: false,
-    url: wpHelper.ajaxUrl,
-    type: 'POST',
-    data: result,
-
-    processData: false,
-    contentType: false,
-
-    success: function (data) {
-      console.log('Keep it a 💯', data)
-
-      // Prevent users from changing their definition
-      // jQuery('#input-content, #input-author')
-      //   .attr('readonly', 'readonly')
-      //   .attr('onfocus', 'this.blur()')
-
-      // Show disclaimer message
-      // toggleInputMessages('success')
-
-      // Clear the form to prevent resubmission.
-    },
-    error: function (jqXHR, textStatus, errorThrown) {
-      console.error('It was all good just a week ago…')
-      console.error([ jqXHR, textStatus, errorThrown ])
-
-      // Show disclaimer message
-      // toggleInputMessages('error')
-    },
-  })
+  return (false)
 }
