@@ -158,12 +158,12 @@
             ],
             "display": "seamless",
             "layout": "block",
-            "prefix_label": 0,
+            "prefix_label": 1,
             "prefix_name": 0
         },
         {
             "key": "field_5c92abf2f5e9b",
-            "label": "Buttons",
+            "label": "Links",
             "name": "buttons",
             "type": "repeater",
             "instructions": "",
@@ -182,10 +182,10 @@
             "sub_fields": [
                 {
                     "key": "field_5c92abfaf5e9c",
-                    "label": "Label",
+                    "label": "Name",
                     "name": "label",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "e.g Project website, Wikifactory, GitHub…",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -235,5 +235,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1556729105
+    "modified": 1559055683
 }
