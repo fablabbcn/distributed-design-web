@@ -41,7 +41,7 @@ $s_classes = array(
 			<?php while ( have_rows( 'post_content' ) ) : ?>
 				<?php if ( count( array_filter( the_row() ) ) > 1 ) : ?>
 
-					<section class="cf bootstrap-wrapper post-content rich-text">
+					<section class="relative cf bootstrap-wrapper post-content rich-text">
 						<div data-layout class="row row-eq-height">
 
 							<?php if ( 'text_content' === get_row_layout() ) : ?>
