@@ -22,10 +22,12 @@ $talent_features = array(
 
 	<div class="my-20">
 		<?php foreach ( $talent_features as $talent_feature ) : ?>
-			<p style="margin-top: 0;">
-				<span class="font-bold"><?php echo esc_html( $talent_feature[1] ); ?></span>
-				<span><?php the_field( $talent_feature[0] ); ?></span>
-			</p>
+			<?php if ( get_field( $talent_feature[0] ) ) : ?>
+				<p style="margin-top: 0;">
+					<span class="font-bold"><?php echo esc_html( $talent_feature[1] ); ?></span>
+					<span><?php the_field( $talent_feature[0] ); ?></span>
+				</p>
+			<?php endif; ?>
 		<?php endforeach; ?>
 	</div>
 
