@@ -42,7 +42,7 @@ function login( $request ) {
 			'user_password' => $request['password'],
 			'remember'      => true,
 		),
-		false
+		is_ssl()
 	);
 
 	// if ( is_wp_error( $user ) ) {
