@@ -5162,7 +5162,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
 #acf-form .acf-form-fields .acf-input i.acf-icon { display: none; }
 
-#acf-form .acf-form-fields .acf-input input, #acf-form .acf-form-fields .acf-input select {
+#acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > input, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > select, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > textarea {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -moz-box-flex: 1;
@@ -5174,6 +5174,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   font-size: 16px;
   background-color: #fff;
   border-width: 2px;
+  border-style: solid;
   border-color: #000;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -5181,8 +5182,14 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 }
 
 @media (min-width: 768px) {
-  #acf-form .acf-form-fields .acf-input input, #acf-form .acf-form-fields .acf-input select { font-size: 17px; }
+  #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > input, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > select, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > textarea { font-size: 17px; }
 }
+
+#acf-form .acf-form-fields .acf-input { /*
+      & .quicktags-toolbar {
+        @apply flex-grow w-full h-auto text-16 bg-white border border-b-0 border-solid border-black rounded-0;
+        @screen md { @apply text-17; }
+      } */ }
 
 #acf-form .acf-form-fields .acf-switch {
   /* background-color: #f55e4f; */
@@ -5249,6 +5256,12 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 }
 
 #acf-form .acf-form-fields .acf-table .acf-th label { font: inherit; }
+
+#acf-form .acf-form-fields .acf-table .acf-th .description { display: inline; }
+
+#acf-form .acf-form-fields .acf-table .acf-th .description::before { content: '('; }
+
+#acf-form .acf-form-fields .acf-table .acf-th .description::after { content: ')'; }
 
 #acf-form .acf-form-fields .acf-table .acf-row:nth-of-type(even) { background-color: rgba(0, 0, 0, 0.05); }
 
@@ -5401,6 +5414,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   font-size: 16px !important;
   font-family: Oswald, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif !important;
   font-weight: 500 !important;
+  text-align: center !important;
   text-transform: uppercase !important;
   text-decoration: none !important;
   border-width: 2px !important;
@@ -5427,7 +5441,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   border-color: #000;
 }
 
-#acf-form .acf-form-fields .acf-editor-wrap .mce-top-part, #acf-form .acf-form-fields .acf-editor-wrap .mce-edit-area, #acf-form .acf-form-fields .acf-editor-wrap .mce-statusbar {
+#acf-form .acf-form-fields .acf-editor-wrap .mce-top-part, #acf-form .acf-form-fields .acf-editor-wrap .mce-edit-area, #acf-form .acf-form-fields .acf-editor-wrap .mce-statusbar, #acf-form .acf-form-fields .acf-editor-wrap .quicktags-toolbar, #acf-form .acf-form-fields .acf-editor-wrap textarea.wp-editor-area {
   margin: -2px !important;
   border-width: 2px !important;
   border-style: solid !important;
@@ -5483,11 +5497,11 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   -moz-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-  -moz-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 #acf-form .acf-form-fields .acf-gallery .acf-gallery-main .acf-gallery-toolbar .acf-hl::before, #acf-form .acf-form-fields .acf-gallery .acf-gallery-main .acf-gallery-toolbar .acf-hl::after { content: none; }

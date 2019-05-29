@@ -47,10 +47,15 @@
     & .acf-input {
       & i.acf-icon { @apply hidden; }
 
-      & :matches(input, select) {
-        @apply flex-grow w-full h-auto p-20 text-16 bg-white border border-black rounded-0;
+      & :not(.quicktags-toolbar) > :matches(input, select, textarea) {
+        @apply flex-grow w-full h-auto p-20 text-16 bg-white border border-solid border-black rounded-0;
         @screen md { @apply text-17; }
       }
+/*
+      & .quicktags-toolbar {
+        @apply flex-grow w-full h-auto text-16 bg-white border border-b-0 border-solid border-black rounded-0;
+        @screen md { @apply text-17; }
+      } */
     }
 
     & .acf-switch {
@@ -83,6 +88,12 @@
         @apply px-20 py-10 text-16 font-oswald font-medium uppercase;
         @screen md { @apply text-19; }
         & label { font: inherit; }
+
+        & .description {
+          @apply inline;
+          &::before { content: '('; }
+          &::after { content: ')'; }
+        }
       }
 
       & .acf-row {
@@ -146,7 +157,7 @@
     & .acf-button,
     & .acf-gallery-sort {
       @apply inline-block w-auto !important;
-      @apply px-20 py-10 bg-white text-16 font-oswald font-medium uppercase no-underline border !important;
+      @apply px-20 py-10 bg-white text-16 font-oswald font-medium text-center uppercase no-underline border !important;
       @screen md { @apply text-19 !important; }
 
       &:matches(:hover, :focus) { @apply text-black bg-white-70 !important; }
@@ -160,7 +171,7 @@
         @apply border border-b-0 border-solid border-black;
       }
 
-      & :matches(.mce-top-part, .mce-edit-area, .mce-statusbar) {
+      & :matches(.mce-top-part, .mce-edit-area, .mce-statusbar, .quicktags-toolbar, textarea.wp-editor-area) {
         @apply -m-border border border-solid border-black !important;
       }
     }
@@ -175,7 +186,7 @@
 
         & .acf-gallery-toolbar {
           @apply static bg-transparent border-t border-black;
-          & .acf-hl { @apply flex justify-between items-baseline; }
+          & .acf-hl { @apply flex justify-between items-center; }
           & .acf-hl:matches(::before, ::after) { content: none; }
         }
       }

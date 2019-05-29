@@ -5,7 +5,7 @@ $login_url = wp_lostpassword_url( get_permalink() );
 ?>
 
 
-<fieldset class="<?php echo esc_attr( $form_classes['fieldset'] ); ?>">
+<fieldset class="w-full mb-20">
 
 	<p class="mb-20 text-16 md:text-22 font-oswald font-medium md:text-center uppercase">Log In</p>
 
