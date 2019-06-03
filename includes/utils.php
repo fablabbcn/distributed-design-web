@@ -4,7 +4,7 @@
  * Handle className arrays.
  */
 function get_the_classes( $classes ) {
-	return implode( ' ', array_filter( $classes ) );
+	return implode( ' ', array_filter( is_array( $classes ) ? $classes : array( $classes ) ) );
 }
 
 function the_classes( $classes ) {
