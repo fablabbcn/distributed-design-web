@@ -60,7 +60,6 @@ var config = {
     whitelistPatterns: purgecssWordpress.whitelistPatterns.concat(themeWhitelistPatterns),
   },
   autoprefixer: {
-    browsers: ['>= 0%'],
     cascade: false,
   },
   perfectionist: {

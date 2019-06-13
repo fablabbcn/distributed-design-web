@@ -2,26 +2,30 @@
   "name": "llos-template",
   "version": "0.1.0",
   "description": "LLOS& WordPress theme template",
+  "keywords": [
+    "llos&",
+    "template",
+    "theme",
+    "wordpress"
+  ],
+  "homepage": "https://gitlab.com/llos/template#README",
+  "bugs": {
+    "url": "https://gitlab.com/llos/template/issues"
+  },
+  "repository": "git+https://gitlab.com/llos/template.git",
+  "license": "ISC",
+  "author": "LLOS&",
+  "main": "index.js",
   "scripts": {
     "build": "gulp build",
     "watch": "gulp watch"
   },
-  "repository": "git+https://gitlab.com/llos/template.git",
-  "keywords": [
-    "llos&",
-    "wordpress",
-    "template",
-    "theme"
+  "browserslist": [
+    ">= 0%"
   ],
-  "author": "LLOS&",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/llos/template/issues"
-  },
-  "homepage": "https://gitlab.com/llos/template#README",
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^1.1.0",
-    "autoprefixer": "^9.5.0",
+    "autoprefixer": "^9.6.0",
     "del": "^4.0.0",
     "eslint": "^5.15.2",
     "eslint-config-standard": "^12.0.0",
@@ -39,7 +43,7 @@
     "gulp-wp-pot": "^2.3.4",
     "lodash": "^4.17.11",
     "perfectionist": "^2.4.0",
-    "postcss": "^7.0.14",
+    "postcss": "^7.0.17",
     "postcss-easing-gradients": "^3.0.1",
     "postcss-fontpath": "^1.0.0",
     "postcss-import": "^12.0.1",
@@ -47,7 +51,7 @@
     "postcss-preset-env": "^6.6.0",
     "postcss-single-line": "^1.0.0",
     "purgecss-with-wordpress": "^1.0.0",
-    "stylelint": "^10.0.1",
+    "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.2.0",
     "tailwindcss": "^0.7.4",
     "tailwindcss-alpha": "^0.1.4",
@@ -55,6 +59,5 @@
     "tailwindcss-inset": "^1.0.0",
     "tailwindcss-interaction-variants": "^1.0.0",
     "tailwindcss-multi-column": "^0.2.0"
-  },
-  "main": "index.js"
+  }
 }
