@@ -83,26 +83,28 @@ $form_settings = array(
 				<span>Add <?php echo esc_attr( end( explode( '_', $post_type ) ) ); ?></span>
 			</button>
 
-			<div id="<?php echo esc_attr( $form_id ); ?>" class="clip absolute pin-x pin-b">
+			<div id="<?php echo esc_attr( $form_id ); ?>" class="clip z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto">
 				<button data-clip="<?php echo esc_attr( $form_id ); ?>" class="fixed pin w-full h-full bg-black-20 cursor-pointer"></button>
 
-				<form id="acf-form" class="acf-form <?php echo esc_attr( $form_classes['form'] ); ?>" action="" method="post" enctype="multipart/form-data">
+				<div class="flex flex-col w-full my-auto p-20 md:pt-160 md:px-45 md:pb-85">
+					<form id="acf-form" class="acf-form <?php echo esc_attr( $form_classes['form'] ); ?>" action="" method="post" enctype="multipart/form-data">
 
-					<?php if ( is_user_logged_in() ) : ?>
-						<?php acf_form( $form_settings[ $post_type ] ); ?>
+						<?php if ( is_user_logged_in() ) : ?>
+							<?php acf_form( $form_settings[ $post_type ] ); ?>
 
-					<?php else : ?>
-						<?php set_query_var( 'form_id', $form_id ); ?>
-						<?php set_query_var( 'post_type', $post_type ); ?>
-						<?php set_query_var( 'form_classes', $form_classes ); ?>
-						<?php get_template_part( $form_path ); ?>
+						<?php else : ?>
+							<?php set_query_var( 'form_id', $form_id ); ?>
+							<?php set_query_var( 'post_type', $post_type ); ?>
+							<?php set_query_var( 'form_classes', $form_classes ); ?>
+							<?php get_template_part( $form_path ); ?>
 
-					<?php endif; ?>
-					<button type="submit" class="<?php echo esc_attr( $form_classes['button'] ); ?>">
-						<span><?php echo esc_attr( is_user_logged_in() ? 'Submit' : 'Sign In' ); ?></span>
-					</button>
+						<?php endif; ?>
+						<button type="submit" class="<?php echo esc_attr( $form_classes['button'] ); ?>">
+							<span><?php echo esc_attr( is_user_logged_in() ? 'Submit' : 'Sign In' ); ?></span>
+						</button>
 
-				</form>
+					</form>
+				</div>
 			</div>
 
 		</div>

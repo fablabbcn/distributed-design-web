@@ -41,11 +41,14 @@ Array(scale.limit / scale.step).fill()
     scaleObject[(key + 1) * scale.step] = value
   })
 
-const spacing = global.Object.assign({
+const spacing = {
   'px': '1px',
   'border': '2px',
   '0': '0',
-}, scaleObject)
+  ...scaleObject,
+  '85': '85px',
+  '160': '160px',
+}
 
 const sizing = {
   'auto': 'auto',
