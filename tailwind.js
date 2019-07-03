@@ -65,7 +65,8 @@ module.exports = {
   colors: colors,
 
   screens: {
-    'sm': '360px',
+    'xs': '360px',
+    'sm': '480px',
     'md': '768px',
     'lg': '992px',
     'xl': '1200px',
@@ -203,6 +204,8 @@ module.exports = {
     '1/6': '16.66667%',
     '5/6': '83.33333%',
     '1/10': '10%',
+    '3/10': '30%',
+    '7/10': '70%',
     'full': '100%',
     'screen': '100vw',
   }, sizing),

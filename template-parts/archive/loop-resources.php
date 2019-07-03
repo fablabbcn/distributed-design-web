@@ -63,15 +63,15 @@ $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
 
 				</div>
 
-				<div class="beefup__body border-t">
-					<div class="bootstrap-wrapper">
-						<div class="row">
-							<div class="beefup__left-col" style="background: url('<?php the_field( 'featured_image' ); ?>') center no-repeat; background-size: cover;"></div>
-							<div class="beefup__right-col">
-								<div class="cf">
-									<div class="fl w-100 w-50-ns"><?php the_field( 'content_left' ); ?></div>
-									<div class="fl w-100 w-50-ns pl0 pl0-m pl5-ns"><?php the_field( 'content_right' ); ?></div>
-								</div>
+				<div class="beefup__body">
+					<div class="flex flex-wrap border-t">
+						<div class="w-full sm:w-3/10 border-b sm:border-b-0 sm:border-r">
+							<img class="w-full h-full object-cover" src="<?php the_field( 'featured_image' ); ?>" alt="">
+						</div>
+						<div class="w-full sm:w-7/10 p-20 sm:px-40">
+							<div class="cf">
+								<div class="fl w-100 w-50-ns mb-10 sm:mb-0"><?php the_field( 'content_left' ); ?></div>
+								<div class="fl w-100 w-50-ns pl0 pl0-m pl5-ns"><?php the_field( 'content_right' ); ?></div>
 							</div>
 						</div>
 					</div>

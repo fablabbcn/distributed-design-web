@@ -46,13 +46,3 @@
 
 .beefup p + svg { transition: transform 0.25s ease-in-out; }
 .beefup.is-open p + svg { transform: rotate(180deg); }
-
-.beefup__left-col {
-  width: 28.45%;
-  border-right: 2px solid;
-}
-
-.beefup__right-col {
-  width: 71.5%;
-  padding: 20px 40px;
-}
