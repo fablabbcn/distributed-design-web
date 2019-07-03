@@ -31,7 +31,7 @@ $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
 		$terms     = get_the_terms( get_the_ID(), $taxonomy );
 		$cat_slugs = array_map(
 			function ( $term ) {
-					return $term->slug;
+				return $term->slug;
 			},
 			$terms
 		);
@@ -68,10 +68,10 @@ $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
 						<div class="w-full sm:w-3/10 border-b sm:border-b-0 sm:border-r">
 							<img class="w-full h-full object-cover" src="<?php the_field( 'featured_image' ); ?>" alt="">
 						</div>
-						<div class="w-full sm:w-7/10 p-20 sm:px-40">
-							<div class="cf">
-								<div class="fl w-100 w-50-ns mb-10 sm:mb-0"><?php the_field( 'content_left' ); ?></div>
-								<div class="fl w-100 w-50-ns pl0 pl0-m pl5-ns"><?php the_field( 'content_right' ); ?></div>
+						<div class="w-full sm:w-7/10">
+							<div class="flex flex-wrap">
+								<div class="w-full md:w-1/2 p-20 sm:px-40"><?php the_field( 'content_left' ); ?></div>
+								<div class="w-full md:w-1/2 p-20 sm:px-40"><?php the_field( 'content_right' ); ?></div>
 							</div>
 						</div>
 					</div>
