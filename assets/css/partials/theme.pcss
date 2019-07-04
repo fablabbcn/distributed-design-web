@@ -58,29 +58,25 @@
 }
 
 [data-layout] {
-  @nest .bootstrap-wrapper & > * { box-sizing: border-box; }
-  @nest .bootstrap-wrapper & > :nth-child(1) {
-    width: 100% !important;
-    @screen lg { width: calc(28% - 1px) !important; }
-  }
-  @nest .bootstrap-wrapper & > :nth-child(2) {
-    width: 100% !important;
-    @screen lg { width: calc(63% + 1px) !important; }
-  }
-  @nest .bootstrap-wrapper & > :nth-child(3) {
-    @apply hidden !important;
-    @screen lg {
-      width: 9% !important;
-      @apply block !important;
-    }
-  }
-
   @screen lg {
     @apply mx-0 !important;
     & > * { box-sizing: border-box; }
     & > :nth-child(1) { width: calc(28% - 1px) !important; }
     & > :nth-child(2) { width: calc(63% + 1px) !important; }
     & > :nth-child(3) { width: 9% !important; }
+  }
+
+  &[data-layout="hero"] {
+    & > :nth-child(3) { @apply flex !important; }
+  }
+
+  &[data-layout="event-details"] {
+    & dd + dt { @apply mt-10; }
+
+    & [id*="tribe-events-gmap"] {
+      height: 100% !important;
+      min-height: 350px !important;
+    }
   }
 }
 
