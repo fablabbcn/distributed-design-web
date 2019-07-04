@@ -41,49 +41,28 @@ $s_classes = array(
 			<?php while ( have_rows( 'post_content' ) ) : ?>
 				<?php if ( count( array_filter( the_row() ) ) > 1 ) : ?>
 
-					<section class="relative cf bootstrap-wrapper post-content rich-text">
-						<div data-layout class="row row-eq-height">
+					<section class="post-content rich-text">
+						<div data-layout="<?php echo esc_attr( get_row_layout() ); ?>" class="flex flex-wrap lg:flex-no-wrap">
 
-							<?php if ( 'text_content' === get_row_layout() ) : ?>
-								<div class="fl single_first-column">&nbsp;</div>
-								<div class="fl single_second-column content-column"><?php the_sub_field( 'text' ); ?></div>
-								<div class="fl single_third-column">&nbsp;</div>
-
-
-							<?php elseif ( 'image_content' === get_row_layout() ) : ?>
-								<div class="fl single_first-column">
-									<p class="b"><?php the_sub_field( 'heading' ); ?></p>
-									<p>-</p>
-									<p><?php the_sub_field( 'sub_heading' ); ?></p>
-									<p class="absolute bottom-2 b"><?php the_sub_field( 'bottom' ); ?></p>
-								</div>
-								<div class="fl single_second-column bg-center bg-cover" style="background-image: url('<?php the_sub_field( 'image' ); ?>');">
-									<?php the_post_thumbnail(); ?>
-								</div>
-								<div class="fl single_third-column">&nbsp;</div>
+						<?php if ( 'text_content' === get_row_layout() ) : ?>
+							<div class="<?php the_classes( $s_classes['columns'][0] ); ?>">&nbsp;</div>
+							<div class="<?php the_classes( $s_classes['columns'][1] ); ?>"><?php the_sub_field( 'text' ); ?></div>
+							<div class="<?php the_classes( $s_classes['columns'][2] ); ?>">&nbsp;</div>
 
 
-							<?php elseif ( 'slider_content' === get_row_layout() ) : ?>
-								<div class="fl single_first-column">
-									<p class="b"><?php the_sub_field( 'heading' ); ?></p>
-									<p>-</p>
-									<p><?php the_sub_field( 'sub_heading' ); ?></p>
-									<p class="absolute bottom-2 b"><?php the_sub_field( 'bottom' ); ?></p>
-								</div>
-								<div class="fl single_slider-column">
-									<?php $images = get_sub_field( 'image' ); ?>
-									<?php if ( $images ) : ?>
-										<div class="post-slider">
-										<?php foreach ( $images as $image ) : ?>
-											<div><img src="<?php echo esc_attr( $image['url'] ); ?>"/></div>
-										<?php endforeach; ?>
-										</div>
-									<?php endif; ?>
-								</div>
-								<div class="fl single_third-column">&nbsp;</div>
+						<?php elseif ( 'image_content' === get_row_layout() ) : ?>
+							<div class="<?php the_classes( $s_classes['columns'][0] ); ?>"><?php include locate_template( 'template-parts/singular/details.php' ); ?></div>
+							<div class="<?php the_classes( $s_classes['columns'][1] ); ?>"><?php include locate_template( 'template-parts/singular/image.php' ); ?></div>
+							<div class="<?php the_classes( $s_classes['columns'][2] ); ?>">&nbsp;</div>
 
 
-							<?php endif; ?>
+						<?php elseif ( 'slider_content' === get_row_layout() ) : ?>
+							<div class="<?php the_classes( $s_classes['columns'][0] ); ?>"><?php include locate_template( 'template-parts/singular/details.php' ); ?></div>
+							<div class="<?php the_classes( $s_classes['columns'][1] ); ?>"><?php include locate_template( 'template-parts/singular/slider.php' ); ?></div>
+							<div class="<?php the_classes( $s_classes['columns'][2] ); ?>">&nbsp;</div>
+
+
+						<?php endif; ?>
 						</div>
 					</section>
 
