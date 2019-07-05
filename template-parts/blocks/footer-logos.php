@@ -1,6 +1,6 @@
 <?php $logos = get_field( 'logos', 'options' ); ?>
 
-<div class="partners-carousel px-30 lg:py-30">
+<div class="partners-carousel px-30 lg:py-30 border-t">
 	<?php foreach ( $logos as $key => $logo ) : ?>
 
 		<figure class="slide-item">

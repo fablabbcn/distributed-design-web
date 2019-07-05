@@ -41,9 +41,9 @@ $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
 		<article data-cat="<?php echo esc_attr( implode( ', ', $cat_slugs ) ); ?>" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="bootstrap-wrapper beefup <?php echo esc_attr( $post_type ); ?>-item">
 
-				<div class="flex -mx-px hover:bg-lime">
+				<header class="flex -mx-px hover:bg-lime">
 
-					<div class="flex-0 hidden lg:block <?php echo esc_attr( $cell_classes ); ?>" style="width: 28%;">
+					<div class="flex-0 hidden lg:block <?php echo esc_attr( $cell_classes ); ?>">
 						<p><?php echo wp_kses_post( ++$key ); ?></p>
 					</div>
 
@@ -61,7 +61,7 @@ $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
 						<svg class="<?php echo esc_attr( $svg_classes ); ?>"><use xlink:href="#download" /></svg>
 					</a>
 
-				</div>
+				</header>
 
 				<div class="beefup__body">
 					<div class="flex flex-wrap border-t">

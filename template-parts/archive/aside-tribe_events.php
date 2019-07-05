@@ -2,7 +2,7 @@
 
 $months = array_map(
 	function ( $month ) {
-			return str_pad( $month, 2, '0', STR_PAD_LEFT );
+		return str_pad( $month, 2, '0', STR_PAD_LEFT );
 	},
 	range( 1, 12 )
 );
@@ -12,7 +12,7 @@ $months = array_map(
 
 <aside class="relative flex flex-col-reverse md:flex-row -mt-border border-t">
 
-	<div class="px-40 py-20 bg-gray border-b" style="width: 27.9%;">
+	<div class="px-40 py-20 bg-gray border-b">
 		<div class="flex items-center opacity-30 pointer-events-none">
 			<span class="search-icon"><?php require get_template_directory() . '/assets/images/search.svg'; ?></span>
 			<?php get_search_form(); ?>

@@ -42,7 +42,7 @@
     }
 
     @include media('>=desktop') {
-      width: 28.03%;
+      width: calc(28% + 1px);
 
       @at-root .scrolled & {
         .navbar-brand {
@@ -117,9 +117,9 @@
       height: 64px;
 
       @include media('>=desktop') {
-        height: 145px;
-        border: solid $border-color;
-        border-width: 0 2px 2px 0;
+        height: 148px;
+        border-right: solid 2px $border-color;
+        border-bottom: solid 2px $border-color;
       }
     }
 

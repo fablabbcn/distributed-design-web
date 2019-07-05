@@ -73,9 +73,9 @@
   background: $white;
 }
 
-@media (min-width: 992px) {
+@include media(">=desktop") {
   .tabs-header {
-    margin-left: 27.85%;
+    margin-left: calc(28% - 1px);
   }
 }
 

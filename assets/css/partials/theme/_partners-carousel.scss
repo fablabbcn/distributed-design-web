@@ -1,7 +1,6 @@
 /* partners-carousel */
 .partners-carousel {
   @include media('>=desktop') {
-    border-top: 2px solid;
     margin-top: -2px;
   }
 

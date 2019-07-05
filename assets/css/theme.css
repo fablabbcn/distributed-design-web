@@ -5795,7 +5795,7 @@ select:focus {
   padding-top: 54px; }
   @media (max-width: 991px) {
     .wrapper {
-      padding-top: 50px; } }
+      padding-top: 66px; } }
 
 @media (max-width: 991px) {
   .container,
@@ -5949,7 +5949,7 @@ select:focus {
         width: 100%; } }
     @media (min-width: 992px) {
       #header .navbar-header {
-        width: 28.03%; }
+        width: calc(28% + 1px); }
         .scrolled #header .navbar-header .navbar-brand {
           font-weight: normal;
           padding-top: 10px;
@@ -6004,9 +6004,9 @@ select:focus {
       height: 64px; }
       @media (min-width: 992px) {
         #header .navbar-brand::before {
-          height: 145px;
-          border: solid #222;
-          border-width: 0 2px 2px 0; } }
+          height: 148px;
+          border-right: solid 2px #222;
+          border-bottom: solid 2px #222; } }
     #header .navbar-brand::after {
       height: 92px;
       background-image: url("../images/logo.svg");
@@ -6561,7 +6561,6 @@ select:focus {
 /* partners-carousel */
 @media (min-width: 992px) {
   .partners-carousel {
-    border-top: 2px solid;
     margin-top: -2px; } }
 
 .partners-carousel .slick-track {
@@ -6656,7 +6655,7 @@ select:focus {
 
 @media (min-width: 992px) {
   .tabs-header {
-    margin-left: 27.85%; } }
+    margin-left: calc(28% - 1px); } }
 
 .post-content {
   width: 100%;

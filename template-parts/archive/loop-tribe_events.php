@@ -45,7 +45,7 @@ $get_replaced_content = function ( $field_name ) {
 		<div class="beefup <?php echo esc_attr( $post_type ); ?>-item">
 
 			<header class="flex -mx-px hover:bg-magenta">
-				<div class="flex-0 <?php echo esc_attr( $cell_classes ); ?>" style="width: 28%;">
+				<div class="flex-0 <?php echo esc_attr( $cell_classes ); ?>">
 					<p><time><?php echo wp_kses_post( tribe_get_start_date( null, false, 'd/m/y' ) ); ?></time></p>
 				</div>
 				<button class="flex flex-1 items-baseline w-3/5 <?php echo esc_attr( $cell_classes ); ?> beefup__head">
