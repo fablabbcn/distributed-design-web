@@ -5,11 +5,14 @@ $details = array(
 	'date_end'   => tribe_get_end_date( null, false, 'l jS F Y' ),
 	'time_start' => tribe_get_start_date( null, false, 'g:ia' ),
 	'time_end'   => tribe_get_end_date( null, false, 'g:ia' ),
-	'website'    => tribe_get_event_website_link(),
+	'website'    => tribe_get_event_website_url(),
 );
 
 $venue = array(
-	'website' => tribe_get_venue_website_link(),
+	'venue'    => tribe_get_venue(),
+	'address'  => tribe_get_full_address(),
+	'map_link' => tribe_get_map_link_html(),
+	'website'  => tribe_get_venue_website_url(),
 );
 
 
@@ -31,19 +34,11 @@ $venue = array(
 	<?php endif; ?>
 
 	<?php if ( $details['website'] ) : ?>
-		<dt>Website</dt>
-		<dd><?php echo wp_kses_post( $details['website'] ); ?></dd>
+		<dt><a class="no-underline" href="<?php echo wp_kses_post( $details['website'] ); ?>" target="_blank">Website &rarr;</a></dt>
 	<?php endif; ?>
 </dl>
 
 <hr class="" />
-
-
-<?php
-
-$website = tribe_get_venue_website_link();
-
-?>
 
 
 <header>
@@ -51,12 +46,11 @@ $website = tribe_get_venue_website_link();
 </header>
 
 <dl>
-	<dt><?php echo wp_kses_post( tribe_get_venue() ); ?> </dt>
-	<dd><?php echo wp_kses_post( tribe_get_full_address() ); ?> </dd>
-	<dd><?php echo wp_kses_post( tribe_get_map_link_html() ); ?> </dd>
+	<dt><?php echo wp_kses_post( $venue['venue'] ); ?> </dt>
+	<dd><?php echo wp_kses_post( $venue['address'] ); ?> </dd>
+	<dd><?php echo wp_kses_post( $venue['map_link'] ); ?> </dd>
 
-	<?php if ( $website ) : ?>
-		<dt>Website</dt>
-		<dd><?php echo wp_kses_post( $website ); ?></dd>
+	<?php if ( $venue['website'] ) : ?>
+		<dt><a class="no-underline" href="<?php echo wp_kses_post( $venue['website'] ); ?>" target="_blank">Website &rarr;</a></dt>
 	<?php endif; ?>
 </dl>
