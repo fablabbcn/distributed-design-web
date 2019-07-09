@@ -24,9 +24,7 @@ get_header();
 	<?php get_template_part( 'template-parts/blocks/header' ); ?>
 
 
-	<?php if ( 'post' === get_post_type() ) : ?>
-		<?php get_template_part( 'template-parts/blocks/search' ); ?>
-	<?php else : ?>
+	<?php if ( 'post' !== get_post_type() ) : ?>
 		<?php get_template_part( 'template-parts/archive/aside', $post_type ); ?>
 	<?php endif; ?>
 
