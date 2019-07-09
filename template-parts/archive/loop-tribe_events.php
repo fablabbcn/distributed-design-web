@@ -62,8 +62,10 @@ $get_replaced_content = function ( $field_name ) {
 					<div class="w-full sm:w-7/10">
 						<div class="flex flex-wrap">
 							<div class="flex w-full font-bold border-b">
-								<p class="flex-1 py-10 px-30 border-r"><time><?php echo wp_kses_post( "$date_start — $date_end" ); ?></time></p>
-								<p class="flex-0 py-10 px-30"><a class="hover:text-magenta text-17 font-oswald uppercase" href="<?php the_permalink(); ?>">Read More</a></p>
+								<p class="flex items-center flex-1 py-10 px-30 border-r">
+									<time><?php echo wp_kses_post( "$date_start — $date_end" ); ?></time></p>
+								<p class="flex items-center flex-0 py-10 px-30">
+									<a class="hover:text-magenta text-17 font-oswald uppercase" href="<?php the_permalink(); ?>">Read More</a></p>
 							</div>
 						</div>
 						<div class="flex flex-wrap">
