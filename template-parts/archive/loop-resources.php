@@ -38,7 +38,7 @@ $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
 
 		?>
 
-		<article data-cat="<?php echo esc_attr( implode( ', ', $cat_slugs ) ); ?>" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<article data-cat="<?php echo esc_attr( implode( ', ', $cat_slugs ) ); ?>" id="post-<?php the_ID(); ?>" <?php post_class( 'border-b' ); ?>>
 			<div class="bootstrap-wrapper beefup <?php echo esc_attr( $post_type ); ?>-item">
 
 				<header class="flex -mx-px hover:bg-lime">

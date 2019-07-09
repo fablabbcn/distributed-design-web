@@ -1,4 +1,4 @@
-<div class="<?php echo esc_attr( $post_type ); ?>-content overflow-hidden">
+<div class="<?php echo esc_attr( $post_type ); ?>-content -mb-border md:mb-0 overflow-hidden">
 	<?php foreach ( $terms as $key => $term ) : ?>
 		<?php $item_id = $post_type . '-list-' . get_term_slug( $term ); ?>
 		<?php $item_class = 0 === $key ? '' : 'clip'; ?>
