@@ -103,7 +103,7 @@
 .page-template-template-archive-events {
   & .beefup {
     & > header > div:nth-of-type(1) {
-      @screen lg { width: calc(28% + 0.5px); }
+      @screen lg { width: calc(28% - 0.5px); }
     }
 
     & .beefup__body > div {
@@ -118,7 +118,8 @@
 
 .page-template-template-archive-events {
   & aside {
-    & > :nth-child(1) { width: calc(28% - 1px) !important; }
-    & > :nth-child(2) { width: calc(72% + 1px) !important; }
+    @screen lg {
+      & > :nth-child(1) { width: calc(72% + 1px) !important; }
+    }
   }
 }

@@ -10,16 +10,9 @@ $months = array_map(
 ?>
 
 
-<aside class="relative flex flex-col-reverse md:flex-row -mt-border border-t">
+<aside class="relative flex flex-col md:flex-row -mt-border border-t border-b">
 
-	<div class="px-40 py-20 bg-gray border-b">
-		<div class="flex items-center opacity-30 pointer-events-none">
-			<span class="search-icon"><?php require get_template_directory() . '/assets/images/search.svg'; ?></span>
-			<?php get_search_form(); ?>
-		</div>
-	</div>
-
-	<div class="relative flex justify-between items-baseline flex-1 px-20 py-20 bg-gray uppercase border-l border-b">
+	<div class="relative flex justify-between items-baseline ml-auto px-20 py-20 bg-gray uppercase border-l">
 
 		<p class="text-22 font-oswald font-bold">Distributed Design Event Calendar</p>
 		<p class="text-20 font-bold">

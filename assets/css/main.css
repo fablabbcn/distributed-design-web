@@ -5202,9 +5202,9 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
 @media (min-width: 992px) {
   .post-type-archive-resources .beefup > header > div:nth-of-type(1), .page-template-template-archive-events .beefup > header > div:nth-of-type(1) {
-    width: -webkit-calc(28% + 0.5px);
-    width: -moz-calc(28% + 0.5px);
-    width: calc(28% + 0.5px);
+    width: -webkit-calc(28% - 0.5px);
+    width: -moz-calc(28% - 0.5px);
+    width: calc(28% - 0.5px);
   }
 }
 
@@ -5228,16 +5228,12 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   }
 }
 
-.page-template-template-archive-events aside > :nth-child(1) {
-  width: -webkit-calc(28% - 1px) !important;
-  width: -moz-calc(28% - 1px) !important;
-  width: calc(28% - 1px) !important;
-}
-
-.page-template-template-archive-events aside > :nth-child(2) {
-  width: -webkit-calc(72% + 1px) !important;
-  width: -moz-calc(72% + 1px) !important;
-  width: calc(72% + 1px) !important;
+@media (min-width: 992px) {
+  .page-template-template-archive-events aside > :nth-child(1) {
+    width: -webkit-calc(72% + 1px) !important;
+    width: -moz-calc(72% + 1px) !important;
+    width: calc(72% + 1px) !important;
+  }
 }
 
 .select2-container .select2-dropdown {
