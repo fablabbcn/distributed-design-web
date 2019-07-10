@@ -4,6 +4,22 @@
     @apply font-oswald uppercase;
   }
 
+  & h1 { @apply text-22; }
+  & h2 { @apply text-20; }
+  & h3 { @apply text-19; }
+  & h4 { @apply text-18; }
+  & h5 { @apply text-17; }
+  & h6 { @apply text-16; }
+
+  @screen lg {
+    & h1 { @apply text-41; }
+    & h2 { @apply text-36; }
+    & h3 { @apply text-29; }
+    & h4 { @apply text-24; }
+    & h5 { @apply text-20; }
+    & h6 { @apply text-18; }
+  }
+
   & p + p { @apply mt-20; }
   & a:not(.no-underline) { @apply underline; }
 

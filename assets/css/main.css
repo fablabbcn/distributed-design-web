@@ -5010,6 +5010,32 @@ table { border-collapse: collapse; }
   text-transform: uppercase;
 }
 
+.rich-text h1 { font-size: 22px; }
+
+.rich-text h2 { font-size: 20px; }
+
+.rich-text h3 { font-size: 19px; }
+
+.rich-text h4 { font-size: 18px; }
+
+.rich-text h5 { font-size: 17px; }
+
+.rich-text h6 { font-size: 16px; }
+
+@media (min-width: 992px) {
+  .rich-text h1 { font-size: 41px; }
+
+  .rich-text h2 { font-size: 36px; }
+
+  .rich-text h3 { font-size: 29px; }
+
+  .rich-text h4 { font-size: 24px; }
+
+  .rich-text h5 { font-size: 20px; }
+
+  .rich-text h6 { font-size: 18px; }
+}
+
 .rich-text p + p { margin-top: 20px; }
 
 .rich-text a:not(.no-underline) { text-decoration: underline; }
