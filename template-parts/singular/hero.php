@@ -19,8 +19,8 @@ $slider = array(
 		</div>
 
 	<?php else : ?>
-		<div class="bg-cover bg-center" style="background-image: url('<?php the_post_thumbnail_url(); ?>');">
-			<?php the_post_thumbnail(); ?>
+		<div>
+			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full max-h-screen object-cover' ) ); ?>
 		</div>
 
 	<?php endif; ?>
