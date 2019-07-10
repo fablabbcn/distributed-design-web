@@ -2,16 +2,16 @@
 
 
 <?php if ( $images ) : ?>
-	<div class="post-slider -m-20 lg:-mx-40">
+	<div class="post-slider max-h-screen -m-20 lg:-mx-40">
 		<?php foreach ( $images as $image ) : ?>
 
-			<div>
+			<figure>
 				<img
-					class="w-full h-full object-cover"
+					class="w-full h-full max-h-screen object-cover"
 					src="<?php echo esc_attr( $image['url'] ); ?>"
 					alt=""
 				>
-			</div>
+			</figure>
 
 		<?php endforeach; ?>
 	</div>

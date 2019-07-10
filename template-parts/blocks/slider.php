@@ -1,5 +1,5 @@
 <?php if ( $slider['images'] ) : ?>
-	<?php $media_classes = 'block w-full h-full object-cover'; ?>
+	<?php $media_classes = 'block w-full h-full max-h-screen object-cover'; ?>
 
 	<div class="<?php echo esc_attr( $slider['class'] ?: 'intro-slider' ); ?>">
 		<?php foreach ( $slider['images'] as $key => $image ) : ?>

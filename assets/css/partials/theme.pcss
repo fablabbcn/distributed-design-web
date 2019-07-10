@@ -89,6 +89,12 @@
     & > :nth-child(3) { @apply flex !important; }
   }
 
+  &[data-layout="hero"],
+  &[data-layout="slider_content"] {
+    & .slick-track { @apply flex; }
+    & .slick-slide { @apply w-full h-full m-auto; }
+  }
+
   &[data-layout="event-details"] {
     & dd + dt { @apply mt-10; }
 
