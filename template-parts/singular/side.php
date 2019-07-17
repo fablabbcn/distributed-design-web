@@ -1,13 +1,15 @@
-<?php if ( 'talent' !== $post_type ) : ?>
-	<div class="relative flex-1">
-		<p class="b"><?php the_field( 'left_column_heading' ); ?></p>
-		<p>-</p>
-		<p><?php the_field( 'left_column_subheading' ); ?></p>
-		<p class="absolute bottom-2 b"><?php the_field( 'left_column_bottom' ); ?></p>
-	</div>
+<?php
 
-<?php else : ?>
-	<?php get_template_part( 'template-parts/post/talent', 'info' ); ?>
+$details = array_filter(
+	array(
+		'heading'    => get_field( 'left_column_heading' ),
+		'subheading' => get_field( 'left_column_subheading' ),
+		'bottom'     => get_field( 'left_column_bottom' ),
+	)
+);
 
-
-<?php endif; ?>
+require locate_template(
+	'talent' !== $post_type
+	? 'template-parts/singular/details.php'
+	: 'template-parts/post/talent-info.php'
+);
