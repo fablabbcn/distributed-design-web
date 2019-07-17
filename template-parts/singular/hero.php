@@ -13,7 +13,7 @@ $slider = array(
 			<?php require locate_template( 'template-parts/blocks/slider.php' ); ?>
 			<?php if ( get_field( 'subtitle' ) ) : ?>
 				<div class="mt-auto px-15 lg:px-40 py-20 border-t">
-					<div class="text-36 font-oswald uppercase"><?php the_field( 'subtitle' ); ?></div>
+					<div class="text-20 lg:text-36 font-oswald uppercase"><?php the_field( 'subtitle' ); ?></div>
 				</div>
 			<?php endif; ?>
 		</div>
