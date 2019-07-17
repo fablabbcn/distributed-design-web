@@ -5,52 +5,42 @@ $details = array(
 	'date_end'   => tribe_get_end_date( null, false, 'l jS F Y' ),
 	'time_start' => tribe_get_start_date( null, false, 'g:ia' ),
 	'time_end'   => tribe_get_end_date( null, false, 'g:ia' ),
-	'website'    => tribe_get_event_website_url(),
 );
 
-$venue = array(
-	'venue'    => tribe_get_venue(),
-	'address'  => tribe_get_full_address(),
-	'map_link' => tribe_get_map_link_html(),
-	'website'  => tribe_get_venue_website_url(),
+$blocks = array(
+	'Details' => array(
+		array( 'Date', $details['date_start'] !== $details['date_end'] ? "{$details['date_start']} — {$details['date_end']}" : $details['date_start'] ),
+		array( 'Time', $details['time_start'] !== $details['time_end'] ? "{$details['time_start']} — {$details['time_end']}" : $details['time_start'] ),
+		array( '<a class="no-underline" href="//' . tribe_get_event_website_url() . '" target="_blank">Website &rarr;</a>' ),
+	),
+	'Venue'   => array(
+		array( tribe_get_venue(), tribe_get_full_address(), tribe_get_map_link_html() ),
+		array( '<a class="no-underline" href="//' . tribe_get_venue_website_url() . '" target="_blank">Website &rarr;</a>' ),
+	),
 );
 
 
 ?>
 
-<header>
-	<p class="font-bold">Details</p><p>-</p>
-</header>
+<?php foreach ( $blocks as $key => $block ) : ?>
+	<?php $not_first = array_keys( $blocks )[0] !== $key; ?>
 
-<dl>
-	<?php if ( $details['date_start'] || $details['date_end'] ) : ?>
-		<dt>Date</dt>
-		<dd><?php echo wp_kses_post( $details['date_start'] !== $details['date_end'] ? "{$details['date_start']} — {$details['date_end']}" : $details['date_start'] ); ?></dd>
-	<?php endif; ?>
+	<header class="<?php the_classes( $not_first ? array( 'mt-30 md:mt-60' ) : array() ); ?>">
+		<?php set_query_var( 'details', array( 'heading' => $key ) ); ?>
+		<?php get_template_part( 'template-parts/singular/details' ); ?>
+	</header>
 
-	<?php if ( $details['time_start'] || $details['time_end'] ) : ?>
-		<dt>Time</dt>
-		<dd><?php echo wp_kses_post( $details['time_start'] !== $details['time_end'] ? "{$details['time_start']} — {$details['time_end']}" : $details['time_start'] ); ?></dd>
-	<?php endif; ?>
-
-	<?php if ( $details['website'] ) : ?>
-		<dt><a class="no-underline" href="<?php echo wp_kses_post( $details['website'] ); ?>" target="_blank">Website &rarr;</a></dt>
-	<?php endif; ?>
-</dl>
-
-<hr class="" />
+	<dl>
+		<?php foreach ( $block as $key => $items ) : ?>
+			<?php foreach ( $items as $key => $item ) : ?>
+				<?php if ( 0 === $key ) : ?>
+					<dt><?php echo wp_kses_post( $item ); ?></dt>
+				<?php else : ?>
+					<dd><?php echo wp_kses_post( $item ); ?></dd>
+				<?php endif; ?>
+			<?php endforeach; ?>
+		<?php endforeach; ?>
+	</dl>
 
 
-<header>
-	<p class="font-bold">Venue</p><p>-</p>
-</header>
-
-<dl>
-	<dt><?php echo wp_kses_post( $venue['venue'] ); ?> </dt>
-	<dd><?php echo wp_kses_post( $venue['address'] ); ?> </dd>
-	<dd><?php echo wp_kses_post( $venue['map_link'] ); ?> </dd>
-
-	<?php if ( $venue['website'] ) : ?>
-		<dt><a class="no-underline" href="<?php echo wp_kses_post( $venue['website'] ); ?>" target="_blank">Website &rarr;</a></dt>
-	<?php endif; ?>
-</dl>
+<?php endforeach; ?>

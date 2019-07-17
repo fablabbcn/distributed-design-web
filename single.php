@@ -42,12 +42,22 @@ $s_classes = array(
 		<?php if ( have_rows( 'post_content' ) ) : ?>
 			<?php while ( have_rows( 'post_content' ) ) : ?>
 				<?php if ( count( array_filter( the_row() ) ) > 1 ) : ?>
+					<?php
+					$details = array_filter(
+						array(
+							'heading'    => get_sub_field( 'heading' ),
+							'subheading' => get_sub_field( 'sub_heading' ),
+							'bottom'     => get_sub_field( 'bottom' ),
+						)
+					);
+					?>
+
 
 					<section class="<?php the_classes( $s_classes['section'] ); ?>">
 						<div data-layout="<?php echo esc_attr( get_row_layout() ); ?>" class="<?php the_classes( $s_classes['layout'] ); ?>">
 
 						<?php if ( 'text_content' === get_row_layout() ) : ?>
-							<div class="<?php the_classes( $s_classes['columns'][0] ); ?>">&nbsp;</div>
+							<div class="<?php the_classes( $s_classes['columns'][0] ); ?>"><?php include locate_template( 'template-parts/singular/details.php' ); ?></div>
 							<div class="<?php the_classes( $s_classes['columns'][1] ); ?>"><?php the_sub_field( 'text' ); ?></div>
 							<div class="<?php the_classes( $s_classes['columns'][2] ); ?>">&nbsp;</div>
 
