@@ -35,7 +35,7 @@ $classes = array(
 		</a>
 	</nav>
 
-	<hr class="flex my-20 -mx-20 lg:-mx-40 border-t border-current">
+	<hr class="flex my-20 -mx-20 lg:-mx-40 border-t border-black">
 
 	<dl class="<?php the_classes( $classes['dl'] ); ?>">
 		<dt class="<?php the_classes( $classes['dt'] ); ?>">Share</dt>
