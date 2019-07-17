@@ -5,7 +5,7 @@ $not_empty = $details['heading'] || $details['subheading'] || $details['bottom']
 $d_classes = array(
 	'heading'    => array( 'font-bold' ),
 	'subheading' => array( '' ),
-	'bottom'     => array( 'absolute bottom-2 font-bold' ),
+	'bottom'     => array( 'lg:absolute bottom-2 font-bold' ),
 );
 
 ?>
