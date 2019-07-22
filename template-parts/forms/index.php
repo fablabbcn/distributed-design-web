@@ -80,7 +80,7 @@ $form_settings = array(
 		<div class="relative">
 
 			<button data-clip="<?php echo esc_attr( $form_id ); ?>" class="<?php echo esc_attr( $form_classes['button'] ); ?>">
-				<span>Add <?php echo esc_attr( end( explode( '_', $post_type ) ) ); ?></span>
+				<span>Add <?php echo esc_attr( 'tribe_events' === $post_type ? 'event' : $post_type ); ?></span>
 			</button>
 
 			<div id="<?php echo esc_attr( $form_id ); ?>" class="clip z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto">

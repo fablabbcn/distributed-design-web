@@ -1,11 +1,11 @@
-<?php if ( $slider['images'] ) : ?>
+<?php if ( array_key_exists( 'images', $slider ) && $slider['images'] ) : ?>
 
 	<div class="<?php echo esc_attr( $slider['class'] ?: 'intro-slider' ); ?>">
 		<?php foreach ( $slider['images'] as $key => $image ) : ?>
 			<?php
-			$focal_point = get_post_meta( $image['ID'], '_wpsmartcrop_image_focus' )[0];
+			$focal_point = get_post_meta( $image['ID'], '_wpsmartcrop_image_focus' );
 			$media_attrs = array(
-				'style' => $focal_point ? "visibility: unset; object-position: {$focal_point['left']}% {$focal_point['top']}%" : 'visibility: unset;',
+				'style' => $focal_point ? "visibility: unset; object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%" : 'visibility: unset;',
 				'class' => 'block w-full h-full max-h-screen object-cover',
 			);
 			?>
@@ -29,7 +29,7 @@
 <?php endif ?>
 
 
-<?php if ( $slider['caption'] ) : ?>
+<?php if ( array_key_exists( 'caption', $slider ) && $slider['caption'] ) : ?>
 
 	<div class="notice">
 		<p><?php echo esc_html( $slider['caption'] ); ?></p>

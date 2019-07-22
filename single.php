@@ -6,7 +6,7 @@
 get_header();
 
 // TODO: Fix whatever's messing global vars in The Event Calendar
-$post = $_post ?: $post;
+$post = isset( $_post ) ? $_post : $post;
 
 $s_classes = array(
 	'section' => array( 'post-content rich-text relative' ),
@@ -30,7 +30,7 @@ $s_classes = array(
 
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
-		<?php $post = $_post ?: $post; ?>
+		<?php $post = isset( $_post ) ? $_post : $post; ?>
 
 		<section class="<?php the_classes( $s_classes['section'] ); ?>">
 			<div data-layout="hero" class="<?php the_classes( $s_classes['layout'] ); ?>">

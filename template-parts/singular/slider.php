@@ -5,9 +5,9 @@
 	<div class="post-slider max-h-screen -m-20 lg:-mx-40">
 		<?php foreach ( $images as $image ) : ?>
 			<?php
-			$focal_point = get_post_meta( $image['ID'], '_wpsmartcrop_image_focus' )[0];
+			$focal_point = get_post_meta( $image['ID'], '_wpsmartcrop_image_focus' );
 			$media_attrs = array(
-				'style' => $focal_point ? "object-position: {$focal_point['left']}% {$focal_point['top']}%" : '',
+				'style' => $focal_point ? "object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%" : '',
 				'class' => 'block w-full h-full max-h-screen object-cover',
 			);
 			?>
