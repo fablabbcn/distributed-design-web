@@ -5191,18 +5191,21 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   display: flex !important;
 }
 
+[data-layout][data-layout="hero"] .slick-list, [data-layout][data-layout="slider_content"] .slick-list { height: 100%; }
+
 [data-layout][data-layout="hero"] .slick-track, [data-layout][data-layout="slider_content"] .slick-track {
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
+  height: 100%;
 }
 
 [data-layout][data-layout="hero"] .slick-slide, [data-layout][data-layout="slider_content"] .slick-slide {
-  width: 100%;
-  height: 100%;
-  margin: auto;
+  width: 100% !important;
+  height: 100% !important;
+  margin: auto !important;
 }
 
 [data-layout][data-layout="event-details"] dd + dt { margin-top: 10px; }

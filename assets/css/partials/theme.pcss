@@ -91,8 +91,9 @@
 
   &[data-layout="hero"],
   &[data-layout="slider_content"] {
-    & .slick-track { @apply flex; }
-    & .slick-slide { @apply w-full h-full m-auto; }
+    & .slick-list { @apply h-full; }
+    & .slick-track { @apply flex h-full; }
+    & .slick-slide { @apply w-full h-full m-auto !important; }
   }
 
   &[data-layout="event-details"] {
