@@ -15,7 +15,7 @@ $talent_features = array(
 
 	<header>
 		<figure class="-mt-20 -mx-20 lg:-mx-40 mb-20">
-			<?php echo wp_get_attachment_image( get_field( 'image' ), 'post-thumbnail', false, array( 'class' => 'block w-full' ) ); ?>
+			<?php echo wp_get_attachment_image( get_field( 'image' ), 'post-list-thumbnails-square', false, array( 'class' => 'block w-full' ) ); ?>
 		</figure>
 		<p class="text-20 lg:text-36 font-oswald uppercase"><?php the_field( 'name' ); ?></p>
 	</header>
