@@ -9,7 +9,7 @@ $not_empty = (
 $d_classes = array(
 	'heading'    => array( 'font-bold' ),
 	'subheading' => array( '' ),
-	'bottom'     => array( 'lg:absolute bottom-2 font-bold' ),
+	'bottom'     => array( 'mt-auto font-bold' ),
 );
 
 ?>
