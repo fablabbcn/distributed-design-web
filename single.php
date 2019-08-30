@@ -14,7 +14,7 @@ $s_classes = array(
 	'columns' => function ( $has_details ) {
 		return array(
 			array( $has_details ? 'flex' : 'hidden', 'lg:flex flex-col w-full lg:w-1/4 p-20 lg:px-40 border-t' ),
-			array( 'flex lg:flex flex-col w-full lg:w-3/4 p-20 lg:px-40 border-t lg:border-l' ),
+			array( $has_details ? 'flex' : 'hidden', 'lg:flex flex-col w-full lg:w-3/4 p-20 lg:px-40 border-t lg:border-l' ),
 			array( 'hidden lg:flex flex-col w-full lg:w-auto p-20 lg:px-40 border-t lg:border-l' ),
 		);
 	},
@@ -90,9 +90,9 @@ $s_classes = array(
 			<section class="<?php the_classes( $s_classes['section'] ); ?>">
 				<div data-layout="event-details" class="<?php the_classes( $s_classes['layout'] ); ?>">
 
-					<div class="<?php the_classes( $s_classes['columns'][0] ); ?>"><?php include locate_template( 'template-parts/singular/event.php' ); ?></div>
-					<div class="<?php the_classes( $s_classes['columns'][1] ); ?>"><?php include locate_template( 'template-parts/singular/map.php' ); ?></div>
-					<div class="<?php the_classes( $s_classes['columns'][2] ); ?>">&nbsp;</div>
+					<div class="<?php the_classes( $s_classes['columns'](true)[0] ); ?>"><?php include locate_template( 'template-parts/singular/event.php' ); ?></div>
+					<div class="<?php the_classes( $s_classes['columns'](true)[1] ); ?>"><?php include locate_template( 'template-parts/singular/map.php' ); ?></div>
+					<div class="<?php the_classes( $s_classes['columns'](true)[2] ); ?>">&nbsp;</div>
 
 				</div>
 			</section>
