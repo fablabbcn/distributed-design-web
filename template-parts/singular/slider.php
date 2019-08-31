@@ -12,7 +12,7 @@
 			);
 			?>
 
-			<figure class="">
+			<figure>
 				<?php echo wp_get_attachment_image( $image['ID'], 'container-thumbnails', false, $media_attrs ); ?>
 			</figure>
 
