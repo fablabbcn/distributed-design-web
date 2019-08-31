@@ -25,23 +25,16 @@ $get_replaced_content = function ( $field_name ) {
 	<?php setup_postdata( $post ); ?>
 	<?php
 
-	$terms      = get_the_terms( get_the_ID(), $taxonomy );
+	$image_id   = get_field( 'featured_image' ) ?: get_post_thumbnail_id();
 	$month      = tribe_get_start_date( null, false, 'm' );
-	$date       = date( 'F', strtotime( "$month/01/2019" ) );
-	$is_current = date( 'F' ) === $date;
-
 	$date_start = tribe_get_start_date( null, false, 'F jS' );
 	$date_end   = tribe_get_end_date( null, false, 'F jS' );
 
-	$item_classes = array(
-		// $is_current ? '' : 'clip',
-		'border-b',
-	);
+	$item_classes = array( 'border-b' );
 
 	?>
 
-	<article id="<?php echo esc_attr( $post_type ) . '-event-' . esc_attr( $month ); ?>-<?php the_ID(); ?>"
-		class="<?php the_classes( $item_classes ); ?>">
+	<article id="<?php echo esc_attr( $post_type ) . '-event-' . esc_attr( $month ); ?>-<?php the_ID(); ?>" class="<?php the_classes( $item_classes ); ?>">
 		<div class="beefup <?php echo esc_attr( $post_type ); ?>-item">
 
 			<header class="flex -mx-px hover:bg-magenta">
@@ -57,7 +50,7 @@ $get_replaced_content = function ( $field_name ) {
 			<div class="beefup__body">
 				<div class="flex flex-wrap text-15 border-t">
 					<div class="w-full sm:w-3/10 border-b sm:border-b-0 sm:border-r">
-						<?php echo get_the_post_thumbnail( null, 'post-thumbnail', array( 'class' => 'w-full h-full object-cover' ) ); ?>
+						<?php echo wp_get_attachment_image( $image_id, 'post-thumbnail', false, array( 'class' => 'w-full h-full object-cover' ) ); ?>
 					</div>
 					<div class="w-full sm:w-7/10">
 						<div class="flex flex-wrap">

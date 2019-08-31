@@ -29,7 +29,7 @@ $terms    = 'tribe_events' !== $post_type
 
 ?>
 
-<?php if ('tribe_events' === $post_type) : ?>
+<?php if ( 'tribe_events' === $post_type ) : ?>
 	<?php acf_form_head(); ?>
 <?php endif; ?>
 
@@ -50,7 +50,7 @@ $terms    = 'tribe_events' !== $post_type
 
 </article>
 
-<?php if ('tribe_events' === $post_type) : ?>
+<?php if ( 'tribe_events' === $post_type ) : ?>
 	<?php get_template_part( 'template-parts/forms/index' ); ?>
 <?php endif; ?>
 
