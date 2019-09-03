@@ -54,27 +54,23 @@ $s_classes = array(
 					);
 					?>
 
-
 					<section class="<?php the_classes( $s_classes['section'] ); ?>">
 						<div data-layout="<?php echo esc_attr( get_row_layout() ); ?>" class="<?php the_classes( $s_classes['layout'] ); ?>">
 
 						<?php if ( 'text_content' === get_row_layout() ) : ?>
 							<div class="<?php the_classes( $s_classes['columns']($details)[0] ); ?>"><?php include locate_template( 'template-parts/singular/details.php' ); ?></div>
-							<div class="<?php the_classes( $s_classes['columns']($details)[1] ); ?>"><?php the_sub_field( 'text' ); ?></div>
-							<div class="<?php the_classes( $s_classes['columns']($details)[2] ); ?>">&nbsp;</div>
-
+							<div class="<?php the_classes( $s_classes['columns'](true)[1] ); ?>"><?php the_sub_field( 'text' ); ?></div>
+							<div class="<?php the_classes( $s_classes['columns'](false)[2] ); ?>">&nbsp;</div>
 
 						<?php elseif ( 'image_content' === get_row_layout() ) : ?>
 							<div class="<?php the_classes( $s_classes['columns']($details)[0] ); ?>"><?php include locate_template( 'template-parts/singular/details.php' ); ?></div>
-							<div class="<?php the_classes( $s_classes['columns']($details)[1] ); ?>"><?php include locate_template( 'template-parts/singular/image.php' ); ?></div>
-							<div class="<?php the_classes( $s_classes['columns']($details)[2] ); ?>">&nbsp;</div>
-
+							<div class="<?php the_classes( $s_classes['columns'](true)[1] ); ?>"><?php include locate_template( 'template-parts/singular/image.php' ); ?></div>
+							<div class="<?php the_classes( $s_classes['columns'](false)[2] ); ?>">&nbsp;</div>
 
 						<?php elseif ( 'slider_content' === get_row_layout() ) : ?>
 							<div class="<?php the_classes( $s_classes['columns']($details)[0] ); ?>"><?php include locate_template( 'template-parts/singular/details.php' ); ?></div>
-							<div class="<?php the_classes( $s_classes['columns']($details)[1] ); ?>"><?php include locate_template( 'template-parts/singular/slider.php' ); ?></div>
-							<div class="<?php the_classes( $s_classes['columns']($details)[2] ); ?>">&nbsp;</div>
-
+							<div class="<?php the_classes( $s_classes['columns'](true)[1] ); ?>"><?php include locate_template( 'template-parts/singular/slider.php' ); ?></div>
+							<div class="<?php the_classes( $s_classes['columns'](false)[2] ); ?>">&nbsp;</div>
 
 						<?php endif; ?>
 						</div>
