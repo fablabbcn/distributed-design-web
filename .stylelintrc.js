@@ -17,7 +17,7 @@ module.exports = {
     ],
     'property-no-unknown': [
       true, {
-        ignoreProperties: ['font-path']
+        ignoreProperties: ['font-path'],
       },
     ],
   },

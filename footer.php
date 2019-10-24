@@ -12,7 +12,8 @@ $logo = array(
 
 		<footer id="footer" class="rich-text mt-auto">
 
-			<?php get_template_part( 'template-parts/blocks/footer-logos' ); ?>
+			<?php get_template_part( 'template-parts/blocks/footer/newsletter' ); ?>
+			<?php get_template_part( 'template-parts/blocks/footer/logos' ); ?>
 
 			<div class="md:flex justify-between px-15 lg:px-40 py-20 text-16 border-t">
 				<div class="md:text-left"><?php echo wp_kses_post( $contact['left'] ); ?></div>

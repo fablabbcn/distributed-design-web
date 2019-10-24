@@ -73,6 +73,22 @@
   }
 }
 
+input[type="checkbox"] {
+  & + label {
+    &::before {
+      content: '';
+      @apply flex justify-center items-center w-20 h-20 mr-15 border;
+    }
+  }
+
+  &:checked + label {
+    &::before {
+      content: '✓';
+      @apply bg-white font-bold;
+    }
+  }
+}
+
 [id*="form-submit"] {
   & [type="radio"]:checked + label { @apply bg-white; }
 }

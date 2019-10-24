@@ -375,7 +375,7 @@ module.exports = {
       modules: { backgroundColors: true, textColors: true },
     }),
     require('tailwindcss-inset')({
-      insets: { 'full': '100%' },
+      insets: { full: '100%' },
     }),
     require('tailwindcss-multi-column')({
       variants: ['responsive'],

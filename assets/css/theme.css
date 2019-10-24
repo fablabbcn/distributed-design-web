@@ -6559,10 +6559,6 @@ select:focus {
         width: 180px; } }
 
 /* partners-carousel */
-@media (min-width: 992px) {
-  .partners-carousel {
-    margin-top: -2px; } }
-
 .partners-carousel .slick-track {
   display: -ms-flexbox;
   display: -webkit-flex;

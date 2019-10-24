@@ -1,9 +1,5 @@
 /* partners-carousel */
 .partners-carousel {
-  @include media('>=desktop') {
-    margin-top: -2px;
-  }
-
   .slick {
     &-track {
       @include display-flex();
