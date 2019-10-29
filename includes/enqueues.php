@@ -18,7 +18,7 @@ function the_theme_scripts() {
 	wp_enqueue_script( 'bootstrap-min', get_stylesheet_directory_uri() . '/assets/js/vendor/bootstrap.min.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'accordion', get_stylesheet_directory_uri() . '/assets/js/vendor/accordion.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'slick-min', get_stylesheet_directory_uri() . '/assets/js/vendor/slick.min.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'ajaxchimp-min', get_stylesheet_directory_uri() . '/assets/js/vendor/jquery.ajaxchimp.min.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'ajaxchimp-min', get_stylesheet_directory_uri() . '/assets/js/vendor/jquery.ajaxchimp.min.js', array( 'jquery' ), 'exotic', true );
 	// wp_enqueue_script( 'placeholders', get_stylesheet_directory_uri() . '/assets/js/vendor/placeholders.js', array( 'jquery' ), false, true );
 	wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), $theme_version, true );
 
