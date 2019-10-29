@@ -84,7 +84,7 @@ $form_settings = array(
 			</button>
 
 			<div id="<?php echo esc_attr( $form_id ); ?>" class="clip z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto">
-				<button data-clip="<?php echo esc_attr( $form_id ); ?>" class="fixed pin w-full h-full bg-black-20 cursor-pointer"></button>
+				<button data-clip="<?php echo esc_attr( $form_id ); ?>" class="fixed pin w-full h-full bg-black-50 cursor-pointer"></button>
 
 				<div class="flex flex-col w-full my-auto p-20 md:pt-160 md:px-45 md:pb-85">
 					<form id="acf-form" class="acf-form <?php echo esc_attr( $form_classes['form'] ); ?>" action="" method="post" enctype="multipart/form-data">
