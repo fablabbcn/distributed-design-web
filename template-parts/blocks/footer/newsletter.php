@@ -5,7 +5,7 @@ $footer_cta = get_field( 'footer_cta', 'options' );
 $n_classes = array(
 	'input'    => 'w-full p-10 lg:p-20 text-16 bg-white border',
 	'submit'   => 'w-full p-10 lg:p-20 text-white hocus:text-black bg-black hocus:bg-primary font-oswald font-medium uppercase border border-black',
-	'checkbox' => 'flex items-center w-full mt-20 lg:mt-10 font-normal',
+	'checkbox' => 'flex items-center w-full font-normal',
 );
 
 ?>
@@ -33,10 +33,12 @@ $n_classes = array(
 				</button>
 			</span>
 
-			<label class="relative flex w-full">
-				<input class="clip" type="checkbox" name="gdpr[37]" required>
-				<span class="<?php the_classes( $n_classes['checkbox'] ); ?>"><?php echo wp_kses_post( $footer_cta['acceptance_text'] ); ?></span>
-			</label>
+			<span class="relative flex w-full mt-20 lg:mt-10">
+				<label>
+					<input class="clip" type="checkbox" name="gdpr[37]" required>
+					<span class="<?php the_classes( $n_classes['checkbox'] ); ?>"><?php echo wp_kses_post( $footer_cta['acceptance_text'] ); ?></span>
+				</label>
+			</span>
 
 		</form>
 	</div>

@@ -5179,6 +5179,22 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   margin-bottom: 15px;
 }
 
+[data-ajaxchimp] input[type="checkbox"] {
+  bottom: 0;
+  left: 8px;
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
 [data-ajaxchimp] input[type="checkbox"] + *::before {
   content: '';
   margin-top: 0.125em;
