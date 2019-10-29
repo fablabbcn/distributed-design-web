@@ -1,23 +1,42 @@
-<?php $footer_cta = get_field( 'footer_cta', 'options' ); ?>
+<?php
+
+$footer_cta = get_field( 'footer_cta', 'options' );
+
+$n_classes = array(
+	'input'    => 'w-full p-10 lg:p-20 text-16 bg-white border',
+	'submit'   => 'w-full p-10 lg:p-20 text-white hocus:text-black bg-black hocus:bg-primary font-oswald font-medium uppercase border border-black',
+	'checkbox' => 'flex items-center w-full mt-20 lg:mt-10 font-normal',
+);
+
+?>
 
 
-<div class="md:flex justify-between items-center px-15 py-40 lg:px-40">
+<div class="md:flex justify-between items-center -mt-border px-15 py-40 lg:px-40 border-t">
 
 	<div class="font-oswald font-bold uppercase">
 		<p><?php echo esc_html( $footer_cta['title'] ); ?></p>
 	</div>
 
 	<div class="w-full mt-20">
-		<form class="flex flex-wrap">
+		<form data-ajaxchimp class="flex flex-wrap" method="POST"
+			action="//fablabbcn.us2.list-manage.com/subscribe/post?u=d67ba8deb34a23a222ec4eb8a&id=9ece23d947">
 
-			<input class="w-full md:w-2/3 p-10 lg:p-20 text-16 bg-white border" type="email" placeholder="<?php echo esc_attr( $footer_cta['email_placeholder'] ); ?>" autocomplete="current-email">
+			<span class="relative flex w-full md:w-2/3">
+				<input class="<?php the_classes( $n_classes['input'] ); ?>"
+					placeholder="<?php echo esc_attr( $footer_cta['email_placeholder'] ); ?>"
+					type="email" name="EMAIL" autocomplete="current-email" required>
+			</span>
 
-			<button class="w-full md:w-1/3 lg:-ml-border p-10 lg:p-20 text-white bg-black hocus:bg-primary font-oswald font-medium uppercase border border-black" type="submit">
-				<?php echo esc_html( $footer_cta['submit_label'] ); ?>
-			</button>
+			<span class="relative flex w-full md:w-1/3 -mt-border lg:mt-0 lg:-ml-border">
+				<button class="<?php the_classes( $n_classes['submit'] ); ?>" type="submit">
+					<?php echo esc_html( $footer_cta['submit_label'] ); ?>
+				</button>
+			</span>
 
-			<input class="clip" type="checkbox" name="acceptance" id="footer-acceptance">
-			<label class="flex items-center w-full mt-20 lg:mt-10 font-normal" for="footer-acceptance"><?php echo wp_kses_post( $footer_cta['acceptance_text'] ); ?></label>
+			<label class="relative flex w-full">
+				<input class="clip" type="checkbox" name="gdpr[37]" required>
+				<span class="<?php the_classes( $n_classes['checkbox'] ); ?>"><?php echo wp_kses_post( $footer_cta['acceptance_text'] ); ?></span>
+			</label>
 
 		</form>
 	</div>

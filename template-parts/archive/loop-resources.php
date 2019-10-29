@@ -66,7 +66,9 @@ $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
 				<div class="beefup__body">
 					<div class="flex flex-wrap border-t">
 						<div class="w-full sm:w-3/10 border-b sm:border-b-0 sm:border-r">
-							<img class="w-full h-full object-cover" src="<?php the_field( 'featured_image' ); ?>" alt="">
+							<?php if ( get_field( 'featured_image' ) ) : ?>
+								<img class="w-full h-full object-cover" src="<?php the_field( 'featured_image' ); ?>" alt="">
+							<?php endif; ?>
 						</div>
 						<div class="w-full sm:w-7/10">
 							<div class="flex flex-wrap">

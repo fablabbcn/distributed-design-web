@@ -3,6 +3,22 @@
     "title": "Post: Resources",
     "fields": [
         {
+            "key": "field_5db30d724e3cf",
+            "label": "Content",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_5bb5fde177f1f",
             "label": "File Weight",
             "name": "file_weight",
@@ -78,7 +94,7 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "visual",
+            "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
             "delay": 0
@@ -97,10 +113,47 @@
                 "id": ""
             },
             "default_value": "",
-            "tabs": "visual",
+            "tabs": "all",
             "toolbar": "full",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_5db30d2bc31fa",
+            "label": "Modal",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5db30d34c31fb",
+            "label": "Modal CTA",
+            "name": "modal_cta",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_5db308b4f3719"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
         }
     ],
     "location": [
@@ -114,7 +167,7 @@
     ],
     "menu_order": 0,
     "position": "normal",
-    "style": "default",
+    "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -122,5 +175,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542564090
+    "modified": 1572357491
 }

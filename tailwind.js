@@ -230,6 +230,11 @@ module.exports = {
   maxWidth: {
     '90': '90px',
     'full': '100%',
+    'screen-xs': '360px',
+    'screen-sm': '480px',
+    'screen-md': '768px',
+    'screen-lg': '992px',
+    'screen-xl': '1200px',
   },
 
   maxHeight: {
@@ -316,7 +321,7 @@ module.exports = {
     cursor: [],
     display: ['responsive', 'hover', 'group-hover', 'group-focus'],
     flexbox: ['responsive', 'hover', 'group-hover', 'group-focus'],
-    float: false,
+    float: [],
     fonts: [],
     fontWeights: ['responsive'],
     height: ['responsive'],

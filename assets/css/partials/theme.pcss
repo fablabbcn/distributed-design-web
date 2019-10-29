@@ -73,18 +73,26 @@
   }
 }
 
-input[type="checkbox"] {
-  & + label {
-    &::before {
-      content: '';
-      @apply flex justify-center items-center w-20 h-20 mr-15 border;
-    }
+[data-ajaxchimp] {
+  &[data-content]::before {
+    content: attr(data-content);
+    @apply w-full mb-15;
   }
 
-  &:checked + label {
-    &::before {
-      content: '✓';
-      @apply bg-white font-bold;
+  & input[type="checkbox"] {
+    & + * {
+      &::before {
+        content: '';
+        margin-top: 0.125em;
+        @apply flex justify-center items-center flex-none w-20 h-20 mr-15 border;
+      }
+    }
+
+    &:checked + * {
+      &::before {
+        content: '✓';
+        @apply bg-white font-bold;
+      }
     }
   }
 }

@@ -546,32 +546,27 @@ img {
   height: auto;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: inherit;
   opacity: 0.5;
 }
 
-input:-moz-placeholder,
-textarea:-moz-placeholder {
+input:-moz-placeholder, textarea:-moz-placeholder {
   color: inherit;
   opacity: 0.5;
 }
 
-input::-moz-placeholder,
-textarea::-moz-placeholder {
+input::-moz-placeholder, textarea::-moz-placeholder {
   color: inherit;
   opacity: 0.5;
 }
 
-input:-ms-input-placeholder,
-textarea:-ms-input-placeholder {
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: inherit;
   opacity: 0.5;
 }
 
-input::-ms-input-placeholder,
-textarea::-ms-input-placeholder {
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
   color: inherit;
   opacity: 0.5;
 }
@@ -2273,6 +2268,18 @@ table { border-collapse: collapse; }
   flex-shrink: 0;
 }
 
+.float-right { float: right; }
+
+.float-left { float: left; }
+
+.float-none { float: none; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .font-aileron { font-family: Aileron, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
 
 .font-nimbus { font-family: NimbusSanL, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; }
@@ -2690,6 +2697,16 @@ table { border-collapse: collapse; }
 .max-w-90 { max-width: 90px; }
 
 .max-w-full { max-width: 100%; }
+
+.max-w-screen-xs { max-width: 360px; }
+
+.max-w-screen-sm { max-width: 480px; }
+
+.max-w-screen-md { max-width: 768px; }
+
+.max-w-screen-lg { max-width: 992px; }
+
+.max-w-screen-xl { max-width: 1200px; }
 
 .min-h-0 { min-height: 0; }
 
@@ -5156,8 +5173,15 @@ body.post-type-archive-talent .hocus\:bg-primary-70:hover, body.single-talent .h
 
 body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-70:focus { background-color: rgba(255, 255, 255, 0.7) !important; }
 
-input[type="checkbox"] + label::before {
+[data-ajaxchimp][data-content]::before {
+  content: attr(data-content);
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+[data-ajaxchimp] input[type="checkbox"] + *::before {
   content: '';
+  margin-top: 0.125em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -5173,13 +5197,18 @@ input[type="checkbox"] + label::before {
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -moz-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
   width: 20px;
   height: 20px;
   margin-right: 15px;
   border-width: 2px;
 }
 
-input[type="checkbox"]:checked + label::before {
+[data-ajaxchimp] input[type="checkbox"]:checked + *::before {
   content: '✓';
   background-color: #fff;
   font-weight: 700;
@@ -7449,6 +7478,16 @@ input[type="checkbox"]:checked + label::before {
   .xs\:max-w-90 { max-width: 90px; }
 
   .xs\:max-w-full { max-width: 100%; }
+
+  .xs\:max-w-screen-xs { max-width: 360px; }
+
+  .xs\:max-w-screen-sm { max-width: 480px; }
+
+  .xs\:max-w-screen-md { max-width: 768px; }
+
+  .xs\:max-w-screen-lg { max-width: 992px; }
+
+  .xs\:max-w-screen-xl { max-width: 1200px; }
 
   .xs\:min-h-0 { min-height: 0; }
 
@@ -10531,6 +10570,16 @@ input[type="checkbox"]:checked + label::before {
 
   .sm\:max-w-full { max-width: 100%; }
 
+  .sm\:max-w-screen-xs { max-width: 360px; }
+
+  .sm\:max-w-screen-sm { max-width: 480px; }
+
+  .sm\:max-w-screen-md { max-width: 768px; }
+
+  .sm\:max-w-screen-lg { max-width: 992px; }
+
+  .sm\:max-w-screen-xl { max-width: 1200px; }
+
   .sm\:min-h-0 { min-height: 0; }
 
   .sm\:min-h-full { min-height: 100%; }
@@ -13611,6 +13660,16 @@ input[type="checkbox"]:checked + label::before {
   .md\:max-w-90 { max-width: 90px; }
 
   .md\:max-w-full { max-width: 100%; }
+
+  .md\:max-w-screen-xs { max-width: 360px; }
+
+  .md\:max-w-screen-sm { max-width: 480px; }
+
+  .md\:max-w-screen-md { max-width: 768px; }
+
+  .md\:max-w-screen-lg { max-width: 992px; }
+
+  .md\:max-w-screen-xl { max-width: 1200px; }
 
   .md\:min-h-0 { min-height: 0; }
 
@@ -16693,6 +16752,16 @@ input[type="checkbox"]:checked + label::before {
 
   .lg\:max-w-full { max-width: 100%; }
 
+  .lg\:max-w-screen-xs { max-width: 360px; }
+
+  .lg\:max-w-screen-sm { max-width: 480px; }
+
+  .lg\:max-w-screen-md { max-width: 768px; }
+
+  .lg\:max-w-screen-lg { max-width: 992px; }
+
+  .lg\:max-w-screen-xl { max-width: 1200px; }
+
   .lg\:min-h-0 { min-height: 0; }
 
   .lg\:min-h-full { min-height: 100%; }
@@ -19773,6 +19842,16 @@ input[type="checkbox"]:checked + label::before {
   .xl\:max-w-90 { max-width: 90px; }
 
   .xl\:max-w-full { max-width: 100%; }
+
+  .xl\:max-w-screen-xs { max-width: 360px; }
+
+  .xl\:max-w-screen-sm { max-width: 480px; }
+
+  .xl\:max-w-screen-md { max-width: 768px; }
+
+  .xl\:max-w-screen-lg { max-width: 992px; }
+
+  .xl\:max-w-screen-xl { max-width: 1200px; }
 
   .xl\:min-h-0 { min-height: 0; }
 

@@ -7,6 +7,26 @@
     $('.wrapper.loading').removeClass('loading')
     $('.animsition-loading').remove()
 
+    // MAILCHIMP
+    $('[data-ajaxchimp]').each(function (index, form) {
+      $(form).ajaxChimp({
+        callback: function (response) {
+          var success = response.result === 'success'
+          var subscribed = response.msg.includes('already subscribed')
+          var status = success ? 'success' : subscribed ? 'subscribed' : 'error'
+
+          var messages = {
+            success: 'Thank you!',
+            subscribed: 'Already subscribed',
+            error: response.msg || 'Something went wrong. Please, try again',
+          }
+
+          form.setAttribute('data-ajaxchimp', status)
+          form.setAttribute('data-content', messages[status])
+        },
+      })
+    })
+
     // var TIMEOUT = 300;
     if (window.location.hash) {
       goToHash(window.location.href)

@@ -48,3 +48,17 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 		) : false;
 	} add_shortcode( 'button_link', 'ddmp_shortcode_button_link' );
 }
+
+
+// Round Button.
+if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
+	function ddmp_shortcode_modal( $attrs, $content = null ) {
+		$post_id = array_key_exists( 'id', $attrs ) ? $attrs['id'] : ( $content ?: false );
+		$classes = 'p-10 lg:p-20 text-white hocus:text-black bg-black hocus:bg-primary font-oswald font-medium uppercase border border-black';
+
+		set_query_var( 'this_post', $post_id );
+		get_template_part( 'template-parts/blocks/modal-newsletter' );
+
+		return "<p><button data-clip=\"modal-resources-$post_id\" class=\"$classes\">$content</button></p>";
+	} add_shortcode( 'modal_toggle', 'ddmp_shortcode_modal' );
+}
