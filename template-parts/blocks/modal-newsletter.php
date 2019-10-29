@@ -10,6 +10,7 @@ $n_classes = array(
 	'checkbox' => 'flex items-start w-full mt-20 text-16 font-normal',
 );
 
+// TODO: Check if $has_CTA before printing shit
 ?>
 
 <div id="<?php echo esc_attr( $modal_id ); ?>" class="clip z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto">

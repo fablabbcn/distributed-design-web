@@ -56,6 +56,7 @@ if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
 		$post_id = array_key_exists( 'id', $attrs ) ? $attrs['id'] : ( $content ?: false );
 		$classes = 'p-10 lg:p-20 text-white hocus:text-black bg-black hocus:bg-primary font-oswald font-medium uppercase border border-black';
 
+		// TODO: Make sure same modal is not printed twice
 		set_query_var( 'this_post', $post_id );
 		get_template_part( 'template-parts/blocks/modal-newsletter' );
 
