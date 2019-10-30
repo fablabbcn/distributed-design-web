@@ -72,8 +72,8 @@ $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
 						</div>
 						<div class="w-full sm:w-7/10">
 							<div class="flex flex-wrap">
-								<div class="w-full md:w-1/2 p-20 sm:px-40"><?php the_field( 'content_left' ); ?></div>
-								<div class="w-full md:w-1/2 p-20 sm:px-40"><?php the_field( 'content_right' ); ?></div>
+								<div class="rich-text w-full md:w-1/2 p-20 sm:px-40"><?php the_field( 'content_left' ); ?></div>
+								<div class="rich-text w-full md:w-1/2 p-20 sm:px-40"><?php the_field( 'content_right' ); ?></div>
 							</div>
 						</div>
 					</div>

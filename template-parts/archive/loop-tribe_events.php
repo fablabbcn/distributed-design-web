@@ -62,8 +62,8 @@ $get_replaced_content = function ( $field_name ) {
 							</div>
 						</div>
 						<div class="flex flex-wrap">
-							<div class="w-full md:w-1/2 p-20 sm:px-40"><?php echo wp_kses_post( $get_replaced_content( 'content_left' ) ); ?></div>
-							<div class="w-full md:w-1/2 p-20 sm:px-40"><?php echo wp_kses_post( $get_replaced_content( 'content_right' ) ); ?></div>
+							<div class="rich-text w-full md:w-1/2 p-20 sm:px-40"><?php echo wp_kses_post( $get_replaced_content( 'content_left' ) ); ?></div>
+							<div class="rich-text w-full md:w-1/2 p-20 sm:px-40"><?php echo wp_kses_post( $get_replaced_content( 'content_right' ) ); ?></div>
 						</div>
 					</div>
 				</div>
