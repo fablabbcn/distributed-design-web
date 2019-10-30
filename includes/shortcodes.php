@@ -28,8 +28,8 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 		$classes = array(
 			array_key_exists( 'class', $attrs ) ? $attrs['class'] : false,
 			'flex justify-center items-center',
-			array_key_exists( 'icon', $attrs ) && $attrs['icon'] ? 'w-50 h-50' : false,
-			'p-10 bg-white hocus:text-black hocus:bg-primary text-center no-underline border rounded-full overflow-hidden',
+			array_key_exists( 'icon', $attrs ) && $attrs['icon'] ? 'w-50 h-50 p-10' : 'w-full py-10 px-20',
+			'bg-white hocus:text-black hocus:bg-primary text-center no-underline border rounded-full overflow-hidden',
 		);
 
 		$link_attrs = array(
@@ -39,12 +39,12 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 		);
 
 		return ( array_key_exists( 'icon', $attrs ) && $attrs['icon'] ) || $content ? (
-			"<a {$link_attrs['class']} {$link_attrs['href']} {$link_attrs['target']}>" .
+			"<p><a {$link_attrs['class']} {$link_attrs['href']} {$link_attrs['target']}>" .
 				( array_key_exists( 'icon', $attrs ) && $attrs['icon']
 					? ( '<svg class="fill-current"><use xlink:href="#social-' . $attrs['icon'] . '" /></svg>' )
 					: ( '<span>' . $content ?: $attrs['label'] . '</span>' )
 				) .
-			'</a>'
+			'</a></p>'
 		) : false;
 	} add_shortcode( 'button_link', 'ddmp_shortcode_button_link' );
 }
@@ -54,7 +54,7 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
 	function ddmp_shortcode_modal( $attrs, $content = null ) {
 		$post_id = array_key_exists( 'id', $attrs ) ? $attrs['id'] : ( $content ?: false );
-		$classes = 'p-10 lg:p-20 text-white hocus:text-black bg-black hocus:bg-primary font-oswald font-medium uppercase border border-black';
+		$classes = 'flex justify-center items-center w-full py-10 px-20 bg-white hocus:text-black hocus:bg-primary text-center no-underline border rounded-full overflow-hidden';
 
 		// TODO: Make sure same modal is not printed twice
 		set_query_var( 'this_post', $post_id );
