@@ -16,7 +16,7 @@
           var status = success ? 'success' : subscribed ? 'subscribed' : 'error'
 
           var messages = {
-            success: 'Thank you!',
+            success: 'Thank you, now check your email',
             subscribed: 'Already subscribed',
             error: response.msg || 'Something went wrong. Please, try again',
           }
