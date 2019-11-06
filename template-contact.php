@@ -35,11 +35,11 @@ $button_classes = 'flex justify-center items-center p-10 bg-white text-center bo
 
 					<div class="w-full px-10">
 						<div class="max-w-90 ml-auto">
-							<p class="relative h-0 text-28 tracking-normal font-medium" style="padding-bottom: 100%;">
+							<div class="relative h-0 text-28 tracking-normal font-medium" style="padding-bottom: 100%;">
 								<?php $email = "mailto:{$contact['email']['address']}"; ?>
 								<?php echo do_shortcode( '[button_link url="' . $email . '" class="invisible"]Here[/button_link]' ); ?>
 								<?php echo do_shortcode( '[button_link url="' . $email . '" class="absolute pin w-full h-full"]Here[/button_link]' ); ?>
-							</p>
+							</div>
 						</div>
 					</div>
 
