@@ -6,7 +6,7 @@
 			$focal_point = get_post_meta( $image['ID'], '_wpsmartcrop_image_focus' );
 			$media_attrs = array(
 				'style' => $focal_point ? "visibility: unset; object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%" : 'visibility: unset;',
-				'class' => 'block w-full h-full max-h-screen object-cover',
+				'class' => 'block w-full h-full object-cover',
 			);
 			?>
 

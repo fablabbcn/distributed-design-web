@@ -1,7 +1,7 @@
 <?php
 
 $slider = array(
-	'class'  => 'post-slider h-full my-auto',
+	'class'  => 'post-slider h-screen flex-1 my-auto',
 	'images' => get_field( 'featured_image_alt' ) ?: array(),
 );
 
