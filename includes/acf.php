@@ -7,6 +7,14 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 }
 
 
+// Add Google Maps API key for ACF.
+if ( ! function_exists( 'llos_acf_init' ) ) {
+	function llos_acf_init() {
+		acf_update_setting( 'google_api_key', get_field( 'google_maps_api_key', 'options' ) );
+	} add_action( 'acf/init', 'llos_acf_init' );
+}
+
+
 // Set a new location to save ACF field group JSON.
 if ( ! function_exists( 'llos_acf_json_save_point' ) ) {
 	add_filter( 'acf/settings/save_json', 'llos_acf_json_save_point' );
