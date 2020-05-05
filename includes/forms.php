@@ -13,7 +13,7 @@ function handle_events_frontend_form( $post_id ) {
 	$event_organizers = get_post_meta( $post_id, '_EventOrganizerID' );
 	delete_post_meta( $post_id, '_EventOrganizerID' );
 
-	foreach ( $event_organizers[0] as $event_organizer ) {
+	foreach ( $event_organizers[0] ?: array() as $event_organizer ) {
 		add_post_meta( $post_id, '_EventOrganizerID', $event_organizer );
 	}
 }
