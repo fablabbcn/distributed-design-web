@@ -17,23 +17,23 @@ View the full documentation at https://tailwindcss.com.
 // const defaultConfig = require('tailwindcss/defaultConfig')()
 
 const colors = {
-  'transparent': 'transparent',
-  'current': 'currentColor',
-  'inherit': 'inherit',
+  transparent: 'transparent',
+  current: 'currentColor',
+  inherit: 'inherit',
 
-  'black': '#000',
+  black: '#000',
   'dark-gray': '#222',
-  'gray': '#e6e6e6',
-  'white': '#fff',
+  gray: '#e6e6e6',
+  white: '#fff',
 
-  'red': '#f93838',
-  'lime': '#0f0',
-  'cyan': '#0ff',
-  'magenta': '#f0f',
-  'yellow': '#ff0',
+  red: '#f93838',
+  lime: '#0f0',
+  cyan: '#0ff',
+  magenta: '#f0f',
+  yellow: '#ff0',
 }
 
-let scaleObject = {}
+const scaleObject = {}
 const scale = { step: 5, limit: 60 }
 Array(scale.limit / scale.step).fill()
   .map((x, i) => (i + 1) * scale.step + 'px')
@@ -42,38 +42,37 @@ Array(scale.limit / scale.step).fill()
   })
 
 const spacing = {
-  'px': '1px',
-  'border': '2px',
-  '0': '0',
+  px: '1px',
+  border: '2px',
+  0: '0',
   ...scaleObject,
-  '85': '85px',
-  '160': '160px',
+  85: '85px',
+  160: '160px',
 }
 
 const sizing = {
-  'auto': 'auto',
-  'px': '1px',
-  '15': '15px',
-  '20': '20px',
-  '25': '25px',
-  '40': '40px',
-  '50': '50px',
+  auto: 'auto',
+  px: '1px',
+  15: '15px',
+  20: '20px',
+  25: '25px',
+  40: '40px',
+  50: '50px',
 }
 
 module.exports = {
-
   colors: colors,
 
   screens: {
-    'xs': '360px',
-    'sm': '480px',
-    'md': '768px',
-    'lg': '992px',
-    'xl': '1200px',
+    xs: '360px',
+    sm: '480px',
+    md: '768px',
+    lg: '992px',
+    xl: '1200px',
   },
 
   fonts: {
-    'aileron': [
+    aileron: [
       'Aileron',
       'system-ui',
       'BlinkMacSystemFont',
@@ -88,7 +87,7 @@ module.exports = {
       'Helvetica Neue',
       'sans-serif',
     ],
-    'nimbus': [
+    nimbus: [
       'NimbusSanL',
       'system-ui',
       'BlinkMacSystemFont',
@@ -103,7 +102,7 @@ module.exports = {
       'Helvetica Neue',
       'sans-serif',
     ],
-    'oswald': [
+    oswald: [
       'Oswald',
       'system-ui',
       'BlinkMacSystemFont',
@@ -121,48 +120,48 @@ module.exports = {
   },
 
   textSizes: {
-    '12': '12px',
-    '14': '14px',
-    '15': '15px',
-    '16': '16px',
-    '17': '17px',
-    '18': '18px',
-    '19': '19px',
-    '20': '20px',
-    '22': '22px',
-    '24': '24px',
-    '28': '28px',
-    '29': '29px',
-    '36': '36px',
-    '41': '41px',
-    '53': '53px',
-    '92': '92px',
+    12: '12px',
+    14: '14px',
+    15: '15px',
+    16: '16px',
+    17: '17px',
+    18: '18px',
+    19: '19px',
+    20: '20px',
+    22: '22px',
+    24: '24px',
+    28: '28px',
+    29: '29px',
+    36: '36px',
+    41: '41px',
+    53: '53px',
+    92: '92px',
     '5vw': '5vw',
   },
 
   fontWeights: {
-    'hairline': 100,
-    'thin': 200,
-    'light': 300,
-    'normal': 400,
-    'medium': 500,
-    'semibold': 600,
-    'bold': 700,
-    'extrabold': 800,
-    'black': 900,
+    hairline: 100,
+    thin: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900,
   },
 
   leading: {
-    'none': 1,
+    none: 1,
     // 'tight': 1.1,
-    'normal': 1.2,
-    'loose': 2,
+    normal: 1.2,
+    loose: 2,
   },
 
   tracking: {
-    'tight': '-0.05em',
-    'normal': '0',
-    'wide': '0.05em',
+    tight: '-0.05em',
+    normal: '0',
+    wide: '0.05em',
   },
 
   textColors: colors,
@@ -170,15 +169,15 @@ module.exports = {
   backgroundColors: colors,
 
   backgroundSize: {
-    'auto': 'auto',
-    'cover': 'cover',
-    'contain': 'contain',
+    auto: 'auto',
+    cover: 'cover',
+    contain: 'contain',
   },
 
   borderWidths: {
     default: '2px',
-    'px': '1px',
-    '0': '0',
+    px: '1px',
+    0: '0',
   },
 
   borderColors: global.Object.assign({
@@ -187,8 +186,8 @@ module.exports = {
 
   borderRadius: {
     default: '0.25rem',
-    '0': '0',
-    'full': '9999px',
+    0: '0',
+    full: '9999px',
   },
 
   width: global.Object.assign({
@@ -206,30 +205,31 @@ module.exports = {
     '1/10': '10%',
     '3/10': '30%',
     '7/10': '70%',
-    'full': '100%',
-    'screen': '100vw',
+    full: '100%',
+    screen: '100vw',
   }, sizing),
 
   height: global.Object.assign({
-    '0': '0',
-    'full': '100%',
-    'screen': '100vh',
+    0: '0',
+    full: '100%',
+    'screen-1/2': '50vh',
+    screen: '100vh',
   }, sizing),
 
   minWidth: {
-    '0': '0',
-    'full': '100%',
+    0: '0',
+    full: '100%',
   },
 
   minHeight: {
-    '0': '0',
-    'full': '100%',
-    'screen': '100vh',
+    0: '0',
+    full: '100%',
+    screen: '100vh',
   },
 
   maxWidth: {
-    '90': '90px',
-    'full': '100%',
+    90: '90px',
+    full: '100%',
     'screen-xs': '360px',
     'screen-sm': '480px',
     'screen-md': '768px',
@@ -238,53 +238,53 @@ module.exports = {
   },
 
   maxHeight: {
-    'full': '100%',
-    'screen': '100vh',
+    full: '100%',
+    screen: '100vh',
   },
 
   padding: global.Object.assign({}, spacing),
 
   margin: global.Object.assign({
-    'auto': 'auto',
+    auto: 'auto',
   }, spacing),
 
   negativeMargin: global.Object.assign({}, spacing),
 
   shadows: {
     default: '0 2px 4px 0 rgba(0,0,0,0.10)',
-    'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-    'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
-    'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
-    'outline': '0 0 0 3px rgba(52,144,220,0.5)',
-    'none': 'none',
+    md: '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
+    lg: '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
+    inner: 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+    outline: '0 0 0 3px rgba(52,144,220,0.5)',
+    none: 'none',
   },
 
   zIndex: {
-    'auto': 'auto',
-    '0': 0,
-    '10': 10,
-    '20': 20,
-    '30': 30,
-    '40': 40,
-    '50': 50,
+    auto: 'auto',
+    0: 0,
+    10: 10,
+    20: 20,
+    30: 30,
+    40: 40,
+    50: 50,
   },
 
   opacity: {
-    '0': '0',
-    '2': '0.025',
-    '5': '0.05',
-    '10': '0.1',
-    '30': '0.3',
-    '70': '0.7',
-    '100': '1',
+    0: '0',
+    2: '0.025',
+    5: '0.05',
+    10: '0.1',
+    30: '0.3',
+    70: '0.7',
+    100: '1',
   },
 
   svgFill: {
-    'current': colors.current,
+    current: colors.current,
   },
 
   svgStroke: {
-    'current': colors.current,
+    current: colors.current,
   },
 
   /*
