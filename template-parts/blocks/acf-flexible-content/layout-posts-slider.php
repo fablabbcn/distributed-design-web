@@ -12,7 +12,7 @@ $_items = get_sub_field( 'featured_posts' );
 
 ?>
 
-<div class="border-b">
+<section class="border-b">
 
 	<div class="w-full post-slider">
 		<?php foreach ( $_items as $_item ) : ?>
@@ -35,4 +35,4 @@ $_items = get_sub_field( 'featured_posts' );
 		<?php endforeach; ?>
 	</div>
 
-</div>
+</section>
