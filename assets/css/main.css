@@ -2318,7 +2318,7 @@ table { border-collapse: collapse; }
 
 .h-full { height: 100%; }
 
-.h-screen-1\/2 { height: 50vh; }
+.h-screen-90 { height: 90vh; }
 
 .h-screen { height: 100vh; }
 
@@ -7117,7 +7117,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
   .xs\:h-full { height: 100%; }
 
-  .xs\:h-screen-1\/2 { height: 50vh; }
+  .xs\:h-screen-90 { height: 90vh; }
 
   .xs\:h-screen { height: 100vh; }
 
@@ -10210,7 +10210,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
   .sm\:h-full { height: 100%; }
 
-  .sm\:h-screen-1\/2 { height: 50vh; }
+  .sm\:h-screen-90 { height: 90vh; }
 
   .sm\:h-screen { height: 100vh; }
 
@@ -13303,7 +13303,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
   .md\:h-full { height: 100%; }
 
-  .md\:h-screen-1\/2 { height: 50vh; }
+  .md\:h-screen-90 { height: 90vh; }
 
   .md\:h-screen { height: 100vh; }
 
@@ -16396,7 +16396,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
   .lg\:h-full { height: 100%; }
 
-  .lg\:h-screen-1\/2 { height: 50vh; }
+  .lg\:h-screen-90 { height: 90vh; }
 
   .lg\:h-screen { height: 100vh; }
 
@@ -19489,7 +19489,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
   .xl\:h-full { height: 100%; }
 
-  .xl\:h-screen-1\/2 { height: 50vh; }
+  .xl\:h-screen-90 { height: 90vh; }
 
   .xl\:h-screen { height: 100vh; }
 

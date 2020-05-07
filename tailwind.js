@@ -212,7 +212,7 @@ module.exports = {
   height: global.Object.assign({
     0: '0',
     full: '100%',
-    'screen-1/2': '50vh',
+    'screen-90': '90vh',
     screen: '100vh',
   }, sizing),
 
