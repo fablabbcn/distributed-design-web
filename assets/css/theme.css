@@ -5984,7 +5984,7 @@ select:focus {
           border-right: solid 2px #222;
           border-bottom: solid 2px #222; } }
     #header .navbar-brand::after {
-      height: 92px;
+      height: 80px;
       background-image: url("../images/logo.svg");
       background-repeat: no-repeat;
       background-position: center;
@@ -5997,7 +5997,7 @@ select:focus {
           padding: 12px; } }
       @media (min-width: 992px) {
         #header .navbar-brand::after {
-          margin-top: 28px;
+          margin-top: 33px;
           margin-left: auto;
           margin-right: auto; } }
     @media (min-width: 992px) {
