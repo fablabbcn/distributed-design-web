@@ -74,6 +74,23 @@
       autoplay: true,
       autoplaySpeed: 4000,
     })
+    $('[data-slider="featured-posts"]').slick({
+      arrows: true,
+      dots: true,
+      fade: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      prevArrow: '[data-slider="featured-posts"] button.slick-prev',
+      nextArrow: '[data-slider="featured-posts"] button.slick-next',
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+          },
+        },
+      ],
+    })
   }
 
   function setImageSize ($img) {
