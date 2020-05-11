@@ -18,7 +18,7 @@ $_items = get_sub_field( 'featured_posts' );
 		<?php foreach ( $_items as $_item ) : ?>
 
 			<div class="relative">
-				<?php echo get_the_post_thumbnail( $_item->ID, 'post-thumbnail', array( 'class' => 'w-full h-screen-90 object-cover' ) ); ?>
+				<?php echo get_the_post_thumbnail( $_item->ID, 'post-thumbnail', array( 'class' => 'w-full h-screen-80 object-cover' ) ); ?>
 
 				<div class="absolute pin-b lg:mb-160 lg:mr-40 w-full max-w-screen-md">
 					<div class="border bg-white uppercase pl-15 py-20 pr-40 lg:pl-40 -m-border flex flex-col">
