@@ -104,14 +104,15 @@ if ( ! function_exists( 'llos_custom_types_register' ) ) {
 // 		$submenu['edit.php'][5][0]  = 'Project';
 // 		$submenu['edit.php'][10][0] = 'Add Project';
 // 	}
+// 	add_action( 'admin_menu', 'llos_custom_post_menu_label' );
 // }
 
 // Change Posts labels in other admin area.
 if ( ! function_exists( 'llos_custom_post_object_label' ) ) {
 	function llos_custom_post_object_label() {
 		global $wp_post_types;
-		$labels                     = &$wp_post_types['post']->labels;
-		$labels->name               = 'Blog';
+		$labels       = &$wp_post_types['post']->labels;
+		$labels->name = 'Blog';
 		// $labels->singular_name      = 'Project';
 		// $labels->add_new            = 'Add Project';
 		// $labels->add_new_item       = 'Add Project';
@@ -127,7 +128,6 @@ if ( ! function_exists( 'llos_custom_post_object_label' ) ) {
 
 	remove_action( 'wp_head', 'rsd_link' );
 	add_action( 'init', 'llos_custom_post_object_label' );
-	add_action( 'admin_menu', 'llos_custom_post_menu_label' );
 }
 
 /*
