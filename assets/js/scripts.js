@@ -175,8 +175,16 @@
     $('.member-list').find('a, button').on('click', handleOpener)
   }
 
+  // BeefUp
   $('.beefup').beefup({
     openSingle: true,
+    onInit: function (element) {
+      if (location.hash && location.hash.slice(1) === element.parent().attr('id')) {
+        element.find('.beefup__head').each(function (index, item) {
+          setTimeout(function () { item.click() }, 500)
+        })
+      }
+    },
   })
 })(jQuery)
 
