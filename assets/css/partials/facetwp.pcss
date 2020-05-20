@@ -1,0 +1,75 @@
+.facetwp-facet {
+  @apply relative flex flex-1 -mb-border;
+
+  &.is-loading {
+    @apply pointer-events-auto;
+    & .facetwp-overlay { @apply absolute pin w-full h-full cursor-wait; }
+  }
+
+  &:matches(.facetwp-type-radio, .facetwp-type-dropdown) {
+    @apply flex -mx-border;
+
+    & :matches(.facetwp-radio, .facetwp-dropdown) {
+      @apply flex-1 -mx-px border-black border cursor-pointer;
+      @apply py-15 px-20 text-16 leading-none font-oswald text-center uppercase;
+      @screen lg { @apply py-20 text-24; }
+
+      &:matches(:hover, .checked) { @apply bg-primary; }
+      & .facetwp-counter { @apply hidden; }
+    }
+  }
+
+  &.facetwp-type-fselect {
+    @apply -mx-px;
+
+    & .fs-wrap {
+      @apply flex-1 cursor-default;
+      &:matches(:focus) { @apply outline-none; }
+
+      & .fs-label-wrap {
+        @apply bg-transparent border-none;
+        &:matches(:hover, .checked) { @apply bg-primary; }
+
+        & .fs-label {
+          @apply flex-1 border-black border cursor-pointer;
+          @apply py-15 px-20 text-16 leading-none font-oswald text-center uppercase;
+          @screen lg { @apply py-20 text-24; }
+        }
+
+        & .fs-arrow { @apply pin-r mr-20; }
+      }
+
+      & .fs-dropdown {
+        @apply w-full -mt-border border-black border;
+
+        & :matches(.fs-search, .fs-option, .fs-no-results) {
+          @apply bg-gray border-black border-b;
+          @apply py-15 px-20 text-16 leading-none font-oswald text-center uppercase;
+          @screen lg { @apply py-20 text-24; }
+          & input { @apply p-0; }
+
+          &.disabled { @apply opacity-100 cursor-not-allowed; }
+          &.disabled .fs-option-label { @apply opacity-30; }
+        }
+
+        & .fs-search { @apply hidden; }
+        & .fs-no-results { @apply border-b-0; }
+      }
+    }
+  }
+}
+
+.facetwp-template {
+  @apply flex flex-grow w-full;
+}
+
+.facetwp-pager {
+  @apply list-reset flex mx-auto text-16;
+  @screen md { @apply text-29; }
+
+  & a {
+    @apply inline-block mx-10 text-inherit cursor-pointer;
+    &:matches(:hover, .checked) { @apply text-primary; }
+    &.active:not(.prev, .next) { @apply font-bold; }
+  }
+}

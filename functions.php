@@ -25,3 +25,28 @@ add_action(
 		}
 	}
 );
+
+// FacetWP: Remove front-end styles
+add_filter(
+	'facetwp_assets',
+	function( $assets ) {
+		unset( $assets['front.css'] );
+		return $assets;
+	}
+);
+
+// FacetWP: Custom Pagination.
+// add_filter(
+// 	'facetwp_pager_html',
+// 	function ( $output, $params ) {
+// 		return Timber::compile(
+// 			'partials/common/pagination.twig',
+// 			array(
+// 				'post'  => new Timber\Post(),
+// 				'facet' => $params,
+// 			)
+// 		);
+// 	},
+// 	10,
+// 	2
+// );

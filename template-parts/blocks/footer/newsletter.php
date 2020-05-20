@@ -17,7 +17,7 @@ $n_classes = array(
 		<p><?php echo esc_html( $footer_cta['title'] ); ?></p>
 	</div>
 
-	<div class="w-full mt-20">
+	<div class="w-full mt-20 md:mt-0">
 		<form data-ajaxchimp class="flex flex-wrap" method="POST"
 			action="//fablabbcn.us2.list-manage.com/subscribe/post?u=d67ba8deb34a23a222ec4eb8a&id=9ece23d947">
 
@@ -34,7 +34,7 @@ $n_classes = array(
 			</span>
 
 			<span class="relative flex w-full mt-20 lg:mt-10">
-				<label>
+				<label class="mb-0">
 					<input class="clip" type="checkbox" name="gdpr[37]" required>
 					<span class="<?php the_classes( $n_classes['checkbox'] ); ?>"><?php echo wp_kses_post( $footer_cta['acceptance_text'] ); ?></span>
 				</label>

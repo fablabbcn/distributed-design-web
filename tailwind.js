@@ -389,6 +389,12 @@ module.exports = {
     require('tailwindcss-aspect-ratio')({
       ratios: { '1/1': [1, 1] },
     }),
+    require('tailwindcss-spinner')({
+      name: 'is-loading',
+      color: '#000',
+      size: '1em',
+      border: '2px',
+    }),
   ],
 
   /*
