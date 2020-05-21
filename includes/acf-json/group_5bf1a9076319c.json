@@ -3,6 +3,28 @@
     "title": "Post: Talent",
     "fields": [
         {
+            "key": "field_5ec6d071de6c4",
+            "label": "Categories",
+            "name": "categories",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category_talent",
+            "field_type": "checkbox",
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
             "key": "field_5c92adf9e3ad3",
             "label": "Image",
             "name": "image",
@@ -235,5 +257,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559057554
+    "modified": 1590087893
 }
