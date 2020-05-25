@@ -65,8 +65,8 @@ $s_classes = array(
 								<div class="<?php the_classes( $s_classes['columns'](true)[1] ); ?>"><?php include locate_template( 'template-parts/singular/image.php' ); ?></div>
 							<?php elseif ( 'slider_content' === get_row_layout() ) : ?>
 								<div class="<?php the_classes( $s_classes['columns'](true)[1] ); ?>"><?php include locate_template( 'template-parts/singular/slider.php' ); ?></div>
-							<?php elseif ( 'features_list' === get_row_layout() ) : ?>
-								<div class="<?php the_classes( $s_classes['columns'](true)[1] ); ?>"><?php include locate_template( 'template-parts/singular/features.php' ); ?></div>
+							<?php elseif ( 'multi_columns' === get_row_layout() ) : ?>
+								<div class="<?php the_classes( $s_classes['columns'](true)[1] ); ?>"><?php include locate_template( 'template-parts/singular/columns.php' ); ?></div>
 							<?php endif; ?>
 
 							<div class="<?php the_classes( $s_classes['columns'](false)[2] ); ?>">&nbsp;</div>

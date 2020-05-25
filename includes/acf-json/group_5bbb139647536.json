@@ -232,8 +232,8 @@
                 },
                 "layout_5ecbd88344331": {
                     "key": "layout_5ecbd88344331",
-                    "name": "features_list",
-                    "label": "Features List",
+                    "name": "multi_columns",
+                    "label": "Multiple Columns Content",
                     "display": "row",
                     "sub_fields": [
                         {
@@ -356,5 +356,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1590420546
+    "modified": 1590422787
 }
