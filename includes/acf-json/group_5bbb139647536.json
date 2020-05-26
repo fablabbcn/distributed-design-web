@@ -237,6 +237,25 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_5ecd37ec7ed65",
+                            "label": "Has Border?",
+                            "name": "has_border",
+                            "type": "true_false",
+                            "instructions": "Toggle off to make the columns look like they belong with the previous block by removing the border between them.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_5ecbd89144332",
                             "label": "Items",
                             "name": "items",
@@ -356,5 +375,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1590422787
+    "modified": 1590507631
 }
