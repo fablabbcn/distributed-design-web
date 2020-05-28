@@ -9,8 +9,38 @@
   }
 }
 
-#acf-form {
+:matches(#acf-form, .af-form.acf-form[id*="form_"]) {
   @apply w-full p-20 border border-solid;
+
+  & .acf-fields.-border {
+    @apply bg-transparent border-none;
+    & > .acf-field { @apply mt-20 p-0 border-none; }
+  }
+
+  & .af-page-wrap {
+    @apply flex justify-center items-center w-full border-0 order-last;
+
+    & .af-page-button {
+      @apply flex-none h-auto bg-transparent border-0 cursor-pointer;
+      &:not(.enabled) { @apply opacity-30 cursor-not-allowed; }
+
+      &:matches(::before, ::after) { content: none; }
+
+      & .index { @apply flex justify-center items-center m-0 w-30 h-30 text-black bg-transparent text-18 font-bold border border-black rounded-full; }
+      & .title { @apply hidden; }
+
+      &.current {
+        & .index { @apply text-gray bg-black; }
+      }
+
+      & + .af-page-button { @apply ml-15; }
+    }
+  }
+
+  & .acf-notice {
+    &.acf-error-message { @apply ; }
+    @nest :matches(.acf-input) & { @apply ; }
+  }
 
   & a.acf-icon {
     @apply block m-0 p-0 text-black bg-white border border-solid border-current box-content;
@@ -44,9 +74,20 @@
       }
     }
 
+    & :matches(.acf-button, .af-previous-button, .af-next-button, .acf-gallery-sort) {
+      @apply inline-block w-auto !important;
+      @apply px-20 py-10 bg-white text-16 font-oswald font-medium text-center uppercase no-underline border !important;
+      @screen md { @apply text-19 !important; }
+
+      &:matches(:hover, :focus) { @apply text-black bg-white-70 !important; }
+      &:matches([disabled]) { @apply opacity-30 cursor-not-allowed; }
+      &:matches([style="display: none;"]) { @apply hidden !important; }
+    }
+
     & .acf-input {
       & i.acf-icon { @apply hidden; }
 
+      & :matches(input, select, textarea),
       & :not(.quicktags-toolbar) > :matches(input, select, textarea) {
         @apply flex-grow w-full h-auto p-20 text-16 bg-white border border-solid border-black rounded-0;
         @screen md { @apply text-17; }
@@ -154,15 +195,6 @@
       }
     }
 
-    & .acf-button,
-    & .acf-gallery-sort {
-      @apply inline-block w-auto !important;
-      @apply px-20 py-10 bg-white text-16 font-oswald font-medium text-center uppercase no-underline border !important;
-      @screen md { @apply text-19 !important; }
-
-      &:matches(:hover, :focus) { @apply text-black bg-white-70 !important; }
-    }
-
     & .acf-editor-wrap {
       & .mce-toolbar .mce-ico { @apply text-black; }
       & .tmce-active .switch-tmce { @apply text-black; }
@@ -262,6 +294,31 @@
           content: '✓';
         }
       }
+    }
+
+    & .acf-field-oembed {
+      & .acf-oembed {
+        & .acf-actions { @apply pin-y pin-r flex flex-col justify-center px-20 py-10; }
+        & .title { @apply p-0 border-none; }
+        & .canvas { @apply -mt-border border; }
+      }
+    }
+
+    & .acf-field-group[data-name*="details_"] {
+      & .acf-label { @apply clip; }
+      & .acf-true-false label { @apply flex flex-row-reverse items-center m-0; }
+      & .acf-true-false label .acf-switch { @apply flex flex-none; }
+      & .acf-true-false label .acf-switch span { @apply inline-flex items-center; }
+      & .acf-true-false label .message { @apply ml-0 mr-20; }
+
+      & .acf-fields.-border {
+        & > .acf-field { @apply bg-white m-0 p-20; }
+      }
+
+      & .acf-field-true-false { @apply border border-solid !important; }
+      & .acf-field-true-false + .acf-field-textarea { @apply -mt-border p-0 border-0 !important; }
+      & .acf-field-true-false + .acf-field-textarea .acf-input { @apply flex flex-col; }
+      & .acf-field-true-false + .acf-field-textarea .acf-input textarea { @apply bg-gray; }
     }
   }
 }

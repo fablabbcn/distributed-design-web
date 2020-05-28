@@ -56,7 +56,10 @@ const sizing = {
   15: '15px',
   20: '20px',
   25: '25px',
+  30: '30px',
+  35: '35px',
   40: '40px',
+  45: '45px',
   50: '50px',
 }
 
@@ -120,6 +123,7 @@ module.exports = {
   },
 
   textSizes: {
+    unset: 'unset',
     12: '12px',
     14: '14px',
     15: '15px',
