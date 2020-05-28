@@ -579,8 +579,8 @@
             "key": "field_5ecd54eb28e3b",
             "label": "Video",
             "name": "video",
-            "type": "oembed",
-            "instructions": "Paste the URL of your video. You can host it on sites likes YouTube or Vimeo",
+            "type": "url",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -589,8 +589,8 @@
                 "id": ""
             },
             "hide_admin": 0,
-            "width": "",
-            "height": ""
+            "default_value": "",
+            "placeholder": "Video URL"
         },
         {
             "key": "field_5ecd5789ba380",
@@ -761,5 +761,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1590682821
+    "modified": 1590688703
 }
