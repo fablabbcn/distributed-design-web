@@ -54,7 +54,7 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
 	function ddmp_shortcode_modal( $attrs, $content = null ) {
 		$post_id  = array_key_exists( 'id', $attrs ) ? $attrs['id'] : ( $content ?: false );
-		$form_id  = array_key_exists( 'form', $attrs ) ? $attrs['form'] : ( $content ?: false );
+		$form_id  = array_key_exists( 'form', $attrs ) ? $attrs['form'] : false;
 		$modal_id = $form_id ? "modal-form-$post_id" : "modal-resources-$post_id";
 		$classes  = 'flex justify-center items-center w-full py-10 px-20 bg-white hocus:text-black hocus:bg-primary text-center no-underline border rounded-full overflow-hidden';
 
