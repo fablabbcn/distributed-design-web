@@ -24,7 +24,7 @@
   & :matches(h1, h2, h3, h4, h5, h6, p) + :matches(h1, h2, h3, h4, h5, h6, p) { @apply mt-20; }
   & a:not(.no-underline) { @apply underline; }
 
-  & a:not([class*="text-"]):matches(:hover, :focus) {
+  & a:not([class*="text-"], [href="#"]):matches(:hover, :focus) {
     text-decoration-color: transparent;
     @nest body:matches(.blog, .single-post) & { color: config('colors.cyan'); }
     @nest body:matches(.page, .page-id-2) & { color: config('colors.red'); }

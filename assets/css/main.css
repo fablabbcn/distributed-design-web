@@ -5183,23 +5183,23 @@ table { border-collapse: collapse; }
 
 .rich-text a:not(.no-underline) { text-decoration: underline; }
 
-.rich-text a:not([class*="text-"]):hover, .rich-text a:not([class*="text-"]):focus {
+.rich-text a:not([class*="text-"]):not([href="#"]):hover, .rich-text a:not([class*="text-"]):not([href="#"]):focus {
   -webkit-text-decoration-color: transparent;
   -moz-text-decoration-color: transparent;
   text-decoration-color: transparent;
 }
 
-body.blog .rich-text a:not([class*="text-"]):hover, body.single-post .rich-text a:not([class*="text-"]):hover, body.blog .rich-text a:not([class*="text-"]):focus, body.single-post .rich-text a:not([class*="text-"]):focus { color: #0ff; }
+body.blog .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.single-post .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.blog .rich-text a:not([class*="text-"]):not([href="#"]):focus, body.single-post .rich-text a:not([class*="text-"]):not([href="#"]):focus { color: #0ff; }
 
-body.page .rich-text a:not([class*="text-"]):hover, body.page-id-2 .rich-text a:not([class*="text-"]):hover, body.page .rich-text a:not([class*="text-"]):focus, body.page-id-2 .rich-text a:not([class*="text-"]):focus { color: #f93838; }
+body.page .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.page-id-2 .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.page .rich-text a:not([class*="text-"]):not([href="#"]):focus, body.page-id-2 .rich-text a:not([class*="text-"]):not([href="#"]):focus { color: #f93838; }
 
-body.post-type-archive-resources .rich-text a:not([class*="text-"]):hover, body.single-resources .rich-text a:not([class*="text-"]):hover, body.post-type-archive-resources .rich-text a:not([class*="text-"]):focus, body.single-resources .rich-text a:not([class*="text-"]):focus { color: #0f0; }
+body.post-type-archive-resources .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.single-resources .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.post-type-archive-resources .rich-text a:not([class*="text-"]):not([href="#"]):focus, body.single-resources .rich-text a:not([class*="text-"]):not([href="#"]):focus { color: #0f0; }
 
-body.page-template-template-archive-events .rich-text a:not([class*="text-"]):hover, body.single-tribe_events .rich-text a:not([class*="text-"]):hover, body.page-template-template-archive-events .rich-text a:not([class*="text-"]):focus, body.single-tribe_events .rich-text a:not([class*="text-"]):focus { color: #f0f; }
+body.page-template-template-archive-events .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.single-tribe_events .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.page-template-template-archive-events .rich-text a:not([class*="text-"]):not([href="#"]):focus, body.single-tribe_events .rich-text a:not([class*="text-"]):not([href="#"]):focus { color: #f0f; }
 
-body.post-type-archive-talent .rich-text a:not([class*="text-"]):hover, body.single-talent .rich-text a:not([class*="text-"]):hover, body.post-type-archive-talent .rich-text a:not([class*="text-"]):focus, body.single-talent .rich-text a:not([class*="text-"]):focus { color: #ff0; }
+body.post-type-archive-talent .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.single-talent .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.post-type-archive-talent .rich-text a:not([class*="text-"]):not([href="#"]):focus, body.single-talent .rich-text a:not([class*="text-"]):not([href="#"]):focus { color: #ff0; }
 
-body.page-id-13 .rich-text a:not([class*="text-"]):hover, body.page-id-13 .rich-text a:not([class*="text-"]):focus { color: #fff; }
+body.page-id-13 .rich-text a:not([class*="text-"]):not([href="#"]):hover, body.page-id-13 .rich-text a:not([class*="text-"]):not([href="#"]):focus { color: #fff; }
 
 body.blog .text-primary, body.single-post .text-primary { color: #0ff; }
 
@@ -5500,6 +5500,8 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   border-width: 2px;
   border-style: solid;
 }
+
+#acf-form a[href=""], .af-form.acf-form[id*="form_"] a[href=""], #acf-form a[href="#"], .af-form.acf-form[id*="form_"] a[href="#"] { text-decoration: none; }
 
 #acf-form .acf-fields.-border, .af-form.acf-form[id*="form_"] .acf-fields.-border {
   background-color: transparent;

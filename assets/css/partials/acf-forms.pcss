@@ -11,6 +11,7 @@
 
 :matches(#acf-form, .af-form.acf-form[id*="form_"]) {
   @apply w-full p-20 border border-solid;
+  & a:matches([href=""], [href="#"]) { @apply no-underline; }
 
   & .acf-fields.-border {
     @apply bg-transparent border-none;
