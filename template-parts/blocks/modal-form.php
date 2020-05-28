@@ -11,7 +11,7 @@ $n_classes = array(
 
 ?>
 
-<div id="<?php echo esc_attr( $modal_id ); ?>" class="z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto">
+<div id="<?php echo esc_attr( $modal_id ); ?>" class="clip z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto">
 	<button data-clip="<?php echo esc_attr( $modal_id ); ?>" class="fixed pin w-full h-full bg-black-50 cursor-pointer"></button>
 
 	<div class="flex flex-col justify-center items-center w-full my-auto p-20 md:pt-160 md:px-45 md:pb-85">
@@ -21,7 +21,7 @@ $n_classes = array(
 				<p class="<?php the_classes( $n_classes['title'] ); ?>"><?php wp_kses_ddmp( "APPLY TO THE DISTRIBUTED DESIGN AWARDS" ); ?></p>
 			</header>
 
-			<?php echo do_shortcode( '[advanced_form form="form_5ecd5106f2eb6"]' ); ?>
+			<?php echo do_shortcode( '[advanced_form form="' . $this_form . '"]' ); ?>
 
 		</div>
 	</div>
