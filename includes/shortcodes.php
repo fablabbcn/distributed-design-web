@@ -35,7 +35,7 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 		$link_attrs = array(
 			'class'  => 'class="' . get_the_classes( $classes ) . '"',
 			'href'   => 'href="' . ( $attrs['url'] ?: $attrs['href'] ) . '"',
-			'target' => 'target="' . ( $is_external ? '_blank' : '_self' ) . '"',
+			'target' => 'target="' . ( array_key_exists( 'target', $attrs ) ? $attrs['target'] : ( $is_external ? '_blank' : '_self' ) ) . '"',
 		);
 
 		return ( array_key_exists( 'icon', $attrs ) && $attrs['icon'] ) || $content ? (
