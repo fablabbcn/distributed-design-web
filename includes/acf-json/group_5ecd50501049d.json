@@ -22,7 +22,7 @@
         },
         {
             "key": "field_5ecfd7c13fc99",
-            "label": "Intro",
+            "label": "",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -731,7 +731,7 @@
                     "key": "field_5ecd5856ba387",
                     "label": "Link",
                     "name": "link",
-                    "type": "url",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -742,9 +742,52 @@
                     },
                     "hide_admin": 0,
                     "default_value": "",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5ed3dd617c3b3",
+            "label": "",
+            "name": "terms",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "message": "I have read the Entry Guide & Rules and I agree to it’s terms and conditions.",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5ed3dd8d7c3b4",
+            "label": "",
+            "name": "newsletter",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "hide_admin": 0,
+            "message": "I want to subscribe to the Distributed Design newsletter",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -764,5 +807,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1590935478
+    "modified": 1590943979
 }

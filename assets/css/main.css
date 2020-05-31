@@ -6143,6 +6143,85 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
 #acf-form .acf-form-fields .acf-taxonomy-field .acf-checkbox-list li label input:checked + span::before, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-taxonomy-field .acf-checkbox-list li label input:checked + span::before { content: '✓'; }
 
+#acf-form .acf-form-fields .acf-field-true-false .acf-true-false label, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  background-color: #e6e6e6;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+#acf-form .acf-form-fields .acf-field-true-false .acf-true-false label input, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label input {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+#acf-form .acf-form-fields .acf-field-true-false .acf-true-false label span, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label span {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+#acf-form .acf-form-fields .acf-field-true-false .acf-true-false label input + span::before, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label input + span::before {
+  content: '';
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  color: #000;
+  background-color: #fff;
+  font-weight: 700;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  border-color: currentColor;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+#acf-form .acf-form-fields .acf-field-true-false .acf-true-false label input:checked + span::before, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label input:checked + span::before { content: '✓'; }
+
 #acf-form .acf-form-fields .acf-field-oembed .acf-oembed .acf-actions, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-oembed .acf-oembed .acf-actions {
   top: 0;
   bottom: 0;

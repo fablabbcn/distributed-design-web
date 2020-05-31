@@ -291,6 +291,23 @@
       }
     }
 
+    & .acf-field-true-false {
+      & .acf-true-false {
+        & label { @apply flex items-center m-0 bg-gray text-17 font-normal; }
+        & label input { @apply clip; }
+        & label span { @apply flex items-center w-full; }
+
+        & label input + span::before {
+          content: '';
+          @apply flex justify-center items-center w-20 h-20 mr-10 text-black bg-white font-bold text-center border border-solid border-current box-content;
+        }
+
+        & label input:checked + span::before {
+          content: '✓';
+        }
+      }
+    }
+
     & .acf-field-oembed {
       & .acf-oembed {
         & .acf-actions { @apply pin-y pin-r flex flex-col justify-center px-20 py-10; }
