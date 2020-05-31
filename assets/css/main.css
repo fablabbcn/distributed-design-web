@@ -6314,6 +6314,11 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 }
 
 #acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label .message, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label .message {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   margin-left: 0;
   margin-right: 20px;
 }
