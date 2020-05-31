@@ -76,7 +76,7 @@
             "min": 1,
             "max": 0,
             "layout": "table",
-            "button_label": "Add Member",
+            "button_label": "",
             "sub_fields": [
                 {
                     "key": "field_5ecd50d77b16d",
@@ -750,10 +750,10 @@
             ]
         },
         {
-            "key": "field_5ed3dd617c3b3",
-            "label": "",
-            "name": "terms",
-            "type": "true_false",
+            "key": "field_5ed3f232218e7",
+            "label": "Acceptance",
+            "name": "acceptance",
+            "type": "group",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -763,31 +763,49 @@
                 "id": ""
             },
             "hide_admin": 0,
-            "message": "I have read the Entry Guide & Rules and I agree to it’s terms and conditions.",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
-        },
-        {
-            "key": "field_5ed3dd8d7c3b4",
-            "label": "",
-            "name": "newsletter",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "hide_admin": 0,
-            "message": "I want to subscribe to the Distributed Design newsletter",
-            "default_value": 0,
-            "ui": 0,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5ed3dd617c3b3",
+                    "label": "Terms",
+                    "name": "terms",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "message": "I have read the Entry Guide & Rules and I agree to it’s terms and conditions.",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_5ed3dd8d7c3b4",
+                    "label": "",
+                    "name": "newsletter",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "hide_admin": 0,
+                    "message": "I want to subscribe to the Distributed Design newsletter",
+                    "default_value": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -807,5 +825,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1590943979
+    "modified": 1590949940
 }

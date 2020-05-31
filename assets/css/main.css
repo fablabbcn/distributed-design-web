@@ -5546,8 +5546,11 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 #acf-form a[href=""], .af-form.acf-form[id*="form_"] a[href=""], #acf-form a[href="#"], .af-form.acf-form[id*="form_"] a[href="#"] { text-decoration: none; }
 
 #acf-form .acf-fields > .acf-field, .af-form.acf-form[id*="form_"] .acf-fields > .acf-field {
-  padding: 0;
-  border-style: none;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  border-style: none !important;
 }
 
 #acf-form .acf-fields > .acf-field:not([style="display: none;"]) + .acf-field:not([style="display: none;"]), .af-form.acf-form[id*="form_"] .acf-fields > .acf-field:not([style="display: none;"]) + .acf-field:not([style="display: none;"]), #acf-form .acf-fields > .acf-form-submit, .af-form.acf-form[id*="form_"] .acf-fields > .acf-form-submit, #acf-form .acf-fields > .af-page-wrap, .af-form.acf-form[id*="form_"] .acf-fields > .af-page-wrap { margin-top: 20px; }
@@ -5605,7 +5608,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   flex-wrap: wrap;
 }
 
-#acf-form .acf-form-fields > .acf-field, .af-form.acf-form[id*="form_"] .acf-form-fields > .acf-field {
+#acf-form .acf-form-fields .acf-field, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field {
   min-height: -webkit-min-content !important;
   min-height: -moz-min-content !important;
   min-height: min-content !important;
@@ -5613,7 +5616,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   border-width: 0;
 }
 
-#acf-form .acf-form-fields > .acf-field .char-count, .af-form.acf-form[id*="form_"] .acf-form-fields > .acf-field .char-count {
+#acf-form .acf-form-fields .acf-field .char-count, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field .char-count {
   position: absolute;
   z-index: 10;
   top: 0;
@@ -5626,7 +5629,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 }
 
 @media (min-width: 992px) {
-  #acf-form .acf-form-fields > .acf-field .char-count, .af-form.acf-form[id*="form_"] .acf-form-fields > .acf-field .char-count { margin-top: -40px; }
+  #acf-form .acf-form-fields .acf-field .char-count, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field .char-count { margin-top: -40px; }
 }
 
 #acf-form .acf-form-fields .acf-input-wrap, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input-wrap { height: auto; }
@@ -6317,113 +6320,6 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   border-width: 2px;
 }
 
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-label, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-label {
-  border: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-  clip-path: inset(50%);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-}
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
-  -moz-box-orient: horizontal;
-  -moz-box-direction: reverse;
-  -ms-flex-direction: row-reverse;
-  flex-direction: row-reverse;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  margin: 0;
-}
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label .acf-switch, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label .acf-switch {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 0;
-  -webkit-flex: none;
-  -moz-box-flex: 0;
-  -ms-flex: none;
-  flex: none;
-}
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label .acf-switch span, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label .acf-switch span {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -moz-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -moz-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label .message, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-true-false label .message {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -moz-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
-  margin-left: 0;
-  margin-right: 20px;
-}
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field {
-  background-color: #fff !important;
-  margin: 0 !important;
-  padding: 20px !important;
-}
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field label, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field label { background-color: transparent !important; }
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false {
-  border-width: 2px !important;
-  border-style: solid !important;
-}
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea {
-  margin-top: -2px !important;
-  padding: 0 !important;
-  border-width: 0 !important;
-}
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input {
-  display: -webkit-box !important;
-  display: -webkit-flex !important;
-  display: -moz-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: vertical !important;
-  -webkit-box-direction: normal !important;
-  -webkit-flex-direction: column !important;
-  -moz-box-orient: vertical !important;
-  -moz-box-direction: normal !important;
-  -ms-flex-direction: column !important;
-  flex-direction: column !important;
-}
-
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input textarea { background-color: #e6e6e6 !important; }
-
 #acf-form .af-page-wrap, .af-form.acf-form[id*="form_"] .af-page-wrap {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6578,6 +6474,136 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   top: 0;
   bottom: 0;
 }
+
+.af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > *:last-of-type { display: none !important; }
+
+.af-form.acf-form[id*="form_"] .acf-repeater .acf-actions [data-event="add-row"] {
+  width: 100% !important;
+  color: #fff !important;
+  background-color: #000 !important;
+  border-color: #000 !important;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="acceptance"] .acf-label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-true-false label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-true-false label .acf-switch {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -moz-box-flex: 0;
+  -ms-flex: none;
+  flex: none;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-true-false label .acf-switch span {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-true-false label .message {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  margin-left: 0;
+  margin-right: 20px;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-fields > .acf-field {
+  background-color: #fff !important;
+  margin: 0 !important;
+  padding: 20px !important;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-fields > .acf-field label { background-color: transparent !important; }
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false {
+  border-width: 2px !important;
+  border-style: solid !important;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea {
+  margin-top: -2px !important;
+  padding: 0 !important;
+  border-width: 0 !important;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: column !important;
+  -moz-box-orient: vertical !important;
+  -moz-box-direction: normal !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input textarea { background-color: #e6e6e6 !important; }
 
 .facetwp-facet {
   position: relative;
