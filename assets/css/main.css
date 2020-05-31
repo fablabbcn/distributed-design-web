@@ -3903,6 +3903,48 @@ table { border-collapse: collapse; }
 
 .z-auto { z-index: auto; }
 
+.bg-scroll { background-attachment: scroll; }
+
+.bg-fixed { background-attachment: fixed; }
+
+.bg-local { background-attachment: local; }
+
+.bg-clip-border { background-clip: border-box; }
+
+.bg-clip-padding { background-clip: padding-box; }
+
+.bg-clip-content { background-clip: content-box; }
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.bg-origin-border {
+  -webkit-background-origin: border-box;
+  -moz-background-origin: border-box;
+  -o-background-origin: border-box;
+  background-origin: border-box;
+}
+
+.bg-origin-padding {
+  -webkit-background-origin: padding-box;
+  -moz-background-origin: padding-box;
+  -o-background-origin: padding-box;
+  background-origin: padding-box;
+}
+
+.bg-origin-content {
+  -webkit-background-origin: content-box;
+  -moz-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+}
+
+.bg-space { background-repeat: space; }
+
+.bg-round { background-repeat: round; }
+
 .bg-black-2 { background-color: rgba(0, 0, 0, 0.025); }
 
 .bg-dark-gray-2 { background-color: rgba(34, 34, 34, 0.025); }
@@ -5672,6 +5714,19 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
         @apply flex-grow w-full h-auto text-16 bg-white border border-b-0 border-solid border-black rounded-0;
         @screen md { @apply text-17; }
       } */ }
+
+#acf-form .acf-form-fields .acf-field-select select, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: right;
+  -webkit-background-origin: content-box;
+  -moz-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20x%3D%2212px%22%20y%3D%220px%22%20width%3D%2224px%22%20height%3D%225px%22%20viewBox%3D%220%200%206%203%22%20enable-background%3D%22new%200%200%206%203%22%20xml%3Aspace%3D%22preserve%22%20fill%3D%22%23000%22%3E%3Cpolygon%20points%3D%225.992%2C0%202.992%2C3%20-0.008%2C0%20%22/%3E%3C/svg%3E);
+}
 
 #acf-form .acf-form-fields .acf-switch, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-switch {
   /* background-color: #f55e4f; */

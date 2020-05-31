@@ -380,6 +380,7 @@ module.exports = {
 
   plugins: [
     require('tailwindcss-interaction-variants')(),
+    require('tailwindcss-background-extended')(),
 
     require('tailwindcss-alpha')({
       modules: { backgroundColors: true, textColors: true },

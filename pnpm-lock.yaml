@@ -34,6 +34,7 @@ devDependencies:
   tailwindcss: 0.7.4
   tailwindcss-alpha: 0.1.4
   tailwindcss-aspect-ratio: 1.0.3
+  tailwindcss-background-extended: 0.1.0
   tailwindcss-inset: 1.0.0
   tailwindcss-interaction-variants: 1.0.0
   tailwindcss-multi-column: 0.2.0
@@ -6494,6 +6495,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-burkG+yxTNp8REWMtFkRzXGdt+8/QR2LMRDHjQ37DV4Y7dk+f/WQtfZYFXXU2GKASrp6WidzrtN2z8OA/jilww==
+  /tailwindcss-background-extended/0.1.0:
+    dev: true
+    resolution:
+      integrity: sha512-fm3H9VK6P2wl7n/Zmo7De2OlZ4v+4Ak/fAcS8GQHe8Ga1VFuzCkzC+caEy7XMkwNA3NUfAaeG/Sl6Wa3UPWePw==
   /tailwindcss-inset/1.0.0:
     dev: true
     resolution:
@@ -7263,6 +7268,7 @@ specifiers:
   tailwindcss: ^0.7.4
   tailwindcss-alpha: ^0.1.4
   tailwindcss-aspect-ratio: ^1.0.1
+  tailwindcss-background-extended: ^0.1.0
   tailwindcss-inset: ^1.0.0
   tailwindcss-interaction-variants: ^1.0.0
   tailwindcss-multi-column: ^0.2.0
