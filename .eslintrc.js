@@ -9,6 +9,7 @@ module.exports = {
   globals: {
     'jQuery': true,
     'Swiper': true,
+    'acf': true,
   },
   rules: {
     'comma-dangle': [

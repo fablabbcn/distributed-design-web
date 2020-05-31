@@ -43,6 +43,12 @@
 
     // Forms: Login && Submit
     jQuery('[id*="form-login"]').on('submit', ajaxLoginUser)
+
+    // Advanced Forms: auto-scroll form
+    acf.addAction('af/form/page_changed', function (newPage, previousPage, form) {
+      var scrollContainer = form.$el.closest('[data-modal="container"]')
+      scrollContainer.length && scrollContainer[0].scrollIntoView({ behavior: 'smooth' })
+    })
   })
 
   function goToHash (url) {
