@@ -5695,7 +5695,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   flex-grow: 1;
   width: 100%;
   height: auto;
-  padding: 20px;
+  padding: 10px;
   font-size: 16px;
   background-color: #fff;
   border-width: 2px;
@@ -5707,7 +5707,10 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 }
 
 @media (min-width: 768px) {
-  #acf-form .acf-form-fields .acf-input input, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input input, #acf-form .acf-form-fields .acf-input select, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input select, #acf-form .acf-form-fields .acf-input textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input textarea, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > input, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input :not(.quicktags-toolbar) > input, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > select, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input :not(.quicktags-toolbar) > select, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input :not(.quicktags-toolbar) > textarea { font-size: 17px; }
+  #acf-form .acf-form-fields .acf-input input, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input input, #acf-form .acf-form-fields .acf-input select, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input select, #acf-form .acf-form-fields .acf-input textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input textarea, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > input, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input :not(.quicktags-toolbar) > input, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > select, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input :not(.quicktags-toolbar) > select, #acf-form .acf-form-fields .acf-input :not(.quicktags-toolbar) > textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input :not(.quicktags-toolbar) > textarea {
+    padding: 20px;
+    font-size: 17px;
+  }
 }
 
 #acf-form .acf-form-fields .acf-input, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input { /* & .quicktags-toolbar {
