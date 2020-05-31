@@ -58,10 +58,14 @@ if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
 		$modal_id = $form_id ? "modal-form-$post_id" : "modal-resources-$post_id";
 		$classes  = 'flex justify-center items-center w-full py-10 px-20 bg-white hocus:text-black hocus:bg-primary text-center no-underline border rounded-full overflow-hidden';
 
-		// TODO: Make sure same modal is not printed twice
-		set_query_var( 'this_form', $form_id );
-		set_query_var( 'this_post', $post_id );
-		get_template_part( $form_id ? 'template-parts/blocks/modal-form' : 'template-parts/blocks/modal-newsletter' );
+		$this_form = $form_id;
+		$this_post = $post_id;
+
+		$partial_location = get_stylesheet_directory() . ( $form_id
+			? '/template-parts/blocks/modal-form.php'
+			: '/template-parts/blocks/modal-newsletter.php' );
+
+		require_once $partial_location;
 
 		return "<p><button data-clip=\"$modal_id\" class=\"$classes\">$content</button></p>";
 	} add_shortcode( 'modal_toggle', 'ddmp_shortcode_modal' );
