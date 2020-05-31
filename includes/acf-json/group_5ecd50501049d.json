@@ -22,7 +22,7 @@
         },
         {
             "key": "field_5ecfd7c13fc99",
-            "label": "",
+            "label": "Intro",
             "name": "",
             "type": "message",
             "instructions": "",
@@ -34,7 +34,7 @@
                 "id": ""
             },
             "hide_admin": 0,
-            "message": "Fill out the questions step by step, and don't worry - you can always click below to edit your answers. You can nominate as many times as you'd like, and it's completely free of charge!",
+            "message": "Fill out the form to submit your project. If you want to edit your answers, you can go back using the buttons below. This application is completely free of charge!",
             "new_lines": "wpautop",
             "esc_html": 0
         },
