@@ -45,10 +45,10 @@ $button_classes = 'flex justify-center items-center p-10 bg-white text-center bo
 
 				</header>
 
-				<dl class="flex flex-wrap justify-between lg:justify-start mt-auto -mx-5 pt-20">
+				<div class="flex justify-between lg:justify-start mt-auto pt-5">
 					<?php $social_links = $contact['social']['links']; ?>
 					<?php require locate_template( 'template-parts/blocks/social-links.php' ); ?>
-				</dl>
+				</div>
 
 			</aside>
 

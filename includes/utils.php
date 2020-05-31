@@ -70,3 +70,20 @@ function get_button_clip( $terms, $term, $pad, $get_callback ) {
 
 	return $button_clip;
 }
+
+/**
+ * Get page_template id.
+ */
+if ( ! function_exists( 'get_page_template_id' ) ) {
+	function get_page_template_id( $slug ) {
+		$pages = get_pages(
+			array(
+				'meta_key'     => '_wp_page_template',
+				'meta_value'   => "template-$slug.php",
+				'hierarchical' => false,
+			)
+		);
+
+		return $pages ? $pages[0]->ID : false;
+	}
+}

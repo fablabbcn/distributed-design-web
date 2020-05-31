@@ -6485,7 +6485,31 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   bottom: 0;
 }
 
-#acf-form .af-success, .af-form.acf-form[id*="form_"] .af-success { text-align: center; }
+#acf-form .af-success, .af-form.acf-form[id*="form_"] .af-success {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
 
 .af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > *:first-of-type, .af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > *:last-of-type { display: none !important; }
 

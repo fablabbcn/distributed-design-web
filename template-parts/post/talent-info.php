@@ -31,7 +31,7 @@ $talent_features = array(
 		<?php endforeach; ?>
 	</div>
 
-	<div class="flex flex-wrap -mx-5 mt-15">
+	<div class="">
 		<?php $social_links = get_field( 'social_media' )['links']; ?>
 		<?php require locate_template( 'template-parts/blocks/social-links.php' ); ?>
 	</div>

@@ -50,7 +50,7 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 }
 
 
-// Round Button.
+// Modals.
 if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
 	function ddmp_shortcode_modal( $attrs, $content = null ) {
 		$post_id  = array_key_exists( 'id', $attrs ) ? $attrs['id'] : ( $content ?: false );
@@ -69,4 +69,19 @@ if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
 
 		return "<p><button data-clip=\"$modal_id\" class=\"$classes\">$content</button></p>";
 	} add_shortcode( 'modal_toggle', 'ddmp_shortcode_modal' );
+}
+
+
+// Social Links.
+if ( ! function_exists( 'ddmp_shortcode_social_links' ) ) {
+	function ddmp_shortcode_social_links( $attrs, $content = null ) {
+		$social_links     = get_field( 'contact', get_page_template_id( 'contact' )[0]->ID )['social']['links'];
+		$partial_location = get_stylesheet_directory() . '/template-parts/blocks/social-links.php';
+
+		ob_start();
+		require $partial_location;
+		$output = ob_get_clean();
+		return $output;
+
+	} add_shortcode( 'social_links', 'ddmp_shortcode_social_links' );
 }
