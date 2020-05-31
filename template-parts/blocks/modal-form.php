@@ -24,8 +24,8 @@ $n_classes = array(
 		<div class="z-50 relative w-full max-w-screen-md bg-gray" className="p-20 border">
 
 			<?php if ( ! $has_submission ) : ?>
-				<header class="relative flex flex-col w-full px-10 py-20 border border-b-0">
-					<p class="<?php the_classes( $n_classes['title'] ); ?>"><?php wp_kses_ddmp( "APPLY TO THE DISTRIBUTED DESIGN AWARDS" ); ?></p>
+				<header class="relative flex flex-col w-full px-10 py-20 md:px-20 md:py-30 border border-b-0">
+					<p class="<?php the_classes( $n_classes['title'] ); ?>"><?php wp_kses_ddmp( 'APPLY TO THE DISTRIBUTED DESIGN AWARDS' ); ?></p>
 				</header>
 			<?php endif; ?>
 
