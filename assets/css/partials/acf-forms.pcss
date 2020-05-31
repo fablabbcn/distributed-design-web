@@ -57,7 +57,11 @@
     & > .acf-field {
       min-height: min-content !important;
       @apply w-full border-0;
-      & .char-count { @apply absolute z-10 pin-t pin-r m-0 -mt-30 font-oswald font-normal roman; }
+
+      & .char-count {
+        @apply absolute z-10 pin-t pin-r m-0 -mt-30 font-oswald font-normal roman;
+        @screen lg { @apply -mt-40; }
+      }
     }
 
     & .acf-input-wrap {

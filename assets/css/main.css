@@ -5655,6 +5655,10 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   font-style: normal;
 }
 
+@media (min-width: 992px) {
+  #acf-form .acf-form-fields > .acf-field .char-count, .af-form.acf-form[id*="form_"] .acf-form-fields > .acf-field .char-count { margin-top: -40px; }
+}
+
 #acf-form .acf-form-fields .acf-input-wrap, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input-wrap { height: auto; }
 
 #acf-form .acf-form-fields .acf-label label, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label label {
