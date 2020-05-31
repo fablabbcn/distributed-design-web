@@ -326,19 +326,21 @@
 
     & .acf-field-group[data-name*="details_"] {
       & .acf-label { @apply clip; }
+
       & .acf-true-false label { @apply flex flex-row-reverse items-center m-0; }
       & .acf-true-false label .acf-switch { @apply flex flex-none; }
       & .acf-true-false label .acf-switch span { @apply inline-flex items-center; }
       & .acf-true-false label .message { @apply flex-grow ml-0 mr-20; }
 
-      & .acf-fields.-border {
-        & > .acf-field { @apply bg-white m-0 p-20; }
-      }
+      & .acf-fields > .acf-field {
+        @apply bg-white m-0 p-20 !important;
+        & label { @apply bg-transparent !important; }
 
-      & .acf-field-true-false { @apply border border-solid !important; }
-      & .acf-field-true-false + .acf-field-textarea { @apply -mt-border p-0 border-0 !important; }
-      & .acf-field-true-false + .acf-field-textarea .acf-input { @apply flex flex-col; }
-      & .acf-field-true-false + .acf-field-textarea .acf-input textarea { @apply bg-gray; }
+        &.acf-field-true-false { @apply border border-solid !important; }
+        &.acf-field-true-false + .acf-field-textarea { @apply -mt-border p-0 border-0 !important; }
+        &.acf-field-true-false + .acf-field-textarea .acf-input { @apply flex flex-col !important; }
+        &.acf-field-true-false + .acf-field-textarea .acf-input textarea { @apply bg-gray !important; }
+      }
     }
   }
 

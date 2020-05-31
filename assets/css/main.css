@@ -6388,39 +6388,41 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   margin-right: 20px;
 }
 
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields.-border > .acf-field, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields.-border > .acf-field {
-  background-color: #fff;
-  margin: 0;
-  padding: 20px;
+#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field {
+  background-color: #fff !important;
+  margin: 0 !important;
+  padding: 20px !important;
 }
 
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-field-true-false, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-field-true-false {
+#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field label, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field label { background-color: transparent !important; }
+
+#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false {
   border-width: 2px !important;
   border-style: solid !important;
 }
 
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-field-true-false + .acf-field-textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-field-true-false + .acf-field-textarea {
+#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea {
   margin-top: -2px !important;
   padding: 0 !important;
   border-width: 0 !important;
 }
 
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-field-true-false + .acf-field-textarea .acf-input, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-field-true-false + .acf-field-textarea .acf-input {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-box-orient: vertical;
-  -moz-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -moz-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -webkit-flex-direction: column !important;
+  -moz-box-orient: vertical !important;
+  -moz-box-direction: normal !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
 }
 
-#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-field-true-false + .acf-field-textarea .acf-input textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-field-true-false + .acf-field-textarea .acf-input textarea { background-color: #e6e6e6; }
+#acf-form .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input textarea, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input textarea { background-color: #e6e6e6 !important; }
 
 #acf-form .af-page-wrap, .af-form.acf-form[id*="form_"] .af-page-wrap {
   display: -webkit-box;
