@@ -573,7 +573,7 @@
                     "name": "image",
                     "type": "image",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -844,5 +844,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1590953123
+    "modified": 1590956270
 }

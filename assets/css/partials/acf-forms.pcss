@@ -10,7 +10,9 @@
 }
 
 :matches(#acf-form, .af-form.acf-form[id*="form_"]) {
-  @apply w-full p-20 border border-solid;
+  @apply w-full p-10 border border-solid;
+  @screen md { @apply p-20; }
+
   & a:matches([href=""], [href="#"]) { @apply no-underline; }
 
   & .acf-fields > .acf-field { @apply px-10 py-0 border-none !important; }
@@ -44,7 +46,7 @@
 
     & .acf-field {
       min-height: min-content !important;
-      @apply flex-grow min-w-full -mx-5 border-0;
+      @apply flex-grow min-w-full -mx-10 border-0;
 
       & .char-count {
         @apply absolute z-10 pin-t pin-r m-0 -mt-30 font-oswald font-normal roman;
@@ -302,11 +304,11 @@
       & .acf-true-false {
         & label { @apply flex items-center m-0 bg-gray text-17 font-normal; }
         & label input { @apply clip; }
-        & label span { @apply flex items-center w-full; }
+        & label span { @apply flex items-baseline w-full; }
 
         & label input + span::before {
           content: '';
-          @apply flex justify-center items-center w-20 h-20 mr-10 text-black bg-white font-bold text-center border border-solid border-current box-content;
+          @apply flex justify-center items-center flex-no-shrink w-20 h-20 mr-10 text-black bg-white font-bold text-center border border-solid border-current box-content;
         }
 
         & label input:checked + span::before {
@@ -325,7 +327,8 @@
   }
 
   & .af-page-wrap {
-    @apply flex justify-center items-center w-full py-15 border-0 order-last;
+    @apply flex justify-end items-center w-full py-15 border-0 order-last;
+    @screen md { @apply justify-center; }
 
     & .af-page-button {
       @apply flex-none h-auto bg-transparent border-0 cursor-pointer;
@@ -340,7 +343,10 @@
         & .index { @apply text-gray bg-black; }
       }
 
-      & + .af-page-button { @apply ml-15; }
+      & + .af-page-button {
+        @apply ml-10;
+        @screen md { @apply ml-15; }
+      }
     }
   }
 
@@ -352,7 +358,7 @@
     & .acf-spinner { @apply ; }
 
     & .af-previous-button {
-      @apply absolute pin-l inset-t-full mt-25 bg-transparent border-0 !important;
+      @apply absolute pin-l inset-t-full mt-30 bg-transparent border-0 !important;
       @screen lg { @apply mt-35 !important; }
       &::before { content: '\2190\00a0'; }
     }
@@ -364,7 +370,7 @@
   }
 
   & .af-success {
-    @apply flex flex-col justify-center items-center text-center;
+    @apply flex flex-col justify-center items-center py-20 text-center;
   }
 }
 
