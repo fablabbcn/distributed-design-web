@@ -5597,7 +5597,6 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 #acf-form a.acf-icon.-minus:hover, .af-form.acf-form[id*="form_"] a.acf-icon.-minus:hover { background-color: #f55e4f; }
 
 #acf-form .acf-form-fields, .af-form.acf-form[id*="form_"] .acf-form-fields {
-  /* @apply -mx-10; */
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -5612,7 +5611,14 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   min-height: -webkit-min-content !important;
   min-height: -moz-min-content !important;
   min-height: min-content !important;
-  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -moz-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 100%;
+  margin-left: -5px;
+  margin-right: -5px;
   border-width: 0;
 }
 
@@ -6444,6 +6450,10 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   border-width: 0 !important;
 }
 
+@media (min-width: 992px) {
+  #acf-form .af-submit .af-previous-button, .af-form.acf-form[id*="form_"] .af-submit .af-previous-button { margin-top: 35px !important; }
+}
+
 #acf-form .af-submit .af-previous-button::before, .af-form.acf-form[id*="form_"] .af-submit .af-previous-button::before { content: '\2190\00a0'; }
 
 #acf-form .af-submit .af-next-button, .af-form.acf-form[id*="form_"] .af-submit .af-next-button, #acf-form .af-submit .af-submit-button, .af-form.acf-form[id*="form_"] .af-submit .af-submit-button { width: 100% !important; }
@@ -6477,13 +6487,38 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
 
 #acf-form .af-success, .af-form.acf-form[id*="form_"] .af-success { text-align: center; }
 
-.af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > *:last-of-type { display: none !important; }
+.af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > *:first-of-type, .af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > *:last-of-type { display: none !important; }
 
 .af-form.acf-form[id*="form_"] .acf-repeater .acf-actions [data-event="add-row"] {
+  position: relative !important;
   width: 100% !important;
-  color: #fff !important;
+  color: transparent !important;
   background-color: #000 !important;
   border-color: #000 !important;
+}
+
+.af-form.acf-form[id*="form_"] .acf-repeater .acf-actions [data-event="add-row"]::before {
+  content: '';
+  padding: inherit;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus-circle' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 8v8M8 12h8'/%3E%3C/svg%3E");
+  -webkit-transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  -ms-transform: scale(1.25);
+  -o-transform: scale(1.25);
+  transform: scale(1.25);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-origin: content-box;
+  -moz-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
 }
 
 .af-form.acf-form[id*="form_"] .acf-field-group[data-name*="acceptance"] .acf-label {
@@ -6606,6 +6641,8 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
 }
 
 .af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-fields > .acf-field.acf-field-true-false + .acf-field-textarea .acf-input textarea { background-color: #e6e6e6 !important; }
+
+.af-form.acf-form[id*="form_"] .acf-gallery-toolbar select.acf-gallery-sort { display: none !important; }
 
 .facetwp-facet {
   position: relative;

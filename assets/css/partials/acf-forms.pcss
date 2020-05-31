@@ -40,12 +40,11 @@
   }
 
   & .acf-form-fields {
-    /* @apply -mx-10; */
     @apply flex flex-wrap;
 
     & .acf-field {
       min-height: min-content !important;
-      @apply w-full border-0;
+      @apply flex-grow min-w-full -mx-5 border-0;
 
       & .char-count {
         @apply absolute z-10 pin-t pin-r m-0 -mt-30 font-oswald font-normal roman;
@@ -354,6 +353,7 @@
 
     & .af-previous-button {
       @apply absolute pin-l inset-t-full mt-25 bg-transparent border-0 !important;
+      @screen lg { @apply mt-35 !important; }
       &::before { content: '\2190\00a0'; }
     }
 
@@ -370,8 +370,19 @@
 
 .af-form.acf-form[id*="form_"] {
   & .acf-repeater {
-    & .acf-table tr > *:matches(:last-of-type) { @apply hidden !important; }
-    & .acf-actions [data-event="add-row"] { @apply w-full text-white bg-black border-black !important; }
+    & .acf-table tr > *:matches(:first-of-type, :last-of-type) { @apply hidden !important; }
+
+    & .acf-actions [data-event="add-row"] {
+      @apply relative w-full text-transparent bg-black border-black !important;
+
+      &::before {
+        content: '';
+        padding: inherit;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-plus-circle' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 8v8M8 12h8'/%3E%3C/svg%3E");
+        transform: scale(1.25);
+        @apply absolute pin w-full h-full bg-center bg-no-repeat bg-origin-content;
+      }
+    }
   }
 
   & .acf-field-group[data-name*="acceptance"] {
@@ -396,4 +407,6 @@
       &.acf-field-true-false + .acf-field-textarea .acf-input textarea { @apply bg-gray !important; }
     }
   }
+
+  & .acf-gallery-toolbar select.acf-gallery-sort { @apply hidden !important; }
 }

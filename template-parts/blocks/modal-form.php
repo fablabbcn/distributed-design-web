@@ -27,7 +27,16 @@ $n_classes = array(
 				<p class="<?php the_classes( $n_classes['title'] ); ?>"><?php wp_kses_ddmp( "APPLY TO THE DISTRIBUTED DESIGN AWARDS" ); ?></p>
 			</header>
 
-			<?php echo do_shortcode( '[advanced_form form="' . $this_form . '"]' ); ?>
+			<?php
+				advanced_form(
+					$this_form,
+					array(
+						'submit_text'  => 'Submit Application',
+						'post_content' => false,
+						'uploader'     => 'basic',
+					)
+				);
+			?>
 
 		</div>
 	</div>
