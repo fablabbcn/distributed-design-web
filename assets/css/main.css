@@ -5643,6 +5643,18 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   border-width: 0;
 }
 
+#acf-form .acf-form-fields > .acf-field .char-count, .af-form.acf-form[id*="form_"] .acf-form-fields > .acf-field .char-count {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  margin: 0;
+  margin-top: -30px;
+  font-family: Oswald, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 #acf-form .acf-form-fields .acf-input-wrap, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input-wrap { height: auto; }
 
 #acf-form .acf-form-fields .acf-label label, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label label {

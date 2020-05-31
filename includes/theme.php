@@ -59,3 +59,12 @@ add_filter(
 	10,
 	2
 );
+
+
+// Front-end forms.
+add_filter( 'remove_hube2_nag', '__return_true' );
+add_filter( 'acf-input-counter/display', 'my_acf_counter_filter' );
+function my_acf_counter_filter( $display ) {
+	$display = sprintf( __( '%1$s / %2$s', 'acf-counter' ), '%%len%%', '%%max%%' );
+	return $display;
+}
