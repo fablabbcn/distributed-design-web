@@ -798,7 +798,7 @@
                         "id": ""
                     },
                     "hide_admin": 0,
-                    "message": "I have read the <a href=\"https:\/\/distributeddesign.eu\/wp-content\/uploads\/2020\/06\/DDAwards_Entry-Guides-Rules-2.pdf\" target=\"_blank\">Entry Guide & Rules≤\/a> and I agree to it’s terms and conditions.",
+                    "message": "I have read the <a href=\"https:\/\/distributeddesign.eu\/wp-content\/uploads\/2020\/06\/DDAwards_Entry-Guides-Rules-2.pdf\" target=\"_blank\">Entry Guide & Rules<\/a> and I agree to it’s terms and conditions.",
                     "default_value": 0,
                     "ui": 0,
                     "ui_on_text": "",
@@ -844,5 +844,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591004180
+    "modified": 1591008948
 }
