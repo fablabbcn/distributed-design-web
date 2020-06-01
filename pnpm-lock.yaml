@@ -1,5 +1,6 @@
 dependencies:
   ajaxchimp: 1.3.0
+  body-scroll-lock: 3.0.2
   slick-carousel: 1.8.1
 devDependencies:
   '@fullhuman/postcss-purgecss': 1.3.0
@@ -694,6 +695,10 @@ packages:
       node: 0.4 || >=0.5.8
     resolution:
       integrity: sha1-E+v+d4oDIFz+A3UUgeu0szAMEmo=
+  /body-scroll-lock/3.0.2:
+    dev: false
+    resolution:
+      integrity: sha512-PtItUun94iIupKry8J/h6SfRCLWZnly77KbPsTSKALmxfR282L8R0Ujkv7bydSZvLxAJS4sBJ3y/E6X8gYkGrQ==
   /boolbase/1.0.0:
     dev: true
     resolution:
@@ -7237,6 +7242,7 @@ specifiers:
   '@fullhuman/postcss-purgecss': 1.3.0
   ajaxchimp: ^1.3.0
   autoprefixer: 9.7.0
+  body-scroll-lock: 3.0.2
   del: 5.1.0
   eslint: 6.5.1
   eslint-config-standard: 14.1.0

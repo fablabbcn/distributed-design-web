@@ -232,12 +232,22 @@ function handleMonthlyFilters () {
 function handleDataClip (event) {
   var button = this
   var targets = getTargets(button, 'clip')
+
   jQuery.each(targets, function (index, object) {
     var classes = 'clip'
     var target = jQuery(object.id)
     var isClipped = target.hasClass(classes)
-    target.toggleClass('clip', !isClipped)
+
+    target.toggleClass(classes, !isClipped)
     button.blur()
+
+    if (bodyScrollLock && object.id.includes('modal-form')) {
+      // var scroller = target.closest('[data-modal="container"]')[0]
+
+      isClipped && bodyScrollLock.disableBodyScroll(target[0])
+      !isClipped && bodyScrollLock.enableBodyScroll(target[0])
+      !isClipped && bodyScrollLock.clearAllBodyScrollLocks()
+    }
   })
 }
 

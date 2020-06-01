@@ -10,6 +10,7 @@ module.exports = {
     'jQuery': true,
     'Swiper': true,
     'acf': true,
+    'bodyScrollLock': true,
   },
   rules: {
     'comma-dangle': [
