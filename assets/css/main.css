@@ -5581,7 +5581,6 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 }
 
 #acf-form a.acf-icon, .af-form.acf-form[id*="form_"] a.acf-icon {
-  display: block;
   margin: 0;
   padding: 0;
   color: #000;
@@ -6538,7 +6537,7 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   text-align: center;
 }
 
-.af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > .acf-row-handle:first-of-type, .af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > .acf-row-handle:last-of-type { display: none !important; }
+.af-form.acf-form[id*="form_"] .acf-repeater { /* & .acf-table tr > .acf-row-handle:matches(:first-of-type, :last-of-type) { @apply hidden !important; } */ }
 
 .af-form.acf-form[id*="form_"] .acf-repeater .acf-actions [data-event="add-row"] {
   position: relative !important;

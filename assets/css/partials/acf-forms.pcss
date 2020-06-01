@@ -35,7 +35,7 @@
   }
 
   & a.acf-icon {
-    @apply block m-0 p-0 text-black bg-white border border-solid border-current box-content;
+    @apply m-0 p-0 text-black bg-white border border-solid border-current box-content;
     &:matches(:hover, :focus) { @apply bg-black-2; }
     &.-plus:hover { background-color: #47d92a; }
     &.-minus:hover { background-color: #f55e4f; }
@@ -382,7 +382,7 @@
 
 .af-form.acf-form[id*="form_"] {
   & .acf-repeater {
-    & .acf-table tr > .acf-row-handle:matches(:first-of-type, :last-of-type) { @apply hidden !important; }
+    /* & .acf-table tr > .acf-row-handle:matches(:first-of-type, :last-of-type) { @apply hidden !important; } */
 
     & .acf-actions [data-event="add-row"] {
       @apply relative w-full text-transparent bg-black border-black !important;
