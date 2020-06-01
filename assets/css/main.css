@@ -6245,7 +6245,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   white-space: nowrap;
 }
 
-#acf-form .acf-form-fields .acf-field-true-false .acf-true-false label span, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label span {
+#acf-form .acf-form-fields .acf-field-true-false .acf-true-false label input + span, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label input + span {
   position: relative;
   width: 100%;
   padding-left: 30px;

@@ -304,7 +304,7 @@
       & .acf-true-false {
         & label { @apply flex items-center m-0 bg-gray text-17 font-normal; }
         & label input { @apply clip; }
-        & label span { @apply relative w-full pl-30; }
+        & label input + span { @apply relative w-full pl-30; }
 
         & label input + span::before {
           content: '✓';
