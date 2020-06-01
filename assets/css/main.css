@@ -5665,7 +5665,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   #acf-form .acf-form-fields .acf-label .description, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label .description, #acf-form .acf-form-fields .acf-label .af-field-instructions, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label .af-field-instructions { font-size: 17px; }
 }
 
-#acf-form .acf-form-fields .acf-button, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button, #acf-form .acf-form-fields .af-previous-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button, #acf-form .acf-form-fields .af-next-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button, #acf-form .acf-form-fields .acf-gallery-sort, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort {
+#acf-form .acf-form-fields .acf-button, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button, #acf-form .acf-form-fields .af-previous-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button, #acf-form .acf-form-fields .af-next-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button, #acf-form .acf-form-fields .af-close-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-close-button, #acf-form .acf-form-fields .acf-gallery-sort, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort {
   display: inline-block !important;
   width: auto !important;
   padding-left: 20px !important;
@@ -5683,20 +5683,20 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 }
 
 @media (min-width: 768px) {
-  #acf-form .acf-form-fields .acf-button, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button, #acf-form .acf-form-fields .af-previous-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button, #acf-form .acf-form-fields .af-next-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button, #acf-form .acf-form-fields .acf-gallery-sort, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort { font-size: 19px !important; }
+  #acf-form .acf-form-fields .acf-button, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button, #acf-form .acf-form-fields .af-previous-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button, #acf-form .acf-form-fields .af-next-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button, #acf-form .acf-form-fields .af-close-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-close-button, #acf-form .acf-form-fields .acf-gallery-sort, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort { font-size: 19px !important; }
 }
 
-#acf-form .acf-form-fields .acf-button:hover, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button:hover, #acf-form .acf-form-fields .af-previous-button:hover, .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button:hover, #acf-form .acf-form-fields .af-next-button:hover, .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button:hover, #acf-form .acf-form-fields .acf-gallery-sort:hover, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort:hover, #acf-form .acf-form-fields .acf-button:focus, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button:focus, #acf-form .acf-form-fields .af-previous-button:focus, .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button:focus, #acf-form .acf-form-fields .af-next-button:focus, .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button:focus, #acf-form .acf-form-fields .acf-gallery-sort:focus, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort:focus {
+#acf-form .acf-form-fields .acf-button:hover, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button:hover, #acf-form .acf-form-fields .af-previous-button:hover, .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button:hover, #acf-form .acf-form-fields .af-next-button:hover, .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button:hover, #acf-form .acf-form-fields .af-close-button:hover, .af-form.acf-form[id*="form_"] .acf-form-fields .af-close-button:hover, #acf-form .acf-form-fields .acf-gallery-sort:hover, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort:hover, #acf-form .acf-form-fields .acf-button:focus, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button:focus, #acf-form .acf-form-fields .af-previous-button:focus, .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button:focus, #acf-form .acf-form-fields .af-next-button:focus, .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button:focus, #acf-form .acf-form-fields .af-close-button:focus, .af-form.acf-form[id*="form_"] .acf-form-fields .af-close-button:focus, #acf-form .acf-form-fields .acf-gallery-sort:focus, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort:focus {
   color: #000 !important;
   background-color: rgba(255, 255, 255, 0.7) !important;
 }
 
-#acf-form .acf-form-fields .acf-button[disabled], .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button[disabled], #acf-form .acf-form-fields .af-previous-button[disabled], .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button[disabled], #acf-form .acf-form-fields .af-next-button[disabled], .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button[disabled], #acf-form .acf-form-fields .acf-gallery-sort[disabled], .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort[disabled] {
+#acf-form .acf-form-fields .acf-button[disabled], .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button[disabled], #acf-form .acf-form-fields .af-previous-button[disabled], .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button[disabled], #acf-form .acf-form-fields .af-next-button[disabled], .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button[disabled], #acf-form .acf-form-fields .af-close-button[disabled], .af-form.acf-form[id*="form_"] .acf-form-fields .af-close-button[disabled], #acf-form .acf-form-fields .acf-gallery-sort[disabled], .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort[disabled] {
   opacity: 0.3;
   cursor: not-allowed;
 }
 
-#acf-form .acf-form-fields .acf-button[style="display: none;"], .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button[style="display: none;"], #acf-form .acf-form-fields .af-previous-button[style="display: none;"], .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button[style="display: none;"], #acf-form .acf-form-fields .af-next-button[style="display: none;"], .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button[style="display: none;"], #acf-form .acf-form-fields .acf-gallery-sort[style="display: none;"], .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort[style="display: none;"] { display: none !important; }
+#acf-form .acf-form-fields .acf-button[style="display: none;"], .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button[style="display: none;"], #acf-form .acf-form-fields .af-previous-button[style="display: none;"], .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button[style="display: none;"], #acf-form .acf-form-fields .af-next-button[style="display: none;"], .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button[style="display: none;"], #acf-form .acf-form-fields .af-close-button[style="display: none;"], .af-form.acf-form[id*="form_"] .acf-form-fields .af-close-button[style="display: none;"], #acf-form .acf-form-fields .acf-gallery-sort[style="display: none;"], .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort[style="display: none;"] { display: none !important; }
 
 #acf-form .acf-form-fields .acf-input i.acf-icon, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-input i.acf-icon { display: none; }
 
@@ -6429,8 +6429,13 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   #acf-form .af-page-wrap .af-page-button + .af-page-button, .af-form.acf-form[id*="form_"] .af-page-wrap .af-page-button + .af-page-button { margin-left: 15px; }
 }
 
+#acf-form .af-submit, .af-form.acf-form[id*="form_"] .af-submit { margin-top: 30px !important; }
+
+@media (min-width: 768px) {
+  #acf-form .af-submit, .af-form.acf-form[id*="form_"] .af-submit { margin-top: 50px !important; }
+}
+
 #acf-form .af-submit, .af-form.acf-form[id*="form_"] .af-submit {
-  margin-top: 50px !important;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -6474,27 +6479,27 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 
 #acf-form .af-submit .af-previous-button::before, .af-form.acf-form[id*="form_"] .af-submit .af-previous-button::before { content: '\2190\00a0'; }
 
-#acf-form .af-submit .af-next-button, .af-form.acf-form[id*="form_"] .af-submit .af-next-button, #acf-form .af-submit .af-submit-button, .af-form.acf-form[id*="form_"] .af-submit .af-submit-button { width: 100% !important; }
+#acf-form .af-submit .af-next-button, .af-form.acf-form[id*="form_"] .af-submit .af-next-button, #acf-form .af-submit .af-submit-button, .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, #acf-form .af-submit .af-close-button, .af-form.acf-form[id*="form_"] .af-submit .af-close-button { width: 100% !important; }
 
-body.blog #acf-form .af-submit .af-next-button, body.single-post #acf-form .af-submit .af-next-button, body.blog .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.single-post .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.blog #acf-form .af-submit .af-submit-button, body.single-post #acf-form .af-submit .af-submit-button, body.blog .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.single-post .af-form.acf-form[id*="form_"] .af-submit .af-submit-button { background-color: #0ff !important; }
+body.blog #acf-form .af-submit .af-next-button, body.single-post #acf-form .af-submit .af-next-button, body.blog .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.single-post .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.blog #acf-form .af-submit .af-submit-button, body.single-post #acf-form .af-submit .af-submit-button, body.blog .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.single-post .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.blog #acf-form .af-submit .af-close-button, body.single-post #acf-form .af-submit .af-close-button, body.blog .af-form.acf-form[id*="form_"] .af-submit .af-close-button, body.single-post .af-form.acf-form[id*="form_"] .af-submit .af-close-button { background-color: #0ff !important; }
 
-body.page #acf-form .af-submit .af-next-button, body.page-id-2 #acf-form .af-submit .af-next-button, body.page .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.page-id-2 .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.page #acf-form .af-submit .af-submit-button, body.page-id-2 #acf-form .af-submit .af-submit-button, body.page .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.page-id-2 .af-form.acf-form[id*="form_"] .af-submit .af-submit-button { background-color: #f93838 !important; }
+body.page #acf-form .af-submit .af-next-button, body.page-id-2 #acf-form .af-submit .af-next-button, body.page .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.page-id-2 .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.page #acf-form .af-submit .af-submit-button, body.page-id-2 #acf-form .af-submit .af-submit-button, body.page .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.page-id-2 .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.page #acf-form .af-submit .af-close-button, body.page-id-2 #acf-form .af-submit .af-close-button, body.page .af-form.acf-form[id*="form_"] .af-submit .af-close-button, body.page-id-2 .af-form.acf-form[id*="form_"] .af-submit .af-close-button { background-color: #f93838 !important; }
 
-body.post-type-archive-resources #acf-form .af-submit .af-next-button, body.single-resources #acf-form .af-submit .af-next-button, body.post-type-archive-resources .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.single-resources .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.post-type-archive-resources #acf-form .af-submit .af-submit-button, body.single-resources #acf-form .af-submit .af-submit-button, body.post-type-archive-resources .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.single-resources .af-form.acf-form[id*="form_"] .af-submit .af-submit-button { background-color: #0f0 !important; }
+body.post-type-archive-resources #acf-form .af-submit .af-next-button, body.single-resources #acf-form .af-submit .af-next-button, body.post-type-archive-resources .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.single-resources .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.post-type-archive-resources #acf-form .af-submit .af-submit-button, body.single-resources #acf-form .af-submit .af-submit-button, body.post-type-archive-resources .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.single-resources .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.post-type-archive-resources #acf-form .af-submit .af-close-button, body.single-resources #acf-form .af-submit .af-close-button, body.post-type-archive-resources .af-form.acf-form[id*="form_"] .af-submit .af-close-button, body.single-resources .af-form.acf-form[id*="form_"] .af-submit .af-close-button { background-color: #0f0 !important; }
 
-body.page-template-template-archive-events #acf-form .af-submit .af-next-button, body.single-tribe_events #acf-form .af-submit .af-next-button, body.page-template-template-archive-events .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.single-tribe_events .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.page-template-template-archive-events #acf-form .af-submit .af-submit-button, body.single-tribe_events #acf-form .af-submit .af-submit-button, body.page-template-template-archive-events .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.single-tribe_events .af-form.acf-form[id*="form_"] .af-submit .af-submit-button { background-color: #f0f !important; }
+body.page-template-template-archive-events #acf-form .af-submit .af-next-button, body.single-tribe_events #acf-form .af-submit .af-next-button, body.page-template-template-archive-events .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.single-tribe_events .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.page-template-template-archive-events #acf-form .af-submit .af-submit-button, body.single-tribe_events #acf-form .af-submit .af-submit-button, body.page-template-template-archive-events .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.single-tribe_events .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.page-template-template-archive-events #acf-form .af-submit .af-close-button, body.single-tribe_events #acf-form .af-submit .af-close-button, body.page-template-template-archive-events .af-form.acf-form[id*="form_"] .af-submit .af-close-button, body.single-tribe_events .af-form.acf-form[id*="form_"] .af-submit .af-close-button { background-color: #f0f !important; }
 
-body.post-type-archive-talent #acf-form .af-submit .af-next-button, body.single-talent #acf-form .af-submit .af-next-button, body.post-type-archive-talent .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.single-talent .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.post-type-archive-talent #acf-form .af-submit .af-submit-button, body.single-talent #acf-form .af-submit .af-submit-button, body.post-type-archive-talent .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.single-talent .af-form.acf-form[id*="form_"] .af-submit .af-submit-button { background-color: #ff0 !important; }
+body.post-type-archive-talent #acf-form .af-submit .af-next-button, body.single-talent #acf-form .af-submit .af-next-button, body.post-type-archive-talent .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.single-talent .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.post-type-archive-talent #acf-form .af-submit .af-submit-button, body.single-talent #acf-form .af-submit .af-submit-button, body.post-type-archive-talent .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.single-talent .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.post-type-archive-talent #acf-form .af-submit .af-close-button, body.single-talent #acf-form .af-submit .af-close-button, body.post-type-archive-talent .af-form.acf-form[id*="form_"] .af-submit .af-close-button, body.single-talent .af-form.acf-form[id*="form_"] .af-submit .af-close-button { background-color: #ff0 !important; }
 
-body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.page-id-13 #acf-form .af-submit .af-submit-button, body.page-id-13 .af-form.acf-form[id*="form_"] .af-submit .af-submit-button { background-color: #fff !important; }
+body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.acf-form[id*="form_"] .af-submit .af-next-button, body.page-id-13 #acf-form .af-submit .af-submit-button, body.page-id-13 .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, body.page-id-13 #acf-form .af-submit .af-close-button, body.page-id-13 .af-form.acf-form[id*="form_"] .af-submit .af-close-button { background-color: #fff !important; }
 
-#acf-form .af-submit .af-next-button, .af-form.acf-form[id*="form_"] .af-submit .af-next-button, #acf-form .af-submit .af-submit-button, .af-form.acf-form[id*="form_"] .af-submit .af-submit-button {
+#acf-form .af-submit .af-next-button, .af-form.acf-form[id*="form_"] .af-submit .af-next-button, #acf-form .af-submit .af-submit-button, .af-form.acf-form[id*="form_"] .af-submit .af-submit-button, #acf-form .af-submit .af-close-button, .af-form.acf-form[id*="form_"] .af-submit .af-close-button {
   -webkit-border-radius: 9999px !important;
   -moz-border-radius: 9999px !important;
   border-radius: 9999px !important;
 }
 
-#acf-form .af-submit .af-next-button::after, .af-form.acf-form[id*="form_"] .af-submit .af-next-button::after, #acf-form .af-submit .af-submit-button::after, .af-form.acf-form[id*="form_"] .af-submit .af-submit-button::after {
+#acf-form .af-submit .af-next-button::after, .af-form.acf-form[id*="form_"] .af-submit .af-next-button::after, #acf-form .af-submit .af-submit-button::after, .af-form.acf-form[id*="form_"] .af-submit .af-submit-button::after, #acf-form .af-submit .af-close-button::after, .af-form.acf-form[id*="form_"] .af-submit .af-close-button::after {
   content: '\00a0\2192';
   padding: inherit;
   position: absolute;
@@ -6502,6 +6507,8 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   top: 0;
   bottom: 0;
 }
+
+#acf-form .af-submit .af-next-button.af-close-button::after, .af-form.acf-form[id*="form_"] .af-submit .af-next-button.af-close-button::after, #acf-form .af-submit .af-submit-button.af-close-button::after, .af-form.acf-form[id*="form_"] .af-submit .af-submit-button.af-close-button::after, #acf-form .af-submit .af-close-button.af-close-button::after, .af-form.acf-form[id*="form_"] .af-submit .af-close-button.af-close-button::after { content: none; }
 
 #acf-form .af-success, .af-form.acf-form[id*="form_"] .af-success {
   display: -webkit-box;
@@ -6526,8 +6533,8 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   -moz-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
 }
 

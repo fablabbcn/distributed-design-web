@@ -70,7 +70,7 @@
       }
     }
 
-    & :matches(.acf-button, .af-previous-button, .af-next-button, .acf-gallery-sort) {
+    & :matches(.acf-button, .af-previous-button, .af-next-button, .af-close-button, .acf-gallery-sort) {
       @apply inline-block w-auto !important;
       @apply px-20 py-10 bg-white text-16 font-oswald font-medium text-center uppercase no-underline border !important;
       @screen md { @apply text-19 !important; }
@@ -355,7 +355,8 @@
   }
 
   & .af-submit {
-    @apply mt-50 !important;
+    @apply mt-30 !important;
+    @screen md { @apply mt-50 !important; }
     @apply relative flex flex-row-reverse flex-wrap-reverse w-full p-0;
     & :matches(.af-previous-button, .af-next-button, .af-submit-button) { @apply relative m-0; }
 
@@ -367,14 +368,15 @@
       &::before { content: '\2190\00a0'; }
     }
 
-    & :matches(.af-next-button, .af-submit-button) {
+    & :matches(.af-next-button, .af-submit-button, .af-close-button) {
       @apply w-full bg-primary rounded-full !important;
       &::after { content: '\00a0\2192'; padding: inherit; @apply absolute pin-r pin-y; }
+      &.af-close-button::after { content: none; }
     }
   }
 
   & .af-success {
-    @apply flex flex-col justify-center items-center py-20 text-center;
+    @apply flex flex-col justify-center items-center py-10 text-center;
   }
 }
 
