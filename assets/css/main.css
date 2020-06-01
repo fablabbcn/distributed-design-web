@@ -5656,13 +5656,13 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   #acf-form .acf-form-fields .acf-label label, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label label { font-size: 19px; }
 }
 
-#acf-form .acf-form-fields .acf-label .description, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label .description {
+#acf-form .acf-form-fields .acf-label .description, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label .description, #acf-form .acf-form-fields .acf-label .af-field-instructions, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label .af-field-instructions {
   font-size: 16px;
   font-weight: 500;
 }
 
 @media (min-width: 768px) {
-  #acf-form .acf-form-fields .acf-label .description, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label .description { font-size: 17px; }
+  #acf-form .acf-form-fields .acf-label .description, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label .description, #acf-form .acf-form-fields .acf-label .af-field-instructions, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-label .af-field-instructions { font-size: 17px; }
 }
 
 #acf-form .acf-form-fields .acf-button, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-button, #acf-form .acf-form-fields .af-previous-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-previous-button, #acf-form .acf-form-fields .af-next-button, .af-form.acf-form[id*="form_"] .acf-form-fields .af-next-button, #acf-form .acf-form-fields .acf-gallery-sort, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-gallery-sort {
@@ -6260,7 +6260,7 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 }
 
 #acf-form .acf-form-fields .acf-field-true-false .acf-true-false label input + span::before, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label input + span::before {
-  content: '';
+  content: '✓';
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -6282,19 +6282,19 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   width: 20px;
   height: 20px;
   margin-right: 10px;
-  color: #000;
+  color: transparent;
   background-color: #fff;
   font-weight: 700;
   text-align: center;
   border-width: 2px;
   border-style: solid;
-  border-color: currentColor;
+  border-color: #000;
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 
-#acf-form .acf-form-fields .acf-field-true-false .acf-true-false label input:checked + span::before, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label input:checked + span::before { content: '✓'; }
+#acf-form .acf-form-fields .acf-field-true-false .acf-true-false label input:checked + span::before, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label input:checked + span::before { color: #000; }
 
 #acf-form .acf-form-fields .acf-field-oembed .acf-oembed .acf-actions, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-oembed .acf-oembed .acf-actions {
   top: 0;
@@ -6331,6 +6331,12 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 #acf-form .acf-form-fields .acf-field-oembed .acf-oembed .canvas, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-oembed .acf-oembed .canvas {
   margin-top: -2px;
   border-width: 2px;
+}
+
+#acf-form .acf-form-fields .acf-basic-uploader, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-basic-uploader {
+  display: block;
+  margin: 0;
+  font-weight: 400;
 }
 
 #acf-form .af-page-wrap, .af-form.acf-form[id*="form_"] .af-page-wrap {
@@ -6580,6 +6586,12 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="acceptance"] .acf-field-true-false + .acf-field-true-false { margin-top: 10px !important; }
+
+@media (min-width: 992px) {
+  .af-form.acf-form[id*="form_"] .acf-field-group[data-name*="acceptance"] .acf-field-true-false + .acf-field-true-false { margin-top: 15px !important; }
 }
 
 .af-form.acf-form[id*="form_"] .acf-field-group[data-name*="details_"] .acf-label {

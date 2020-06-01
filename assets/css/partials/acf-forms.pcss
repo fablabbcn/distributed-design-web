@@ -64,7 +64,7 @@
         @screen md { @apply text-19; }
       }
 
-      & .description {
+      & :matches(.description, .af-field-instructions) {
         @apply text-16 font-medium;
         @screen md { @apply text-17; }
       }
@@ -307,12 +307,12 @@
         & label span { @apply flex items-baseline w-full; }
 
         & label input + span::before {
-          content: '';
-          @apply flex justify-center items-center flex-no-shrink w-20 h-20 mr-10 text-black bg-white font-bold text-center border border-solid border-current box-content;
+          content: '✓';
+          @apply flex justify-center items-center flex-no-shrink w-20 h-20 mr-10 text-transparent bg-white font-bold text-center border border-solid border-black box-content;
         }
 
         & label input:checked + span::before {
-          content: '✓';
+          @apply text-black;
         }
       }
     }
@@ -323,6 +323,10 @@
         & .title { @apply p-0 border-none; }
         & .canvas { @apply -mt-border border; }
       }
+    }
+
+    & .acf-basic-uploader {
+      @apply block m-0 font-normal;
     }
   }
 
@@ -393,6 +397,11 @@
 
   & .acf-field-group[data-name*="acceptance"] {
     & .acf-label { @apply clip; }
+
+    & .acf-field-true-false + .acf-field-true-false {
+      @apply mt-10 !important;
+      @screen lg { @apply mt-15 !important; }
+    }
   }
 
   & .acf-field-group[data-name*="details_"] {
