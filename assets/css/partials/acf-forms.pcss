@@ -304,11 +304,11 @@
       & .acf-true-false {
         & label { @apply flex items-center m-0 bg-gray text-17 font-normal; }
         & label input { @apply clip; }
-        & label span { @apply flex items-baseline w-full; }
+        & label span { @apply relative w-full pl-30; }
 
         & label input + span::before {
           content: '✓';
-          @apply flex justify-center items-center flex-no-shrink w-20 h-20 mr-10 text-transparent bg-white font-bold text-center border border-solid border-black box-content;
+          @apply absolute pin-t pin-l flex justify-center items-center flex-no-shrink w-20 h-20 text-transparent bg-white font-bold text-center border border-solid border-black;
         }
 
         & label input:checked + span::before {

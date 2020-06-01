@@ -6246,21 +6246,16 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
 }
 
 #acf-form .acf-form-fields .acf-field-true-false .acf-true-false label span, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label span {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-  -webkit-align-items: baseline;
-  -moz-box-align: baseline;
-  -ms-flex-align: baseline;
-  align-items: baseline;
+  position: relative;
   width: 100%;
+  padding-left: 30px;
 }
 
 #acf-form .acf-form-fields .acf-field-true-false .acf-true-false label input + span::before, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label input + span::before {
   content: '✓';
+  position: absolute;
+  top: 0;
+  left: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -6281,7 +6276,6 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   flex-shrink: 0;
   width: 20px;
   height: 20px;
-  margin-right: 10px;
   color: transparent;
   background-color: #fff;
   font-weight: 700;
@@ -6289,9 +6283,6 @@ body.page-id-13 .hocus\:bg-primary-70:hover, body.page-id-13 .hocus\:bg-primary-
   border-width: 2px;
   border-style: solid;
   border-color: #000;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
 }
 
 #acf-form .acf-form-fields .acf-field-true-false .acf-true-false label input:checked + span::before, .af-form.acf-form[id*="form_"] .acf-form-fields .acf-field-true-false .acf-true-false label input:checked + span::before { color: #000; }
