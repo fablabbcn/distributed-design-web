@@ -6538,7 +6538,7 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   text-align: center;
 }
 
-.af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > *:first-of-type, .af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > *:last-of-type { display: none !important; }
+.af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > .acf-row-handle:first-of-type, .af-form.acf-form[id*="form_"] .acf-repeater .acf-table tr > .acf-row-handle:last-of-type { display: none !important; }
 
 .af-form.acf-form[id*="form_"] .acf-repeater .acf-actions [data-event="add-row"] {
   position: relative !important;

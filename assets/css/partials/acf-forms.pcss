@@ -382,7 +382,7 @@
 
 .af-form.acf-form[id*="form_"] {
   & .acf-repeater {
-    & .acf-table tr > *:matches(:first-of-type, :last-of-type) { @apply hidden !important; }
+    & .acf-table tr > .acf-row-handle:matches(:first-of-type, :last-of-type) { @apply hidden !important; }
 
     & .acf-actions [data-event="add-row"] {
       @apply relative w-full text-transparent bg-black border-black !important;

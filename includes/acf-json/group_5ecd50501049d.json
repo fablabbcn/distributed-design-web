@@ -552,7 +552,7 @@
             "label": "Images",
             "name": "images",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Upload 3 images from the project, maximum of 3MB per file.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -563,7 +563,7 @@
             "hide_admin": 0,
             "collapsed": "",
             "min": 3,
-            "max": 0,
+            "max": 3,
             "layout": "table",
             "button_label": "",
             "sub_fields": [
@@ -844,5 +844,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1591015842
+    "modified": 1591018551
 }
