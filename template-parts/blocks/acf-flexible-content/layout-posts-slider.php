@@ -17,7 +17,7 @@ $_items = get_sub_field( 'featured_posts' );
 	<div data-slider="featured-posts" class="w-full">
 		<?php foreach ( $_items as $_item ) : ?>
 			<?php
-			$thumbnail_id    = get_post_thumbnail_id( $_item->ID );
+			$thumbnail_id    = get_field( 'featured_alt', $_item->ID ) ?: get_post_thumbnail_id( $_item->ID );
 			$focal_point     = get_post_meta( $thumbnail_id, '_wpsmartcrop_image_focus' );
 			$thumbnail_attrs = array(
 				'class' => 'w-full h-screen-80 object-cover',
