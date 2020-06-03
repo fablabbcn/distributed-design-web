@@ -402,9 +402,15 @@
   & .acf-field-group[data-name*="acceptance"] {
     & .acf-label { @apply clip; }
 
-    & .acf-field-true-false + .acf-field-true-false {
-      @apply mt-10 !important;
-      @screen lg { @apply mt-15 !important; }
+    & .acf-field-true-false {
+      & .acf-notice.-error { @apply hidden; }
+      & .acf-notice.-error + .acf-true-false { @apply text-red; }
+      & .acf-notice.-error + .acf-true-false a { @apply text-current; }
+
+      & + .acf-field-true-false {
+        @apply mt-10 !important;
+        @screen lg { @apply mt-15 !important; }
+      }
     }
   }
 

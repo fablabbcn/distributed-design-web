@@ -6587,6 +6587,12 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   white-space: nowrap;
 }
 
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="acceptance"] .acf-field-true-false .acf-notice.-error { display: none; }
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="acceptance"] .acf-field-true-false .acf-notice.-error + .acf-true-false { color: #f93838; }
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="acceptance"] .acf-field-true-false .acf-notice.-error + .acf-true-false a { color: currentColor; }
+
 .af-form.acf-form[id*="form_"] .acf-field-group[data-name*="acceptance"] .acf-field-true-false + .acf-field-true-false { margin-top: 10px !important; }
 
 @media (min-width: 992px) {
