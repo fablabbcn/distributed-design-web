@@ -399,6 +399,14 @@
     }
   }
 
+  & .acf-field-group[data-name*="contact_"] {
+    & .acf-fields {
+      @apply -mx-10 !important;
+      & .acf-field:first-child { @apply mt-10 !important; }
+      & .acf-field[style*="width"] { @apply min-w-0 mx-0 !important; }
+    }
+  }
+
   & .acf-field-group[data-name*="acceptance"] {
     & .acf-label { @apply clip; }
 

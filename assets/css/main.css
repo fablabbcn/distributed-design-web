@@ -6573,6 +6573,19 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   background-origin: content-box;
 }
 
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="contact_"] .acf-fields {
+  margin-left: -10px !important;
+  margin-right: -10px !important;
+}
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="contact_"] .acf-fields .acf-field:first-child { margin-top: 10px !important; }
+
+.af-form.acf-form[id*="form_"] .acf-field-group[data-name*="contact_"] .acf-fields .acf-field[style*="width"] {
+  min-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
 .af-form.acf-form[id*="form_"] .acf-field-group[data-name*="acceptance"] .acf-label {
   border: 0;
   clip: rect(0 0 0 0);
