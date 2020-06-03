@@ -16,9 +16,17 @@ $_items = get_sub_field( 'featured_posts' );
 
 	<div data-slider="featured-posts" class="w-full">
 		<?php foreach ( $_items as $_item ) : ?>
+			<?php
+			$thumbnail_id    = get_post_thumbnail_id( $_item->ID );
+			$focal_point     = get_post_meta( $thumbnail_id, '_wpsmartcrop_image_focus' );
+			$thumbnail_attrs = array(
+				'class' => 'w-full h-screen-80 object-cover',
+				'style' => $focal_point ? "object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%;" : '',
+			);
+			?>
 
 			<div class="relative">
-				<?php echo get_the_post_thumbnail( $_item->ID, 'post-thumbnail', array( 'class' => 'w-full h-screen-80 object-cover' ) ); ?>
+				<?php echo wp_get_attachment_image( $thumbnail_id, 'post-thumbnail', false, $thumbnail_attrs ); ?>
 
 				<div class="absolute pin-r pin-l pin-b lg:mb-60 w-full">
 					<div class="max-w-screen-md w-full mx-auto">
