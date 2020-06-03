@@ -6539,6 +6539,8 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
 
 .af-form.acf-form[id*="form_"] .acf-repeater { /* & .acf-table tr > .acf-row-handle:matches(:first-of-type, :last-of-type) { @apply hidden !important; } */ }
 
+.af-form.acf-form[id*="form_"] .acf-repeater .acf-row-handle.remove .acf-icon.-plus.small { display: none; }
+
 .af-form.acf-form[id*="form_"] .acf-repeater .acf-actions [data-event="add-row"] {
   position: relative !important;
   width: 100% !important;
