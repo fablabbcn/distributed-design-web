@@ -50,6 +50,9 @@
         var scrollContainer = form.$el.closest('[data-modal="container"]')
         scrollContainer.length && scrollContainer[0].scrollIntoView({ behavior: 'smooth' })
       })
+      if (typeof __gaTracker !== 'undefined' && jQuery('[data-form-success]').length) {
+        __gaTracker('send', 'event', 'form', 'submission', 'awards2020', 1)
+      }
     }
   })
 

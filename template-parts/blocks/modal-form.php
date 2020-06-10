@@ -15,6 +15,8 @@ $n_classes = array(
 
 <div
 	data-modal
+	data-form="<?php echo esc_attr( $this_form ); ?>"
+	<?php echo $has_submission ? 'data-form-success' : ''; ?>
 	id="<?php echo esc_attr( $modal_id ); ?>"
 	class="<?php echo $has_submission ? '' : 'clip'; ?> z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto"
 >
