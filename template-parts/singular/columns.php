@@ -1,6 +1,7 @@
 <?php
 
-$_items = get_sub_field( 'items' );
+$_items    = get_sub_field( 'items' );
+$cols_grow = get_sub_field( 'columns_grow' );
 
 ?>
 
@@ -8,7 +9,7 @@ $_items = get_sub_field( 'items' );
 <div class="flex flex-wrap justify-center items-baseline -m-10 lg:-m-20 flex-1">
 	<?php foreach ( $_items as $_item ) : ?>
 
-		<div class="w-full sm:w-1/2 md:w-1/3 p-10 lg:p-20">
+		<div class="w-full sm:w-1/2 md:w-1/3 p-10 lg:p-20 <?php echo $cols_grow ? 'flex-grow' : ''; ?>">
 
 			<?php if ( $_item['link'] ) : ?>
 				<a class="block"
