@@ -28,7 +28,7 @@ $classes = array(
 
 <aside class="text-center">
 
-	<nav>
+	<nav class="lg:-mt-15">
 		<a class="flex justify-center items-center no-underline" href="<?php echo esc_url( $back_url ); ?>">
 			<svg class="w-15 h-15"><use xlink:href="#chevron-left" /></svg>
 			<span class="text-12 font-bold">Back</span>
