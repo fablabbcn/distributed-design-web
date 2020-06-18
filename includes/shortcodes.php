@@ -67,7 +67,7 @@ if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
 
 		require_once $partial_location;
 
-		return "<p><button data-clip=\"$modal_id\" class=\"$classes\">$content</button></p>";
+		return "<p><button data-toggle=\"$modal_id\" class=\"$classes\">$content</button></p>";
 	} add_shortcode( 'modal_toggle', 'ddmp_shortcode_modal' );
 }
 

@@ -14,7 +14,7 @@ $n_classes = array(
 ?>
 
 <div id="<?php echo esc_attr( $modal_id ); ?>" class="clip z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto">
-	<button data-clip="<?php echo esc_attr( $modal_id ); ?>" class="fixed pin w-full h-full bg-black-50 cursor-pointer"></button>
+	<button data-toggle="<?php echo esc_attr( $modal_id ); ?>" class="fixed pin w-full h-full bg-black-50 cursor-pointer"></button>
 
 	<div class="flex flex-col justify-center items-center w-full my-auto p-20 md:pt-160 md:px-45 md:pb-85">
 		<div class="z-50 relative w-full max-w-screen-md p-20 bg-gray border">

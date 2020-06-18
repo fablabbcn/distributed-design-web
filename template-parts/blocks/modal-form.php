@@ -18,15 +18,15 @@ $n_classes = array(
 	data-form="<?php echo esc_attr( $this_form ); ?>"
 	<?php echo $has_submission ? 'data-form-success' : ''; ?>
 	id="<?php echo esc_attr( $modal_id ); ?>"
-	class="<?php echo $has_submission ? '' : 'clip'; ?> z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto"
+	class="<?php echo $has_submission ? 'block flex' : 'hidden'; ?> z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto"
 >
-	<button data-clip="<?php echo esc_attr( $modal_id ); ?>" class="fixed pin w-full h-full bg-black-50 cursor-pointer"></button>
+	<button data-toggle="<?php echo esc_attr( $modal_id ); ?>" class="fixed pin w-full h-full bg-black-50 cursor-pointer"></button>
 
 	<div data-modal="container" class="flex flex-col justify-center items-center w-full my-auto p-10 pt-85 md:pt-160 md:px-45 md:pb-85">
 		<div class="z-50 relative w-full max-w-screen-md bg-gray" className="p-20 border">
 
 			<div class="z-20 absolute border border-transparent p-20 md:py-30 pin-r pin-t pointer-events-none">
-				<button <?php echo $has_submission ? 'onclick="window.location.reload(false);"' : "data-clip=\"$modal_id\""; ?> class="flex w-25 h-25 lg:w-45 lg:h-45 pointer-events-auto">
+				<button <?php echo $has_submission ? 'onclick="window.location.reload(false);"' : "data-toggle=\"$modal_id\""; ?> class="flex w-25 h-25 lg:w-45 lg:h-45 pointer-events-auto">
 					<svg class="w-full" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 						<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
 					</svg>
