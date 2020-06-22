@@ -18,6 +18,9 @@ add_filter(
 	'facetwp_assets',
 	function( $assets ) {
 		unset( $assets['front.css'] );
+		if ( ! is_archive() ) {
+			unset( $assets['fSelect.css'] );
+		}
 		return $assets;
 	}
 );
