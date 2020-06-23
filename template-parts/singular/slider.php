@@ -2,7 +2,7 @@
 
 
 <?php if ( $images ) : ?>
-	<div class="post-slider max-h-screen -m-20 lg:-mx-40">
+	<div class="post-slider max-h-screen -m-20 lg:-m-40">
 		<?php foreach ( $images as $image ) : ?>
 			<?php
 			$focal_point = get_post_meta( $image['ID'], '_wpsmartcrop_image_focus' );
