@@ -181,7 +181,16 @@
     onInit: function (element) {
       if (location.hash && location.hash.slice(1) === element.parent().attr('id')) {
         element.find('.beefup__head').each(function (index, item) {
-          setTimeout(function () { item.click() }, 500)
+          function handler () {
+            var filters = jQuery('.tab-filters button')
+            var parentId = element.parent().parent().attr('id')
+            var targetTab = filters.filter(':not([data-clip*="' + parentId + '"])')
+
+            targetTab.click()
+            item.click()
+          }
+
+          setTimeout(handler, 500)
         })
       }
     },
