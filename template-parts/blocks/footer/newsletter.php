@@ -3,7 +3,7 @@
 $footer_cta = get_field( 'footer_cta', 'options' );
 
 $n_classes = array(
-	'input'    => 'w-full p-10 lg:p-20 text-16 bg-white border',
+	'input'    => 'w-full p-10 lg:p-20 text-16 bg-white border appearance-none rounded-0',
 	'submit'   => 'w-full p-10 lg:p-20 text-white hocus:text-black bg-black hocus:bg-primary font-oswald font-medium uppercase border border-black',
 	'checkbox' => 'flex items-center w-full font-normal',
 );
