@@ -11,7 +11,7 @@ $list        = get_sub_field( 'List' );
 
 
 <?php if ( $caption || $list ) : ?>
-	<section id="members">
+	<section id="members" class="overflow-x-hidden">
 
 		<?php set_query_var( 'caption', $caption ); ?>
 		<?php set_query_var( 'description', $description ); ?>
