@@ -342,7 +342,7 @@ module.exports = {
     objectPosition: [],
     opacity: ['hover', 'group-hover', 'group-hocus'],
     outline: ['focus'],
-    overflow: [],
+    overflow: ['responsive'],
     padding: ['responsive'],
     pointerEvents: [],
     position: ['responsive'],

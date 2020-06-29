@@ -1,6 +1,9 @@
 @tailwind preflight;
 @tailwind components;
 
+.filters-mobile-only { @apply flex flex-col; @screen md { @apply hidden flex-row; } }
+.filters-desktop-only { @apply hidden flex-col; @screen md { @apply flex flex-row; } }
+
 @variants responsive {
   .clip {
     border: 0;

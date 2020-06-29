@@ -582,6 +582,62 @@ button,
 
 table { border-collapse: collapse; }
 
+.filters-mobile-only {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .filters-mobile-only {
+    display: none;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+.filters-desktop-only {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .filters-desktop-only {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -moz-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
 .clip {
   border: 0;
   clip: rect(0 0 0 0);
@@ -6733,7 +6789,15 @@ body.page-id-13 #acf-form .af-submit .af-next-button, body.page-id-13 .af-form.a
   -moz-box-flex: 1;
   -ms-flex: 1 1 0%;
   flex: 1 1 0%;
-  margin-bottom: -2px;
+}
+
+.facetwp-facet + .facetwp-facet { margin-top: -2px; }
+
+@media (min-width: 768px) {
+  .facetwp-facet + .facetwp-facet {
+    margin-top: 0;
+    margin-left: -2px;
+  }
 }
 
 .facetwp-facet.is-loading { pointer-events: auto; }
@@ -6802,6 +6866,21 @@ body.post-type-archive-talent .facetwp-facet.facetwp-type-radio .facetwp-radio:h
 body.page-id-13 .facetwp-facet.facetwp-type-radio .facetwp-radio:hover, body.page-id-13 .facetwp-facet.facetwp-type-dropdown .facetwp-radio:hover, body.page-id-13 .facetwp-facet.facetwp-type-radio .facetwp-dropdown:hover, body.page-id-13 .facetwp-facet.facetwp-type-dropdown .facetwp-dropdown:hover, body.page-id-13 .facetwp-facet.facetwp-type-radio .facetwp-radio.checked, body.page-id-13 .facetwp-facet.facetwp-type-dropdown .facetwp-radio.checked, body.page-id-13 .facetwp-facet.facetwp-type-radio .facetwp-dropdown.checked, body.page-id-13 .facetwp-facet.facetwp-type-dropdown .facetwp-dropdown.checked { background-color: #fff !important; }
 
 .facetwp-facet.facetwp-type-radio .facetwp-radio .facetwp-counter, .facetwp-facet.facetwp-type-dropdown .facetwp-radio .facetwp-counter, .facetwp-facet.facetwp-type-radio .facetwp-dropdown .facetwp-counter, .facetwp-facet.facetwp-type-dropdown .facetwp-dropdown .facetwp-counter { display: none; }
+
+.facetwp-facet.facetwp-type-radio select.facetwp-dropdown, .facetwp-facet.facetwp-type-dropdown select.facetwp-dropdown {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: right;
+  -webkit-background-origin: content-box;
+  -moz-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+  background-image: url(data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20version%3D%221.1%22%20x%3D%2212px%22%20y%3D%220px%22%20width%3D%2224px%22%20height%3D%225px%22%20viewBox%3D%220%200%206%203%22%20enable-background%3D%22new%200%200%206%203%22%20xml%3Aspace%3D%22preserve%22%20fill%3D%22%23000%22%3E%3Cpolygon%20points%3D%225.992%2C0%202.992%2C3%20-0.008%2C0%20%22/%3E%3C/svg%3E);
+  /* & option { @apply normal-case; } */
+}
 
 .facetwp-facet.facetwp-type-fselect {
   margin-left: -1px;
@@ -8966,6 +9045,34 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
   .xs\:-mb-border { margin-bottom: -2px; }
 
   .xs\:-ml-border { margin-left: -2px; }
+
+  .xs\:overflow-auto { overflow: auto; }
+
+  .xs\:overflow-hidden { overflow: hidden; }
+
+  .xs\:overflow-visible { overflow: visible; }
+
+  .xs\:overflow-scroll { overflow: scroll; }
+
+  .xs\:overflow-x-auto { overflow-x: auto; }
+
+  .xs\:overflow-y-auto { overflow-y: auto; }
+
+  .xs\:overflow-x-hidden { overflow-x: hidden; }
+
+  .xs\:overflow-y-hidden { overflow-y: hidden; }
+
+  .xs\:overflow-x-visible { overflow-x: visible; }
+
+  .xs\:overflow-y-visible { overflow-y: visible; }
+
+  .xs\:overflow-x-scroll { overflow-x: scroll; }
+
+  .xs\:overflow-y-scroll { overflow-y: scroll; }
+
+  .xs\:scrolling-touch { -webkit-overflow-scrolling: touch; }
+
+  .xs\:scrolling-auto { -webkit-overflow-scrolling: auto; }
 
   .xs\:p-0 { padding: 0; }
 
@@ -12076,6 +12183,34 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .sm\:-ml-border { margin-left: -2px; }
 
+  .sm\:overflow-auto { overflow: auto; }
+
+  .sm\:overflow-hidden { overflow: hidden; }
+
+  .sm\:overflow-visible { overflow: visible; }
+
+  .sm\:overflow-scroll { overflow: scroll; }
+
+  .sm\:overflow-x-auto { overflow-x: auto; }
+
+  .sm\:overflow-y-auto { overflow-y: auto; }
+
+  .sm\:overflow-x-hidden { overflow-x: hidden; }
+
+  .sm\:overflow-y-hidden { overflow-y: hidden; }
+
+  .sm\:overflow-x-visible { overflow-x: visible; }
+
+  .sm\:overflow-y-visible { overflow-y: visible; }
+
+  .sm\:overflow-x-scroll { overflow-x: scroll; }
+
+  .sm\:overflow-y-scroll { overflow-y: scroll; }
+
+  .sm\:scrolling-touch { -webkit-overflow-scrolling: touch; }
+
+  .sm\:scrolling-auto { -webkit-overflow-scrolling: auto; }
+
   .sm\:p-0 { padding: 0; }
 
   .sm\:p-5 { padding: 5px; }
@@ -15184,6 +15319,34 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
   .md\:-mb-border { margin-bottom: -2px; }
 
   .md\:-ml-border { margin-left: -2px; }
+
+  .md\:overflow-auto { overflow: auto; }
+
+  .md\:overflow-hidden { overflow: hidden; }
+
+  .md\:overflow-visible { overflow: visible; }
+
+  .md\:overflow-scroll { overflow: scroll; }
+
+  .md\:overflow-x-auto { overflow-x: auto; }
+
+  .md\:overflow-y-auto { overflow-y: auto; }
+
+  .md\:overflow-x-hidden { overflow-x: hidden; }
+
+  .md\:overflow-y-hidden { overflow-y: hidden; }
+
+  .md\:overflow-x-visible { overflow-x: visible; }
+
+  .md\:overflow-y-visible { overflow-y: visible; }
+
+  .md\:overflow-x-scroll { overflow-x: scroll; }
+
+  .md\:overflow-y-scroll { overflow-y: scroll; }
+
+  .md\:scrolling-touch { -webkit-overflow-scrolling: touch; }
+
+  .md\:scrolling-auto { -webkit-overflow-scrolling: auto; }
 
   .md\:p-0 { padding: 0; }
 
@@ -18294,6 +18457,34 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .lg\:-ml-border { margin-left: -2px; }
 
+  .lg\:overflow-auto { overflow: auto; }
+
+  .lg\:overflow-hidden { overflow: hidden; }
+
+  .lg\:overflow-visible { overflow: visible; }
+
+  .lg\:overflow-scroll { overflow: scroll; }
+
+  .lg\:overflow-x-auto { overflow-x: auto; }
+
+  .lg\:overflow-y-auto { overflow-y: auto; }
+
+  .lg\:overflow-x-hidden { overflow-x: hidden; }
+
+  .lg\:overflow-y-hidden { overflow-y: hidden; }
+
+  .lg\:overflow-x-visible { overflow-x: visible; }
+
+  .lg\:overflow-y-visible { overflow-y: visible; }
+
+  .lg\:overflow-x-scroll { overflow-x: scroll; }
+
+  .lg\:overflow-y-scroll { overflow-y: scroll; }
+
+  .lg\:scrolling-touch { -webkit-overflow-scrolling: touch; }
+
+  .lg\:scrolling-auto { -webkit-overflow-scrolling: auto; }
+
   .lg\:p-0 { padding: 0; }
 
   .lg\:p-5 { padding: 5px; }
@@ -21402,6 +21593,34 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
   .xl\:-mb-border { margin-bottom: -2px; }
 
   .xl\:-ml-border { margin-left: -2px; }
+
+  .xl\:overflow-auto { overflow: auto; }
+
+  .xl\:overflow-hidden { overflow: hidden; }
+
+  .xl\:overflow-visible { overflow: visible; }
+
+  .xl\:overflow-scroll { overflow: scroll; }
+
+  .xl\:overflow-x-auto { overflow-x: auto; }
+
+  .xl\:overflow-y-auto { overflow-y: auto; }
+
+  .xl\:overflow-x-hidden { overflow-x: hidden; }
+
+  .xl\:overflow-y-hidden { overflow-y: hidden; }
+
+  .xl\:overflow-x-visible { overflow-x: visible; }
+
+  .xl\:overflow-y-visible { overflow-y: visible; }
+
+  .xl\:overflow-x-scroll { overflow-x: scroll; }
+
+  .xl\:overflow-y-scroll { overflow-y: scroll; }
+
+  .xl\:scrolling-touch { -webkit-overflow-scrolling: touch; }
+
+  .xl\:scrolling-auto { -webkit-overflow-scrolling: auto; }
 
   .xl\:p-0 { padding: 0; }
 
