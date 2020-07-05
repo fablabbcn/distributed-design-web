@@ -71,3 +71,14 @@ function my_acf_counter_filter( $display ) {
 	$display = sprintf( __( '%1$s / %2$s', 'acf-counter' ), '%%len%%', '%%max%%' );
 	return $display;
 }
+
+// Show links to single posts inside admin
+add_filter( 'register_post_type_args', 'movies_to_films', 10, 2 );
+function movies_to_films( $args, $post_type ) {
+	if ( 'af_entry' === $post_type ) {
+		$args['public']            = true;
+		$args['show_ui']           = true;
+		$args['show_in_admin_bar'] = true;
+	}
+	return $args;
+}
