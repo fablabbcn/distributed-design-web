@@ -99,11 +99,16 @@ $fields = array(
 
 							<?php elseif ( 'website' === $field ) : ?>
 								<?php $prefix = ! strpos( $get_field, '//' ) ? '//' : ''; ?>
-								<p><a href="<?php echo esc_url( "$prefix$get_field" ); ?>" target="_blank"><?php echo wp_kses_post( $get_field ); ?></a></p>
+								<p><a href="<?php echo esc_url( $prefix . $get_field ); ?>" target="_blank"><?php echo wp_kses_post( $get_field ); ?></a></p>
 
 							<?php elseif ( 'social_media' === $field ) : ?>
 								<?php foreach ( $get_field as $key => $item ) : ?>
-									<p><?php echo wp_kses_post( $item['link'] ); ?></p>
+									<?php $prefix = ! strpos( $item['link'], '//' ) ? '//' : ''; ?>
+									<?php if ( ! $prefix ) : ?>
+										<p><a href="<?php echo esc_url( $prefix . $item['link'] ); ?>" target="_blank"><?php echo wp_kses_post( $item['link'] ); ?></a></p>
+									<?php else : ?>
+										<p><?php echo wp_kses_post( $item['link'] ); ?></p>
+									<?php endif; ?>
 								<?php endforeach; ?>
 
 							<?php elseif ( 'acceptance' === $field ) : ?>
