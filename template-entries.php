@@ -29,6 +29,7 @@ $entries = new WP_Query(
 
 	<?php set_query_var( 'title', $_title ); ?>
 	<?php get_template_part( 'template-parts/blocks/header' ); ?>
+	<?php get_template_part( 'template-parts/archive/aside-af_entry' ); ?>
 
 
 	<section class="flex flex-grow w-full overflow-x-hidden">

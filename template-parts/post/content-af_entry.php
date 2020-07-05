@@ -3,7 +3,7 @@
  * Template part for displaying a message that posts cannot be found
  */
 
-$thumbnail_id    = get_field('images')[0]['image']['ID'];
+$thumbnail_id    = get_field( 'images' )[0]['image']['ID'];
 $focal_point     = get_post_meta( $thumbnail_id, '_wpsmartcrop_image_focus' );
 $thumbnail_attrs = array(
 	'class' => 'absolute pin w-full h-full object-cover group-hover:opacity-30',
@@ -19,7 +19,7 @@ $thumbnail_attrs = array(
 		<?php echo wp_get_attachment_image( $thumbnail_id, 'post-thumbnail', false, $thumbnail_attrs ); ?>
 
 		<div class="flex flex-col flex-1 opacity-0 group-hover:opacity-100">
-			<p class="font-bold uppercase"><?php the_title(); ?>: <?php the_field('name'); ?></p>
+			<p class="font-bold uppercase"><?php the_field( 'name' ); ?></p>
 			<p>—</p>
 			<p><?php the_field( 'subtitle' ); ?></p>
 			<p class="mt-auto font-bold">Read More</p>
