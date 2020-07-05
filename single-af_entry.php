@@ -98,11 +98,12 @@ $fields = array(
 								<p><a href="tel:<?php echo wp_kses_post( $get_field['phone'] ); ?>" target="_blank"><?php echo wp_kses_post( $get_field['phone'] ); ?></a></p>
 
 							<?php elseif ( 'website' === $field ) : ?>
-								<p><a href="<?php echo wp_kses_post( $get_field ); ?>" target="_blank"><?php echo wp_kses_post( $get_field ); ?></a></p>
+								<?php $prefix = ! strpos( $get_field, '//' ) ? '//' : ''; ?>
+								<p><a href="<?php echo esc_url( "$prefix$get_field" ); ?>" target="_blank"><?php echo wp_kses_post( $get_field ); ?></a></p>
 
 							<?php elseif ( 'social_media' === $field ) : ?>
 								<?php foreach ( $get_field as $key => $item ) : ?>
-									<p><a href="<?php echo wp_kses_post( $item['link'] ); ?>" target="_blank"><?php echo wp_kses_post( $item['link'] ); ?></a></p>
+									<p><?php echo wp_kses_post( $item['link'] ); ?></p>
 								<?php endforeach; ?>
 
 							<?php elseif ( 'acceptance' === $field ) : ?>
