@@ -13,7 +13,7 @@ $n_classes = array(
 // TODO: Check if $has_CTA before printing shit
 ?>
 
-<div id="<?php echo esc_attr( $modal_id ); ?>" class="clip z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto">
+<div id="<?php echo esc_attr( $modal_id ); ?>" class="z-50 fixed pin justify-center w-full h-full overflow-x-hidden overflow-y-auto">
 	<button data-toggle="<?php echo esc_attr( $modal_id ); ?>" class="fixed pin w-full h-full bg-black-50 cursor-pointer"></button>
 
 	<div class="flex flex-col justify-center items-center w-full my-auto p-20 md:pt-160 md:px-45 md:pb-85">
