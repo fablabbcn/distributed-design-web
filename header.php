@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="google-site-verification" content="-snNuf9qHLlRhI4otn0BxPg5rf4JEuZzptP7kkvtrR4" />
-	<title><?php wp_title( ' | ', true, 'right' ); ?><?php bloginfo( 'name' ); ?></title>
+	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108533710-2"></script>
