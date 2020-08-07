@@ -10,7 +10,7 @@ $slider = array(
 <div class="-m-20 lg:-m-40 flex-grow">
 
 	<?php if ( get_field( 'featured_image_alt' ) ) : ?>
-		<div class="flex flex-col justify-end h-full">
+		<div class="flex flex-col justify-end flex-grow">
 			<?php require locate_template( 'template-parts/blocks/slider.php' ); ?>
 		</div>
 	<?php else : ?>
