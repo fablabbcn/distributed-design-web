@@ -41,7 +41,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-wp-pot": "^2.3.4",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "perfectionist": "^2.4.0",
     "postcss": "7.0.20",
     "postcss-easing-gradients": "^3.0.1",
