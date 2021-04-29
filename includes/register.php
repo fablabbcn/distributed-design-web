@@ -147,3 +147,16 @@ if ( ! function_exists( 'llos_set_admin_menu_separator' ) ) {
 	} add_action( 'admin_menu', 'llos_set_admin_menu_separator' );
 }
 */
+
+// .
+if ( ! function_exists( 'make_urls_prettier' ) ) {
+	function make_urls_prettier ($args, $post_type) {
+		if ($post_type == 'af_entry') {
+			$args['rewrite'] = array(
+				'slug'       => 'awards/entries',
+				'with_front' => false,
+			);
+		}
+		return $args;
+	} add_filter( 'register_post_type_args', 'make_urls_prettier', 10, 2 );
+}

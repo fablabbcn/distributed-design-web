@@ -14,9 +14,9 @@ $s_classes = array(
 	'columns' => function ( $has_details, $has_border = true ) {
 		$base_classes = $has_border ? 'p-20 lg:p-40 border-t' : 'p-20 pt-0 lg:p-40 lg:pt-0';
 		return array(
-			array( $has_details ? 'flex' : 'hidden', 'lg:flex flex-col w-full', $base_classes, 'lg:w-1/4' ),
-			array( $has_details ? 'flex' : 'hidden', 'lg:flex flex-col w-full', $base_classes, 'lg:w-3/4 lg:border-l' ),
-			array( 'hidden lg:flex flex-col w-full lg:w-auto', $base_classes, 'lg:border-l' ),
+			array( 'relative', $has_details ? 'flex' : 'hidden', 'lg:flex flex-col w-full', $base_classes, 'lg:w-1/4' ),
+			array( 'relative', $has_details ? 'flex' : 'hidden', 'lg:flex flex-col w-full', $base_classes, 'lg:w-3/4 lg:border-l' ),
+			array( 'relative', 'hidden lg:flex flex-col w-full lg:w-auto', $base_classes, 'lg:border-l' ),
 		);
 	},
 );
@@ -45,6 +45,7 @@ $fields = array(
 			<div data-layout="hero" class="<?php the_classes( $s_classes['layout'] ); ?>">
 				<div class="<?php the_classes( $s_classes['columns'](false)[0] ); ?>">&nbsp;</div>
 				<div class="<?php the_classes( $s_classes['columns'](true)[1] ); ?>">
+					<div class="absolute pin-b pin-l m-20 lg:m-40"><?php echo do_shortcode( '[wp_ulike]' ); ?></div>
 					<div class="-m-20 lg:-m-40 flex-grow">
 						<?php echo wp_get_attachment_image( get_field( 'images' )[0]['image']['ID'], 'post-thumbnail', false, array( 'class' => 'w-full' ) ); ?>
 					</div>
@@ -90,7 +91,16 @@ $fields = array(
 								<?php endforeach; ?>
 
 							<?php elseif ( 'video' === $field ) : ?>
-								<p><a href="<?php echo wp_kses_post( $get_field ); ?>" target="_blank"><?php echo wp_kses_post( $get_field ); ?></a></p>
+								<?php if ( ! strpos( $get_field, 'youtu' ) ) : ?>
+									<p><a href="<?php echo wp_kses_post( $get_field ); ?>" target="_blank"><?php echo wp_kses_post( $get_field ); ?></a></p>
+								<?php else : ?>
+									<?php $youtube_regex = "/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/"; ?>
+									<?php $youtube_id = preg_match( $youtube_regex, $get_field, $matches); ?>
+									<div class="relative aspect-ratio-16/9 w-full h-0">
+										<iframe	class="absolute pin w-full h-full" src="https://www.youtube.com/embed/<?php echo esc_attr( $matches[1] ); ?>" title="YouTube video player"
+											frame frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>
+								<?php endif; ?>
 
 							<?php elseif ( 'contact_details' === $field ) : ?>
 								<p><?php echo wp_kses_post( $get_field['name'] ); ?></p>

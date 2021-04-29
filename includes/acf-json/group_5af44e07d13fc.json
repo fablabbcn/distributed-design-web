@@ -134,6 +134,11 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "template-contact.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "template-entries.php"
             }
         ],
         [
@@ -164,7 +169,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": 1,
     "description": "",
-    "modified": 1592923899
+    "modified": 1619627230
 }

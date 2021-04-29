@@ -3,6 +3,9 @@
 /* Template Name: Form Entries */
 
 $_title = get_the_title();
+$_description = get_field( 'description' );
+$_range = get_field( 'range' );
+
 
 $i_classes = array(
 	'li' => array(
@@ -16,6 +19,14 @@ $entries = new WP_Query(
 		'post_type'      => 'af_entry',
 		'posts_per_page' => '-1',
 		'order'          => 'ASC',
+		'orderby'        => 'rand',
+		'date_query'     => array(
+			array(
+				'after'     => $_range['from'],
+				'before'    => $_range['to'],
+				'inclusive' => true,
+			),
+	),
 	)
 );
 
@@ -28,6 +39,7 @@ $entries = new WP_Query(
 <main class="flex flex-col flex-grow">
 
 	<?php set_query_var( 'title', $_title ); ?>
+	<?php set_query_var( 'description', $_description ); ?>
 	<?php get_template_part( 'template-parts/blocks/header' ); ?>
 	<?php get_template_part( 'template-parts/archive/aside-af_entry' ); ?>
 

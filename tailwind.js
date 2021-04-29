@@ -393,7 +393,10 @@ module.exports = {
       counts: [1, 2],
     }),
     require('tailwindcss-aspect-ratio')({
-      ratios: { '1/1': [1, 1] },
+      ratios: {
+        '1/1': [1, 1],
+        '16/9': [16, 9],
+      },
     }),
     require('tailwindcss-spinner')({
       name: 'is-loading',

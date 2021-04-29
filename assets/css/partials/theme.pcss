@@ -73,6 +73,35 @@
   }
 }
 
+.wpulike.wpulike-heart {
+  @apply relative flex p-0 border border-current cursor-pointer rounded-full overflow-hidden;
+
+  & .wp_ulike_general_class {
+    box-shadow: none;
+    @apply px-15 py-5 bg-white;
+    & > * + * { @apply ml-10; }
+  }
+
+  & .count-box {
+    font: unset;
+    @apply p-0 text-current font-normal;
+  }
+
+  & .wp_ulike_btn {
+    @apply static;
+  }
+
+  & .wp_ulike_put_image {
+    @apply w-20 h-20 p-0 !important;
+    &::after { transform: none; @apply static; }
+
+    &::before {
+      content: '';
+      @apply absolute pin w-full h-full;
+    }
+  }
+}
+
 [data-ajaxchimp] {
   &[data-content]::before {
     content: attr(data-content);

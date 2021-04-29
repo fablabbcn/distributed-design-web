@@ -1028,6 +1028,11 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "template-archive-events.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "template-entries.php"
             }
         ]
     ],
@@ -1041,5 +1046,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1593453807
+    "modified": 1619627238
 }
