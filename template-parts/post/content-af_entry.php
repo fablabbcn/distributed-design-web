@@ -13,17 +13,20 @@ $thumbnail_attrs = array(
 ?>
 
 
-<div id="post-<?php the_ID(); ?>" class="relative aspect-ratio-1/1 w-full h-0 border-px border-solid overflow-hidden">
+<div id="post-<?php the_ID(); ?>" class="z-0 relative aspect-ratio-1/1 w-full h-0 border-px border-solid overflow-hidden">
+	<div class="group z-20 absolute pin flex flex-col w-full h-full p-20 pointer-events-none">
+		<div class="mt-auto ml-auto -mb-5 pointer-events-auto">
+			<?php echo do_shortcode( '[wp_ulike]' ); ?>
+		</div>
+	</div>
+
 	<a class="group z-10 absolute pin flex w-full h-full p-20 hover:text-black bg-primary-70 hocus:bg-primary" href="<?php the_permalink(); ?>">
-
 		<?php echo wp_get_attachment_image( $thumbnail_id, 'post-thumbnail', false, $thumbnail_attrs ); ?>
-
 		<div class="flex flex-col flex-1 opacity-0 group-hover:opacity-100">
 			<p class="font-bold uppercase"><?php the_field( 'name' ); ?></p>
 			<p>—</p>
 			<p><?php the_field( 'subtitle' ); ?></p>
 			<p class="mt-auto font-bold">Read More</p>
 		</div>
-
 	</a>
 </div>
