@@ -79,10 +79,12 @@ $fields = array(
 
 							<?php elseif ( 'details' === $field ) : ?>
 								<?php foreach ( $get_field as $key => $item ) : ?>
-									<dl>
-										<dt><?php echo wp_kses_post( $get_object['sub_fields'][ substr( $key, -1 ) - 1 ]['sub_fields'][0]['message'] ); ?></dt>
-										<dd><?php echo $item['text'] ? wp_kses_post( $item['text'] ) : '—'; ?></dd>
-									</dl>
+									<?php if ( $item['answer'] ) : ?>
+										<dl>
+											<dt><?php echo wp_kses_post( $get_object['sub_fields'][ substr( $key, -1 ) - 1 ]['sub_fields'][0]['message'] ); ?></dt>
+											<dd><?php echo $item['text'] ? wp_kses_post( $item['text'] ) : '—'; ?></dd>
+										</dl>
+									<?php endif; ?>
 								<?php endforeach; ?>
 
 							<?php elseif ( 'images' === $field ) : ?>
