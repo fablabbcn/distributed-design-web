@@ -93,15 +93,22 @@ $fields = array(
 								<?php endforeach; ?>
 
 							<?php elseif ( 'video' === $field ) : ?>
-								<?php if ( ! strpos( $get_field, 'youtu' ) ) : ?>
-									<p><a href="<?php echo wp_kses_post( $get_field ); ?>" target="_blank"><?php echo wp_kses_post( $get_field ); ?></a></p>
-								<?php else : ?>
+								<?php if ( strpos( $get_field, 'youtu' ) ) : ?>
 									<?php $youtube_regex = "/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/"; ?>
 									<?php $youtube_id = preg_match( $youtube_regex, $get_field, $matches); ?>
 									<div class="relative aspect-ratio-16/9 w-full h-0">
 										<iframe	class="absolute pin w-full h-full" src="https://www.youtube.com/embed/<?php echo esc_attr( $matches[1] ); ?>" title="YouTube video player"
 											frame frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 									</div>
+								<?php elseif ( strpos( $get_field, 'vimeo' ) ) : ?>
+									<?php $vimeo_regex = "/(https?:\/\/)?(www\.)?(player\.)?vimeo\.com\/?(showcase\/)*([0-9))([a-z]*\/)*([0-9]{6,11})[?]?.*/"; ?>
+									<?php $vimeo_id = preg_match( $vimeo_regex, $get_field, $matches); ?>
+									<div class="relative aspect-ratio-16/9 w-full h-0">
+										<iframe	class="absolute pin w-full h-full" src="https://player.vimeo.com/video/<?php echo esc_attr( $matches[6] ); ?>?title=0&byline=0&portrait=0" title="Vimeo video player"
+											frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+									</div>
+								<?php else : ?>
+									<p><a href="<?php echo wp_kses_post( $get_field ); ?>" target="_blank"><?php echo wp_kses_post( $get_field ); ?></a></p>
 								<?php endif; ?>
 
 							<?php elseif ( 'contact_details' === $field ) : ?>
