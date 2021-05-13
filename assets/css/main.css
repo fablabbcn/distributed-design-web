@@ -3228,6 +3228,8 @@ table { border-collapse: collapse; }
 
 .opacity-30 { opacity: 0.3; }
 
+.opacity-50 { opacity: 0.5; }
+
 .opacity-70 { opacity: 0.7; }
 
 .opacity-100 { opacity: 1; }
@@ -3241,6 +3243,8 @@ table { border-collapse: collapse; }
 .hover\:opacity-10:hover { opacity: 0.1; }
 
 .hover\:opacity-30:hover { opacity: 0.3; }
+
+.hover\:opacity-50:hover { opacity: 0.5; }
 
 .hover\:opacity-70:hover { opacity: 0.7; }
 
@@ -3256,9 +3260,27 @@ table { border-collapse: collapse; }
 
 .group:hover .group-hover\:opacity-30 { opacity: 0.3; }
 
+.group:hover .group-hover\:opacity-50 { opacity: 0.5; }
+
 .group:hover .group-hover\:opacity-70 { opacity: 0.7; }
 
 .group:hover .group-hover\:opacity-100 { opacity: 1; }
+
+.group:focus .group-focus\:opacity-0 { opacity: 0; }
+
+.group:focus .group-focus\:opacity-2 { opacity: 0.025; }
+
+.group:focus .group-focus\:opacity-5 { opacity: 0.05; }
+
+.group:focus .group-focus\:opacity-10 { opacity: 0.1; }
+
+.group:focus .group-focus\:opacity-30 { opacity: 0.3; }
+
+.group:focus .group-focus\:opacity-50 { opacity: 0.5; }
+
+.group:focus .group-focus\:opacity-70 { opacity: 0.7; }
+
+.group:focus .group-focus\:opacity-100 { opacity: 1; }
 
 .group:hover .group-hocus\:opacity-0,
 .group:focus .group-hocus\:opacity-0 { opacity: 0; }
@@ -3274,6 +3296,9 @@ table { border-collapse: collapse; }
 
 .group:hover .group-hocus\:opacity-30,
 .group:focus .group-hocus\:opacity-30 { opacity: 0.3; }
+
+.group:hover .group-hocus\:opacity-50,
+.group:focus .group-hocus\:opacity-50 { opacity: 0.5; }
 
 .group:hover .group-hocus\:opacity-70,
 .group:focus .group-hocus\:opacity-70 { opacity: 0.7; }
@@ -4756,6 +4781,195 @@ table { border-collapse: collapse; }
 
 .hocus\:text-yellow-30:hover,
 .hocus\:text-yellow-30:focus { color: rgba(255, 255, 0, 0.3); }
+
+.bg-black-50 { background-color: rgba(0, 0, 0, 0.5); }
+
+.bg-dark-gray-50 { background-color: rgba(34, 34, 34, 0.5); }
+
+.bg-gray-50 { background-color: rgba(230, 230, 230, 0.5); }
+
+.bg-white-50 { background-color: rgba(255, 255, 255, 0.5); }
+
+.bg-red-50 { background-color: rgba(249, 56, 56, 0.5); }
+
+.bg-lime-50 { background-color: rgba(0, 255, 0, 0.5); }
+
+.bg-cyan-50 { background-color: rgba(0, 255, 255, 0.5); }
+
+.bg-magenta-50 { background-color: rgba(255, 0, 255, 0.5); }
+
+.bg-yellow-50 { background-color: rgba(255, 255, 0, 0.5); }
+
+.hover\:bg-black-50:hover { background-color: rgba(0, 0, 0, 0.5); }
+
+.hover\:bg-dark-gray-50:hover { background-color: rgba(34, 34, 34, 0.5); }
+
+.hover\:bg-gray-50:hover { background-color: rgba(230, 230, 230, 0.5); }
+
+.hover\:bg-white-50:hover { background-color: rgba(255, 255, 255, 0.5); }
+
+.hover\:bg-red-50:hover { background-color: rgba(249, 56, 56, 0.5); }
+
+.hover\:bg-lime-50:hover { background-color: rgba(0, 255, 0, 0.5); }
+
+.hover\:bg-cyan-50:hover { background-color: rgba(0, 255, 255, 0.5); }
+
+.hover\:bg-magenta-50:hover { background-color: rgba(255, 0, 255, 0.5); }
+
+.hover\:bg-yellow-50:hover { background-color: rgba(255, 255, 0, 0.5); }
+
+.hocus\:bg-black-50:hover,
+.hocus\:bg-black-50:focus { background-color: rgba(0, 0, 0, 0.5); }
+
+.hocus\:bg-dark-gray-50:hover,
+.hocus\:bg-dark-gray-50:focus { background-color: rgba(34, 34, 34, 0.5); }
+
+.hocus\:bg-gray-50:hover,
+.hocus\:bg-gray-50:focus { background-color: rgba(230, 230, 230, 0.5); }
+
+.hocus\:bg-white-50:hover,
+.hocus\:bg-white-50:focus { background-color: rgba(255, 255, 255, 0.5); }
+
+.hocus\:bg-red-50:hover,
+.hocus\:bg-red-50:focus { background-color: rgba(249, 56, 56, 0.5); }
+
+.hocus\:bg-lime-50:hover,
+.hocus\:bg-lime-50:focus { background-color: rgba(0, 255, 0, 0.5); }
+
+.hocus\:bg-cyan-50:hover,
+.hocus\:bg-cyan-50:focus { background-color: rgba(0, 255, 255, 0.5); }
+
+.hocus\:bg-magenta-50:hover,
+.hocus\:bg-magenta-50:focus { background-color: rgba(255, 0, 255, 0.5); }
+
+.hocus\:bg-yellow-50:hover,
+.hocus\:bg-yellow-50:focus { background-color: rgba(255, 255, 0, 0.5); }
+
+.group:hover .group-hover\:bg-black-50 { background-color: rgba(0, 0, 0, 0.5); }
+
+.group:hover .group-hover\:bg-dark-gray-50 { background-color: rgba(34, 34, 34, 0.5); }
+
+.group:hover .group-hover\:bg-gray-50 { background-color: rgba(230, 230, 230, 0.5); }
+
+.group:hover .group-hover\:bg-white-50 { background-color: rgba(255, 255, 255, 0.5); }
+
+.group:hover .group-hover\:bg-red-50 { background-color: rgba(249, 56, 56, 0.5); }
+
+.group:hover .group-hover\:bg-lime-50 { background-color: rgba(0, 255, 0, 0.5); }
+
+.group:hover .group-hover\:bg-cyan-50 { background-color: rgba(0, 255, 255, 0.5); }
+
+.group:hover .group-hover\:bg-magenta-50 { background-color: rgba(255, 0, 255, 0.5); }
+
+.group:hover .group-hover\:bg-yellow-50 { background-color: rgba(255, 255, 0, 0.5); }
+
+.group:focus .group-focus\:bg-black-50 { background-color: rgba(0, 0, 0, 0.5); }
+
+.group:focus .group-focus\:bg-dark-gray-50 { background-color: rgba(34, 34, 34, 0.5); }
+
+.group:focus .group-focus\:bg-gray-50 { background-color: rgba(230, 230, 230, 0.5); }
+
+.group:focus .group-focus\:bg-white-50 { background-color: rgba(255, 255, 255, 0.5); }
+
+.group:focus .group-focus\:bg-red-50 { background-color: rgba(249, 56, 56, 0.5); }
+
+.group:focus .group-focus\:bg-lime-50 { background-color: rgba(0, 255, 0, 0.5); }
+
+.group:focus .group-focus\:bg-cyan-50 { background-color: rgba(0, 255, 255, 0.5); }
+
+.group:focus .group-focus\:bg-magenta-50 { background-color: rgba(255, 0, 255, 0.5); }
+
+.group:focus .group-focus\:bg-yellow-50 { background-color: rgba(255, 255, 0, 0.5); }
+
+.group:hover .group-hocus\:bg-black-50,
+.group:focus .group-hocus\:bg-black-50 { background-color: rgba(0, 0, 0, 0.5); }
+
+.group:hover .group-hocus\:bg-dark-gray-50,
+.group:focus .group-hocus\:bg-dark-gray-50 { background-color: rgba(34, 34, 34, 0.5); }
+
+.group:hover .group-hocus\:bg-gray-50,
+.group:focus .group-hocus\:bg-gray-50 { background-color: rgba(230, 230, 230, 0.5); }
+
+.group:hover .group-hocus\:bg-white-50,
+.group:focus .group-hocus\:bg-white-50 { background-color: rgba(255, 255, 255, 0.5); }
+
+.group:hover .group-hocus\:bg-red-50,
+.group:focus .group-hocus\:bg-red-50 { background-color: rgba(249, 56, 56, 0.5); }
+
+.group:hover .group-hocus\:bg-lime-50,
+.group:focus .group-hocus\:bg-lime-50 { background-color: rgba(0, 255, 0, 0.5); }
+
+.group:hover .group-hocus\:bg-cyan-50,
+.group:focus .group-hocus\:bg-cyan-50 { background-color: rgba(0, 255, 255, 0.5); }
+
+.group:hover .group-hocus\:bg-magenta-50,
+.group:focus .group-hocus\:bg-magenta-50 { background-color: rgba(255, 0, 255, 0.5); }
+
+.group:hover .group-hocus\:bg-yellow-50,
+.group:focus .group-hocus\:bg-yellow-50 { background-color: rgba(255, 255, 0, 0.5); }
+
+.text-black-50 { color: rgba(0, 0, 0, 0.5); }
+
+.text-dark-gray-50 { color: rgba(34, 34, 34, 0.5); }
+
+.text-gray-50 { color: rgba(230, 230, 230, 0.5); }
+
+.text-white-50 { color: rgba(255, 255, 255, 0.5); }
+
+.text-red-50 { color: rgba(249, 56, 56, 0.5); }
+
+.text-lime-50 { color: rgba(0, 255, 0, 0.5); }
+
+.text-cyan-50 { color: rgba(0, 255, 255, 0.5); }
+
+.text-magenta-50 { color: rgba(255, 0, 255, 0.5); }
+
+.text-yellow-50 { color: rgba(255, 255, 0, 0.5); }
+
+.hover\:text-black-50:hover { color: rgba(0, 0, 0, 0.5); }
+
+.hover\:text-dark-gray-50:hover { color: rgba(34, 34, 34, 0.5); }
+
+.hover\:text-gray-50:hover { color: rgba(230, 230, 230, 0.5); }
+
+.hover\:text-white-50:hover { color: rgba(255, 255, 255, 0.5); }
+
+.hover\:text-red-50:hover { color: rgba(249, 56, 56, 0.5); }
+
+.hover\:text-lime-50:hover { color: rgba(0, 255, 0, 0.5); }
+
+.hover\:text-cyan-50:hover { color: rgba(0, 255, 255, 0.5); }
+
+.hover\:text-magenta-50:hover { color: rgba(255, 0, 255, 0.5); }
+
+.hover\:text-yellow-50:hover { color: rgba(255, 255, 0, 0.5); }
+
+.hocus\:text-black-50:hover,
+.hocus\:text-black-50:focus { color: rgba(0, 0, 0, 0.5); }
+
+.hocus\:text-dark-gray-50:hover,
+.hocus\:text-dark-gray-50:focus { color: rgba(34, 34, 34, 0.5); }
+
+.hocus\:text-gray-50:hover,
+.hocus\:text-gray-50:focus { color: rgba(230, 230, 230, 0.5); }
+
+.hocus\:text-white-50:hover,
+.hocus\:text-white-50:focus { color: rgba(255, 255, 255, 0.5); }
+
+.hocus\:text-red-50:hover,
+.hocus\:text-red-50:focus { color: rgba(249, 56, 56, 0.5); }
+
+.hocus\:text-lime-50:hover,
+.hocus\:text-lime-50:focus { color: rgba(0, 255, 0, 0.5); }
+
+.hocus\:text-cyan-50:hover,
+.hocus\:text-cyan-50:focus { color: rgba(0, 255, 255, 0.5); }
+
+.hocus\:text-magenta-50:hover,
+.hocus\:text-magenta-50:focus { color: rgba(255, 0, 255, 0.5); }
+
+.hocus\:text-yellow-50:hover,
+.hocus\:text-yellow-50:focus { color: rgba(255, 255, 0, 0.5); }
 
 .bg-black-70 { background-color: rgba(0, 0, 0, 0.7); }
 
@@ -9113,6 +9327,94 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .xs\:-ml-border { margin-left: -2px; }
 
+  .xs\:opacity-0 { opacity: 0; }
+
+  .xs\:opacity-2 { opacity: 0.025; }
+
+  .xs\:opacity-5 { opacity: 0.05; }
+
+  .xs\:opacity-10 { opacity: 0.1; }
+
+  .xs\:opacity-30 { opacity: 0.3; }
+
+  .xs\:opacity-50 { opacity: 0.5; }
+
+  .xs\:opacity-70 { opacity: 0.7; }
+
+  .xs\:opacity-100 { opacity: 1; }
+
+  .xs\:hover\:opacity-0:hover { opacity: 0; }
+
+  .xs\:hover\:opacity-2:hover { opacity: 0.025; }
+
+  .xs\:hover\:opacity-5:hover { opacity: 0.05; }
+
+  .xs\:hover\:opacity-10:hover { opacity: 0.1; }
+
+  .xs\:hover\:opacity-30:hover { opacity: 0.3; }
+
+  .xs\:hover\:opacity-50:hover { opacity: 0.5; }
+
+  .xs\:hover\:opacity-70:hover { opacity: 0.7; }
+
+  .xs\:hover\:opacity-100:hover { opacity: 1; }
+
+  .group:hover .xs\:group-hover\:opacity-0 { opacity: 0; }
+
+  .group:hover .xs\:group-hover\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .xs\:group-hover\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .xs\:group-hover\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .xs\:group-hover\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .xs\:group-hover\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .xs\:group-hover\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .xs\:group-hover\:opacity-100 { opacity: 1; }
+
+  .group:focus .xs\:group-focus\:opacity-0 { opacity: 0; }
+
+  .group:focus .xs\:group-focus\:opacity-2 { opacity: 0.025; }
+
+  .group:focus .xs\:group-focus\:opacity-5 { opacity: 0.05; }
+
+  .group:focus .xs\:group-focus\:opacity-10 { opacity: 0.1; }
+
+  .group:focus .xs\:group-focus\:opacity-30 { opacity: 0.3; }
+
+  .group:focus .xs\:group-focus\:opacity-50 { opacity: 0.5; }
+
+  .group:focus .xs\:group-focus\:opacity-70 { opacity: 0.7; }
+
+  .group:focus .xs\:group-focus\:opacity-100 { opacity: 1; }
+
+  .group:hover .xs\:group-hocus\:opacity-0,
+  .group:focus .xs\:group-hocus\:opacity-0 { opacity: 0; }
+
+  .group:hover .xs\:group-hocus\:opacity-2,
+  .group:focus .xs\:group-hocus\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .xs\:group-hocus\:opacity-5,
+  .group:focus .xs\:group-hocus\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .xs\:group-hocus\:opacity-10,
+  .group:focus .xs\:group-hocus\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .xs\:group-hocus\:opacity-30,
+  .group:focus .xs\:group-hocus\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .xs\:group-hocus\:opacity-50,
+  .group:focus .xs\:group-hocus\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .xs\:group-hocus\:opacity-70,
+  .group:focus .xs\:group-hocus\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .xs\:group-hocus\:opacity-100,
+  .group:focus .xs\:group-hocus\:opacity-100 { opacity: 1; }
+
   .xs\:overflow-auto { overflow: auto; }
 
   .xs\:overflow-hidden { overflow: hidden; }
@@ -9985,6 +10287,69 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .xs\:hocus\:text-yellow-30:hover,
   .xs\:hocus\:text-yellow-30:focus { color: rgba(255, 255, 0, 0.3); }
+
+  .xs\:text-black-50 { color: rgba(0, 0, 0, 0.5); }
+
+  .xs\:text-dark-gray-50 { color: rgba(34, 34, 34, 0.5); }
+
+  .xs\:text-gray-50 { color: rgba(230, 230, 230, 0.5); }
+
+  .xs\:text-white-50 { color: rgba(255, 255, 255, 0.5); }
+
+  .xs\:text-red-50 { color: rgba(249, 56, 56, 0.5); }
+
+  .xs\:text-lime-50 { color: rgba(0, 255, 0, 0.5); }
+
+  .xs\:text-cyan-50 { color: rgba(0, 255, 255, 0.5); }
+
+  .xs\:text-magenta-50 { color: rgba(255, 0, 255, 0.5); }
+
+  .xs\:text-yellow-50 { color: rgba(255, 255, 0, 0.5); }
+
+  .xs\:hover\:text-black-50:hover { color: rgba(0, 0, 0, 0.5); }
+
+  .xs\:hover\:text-dark-gray-50:hover { color: rgba(34, 34, 34, 0.5); }
+
+  .xs\:hover\:text-gray-50:hover { color: rgba(230, 230, 230, 0.5); }
+
+  .xs\:hover\:text-white-50:hover { color: rgba(255, 255, 255, 0.5); }
+
+  .xs\:hover\:text-red-50:hover { color: rgba(249, 56, 56, 0.5); }
+
+  .xs\:hover\:text-lime-50:hover { color: rgba(0, 255, 0, 0.5); }
+
+  .xs\:hover\:text-cyan-50:hover { color: rgba(0, 255, 255, 0.5); }
+
+  .xs\:hover\:text-magenta-50:hover { color: rgba(255, 0, 255, 0.5); }
+
+  .xs\:hover\:text-yellow-50:hover { color: rgba(255, 255, 0, 0.5); }
+
+  .xs\:hocus\:text-black-50:hover,
+  .xs\:hocus\:text-black-50:focus { color: rgba(0, 0, 0, 0.5); }
+
+  .xs\:hocus\:text-dark-gray-50:hover,
+  .xs\:hocus\:text-dark-gray-50:focus { color: rgba(34, 34, 34, 0.5); }
+
+  .xs\:hocus\:text-gray-50:hover,
+  .xs\:hocus\:text-gray-50:focus { color: rgba(230, 230, 230, 0.5); }
+
+  .xs\:hocus\:text-white-50:hover,
+  .xs\:hocus\:text-white-50:focus { color: rgba(255, 255, 255, 0.5); }
+
+  .xs\:hocus\:text-red-50:hover,
+  .xs\:hocus\:text-red-50:focus { color: rgba(249, 56, 56, 0.5); }
+
+  .xs\:hocus\:text-lime-50:hover,
+  .xs\:hocus\:text-lime-50:focus { color: rgba(0, 255, 0, 0.5); }
+
+  .xs\:hocus\:text-cyan-50:hover,
+  .xs\:hocus\:text-cyan-50:focus { color: rgba(0, 255, 255, 0.5); }
+
+  .xs\:hocus\:text-magenta-50:hover,
+  .xs\:hocus\:text-magenta-50:focus { color: rgba(255, 0, 255, 0.5); }
+
+  .xs\:hocus\:text-yellow-50:hover,
+  .xs\:hocus\:text-yellow-50:focus { color: rgba(255, 255, 0, 0.5); }
 
   .xs\:text-black-70 { color: rgba(0, 0, 0, 0.7); }
 
@@ -12250,6 +12615,94 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .sm\:-ml-border { margin-left: -2px; }
 
+  .sm\:opacity-0 { opacity: 0; }
+
+  .sm\:opacity-2 { opacity: 0.025; }
+
+  .sm\:opacity-5 { opacity: 0.05; }
+
+  .sm\:opacity-10 { opacity: 0.1; }
+
+  .sm\:opacity-30 { opacity: 0.3; }
+
+  .sm\:opacity-50 { opacity: 0.5; }
+
+  .sm\:opacity-70 { opacity: 0.7; }
+
+  .sm\:opacity-100 { opacity: 1; }
+
+  .sm\:hover\:opacity-0:hover { opacity: 0; }
+
+  .sm\:hover\:opacity-2:hover { opacity: 0.025; }
+
+  .sm\:hover\:opacity-5:hover { opacity: 0.05; }
+
+  .sm\:hover\:opacity-10:hover { opacity: 0.1; }
+
+  .sm\:hover\:opacity-30:hover { opacity: 0.3; }
+
+  .sm\:hover\:opacity-50:hover { opacity: 0.5; }
+
+  .sm\:hover\:opacity-70:hover { opacity: 0.7; }
+
+  .sm\:hover\:opacity-100:hover { opacity: 1; }
+
+  .group:hover .sm\:group-hover\:opacity-0 { opacity: 0; }
+
+  .group:hover .sm\:group-hover\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .sm\:group-hover\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .sm\:group-hover\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .sm\:group-hover\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .sm\:group-hover\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .sm\:group-hover\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .sm\:group-hover\:opacity-100 { opacity: 1; }
+
+  .group:focus .sm\:group-focus\:opacity-0 { opacity: 0; }
+
+  .group:focus .sm\:group-focus\:opacity-2 { opacity: 0.025; }
+
+  .group:focus .sm\:group-focus\:opacity-5 { opacity: 0.05; }
+
+  .group:focus .sm\:group-focus\:opacity-10 { opacity: 0.1; }
+
+  .group:focus .sm\:group-focus\:opacity-30 { opacity: 0.3; }
+
+  .group:focus .sm\:group-focus\:opacity-50 { opacity: 0.5; }
+
+  .group:focus .sm\:group-focus\:opacity-70 { opacity: 0.7; }
+
+  .group:focus .sm\:group-focus\:opacity-100 { opacity: 1; }
+
+  .group:hover .sm\:group-hocus\:opacity-0,
+  .group:focus .sm\:group-hocus\:opacity-0 { opacity: 0; }
+
+  .group:hover .sm\:group-hocus\:opacity-2,
+  .group:focus .sm\:group-hocus\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .sm\:group-hocus\:opacity-5,
+  .group:focus .sm\:group-hocus\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .sm\:group-hocus\:opacity-10,
+  .group:focus .sm\:group-hocus\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .sm\:group-hocus\:opacity-30,
+  .group:focus .sm\:group-hocus\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .sm\:group-hocus\:opacity-50,
+  .group:focus .sm\:group-hocus\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .sm\:group-hocus\:opacity-70,
+  .group:focus .sm\:group-hocus\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .sm\:group-hocus\:opacity-100,
+  .group:focus .sm\:group-hocus\:opacity-100 { opacity: 1; }
+
   .sm\:overflow-auto { overflow: auto; }
 
   .sm\:overflow-hidden { overflow: hidden; }
@@ -13122,6 +13575,69 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .sm\:hocus\:text-yellow-30:hover,
   .sm\:hocus\:text-yellow-30:focus { color: rgba(255, 255, 0, 0.3); }
+
+  .sm\:text-black-50 { color: rgba(0, 0, 0, 0.5); }
+
+  .sm\:text-dark-gray-50 { color: rgba(34, 34, 34, 0.5); }
+
+  .sm\:text-gray-50 { color: rgba(230, 230, 230, 0.5); }
+
+  .sm\:text-white-50 { color: rgba(255, 255, 255, 0.5); }
+
+  .sm\:text-red-50 { color: rgba(249, 56, 56, 0.5); }
+
+  .sm\:text-lime-50 { color: rgba(0, 255, 0, 0.5); }
+
+  .sm\:text-cyan-50 { color: rgba(0, 255, 255, 0.5); }
+
+  .sm\:text-magenta-50 { color: rgba(255, 0, 255, 0.5); }
+
+  .sm\:text-yellow-50 { color: rgba(255, 255, 0, 0.5); }
+
+  .sm\:hover\:text-black-50:hover { color: rgba(0, 0, 0, 0.5); }
+
+  .sm\:hover\:text-dark-gray-50:hover { color: rgba(34, 34, 34, 0.5); }
+
+  .sm\:hover\:text-gray-50:hover { color: rgba(230, 230, 230, 0.5); }
+
+  .sm\:hover\:text-white-50:hover { color: rgba(255, 255, 255, 0.5); }
+
+  .sm\:hover\:text-red-50:hover { color: rgba(249, 56, 56, 0.5); }
+
+  .sm\:hover\:text-lime-50:hover { color: rgba(0, 255, 0, 0.5); }
+
+  .sm\:hover\:text-cyan-50:hover { color: rgba(0, 255, 255, 0.5); }
+
+  .sm\:hover\:text-magenta-50:hover { color: rgba(255, 0, 255, 0.5); }
+
+  .sm\:hover\:text-yellow-50:hover { color: rgba(255, 255, 0, 0.5); }
+
+  .sm\:hocus\:text-black-50:hover,
+  .sm\:hocus\:text-black-50:focus { color: rgba(0, 0, 0, 0.5); }
+
+  .sm\:hocus\:text-dark-gray-50:hover,
+  .sm\:hocus\:text-dark-gray-50:focus { color: rgba(34, 34, 34, 0.5); }
+
+  .sm\:hocus\:text-gray-50:hover,
+  .sm\:hocus\:text-gray-50:focus { color: rgba(230, 230, 230, 0.5); }
+
+  .sm\:hocus\:text-white-50:hover,
+  .sm\:hocus\:text-white-50:focus { color: rgba(255, 255, 255, 0.5); }
+
+  .sm\:hocus\:text-red-50:hover,
+  .sm\:hocus\:text-red-50:focus { color: rgba(249, 56, 56, 0.5); }
+
+  .sm\:hocus\:text-lime-50:hover,
+  .sm\:hocus\:text-lime-50:focus { color: rgba(0, 255, 0, 0.5); }
+
+  .sm\:hocus\:text-cyan-50:hover,
+  .sm\:hocus\:text-cyan-50:focus { color: rgba(0, 255, 255, 0.5); }
+
+  .sm\:hocus\:text-magenta-50:hover,
+  .sm\:hocus\:text-magenta-50:focus { color: rgba(255, 0, 255, 0.5); }
+
+  .sm\:hocus\:text-yellow-50:hover,
+  .sm\:hocus\:text-yellow-50:focus { color: rgba(255, 255, 0, 0.5); }
 
   .sm\:text-black-70 { color: rgba(0, 0, 0, 0.7); }
 
@@ -15387,6 +15903,94 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .md\:-ml-border { margin-left: -2px; }
 
+  .md\:opacity-0 { opacity: 0; }
+
+  .md\:opacity-2 { opacity: 0.025; }
+
+  .md\:opacity-5 { opacity: 0.05; }
+
+  .md\:opacity-10 { opacity: 0.1; }
+
+  .md\:opacity-30 { opacity: 0.3; }
+
+  .md\:opacity-50 { opacity: 0.5; }
+
+  .md\:opacity-70 { opacity: 0.7; }
+
+  .md\:opacity-100 { opacity: 1; }
+
+  .md\:hover\:opacity-0:hover { opacity: 0; }
+
+  .md\:hover\:opacity-2:hover { opacity: 0.025; }
+
+  .md\:hover\:opacity-5:hover { opacity: 0.05; }
+
+  .md\:hover\:opacity-10:hover { opacity: 0.1; }
+
+  .md\:hover\:opacity-30:hover { opacity: 0.3; }
+
+  .md\:hover\:opacity-50:hover { opacity: 0.5; }
+
+  .md\:hover\:opacity-70:hover { opacity: 0.7; }
+
+  .md\:hover\:opacity-100:hover { opacity: 1; }
+
+  .group:hover .md\:group-hover\:opacity-0 { opacity: 0; }
+
+  .group:hover .md\:group-hover\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .md\:group-hover\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .md\:group-hover\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .md\:group-hover\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .md\:group-hover\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .md\:group-hover\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .md\:group-hover\:opacity-100 { opacity: 1; }
+
+  .group:focus .md\:group-focus\:opacity-0 { opacity: 0; }
+
+  .group:focus .md\:group-focus\:opacity-2 { opacity: 0.025; }
+
+  .group:focus .md\:group-focus\:opacity-5 { opacity: 0.05; }
+
+  .group:focus .md\:group-focus\:opacity-10 { opacity: 0.1; }
+
+  .group:focus .md\:group-focus\:opacity-30 { opacity: 0.3; }
+
+  .group:focus .md\:group-focus\:opacity-50 { opacity: 0.5; }
+
+  .group:focus .md\:group-focus\:opacity-70 { opacity: 0.7; }
+
+  .group:focus .md\:group-focus\:opacity-100 { opacity: 1; }
+
+  .group:hover .md\:group-hocus\:opacity-0,
+  .group:focus .md\:group-hocus\:opacity-0 { opacity: 0; }
+
+  .group:hover .md\:group-hocus\:opacity-2,
+  .group:focus .md\:group-hocus\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .md\:group-hocus\:opacity-5,
+  .group:focus .md\:group-hocus\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .md\:group-hocus\:opacity-10,
+  .group:focus .md\:group-hocus\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .md\:group-hocus\:opacity-30,
+  .group:focus .md\:group-hocus\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .md\:group-hocus\:opacity-50,
+  .group:focus .md\:group-hocus\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .md\:group-hocus\:opacity-70,
+  .group:focus .md\:group-hocus\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .md\:group-hocus\:opacity-100,
+  .group:focus .md\:group-hocus\:opacity-100 { opacity: 1; }
+
   .md\:overflow-auto { overflow: auto; }
 
   .md\:overflow-hidden { overflow: hidden; }
@@ -16259,6 +16863,69 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .md\:hocus\:text-yellow-30:hover,
   .md\:hocus\:text-yellow-30:focus { color: rgba(255, 255, 0, 0.3); }
+
+  .md\:text-black-50 { color: rgba(0, 0, 0, 0.5); }
+
+  .md\:text-dark-gray-50 { color: rgba(34, 34, 34, 0.5); }
+
+  .md\:text-gray-50 { color: rgba(230, 230, 230, 0.5); }
+
+  .md\:text-white-50 { color: rgba(255, 255, 255, 0.5); }
+
+  .md\:text-red-50 { color: rgba(249, 56, 56, 0.5); }
+
+  .md\:text-lime-50 { color: rgba(0, 255, 0, 0.5); }
+
+  .md\:text-cyan-50 { color: rgba(0, 255, 255, 0.5); }
+
+  .md\:text-magenta-50 { color: rgba(255, 0, 255, 0.5); }
+
+  .md\:text-yellow-50 { color: rgba(255, 255, 0, 0.5); }
+
+  .md\:hover\:text-black-50:hover { color: rgba(0, 0, 0, 0.5); }
+
+  .md\:hover\:text-dark-gray-50:hover { color: rgba(34, 34, 34, 0.5); }
+
+  .md\:hover\:text-gray-50:hover { color: rgba(230, 230, 230, 0.5); }
+
+  .md\:hover\:text-white-50:hover { color: rgba(255, 255, 255, 0.5); }
+
+  .md\:hover\:text-red-50:hover { color: rgba(249, 56, 56, 0.5); }
+
+  .md\:hover\:text-lime-50:hover { color: rgba(0, 255, 0, 0.5); }
+
+  .md\:hover\:text-cyan-50:hover { color: rgba(0, 255, 255, 0.5); }
+
+  .md\:hover\:text-magenta-50:hover { color: rgba(255, 0, 255, 0.5); }
+
+  .md\:hover\:text-yellow-50:hover { color: rgba(255, 255, 0, 0.5); }
+
+  .md\:hocus\:text-black-50:hover,
+  .md\:hocus\:text-black-50:focus { color: rgba(0, 0, 0, 0.5); }
+
+  .md\:hocus\:text-dark-gray-50:hover,
+  .md\:hocus\:text-dark-gray-50:focus { color: rgba(34, 34, 34, 0.5); }
+
+  .md\:hocus\:text-gray-50:hover,
+  .md\:hocus\:text-gray-50:focus { color: rgba(230, 230, 230, 0.5); }
+
+  .md\:hocus\:text-white-50:hover,
+  .md\:hocus\:text-white-50:focus { color: rgba(255, 255, 255, 0.5); }
+
+  .md\:hocus\:text-red-50:hover,
+  .md\:hocus\:text-red-50:focus { color: rgba(249, 56, 56, 0.5); }
+
+  .md\:hocus\:text-lime-50:hover,
+  .md\:hocus\:text-lime-50:focus { color: rgba(0, 255, 0, 0.5); }
+
+  .md\:hocus\:text-cyan-50:hover,
+  .md\:hocus\:text-cyan-50:focus { color: rgba(0, 255, 255, 0.5); }
+
+  .md\:hocus\:text-magenta-50:hover,
+  .md\:hocus\:text-magenta-50:focus { color: rgba(255, 0, 255, 0.5); }
+
+  .md\:hocus\:text-yellow-50:hover,
+  .md\:hocus\:text-yellow-50:focus { color: rgba(255, 255, 0, 0.5); }
 
   .md\:text-black-70 { color: rgba(0, 0, 0, 0.7); }
 
@@ -18524,6 +19191,94 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .lg\:-ml-border { margin-left: -2px; }
 
+  .lg\:opacity-0 { opacity: 0; }
+
+  .lg\:opacity-2 { opacity: 0.025; }
+
+  .lg\:opacity-5 { opacity: 0.05; }
+
+  .lg\:opacity-10 { opacity: 0.1; }
+
+  .lg\:opacity-30 { opacity: 0.3; }
+
+  .lg\:opacity-50 { opacity: 0.5; }
+
+  .lg\:opacity-70 { opacity: 0.7; }
+
+  .lg\:opacity-100 { opacity: 1; }
+
+  .lg\:hover\:opacity-0:hover { opacity: 0; }
+
+  .lg\:hover\:opacity-2:hover { opacity: 0.025; }
+
+  .lg\:hover\:opacity-5:hover { opacity: 0.05; }
+
+  .lg\:hover\:opacity-10:hover { opacity: 0.1; }
+
+  .lg\:hover\:opacity-30:hover { opacity: 0.3; }
+
+  .lg\:hover\:opacity-50:hover { opacity: 0.5; }
+
+  .lg\:hover\:opacity-70:hover { opacity: 0.7; }
+
+  .lg\:hover\:opacity-100:hover { opacity: 1; }
+
+  .group:hover .lg\:group-hover\:opacity-0 { opacity: 0; }
+
+  .group:hover .lg\:group-hover\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .lg\:group-hover\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .lg\:group-hover\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .lg\:group-hover\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .lg\:group-hover\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .lg\:group-hover\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .lg\:group-hover\:opacity-100 { opacity: 1; }
+
+  .group:focus .lg\:group-focus\:opacity-0 { opacity: 0; }
+
+  .group:focus .lg\:group-focus\:opacity-2 { opacity: 0.025; }
+
+  .group:focus .lg\:group-focus\:opacity-5 { opacity: 0.05; }
+
+  .group:focus .lg\:group-focus\:opacity-10 { opacity: 0.1; }
+
+  .group:focus .lg\:group-focus\:opacity-30 { opacity: 0.3; }
+
+  .group:focus .lg\:group-focus\:opacity-50 { opacity: 0.5; }
+
+  .group:focus .lg\:group-focus\:opacity-70 { opacity: 0.7; }
+
+  .group:focus .lg\:group-focus\:opacity-100 { opacity: 1; }
+
+  .group:hover .lg\:group-hocus\:opacity-0,
+  .group:focus .lg\:group-hocus\:opacity-0 { opacity: 0; }
+
+  .group:hover .lg\:group-hocus\:opacity-2,
+  .group:focus .lg\:group-hocus\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .lg\:group-hocus\:opacity-5,
+  .group:focus .lg\:group-hocus\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .lg\:group-hocus\:opacity-10,
+  .group:focus .lg\:group-hocus\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .lg\:group-hocus\:opacity-30,
+  .group:focus .lg\:group-hocus\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .lg\:group-hocus\:opacity-50,
+  .group:focus .lg\:group-hocus\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .lg\:group-hocus\:opacity-70,
+  .group:focus .lg\:group-hocus\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .lg\:group-hocus\:opacity-100,
+  .group:focus .lg\:group-hocus\:opacity-100 { opacity: 1; }
+
   .lg\:overflow-auto { overflow: auto; }
 
   .lg\:overflow-hidden { overflow: hidden; }
@@ -19396,6 +20151,69 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .lg\:hocus\:text-yellow-30:hover,
   .lg\:hocus\:text-yellow-30:focus { color: rgba(255, 255, 0, 0.3); }
+
+  .lg\:text-black-50 { color: rgba(0, 0, 0, 0.5); }
+
+  .lg\:text-dark-gray-50 { color: rgba(34, 34, 34, 0.5); }
+
+  .lg\:text-gray-50 { color: rgba(230, 230, 230, 0.5); }
+
+  .lg\:text-white-50 { color: rgba(255, 255, 255, 0.5); }
+
+  .lg\:text-red-50 { color: rgba(249, 56, 56, 0.5); }
+
+  .lg\:text-lime-50 { color: rgba(0, 255, 0, 0.5); }
+
+  .lg\:text-cyan-50 { color: rgba(0, 255, 255, 0.5); }
+
+  .lg\:text-magenta-50 { color: rgba(255, 0, 255, 0.5); }
+
+  .lg\:text-yellow-50 { color: rgba(255, 255, 0, 0.5); }
+
+  .lg\:hover\:text-black-50:hover { color: rgba(0, 0, 0, 0.5); }
+
+  .lg\:hover\:text-dark-gray-50:hover { color: rgba(34, 34, 34, 0.5); }
+
+  .lg\:hover\:text-gray-50:hover { color: rgba(230, 230, 230, 0.5); }
+
+  .lg\:hover\:text-white-50:hover { color: rgba(255, 255, 255, 0.5); }
+
+  .lg\:hover\:text-red-50:hover { color: rgba(249, 56, 56, 0.5); }
+
+  .lg\:hover\:text-lime-50:hover { color: rgba(0, 255, 0, 0.5); }
+
+  .lg\:hover\:text-cyan-50:hover { color: rgba(0, 255, 255, 0.5); }
+
+  .lg\:hover\:text-magenta-50:hover { color: rgba(255, 0, 255, 0.5); }
+
+  .lg\:hover\:text-yellow-50:hover { color: rgba(255, 255, 0, 0.5); }
+
+  .lg\:hocus\:text-black-50:hover,
+  .lg\:hocus\:text-black-50:focus { color: rgba(0, 0, 0, 0.5); }
+
+  .lg\:hocus\:text-dark-gray-50:hover,
+  .lg\:hocus\:text-dark-gray-50:focus { color: rgba(34, 34, 34, 0.5); }
+
+  .lg\:hocus\:text-gray-50:hover,
+  .lg\:hocus\:text-gray-50:focus { color: rgba(230, 230, 230, 0.5); }
+
+  .lg\:hocus\:text-white-50:hover,
+  .lg\:hocus\:text-white-50:focus { color: rgba(255, 255, 255, 0.5); }
+
+  .lg\:hocus\:text-red-50:hover,
+  .lg\:hocus\:text-red-50:focus { color: rgba(249, 56, 56, 0.5); }
+
+  .lg\:hocus\:text-lime-50:hover,
+  .lg\:hocus\:text-lime-50:focus { color: rgba(0, 255, 0, 0.5); }
+
+  .lg\:hocus\:text-cyan-50:hover,
+  .lg\:hocus\:text-cyan-50:focus { color: rgba(0, 255, 255, 0.5); }
+
+  .lg\:hocus\:text-magenta-50:hover,
+  .lg\:hocus\:text-magenta-50:focus { color: rgba(255, 0, 255, 0.5); }
+
+  .lg\:hocus\:text-yellow-50:hover,
+  .lg\:hocus\:text-yellow-50:focus { color: rgba(255, 255, 0, 0.5); }
 
   .lg\:text-black-70 { color: rgba(0, 0, 0, 0.7); }
 
@@ -21661,6 +22479,94 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .xl\:-ml-border { margin-left: -2px; }
 
+  .xl\:opacity-0 { opacity: 0; }
+
+  .xl\:opacity-2 { opacity: 0.025; }
+
+  .xl\:opacity-5 { opacity: 0.05; }
+
+  .xl\:opacity-10 { opacity: 0.1; }
+
+  .xl\:opacity-30 { opacity: 0.3; }
+
+  .xl\:opacity-50 { opacity: 0.5; }
+
+  .xl\:opacity-70 { opacity: 0.7; }
+
+  .xl\:opacity-100 { opacity: 1; }
+
+  .xl\:hover\:opacity-0:hover { opacity: 0; }
+
+  .xl\:hover\:opacity-2:hover { opacity: 0.025; }
+
+  .xl\:hover\:opacity-5:hover { opacity: 0.05; }
+
+  .xl\:hover\:opacity-10:hover { opacity: 0.1; }
+
+  .xl\:hover\:opacity-30:hover { opacity: 0.3; }
+
+  .xl\:hover\:opacity-50:hover { opacity: 0.5; }
+
+  .xl\:hover\:opacity-70:hover { opacity: 0.7; }
+
+  .xl\:hover\:opacity-100:hover { opacity: 1; }
+
+  .group:hover .xl\:group-hover\:opacity-0 { opacity: 0; }
+
+  .group:hover .xl\:group-hover\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .xl\:group-hover\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .xl\:group-hover\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .xl\:group-hover\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .xl\:group-hover\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .xl\:group-hover\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .xl\:group-hover\:opacity-100 { opacity: 1; }
+
+  .group:focus .xl\:group-focus\:opacity-0 { opacity: 0; }
+
+  .group:focus .xl\:group-focus\:opacity-2 { opacity: 0.025; }
+
+  .group:focus .xl\:group-focus\:opacity-5 { opacity: 0.05; }
+
+  .group:focus .xl\:group-focus\:opacity-10 { opacity: 0.1; }
+
+  .group:focus .xl\:group-focus\:opacity-30 { opacity: 0.3; }
+
+  .group:focus .xl\:group-focus\:opacity-50 { opacity: 0.5; }
+
+  .group:focus .xl\:group-focus\:opacity-70 { opacity: 0.7; }
+
+  .group:focus .xl\:group-focus\:opacity-100 { opacity: 1; }
+
+  .group:hover .xl\:group-hocus\:opacity-0,
+  .group:focus .xl\:group-hocus\:opacity-0 { opacity: 0; }
+
+  .group:hover .xl\:group-hocus\:opacity-2,
+  .group:focus .xl\:group-hocus\:opacity-2 { opacity: 0.025; }
+
+  .group:hover .xl\:group-hocus\:opacity-5,
+  .group:focus .xl\:group-hocus\:opacity-5 { opacity: 0.05; }
+
+  .group:hover .xl\:group-hocus\:opacity-10,
+  .group:focus .xl\:group-hocus\:opacity-10 { opacity: 0.1; }
+
+  .group:hover .xl\:group-hocus\:opacity-30,
+  .group:focus .xl\:group-hocus\:opacity-30 { opacity: 0.3; }
+
+  .group:hover .xl\:group-hocus\:opacity-50,
+  .group:focus .xl\:group-hocus\:opacity-50 { opacity: 0.5; }
+
+  .group:hover .xl\:group-hocus\:opacity-70,
+  .group:focus .xl\:group-hocus\:opacity-70 { opacity: 0.7; }
+
+  .group:hover .xl\:group-hocus\:opacity-100,
+  .group:focus .xl\:group-hocus\:opacity-100 { opacity: 1; }
+
   .xl\:overflow-auto { overflow: auto; }
 
   .xl\:overflow-hidden { overflow: hidden; }
@@ -22533,6 +23439,69 @@ body.page-id-13 .facetwp-pager a:hover, body.page-id-13 .facetwp-pager a.checked
 
   .xl\:hocus\:text-yellow-30:hover,
   .xl\:hocus\:text-yellow-30:focus { color: rgba(255, 255, 0, 0.3); }
+
+  .xl\:text-black-50 { color: rgba(0, 0, 0, 0.5); }
+
+  .xl\:text-dark-gray-50 { color: rgba(34, 34, 34, 0.5); }
+
+  .xl\:text-gray-50 { color: rgba(230, 230, 230, 0.5); }
+
+  .xl\:text-white-50 { color: rgba(255, 255, 255, 0.5); }
+
+  .xl\:text-red-50 { color: rgba(249, 56, 56, 0.5); }
+
+  .xl\:text-lime-50 { color: rgba(0, 255, 0, 0.5); }
+
+  .xl\:text-cyan-50 { color: rgba(0, 255, 255, 0.5); }
+
+  .xl\:text-magenta-50 { color: rgba(255, 0, 255, 0.5); }
+
+  .xl\:text-yellow-50 { color: rgba(255, 255, 0, 0.5); }
+
+  .xl\:hover\:text-black-50:hover { color: rgba(0, 0, 0, 0.5); }
+
+  .xl\:hover\:text-dark-gray-50:hover { color: rgba(34, 34, 34, 0.5); }
+
+  .xl\:hover\:text-gray-50:hover { color: rgba(230, 230, 230, 0.5); }
+
+  .xl\:hover\:text-white-50:hover { color: rgba(255, 255, 255, 0.5); }
+
+  .xl\:hover\:text-red-50:hover { color: rgba(249, 56, 56, 0.5); }
+
+  .xl\:hover\:text-lime-50:hover { color: rgba(0, 255, 0, 0.5); }
+
+  .xl\:hover\:text-cyan-50:hover { color: rgba(0, 255, 255, 0.5); }
+
+  .xl\:hover\:text-magenta-50:hover { color: rgba(255, 0, 255, 0.5); }
+
+  .xl\:hover\:text-yellow-50:hover { color: rgba(255, 255, 0, 0.5); }
+
+  .xl\:hocus\:text-black-50:hover,
+  .xl\:hocus\:text-black-50:focus { color: rgba(0, 0, 0, 0.5); }
+
+  .xl\:hocus\:text-dark-gray-50:hover,
+  .xl\:hocus\:text-dark-gray-50:focus { color: rgba(34, 34, 34, 0.5); }
+
+  .xl\:hocus\:text-gray-50:hover,
+  .xl\:hocus\:text-gray-50:focus { color: rgba(230, 230, 230, 0.5); }
+
+  .xl\:hocus\:text-white-50:hover,
+  .xl\:hocus\:text-white-50:focus { color: rgba(255, 255, 255, 0.5); }
+
+  .xl\:hocus\:text-red-50:hover,
+  .xl\:hocus\:text-red-50:focus { color: rgba(249, 56, 56, 0.5); }
+
+  .xl\:hocus\:text-lime-50:hover,
+  .xl\:hocus\:text-lime-50:focus { color: rgba(0, 255, 0, 0.5); }
+
+  .xl\:hocus\:text-cyan-50:hover,
+  .xl\:hocus\:text-cyan-50:focus { color: rgba(0, 255, 255, 0.5); }
+
+  .xl\:hocus\:text-magenta-50:hover,
+  .xl\:hocus\:text-magenta-50:focus { color: rgba(255, 0, 255, 0.5); }
+
+  .xl\:hocus\:text-yellow-50:hover,
+  .xl\:hocus\:text-yellow-50:focus { color: rgba(255, 255, 0, 0.5); }
 
   .xl\:text-black-70 { color: rgba(0, 0, 0, 0.7); }
 
