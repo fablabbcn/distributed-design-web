@@ -5,6 +5,10 @@
 .filters-desktop-only { @apply hidden flex-col; @screen md { @apply flex flex-row; } }
 
 @variants responsive {
+  .order-first { order: -9999; }
+  .order-last { order: 9999; }
+  .order-none { order: 0; }
+
   .clip {
     border: 0;
     clip: rect(0 0 0 0);
@@ -36,9 +40,5 @@
 .bg-events-empty {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='100'%3E %3Cg fill='none' fill-rule='evenodd' stroke='%23000'%3E %3Cpath d='M0 0h50v50H0zM100 0h50v50h-50zM0 50h50v50H0zM100 50h50v50h-50zM50 0h50v50H50zM200 50h-50V0h50zM100 100H50V50h50zM150 50h50v50h-50zM200 50c0-27.6142375-22.385763-50-50-50M100 50c0 27.6142375 22.385763 50 50 50M50 100c27.6142375 0 50-22.3857625 50-50M50 0C22.3857625 0 0 22.3857625 0 50M150 50c0-27.6142375-22.385763-50-50-50M150 50c0 27.6142375 22.385763 50 50 50M50 50c27.6142375 0 50-22.3857625 50-50M50 50C22.3857625 50 0 72.3857625 0 100'/%3E %3C/g%3E %3C/svg%3E ");
 }
-
-.order-first { order: -9999; }
-.order-last { order: 9999; }
-.order-none { order: 0; }
 
 @tailwind utilities;
