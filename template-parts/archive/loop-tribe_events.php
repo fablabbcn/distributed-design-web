@@ -2,14 +2,29 @@
 
 $key = 0;
 
-$tribe_query = tribe_get_events(
-	array(
-		'posts_per_page' => '-1',
-		'order'          => $term->order,
-		'start_date'     => $term->start_date,
-		'end_date'       => $term->end_date,
-	)
-);
+// $tribe_query = tribe_get_events(
+// 	array(
+// 		'posts_per_page' => '-1',
+// 		'order'          => $term->order,
+// 		'start_date'     => $term->start_date,
+// 		'end_date'       => $term->end_date,
+// 	)
+// );
+
+$the_query = new WP_Query( array(
+	'suppress_filters' => true,
+	'post_type'        => $post_type,
+	'order'            => $term->order,
+	'posts_per_page'   => -1,
+	'meta_query'       => array(
+		array(
+			'key'     => '_EventEndDate',
+			'value'   => date('Y-m-d'),
+			'compare' => $term->slug === 'past' ? '<=' : '>=',
+			'type'    => 'NUMERIC,'
+		)
+	),
+) );
 
 $cell_classes = 'px-15 lg:px-25 py-20 lg:py-30 text-center uppercase border-black border-r-px border-l-px';
 $svg_classes  = 'flex-no-shrink w-15 lg:w-25 h-15 lg:h-25 fill-current';
@@ -21,7 +36,7 @@ $get_replaced_content = function ( $field_name ) {
 ?>
 
 
-<?php foreach ( $tribe_query as $post ) : ?>
+<?php foreach ( $the_query->posts as $post ) : ?>
 	<?php setup_postdata( $post ); ?>
 	<?php
 
