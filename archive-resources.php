@@ -15,7 +15,7 @@ $terms    = 'tribe_events' !== $post_type
 			'name'       => 'Upcoming',
 			'slug'       => 'upcoming',
 			'order'      => 'ASC',
-			'start_date' => 'now',
+			'start_date' => 'today',
 			'end_date'   => '',
 		],
 		(object) [
@@ -23,7 +23,7 @@ $terms    = 'tribe_events' !== $post_type
 			'slug'       => 'past',
 			'order'      => 'DESC',
 			'start_date' => '',
-			'end_date'   => 'now',
+			'end_date'   => 'today',
 		],
 	);
 
