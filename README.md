@@ -1,4 +1,4 @@
-# llos-template
+# ddmp-template
 
 ## Usage
 
