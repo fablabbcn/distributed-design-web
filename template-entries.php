@@ -61,10 +61,10 @@ $entries = new WP_Query(
 			<?php if ( $has_banner ) : ?>
 				<li class="<?php the_classes( 'flex w-full order-none' ); ?>">
 					<div id="post-<?php the_ID(); ?>" class="
-						z-0 relative w-full h-0 border-px border-solid overflow-hidden
-						aspect-ratio-1/1 md:aspect-ratio-2/1 lg:aspect-ratio-3/1 xl:aspect-ratio-4/1
+						z-0 relative w-full md:h-0 border-px border-solid overflow-hidden
+						md:aspect-ratio-2/1 lg:aspect-ratio-3/1 xl:aspect-ratio-4/1
 					">
-						<span class="z-10 absolute pin flex w-full h-full p-20">
+						<span class="z-10 md:absolute pin flex flex-col-reverse md:flex-row w-full h-full p-20">
 							<?php echo wp_get_attachment_image( $thumbnail_id, 'post-thumbnail', false ); ?>
 							<div class="w-full flex flex-col flex-1 justify-center">
 								<div class="font-oswald uppercase"><p><?php echo get_field( 'banner' )['title']; ?></p></div>
