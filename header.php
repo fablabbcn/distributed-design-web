@@ -33,13 +33,7 @@
 
 				<div class="navbar-header">
 					<a href="<?php echo esc_url( home_url() ); ?>" class="navbar-brand">
-						<span>
-							<em class="hidden-md hidden-lg"><?php esc_html_e( 'DDMP', 'ddmp' ); ?></em>
-							<em class="hidden-xs hidden-sm">
-								<strong><?php esc_html_e( 'Distributed Design', 'ddmp' ); ?></strong>
-								<?php esc_html_e( 'Market Platform', 'ddmp' ); ?>
-							</em>
-						</span>
+						<span><?php echo get_bloginfo( 'name' ); ?></span>
 					</a>
 					<a href="#main-nav" class="navbar-toggle">
 						<span class="icon-bar"></span>
