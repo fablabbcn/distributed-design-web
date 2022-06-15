@@ -33,7 +33,10 @@
 
 				<div class="navbar-header">
 					<a href="<?php echo esc_url( home_url() ); ?>" class="navbar-brand">
-						<span><?php echo get_bloginfo( 'name' ); ?></span>
+						<span>
+							<em class="hidden-md hidden-lg"><?php esc_html_e( 'DDP', 'ddmp' ); ?></em>
+							<em class="hidden-xs hidden-sm"><?php echo get_bloginfo( 'name' ); ?></em>
+						</span>
 					</a>
 					<a href="#main-nav" class="navbar-toggle">
 						<span class="icon-bar"></span>
