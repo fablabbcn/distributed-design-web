@@ -15,6 +15,8 @@ $the_query = new WP_Query( array(
 	'suppress_filters' => true,
 	'post_type'        => $post_type,
 	'order'            => $term->order,
+	'orderby'          => 'meta_value',
+	'meta_key'         => '_EventStartDate',
 	'posts_per_page'   => -1,
 	'meta_query'       => array(
 		array(
