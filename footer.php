@@ -3,7 +3,7 @@
 $contact = get_field( 'contact', 'options' );
 
 $logo = array(
-	'src' => get_stylesheet_directory_uri() . '/assets/images/ce-logo.png',
+	'src' => get_stylesheet_directory_uri() . '/assets/images/ddp-ce-logo.svg',
 	'alt' => 'Co-funded by the Creative European Programme of the European Union',
 );
 
@@ -21,7 +21,7 @@ $logo = array(
 			</div>
 
 			<div class="p-40 border-t">
-				<img class="block mx-auto" src="<?php echo esc_attr( $logo['src'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
+				<img class="block mx-auto" style="max-height: 8rem;" src="<?php echo esc_attr( $logo['src'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
 			</div>
 
 		</footer>
