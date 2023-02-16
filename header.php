@@ -1,64 +1,67 @@
+<?php
+
+$menu_name  = 'primary';
+$locations  = get_nav_menu_locations();
+$menu_items = wp_get_nav_menu_items( wp_get_nav_menu_object( $locations[ $menu_name ] )->term_id );
+
+?>
+
+
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head <?php do_action( 'add_head_attributes' ); ?>>
+<html <?php language_attributes(); ?> >
+
+<head <?php do_action( 'add_head_attributes' ); ?> >
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="google-site-verification" content="-snNuf9qHLlRhI4otn0BxPg5rf4JEuZzptP7kkvtrR4" />
+
 	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108533710-2"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
+		function gtag () { dataLayer.push(arguments); }
 		gtag('js', new Date());
 		gtag('config', 'UA-108533710-2');
 	</script>
 
 	<?php wp_head(); ?>
-	<script src="https://unpkg.com/packery@2/dist/packery.pkgd.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/beefup@1.1.7/dist/js/jquery.beefup.min.js"></script>
-	<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
 </head>
-<body <?php body_class( 'leading-normal font-aileron' ); ?>>
 
-	<div class="clip" aria-hidden="true"><?php require_once 'assets/img/icons.svg'; ?></div>
+<body <?php body_class( 'text-black bg-gray text-base font-sans' ); ?> >
+	<div class="sr-only" aria-hidden="true"><?php require_once 'assets/img/icons.svg'; ?></div>
 
-	<b class="animsition-loading"></b>
+	<div class="flex flex-col min-h-screen">
+		<header class="grid gap-4">
 
-	<div class="wrapper loading flex flex-col">
-		<header id="header">
-			<div class="container-fluid">
-
-				<div class="navbar-header">
-					<a href="<?php echo esc_url( home_url() ); ?>" class="navbar-brand">
-						<span>
-							<em class="hidden-md hidden-lg"><?php esc_html_e( 'DDP', 'ddmp' ); ?></em>
-							<em class="hidden-xs hidden-sm"><?php echo get_bloginfo( 'name' ); ?></em>
-						</span>
-					</a>
-					<a href="#main-nav" class="navbar-toggle">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<em class="sr-only">toggle mobile menu</em>
-					</a>
-				</div>
-
-				<nav id="main-nav" class="relative text-center uppercase">
-					<?php
-
-					wp_nav_menu(
-						array(
-							'theme_location' => 'primary',
-							'container'      => false,
-							'menu_class'     => 'base',
-						)
-					);
-
-					?>
-				</nav>
-
+			<div class="flex justify-between items-center px-8 py-4">
+				<a class="" href="<?php echo esc_url( home_url() ); ?>">
+					<?php echo get_bloginfo( 'name' ); ?>
+				</a>
+				<button class="flex justify-center items-center" data-toggle="navigation-header">
+					<svg class="w-12 h-12 fill-none stroke-black stroke-2" viewBox="0 0 115.67 115.67">
+						<path d="M57.84 115.67V0M115.67 57.84H0" />
+					</svg>
+				</button>
 			</div>
+
+			<nav id="navigation-header" class="hidden z-0 relative w-full px-8 py-12 overflow-hidden">
+				<div class="z-0 absolute top-full right-0 w-[70vw] h-[70vw] -mt-[25vw] bg-yellow rounded-full blur-3xl"></div>
+				<ul class="z-10 relative flex flex-col w-full">
+					<?php foreach ( $menu_items as $key => $menu_item ) : ?>
+						<li class="">
+							<?php /* if ( intval( $menu_item->object_id, 10 ) === $post->ID ) : */ ?>
+							<a class="flex justify-start items-center space-x-8 py-6 border-t border-black" href="<?php echo esc_url( $menu_item->url ); ?>">
+								<span class="flex justify-center items-center w-12 h-8 border border-black rounded-full">
+									<span class="text-sm text-center">0<?php echo $key + 1; ?></span>
+								</span>
+								<span class="text-4xl font-thin"><?php echo wp_kses_post( $menu_item->title ); ?></span>
+							</a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			</nav>
+
 		</header>
