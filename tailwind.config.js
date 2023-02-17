@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     '**/*.php',
@@ -22,6 +24,10 @@ module.exports = {
     },
 
     extend: {
+      fontFamily: {
+        'sans': ['Aileron', ...defaultTheme.fontFamily.sans],
+      },
+
       fontSize: { unset: 'unset' },
       fill: (theme) => ({ ...theme('colors'), none: 'none' }),
       stroke: (theme) => ({ ...theme('colors'), none: 'none' }),
