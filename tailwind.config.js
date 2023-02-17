@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     colors: {
+      inherit: 'inherit',
+      current: 'currentColor',
+      transparent: 'transparent',
       black: '#383839',
       gray: '#dadad5',
       white: '#ffffff',
@@ -18,7 +21,11 @@ module.exports = {
       purple: '#ba80ff',
     },
 
-    extend: {},
+    extend: {
+      fontSize: { unset: 'unset' },
+      fill: (theme) => ({ ...theme('colors'), none: 'none' }),
+      stroke: (theme) => ({ ...theme('colors'), none: 'none' }),
+    },
   },
   plugins: [],
 }

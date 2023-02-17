@@ -17,9 +17,9 @@
     checkScreenSize()
     imgToBg()
     initHeader()
-    initDefaultSlider()
+    // initDefaultSlider()
     initFundInfo()
-    initPartnersCarousel()
+    // initPartnersCarousel()
     // initStatistics()
     initMemberList()
   })
@@ -176,25 +176,25 @@
   }
 
   // BeefUp
-  $('.beefup').beefup({
-    openSingle: true,
-    onInit: function (element) {
-      if (location.hash && location.hash.slice(1) === element.parent().attr('id')) {
-        element.find('.beefup__head').each(function (index, item) {
-          function handler () {
-            var filters = jQuery('.tab-filters button')
-            var parentId = element.parent().parent().attr('id')
-            var targetTab = filters.filter(':not([data-clip*="' + parentId + '"])')
+  // $('.beefup').beefup({
+  //   openSingle: true,
+  //   onInit: function (element) {
+  //     if (location.hash && location.hash.slice(1) === element.parent().attr('id')) {
+  //       element.find('.beefup__head').each(function (index, item) {
+  //         function handler () {
+  //           var filters = jQuery('.tab-filters button')
+  //           var parentId = element.parent().parent().attr('id')
+  //           var targetTab = filters.filter(':not([data-clip*="' + parentId + '"])')
 
-            targetTab.click()
-            item.click()
-          }
+  //           targetTab.click()
+  //           item.click()
+  //         }
 
-          setTimeout(handler, 500)
-        })
-      }
-    },
-  })
+  //         setTimeout(handler, 500)
+  //       })
+  //     }
+  //   },
+  // })
 })(jQuery)
 
 /**
