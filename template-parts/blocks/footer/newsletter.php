@@ -4,7 +4,6 @@ $footer_cta = get_field( 'footer_cta', 'options' );
 
 $n_classes = array(
 	'input'    => 'w-full px-4 py-2 text-black bg-white placeholder:text-black/50 text-base leading-none border border-white rounded-full',
-	'submit'   => 'w-auto px-4 py-2 uppercase bg-transparent text-sm leading-none border border-white rounded-full',
 	'checkbox' => 'text-sm leading-none',
 );
 
@@ -39,9 +38,8 @@ $n_classes = array(
 				</div>
 
 				<div class="">
-					<button class="<?php the_classes( $n_classes['submit'] ); ?>" type="submit">
-						<?php echo esc_html( $footer_cta['submit_label'] ); ?>
-					</button>
+					<?php set_query_var( 'button', array( 'label' => $footer_cta['submit_label'], 'type' => 'submit' ) ); ?>
+					<?php get_template_part( 'template-parts/base/button' ); ?>
 				</div>
 
 			</div>

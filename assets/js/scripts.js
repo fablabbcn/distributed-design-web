@@ -2,10 +2,10 @@
   'use strict'
 
   // Bind Event Handlers
-  $(document).on('click', '[data-clip]', handleDataClip)
-  $(document).on('click', '[data-toggle]', handleDataToggle)
-  $(document).on('click', '.tab-filters [data-clip]', handleResourcesFilters)
-  $(document).on('click', '[data-clip*="event-months"]', handleMonthlyFilters)
+  // $(document).on('click', '[data-clip]', handleDataClip)
+  // $(document).on('click', '[data-toggle]', handleDataToggle)
+  // $(document).on('click', '.tab-filters [data-clip]', handleResourcesFilters)
+  // $(document).on('click', '[data-clip*="event-months"]', handleMonthlyFilters)
 
   var screenRes_ = {
     isDesktop: true,
@@ -14,19 +14,19 @@
   }
 
   $(document).ready(function () {
-    checkScreenSize()
-    imgToBg()
-    initHeader()
-    // initDefaultSlider()
-    initFundInfo()
+    // checkScreenSize()
+    // imgToBg()
+    // initHeader()
+    initDefaultSlider()
+    // initFundInfo()
     // initPartnersCarousel()
     // initStatistics()
-    initMemberList()
+    // initMemberList()
   })
 
-  $(window).on('resize', function () {
-    checkScreenSize()
-  })
+  // $(window).on('resize', function () {
+  //   checkScreenSize()
+  // })
 
   function checkScreenSize () {
     var winWidth = $(window).outerWidth()
@@ -67,30 +67,52 @@
   }
 
   function initDefaultSlider () {
-    $('.intro-slider, .post-slider').slick({
-      arrows: true,
-      dots: true,
-      fade: true,
-      autoplay: true,
-      autoplaySpeed: 4000,
+    var swiper = new Swiper('.swiper', {
+      loop: true,
+      keyboard: true,
+
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      scrollbar: {
+        el: '.swiper-scrollbar',
+      },
     })
-    $('[data-slider="featured-posts"]').slick({
-      arrows: true,
-      dots: true,
-      fade: true,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      prevArrow: '[data-slider="featured-posts"] button.slick-prev',
-      nextArrow: '[data-slider="featured-posts"] button.slick-next',
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-          },
-        },
-      ],
-    })
+
+
+    // $('.intro-slider, .post-slider').slick({
+    //   arrows: true,
+    //   dots: true,
+    //   fade: true,
+    //   autoplay: true,
+    //   autoplaySpeed: 4000,
+    // })
+    // $('[data-slider="featured-posts"]').slick({
+    //   arrows: true,
+    //   dots: true,
+    //   fade: true,
+    //   autoplay: true,
+    //   autoplaySpeed: 4000,
+    //   prevArrow: '[data-slider="featured-posts"] button.slick-prev',
+    //   nextArrow: '[data-slider="featured-posts"] button.slick-next',
+    //   responsive: [
+    //     {
+    //       breakpoint: 768,
+    //       settings: {
+    //         arrows: false,
+    //       },
+    //     },
+    //   ],
+    // })
   }
 
   function setImageSize ($img) {

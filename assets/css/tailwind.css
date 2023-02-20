@@ -24,7 +24,7 @@
   html { @apply scroll-smooth antialiased; }
   body { @apply flex flex-col min-h-screen overflow-x-hidden overflow-y-auto; }
 
-  *:focus-visible { @apply ring-2 ring-black ring-offset-4 ring-offset-gray rounded outline-none; }
+  /* *:focus-visible { @apply ring-2 ring-black ring-offset-4 ring-offset-gray rounded outline-none; } */
 
   small { @apply text-unset; }
   address { @apply not-italic; }
@@ -76,4 +76,8 @@
 
 @layer utilities {
   .container { @apply max-w-none xl:max-w-screen-xl !important; }
+
+  .bg-gradient-corner-yellow {
+    background-image: linear-gradient(135deg, #e4ff6a, cubic-bezier(0, 0.75, 0.25, 1), transparent);
+  }
 }

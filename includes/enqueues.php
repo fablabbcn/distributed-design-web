@@ -24,7 +24,14 @@ function the_theme_scripts() {
 	// wp_enqueue_script( 'slick-min', get_stylesheet_directory_uri() . '/assets/js/vendor/slick.min.js', array( 'jquery' ), false, true );
 	// wp_enqueue_script( 'ajaxchimp-min', get_stylesheet_directory_uri() . '/assets/js/vendor/jquery.ajaxchimp.min.js', array( 'jquery' ), 'exotic', true );
 	// // wp_enqueue_script( 'placeholders', get_stylesheet_directory_uri() . '/assets/js/vendor/placeholders.js', array( 'jquery' ), false, true );
-	wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ), $theme_version, true );
+
+	// TODO: Replace CDN links for local ones
+
+	wp_enqueue_style( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9.0.5/swiper-bundle.min.css', null, '9.0.5' );
+	wp_enqueue_script( 'swiper', 'https://cdn.jsdelivr.net/npm/swiper@9.0.5/swiper-bundle.min.js', null, '9.0.5', true );
+
+	wp_enqueue_script( 'alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js', null, '3.11.1', true );
+	wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery', 'swiper' ), $theme_version, true );
 
 	// $js_names = array(
 	// 	'jquery',

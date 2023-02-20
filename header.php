@@ -34,21 +34,21 @@ $menu_items = wp_get_nav_menu_items( wp_get_nav_menu_object( $locations[ $menu_n
 	<div class="sr-only" aria-hidden="true"><?php require_once 'assets/img/icons.svg'; ?></div>
 
 	<div class="flex flex-col min-h-screen">
-		<header class="grid gap-4">
+		<header class="grid gap-4" x-data="{ open: false }">
 
 			<div class="flex justify-between items-center px-8 py-4">
 				<a class="" href="<?php echo esc_url( home_url() ); ?>">
 					<?php echo get_bloginfo( 'name' ); ?>
 				</a>
-				<button class="flex justify-center items-center" data-toggle="navigation-header">
+				<button class="flex justify-center items-center" @click="open = !open">
 					<svg class="w-12 h-12 fill-none stroke-black stroke-2" viewBox="0 0 115.67 115.67">
 						<path d="M57.84 115.67V0M115.67 57.84H0" />
 					</svg>
 				</button>
 			</div>
 
-			<nav id="navigation-header" class="hidden z-0 relative w-full px-8 py-12 overflow-hidden">
-				<div class="z-0 absolute top-full right-0 w-[70vw] h-[70vw] -mt-[25vw] bg-yellow rounded-full blur-3xl"></div>
+			<nav class="z-0 relative w-full px-8 py-12 overflow-hidden" x-show="open" x-transition>
+				<div class="z-0 absolute top-full right-0 w-[50vw] h-[50vw] -mt-[12.5vw] -mr-[6.25vw] bg-yellow rounded-full blur-[128px]"></div>
 				<ul class="z-10 relative flex flex-col w-full">
 					<?php foreach ( $menu_items as $key => $menu_item ) : ?>
 						<li class="">
