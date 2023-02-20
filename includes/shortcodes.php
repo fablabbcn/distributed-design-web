@@ -27,9 +27,9 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 
 		$classes = array(
 			array_key_exists( 'class', $attrs ) ? $attrs['class'] : false,
-			'flex justify-center items-center',
-			array_key_exists( 'icon', $attrs ) && $attrs['icon'] ? 'w-45 h-45 md:w-50 md:h-50 p-10' : 'w-full py-10 px-20',
-			'bg-white hocus:text-black hocus:bg-primary text-center no-underline border rounded-full overflow-hidden',
+			'inline-flex justify-center items-center',
+			array_key_exists( 'icon', $attrs ) && $attrs['icon'] ? 'w-10 h-10 p-2' : 'w-auto min-h-[2.5rem] px-6 py-2',
+			'uppercase bg-transparent text-center text-sm leading-none border border-current rounded-full',
 		);
 
 		$link_attrs = array(

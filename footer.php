@@ -13,7 +13,7 @@ $logo = array(
 			<?php get_template_part( 'template-parts/blocks/footer/newsletter' ); ?>
 		</aside>
 
-		<footer class="grid gap-12 mt-auto p-12 text-white bg-black">
+		<footer class="grid gap-12 p-12 text-white bg-black">
 
 			<div class="grid grid-cols-1 gap-4 text-sm">
 				<?php get_template_part( 'template-parts/blocks/footer/logos' ); ?>
