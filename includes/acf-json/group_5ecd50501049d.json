@@ -160,7 +160,6 @@
                 "Switzerland": "Switzerland",
                 "Tunisia": "Tunisia",
                 "Ukraine": "Ukraine",
-                "United Kingdom": "United Kingdom",
                 "Vatican City": "Vatican City"
             },
             "default_value": false,
@@ -609,7 +608,7 @@
                     "min_size": "",
                     "max_width": "",
                     "max_height": "",
-                    "max_size": 10,
+                    "max_size": 3,
                     "mime_types": ".jpg, .jpeg, .png, .gif, .ico"
                 }
             ]
@@ -818,7 +817,7 @@
                         "id": ""
                     },
                     "hide_admin": 0,
-                    "message": "I have read the <a href=\"https:\/\/distributeddesign.eu\/wp-content\/uploads\/2021\/04\/Distributed-Design-Awards-2021-Entry-Rules-and-Guides.pdf\" target=\"_blank\">Entry Guide & Rules<\/a> and I agree to it’s terms and conditions.",
+                    "message": "I have read the <a href=\"http:\/\/ddmp.local\/wp-content\/uploads\/2021\/04\/Distributed-Design-Awards-2021-Entry-Rules-and-Guides.pdf\" target=\"_blank\">Entry Guide & Rules<\/a> and I agree to it’s terms and conditions.",
                     "default_value": 0,
                     "ui": 0,
                     "ui_on_text": "",
@@ -862,7 +861,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1617273508
+    "modified": 1676910353
 }
