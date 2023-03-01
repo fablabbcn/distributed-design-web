@@ -72,6 +72,13 @@
     @apply grid gap-x-2 md:gap-x-5 xl:gap-x-10;
     &:not([class*='grid-cols-']) { @apply grid-cols-12; }
   }
+
+  .ddp-button {
+    @apply inline-flex items-center justify-center gap-2;
+    @apply w-auto min-h-[2rem] px-4 py-2 border border-current rounded-full;
+    @apply uppercase bg-transparent text-center text-sm leading-none;
+    @apply cursor-pointer transition-colors duration-200 ease-in-out;
+  }
 }
 
 @layer utilities {
@@ -79,5 +86,31 @@
 
   .bg-gradient-corner-yellow {
     background-image: linear-gradient(135deg, #e4ff6a, cubic-bezier(0, 0.75, 0.25, 1), transparent);
+  }
+}
+
+.facetwp-facet {
+  @apply flex flex-wrap justify-center items-center gap-2;
+  & .facetwp-counter { @apply sr-only; }
+
+  & .facetwp-checkbox {
+    @apply ddp-button;
+    &:is(:hover, .checked) { @apply text-gray bg-black !important; }
+  }
+
+  & .facetwp-radio {
+    @apply ddp-button;
+    &:is(:hover, .checked) { @apply text-gray bg-black !important; }
+  }
+
+  & .facetwp-pager {
+    @apply flex items-center justify-center gap-4;
+
+    & .facetwp-page {
+      @apply ddp-button;
+      &:is(:hover, .checked) { @apply text-white bg-black !important; }
+      &.active:not(.prev, .next) { @apply font-bold; }
+      &:not(.prev, .next) { @apply hidden; }
+    }
   }
 }

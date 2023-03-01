@@ -26,10 +26,9 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 		$is_external     = $parsed_site_url !== $parsed_code_url;
 
 		$classes = array(
+			'ddp-button',
 			array_key_exists( 'class', $attrs ) ? $attrs['class'] : false,
-			'inline-flex justify-center items-center',
-			array_key_exists( 'icon', $attrs ) && $attrs['icon'] ? 'w-10 h-10 p-2' : 'w-auto min-h-[2.5rem] px-6 py-2',
-			'uppercase bg-transparent text-center text-sm leading-none border border-current rounded-full',
+			array_key_exists( 'icon', $attrs ) && $attrs['icon'] ? 'w-10 h-10 p-2' : '',
 		);
 
 		$link_attrs = array(
