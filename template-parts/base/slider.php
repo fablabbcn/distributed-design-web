@@ -6,8 +6,8 @@
 <?php if ( array_key_exists( 'slides', $slider ) && $slider['slides'] ) : ?>
 
 <div
-  class="swiper w-full rounded-2xl overflow-hidden <?php echo esc_attr( $slider['class'] ?: '' ); ?>"
-  style="--swiper-theme-color: #fff;"
+  class="swiper w-full <?php echo esc_attr( $slider['class'] ?: '' ); ?>"
+  style="--swiper-theme-color: #fff; --swiper-navigation-sides-offset: 2rem; --swiper-navigation-size: 2rem;"
 >
   <div class="swiper-pagination"></div>
 

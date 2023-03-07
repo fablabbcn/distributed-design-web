@@ -2,4 +2,4 @@
 
 /* Template Name: Events Archive */
 
-require 'archive-resources.php';
+require 'archive.php';

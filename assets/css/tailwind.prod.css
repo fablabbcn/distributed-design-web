@@ -564,6 +564,7 @@ button {
 .truncate { overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; }
 .rounded-2xl { -webkit-border-radius: 1rem; -moz-border-radius: 1rem; border-radius: 1rem; }
 .rounded-full { -webkit-border-radius: 9999px; -moz-border-radius: 9999px; border-radius: 9999px; }
+.rounded-br-\[8rem\] { -webkit-border-bottom-right-radius: 8rem; -moz-border-radius-bottomright: 8rem; border-bottom-right-radius: 8rem; }
 .rounded-tl-\[8rem\] { -webkit-border-top-left-radius: 8rem; -moz-border-radius-topleft: 8rem; border-top-left-radius: 8rem; }
 .border { border-width: 1px; }
 .border-y { border-top-width: 1px; border-bottom-width: 1px; }
@@ -587,6 +588,7 @@ button {
 .bg-white { --tw-bg-opacity: 1; background-color: rgba(255, 255, 255, 1); background-color: rgb(255 255 255 / var(--tw-bg-opacity)); }
 .bg-yellow { --tw-bg-opacity: 1; background-color: rgba(228, 255, 106, 1); background-color: rgb(228 255 106 / var(--tw-bg-opacity)); }
 .bg-gradient-to-br { background-image: -webkit-gradient(linear, left top, right bottom, from(var(--tw-gradient-stops))); background-image: -webkit-linear-gradient(top left, var(--tw-gradient-stops)); background-image: -moz-linear-gradient(top left, var(--tw-gradient-stops)); background-image: -o-linear-gradient(top left, var(--tw-gradient-stops)); background-image: linear-gradient(to bottom right, var(--tw-gradient-stops)); }
+.from-blue { --tw-gradient-from: #a6ced7; --tw-gradient-to: rgba(166, 206, 215, 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
 .from-yellow { --tw-gradient-from: #e4ff6a; --tw-gradient-to: rgba(228, 255, 106, 0); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
 .via-transparent { --tw-gradient-to: rgba(0, 0, 0, 0); --tw-gradient-stops: var(--tw-gradient-from), transparent, var(--tw-gradient-to); }
 .to-transparent { --tw-gradient-to: transparent; }
