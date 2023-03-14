@@ -3,25 +3,33 @@
 ?>
 
 
-<dl class="grid grid-cols-5 gap-4">
-  <header class="col-span-2 py-6 border-y">
-    <p class="text-2xl"><?php echo esc_html( $list['title'] ); ?></p>
-  </header>
+<?php if ( array_key_exists( 'items', $list ) && $list['items'] ) : ?>
+	<dl class="grid divide-y border-y">
 
-  <div class="col-span-3 py-6 border-y grid gap-8">
-    <?php if ( array_key_exists( 'items', $list ) && $list['items'] ) : ?>
-      <ol class="columns-2 [column-gap-[1rem]] space-y-3">
-        <?php foreach ( $list['items'] as $key => $item ) : ?>
-          <li class="text-xl leading-none"><?php echo esc_html( $item ); ?></li>
-        <?php endforeach; ?>
-      </ol>
-    <?php endif; ?>
+		<?php foreach ( $list['items'] as $key => $item ) : ?>
+			<div class="grid md:grid-cols-[2fr_4fr] py-2 [&>dd]:font-semibold">
 
-    <?php if ( array_key_exists( 'button', $list ) && $list['button'] ) : ?>
-      <div class="">
-        <?php set_query_var( 'button', $list['button'] ); ?>
-        <?php get_template_part( 'template-parts/base/button' ); ?>
-      </div>
-    <?php endif; ?>
-  </div>
-</dl>
+				<?php foreach ( $item['terms'] as $key => $term ) : ?>
+					<dt class="uppercase text-xs tracking-wide"><?php echo $term; ?></dt>
+				<?php endforeach; ?>
+
+				<?php foreach ( $item['definitions'] as $key => $definition ) : ?>
+					<?php switch ( gettype( $definition ) ) : ?><?php
+						case 'array' : ?>
+							<dd class="flex flex-wrap gap-x-4 gap-y-1">
+								<?php foreach ( $definition as $key => $d ) : ?>
+									<a href="<?php echo esc_url( $d['href'] ); ?>"><?php echo esc_html( $d['label'] ); ?></a>
+								<?php endforeach; ?>
+							</dd>
+							<?php break;
+						default : ?>
+							<dd><?php echo $definition; ?></dd>
+							<?php break; ?>
+					<?php endswitch; ?>
+				<?php endforeach; ?>
+
+			</div>
+		<?php endforeach; ?>
+
+	</dl>
+<?php endif; ?>

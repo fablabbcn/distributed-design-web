@@ -17,7 +17,7 @@ $is_post_new = function () {
 ?>
 
 
-<div class="grid grid-cols-1 rounded-2xl overflow-hidden">
+<a class="grid grid-cols-1 rounded-2xl overflow-hidden no-underline" href="<?php the_permalink(); ?>">
   <div class="relative">
     <?php if ( $is_post_new() ) : ?>
       <div class="z-10 absolute m-4 ddp-button font-semibold <?php echo $bg_color[get_post_type()]; ?>">New!</div>
@@ -30,4 +30,4 @@ $is_post_new = function () {
     <p class="text-xl font-semibold line-clamp-1"><?php the_title(); ?></p>
     <!-- <p class="text-xl font-regular line-clamp-1"><?php the_title(); ?></p> -->
   </div>
-</div>
+</a>

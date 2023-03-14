@@ -38,7 +38,7 @@ if ( ! function_exists( 'ddmp_shortcode_button_link' ) ) {
 		);
 
 		return ( array_key_exists( 'icon', $attrs ) && $attrs['icon'] ) || $content ? (
-			"<p><a {$link_attrs['class']} {$link_attrs['href']} {$link_attrs['target']}>" .
+			"<p class='flex'><a {$link_attrs['class']} {$link_attrs['href']} {$link_attrs['target']}>" .
 				( array_key_exists( 'icon', $attrs ) && $attrs['icon']
 					? ( '<svg class="fill-current"><use xlink:href="#social-' . $attrs['icon'] . '" /></svg>' )
 					: ( '<span>' . $content ?: $attrs['label'] . '</span>' )

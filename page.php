@@ -70,7 +70,7 @@ $section_events = array(
 				<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-blue via-transparent to-transparent"></div> -->
 				<div class="z-30 absolute inset-0 bg-gradient-corner-blue pointer-events-none"></div>
 				<div class="z-20 relative bg-black rounded-br-[8rem] overflow-hidden">
-					<?php set_query_var( 'slider', array( 'slides' => $featured_posts[0]['featured_posts'], 'component' => 'template-parts/base/slide-talent' ) ); ?>
+					<?php set_query_var( 'slider', array( 'slides' => $featured_posts[0]['featured_posts'], 'component' => 'template-parts/base/slider-slide-talent' ) ); ?>
 					<?php get_template_part( 'template-parts/base/slider' ); ?>
 				</div>
 			</div>
@@ -109,13 +109,13 @@ $section_events = array(
 				</header>
 				<div class="-space-y-px">
 					<?php set_query_var( 'list', array( 'title' => '13 Countries', 'items' => array( 'Austria', 'Denmark', 'France', 'Greece', 'Germany', 'Hungary', 'Iceland', 'Italy', 'Netherlands', 'Portugal', 'Spain', 'Slovenia', 'United Kingdom' ) ) ); ?>
-					<?php get_template_part( 'template-parts/base/list-definitions' ); ?>
+					<?php get_template_part( 'template-parts/base/list-stats' ); ?>
 
 					<?php set_query_var( 'list', array( 'title' => '20 Members', 'items' => array( 'IAAC', 'Fab Lab Barcelona', 'Pakhuis de Zwijger', 'P2P Lab', 'Re:Publica', 'Happy Lab Vienna', 'Danish Design Centre' ), 'button' => array( 'label' => 'See more' ) ) ); ?>
-					<?php get_template_part( 'template-parts/base/list-definitions' ); ?>
+					<?php get_template_part( 'template-parts/base/list-stats' ); ?>
 
 					<?php set_query_var( 'list', array( 'title' => '2609 Talents', 'button' => array( 'label' => 'Check our talents' ) ) ); ?>
-					<?php get_template_part( 'template-parts/base/list-definitions' ); ?>
+					<?php get_template_part( 'template-parts/base/list-stats' ); ?>
 
 				</div>
 			</section>
@@ -133,7 +133,7 @@ $section_events = array(
 					<h3 class="text-xl font-light">Featured talents</h3>
 				</header>
 				<div class="grid rounded-2xl overflow-hidden">
-					<?php set_query_var( 'slider', array( 'slides' => $section_talent['posts'], 'component' => 'template-parts/base/slide-talent' ) ); ?>
+					<?php set_query_var( 'slider', array( 'slides' => $section_talent['posts'], 'component' => 'template-parts/base/slider-slide-talent' ) ); ?>
 					<?php get_template_part( 'template-parts/base/slider' ); ?>
 				</div>
 				<footer class="text-center">

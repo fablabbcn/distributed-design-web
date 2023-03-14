@@ -1,28 +1,31 @@
 <?php
 
 $slider = array(
-	'class'  => 'post-slider max-h-screen flex-1 my-auto',
-	'images' => get_field( 'featured_image_alt' ) ?: array(),
+	'class'  => '',
+	'slides' => get_field( 'featured_image_alt' ) ?: array( get_post_thumbnail_id( $post ) ),
+	'component' => 'template-parts/singular/slider-slide',
 );
 
 ?>
 
-<div class="-m-20 lg:-m-40 flex-grow">
+
+<div class="bleed">
 
 	<?php if ( get_field( 'featured_image_alt' ) ) : ?>
-		<div class="flex flex-col justify-end flex-grow">
-			<?php require locate_template( 'template-parts/blocks/slider.php' ); ?>
+		<div class="">
+			<?php set_query_var( 'slider', $slider ); ?>
+			<?php require locate_template( 'template-parts/base/slider.php' ); ?>
 		</div>
 	<?php else : ?>
-		<div>
+		<div class="">
 			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full max-h-screen object-cover' ) ); ?>
 		</div>
 	<?php endif; ?>
 
-	<?php if ( get_field( 'subtitle' ) ) : ?>
-		<div class="lg:p-40 p-20 border-t">
-			<div class="text-20 lg:text-36 font-oswald uppercase"><?php the_field( 'subtitle' ); ?></div>
+	<!-- <?php if ( get_field( 'subtitle' ) ) : ?>
+		<div class="">
+			<div class=""><?php the_field( 'subtitle' ); ?></div>
 		</div>
-	<?php endif; ?>
+	<?php endif; ?> -->
 
 </div>

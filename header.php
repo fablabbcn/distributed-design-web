@@ -34,10 +34,10 @@ $menu_items = wp_get_nav_menu_items( wp_get_nav_menu_object( $locations[ $menu_n
 	<div class="sr-only" aria-hidden="true"><?php require_once 'assets/img/icons.svg'; ?></div>
 
 	<div class="flex flex-col min-h-screen">
-		<header class="grid gap-4" x-data="{ open: false }">
+		<header class="z-50 sticky top-0 grid gap-4 bg-gray" :class="open ? 'grid-rows-[auto_1fr] h-screen' : ''" x-data="{ open: false }">
 
 			<div class="flex justify-between items-center px-8 py-4">
-				<a class="" href="<?php echo esc_url( home_url() ); ?>">
+				<a class="no-underline" href="<?php echo esc_url( home_url() ); ?>">
 					<?php echo get_bloginfo( 'name' ); ?>
 				</a>
 				<button class="flex justify-center items-center" @click="open = !open">
@@ -53,7 +53,7 @@ $menu_items = wp_get_nav_menu_items( wp_get_nav_menu_object( $locations[ $menu_n
 					<?php foreach ( $menu_items as $key => $menu_item ) : ?>
 						<li class="">
 							<?php /* if ( intval( $menu_item->object_id, 10 ) === $post->ID ) : */ ?>
-							<a class="flex justify-start items-center space-x-8 py-6 border-t border-black" href="<?php echo esc_url( $menu_item->url ); ?>">
+							<a class="flex justify-start items-center space-x-8 py-6 border-t border-black no-underline" href="<?php echo esc_url( $menu_item->url ); ?>">
 								<span class="flex justify-center items-center w-12 h-8 border border-black rounded-full">
 									<span class="text-sm text-center">0<?php echo $key + 1; ?></span>
 								</span>

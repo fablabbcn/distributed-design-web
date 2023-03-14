@@ -1,21 +1,20 @@
-<?php $images = get_sub_field( 'image' ); ?>
+<?php
+
+$images = get_sub_field( 'image' ) ?: array();
+$slider = array(
+	'slides'     => $images,
+	'component'  => 'template-parts/singular/slider-slide',
+	'pagination' => false,
+	'navigation' => false,
+	'class'      => '!px-8 !overflow-visible',
+);
+
+?>
 
 
 <?php if ( $images ) : ?>
-	<div class="post-slider max-h-screen -m-20 lg:-m-40">
-		<?php foreach ( $images as $image ) : ?>
-			<?php
-			$focal_point = get_post_meta( $image['ID'], '_wpsmartcrop_image_focus' );
-			$media_attrs = array(
-				'style' => $focal_point ? "object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%" : '',
-				'class' => 'block w-full h-full max-h-screen object-cover',
-			);
-			?>
-
-			<figure>
-				<?php echo wp_get_attachment_image( $image['ID'], 'container-thumbnails', false, $media_attrs ); ?>
-			</figure>
-
-		<?php endforeach; ?>
+	<div class="bleed">
+		<?php set_query_var( 'slider', $slider ); ?>
+		<?php get_template_part( 'template-parts/base/slider' ); ?>
 	</div>
 <?php endif; ?>

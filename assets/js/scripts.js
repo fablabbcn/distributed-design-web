@@ -68,24 +68,20 @@
 
   function initDefaultSlider () {
     var swiper = new Swiper('.swiper', {
-      loop: true,
+      loop: false,
       keyboard: true,
+      autoHeight: true,
 
-      effect: 'fade',
-      fadeEffect: {
-        crossFade: true
-      },
+      spaceBetween: 16,
 
-      pagination: {
-        el: '.swiper-pagination',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      // scrollbar: {
-      //   el: '.swiper-scrollbar',
+      // effect: 'fade',
+      // fadeEffect: {
+      //   crossFade: true
       // },
+
+      pagination: true,
+      navigation: true,
+      // scrollbar: true,
     })
 
 

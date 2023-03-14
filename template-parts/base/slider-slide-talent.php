@@ -6,6 +6,9 @@
 // var_dump( get_the_ID() );
 // var_dump( $slide->ID );
 
+$post = $slide;
+setup_postdata( $post );
+
 ?>
 
 
