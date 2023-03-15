@@ -1,9 +1,9 @@
 <?php
 
 $slider = array(
-	'class'  => '',
 	'slides' => get_field( 'featured_image_alt' ) ?: array( get_post_thumbnail_id( $post ) ),
 	'component' => 'template-parts/singular/slider-slide',
+	'isRounded'  => false,
 );
 
 ?>
