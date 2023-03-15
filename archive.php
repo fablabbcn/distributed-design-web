@@ -7,7 +7,7 @@ $section = array(
 	'title' => array(
 		'post' => get_the_title( get_option('page_for_posts', true) ),
 		'talent' => post_type_archive_title( '', false ),
-		'tribe_events' => get_the_title(),
+		'tribe_events' => get_the_title( get_page_template_id( 'archive-events' )[0]->ID ),
 		'resources' => post_type_archive_title( '', false ),
 		'page' => get_the_title(),
 	)[ get_post_type() ],

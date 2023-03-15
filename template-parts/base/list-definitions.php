@@ -14,18 +14,18 @@
 				<?php endforeach; ?>
 
 				<?php foreach ( $item['definitions'] as $key => $definition ) : ?>
-					<?php switch ( gettype( $definition ) ) : ?><?php
-						case 'array' : ?>
-							<dd class="flex flex-wrap gap-x-4 gap-y-1">
+					<dd class="flex flex-wrap gap-x-4 gap-y-1">
+						<?php switch ( gettype( $definition ) ) : ?><?php
+							case 'array' : ?>
 								<?php foreach ( $definition as $key => $d ) : ?>
-									<a href="<?php echo esc_url( $d['href'] ); ?>"><?php echo esc_html( $d['label'] ); ?></a>
+									<a href="<?php echo esc_url( $d['href'] ); ?>"><?php echo wp_kses_post( $d['label'] ); ?></a>
 								<?php endforeach; ?>
-							</dd>
-							<?php break;
-						default : ?>
-							<dd><?php echo $definition; ?></dd>
-							<?php break; ?>
-					<?php endswitch; ?>
+								<?php break;
+							default : ?>
+								<span><?php echo wp_kses_post( $definition ); ?></span>
+								<?php break; ?>
+						<?php endswitch; ?>
+					</dd>
 				<?php endforeach; ?>
 
 			</div>

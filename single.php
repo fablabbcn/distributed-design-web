@@ -11,7 +11,7 @@ $post = isset( $_post ) ? $_post : $post;
 $title = array(
 	'post' => get_the_title( get_option('page_for_posts', true) ),
 	'talent' => get_post_type_object( $post_type )->labels->name,
-	'tribe_events' => get_the_title(),
+	'tribe_events' => get_the_title( get_page_template_id( 'archive-events' )[0]->ID ),
 	'resources' => get_post_type_object( $post_type )->labels->name,
 	'page' => get_the_title(),
 )[ get_post_type() ];
@@ -42,15 +42,7 @@ $s_classes = array(
 						<?php include locate_template( 'template-parts/singular/hero.php' ); ?>
 					</div>
 					<div class="<?php the_classes( $s_classes['columns'] ); ?> grid-cols-[1fr_auto] items-baseline">
-						<div>
-							<?php foreach ( wp_get_object_terms( $post->ID, 'category' ) as $term ) : ?>
-								<?php set_query_var( 'term', $term ); ?>
-								<?php get_template_part( 'template-parts/base/button-taxonomy' ); ?>
-							<?php endforeach; ?>
-						</div>
-						<div>
-							<p class=""><?php the_date(); ?></p>
-						</div>
+						<?php include locate_template( 'template-parts/singular/meta.php' ); ?>
 					</div>
 					<div class="<?php the_classes( $s_classes['columns'] ); ?>">
 						<h1 class="mt-4 -mb-4 text-2xl leading-tight"><?php the_title(); ?></h1>
@@ -101,6 +93,15 @@ $s_classes = array(
 					</div>
 				</section>
 
+			<?php elseif ( 'tribe_events' === $post->post_type ) : ?>
+				<section class="<?php the_classes( $s_classes['section'] ); ?>">
+					<div data-layout="event-details" class="<?php the_classes( $s_classes['layout'] ); ?>">
+
+						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/event.php' ); ?></div>
+						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/map.php' ); ?></div>
+
+					</div>
+				</section>
 			<?php endif; ?>
 
 
@@ -141,23 +142,10 @@ $s_classes = array(
 			<?php endif; ?>
 
 
-			<?php if ( 'tribe_events' === $post->post_type ) : ?>
-				<section class="<?php the_classes( $s_classes['section'] ); ?>">
-					<div data-layout="event-details" class="<?php the_classes( $s_classes['layout'] ); ?>">
-
-						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/event.php' ); ?></div>
-						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/map.php' ); ?></div>
-
-					</div>
-				</section>
-			<?php endif; ?>
-
-
 			<?php if ( 'post' === $post->post_type ) : ?>
 				<footer class="<?php the_classes( $s_classes['section'] ); ?>">
 					<div data-layout="post-credits" class="<?php the_classes( $s_classes['layout'] ); ?>">
 						<?php
-
 						$tags = array_map(
 							function ( $item ) { return array( 'label' => $item->name, 'href' => get_term_link( $item ) ); },
 							wp_get_object_terms( $post->ID, 'post_tag' )
@@ -169,7 +157,6 @@ $s_classes = array(
 								array( 'terms' => array('Tags'), 'definitions' => array( $tags ?: '—' ) ),
 							),
 						);
-
 						?>
 
 						<p class="text-xl font-light">Blogpost credits</p>
@@ -183,7 +170,7 @@ $s_classes = array(
 				$latest_posts = new WP_Query(
 					array(
 						'post__not_in'   => array($post->ID),
-						'post_type'      => 'post',
+						'post_type'      => $post->post_type,
 						'posts_per_page' => '3',
 					),
 				);

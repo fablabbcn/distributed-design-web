@@ -96,6 +96,7 @@
 
     & img { @apply h-auto max-w-full object-cover; }
     & iframe { @apply aspect-[16/9] w-full h-auto max-w-full object-cover rounded-2xl overflow-hidden; }
+    & pre { @apply h-auto max-w-full text-sm bg-black/10 overflow-auto; }
 
     & .rich-text {
       @apply gap-2;
