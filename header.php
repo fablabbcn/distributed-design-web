@@ -34,7 +34,7 @@ $menu_items = wp_get_nav_menu_items( wp_get_nav_menu_object( $locations[ $menu_n
 	<div class="sr-only" aria-hidden="true"><?php require_once 'assets/img/icons.svg'; ?></div>
 
 	<div class="flex flex-col min-h-screen">
-		<header class="z-50 sticky top-0 grid gap-4 bg-gray" :class="open ? 'grid-rows-[auto_1fr] h-screen' : ''" x-data="{ open: false }">
+		<header class="z-50 sticky top-0 grid bg-gray" :class="open ? 'grid-rows-[auto_1fr] h-screen' : ''" x-data="{ open: false }">
 
 			<div class="flex justify-between items-center px-8 py-4">
 				<a class="no-underline" href="<?php echo esc_url( home_url() ); ?>">
@@ -47,8 +47,9 @@ $menu_items = wp_get_nav_menu_items( wp_get_nav_menu_object( $locations[ $menu_n
 				</button>
 			</div>
 
-			<nav class="z-0 relative w-full px-8 py-12 overflow-hidden" x-show="open" x-transition>
-				<div class="z-0 absolute top-full right-0 w-[50vw] h-[50vw] -mt-[12.5vw] -mr-[6.25vw] bg-yellow rounded-full blur-[128px]"></div>
+			<nav class="z-0 relative w-full px-8 py-12 overflow-auto" x-show="open" x-transition>
+				<!-- <div class="z-0 absolute top-full right-0 w-[50vw] h-[50vw] -mt-[12.5vw] -mr-[6.25vw] bg-yellow rounded-full blur-[128px]"></div> -->
+				<div class="sticky top-[-48px] -mb-px border-t border-black"></div>
 				<ul class="z-10 relative flex flex-col w-full">
 					<?php foreach ( $menu_items as $key => $menu_item ) : ?>
 						<li class="">
