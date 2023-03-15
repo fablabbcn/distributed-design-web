@@ -10,7 +10,7 @@ $category_slug = array(
 ?>
 
 
-<div>
+<div class="flex flex-wrap gap-2">
   <?php foreach ( wp_get_object_terms( $post->ID, $category_slug ) as $term ) : ?>
     <?php set_query_var( 'term', $term ); ?>
     <?php get_template_part( 'template-parts/base/button-taxonomy' ); ?>

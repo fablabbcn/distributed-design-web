@@ -110,6 +110,12 @@
   .bg-gradient-corner-yellow {
     background-image: linear-gradient(135deg, #e4ff6a, cubic-bezier(0, 0.75, 0.25, 1), transparent);
   }
+
+  .ddp-button-icon {
+    mask-size: contain;
+    mask-image: var(--icon-url);
+    @apply w-4 h-4 bg-current;
+  }
 }
 
 .facetwp-facet {

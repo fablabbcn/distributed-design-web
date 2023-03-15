@@ -18,19 +18,18 @@ $title = array(
 
 $s_classes = array(
 	'article' => array( 'grid gap-8' ),
-	'section' => array( '' ),
+	'section' => array( 'grid' ),
 	'layout'  => array( 'grid gap-8' ),
 	'columns' => array( 'grid gap-4 rich-text' ),
 );
 
 ?>
 
+
 <main class="flex-grow">
 	<article class="grid gap-12 px-8 py-12 overflow-hidden">
-
 		<?php set_query_var( 'title', $title ); ?>
 		<?php get_template_part( 'template-parts/page/header' ); ?>
-
 
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
@@ -38,18 +37,17 @@ $s_classes = array(
 
 			<header class="<?php the_classes( $s_classes['section'] ); ?>">
 				<div data-layout="hero" class="<?php the_classes( $s_classes['layout'] ); ?>">
-					<div class="<?php the_classes( $s_classes['columns'] ); ?>">
-						<?php include locate_template( 'template-parts/singular/hero.php' ); ?>
-					</div>
+					<?php include locate_template( 'template-parts/singular/hero.php' ); ?>
 					<div class="<?php the_classes( $s_classes['columns'] ); ?> grid-cols-[1fr_auto] items-baseline">
 						<?php include locate_template( 'template-parts/singular/meta.php' ); ?>
 					</div>
-					<div class="<?php the_classes( $s_classes['columns'] ); ?>">
-						<h1 class="mt-4 -mb-4 text-2xl leading-tight"><?php the_title(); ?></h1>
-					</div>
+					<?php if ( 'post' === $post->post_type ) : ?>
+						<div class="<?php the_classes( $s_classes['columns'] ); ?>">
+							<h1 class="mt-4 -mb-4 text-2xl leading-tight"><?php the_title(); ?></h1>
+						</div>
+					<?php endif; ?>
 				</div>
 			</header>
-
 
 			<?php if ( 'talent' === $post->post_type ) : ?>
 				<?php
@@ -64,46 +62,20 @@ $s_classes = array(
 				);
 				?>
 
-				<section class="grid gap-4 grid-cols-5">
-					<div class="flex flex-col gap-2 col-span-2">
-						<figure class="aspect-w-1 aspect-h-1 bg-black/10 rounded-2xl overflow-hidden">
-							<?php echo wp_get_attachment_image( get_field( 'image' ), 'post-list-thumbnails-square', false, array( 'class' => 'w-full h-full object-cover' ) ); ?>
-						</figure>
-
-						<div class="mb-auto">
-							<p class="text-xl font-semibold"><?php the_field( 'name' ); ?></p>
-						</div>
-
-						<?php foreach ( get_field( 'buttons' ) ?: array() as $button ) : ?>
-							<?php if ( $button['url'] ) : ?>
-								<?php set_query_var( 'button', array( 'label' => $button['label'] ?: $button['url'], 'href' => $button['url'] ) ); ?>
-								<?php get_template_part( 'template-parts/base/button' ); ?>
-							<?php endif; ?>
-						<?php endforeach; ?>
-
-						<div class="">
-							<?php $social_links = get_field( 'social_media' )['links']; ?>
-							<?php require locate_template( 'template-parts/blocks/social-links.php' ); ?>
-						</div>
-					</div>
-
-					<div class="col-span-3">
-						<?php set_query_var( 'list', $definitions ); ?>
-						<?php get_template_part( 'template-parts/base/list-definitions' ); ?>
+				<section class="<?php the_classes( $s_classes['section'] ); ?>">
+					<div data-layout="talent-details" class="<?php the_classes( $s_classes['layout'] ); ?>">
+						<div class="<?php the_classes( $s_classes['columns'] ); ?> grid-cols-5"><?php include locate_template( 'template-parts/singular/talent.php' ); ?></div>
 					</div>
 				</section>
 
 			<?php elseif ( 'tribe_events' === $post->post_type ) : ?>
 				<section class="<?php the_classes( $s_classes['section'] ); ?>">
 					<div data-layout="event-details" class="<?php the_classes( $s_classes['layout'] ); ?>">
-
 						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/event.php' ); ?></div>
 						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/map.php' ); ?></div>
-
 					</div>
 				</section>
 			<?php endif; ?>
-
 
 			<?php if ( have_rows( 'post_content' ) ) : ?>
 				<section class="<?php the_classes( $s_classes['article'] ); ?> _[&_p:first-of-type]:font-semibold _[&_p:first-of-type]:text-[112.5%]">
@@ -141,7 +113,6 @@ $s_classes = array(
 				</section>
 			<?php endif; ?>
 
-
 			<?php if ( 'post' === $post->post_type ) : ?>
 				<footer class="<?php the_classes( $s_classes['section'] ); ?>">
 					<div data-layout="post-credits" class="<?php the_classes( $s_classes['layout'] ); ?>">
@@ -165,22 +136,31 @@ $s_classes = array(
 
 					</div>
 				</footer>
+			<?php endif; ?>
 
+			<?php if ( in_array( $post->post_type, array( 'post', 'talent', 'tribe_events' ) ) ) : ?>
 				<?php
-				$latest_posts = new WP_Query(
-					array(
-						'post__not_in'   => array($post->ID),
-						'post_type'      => $post->post_type,
-						'posts_per_page' => '3',
+				$related = array(
+					'title' => array(
+						'post' => 'Latest posts',
+						'talent' => 'Related talents',
+						'tribe_events' => 'Other events',
+					)[ $post->post_type ],
+					'posts' => new WP_Query(
+						array(
+							'post__not_in'   => array( $post->ID ),
+							'post_type'      => $post->post_type,
+							'posts_per_page' => '3',
+						),
 					),
 				);
 				?>
 				<nav class="">
 					<div data-layout="post-latest" class="<?php the_classes( $s_classes['layout'] ); ?>">
-						<p class="text-xl font-light">Latest posts</p>
+						<p class="text-xl font-light"><?php echo esc_html( $related['title'] ); ?></p>
 						<ul class="grid gap-4">
-							<?php while ( $latest_posts->have_posts() ) : ?>
-								<?php $latest_posts->the_post(); ?>
+							<?php while ( $related['posts']->have_posts() ) : ?>
+								<?php $related['posts']->the_post(); ?>
 								<li class=""><?php get_template_part( 'template-parts/base/card' ); ?></li>
 							<?php endwhile ?>
 						</ul>
@@ -189,7 +169,6 @@ $s_classes = array(
 			<?php endif; ?>
 
 		<?php endwhile; ?>
-
 	</article>
 </main>
 
