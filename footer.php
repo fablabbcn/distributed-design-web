@@ -20,12 +20,10 @@ $logo = array(
 			</div>
 
 			<div class="grid grid-cols-2 items-baseline gap-4 text-sm">
-				<div class="grid gap-6">
-					<img class="max-h-8 brightness-0 invert" src="<?php echo esc_attr( $logo['src'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
+				<div class="grid gap-6 [&_img]:w-auto [&_img]:max-h-8 [&_img]:brightness-0 [&_img]:invert">
 					<?php echo wp_kses_post( $contact['left'] ); ?>
 				</div>
-				<div class="grid gap-6">
-					<img class="max-h-8 brightness-0 invert" src="<?php echo esc_attr( $logo['src'] ); ?>" alt="<?php echo esc_attr( $logo['alt'] ); ?>" />
+				<div class="grid gap-6 [&_img]:w-auto [&_img]:max-h-8 [&_img]:brightness-0 [&_img]:invert">
 					<?php echo wp_kses_post( $contact['right'] ); ?>
 				</div>
 			</div>
