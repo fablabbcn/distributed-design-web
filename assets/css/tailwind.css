@@ -48,7 +48,7 @@
     text-transform: inherit;
   }
 
-  a {
+  a, button {
     text-decoration: underline currentcolor solid;
     text-decoration-thickness: 1px;
     text-underline-offset: 0;

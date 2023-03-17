@@ -5,10 +5,6 @@
 
 get_header();
 
-$flexible_content = get_field( 'flexible_content' ) ?: array();
-$featured_posts = array_filter( $flexible_content, function ( $item ) {
-	return $item['acf_fc_layout'] === 'posts_slider';
-} );
 
 $section_talent = array(
 	'posts' => get_posts(
@@ -64,74 +60,18 @@ $section_events = array(
 			</div>
 		</header>
 
-		<section class="bleed">
-			<div class="z-0 relative bg-gray">
-				<div class="z-10 absolute inset-0 bg-blue"></div>
-				<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-blue via-transparent to-transparent"></div> -->
-				<div class="z-30 absolute inset-0 bg-gradient-corner-blue pointer-events-none"></div>
-				<div class="z-20 relative bg-black rounded-br-[8rem] overflow-hidden">
-					<?php set_query_var( 'slider', array( 'slides' => $featured_posts[0]['featured_posts'], 'component' => 'template-parts/base/slider-slide-talent' ) ); ?>
-					<?php get_template_part( 'template-parts/base/slider' ); ?>
-				</div>
-			</div>
-		</section>
 
-		<aside class="relative grid grid-cols-5 gap-4 py-4 text-white bg-indigo">
-			<div class="-z-10 absolute inset-0 bleed bg-[inherit]"></div>
+		<?php if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : ?>
+				<?php
+				the_post();
+				get_template_part( 'template-parts/page/content', is_front_page() ? 'frontpage' : 'page' );
+				?>
+			<?php endwhile; ?>
+		<?php else : ?>
+			<?php get_template_part( 'template-parts/post/content', 'none' ); ?>
+		<?php endif; ?>
 
-			<div class="col-span-full py-8">
-				<p class="flex flex-col text-3xl leading-tight font-thin">
-					<span class="mx-auto">Supporting emerging 🔼 creatives</span>
-					<span class="mr-auto">that work on alternatives ➡️</span>
-					<span class="ml-auto">to 🏭 mass production</span>
-				</p>
-			</div>
-		</aside>
-
-		<section class="relative grid grid-cols-1 gap-8 py-8 bg-gray">
-			<div class="-z-10 absolute inset-0 bleed bg-[inherit]"></div>
-
-			<header class="grid grid-cols-5 gap-4">
-				<h2 class="col-span-4 text-4xl font-thin">What is Distributed&nbsp;Design?</h2>
-				<p class="col-span-4 col-start-2 text-xl font-light">The Distributed Design Platform acts as an exchange and networking hub for the european maker movement. The initiative aims at developing and promoting the connection between designers, makers and the market.</p>
-			</header>
-
-			<figure class="z-0 relative my-4 rounded-2xl overflow-hidden bg-gray">
-				<div class="z-10 absolute inset-0 bg-yellow"></div>
-				<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-yellow via-transparent to-transparent"></div> -->
-				<div class="z-30 absolute inset-0 bg-gradient-corner-yellow"></div>
-				<div class="z-20 relative aspect-[4/3] bg-black rounded-tl-[8rem]"></div>
-			</figure>
-
-			<section class="grid gap-6">
-				<header>
-					<h3 class="text-xl font-light">Statistics</h3>
-				</header>
-				<div class="-space-y-px">
-					<?php set_query_var( 'list', array( 'title' => '13 Countries', 'items' => array( 'Austria', 'Denmark', 'France', 'Greece', 'Germany', 'Hungary', 'Iceland', 'Italy', 'Netherlands', 'Portugal', 'Spain', 'Slovenia', 'United Kingdom' ) ) ); ?>
-					<?php get_template_part( 'template-parts/base/list-stats' ); ?>
-
-					<?php set_query_var( 'list', array( 'title' => '20 Members', 'items' => array( 'IAAC', 'Fab Lab Barcelona', 'Pakhuis de Zwijger', 'P2P Lab', 'Re:Publica', 'Happy Lab Vienna', 'Danish Design Centre' ), 'button' => array( 'label' => 'See more' ) ) ); ?>
-					<?php get_template_part( 'template-parts/base/list-stats' ); ?>
-
-					<?php set_query_var( 'list', array( 'title' => '2609 Talents', 'button' => array( 'label' => 'Check our talents' ) ) ); ?>
-					<?php get_template_part( 'template-parts/base/list-stats' ); ?>
-
-				</div>
-			</section>
-		</section>
-
-
-		<?php
-		// if ( have_posts() ) {
-		// 	while ( have_posts() ) {
-		// 		the_post();
-		// 		get_template_part( 'template-parts/page/content', is_front_page() ? 'frontpage' : 'page' );
-		// 	}
-		// } else {
-		// 	get_template_part( 'template-parts/post/content', 'none' );
-		// };
-		?>
 
 		<?php if ( is_front_page() ) : ?>
 			<section class="relative grid grid-cols-1 gap-8 py-8 bg-white">
