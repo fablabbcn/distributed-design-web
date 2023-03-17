@@ -8,14 +8,14 @@ $_description = get_sub_field( 'description' );
 
 ?>
 
-<div class="lg:flex border-b">
-	<div class="lg:w-3/4 ml-auto lg:border-l">
+<div class="">
 
-		<div class="w-full p-20 lg:pt-60 font-oswald uppercase"><?php echo wp_kses_post( $_title ); ?></div>
+	<?php if ( $_title ) : ?>
+		<div class=""><?php echo wp_kses_post( $_title ); ?></div>
+	<?php endif; ?>
 
-		<?php if ( $_description ) : ?>
-			<div class="w-full p-20 font-bold border-t"><?php echo wp_kses_post( $_description ); ?></div>
-		<?php endif; ?>
+	<?php if ( $_description ) : ?>
+		<div class=""><?php echo wp_kses_post( $_description ); ?></div>
+	<?php endif; ?>
 
-	</div>
 </div>

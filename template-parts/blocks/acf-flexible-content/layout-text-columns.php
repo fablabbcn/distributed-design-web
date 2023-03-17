@@ -8,17 +8,17 @@ $_columns  = get_sub_field( 'columns' );
 
 ?>
 
-<div class="lg:flex border-b">
+<div class="">
 
 	<?php if ( $_subtitle ) : ?>
-		<div class="flex lg:w-1/4 mr-auto p-10">
-			<div class="-mb-20 lg:m-auto p-10 font-oswald uppercase"><?php echo wp_kses_post( $_subtitle ); ?></div>
+		<div class="">
+			<div class=""><?php echo wp_kses_post( $_subtitle ); ?></div>
 		</div>
 	<?php endif; ?>
 
-	<div class="lg:flex lg:w-3/4 ml-auto p-10 lg:border-l">
+	<div class="">
 		<?php foreach ( $_columns as $_column ) : ?>
-			<?php $classes = array( 'w-full p-10', $_column['styles'] ? 'font-oswald uppercase' : '' ); ?>
+			<?php $classes = array( 'rich-text', $_column['styles'] ? '' : '' ); ?>
 			<div class="<?php the_classes( $classes ); ?>"><?php wp_kses_ddmp( $_column['text'] ); ?></div>
 		<?php endforeach; ?>
 	</div>

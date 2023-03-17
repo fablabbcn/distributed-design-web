@@ -51,15 +51,8 @@ $section_events = array(
 <main class="flex-grow">
 
 	<article class="grid gap-4 p-8">
-		<?php /* set_query_var( 'title', get_the_title() ); */ ?>
-		<?php /* get_template_part( 'template-parts/blocks/header' ); */ ?>
-
-		<header class="grid grid-cols-5 gap-4 py-4">
-			<div class="col-start-3 col-span-3">
-				<h1 class="text-2xl leading-tight font-light"><?php the_title(); ?></h1>
-			</div>
-		</header>
-
+		<?php set_query_var( 'title', get_the_title() ); ?>
+		<?php get_template_part( is_front_page() ? 'template-parts/blocks/header' : 'template-parts/page/header' ); ?>
 
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : ?>
@@ -71,7 +64,6 @@ $section_events = array(
 		<?php else : ?>
 			<?php get_template_part( 'template-parts/post/content', 'none' ); ?>
 		<?php endif; ?>
-
 
 		<?php if ( is_front_page() ) : ?>
 			<section class="relative grid grid-cols-1 gap-8 py-8 bg-white">
