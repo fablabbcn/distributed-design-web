@@ -27,7 +27,7 @@ $thumbnail_attrs = array(
   </div>
   <div class="absolute inset-0 w-full h-full flex flex-col items-center px-20 py-12 text-white text-center">
     <div class="my-auto">
-      <p class="text-2xl font-semibold line-clamp-3"><?php the_title(); ?></p>
+      <p class="text-2xl font-semibold line-clamp-3"><?php echo get_the_title( $slide->ID ); ?></p>
     </div>
     <div class="text-black bg-white rounded-full">
       <?php set_query_var( 'button', array( 'label' => 'Read more', 'href' => get_permalink( $slide->ID ) ) ); ?>

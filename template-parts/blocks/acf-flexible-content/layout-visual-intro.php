@@ -15,9 +15,9 @@ $slider  = array(
 <section class="relative grid grid-cols-1 gap-8 py-8 bg-gray">
 	<div class="-z-10 absolute inset-0 bleed bg-[inherit]"></div>
 
-	<header class="grid grid-cols-5 gap-4">
-		<h2 class="col-span-4 text-4xl font-thin"><?php echo esc_html( $content['title'] ); ?></h2>
-		<div class="col-span-4 col-start-2 text-xl font-light"><?php echo wp_kses_post( $content['text'] ); ?></div>
+	<header class="grid-layout">
+		<h2 class="col-span-4 lg:col-start-2 lg:col-end-4 text-4xl font-thin"><?php echo esc_html( $content['title'] ); ?></h2>
+		<div class="col-span-4 col-start-2 lg:col-start-4 lg:col-end-7 text-xl font-light"><?php echo wp_kses_post( $content['text'] ); ?></div>
 	</header>
 
 	<figure class="z-0 relative my-4 rounded-2xl overflow-hidden bg-gray">

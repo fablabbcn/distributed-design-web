@@ -26,7 +26,7 @@ $is_post_new = function () {
       <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full object-cover opacity-70' ) ); ?>
     </figure>
   </div>
-  <div class="grid items-end px-6 py-5 bg-white">
+  <div class="grid items-end px-6 py-5 <?php echo $card['theme'] ?: 'bg-white'; ?>">
     <p class="text-xl font-semibold line-clamp-1"><?php the_title(); ?></p>
     <!-- <p class="text-xl font-regular line-clamp-1"><?php the_title(); ?></p> -->
   </div>

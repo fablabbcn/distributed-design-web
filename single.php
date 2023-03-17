@@ -20,14 +20,14 @@ $s_classes = array(
 	'article' => array( 'grid gap-8' ),
 	'section' => array( 'grid' ),
 	'layout'  => array( 'grid gap-8' ),
-	'columns' => array( 'grid gap-4 rich-text' ),
+	'columns' => array( 'grid-layout rich-text' ),
 );
 
 ?>
 
 
-<main class="flex-grow">
-	<article class="grid gap-12 px-8 py-12 overflow-hidden">
+<main class="container flex-grow">
+	<article class="grid gap-12 px-8 py-12">
 		<?php set_query_var( 'title', $title ); ?>
 		<?php get_template_part( 'template-parts/page/header' ); ?>
 
@@ -38,12 +38,14 @@ $s_classes = array(
 			<header class="<?php the_classes( $s_classes['section'] ); ?>">
 				<div data-layout="hero" class="<?php the_classes( $s_classes['layout'] ); ?>">
 					<?php include locate_template( 'template-parts/singular/hero.php' ); ?>
-					<div class="<?php the_classes( $s_classes['columns'] ); ?> grid-cols-[1fr_auto] items-baseline">
+					<div class="<?php the_classes( $s_classes['columns'] ); ?>">
 						<?php include locate_template( 'template-parts/singular/meta.php' ); ?>
 					</div>
 					<?php if ( 'post' === $post->post_type ) : ?>
 						<div class="<?php the_classes( $s_classes['columns'] ); ?>">
-							<h1 class="mt-4 -mb-4 text-2xl leading-tight"><?php the_title(); ?></h1>
+							<div class="grid-layout grid-cols-1 col-span-full lg:col-start-3 lg:col-end-7">
+								<h1 class="mt-4 -mb-4 text-2xl leading-tight"><?php the_title(); ?></h1>
+							</div>
 						</div>
 					<?php endif; ?>
 				</div>
@@ -64,7 +66,7 @@ $s_classes = array(
 
 				<section class="<?php the_classes( $s_classes['section'] ); ?>">
 					<div data-layout="talent-details" class="<?php the_classes( $s_classes['layout'] ); ?>">
-						<div class="<?php the_classes( $s_classes['columns'] ); ?> grid-cols-5"><?php include locate_template( 'template-parts/singular/talent.php' ); ?></div>
+						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/talent.php' ); ?></div>
 					</div>
 				</section>
 
@@ -96,7 +98,7 @@ $s_classes = array(
 							<div data-layout="<?php echo esc_attr( get_row_layout() ); ?>" class="<?php the_classes( $s_classes['layout'] ); ?>">
 
 								<?php if ( 'text_content' === get_row_layout() ) : ?>
-									<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php the_sub_field( 'text' ); ?></div>
+									<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/text.php' ); ?></div>
 								<?php elseif ( 'image_content' === get_row_layout() ) : ?>
 									<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/image.php' ); ?></div>
 								<?php elseif ( 'slider_content' === get_row_layout() ) : ?>
@@ -130,9 +132,15 @@ $s_classes = array(
 						);
 						?>
 
-						<p class="text-xl font-light">Blogpost credits</p>
-						<?php set_query_var( 'list', $definitions ); ?>
-						<?php get_template_part( 'template-parts/base/list-definitions' ); ?>
+						<div class="<?php the_classes( $s_classes['columns'] ); ?>">
+							<div class="col-span-full lg:col-start-2 lg:col-end-3">
+								<p class="text-xl font-light">Blogpost credits</p>
+							</div>
+							<div class="col-span-full lg:col-start-3 lg:col-end-7">
+								<?php set_query_var( 'list', $definitions ); ?>
+								<?php get_template_part( 'template-parts/base/list-definitions' ); ?>
+							</div>
+						</div>
 
 					</div>
 				</footer>
@@ -140,6 +148,15 @@ $s_classes = array(
 
 			<?php if ( in_array( $post->post_type, array( 'post', 'talent', 'tribe_events' ) ) ) : ?>
 				<?php
+				$button = array(
+					'label' => array(
+						'post' => 'See all posts',
+						'talent' => 'See all talents',
+						'tribe_events' => 'See all events',
+					)[ $post->post_type ],
+					'href' => get_post_type_archive_link( $post->post_type ),
+				);
+
 				$related = array(
 					'title' => array(
 						'post' => 'Latest posts',
@@ -158,12 +175,16 @@ $s_classes = array(
 				<nav class="">
 					<div data-layout="post-latest" class="<?php the_classes( $s_classes['layout'] ); ?>">
 						<p class="text-xl font-light"><?php echo esc_html( $related['title'] ); ?></p>
-						<ul class="grid gap-4">
+						<ul class="grid-layout lg:grid-cols-3">
 							<?php while ( $related['posts']->have_posts() ) : ?>
 								<?php $related['posts']->the_post(); ?>
-								<li class=""><?php get_template_part( 'template-parts/base/card' ); ?></li>
+								<li class="col-span-full lg:col-span-1"><?php get_template_part( 'template-parts/base/card' ); ?></li>
 							<?php endwhile ?>
 						</ul>
+						<div class="mx-auto">
+							<?php set_query_var( 'button', $button ); ?>
+							<?php get_template_part( 'template-parts/base/button' ); ?>
+						</div>
 					</div>
 				</nav>
 			<?php endif; ?>

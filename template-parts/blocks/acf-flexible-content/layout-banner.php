@@ -5,7 +5,7 @@ $content = get_sub_field( 'content' );
 ?>
 
 
-<section class="relative grid grid-cols-5 gap-4 py-4 text-white bg-indigo">
+<section class="relative grid grid-cols-5 gap-4 -mt-4 py-4 text-white bg-indigo">
   <div class="-z-10 absolute inset-0 bleed bg-[inherit]"></div>
 
   <div class="col-span-full flex justify-center items-center py-8">

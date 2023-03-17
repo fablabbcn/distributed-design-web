@@ -7,7 +7,7 @@
 	<dl class="grid divide-y border-y">
 
 		<?php foreach ( $list['items'] as $key => $item ) : ?>
-			<div class="grid md:grid-cols-[2fr_4fr] py-2 [&>dd]:font-semibold">
+			<div class="grid md:grid-cols-[2fr_4fr] items-center py-2 [&>dd]:font-semibold">
 
 				<?php foreach ( $item['terms'] as $key => $term ) : ?>
 					<dt class="uppercase text-xs tracking-wide"><?php echo $term; ?></dt>

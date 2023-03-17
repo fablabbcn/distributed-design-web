@@ -5,7 +5,7 @@
 
 $slider = array(
 	'slides' => get_sub_field( 'featured_posts' ),
-	'component' => 'template-parts/base/slider-slide-talent',
+	'component' => 'template-parts/base/slider-slide-post',
 );
 
 ?>

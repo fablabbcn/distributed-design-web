@@ -30,7 +30,7 @@ $section = array(
 ?>
 
 
-<main class="flex-grow">
+<main class="container flex-grow">
 	<article class="grid gap-12 px-8 py-12">
 
 		<?php set_query_var( 'title', $section['title'] ); ?>
@@ -42,7 +42,7 @@ $section = array(
 				<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-blue via-transparent to-transparent"></div> -->
 				<div class="z-30 absolute inset-0 bg-gradient-corner-blue pointer-events-none"></div>
 				<div class="z-20 relative bg-black rounded-br-[8rem] overflow-hidden">
-					<?php set_query_var( 'slider', array( 'slides' => $section['posts'], 'component' => 'template-parts/base/slider-slide-talent' ) ); ?>
+					<?php set_query_var( 'slider', array( 'slides' => $section['posts'], 'component' => 'template-parts/base/slider-slide-post' ) ); ?>
 					<?php get_template_part( 'template-parts/base/slider' ); ?>
 				</div>
 			</div>
@@ -58,7 +58,7 @@ $section = array(
 
 		<?php else : ?>
 			<section class="">
-				<ul class="grid gap-4">
+				<ul class="grid-layout md:grid-cols-2 lg:grid-cols-3">
 					<?php while ( have_posts() ) : ?>
 						<?php the_post(); ?>
 						<li class=""><?php get_template_part( 'template-parts/base/card' ); ?></li>

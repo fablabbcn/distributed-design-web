@@ -11,8 +11,8 @@ $city = tribe_get_venue_object( $post )->city;
 
 
 <div class="relative grid grid-cols-1 gap-4 bg-purple rounded-2xl overflow-hidden">
-  <div class="">
-    <figure class="aspect-w-1 aspect-h-1 bg-black rounded-2xl overflow-hidden">
+  <div class="aspect-w-1 aspect-h-1 md:aspect-w-3 md:aspect-h-2 lg:aspect-w-4 lg:aspect-h-3">
+    <figure class="bg-black rounded-2xl overflow-hidden">
       <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full object-cover opacity-70' ) ); ?>
     </figure>
   </div>
