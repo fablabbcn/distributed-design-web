@@ -74,7 +74,6 @@ $s_classes = array(
 				<section class="<?php the_classes( $s_classes['section'] ); ?>">
 					<div data-layout="event-details" class="<?php the_classes( $s_classes['layout'] ); ?>">
 						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/event.php' ); ?></div>
-						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/map.php' ); ?></div>
 					</div>
 				</section>
 			<?php endif; ?>
@@ -144,6 +143,12 @@ $s_classes = array(
 
 					</div>
 				</footer>
+			<?php elseif ( 'tribe_events' === $post->post_type ) : ?>
+				<section class="<?php the_classes( $s_classes['section'] ); ?>">
+					<div data-layout="event-details" class="<?php the_classes( $s_classes['layout'] ); ?>">
+						<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/map.php' ); ?></div>
+					</div>
+				</section>
 			<?php endif; ?>
 
 			<?php if ( in_array( $post->post_type, array( 'post', 'talent', 'tribe_events' ) ) ) : ?>
