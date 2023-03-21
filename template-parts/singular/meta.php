@@ -10,7 +10,7 @@ $category_slug = array(
 ?>
 
 
-<div class="grid-layout grid-cols-[1fr_auto] items-baseline lg:col-start-3 lg:col-end-7">
+<div class="grid-layout grid-cols-[1fr_auto] items-baseline col-span-full lg:col-start-3 lg:col-end-7">
   <div class="flex flex-wrap gap-2">
     <?php foreach ( wp_get_object_terms( $post->ID, $category_slug ) as $term ) : ?>
       <?php set_query_var( 'term', $term ); ?>
