@@ -14,28 +14,28 @@ $contact = get_field( 'contact' );
 <?php while ( have_posts() ) : ?>
 	<?php the_post(); ?>
 
-	<main class="flex-grow">
+	<main class="container flex-grow">
 		<article class="grid gap-12 px-8 py-12">
 
 			<?php set_query_var( 'title', get_the_title() ); ?>
 			<?php get_template_part( 'template-parts/page/header' ); ?>
 
-			<div class="grid grid-cols-2 gap-x-4 gap-y-12">
+			<div class="grid-layout grid-cols-2 lg:grid-cols-7 gap-x-4 gap-y-12">
 
-				<section class="col-span-full pt-8 border-t">
+				<section class="col-span-full lg:col-span-3 pt-6 lg:pt-8 lg:pr-16 border-t">
 					<div class="grid gap-4">
 						<p class="text-2xl leading-tight font-regular"><?php echo $header['title']; ?></p>
 						<p class="text-xl leading-tight font-light"><?php echo $header['description']; ?></p>
 					</div>
 				</section>
 
-				<section class="pt-4 border-t">
+				<section class="col-span-1 lg:col-span-2 pt-4 lg:pt-8 lg:pr-16 border-t">
 					<div class="grid gap-4">
 						<?php the_content(); ?>
 					</div>
 				</section>
 
-				<section class="pt-4 border-t">
+				<section class="col-span-1 lg:col-span-2 pt-4 lg:pt-8 lg:pr-16 border-t">
 					<div class="grid gap-8">
 						<p><?php echo $contact['social']['title']; ?></p>
 						<?php $social_links = $contact['social']['links']; ?>

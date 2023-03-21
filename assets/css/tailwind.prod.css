@@ -516,6 +516,7 @@ a:hover, button:hover, a:focus, button:focus {
 .col-span-3 { grid-column: span 3 / span 3; }
 .col-span-4 { grid-column: span 4 / span 4; }
 .col-span-full { grid-column: 1 / -1; }
+.col-span-1 { grid-column: span 1 / span 1; }
 .col-start-2 { grid-column-start: 2; }
 .col-start-3 { grid-column-start: 3; }
 .float-right { float: right; }
@@ -701,6 +702,7 @@ a:hover, button:hover, a:focus, button:focus {
 .pt-10 { padding-top: 2.5rem; }
 .pt-4 { padding-top: 1rem; }
 .pt-8 { padding-top: 2rem; }
+.pt-6 { padding-top: 1.5rem; }
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .font-sans { font-family: Aileron, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
@@ -806,8 +808,10 @@ a:hover, button:hover, a:focus, button:focus {
  .lg\:order-first { -webkit-box-ordinal-group: -9998; -webkit-order: -9999; -moz-box-ordinal-group: -9998; -ms-flex-order: -9999; order: -9999; }
  .lg\:order-last { -webkit-box-ordinal-group: 10000; -webkit-order: 9999; -moz-box-ordinal-group: 10000; -ms-flex-order: 9999; order: 9999; }
  .lg\:col-span-1 { grid-column: span 1 / span 1; }
+ .lg\:col-span-3 { grid-column: span 3 / span 3; }
  .lg\:col-span-6 { grid-column: span 6 / span 6; }
  .lg\:col-span-full { grid-column: 1 / -1; }
+ .lg\:col-span-2 { grid-column: span 2 / span 2; }
  .lg\:col-start-2 { grid-column-start: 2; }
  .lg\:col-start-3 { grid-column-start: 3; }
  .lg\:col-start-4 { grid-column-start: 4; }
@@ -831,7 +835,10 @@ a:hover, button:hover, a:focus, button:focus {
  .lg\:w-full { width: 100%; }
  .lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+ .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
  .lg\:grid-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+ .lg\:grid-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+ .lg\:items-baseline { -webkit-box-align: baseline; -webkit-align-items: baseline; -moz-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
  .lg\:gap-0 { gap: 0px; }
  .lg\:gap-12 { gap: 3rem; }
  .lg\:gap-4 { gap: 1rem; }
@@ -844,6 +851,9 @@ a:hover, button:hover, a:focus, button:focus {
  .lg\:py-16 { padding-top: 4rem; padding-bottom: 4rem; }
  .lg\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
  .lg\:pt-0 { padding-top: 0px; }
+ .lg\:pt-8 { padding-top: 2rem; }
+ .lg\:pr-8 { padding-right: 2rem; }
+ .lg\:pr-16 { padding-right: 4rem; }
  .lg\:font-normal { font-weight: 400; }
  .lg\:uppercase { text-transform: uppercase; } }
 @media (min-width: 1280px) {
