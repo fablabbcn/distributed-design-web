@@ -9,30 +9,28 @@ $slider = array(
 ?>
 
 
-<div class="bleed">
+<div class="bleed grid-layout gap-0">
 
 	<?php if ( get_field( 'featured_image_alt' ) ) : ?>
-		<div class="">
+		<div class="col-span-full <?php echo esc_attr( in_array( $post->post_type, array( 'resources', 'talent' ) ) ? 'lg:col-span-5' : '' ); ?>">
 			<?php set_query_var( 'slider', $slider ); ?>
 			<?php require locate_template( 'template-parts/base/slider.php' ); ?>
 		</div>
-
 	<?php else : ?>
-		<div class="">
-			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full max-h-screen object-cover' ) ); ?>
+		<div class="col-span-full <?php echo esc_attr( in_array( $post->post_type, array( 'resources', 'talent' ) ) ? 'lg:col-span-5' : '' ); ?>">
+			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full max-h-[50vh] object-cover' ) ); ?>
 		</div>
-
 	<?php endif; ?>
 
 	<?php if ( in_array( $post->post_type, array( 'resources', 'talent' ) ) ) : ?>
-		<div class="grid grid-cols-2">
-			<div class="aspect-w-13 aspect-h-7">
-				<div class="flex flex-col justify-start p-8 pb-6 text-white bg-black">
+		<div class="grid grid-cols-2 lg:grid-cols-1 col-span-full lg:col-span-2 lg:order-first">
+			<div class="aspect-w-13 aspect-h-7 lg:aspect-none">
+				<div class="flex flex-col justify-start lg:!h-full p-8 pb-6 text-white bg-black">
 					<h1 class="text-2xl leading-tight font-regular"><?php the_title(); ?></h1>
 				</div>
 			</div>
-			<div class="aspect-w-13 aspect-h-7">
-				<div class="flex flex-col justify-end p-8 pb-6 text-black <?php echo esc_attr( $post->post_type === 'resources' ? 'bg-indigo' : 'bg-green' ); ?>">
+			<div class="aspect-w-13 aspect-h-7 lg:aspect-none">
+				<div class="flex flex-col justify-end lg:!h-full p-8 pb-6 text-white <?php echo esc_attr( $post->post_type === 'resources' ? 'bg-indigo' : 'bg-green' ); ?>">
 					<p class="text-xl leading-tight font-light">A project by <br /> <?php the_field( 'name' ); ?></p>
 				</div>
 			</div>
