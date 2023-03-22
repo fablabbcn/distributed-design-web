@@ -10,14 +10,14 @@ $post = isset( $_post ) ? $_post : $post;
 
 $title = array(
 	'post' => get_the_title( get_option('page_for_posts', true) ),
+	'resources' => get_post_type_object( $post_type )->labels->name,
 	'talent' => get_post_type_object( $post_type )->labels->name,
 	'tribe_events' => get_the_title( get_page_template_id( 'archive-events' )[0]->ID ),
-	'resources' => get_post_type_object( $post_type )->labels->name,
 	'page' => get_the_title(),
 )[ get_post_type() ];
 
 $s_classes = array(
-	'article' => array( 'grid gap-8' ),
+	'article' => array( 'grid gap-8 relative' ),
 	'section' => array( 'grid' ),
 	'layout'  => array( 'grid gap-8' ),
 	'columns' => array( 'grid-layout rich-text' ),
@@ -80,6 +80,16 @@ $s_classes = array(
 
 			<?php if ( have_rows( 'post_content' ) ) : ?>
 				<section class="<?php the_classes( $s_classes['article'] ); ?> _[&_p:first-of-type]:font-semibold _[&_p:first-of-type]:text-[112.5%]">
+
+					<?php if ( in_array( $post->post_type, array( 'resources', 'talent', 'tribe_events' ) ) ) : ?>
+						<div data-layout="<?php echo esc_attr( get_row_layout() ); ?>" class="<?php the_classes( $s_classes['layout'] ); ?> lg:absolute">
+							<div class="<?php the_classes( $s_classes['columns'] ); ?>">
+								<div class="grid-layout grid-cols-1 col-span-full lg:col-start-2 lg:col-end-3">
+									<h2 class="!text-xl !font-light">About the <?php echo esc_html( 'tribe_events' === $post->post_type ? 'event' : 'project' ); ?></h2>
+								</div>
+							</div>
+						</div>
+					<?php endif; ?>
 
 					<?php while ( have_rows( 'post_content' ) ) : ?>
 						<?php if ( count( array_filter( the_row() ) ) > 1 ) : ?>

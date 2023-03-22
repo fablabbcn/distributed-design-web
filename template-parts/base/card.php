@@ -23,7 +23,7 @@ $is_post_new = function () {
       <div class="z-10 absolute m-4 ddp-button font-semibold <?php echo $bg_color[get_post_type()]; ?>">New!</div>
     <?php endif; ?>
     <figure class="aspect-w-4 aspect-h-3 bg-black">
-      <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full object-cover opacity-70' ) ); ?>
+      <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full object-cover' ) ); ?>
     </figure>
   </div>
   <div class="grid items-end px-6 py-5 <?php echo $card['theme'] ?: 'bg-white'; ?>">
