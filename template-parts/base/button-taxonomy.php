@@ -13,7 +13,7 @@
 $icon = get_field( 'icon', $term );
 $color = get_field( 'color', $term );
 
-$icon_url = wp_get_attachment_image_url( $icon, 'container-thumbnails', false );
+$icon_url = wp_get_attachment_image_url( $icon, 'icon-thumbnails', false );
 
 ?>
 
