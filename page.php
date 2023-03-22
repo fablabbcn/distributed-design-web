@@ -56,10 +56,8 @@ $section_events = array(
 
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : ?>
-				<?php
-				the_post();
-				get_template_part( 'template-parts/page/content', is_front_page() ? 'frontpage' : 'page' );
-				?>
+				<?php the_post(); ?>
+				<?php get_template_part( 'template-parts/page/content', is_front_page() ? 'frontpage' : 'page' ); ?>
 			<?php endwhile; ?>
 		<?php else : ?>
 			<?php get_template_part( 'template-parts/post/content', 'none' ); ?>
