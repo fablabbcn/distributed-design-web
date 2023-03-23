@@ -7,7 +7,7 @@ $is_link = isset( $button['href'] );
 
 <?php if ( $is_link ) : ?>
   <a
-    class="ddp-button"
+    class="ddp-button <?php echo $button['theme'] ?: ''; ?>"
     href="<?php echo esc_attr( $button['href'] ); ?>"
     target="<?php echo esc_attr( $button['target'] ?? '_self' ); ?>"
   >
@@ -16,7 +16,7 @@ $is_link = isset( $button['href'] );
 
 <?php else : ?>
   <button
-    class="ddp-button"
+    class="ddp-button <?php echo $button['theme'] ?: ''; ?>"
     type="<?php echo esc_attr( $button['type'] ?? 'button' ); ?>"
   >
     <?php echo esc_html( $button['label'] ); ?>

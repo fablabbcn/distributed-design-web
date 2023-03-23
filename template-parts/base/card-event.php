@@ -4,8 +4,14 @@ setup_postdata( $post );
 
 $date_start = tribe_get_start_date( null, false, 'd M' );
 $date_end   = tribe_get_end_date( null, false, 'd M' );
+$city       = tribe_get_venue_object( $post )->city;
 
-$city = tribe_get_venue_object( $post )->city;
+$label = $date_start !== $date_end ? "{$date_start} – {$date_end}, {$city}" : "$date_start, {$city}";
+
+$button = array(
+  'label' => $label,
+  'theme' => 'text-white bg-purple border-purple',
+);
 
 ?>
 
@@ -16,10 +22,13 @@ $city = tribe_get_venue_object( $post )->city;
       <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full object-cover opacity-70' ) ); ?>
     </figure>
   </div>
-  <div class="absolute inset-0 w-full h-full grid items-end p-4 text-white text-center">
-    <p class="text-2xl font-bold line-clamp-3"><?php the_title(); ?></p>
-    <div class="grid">
-      <?php set_query_var( 'button', array( 'label' => $date_start !== $date_end ? "{$date_start} – {$date_end}, {$city}" : "$date_start, {$city}" ) ); ?>
+  <div class="absolute inset-0 w-full h-full flex flex-col p-4 text-white text-center">
+    <div class="grid gap-2 my-auto">
+      <p class="text-2xl font-bold line-clamp-3"><?php the_title(); ?></p>
+      <p class="hidden lg:block lg:line-clamp-1 font-bold uppercase"><?php echo esc_html( $label ); ?></p>
+    </div>
+    <div class="grid lg:hidden">
+      <?php set_query_var( 'button', $button ); ?>
       <?php get_template_part( 'template-parts/base/button' ); ?>
     </div>
   </div>

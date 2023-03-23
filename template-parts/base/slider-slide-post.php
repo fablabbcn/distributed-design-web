@@ -1,19 +1,16 @@
 <?php
-// global $post;
-
-// var_dump( get_the_ID() );
-// setup_postdata( $slide->ID );
-// var_dump( get_the_ID() );
-// var_dump( $slide->ID );
-
-// $post = $slide;
-// setup_postdata( $post );
 
 $thumbnail_id    = get_field( 'featured_alt', $slide->ID ) ?: get_post_thumbnail_id( $slide->ID );
 $focal_point     = get_post_meta( $thumbnail_id, '_wpsmartcrop_image_focus' );
 $thumbnail_attrs = array(
   'class' => 'w-full h-full lg:!w-full lg:!h-full max-h-[50vh] object-cover opacity-70',
   'style' => $focal_point ? "object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%;" : '',
+);
+
+$button = array(
+  'label' => 'Read more',
+  'href' => get_permalink( $slide->ID ),
+  'theme' => 'text-black bg-white',
 );
 
 ?>
@@ -29,8 +26,8 @@ $thumbnail_attrs = array(
     <div class="my-auto">
       <p class="text-2xl font-semibold line-clamp-3"><?php echo get_the_title( $slide->ID ); ?></p>
     </div>
-    <div class="text-black bg-white rounded-full">
-      <?php set_query_var( 'button', array( 'label' => 'Read more', 'href' => get_permalink( $slide->ID ) ) ); ?>
+    <div class="">
+      <?php set_query_var( 'button', $button ); ?>
       <?php get_template_part( 'template-parts/base/button' ); ?>
     </div>
   </div>
