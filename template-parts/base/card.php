@@ -27,7 +27,7 @@ $is_post_new = function () {
     </figure>
   </div>
   <div class="grid items-end px-6 py-5 <?php echo $card['theme'] ?: 'bg-white'; ?>">
-    <p class="text-xl font-semibold line-clamp-1"><?php the_title(); ?></p>
+    <p class="line-clamp-1"><?php the_title(); ?></p>
     <!-- <p class="text-xl font-regular line-clamp-1"><?php the_title(); ?></p> -->
   </div>
 </a>
