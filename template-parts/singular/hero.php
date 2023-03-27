@@ -6,18 +6,28 @@ $slider = array(
 	'isRounded'  => false,
 );
 
+$className = array(
+	'header' => array(
+		is_page() ? 'bg-white' : '',
+	),
+	'media' => array(
+		in_array( $post->post_type, array( 'resources', 'talent' ) ) ? 'lg:col-span-5' : '',
+		is_page() ? 'rounded-br-[8rem] lg:rounded-br-[16rem] overflow-hidden' : '',
+	),
+);
+
 ?>
 
 
-<div class="bleed grid-layout gap-0">
+<header class="bleed grid-layout gap-0 <?php echo the_classes( $className['header'] ); ?>">
 
 	<?php if ( get_field( 'featured_image_alt' ) ) : ?>
-		<div class="col-span-full <?php echo esc_attr( in_array( $post->post_type, array( 'resources', 'talent' ) ) ? 'lg:col-span-5' : '' ); ?>">
+		<div class="col-span-full <?php echo the_classes( $className['media'] ); ?>">
 			<?php set_query_var( 'slider', $slider ); ?>
 			<?php require locate_template( 'template-parts/base/slider.php' ); ?>
 		</div>
 	<?php else : ?>
-		<div class="col-span-full <?php echo esc_attr( in_array( $post->post_type, array( 'resources', 'talent' ) ) ? 'lg:col-span-5' : '' ); ?>">
+		<div class="col-span-full <?php echo the_classes( $className['media'] ); ?>">
 			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full max-h-[50vh] object-cover' ) ); ?>
 		</div>
 	<?php endif; ?>
@@ -37,4 +47,4 @@ $slider = array(
 		</div>
 	<?php endif; ?>
 
-</div>
+</header>

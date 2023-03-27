@@ -11,7 +11,7 @@ $sections = get_sub_field( 'sections' ) ?: array();
 
 <section class="grid-layout gap-6">
 	<header class="col-span-full lg:col-span-1">
-		<h2 class="text-xl font-light"><?php echo esc_html( $title ); ?></h2>
+		<h2 class="text-xl lg:text-3xl font-light"><?php echo esc_html( $title ); ?></h2>
 	</header>
 
 	<div class="col-span-full lg:col-span-6">
@@ -30,7 +30,7 @@ $sections = get_sub_field( 'sections' ) ?: array();
 
 					<div
 						class="grid gap-8 col-span-3 lg:col-span-full py-6 border-y lg:border-b-0"
-						x-data="{ count: <?php echo count( $section['items'] ?: array() ); ?>, maxCount: 10, isCollapsed: true }"
+						x-data="{ count: <?php echo count( $section['items'] ?: array() ); ?>, maxCount: 14, isCollapsed: true }"
 					>
 						<?php if ( array_key_exists( 'items', $section ) && $section['items'] ) : ?>
 							<ol class="columns-2 [column-gap-[1rem]] space-y-2">

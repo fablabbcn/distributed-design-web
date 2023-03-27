@@ -1,6 +1,6 @@
 <?php
 /**
- * ✅ Template part for Features List layout
+ * ✅ Template part for Cards List layout
  */
 
 $_items = get_sub_field( 'items' ) ?: array();
@@ -23,18 +23,18 @@ $description = get_sub_field( 'description' );
 		<?php endif; ?>
 	</div>
 
-	<div class="col-span-full lg:col-span-4">
+	<div class="col-span-full lg:col-span-full">
 		<ul class="grid-layout grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-8 items-baseline">
 			<?php foreach ( $_items as $_item ) : ?>
 
-				<li class="grid gap-4">
-					<div class="grid gap-2">
-						<figure class="rounded-2xl overflow-hidden">
+				<li class="flex flex-col gap-4 h-full p-6 lg:p-8 bg-white rounded-2xl">
+					<div class="flex flex-col gap-2">
+						<figure class="w-24 h-24 mx-auto">
 							<?php echo wp_get_attachment_image( $_item['image'], 'thumbnail', false, array( 'class' => 'w-full' ) ); ?>
 						</figure>
 					</div>
-					<div class="grid gap-2">
-						<div class="font-semibold"><?php echo esc_html( $_item['title'] ); ?></div>
+					<div class="flex flex-col gap-2 lg:gap-4">
+						<div class="text-center text-lg font-semibold"><?php echo esc_html( $_item['title'] ); ?></div>
 						<div class=""><?php echo wp_kses_post( $_item['text'] ); ?></div>
 					</div>
 				</li>

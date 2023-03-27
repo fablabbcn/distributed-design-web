@@ -5,54 +5,14 @@
 
 get_header();
 
-
-$section_talent = array(
-	'posts' => get_posts(
-		array(
-			'post_type'      => 'talent',
-			'posts_per_page' => '3',
-		),
-	),
-);
-
-$section_blog = array(
-	'posts' => new WP_Query(
-		array(
-			'post_type'      => 'post',
-			'posts_per_page' => '3',
-		),
-	),
-);
-
-$section_events = array(
-	'posts' => new WP_Query(
-		array(
-			'suppress_filters' => true,
-			'post_type'        => 'tribe_events',
-			'posts_per_page'   => 2,
-			'order'            => 'DESC',
-			'orderby'          => 'meta_value',
-			'meta_key'         => '_EventStartDate',
-			'meta_query'       => array(
-				array(
-					'key'     => '_EventEndDate',
-					'value'   => date('Y-m-d'),
-					'compare' => false ? '<=' : '>=',
-					'type'    => 'NUMERIC,'
-				)
-			),
-		)
-	),
-);
-
 ?>
 
 
 <main class="container flex-grow">
+	<?php set_query_var( 'title', get_the_title() ); ?>
+	<?php get_template_part( is_front_page() ? 'template-parts/blocks/header' : 'template-parts/page/header' ); ?>
 
-	<article class="grid gap-4 p-8">
-		<?php set_query_var( 'title', get_the_title() ); ?>
-		<?php get_template_part( is_front_page() ? 'template-parts/blocks/header' : 'template-parts/page/header' ); ?>
+	<article class="grid gap-12 lg:gap-24 px-8 py-12">
 
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : ?>
@@ -64,16 +24,56 @@ $section_events = array(
 		<?php endif; ?>
 
 		<?php if ( is_front_page() ) : ?>
-			<section class="relative grid grid-cols-1 gap-8 lg:gap-12 py-8 lg:py-16 bg-white">
+			<?php
+			$section_talent = array(
+				'posts' => get_posts(
+					array(
+						'post_type'      => 'talent',
+						'posts_per_page' => '3',
+					),
+				),
+			);
+
+			$section_blog = array(
+				'posts' => new WP_Query(
+					array(
+						'post_type'      => 'post',
+						'posts_per_page' => '3',
+					),
+				),
+			);
+
+			$section_events = array(
+				'posts' => new WP_Query(
+					array(
+						'suppress_filters' => true,
+						'post_type'        => 'tribe_events',
+						'posts_per_page'   => 2,
+						'order'            => 'DESC',
+						'orderby'          => 'meta_value',
+						'meta_key'         => '_EventStartDate',
+						'meta_query'       => array(
+							array(
+								'key'     => '_EventEndDate',
+								'value'   => date('Y-m-d'),
+								'compare' => false ? '<=' : '>=',
+								'type'    => 'NUMERIC,'
+							)
+						),
+					)
+				),
+			);
+			?>
+			<section class="relative grid grid-cols-1 gap-12 lg:gap-24 -mb-8 lg:-mb-12 py-12 lg:py-24 bg-white">
 				<div class="-z-10 absolute inset-0 bleed bg-[inherit]"></div>
 
 				<header class="text-center">
-					<h2 class="text-4xl font-thin">Stay updated!</h2>
+					<h2 class="text-4xl lg:text-5xl font-thin">Stay updated!</h2>
 				</header>
 
 				<section class="grid gap-6">
 					<header>
-						<h3 class="text-xl font-light">Featured talents</h3>
+						<h3 class="text-xl lg:text-3xl font-light">Featured talents</h3>
 					</header>
 					<div class="grid rounded-2xl overflow-hidden">
 						<?php set_query_var( 'slider', array( 'slides' => $section_talent['posts'], 'component' => 'template-parts/base/slider-slide-post' ) ); ?>
@@ -87,7 +87,7 @@ $section_events = array(
 
 				<section class="grid gap-6">
 					<header>
-						<h3 class="text-xl font-light">Latest blogposts</h3>
+						<h3 class="text-xl lg:text-3xl font-light">Latest blogposts</h3>
 					</header>
 					<ul class="grid-layout lg:grid-cols-3">
 						<?php if ( $section_blog['posts']->have_posts() ) : ?>
@@ -106,7 +106,7 @@ $section_events = array(
 
 				<section class="grid gap-6">
 					<header>
-						<h3 class="text-xl font-light">Upcoming events</h3>
+						<h3 class="text-xl lg:text-3xl font-light">Upcoming events</h3>
 					</header>
 					<ul class="grid-layout grid-cols-2">
 						<?php if ( $section_events['posts']->have_posts() ) : ?>

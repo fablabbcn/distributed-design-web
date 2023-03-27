@@ -8,7 +8,8 @@ $_description = get_sub_field( 'description' );
 
 ?>
 
-<div class="">
+
+<header class="">
 
 	<?php if ( $_title ) : ?>
 		<div class=""><?php echo wp_kses_post( $_title ); ?></div>
@@ -18,4 +19,4 @@ $_description = get_sub_field( 'description' );
 		<div class=""><?php echo wp_kses_post( $_description ); ?></div>
 	<?php endif; ?>
 
-</div>
+</header>

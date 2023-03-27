@@ -82,7 +82,7 @@ $s_classes = array(
 				<section class="<?php the_classes( $s_classes['article'] ); ?> _[&_p:first-of-type]:font-semibold _[&_p:first-of-type]:text-[112.5%]">
 
 					<?php if ( in_array( $post->post_type, array( 'resources', 'talent', 'tribe_events' ) ) ) : ?>
-						<div data-layout="<?php echo esc_attr( get_row_layout() ); ?>" class="<?php the_classes( $s_classes['layout'] ); ?> lg:absolute">
+						<div data-layout="<?php echo esc_attr( get_row_layout() ); ?>" class="<?php the_classes( $s_classes['layout'] ); ?> lg:absolute lg:w-full">
 							<div class="<?php the_classes( $s_classes['columns'] ); ?>">
 								<div class="grid-layout grid-cols-1 col-span-full lg:col-start-2 lg:col-end-3">
 									<h2 class="!text-xl !font-light">About the <?php echo esc_html( 'tribe_events' === $post->post_type ? 'event' : 'project' ); ?></h2>
@@ -143,7 +143,7 @@ $s_classes = array(
 
 						<div class="<?php the_classes( $s_classes['columns'] ); ?>">
 							<div class="col-span-full lg:col-start-2 lg:col-end-3">
-								<p class="text-xl font-light">Blogpost credits</p>
+								<p class="text-xl lg:text-3xl font-light">Blogpost credits</p>
 							</div>
 							<div class="col-span-full lg:col-start-3 lg:col-end-7">
 								<?php set_query_var( 'list', $definitions ); ?>
@@ -189,7 +189,7 @@ $s_classes = array(
 				?>
 				<nav class="">
 					<div data-layout="post-latest" class="<?php the_classes( $s_classes['layout'] ); ?>">
-						<p class="text-xl font-light"><?php echo esc_html( $related['title'] ); ?></p>
+						<p class="text-xl lg:text-3xl font-light"><?php echo esc_html( $related['title'] ); ?></p>
 						<ul class="grid-layout lg:grid-cols-3">
 							<?php while ( $related['posts']->have_posts() ) : ?>
 								<?php $related['posts']->the_post(); ?>

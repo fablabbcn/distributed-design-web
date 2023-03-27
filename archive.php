@@ -49,7 +49,7 @@ $section = array(
 		</nav>
 
 		<nav class="grid gap-8 text-center">
-			<p class="text-xl font-light">Filter and customize your search</p>
+			<p class="text-xl lg:text-3xl font-light">Filter and customize your search</p>
 			<?php echo wp_kses_post( do_shortcode( '[facetwp facet="archive_post"]' ) ); ?>
 		</nav>
 
