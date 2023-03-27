@@ -34,7 +34,7 @@ $slider  = array(
 		<div class="z-10 absolute inset-0 bg-yellow pointer-events-none"></div>
 		<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-yellow via-transparent to-transparent"></div> -->
 		<div class="z-30 absolute inset-0 bg-gradient-corner-yellow pointer-events-none"></div>
-		<div class="z-20 relative bg-black rounded-tl-[8rem] overflow-hidden">
+		<div class="z-20 relative bg-gray rounded-tl-[8rem] lg:rounded-tl-[16rem] overflow-hidden">
 			<?php set_query_var( 'slider', $slider ); ?>
 			<?php get_template_part( 'template-parts/base/slider' ); ?>
 		</div>

@@ -41,7 +41,7 @@ $section = array(
 				<div class="z-10 absolute inset-0 <?php echo $section['color']; ?>"></div>
 				<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-blue via-transparent to-transparent"></div> -->
 				<div class="z-30 absolute inset-0 bg-gradient-corner-blue pointer-events-none"></div>
-				<div class="z-20 relative bg-black rounded-br-[8rem] overflow-hidden">
+				<div class="z-20 relative bg-black rounded-br-[8rem] lg:rounded-br-[16rem] overflow-hidden">
 					<?php set_query_var( 'slider', array( 'slides' => $section['posts'], 'component' => 'template-parts/base/slider-slide-post' ) ); ?>
 					<?php get_template_part( 'template-parts/base/slider' ); ?>
 				</div>
