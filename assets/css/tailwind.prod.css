@@ -1,19 +1,19 @@
-@font-face { font-family: Aileron; font-weight: 100; font-style: normal; src: url('../fonts/aileron/Aileron-UltraLight-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 200; font-style: normal; src: url('../fonts/aileron/Aileron-Thin-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 300; font-style: normal; src: url('../fonts/aileron/Aileron-Light-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 400; font-style: normal; src: url('../fonts/aileron/Aileron-Regular-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 600; font-style: normal; src: url('../fonts/aileron/Aileron-SemiBold-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 700; font-style: normal; src: url('../fonts/aileron/Aileron-Bold-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 800; font-style: normal; src: url('../fonts/aileron/Aileron-Heavy-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 900; font-style: normal; src: url('../fonts/aileron/Aileron-Black-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 100; font-style: italic; src: url('../fonts/aileron/Aileron-UltraLightItalic-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 200; font-style: italic; src: url('../fonts/aileron/Aileron-ThinItalic-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 300; font-style: italic; src: url('../fonts/aileron/Aileron-LightItalic-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 400; font-style: italic; src: url('../fonts/aileron/Aileron-Italic-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 600; font-style: italic; src: url('../fonts/aileron/Aileron-SemiBoldItalic-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 700; font-style: italic; src: url('../fonts/aileron/Aileron-BoldItalic-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 800; font-style: italic; src: url('../fonts/aileron/Aileron-HeavyItalic-webfont.woff') format('woff'); }
-@font-face { font-family: Aileron; font-weight: 900; font-style: italic; src: url('../fonts/aileron/Aileron-BlackItalic-webfont.woff') format('woff'); }
+@font-face { font-family: Aileron; font-weight: 100; font-style: normal; src: url('../fonts/aileron/Aileron-UltraLight.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 200; font-style: normal; src: url('../fonts/aileron/Aileron-Thin.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 300; font-style: normal; src: url('../fonts/aileron/Aileron-Light.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 400; font-style: normal; src: url('../fonts/aileron/Aileron-Regular.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 600; font-style: normal; src: url('../fonts/aileron/Aileron-SemiBold.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 700; font-style: normal; src: url('../fonts/aileron/Aileron-Bold.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 800; font-style: normal; src: url('../fonts/aileron/Aileron-Heavy.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 900; font-style: normal; src: url('../fonts/aileron/Aileron-Black.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 100; font-style: italic; src: url('../fonts/aileron/Aileron-UltraLightItalic.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 200; font-style: italic; src: url('../fonts/aileron/Aileron-ThinItalic.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 300; font-style: italic; src: url('../fonts/aileron/Aileron-LightItalic.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 400; font-style: italic; src: url('../fonts/aileron/Aileron-Italic.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 600; font-style: italic; src: url('../fonts/aileron/Aileron-SemiBoldItalic.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 700; font-style: italic; src: url('../fonts/aileron/Aileron-BoldItalic.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 800; font-style: italic; src: url('../fonts/aileron/Aileron-HeavyItalic.woff2') format('woff2'); }
+@font-face { font-family: Aileron; font-weight: 900; font-style: italic; src: url('../fonts/aileron/Aileron-BlackItalic.woff2') format('woff2'); }
 /*
 ! tailwindcss v3.2.6 | MIT License | https://tailwindcss.com
 */
@@ -653,17 +653,19 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .my-auto { margin-top: auto; margin-bottom: auto; }
 .-mb-4 { margin-bottom: -1rem; }
 .-mb-5 { margin-bottom: -1.25rem; }
+.-mb-8 { margin-bottom: -2rem; }
 .-mb-px { margin-bottom: -1px; }
 .-mr-4 { margin-right: -1rem; }
 .-mr-\[6\.25vw\] { margin-right: -6.25vw; }
 .-mr-px { margin-right: -1px; }
-.-mt-4 { margin-top: -1rem; }
+.-mt-12 { margin-top: -3rem; }
 .-mt-\[12\.5vw\] { margin-top: -12.5vw; }
 .-mt-px { margin-top: -1px; }
 .mb-0 { margin-bottom: 0px; }
 .mb-10 { margin-bottom: 2.5rem; }
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-20 { margin-bottom: 5rem; }
+.mb-4 { margin-bottom: 1rem; }
 .mb-6 { margin-bottom: 1.5rem; }
 .mb-auto { margin-bottom: auto; }
 .ml-auto { margin-left: auto; }
@@ -673,10 +675,6 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .mt-20 { margin-top: 5rem; }
 .mt-4 { margin-top: 1rem; }
 .mt-auto { margin-top: auto; }
-.mb-8 { margin-bottom: 2rem; }
-.mb-4 { margin-bottom: 1rem; }
-.-mt-12 { margin-top: -3rem; }
-.-mb-8 { margin-bottom: -2rem; }
 .block { display: block; }
 .flex { display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -ms-flexbox; display: flex; }
 .inline-flex { display: -webkit-inline-box; display: -webkit-inline-flex; display: -moz-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
@@ -686,24 +684,22 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .h-0 { height: 0px; }
 .h-10 { height: 2.5rem; }
 .h-12 { height: 3rem; }
+.h-24 { height: 6rem; }
 .h-4 { height: 1rem; }
 .h-6 { height: 1.5rem; }
 .h-8 { height: 2rem; }
 .h-\[50vw\] { height: 50vw; }
 .h-full { height: 100%; }
 .h-screen { height: 100vh; }
-.h-24 { height: 6rem; }
 .max-h-10 { max-height: 2.5rem; }
 .max-h-8 { max-height: 2rem; }
 .max-h-\[50vh\] { max-height: 50vh; }
-.max-h-40 { max-height: 10rem; }
-.max-h-32 { max-height: 8rem; }
-.max-h-24 { max-height: 6rem; }
 .min-h-screen { min-height: 100vh; }
 .w-1\/5 { width: 20%; }
 .w-10 { width: 2.5rem; }
 .w-12 { width: 3rem; }
 .w-20 { width: 5rem; }
+.w-24 { width: 6rem; }
 .w-3\/5 { width: 60%; }
 .w-4 { width: 1rem; }
 .w-6 { width: 1.5rem; }
@@ -712,7 +708,6 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .w-auto { width: auto; }
 .w-full { width: 100%; }
 .w-screen { width: 100vw; }
-.w-24 { width: 6rem; }
 .max-w-3xl { max-width: 48rem; }
 .max-w-screen-md { max-width: 768px; }
 .flex-1 { -webkit-box-flex: 1; -webkit-flex: 1 1 0%; -moz-box-flex: 1; -ms-flex: 1 1 0%; flex: 1 1 0%; }
@@ -765,7 +760,6 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .rounded-full { -webkit-border-radius: 9999px; -moz-border-radius: 9999px; border-radius: 9999px; }
 .rounded-br-\[8rem\] { -webkit-border-bottom-right-radius: 8rem; -moz-border-radius-bottomright: 8rem; border-bottom-right-radius: 8rem; }
 .rounded-tl-\[8rem\] { -webkit-border-top-left-radius: 8rem; -moz-border-radius-topleft: 8rem; border-top-left-radius: 8rem; }
-.rounded-br-\[16rem\] { -webkit-border-bottom-right-radius: 16rem; -moz-border-radius-bottomright: 16rem; border-bottom-right-radius: 16rem; }
 .border { border-width: 1px; }
 .border-y { border-top-width: 1px; border-bottom-width: 1px; }
 .border-b { border-bottom-width: 1px; }
@@ -815,8 +809,8 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .p-20 { padding: 5rem; }
 .p-4 { padding: 1rem; }
 .p-40 { padding: 10rem; }
-.p-8 { padding: 2rem; }
 .p-6 { padding: 1.5rem; }
+.p-8 { padding: 2rem; }
 .px-10 { padding-left: 2.5rem; padding-right: 2.5rem; }
 .px-20 { padding-left: 5rem; padding-right: 5rem; }
 .px-4 { padding-left: 1rem; padding-right: 1rem; }
@@ -844,10 +838,10 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
 .text-5xl { font-size: 3rem; line-height: 1; }
 .text-base { font-size: 1rem; line-height: 1.5rem; }
+.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
 .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
 .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
 .text-xs { font-size: 0.75rem; line-height: 1rem; }
-.text-lg { font-size: 1.125rem; line-height: 1.75rem; }
 .\!font-light { font-weight: 300 !important; }
 .font-bold { font-weight: 700; }
 .font-light { font-weight: 300; }
@@ -941,8 +935,6 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .md\:opacity-100 { opacity: 1; } }
 @media (min-width: 1024px) {
  .lg\:absolute { position: absolute; }
- .lg\:-inset-y-16 { top: -4rem; bottom: -4rem; }
- .lg\:-inset-y-20 { top: -5rem; bottom: -5rem; }
  .lg\:-inset-y-24 { top: -6rem; bottom: -6rem; }
  .lg\:right-\[calc\(100\%\+1rem\)\] { right: -webkit-calc(100% + 1rem); right: -moz-calc(100% + 1rem); right: calc(100% + 1rem); }
  .lg\:order-first { -webkit-box-ordinal-group: -9998; -webkit-order: -9999; -moz-box-ordinal-group: -9998; -ms-flex-order: -9999; order: -9999; }
@@ -954,7 +946,6 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .lg\:col-span-5 { grid-column: span 5 / span 5; }
  .lg\:col-span-6 { grid-column: span 6 / span 6; }
  .lg\:col-span-full { grid-column: 1 / -1; }
- .lg\:col-span-7 { grid-column: span 7 / span 7; }
  .lg\:col-start-2 { grid-column-start: 2; }
  .lg\:col-start-3 { grid-column-start: 3; }
  .lg\:col-start-4 { grid-column-start: 4; }
@@ -966,12 +957,10 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .lg\:-m-40 { margin: -10rem; }
  .lg\:m-40 { margin: 10rem; }
  .lg\:m-8 { margin: 2rem; }
- .lg\:my-16 { margin-top: 4rem; margin-bottom: 4rem; }
- .lg\:my-20 { margin-top: 5rem; margin-bottom: 5rem; }
  .lg\:my-24 { margin-top: 6rem; margin-bottom: 6rem; }
- .lg\:mt-12 { margin-top: 3rem; }
- .lg\:-mt-24 { margin-top: -6rem; }
  .lg\:-mb-12 { margin-bottom: -3rem; }
+ .lg\:-mt-24 { margin-top: -6rem; }
+ .lg\:mt-12 { margin-top: 3rem; }
  .lg\:\!block { display: block !important; }
  .lg\:block { display: block; }
  .lg\:flex { display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -ms-flexbox; display: flex; }
@@ -991,19 +980,17 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .lg\:w-full { width: 100%; }
  .lg\:grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+ .lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
  .lg\:grid-cols-7 { grid-template-columns: repeat(7, minmax(0, 1fr)); }
  .lg\:grid-cols-8 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
  .lg\:grid-cols-\[1fr_auto\] { grid-template-columns: 1fr auto; }
- .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
- .lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
  .lg\:grid-rows-1 { grid-template-rows: repeat(1, minmax(0, 1fr)); }
  .lg\:flex-row { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -moz-box-orient: horizontal; -moz-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
  .lg\:items-baseline { -webkit-box-align: baseline; -webkit-align-items: baseline; -moz-box-align: baseline; -ms-flex-align: baseline; align-items: baseline; }
  .lg\:gap-0 { gap: 0px; }
  .lg\:gap-12 { gap: 3rem; }
- .lg\:gap-4 { gap: 1rem; }
- .lg\:gap-8 { gap: 2rem; }
  .lg\:gap-24 { gap: 6rem; }
+ .lg\:gap-4 { gap: 1rem; }
  .lg\:rounded-br-\[16rem\] { -webkit-border-bottom-right-radius: 16rem; -moz-border-radius-bottomright: 16rem; border-bottom-right-radius: 16rem; }
  .lg\:border-b-0 { border-bottom-width: 0px; }
  .lg\:border-l { border-left-width: 1px; }
@@ -1016,19 +1003,16 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .lg\:p-8 { padding: 2rem; }
  .lg\:px-40 { padding-left: 10rem; padding-right: 10rem; }
  .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
- .lg\:py-16 { padding-top: 4rem; padding-bottom: 4rem; }
  .lg\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
- .lg\:py-4 { padding-top: 1rem; padding-bottom: 1rem; }
  .lg\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
+ .lg\:py-4 { padding-top: 1rem; padding-bottom: 1rem; }
  .lg\:pr-16 { padding-right: 4rem; }
  .lg\:pt-0 { padding-top: 0px; }
  .lg\:pt-8 { padding-top: 2rem; }
- .lg\:text-base { font-size: 1rem; line-height: 1.5rem; }
- .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
  .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
  .lg\:text-5xl { font-size: 3rem; line-height: 1; }
+ .lg\:text-base { font-size: 1rem; line-height: 1.5rem; }
  .lg\:font-normal { font-weight: 400; }
- .lg\:uppercase { text-transform: uppercase; }
  .lg\:line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; } }
 @media (min-width: 1280px) {
  .xl\:order-first { -webkit-box-ordinal-group: -9998; -webkit-order: -9999; -moz-box-ordinal-group: -9998; -ms-flex-order: -9999; order: -9999; }
