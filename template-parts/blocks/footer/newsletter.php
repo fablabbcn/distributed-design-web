@@ -15,7 +15,7 @@ $n_classes = array(
 	<div class="col-span-full lg:col-span-3">
 		<div class="grid-layout grid-cols-[1fr_auto] lg:grid-cols-1 items-end lg:pr-16">
 			<!-- <p class="text-4xl leading-none font-thin"><?php echo esc_html( $footer_cta['title'] ); ?></p> -->
-			<p class="text-4xl leading-none font-thin">Join our community!</p>
+			<p class="text-4xl leading-none font-extralight">Join our community!</p>
 			<p class="text-xl leading-tight font-light">Sign up to our newsletter and stay updated on the latest Distributed Design news</p>
 		</div>
 	</div>
@@ -34,7 +34,7 @@ $n_classes = array(
 
 				<div class="">
 					<label class="flex items-center">
-						<input class="w-4 h-4 mx-4" type="checkbox" name="gdpr[37]" required>
+						<input class="w-4 h-4 mx-4 text-black border-none rounded-sm" type="checkbox" name="gdpr[37]" required>
 						<span class="<?php the_classes( $n_classes['checkbox'] ); ?>"><?php echo wp_kses_post( $footer_cta['acceptance_text'] ); ?></span>
 					</label>
 				</div>
