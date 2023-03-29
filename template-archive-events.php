@@ -2,10 +2,13 @@
 
 /* Template Name: Events Archive */
 
+$post->post_type = 'tribe_events';
+
 query_posts( array(
+	'facetwp'          => true,
 	'suppress_filters' => true,
 	'post_type'        => 'tribe_events',
-	'posts_per_page'   => -1,
+	// 'posts_per_page'   => -1,
 	'order'            => 'desc',
 	'orderby'          => 'meta_value',
 	'meta_key'         => '_EventStartDate',

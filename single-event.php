@@ -8,9 +8,10 @@
 $_post = $post;
 
 query_posts( array(
+	'facetwp'        => true,
 	// 'suppress_filters' => true,
 	// 'post_type'        => 'tribe_events',
-	'posts_per_page'   => 1,
+	'posts_per_page' => 1,
 ) );
 
 require_once 'single.php';

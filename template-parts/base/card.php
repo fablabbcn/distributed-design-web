@@ -10,9 +10,14 @@ $bg_color = array(
 $is_post_new = function () {
   $post_date = get_the_date( 'U' );
   $current_date = current_time( 'timestamp' );
-  $days = floor( ($current_date - $post_date) / ( 60 * 60 * 24 ) );
+  $days = floor( ($current_date - $post_date) / (60 * 60 * 24) );
   return $days <= 7;
 };
+
+$image = get_post_thumbnail_id() ?: array_filter(
+  get_field( 'featured_image_alt' ) ?: array(),
+  fn ( $image ) => $image['type'] === 'image',
+)[0]['id'];
 
 ?>
 
@@ -23,7 +28,7 @@ $is_post_new = function () {
       <div class="z-10 absolute m-4 ddp-button font-semibold <?php echo $bg_color[get_post_type()]; ?>">New!</div>
     <?php endif; ?>
     <figure class="aspect-w-4 aspect-h-3 bg-black">
-      <?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full object-cover' ) ); ?>
+      <?php echo wp_get_attachment_image( $image, 'post-thumbnail', false, array( 'class' => 'w-full h-full object-cover' ) ); ?>
     </figure>
   </div>
   <div class="grid items-end px-6 py-5 <?php echo $card['theme'] ?: 'bg-white'; ?>">

@@ -50,7 +50,7 @@ $section = array(
 
 		<nav class="grid gap-8 text-center">
 			<p class="text-xl lg:text-3xl font-light">Filter and customize your search</p>
-			<?php echo wp_kses_post( do_shortcode( '[facetwp facet="archive_post"]' ) ); ?>
+			<?php echo wp_kses_post( do_shortcode( '[facetwp facet="archive_' . get_post_type() . '"]' ) ); ?>
 		</nav>
 
 		<?php if ( $section['facet'] ) : ?>

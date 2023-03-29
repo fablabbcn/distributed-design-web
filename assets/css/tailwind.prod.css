@@ -613,10 +613,9 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .relative { position: relative; }
 .sticky { position: -webkit-sticky; position: sticky; }
 .inset-0 { top: 0px; right: 0px; bottom: 0px; left: 0px; }
+.-inset-y-16 { top: -4rem; bottom: -4rem; }
 .-inset-y-8 { top: -2rem; bottom: -2rem; }
 .inset-x-0 { left: 0px; right: 0px; }
-.-inset-y-12 { top: -3rem; bottom: -3rem; }
-.-inset-y-16 { top: -4rem; bottom: -4rem; }
 .right-0 { right: 0px; }
 .top-0 { top: 0px; }
 .top-\[-48px\] { top: -48px; }
@@ -650,11 +649,9 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .mx-4 { margin-left: 1rem; margin-right: 1rem; }
 .mx-5 { margin-left: 1.25rem; margin-right: 1.25rem; }
 .mx-auto { margin-left: auto; margin-right: auto; }
-.my-4 { margin-top: 1rem; margin-bottom: 1rem; }
-.my-8 { margin-top: 2rem; margin-bottom: 2rem; }
-.my-auto { margin-top: auto; margin-bottom: auto; }
-.my-12 { margin-top: 3rem; margin-bottom: 3rem; }
 .my-16 { margin-top: 4rem; margin-bottom: 4rem; }
+.my-4 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-auto { margin-top: auto; margin-bottom: auto; }
 .-mb-4 { margin-bottom: -1rem; }
 .-mb-5 { margin-bottom: -1.25rem; }
 .-mb-8 { margin-bottom: -2rem; }
@@ -669,7 +666,6 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .mb-10 { margin-bottom: 2.5rem; }
 .mb-2 { margin-bottom: 0.5rem; }
 .mb-20 { margin-bottom: 5rem; }
-.mb-4 { margin-bottom: 1rem; }
 .mb-6 { margin-bottom: 1.5rem; }
 .mb-auto { margin-bottom: auto; }
 .ml-auto { margin-left: auto; }
@@ -964,8 +960,8 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .lg\:my-24 { margin-top: 6rem; margin-bottom: 6rem; }
  .lg\:-mb-12 { margin-bottom: -3rem; }
  .lg\:-mt-24 { margin-top: -6rem; }
- .lg\:mt-12 { margin-top: 3rem; }
  .lg\:mb-4 { margin-bottom: 1rem; }
+ .lg\:mt-12 { margin-top: 3rem; }
  .lg\:\!block { display: block !important; }
  .lg\:block { display: block; }
  .lg\:flex { display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -ms-flexbox; display: flex; }
