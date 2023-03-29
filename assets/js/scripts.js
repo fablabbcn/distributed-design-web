@@ -79,10 +79,17 @@
       //   crossFade: true
       // },
 
-      pagination: true,
-      navigation: true,
-      // scrollbar: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
     })
+
+    console.log(swiper)
 
 
     // $('.intro-slider, .post-slider').slick({

@@ -3,6 +3,8 @@
 acf_form_head();
 get_header();
 
+$facet = do_shortcode( '[facetwp template="archive_' . get_post_type() . '"]' );
+
 $section = array(
 	'title' => array(
 		'post' => get_the_title( get_option('page_for_posts', true) ),
@@ -11,7 +13,6 @@ $section = array(
 		'resources' => post_type_archive_title( '', false ),
 		'page' => get_the_title(),
 	)[ get_post_type() ],
-	'facet' => do_shortcode( '[facetwp template="archive_' . get_post_type() . '"]' ),
 	'color' => array(
 		'post' => 'bg-blue',
 		'talent' => 'bg-yellow',
@@ -19,12 +20,15 @@ $section = array(
 		'resources' => 'bg-red',
 		'page' => 'bg-purple',
 	)[ get_post_type() ],
-	'posts' => get_posts(
-		array(
-			'post_type'      => get_post_type(),
-			'posts_per_page' => '5',
-		),
-	),
+);
+
+$slider = array(
+	'slides'     => get_posts(array(
+		'post_type'      => get_post_type(),
+		'posts_per_page' => '5',
+	)),
+	'component'  => 'template-parts/base/slider-slide-post',
+	'pagination' => true,
 );
 
 ?>
@@ -42,7 +46,7 @@ $section = array(
 				<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-blue via-transparent to-transparent"></div> -->
 				<div class="z-30 absolute inset-0 bg-gradient-corner-blue pointer-events-none"></div>
 				<div class="z-20 relative bg-black rounded-br-[8rem] lg:rounded-br-[16rem] overflow-hidden">
-					<?php set_query_var( 'slider', array( 'slides' => $section['posts'], 'component' => 'template-parts/base/slider-slide-post' ) ); ?>
+					<?php set_query_var( 'slider', $slider ); ?>
 					<?php get_template_part( 'template-parts/base/slider' ); ?>
 				</div>
 			</div>
@@ -53,8 +57,8 @@ $section = array(
 			<?php echo wp_kses_post( do_shortcode( '[facetwp facet="archive_' . get_post_type() . '"]' ) ); ?>
 		</nav>
 
-		<?php if ( $section['facet'] ) : ?>
-			<?php echo wp_kses_post( $section['facet'] ); ?>
+		<?php if ( $facet ) : ?>
+			<?php echo wp_kses_post( $facet ); ?>
 
 		<?php else : ?>
 			<section class="">
