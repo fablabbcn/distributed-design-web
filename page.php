@@ -82,7 +82,7 @@ get_header();
 						<?php get_template_part( 'template-parts/base/slider' ); ?>
 					</div>
 					<footer class="text-center">
-						<?php set_query_var( 'button', array( 'label' => 'See all talents' ) ); ?>
+						<?php set_query_var( 'button', array( 'label' => 'See all talents', 'href' => get_post_type_archive_link( 'talent' ) ) ); ?>
 						<?php get_template_part( 'template-parts/base/button' ); ?>
 					</footer>
 				</section>
@@ -101,7 +101,7 @@ get_header();
 						<?php endif; ?>
 					</ul>
 					<footer class="text-center">
-						<?php set_query_var( 'button', array( 'label' => 'See all posts' ) ); ?>
+						<?php set_query_var( 'button', array( 'label' => 'See all posts', 'href' => get_post_type_archive_link( 'post' ) ) ); ?>
 						<?php get_template_part( 'template-parts/base/button' ); ?>
 					</footer>
 				</section>
@@ -118,7 +118,7 @@ get_header();
 						<?php endif; ?>
 					</ul>
 					<footer class="text-center">
-						<?php set_query_var( 'button', array( 'label' => 'See all events' ) ); ?>
+						<?php set_query_var( 'button', array( 'label' => 'See all events', 'href' => get_permalink( get_page_template_id( 'archive-events' )[0] ) ) ); ?>
 						<?php get_template_part( 'template-parts/base/button' ); ?>
 					</footer>
 				</section>
