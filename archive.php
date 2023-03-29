@@ -27,6 +27,7 @@ $slider = array(
 		'post_type'      => get_post_type(),
 		'posts_per_page' => '5',
 	)),
+	'config'     => 'featured',
 	'component'  => 'template-parts/base/slider-slide-post',
 	'pagination' => true,
 );

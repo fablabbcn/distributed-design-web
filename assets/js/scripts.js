@@ -67,30 +67,45 @@
   }
 
   function initDefaultSlider () {
-    var swiper = new Swiper('.swiper', {
-      loop: false,
-      keyboard: true,
-      autoHeight: true,
-
-      spaceBetween: 16,
-
-      // effect: 'fade',
-      // fadeEffect: {
-      //   crossFade: true
-      // },
-
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+    var config = {
+      default: {
+        spaceBetween: 16,
       },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+      featured: {
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+          crossFade: true
+        },
       },
+      visual: {
+        slidesPerView: 1,
+        breakpoints: {
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+            pagination: false,
+          },
+        },
+      },
+    }
+
+    document.querySelectorAll('.swiper').forEach((slider) => {
+      var swiper = new Swiper(slider, {
+        loop: false,
+        keyboard: true,
+        autoHeight: true,
+        navigation: {
+          nextEl: slider.querySelector('.swiper-button-next'),
+          prevEl: slider.querySelector('.swiper-button-prev'),
+        },
+        pagination: {
+          el: slider.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        ...config[slider.dataset.swiper],
+      })
     })
-
-    console.log(swiper)
-
 
     // $('.intro-slider, .post-slider').slick({
     //   arrows: true,

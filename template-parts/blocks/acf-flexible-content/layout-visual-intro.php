@@ -5,6 +5,7 @@
 
 $content = get_sub_field( 'content' );
 $slider  = array(
+	'config' => 'visual',
 	'slides' => get_sub_field( 'slider' )['images'],
 	'component' => 'template-parts/base/slider-slide-media',
 );

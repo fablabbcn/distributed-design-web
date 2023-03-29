@@ -1,11 +1,7 @@
-<?php
-
-?>
-
-
 <?php if ( array_key_exists( 'slides', $slider ) && $slider['slides'] ) : ?>
 
 <div
+  data-swiper="<?php echo esc_attr( $slider['config'] ?: 'default' ); ?>"
   class="swiper w-full <?php echo esc_attr( $slider['class'] ?: '' ); ?>"
   style="--swiper-theme-color: #fff; --swiper-navigation-sides-offset: 2rem; --swiper-navigation-size: 2rem;"
 >

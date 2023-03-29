@@ -26,7 +26,9 @@ get_header();
 		<?php if ( is_front_page() ) : ?>
 			<?php
 			$section_talent = array(
-				'posts' => get_posts(
+				'config'    => 'featured',
+				'component' => 'template-parts/base/slider-slide-post',
+				'slides'    => get_posts(
 					array(
 						'post_type'      => 'talent',
 						'posts_per_page' => '3',
@@ -76,7 +78,7 @@ get_header();
 						<h3 class="text-xl lg:text-3xl font-light">Featured talents</h3>
 					</header>
 					<div class="grid rounded-2xl overflow-hidden">
-						<?php set_query_var( 'slider', array( 'slides' => $section_talent['posts'], 'component' => 'template-parts/base/slider-slide-post' ) ); ?>
+						<?php set_query_var( 'slider', $section_talent ); ?>
 						<?php get_template_part( 'template-parts/base/slider' ); ?>
 					</div>
 					<footer class="text-center">

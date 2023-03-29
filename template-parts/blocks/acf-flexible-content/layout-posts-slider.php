@@ -4,8 +4,9 @@
  */
 
 $slider = array(
-	'slides' => get_sub_field( 'featured_posts' ),
+	'config'    => 'featured',
 	'component' => 'template-parts/base/slider-slide-post',
+	'slides'    => get_sub_field( 'featured_posts' ),
 );
 
 ?>
