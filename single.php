@@ -169,7 +169,9 @@ $s_classes = array(
 						'talent' => 'See all talents',
 						'tribe_events' => 'See all events',
 					)[ $post->post_type ],
-					'href' => get_post_type_archive_link( $post->post_type ),
+					'href' => $post->post_type === 'tribe_events'
+						? get_permalink( get_page_template_id( 'archive-events' )[0] )
+						: get_post_type_archive_link( $post->post_type ),
 				);
 
 				$related = array(
