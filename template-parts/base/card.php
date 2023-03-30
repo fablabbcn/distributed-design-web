@@ -25,9 +25,9 @@ $image = get_post_thumbnail_id() ?: array_filter(
 <a class="grid grid-cols-1 rounded-2xl overflow-hidden no-underline" href="<?php the_permalink(); ?>">
   <div class="relative">
     <?php if ( $is_post_new() ) : ?>
-      <div class="z-10 absolute m-4 ddp-button font-semibold <?php echo $bg_color[get_post_type()]; ?>">New!</div>
+      <div class="z-10 absolute m-4 ddp-button font-semibold <?php echo $bg_color[ get_post_type() ] ?: 'bg-black'; ?>">New!</div>
     <?php endif; ?>
-    <figure class="aspect-w-4 aspect-h-3 bg-black">
+    <figure class="aspect-w-4 aspect-h-3 <?php echo $bg_color[ get_post_type() ] ?: 'bg-black'; ?>">
       <?php echo wp_get_attachment_image( $image, 'post-thumbnail', false, array( 'class' => 'w-full h-full object-cover' ) ); ?>
     </figure>
   </div>
