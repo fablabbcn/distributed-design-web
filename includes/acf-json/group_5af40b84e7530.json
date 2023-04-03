@@ -120,6 +120,84 @@
                                     "mime_types": "",
                                     "return_format": "array",
                                     "preview_size": "medium"
+                                },
+                                {
+                                    "key": "field_6425c26d277ee",
+                                    "label": "Styles",
+                                    "name": "styles",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "hide_admin": 0,
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6425c26d277ef",
+                                            "label": "Background Color",
+                                            "name": "bg_color",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "hide_admin": 0,
+                                            "choices": {
+                                                "bg-transparent": "Transparent",
+                                                "bg-black": "Black",
+                                                "bg-gray": "Gray",
+                                                "bg-white": "White",
+                                                "bg-red": "Red",
+                                                "bg-yellow": "Yellow",
+                                                "bg-green": "Green",
+                                                "bg-blue": "Blue",
+                                                "bg-indigo": "Indigo",
+                                                "bg-purple": "Purple"
+                                            },
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "save_other_choice": 0,
+                                            "default_value": "bg-transparent",
+                                            "layout": "horizontal",
+                                            "return_format": "value"
+                                        },
+                                        {
+                                            "key": "field_6425c26d277f1",
+                                            "label": "Corner",
+                                            "name": "corner",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "hide_admin": 0,
+                                            "choices": {
+                                                "tl": "Top-Left",
+                                                "tr": "Top-Right",
+                                                "br": "Bottom-Right",
+                                                "bl": "Bottom-Left"
+                                            },
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "default_value": "rounded-tl-[8rem] lg:rounded-tl-[16rem]",
+                                            "layout": "horizontal",
+                                            "return_format": "value",
+                                            "save_other_choice": 0
+                                        }
+                                    ]
                                 }
                             ]
                         }
@@ -1313,5 +1391,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1679911634
+    "modified": 1680520794
 }

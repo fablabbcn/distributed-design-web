@@ -74,16 +74,16 @@
       featured: {
         loop: true,
         effect: 'fade',
-        fadeEffect: {
-          crossFade: true
-        },
+        fadeEffect: { crossFade: true },
       },
       visual: {
         slidesPerView: 1,
+        effect: window.matchMedia('(min-width: 1024px)').matches ? 'slide ': 'fade',
+        fadeEffect: { crossFade: true },
         breakpoints: {
           1024: {
             slidesPerView: 2,
-            spaceBetween: 16,
+            spaceBetween: 0,
             pagination: false,
           },
         },

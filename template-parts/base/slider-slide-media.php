@@ -3,7 +3,9 @@
 $focal_point = get_post_meta( $slide['ID'], '_wpsmartcrop_image_focus' );
 $media_attrs = array(
   'style' => $focal_point ? "object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%" : '',
-  'class' => 'w-full object-cover rounded-2xl overflow-hidden',
+  'class' => ( array_key_exists( 'isRounded', $slider ) ? $slider['isRounded'] : true )
+    ? 'w-full max-h-[50vh] object-cover rounded-2xl overflow-hidden'
+    : 'w-full max-h-[50vh] object-cover',
 );
 
 $image = wp_get_attachment_image( $slide['ID'], 'container-thumbnails', false, $media_attrs );
