@@ -33,7 +33,7 @@ $className = array(
 		<header class="grid-layout">
 			<?php if ( $content['title'] ) : ?>
 				<div class="col-span-4 lg:col-start-2 lg:col-end-4">
-					<h2 class="text-4xl font-thin"><?php echo esc_html( $content['title'] ); ?></h2>
+					<h2 class="text-4xl font-extralight"><?php echo esc_html( $content['title'] ); ?></h2>
 				</div>
 			<?php endif; ?>
 			<?php if ( $content['text'] ) : ?>

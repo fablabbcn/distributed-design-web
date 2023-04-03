@@ -70,7 +70,7 @@ get_header();
 				<div class="-z-10 absolute inset-0 bleed bg-[inherit]"></div>
 
 				<header class="text-center">
-					<h2 class="text-4xl lg:text-5xl font-thin">Stay updated!</h2>
+					<h2 class="text-4xl lg:text-5xl font-extralight">Stay updated!</h2>
 				</header>
 
 				<section class="grid gap-6">

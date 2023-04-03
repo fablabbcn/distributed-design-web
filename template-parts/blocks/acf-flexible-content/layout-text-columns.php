@@ -23,7 +23,7 @@ $className = array(
 	<?php if ( $title ) : ?>
 		<div class="col-span-full">
 			<div class="lg:mb-4 text-center">
-				<h2 class="text-4xl lg:text-5xl font-thin"><?php echo wp_kses_post( $title ); ?></h2>
+				<h2 class="text-3xl lg:text-4xl font-extralight"><?php echo wp_kses_post( $title ); ?></h2>
 			</div>
 		</div>
 	<?php endif; ?>

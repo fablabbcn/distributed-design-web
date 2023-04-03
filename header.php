@@ -79,7 +79,7 @@ $theme = array(
 									<span class="flex lg:hidden justify-center items-center w-12 h-8 border border-black rounded-full" aria-hidden="true">
 										<span class="text-sm text-center">0<?php echo $key + 1; ?></span>
 									</span>
-									<span class="text-4xl lg:text-base font-thin lg:font-normal">
+									<span class="text-4xl lg:text-base font-extralight lg:font-normal">
 										<?php echo wp_kses_post( $menu_item->title ); ?>
 									</span>
 								</a>
