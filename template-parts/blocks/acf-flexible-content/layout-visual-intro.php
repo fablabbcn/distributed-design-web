@@ -13,6 +13,9 @@ $slider  = array(
 	'slides'    => get_sub_field( 'slider' )['images'],
 	'component' => 'template-parts/base/slider-slide-media',
 	'isRounded' => false,
+	'className' => array(
+		'slide' => 'aspect-w-4 aspect-h-3'
+	),
 );
 
 $className = array(

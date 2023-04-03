@@ -4,17 +4,17 @@ $focal_point = get_post_meta( $slide['ID'], '_wpsmartcrop_image_focus' );
 $media_attrs = array(
   'style' => $focal_point ? "object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%" : '',
   'class' => ( array_key_exists( 'isRounded', $slider ) ? $slider['isRounded'] : true )
-    ? 'w-full max-h-[50vh] object-cover rounded-2xl overflow-hidden'
-    : 'w-full max-h-[50vh] object-cover',
+    ? 'w-full h-full max-h-[50vh] object-cover rounded-2xl overflow-hidden'
+    : 'w-full h-full max-h-[50vh] object-cover',
 );
 
-$image = wp_get_attachment_image( $slide['ID'], 'container-thumbnails', false, $media_attrs );
+$image = wp_get_attachment_image( $slide['ID'], 'slider', false, $media_attrs );
 $caption = wp_get_attachment_caption( $slide['ID'] );
 
 ?>
 
 
-<figure class="grid gap-5 grid-cols-5">
+<figure class="grid gap-5 grid-cols-5 <?php echo esc_attr( $slider['className']['slide'] ); ?>">
   <?php if ( $image ) : ?>
     <div class="col-span-full">
       <?php echo $image; ?>

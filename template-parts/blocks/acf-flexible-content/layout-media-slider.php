@@ -4,7 +4,8 @@
  */
 
 $slider = array(
-	'slides' => get_sub_field( 'media' ),
+	'config'    => 'featured',
+	'slides'    => get_sub_field( 'media' ),
 	'component' => 'template-parts/base/slider-slide-media',
 );
 
