@@ -9,7 +9,7 @@ $logo = array(
 
 
 ?>
-		<aside class="grid gap-12 mt-auto px-8 py-12 text-white bg-green">
+		<aside class="mt-auto text-white bg-green">
 			<?php get_template_part( 'template-parts/blocks/footer/newsletter' ); ?>
 		</aside>
 
