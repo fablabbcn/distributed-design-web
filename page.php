@@ -89,7 +89,7 @@ get_header();
 
 				<section class="grid gap-6">
 					<header>
-						<h3 class="text-xl lg:text-3xl font-light">Latest blogposts</h3>
+						<h3 class="text-xl lg:text-3xl font-light">Latest blog posts</h3>
 					</header>
 					<ul class="grid-layout lg:grid-cols-3">
 						<?php if ( $section_blog['posts']->have_posts() ) : ?>
