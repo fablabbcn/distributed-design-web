@@ -479,14 +479,17 @@ a:hover, button:hover, a:focus, button:focus {
   }
 .rich-text { display: grid; grid-gap: 1rem; gap: 1rem; }
 .rich-text h1, .rich-text h2, .rich-text h3, .rich-text h4, .rich-text h5, .rich-text h6, .rich-text b, .rich-text strong { font-weight: 600; }
+.rich-text h1:not([class*="mt-"]), .rich-text h2:not([class*="mt-"]), .rich-text h3:not([class*="mt-"]), .rich-text h4:not([class*="mt-"]), .rich-text h5:not([class*="mt-"]), .rich-text h6:not([class*="mt-"]), .rich-text b:not([class*="mt-"]), .rich-text strong:not([class*="mt-"]) { margin-top: 1em; }
 .rich-text h1 { font-size: 2.25rem; line-height: 2.5rem; }
 .rich-text h2 { font-size: 1.875rem; line-height: 2.25rem; }
 .rich-text h3 { font-size: 1.5rem; line-height: 2rem; }
 .rich-text h4 { font-size: 1.25rem; line-height: 1.75rem; }
 .rich-text h5 { font-size: 1.125rem; line-height: 1.75rem; }
 .rich-text h6 { font-size: 1rem; line-height: 1.5rem; }
-.rich-text ul { list-style-position: inside; list-style-type: disc; }
-.rich-text ol { list-style-position: inside; list-style-type: decimal; }
+.rich-text ul { list-style-type: disc; padding-left: 1rem; }
+.rich-text ol { list-style-type: decimal; padding-left: 1rem; }
+.rich-text li { padding-left: 0.5rem; }
+.rich-text li + li { margin-top: 0.5em; }
 .rich-text img { height: auto; max-width: 100%; -o-object-fit: cover; object-fit: cover; }
 .rich-text iframe { aspect-ratio: 16/9; height: auto; width: 100%; max-width: 100%; overflow: hidden; -webkit-border-radius: 1rem; -moz-border-radius: 1rem; border-radius: 1rem; -o-object-fit: cover; object-fit: cover; }
 .rich-text pre { height: auto; max-width: 100%; overflow: auto; background-color: rgba(56, 56, 57, 0.1); font-size: 0.875rem; line-height: 1.25rem; }
@@ -672,6 +675,8 @@ a:hover, button:hover, a:focus, button:focus {
 .mt-40 { margin-top: 10rem; }
 .mt-5 { margin-top: 1.25rem; }
 .mt-60 { margin-top: 15rem; }
+.mt-\[0\.5em\] { margin-top: 0.5em; }
+.mt-\[1em\] { margin-top: 1em; }
 .mt-auto { margin-top: auto; }
 .mt-px { margin-top: 1px; }
 .box-border { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
@@ -1006,6 +1011,7 @@ a:hover, button:hover, a:focus, button:focus {
 .pl-0 { padding-left: 0px; }
 .pl-10 { padding-left: 2.5rem; }
 .pl-20 { padding-left: 5rem; }
+.pl-4 { padding-left: 1rem; }
 .pl-40 { padding-left: 10rem; }
 .pl-5 { padding-left: 1.25rem; }
 .pl-60 { padding-left: 15rem; }

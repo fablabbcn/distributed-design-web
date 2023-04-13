@@ -92,6 +92,7 @@
     @apply grid gap-4;
 
     & :is(h1, h2, h3, h4, h5, h6, b, strong) { @apply font-semibold; }
+    & :is(h1, h2, h3, h4, h5, h6, b, strong):not([class*="mt-"]) { @apply mt-[1em]; }
 
     & h1 { @apply text-4xl; }
     & h2 { @apply text-3xl; }
@@ -100,8 +101,10 @@
     & h5 { @apply text-lg; }
     & h6 { @apply text-base; }
 
-    & ul { @apply list-disc list-inside; }
-    & ol { @apply list-decimal list-inside; }
+    & ul { @apply pl-4 list-disc; }
+    & ol { @apply pl-4 list-decimal; }
+    & li { @apply pl-2; }
+    & li + li { @apply mt-[0.5em]; }
 
     & img { @apply h-auto max-w-full object-cover; }
     & iframe { @apply aspect-[16/9] w-full h-auto max-w-full object-cover rounded-2xl overflow-hidden; }
