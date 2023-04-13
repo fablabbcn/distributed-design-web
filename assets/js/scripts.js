@@ -95,6 +95,7 @@
         loop: false,
         keyboard: true,
         autoHeight: true,
+        slideToClickedSlide: true,
         navigation: {
           nextEl: slider.querySelector('.swiper-button-next'),
           prevEl: slider.querySelector('.swiper-button-prev'),
