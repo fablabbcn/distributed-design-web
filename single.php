@@ -163,33 +163,30 @@ $s_classes = array(
 
 			<?php if ( in_array( $post->post_type, array( 'post', 'talent', 'tribe_events' ) ) ) : ?>
 				<?php
-				$button = array(
-					'label' => array(
-						'post' => 'See all posts',
-						'talent' => 'See all talents',
-						'tribe_events' => 'See all events',
-					)[ $post->post_type ],
-					'href' => $post->post_type === 'tribe_events'
-						? get_permalink( get_page_template_id( 'archive-events' )[0] )
-						: get_post_type_archive_link( $post->post_type ),
-				);
-
 				$related = array(
 					'title' => array(
 						'post' => 'Latest posts',
 						'talent' => 'Related talents',
 						'tribe_events' => 'Other events',
 					)[ $post->post_type ],
-					'posts' => new WP_Query(
-						array(
+					'posts' => new WP_Query( array(
 							'post__not_in'   => array( $post->ID ),
 							'post_type'      => $post->post_type,
 							'posts_per_page' => '3',
-						),
+					) ),
+					'button' => array(
+						'label' => array(
+							'post' => 'See all posts',
+							'talent' => 'See all talents',
+							'tribe_events' => 'See all events',
+						)[ $post->post_type ],
+						'href' => $post->post_type === 'tribe_events'
+							? get_permalink( get_page_template_id( 'archive-events' )[0] )
+							: get_post_type_archive_link( $post->post_type ),
 					),
 				);
 				?>
-				<nav class="">
+				<nav class="mt-12">
 					<div data-layout="post-latest" class="<?php the_classes( $s_classes['layout'] ); ?>">
 						<p class="text-xl lg:text-3xl font-light"><?php echo esc_html( $related['title'] ); ?></p>
 						<ul class="grid-layout lg:grid-cols-3">
@@ -199,7 +196,7 @@ $s_classes = array(
 							<?php endwhile ?>
 						</ul>
 						<div class="mx-auto">
-							<?php set_query_var( 'button', $button ); ?>
+							<?php set_query_var( 'button', $related['button'] ); ?>
 							<?php get_template_part( 'template-parts/base/button' ); ?>
 						</div>
 					</div>
