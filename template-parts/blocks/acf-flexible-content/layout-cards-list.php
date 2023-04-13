@@ -33,8 +33,8 @@ $description = get_sub_field( 'description' );
 							<?php echo wp_get_attachment_image( $_item['image'], 'thumbnail', false, array( 'class' => 'w-full' ) ); ?>
 						</figure>
 					</div>
-					<div class="flex flex-col gap-2 lg:gap-4">
-						<div class="text-center text-lg font-semibold"><?php echo esc_html( $_item['title'] ); ?></div>
+					<div class="flex flex-col gap-2 lg:gap-4 text-center">
+						<div class="text-lg font-semibold"><?php echo esc_html( $_item['title'] ); ?></div>
 						<div class=""><?php echo wp_kses_post( $_item['text'] ); ?></div>
 					</div>
 				</li>
