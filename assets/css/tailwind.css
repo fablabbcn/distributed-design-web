@@ -80,6 +80,10 @@
     @apply w-auto min-h-[2rem] px-4 py-2 border border-current rounded-full;
     @apply uppercase lg:normal-case bg-transparent text-center text-sm leading-none;
     @apply no-underline cursor-pointer transition-colors duration-200 ease-in-out;
+    @apply relative overflow-hidden;
+    @apply before:absolute before:inset-0 before:w-full before:h-full;
+    @apply before:bg-current before:opacity-0 hover:before:opacity-10 focus:before:opacity-10;
+    @apply before:transition-opacity before:duration-200 before:ease-in-out;
   }
 
   .ddp-button-icon {
