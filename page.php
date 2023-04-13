@@ -69,7 +69,7 @@ get_header();
 			<section class="relative grid grid-cols-1 gap-12 lg:gap-24 -mb-8 lg:-mb-12 py-12 lg:py-24 bg-white">
 				<div class="-z-10 absolute inset-0 bleed bg-[inherit]"></div>
 
-				<header class="text-center">
+				<header class="lg:-mb-12 text-center">
 					<h2 class="text-4xl lg:text-5xl font-extralight">Stay updated!</h2>
 				</header>
 
