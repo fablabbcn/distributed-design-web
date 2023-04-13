@@ -29,7 +29,7 @@ $className = array(
 		</div>
 	<?php else : ?>
 		<div class="col-span-full <?php echo the_classes( $className['media'] ); ?>">
-			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full max-h-[50vh] object-cover' ) ); ?>
+			<?php the_post_thumbnail( 'post-thumbnail', array( 'class' => 'w-full h-full max-h-[70vh] object-cover' ) ); ?>
 		</div>
 	<?php endif; ?>
 
