@@ -3,7 +3,7 @@
 $thumbnail_id    = get_field( 'featured_alt', $slide->ID ) ?: get_post_thumbnail_id( $slide->ID );
 $focal_point     = get_post_meta( $thumbnail_id, '_wpsmartcrop_image_focus' );
 $thumbnail_attrs = array(
-  'class' => 'w-full h-full lg:!w-full lg:!h-full max-h-[70vh] object-cover opacity-70',
+  'class' => '!w-full !h-full object-cover opacity-70',
   'style' => $focal_point ? "object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%;" : '',
 );
 
@@ -16,9 +16,9 @@ $button = array(
 ?>
 
 
-<div class="relative grid grid-cols-1 gap-4 bg-yellow">
-  <div class="">
-    <figure class="aspect-w-16 aspect-h-9 lg:aspect-none bg-black lg:h-[70vh]">
+<div class="relative flex flex-col gap-4 w-full h-full bg-yellow max-h-[70vh]">
+  <div class="h-full">
+    <figure class="aspect-w-4 aspect-h-3 lg:aspect-none bg-black lg:h-[70vh]">
       <?php echo wp_get_attachment_image( $thumbnail_id, 'post-thumbnail', false, $thumbnail_attrs ); ?>
     </figure>
   </div>

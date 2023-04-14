@@ -8,8 +8,9 @@ $styles = get_sub_field( 'styles' );
 ?>
 
 
-<aside class="relative grid-layout -mt-4 py-4 text-white <?php echo esc_attr( $styles['bg_color'] ?: 'bg-indigo' ); ?>">
-  <div class="-z-10 absolute inset-0 bleed bg-[inherit]"></div>
+<aside class="relative grid-layout py-4 text-white <?php echo esc_attr( $styles['bg_color'] ?: 'bg-indigo' ); ?>">
+  <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] left-[50%]"></div>
+  <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] right-[50%]"></div>
 
   <div class="col-span-full lg:col-start-2 lg:col-end-7 flex justify-center items-center py-8 lg:p-16">
     <div class="flex flex-col text-3xl leading-tight [&_br]:hidden <?php echo esc_attr( $styles['font_weight'] ?: 'font-thin' ); ?>">

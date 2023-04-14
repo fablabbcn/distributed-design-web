@@ -12,7 +12,6 @@ $description = get_sub_field( 'description' );
 
 
 <section class="relative grid-layout gap-x-4 gap-y-8">
-	<!-- <div class="-z-10 absolute inset-x-0 -inset-y-8 bleed bg-[inherit]"></div> -->
 
 	<div class="grid-layout grid-cols-1 lg:grid-cols-3 col-span-full lg:col-span-3">
 		<?php if ( $title ) : ?>

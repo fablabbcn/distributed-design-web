@@ -9,7 +9,7 @@ $columns  = get_sub_field( 'columns' ) ?: array();
 $styles   = get_sub_field( 'styles' );
 
 $className = array(
-	$styles['bg_color'] !== 'bg-transparent' ? 'my-16 lg:my-24' : '',
+	$styles['bg_color'] !== 'bg-transparent' ? 'py-16 lg:py-24' : '',
 	in_array( $styles['bg_color'], array( 'bg-black', 'bg-green', 'bg-indigo', 'bg-purple' ) ) ? 'text-white' : '',
 	$styles['bg_color'] ?: 'bg-transparent',
 );
@@ -18,7 +18,8 @@ $className = array(
 
 
 <section class="relative grid-layout grid-cols-5 lg:grid-cols-6 gap-x-4 gap-y-8 items-baseline <?php the_classes( $className ); ?>">
-	<div class="-z-10 absolute inset-x-0 -inset-y-16 lg:-inset-y-24 bleed bg-[inherit]"></div>
+  <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] left-[50%]"></div>
+  <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] right-[50%]"></div>
 
 	<?php if ( $title ) : ?>
 		<div class="col-span-full">

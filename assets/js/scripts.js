@@ -70,6 +70,7 @@
     var config = {
       default: {
         spaceBetween: 16,
+        autoHeight: true,
       },
       featured: {
         loop: true,
@@ -94,7 +95,6 @@
       var swiper = new Swiper(slider, {
         loop: false,
         keyboard: true,
-        autoHeight: true,
         slideToClickedSlide: true,
         navigation: {
           nextEl: slider.querySelector('.swiper-button-next'),

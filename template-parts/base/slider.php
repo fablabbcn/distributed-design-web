@@ -2,7 +2,7 @@
 
 <div
   data-swiper="<?php echo esc_attr( $slider['config'] ?: 'default' ); ?>"
-  class="swiper w-full <?php echo esc_attr( $slider['class'] ?: '' ); ?>"
+  class="swiper w-full h-full <?php echo esc_attr( $slider['class'] ?: '' ); ?>"
   style="--swiper-theme-color: #fff; --swiper-navigation-sides-offset: 2rem; --swiper-navigation-size: 2rem;"
 >
   <?php if ( count( $slider['slides'] ) > 1 ) : ?>
@@ -26,10 +26,10 @@
     <?php endif ?>
   <?php endif ?>
 
-  <div class="swiper-wrapper w-full">
+  <div class="swiper-wrapper w-full h-full">
     <?php foreach ( $slider['slides'] as $key => $slide ) : ?>
 
-      <div class="swiper-slide w-full">
+      <div class="swiper-slide flex w-full h-full">
         <?php set_query_var( 'slide', $slide ); ?>
         <?php get_template_part( array_key_exists( 'component', $slider ) ? $slider['component'] : null ); ?>
       </div>

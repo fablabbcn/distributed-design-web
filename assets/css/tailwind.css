@@ -69,6 +69,12 @@
     margin-left: calc(50% - 50vw);
   }
 
+  .safe-bleed {
+    width: 100vw;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+
   .grid-layout {
     @apply grid;
     &:not([class*='gap-']) { @apply gap-4; }
@@ -172,8 +178,8 @@
   .bg-gradient-bl-purple { background-image: linear-gradient(045deg, theme('colors.purple'), cubic-bezier(0, 0.75, 0.25, 1), transparent); }
 }
 
-body.page main > article > [class*="bg-"] {
-  /* @apply -mt-12 lg:-mt-24; */
+body.page main > article > [class*="bg-"] + [class*="bg-"] {
+  @apply -mt-12 lg:-mt-24;
 }
 
 .facetwp-facet {
