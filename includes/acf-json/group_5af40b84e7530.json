@@ -285,7 +285,7 @@
                                         "id": ""
                                     },
                                     "hide_admin": 0,
-                                    "collapsed": "",
+                                    "collapsed": "field_64135604c2cf6",
                                     "min": 0,
                                     "max": 0,
                                     "layout": "block",
@@ -478,6 +478,31 @@
                                             "placeholder": ""
                                         }
                                     ]
+                                },
+                                {
+                                    "key": "field_64395c7e8802e",
+                                    "label": "Column Count",
+                                    "name": "column_count",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "hide_admin": 0,
+                                    "choices": {
+                                        "1": "1",
+                                        "2": "2"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "default_value": 2,
+                                    "layout": "vertical",
+                                    "return_format": "value",
+                                    "save_other_choice": 0
                                 }
                             ]
                         }
@@ -1417,5 +1442,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1681479848
+    "modified": 1681481320
 }

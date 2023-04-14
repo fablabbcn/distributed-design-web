@@ -33,7 +33,7 @@ $sections = get_sub_field( 'sections' ) ?: array();
 						x-data="{ count: <?php echo count( $section['items'] ?: array() ); ?>, maxCount: 14, isCollapsed: true }"
 					>
 						<?php if ( array_key_exists( 'items', $section ) && $section['items'] ) : ?>
-							<ol class="columns-2 [column-gap-[1rem]] space-y-2">
+							<ol class="<?php echo esc_attr( $section['column_count'] === '1' ? 'columns-1' : 'columns-2' ) ?> [column-gap-[1rem]] space-y-2">
 								<?php foreach ( $section['items'] as $key => $item ) : ?>
 
 									<li
