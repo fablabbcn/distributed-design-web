@@ -450,123 +450,6 @@ a:hover, button:hover, a:focus, button:focus {
 .aspect-w-4 > * { position: absolute; height: 100%; width: 100%; top: 0; right: 0; bottom: 0; left: 0; }
 .aspect-none { position: static; padding-bottom: 0; }
 .aspect-none > * { position: static; height: auto; width: auto; top: auto; right: auto; bottom: auto; left: auto; }
-body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; line-height: 1; font-family: "Source code Pro", ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); -moz-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); background-color: #111827; -webkit-border-top-right-radius: 0.5rem; -moz-border-radius-topright: 0.5rem; border-top-right-radius: 0.5rem; position: fixed; z-index: 2147483647; bottom: 0; left: 0; }
-@media (min-width: 640px) {
- body::before { content: "sm (640px)"; } }
-@media (min-width: 768px) {
- body::before { content: "md (768px)"; } }
-@media (min-width: 1024px) {
- body::before { content: "lg (1024px)"; } }
-@media (min-width: 1280px) {
- body::before { content: "xl (1280px)"; } }
-@media (min-width: 1536px) {
- body::before { content: "2xl (1536px)"; } }
-.debug *:after, .debug *:before { outline: 1px solid #F9A8D4 !important; }
-.debug address { outline: 1px solid hsla(0, 100%, 50%, 0.5) !important; }
-.debug article { outline: 1px solid hsla(1.5945945945945945, 100%, 50%, 0.5) !important; }
-.debug aside { outline: 1px solid hsla(3.189189189189189, 100%, 50%, 0.5) !important; }
-.debug blockquote { outline: 1px solid hsla(4.783783783783783, 100%, 50%, 0.5) !important; }
-.debug body { outline: 1px solid hsla(6.378378378378378, 100%, 50%, 0.5) !important; }
-.debug dd { outline: 1px solid hsla(7.972972972972973, 100%, 50%, 0.5) !important; }
-.debug details { outline: 1px solid hsla(9.567567567567567, 100%, 50%, 0.5) !important; }
-.debug div { outline: 1px solid hsla(11.162162162162161, 100%, 50%, 0.5) !important; }
-.debug dl { outline: 1px solid hsla(12.756756756756756, 100%, 50%, 0.5) !important; }
-.debug dt { outline: 1px solid hsla(14.35135135135135, 100%, 50%, 0.5) !important; }
-.debug fieldset { outline: 1px solid hsla(15.945945945945946, 100%, 50%, 0.5) !important; }
-.debug figcaption { outline: 1px solid hsla(17.54054054054054, 100%, 50%, 0.5) !important; }
-.debug figure { outline: 1px solid hsla(19.135135135135133, 100%, 50%, 0.5) !important; }
-.debug footer { outline: 1px solid hsla(20.72972972972973, 100%, 50%, 0.5) !important; }
-.debug form { outline: 1px solid hsla(22.324324324324323, 100%, 50%, 0.5) !important; }
-.debug h1 { outline: 1px solid hsla(23.91891891891892, 100%, 50%, 0.5) !important; }
-.debug h2 { outline: 1px solid hsla(25.513513513513512, 100%, 50%, 0.5) !important; }
-.debug h3 { outline: 1px solid hsla(27.108108108108105, 100%, 50%, 0.5) !important; }
-.debug h4 { outline: 1px solid hsla(28.7027027027027, 100%, 50%, 0.5) !important; }
-.debug h5 { outline: 1px solid hsla(30.297297297297295, 100%, 50%, 0.5) !important; }
-.debug h6 { outline: 1px solid hsla(31.89189189189189, 100%, 50%, 0.5) !important; }
-.debug header { outline: 1px solid hsla(33.486486486486484, 100%, 50%, 0.5) !important; }
-.debug hgroup { outline: 1px solid hsla(35.08108108108108, 100%, 50%, 0.5) !important; }
-.debug hr { outline: 1px solid hsla(36.67567567567568, 100%, 50%, 0.5) !important; }
-.debug html { outline: 1px solid hsla(38.27027027027027, 100%, 50%, 0.5) !important; }
-.debug legend { outline: 1px solid hsla(39.86486486486486, 100%, 50%, 0.5) !important; }
-.debug main { outline: 1px solid hsla(41.45945945945946, 100%, 50%, 0.5) !important; }
-.debug menu { outline: 1px solid hsla(43.05405405405405, 100%, 50%, 0.5) !important; }
-.debug nav { outline: 1px solid hsla(44.648648648648646, 100%, 50%, 0.5) !important; }
-.debug ol { outline: 1px solid hsla(46.24324324324324, 100%, 50%, 0.5) !important; }
-.debug optgroup { outline: 1px solid hsla(47.83783783783784, 100%, 50%, 0.5) !important; }
-.debug option { outline: 1px solid hsla(49.43243243243243, 100%, 50%, 0.5) !important; }
-.debug p { outline: 1px solid hsla(51.027027027027025, 100%, 50%, 0.5) !important; }
-.debug pre { outline: 1px solid hsla(52.62162162162162, 100%, 50%, 0.5) !important; }
-.debug section { outline: 1px solid hsla(54.21621621621621, 100%, 50%, 0.5) !important; }
-.debug summary { outline: 1px solid hsla(55.81081081081081, 100%, 50%, 0.5) !important; }
-.debug ul { outline: 1px solid hsla(57.4054054054054, 100%, 50%, 0.5) !important; }
-.debug button { outline: 1px solid hsla(180, 100%, 50%, 0.5) !important; }
-.debug input { outline: 1px solid hsla(189.83333333333334, 100%, 50%, 0.5) !important; }
-.debug meter { outline: 1px solid hsla(199.66666666666666, 100%, 50%, 0.5) !important; }
-.debug progress { outline: 1px solid hsla(209.5, 100%, 50%, 0.5) !important; }
-.debug select { outline: 1px solid hsla(219.33333333333334, 100%, 50%, 0.5) !important; }
-.debug textarea { outline: 1px solid hsla(229.16666666666669, 100%, 50%, 0.5) !important; }
-.debug a { outline: 1px solid hsla(70, 100%, 50%, 0.5) !important; }
-.debug abbr { outline: 1px solid hsla(71, 100%, 50%, 0.5) !important; }
-.debug area { outline: 1px solid hsla(72, 100%, 50%, 0.5) !important; }
-.debug b { outline: 1px solid hsla(73, 100%, 50%, 0.5) !important; }
-.debug base { outline: 1px solid hsla(74, 100%, 50%, 0.5) !important; }
-.debug bdi { outline: 1px solid hsla(75, 100%, 50%, 0.5) !important; }
-.debug bdo { outline: 1px solid hsla(76, 100%, 50%, 0.5) !important; }
-.debug br { outline: 1px solid hsla(77, 100%, 50%, 0.5) !important; }
-.debug canvas { outline: 1px solid hsla(78, 100%, 50%, 0.5) !important; }
-.debug cite { outline: 1px solid hsla(79, 100%, 50%, 0.5) !important; }
-.debug code { outline: 1px solid hsla(80, 100%, 50%, 0.5) !important; }
-.debug data { outline: 1px solid hsla(81, 100%, 50%, 0.5) !important; }
-.debug del { outline: 1px solid hsla(82, 100%, 50%, 0.5) !important; }
-.debug dfn { outline: 1px solid hsla(83, 100%, 50%, 0.5) !important; }
-.debug em { outline: 1px solid hsla(84, 100%, 50%, 0.5) !important; }
-.debug embed { outline: 1px solid hsla(85, 100%, 50%, 0.5) !important; }
-.debug i { outline: 1px solid hsla(86, 100%, 50%, 0.5) !important; }
-.debug iframe { outline: 1px solid hsla(87, 100%, 50%, 0.5) !important; }
-.debug img { outline: 1px solid hsla(88, 100%, 50%, 0.5) !important; }
-.debug ins { outline: 1px solid hsla(89, 100%, 50%, 0.5) !important; }
-.debug kbd { outline: 1px solid hsla(90, 100%, 50%, 0.5) !important; }
-.debug label { outline: 1px solid hsla(91, 100%, 50%, 0.5) !important; }
-.debug map { outline: 1px solid hsla(92, 100%, 50%, 0.5) !important; }
-.debug mark { outline: 1px solid hsla(93, 100%, 50%, 0.5) !important; }
-.debug math { outline: 1px solid hsla(94, 100%, 50%, 0.5) !important; }
-.debug menuitem { outline: 1px solid hsla(95, 100%, 50%, 0.5) !important; }
-.debug noscript { outline: 1px solid hsla(96, 100%, 50%, 0.5) !important; }
-.debug object { outline: 1px solid hsla(97, 100%, 50%, 0.5) !important; }
-.debug output { outline: 1px solid hsla(98, 100%, 50%, 0.5) !important; }
-.debug picture { outline: 1px solid hsla(99, 100%, 50%, 0.5) !important; }
-.debug q { outline: 1px solid hsla(100, 100%, 50%, 0.5) !important; }
-.debug rb { outline: 1px solid hsla(101, 100%, 50%, 0.5) !important; }
-.debug rt { outline: 1px solid hsla(102, 100%, 50%, 0.5) !important; }
-.debug rtc { outline: 1px solid hsla(103, 100%, 50%, 0.5) !important; }
-.debug ruby { outline: 1px solid hsla(104, 100%, 50%, 0.5) !important; }
-.debug s { outline: 1px solid hsla(105, 100%, 50%, 0.5) !important; }
-.debug samp { outline: 1px solid hsla(106, 100%, 50%, 0.5) !important; }
-.debug small { outline: 1px solid hsla(107, 100%, 50%, 0.5) !important; }
-.debug source { outline: 1px solid hsla(108, 100%, 50%, 0.5) !important; }
-.debug span { outline: 1px solid hsla(109, 100%, 50%, 0.5) !important; }
-.debug strong { outline: 1px solid hsla(110, 100%, 50%, 0.5) !important; }
-.debug sub { outline: 1px solid hsla(111, 100%, 50%, 0.5) !important; }
-.debug sup { outline: 1px solid hsla(112, 100%, 50%, 0.5) !important; }
-.debug svg { outline: 1px solid hsla(113, 100%, 50%, 0.5) !important; }
-.debug time { outline: 1px solid hsla(114, 100%, 50%, 0.5) !important; }
-.debug track { outline: 1px solid hsla(115, 100%, 50%, 0.5) !important; }
-.debug u { outline: 1px solid hsla(116, 100%, 50%, 0.5) !important; }
-.debug var { outline: 1px solid hsla(117, 100%, 50%, 0.5) !important; }
-.debug video { outline: 1px solid hsla(118, 100%, 50%, 0.5) !important; }
-.debug wbr { outline: 1px solid hsla(119, 100%, 50%, 0.5) !important; }
-.debug caption { outline: 1px solid hsla(270, 100%, 50%, 0.5) !important; }
-.debug col { outline: 1px solid hsla(272.9, 100%, 50%, 0.5) !important; }
-.debug colgroup { outline: 1px solid hsla(275.8, 100%, 50%, 0.5) !important; }
-.debug table { outline: 1px solid hsla(278.7, 100%, 50%, 0.5) !important; }
-.debug tbody { outline: 1px solid hsla(281.6, 100%, 50%, 0.5) !important; }
-.debug td { outline: 1px solid hsla(284.5, 100%, 50%, 0.5) !important; }
-.debug tfoot { outline: 1px solid hsla(287.4, 100%, 50%, 0.5) !important; }
-.debug th { outline: 1px solid hsla(290.3, 100%, 50%, 0.5) !important; }
-.debug thead { outline: 1px solid hsla(293.2, 100%, 50%, 0.5) !important; }
-.debug tr { outline: 1px solid hsla(296.1, 100%, 50%, 0.5) !important; }
-.debug li { outline: 1px solid hsla(322.85714285714283, 100%, 50%, 0.5) !important; }
-.debug slot { outline: 1px solid hsla(327.14285714285717, 100%, 50%, 0.5) !important; }
 .container { margin-left: auto !important; margin-right: auto !important; max-width: none !important; }
 @media (min-width: 1280px) {
  .container { max-width: 1536px !important; } }
@@ -821,6 +704,7 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .block { display: block; }
 .inline-block { display: inline-block; }
 .inline { display: inline; }
+.\!flex { display: -webkit-box !important; display: -webkit-flex !important; display: -moz-box !important; display: -ms-flexbox !important; display: flex !important; }
 .flex { display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -ms-flexbox; display: flex; }
 .inline-flex { display: -webkit-inline-box; display: -webkit-inline-flex; display: -moz-inline-box; display: -ms-inline-flexbox; display: inline-flex; }
 .table { display: table; }
@@ -1357,7 +1241,9 @@ body.page main > article > [class*="bg-"] + [class*="bg-"] { margin-top: -3rem; 
 .before\:transition-opacity::before { content: var(--tw-content); -webkit-transition-property: opacity; -o-transition-property: opacity; -moz-transition-property: opacity; transition-property: opacity; -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); -o-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); -webkit-transition-duration: 150ms; -moz-transition-duration: 150ms; -o-transition-duration: 150ms; transition-duration: 150ms; }
 .before\:duration-200::before { content: var(--tw-content); -webkit-transition-duration: 200ms; -moz-transition-duration: 200ms; -o-transition-duration: 200ms; transition-duration: 200ms; }
 .after\:\!content-none::after { --tw-content: none !important; content: none !important; content: var(--tw-content) !important; }
+.hover\:underline:hover { -webkit-text-decoration-line: underline; -moz-text-decoration-line: underline; text-decoration-line: underline; }
 .hover\:before\:opacity-10:hover::before { content: var(--tw-content); opacity: 0.1; }
+.focus\:underline:focus { -webkit-text-decoration-line: underline; -moz-text-decoration-line: underline; text-decoration-line: underline; }
 @media (min-width: 640px) {
  .sm\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
  .sm\:border-b-0 { border-bottom-width: 0px; }
@@ -1406,16 +1292,14 @@ body.page main > article > [class*="bg-"] + [class*="bg-"] { margin-top: -3rem; 
  .lg\:-mb-12 { margin-bottom: -3rem; }
  .lg\:mb-4 { margin-bottom: 1rem; }
  .lg\:mt-12 { margin-top: 3rem; }
- .lg\:\!block { display: block !important; }
  .lg\:block { display: block; }
+ .lg\:\!flex { display: -webkit-box !important; display: -webkit-flex !important; display: -moz-box !important; display: -ms-flexbox !important; display: flex !important; }
  .lg\:flex { display: -webkit-box; display: -webkit-flex; display: -moz-box; display: -ms-flexbox; display: flex; }
  .lg\:hidden { display: none; }
  .lg\:\!h-full { height: 100% !important; }
  .lg\:h-8 { height: 2rem; }
  .lg\:h-\[70vh\] { height: 70vh; }
  .lg\:h-auto { height: auto; }
- .lg\:max-h-\[70vh\] { max-height: 70vh; }
- .lg\:\!w-full { width: 100% !important; }
  .lg\:w-1\/2 { width: 50%; }
  .lg\:w-1\/3 { width: 33.333333%; }
  .lg\:w-1\/4 { width: 25%; }
@@ -1452,6 +1336,7 @@ body.page main > article > [class*="bg-"] + [class*="bg-"] { margin-top: -3rem; 
  .lg\:p-8 { padding: 2rem; }
  .lg\:px-40 { padding-left: 10rem; padding-right: 10rem; }
  .lg\:px-8 { padding-left: 2rem; padding-right: 2rem; }
+ .lg\:py-0 { padding-top: 0px; padding-bottom: 0px; }
  .lg\:py-20 { padding-top: 5rem; padding-bottom: 5rem; }
  .lg\:py-24 { padding-top: 6rem; padding-bottom: 6rem; }
  .lg\:py-4 { padding-top: 1rem; padding-bottom: 1rem; }

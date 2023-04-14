@@ -66,7 +66,7 @@ $theme = array(
 			</div>
 
 			<template x-if="true">
-				<nav class="z-0 relative lg:!block w-full lg:w-auto px-8 py-12 lg:p-0 overflow-auto" x-show="open" x-transition>
+				<nav class="z-0 relative lg:!flex items-center w-full lg:w-auto px-8 py-12 lg:p-0 overflow-auto" x-show="open" x-transition>
 					<div class="lg:hidden z-0 fixed -bottom-[37.5vw] -right-[6.25vw] w-[50vw] h-[50vw] <?php echo esc_attr( $theme ); ?> rounded-full blur-2xl"></div>
 
 					<div class="sticky top-[-48px] lg:hidden -mb-px border-t border-black"></div>
@@ -75,7 +75,10 @@ $theme = array(
 						<?php foreach ( $menu_items as $key => $menu_item ) : ?>
 							<li class="border-t lg:border-none border-black">
 								<?php /* if ( intval( $menu_item->object_id, 10 ) === $post->ID ) : */ ?>
-								<a class="flex justify-start items-center gap-x-8 py-6 no-underline" href="<?php echo esc_url( $menu_item->url ); ?>">
+								<a
+									class="flex justify-start items-center gap-x-8 py-6 lg:py-0 no-underline hover:underline focus:underline"
+									href="<?php echo esc_url( $menu_item->url ); ?>"
+								>
 									<span class="flex lg:hidden justify-center items-center w-12 h-8 border border-black rounded-full" aria-hidden="true">
 										<span class="text-sm text-center">0<?php echo $key + 1; ?></span>
 									</span>
