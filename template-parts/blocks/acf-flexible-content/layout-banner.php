@@ -4,11 +4,18 @@ $title = get_sub_field( 'title' );
 $description = get_sub_field( 'description' );
 
 $styles = get_sub_field( 'styles' );
+$className = array(
+  'relative grid-layout py-4 text-white',
+  $styles['bg_color'] ?: 'bg-indigo',
+  $styles['font_size'] ?: '',
+  $styles['font_weight'] ?: '',
+  $styles['text_align'] ?: '',
+);
 
 ?>
 
 
-<aside class="relative grid-layout py-4 text-white <?php echo esc_attr( $styles['bg_color'] ?: 'bg-indigo' ); ?>">
+<aside class="<?php echo the_classes( $className ); ?>">
   <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] left-[50%]"></div>
   <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] right-[50%]"></div>
 

@@ -641,6 +641,32 @@
                                     "layout": "horizontal",
                                     "return_format": "value",
                                     "save_other_choice": 0
+                                },
+                                {
+                                    "key": "field_64395871b47d3",
+                                    "label": "Text Align",
+                                    "name": "text_align",
+                                    "type": "radio",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "hide_admin": 0,
+                                    "choices": {
+                                        "text-left": "Left (default)",
+                                        "text-center": "Center",
+                                        "text-right": "Right"
+                                    },
+                                    "allow_null": 0,
+                                    "other_choice": 0,
+                                    "default_value": "text-left",
+                                    "layout": "horizontal",
+                                    "return_format": "value",
+                                    "save_other_choice": 0
                                 }
                             ]
                         }
@@ -1391,5 +1417,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1680520794
+    "modified": 1681479848
 }
