@@ -21,7 +21,7 @@
 @tailwind utilities;
 
 @layer base {
-  html { @apply text-base lg:text-lg scroll-smooth antialiased; }
+  html { @apply text-sm md:text-base lg:text-lg scroll-smooth antialiased; }
   body { @apply flex flex-col min-h-screen overflow-x-hidden overflow-y-auto; }
 
   /* *:focus-visible { @apply ring-2 ring-black ring-offset-4 ring-offset-gray rounded outline-none; } */
