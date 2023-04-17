@@ -68,7 +68,7 @@ get_header();
 				),
 			);
 			?>
-			<section class="relative grid grid-cols-1 gap-12 lg:gap-24 -mb-8 lg:-mb-12 py-12 lg:py-24 bg-white">
+			<section class="relative grid grid-cols-1 gap-12 lg:gap-24 -mb-12 py-12 lg:py-24 bg-white">
 				<div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] left-[50%]"></div>
 				<div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] right-[50%]"></div>
 
