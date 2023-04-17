@@ -16,8 +16,8 @@ $n_classes = array(
 		<div class="col-span-full lg:col-span-3">
 			<div class="grid-layout grid-cols-[1fr_auto] lg:grid-cols-1 items-end lg:pr-16">
 				<!-- <p class="text-4xl leading-none font-thin"><?php echo esc_html( $footer_cta['title'] ); ?></p> -->
-				<p class="text-4xl leading-none font-extralight">Join our community!</p>
-				<p class="text-xl leading-tight font-light">Sign up to our newsletter and stay updated on the latest Distributed Design news</p>
+				<p class="text-3xl lg:text-4xl leading-none font-extralight">Join our community!</p>
+				<p class="text-lg lg:text-xl leading-tight font-light">Sign up to our newsletter and stay updated on the latest Distributed Design news</p>
 			</div>
 		</div>
 
