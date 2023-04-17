@@ -2,38 +2,44 @@
 
 $contact = get_field( 'contact', 'options' );
 
-$logo = array(
-	'src' => get_stylesheet_directory_uri() . '/assets/images/ce-logo.png',
-	'alt' => 'Co-funded by the Creative European Programme of the European Union',
-);
-
-
 ?>
+
+
 		<aside class="mt-auto text-white bg-green">
 			<?php get_template_part( 'template-parts/blocks/footer/newsletter' ); ?>
 		</aside>
 
-		<footer class="grid gap-12 p-12 text-white bg-black">
+		<footer class="text-white bg-black">
+			<div class="container">
+				<div class="grid gap-12 px-8 py-12">
 
-			<div class="grid-layout text-sm">
-				<?php get_template_part( 'template-parts/blocks/footer/logos' ); ?>
-			</div>
+					<div class="grid-layout text-sm">
+						<?php get_template_part( 'template-parts/blocks/footer/logos' ); ?>
+					</div>
 
-			<div class="grid-layout grid-cols-2 lg:grid-cols-8 items-baseline text-sm">
-				<div class="grid gap-6 lg:col-start-3 lg:col-end-5 [&_img]:inline-block [&_img]:w-auto [&_img]:max-h-8 [&_img]:brightness-0 [&_img]:invert">
-					<?php echo wp_kses_post( $contact['left'] ); ?>
+					<div class="grid-layout grid-cols-2 lg:grid-cols-14 text-sm [&_img]:inline-block [&_img]:w-auto [&_img]:max-h-10 lg:[&_img]:max-h-12 [&_img]:brightness-0 [&_img]:invert [&_p]:hyphens-auto">
+						<div class="grid gap-6 row-start-1 lg:row-start-1 lg:col-start-1 lg:col-end-4">
+							<?php echo wp_get_attachment_image( $contact['left']['image'], 'post-thumbnail', false ); ?>
+						</div>
+						<div class="grid gap-6 row-start-2 lg:row-start-1 lg:col-start-4 lg:col-end-8">
+							<?php echo wp_kses_post( $contact['left']['description'] ); ?>
+						</div>
+						<div class="grid gap-6 row-start-2 lg:row-start-1 lg:col-start-8 lg:col-end-12">
+							<?php echo wp_kses_post( $contact['right']['description'] ); ?>
+						</div>
+						<div class="grid gap-6 row-start-1 lg:row-start-1 lg:col-start-12 lg:col-end-15">
+							<?php echo wp_get_attachment_image( $contact['right']['image'], 'post-thumbnail', false ); ?>
+						</div>
+					</div>
+
+					<div class="text-xs">
+						<p class="text-center">
+							<small>&copy; 2023 Distributed Design. All Rights Reserved.</small>
+						</p>
+					</div>
+
 				</div>
-				<div class="grid gap-6 lg:col-start-5 lg:col-end-7 [&_img]:inline-block [&_img]:w-auto [&_img]:max-h-8 [&_img]:brightness-0 [&_img]:invert">
-					<?php echo wp_kses_post( $contact['right'] ); ?>
-				</div>
 			</div>
-
-			<div class="text-xs">
-				<p class="text-center">
-					<small>&copy; 2023 Distributed Design. All Rights Reserved.</small>
-				</p>
-			</div>
-
 		</footer>
 
 	</div>

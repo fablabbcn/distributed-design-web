@@ -25,8 +25,21 @@ module.exports = {
     },
 
     extend: {
+      gridTemplateColumns: {
+        14: 'repeat(14, minmax(0, 1fr))',
+      },
+      gridColumnStart: {
+        '13': '13',
+        '14': '14',
+      },
+      gridColumnEnd: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+      },
+
       fontFamily: {
-        'sans': ['Aileron', ...defaultTheme.fontFamily.sans],
+        sans: ['Aileron', ...defaultTheme.fontFamily.sans],
       },
 
       fontSize: { unset: 'unset' },
@@ -37,7 +50,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
-    require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
     require('@vicgutt/tailwindcss-debug'),
   ],
