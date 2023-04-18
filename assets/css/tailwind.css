@@ -69,12 +69,6 @@
     margin-left: calc(50% - 50vw);
   }
 
-  .safe-bleed {
-    width: 100vw;
-    margin-left: 50%;
-    transform: translateX(-50%);
-  }
-
   .grid-layout {
     @apply grid;
     &:not([class*='gap-']) { @apply gap-4; }

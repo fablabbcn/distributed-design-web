@@ -457,20 +457,17 @@ a:hover, button:hover, a:focus, button:focus {
 .container { margin-left: auto !important; margin-right: auto !important; max-width: none !important; }
 @media (min-width: 1280px) {
  .container { max-width: 1536px !important; } }
+.\!bleed {
+    width: 100vw !important;
+    margin-left: -webkit-calc(50% - 50vw) !important;
+    margin-left: -moz-calc(50% - 50vw) !important;
+    margin-left: calc(50% - 50vw) !important;
+  }
 .bleed {
     width: 100vw;
     margin-left: -webkit-calc(50% - 50vw);
     margin-left: -moz-calc(50% - 50vw);
     margin-left: calc(50% - 50vw);
-  }
-.safe-bleed {
-    width: 100vw;
-    margin-left: 50%;
-    -webkit-transform: translateX(-50%);
-       -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-         -o-transform: translateX(-50%);
-            transform: translateX(-50%);
   }
 .grid-layout { display: grid; }
 .grid-layout:not([class*='gap-']) { gap: 1rem; }

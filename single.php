@@ -17,10 +17,10 @@ $title = array(
 )[ get_post_type() ];
 
 $s_classes = array(
-	'article' => array( 'grid gap-8 relative' ),
-	'section' => array( 'grid' ),
-	'layout'  => array( 'grid gap-8' ),
-	'columns' => array( 'grid-layout rich-text' ),
+	'article' => array( 'grid gap-8 relative min-w-0' ),
+	'section' => array( 'grid min-w-0' ),
+	'layout'  => array( 'grid gap-8 min-w-0' ),
+	'columns' => array( 'grid-layout rich-text min-w-0' ),
 );
 
 ?>
@@ -35,12 +35,15 @@ $s_classes = array(
 			<?php the_post(); ?>
 			<?php $post = isset( $_post ) ? $_post : $post; ?>
 
-			<header class="<?php the_classes( $s_classes['section'] ); ?>">
+			<header class="min-w-0">
 				<div data-layout="hero" class="<?php the_classes( $s_classes['layout'] ); ?>">
+
 					<?php include locate_template( 'template-parts/singular/hero.php' ); ?>
+
 					<div class="<?php the_classes( $s_classes['columns'] ); ?>">
 						<?php include locate_template( 'template-parts/singular/meta.php' ); ?>
 					</div>
+
 					<?php if ( 'post' === $post->post_type ) : ?>
 						<div class="<?php the_classes( $s_classes['columns'] ); ?>">
 							<div class="grid-layout grid-cols-1 col-span-full lg:col-start-3 lg:col-end-7">
@@ -48,6 +51,7 @@ $s_classes = array(
 							</div>
 						</div>
 					<?php endif; ?>
+
 				</div>
 			</header>
 
