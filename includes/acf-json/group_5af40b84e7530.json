@@ -272,13 +272,84 @@
                                     "maxlength": ""
                                 },
                                 {
+                                    "key": "field_644292bab0ffe",
+                                    "label": "Settings",
+                                    "name": "settings",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "hide_admin": 0,
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_64395c7e8802e",
+                                            "label": "Column Count",
+                                            "name": "column_count",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "hide_admin": 0,
+                                            "choices": {
+                                                "1": "1",
+                                                "2": "2"
+                                            },
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "default_value": 2,
+                                            "layout": "vertical",
+                                            "return_format": "value",
+                                            "save_other_choice": 0
+                                        },
+                                        {
+                                            "key": "field_644292c7b0fff",
+                                            "label": "Use Partners",
+                                            "name": "use_partners",
+                                            "type": "true_false",
+                                            "instructions": "If selected, the Partners details will be pulled from the Options page.",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "hide_admin": 0,
+                                            "message": "",
+                                            "default_value": 0,
+                                            "ui": 1,
+                                            "ui_on_text": "",
+                                            "ui_off_text": ""
+                                        }
+                                    ]
+                                },
+                                {
                                     "key": "field_641355adc2cf5",
                                     "label": "Items",
                                     "name": "items",
                                     "type": "repeater",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_644292c7b0fff",
+                                                "operator": "!=",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -310,117 +381,6 @@
                                             "prepend": "",
                                             "append": "",
                                             "maxlength": ""
-                                        },
-                                        {
-                                            "key": "field_64135823f3be8",
-                                            "label": "Show Modal With Details",
-                                            "name": "show_modal_with_details",
-                                            "type": "true_false",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "20",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "hide_admin": 0,
-                                            "message": "",
-                                            "default_value": 0,
-                                            "ui": 0,
-                                            "ui_on_text": "",
-                                            "ui_off_text": ""
-                                        },
-                                        {
-                                            "key": "field_64135615c2cf7",
-                                            "label": "Description",
-                                            "name": "description",
-                                            "type": "wysiwyg",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": [
-                                                [
-                                                    {
-                                                        "field": "field_64135823f3be8",
-                                                        "operator": "==",
-                                                        "value": "1"
-                                                    }
-                                                ]
-                                            ],
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "hide_admin": 0,
-                                            "default_value": "",
-                                            "tabs": "all",
-                                            "toolbar": "full",
-                                            "media_upload": 0,
-                                            "delay": 0
-                                        },
-                                        {
-                                            "key": "field_64135b9f1d9c9",
-                                            "label": "Button",
-                                            "name": "button",
-                                            "type": "group",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": [
-                                                [
-                                                    {
-                                                        "field": "field_64135823f3be8",
-                                                        "operator": "==",
-                                                        "value": "1"
-                                                    }
-                                                ]
-                                            ],
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "hide_admin": 0,
-                                            "layout": "block",
-                                            "sub_fields": [
-                                                {
-                                                    "key": "field_64135ba71d9ca",
-                                                    "label": "Label",
-                                                    "name": "label",
-                                                    "type": "text",
-                                                    "instructions": "",
-                                                    "required": 0,
-                                                    "conditional_logic": 0,
-                                                    "wrapper": {
-                                                        "width": "",
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "hide_admin": 0,
-                                                    "default_value": "Learn more",
-                                                    "placeholder": "",
-                                                    "prepend": "",
-                                                    "append": "",
-                                                    "maxlength": ""
-                                                },
-                                                {
-                                                    "key": "field_64135bdc1d9cb",
-                                                    "label": "Link",
-                                                    "name": "href",
-                                                    "type": "url",
-                                                    "instructions": "",
-                                                    "required": 0,
-                                                    "conditional_logic": 0,
-                                                    "wrapper": {
-                                                        "width": "",
-                                                        "class": "",
-                                                        "id": ""
-                                                    },
-                                                    "hide_admin": 0,
-                                                    "default_value": "",
-                                                    "placeholder": ""
-                                                }
-                                            ]
                                         }
                                     ]
                                 },
@@ -478,31 +438,6 @@
                                             "placeholder": ""
                                         }
                                     ]
-                                },
-                                {
-                                    "key": "field_64395c7e8802e",
-                                    "label": "Column Count",
-                                    "name": "column_count",
-                                    "type": "radio",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "hide_admin": 0,
-                                    "choices": {
-                                        "1": "1",
-                                        "2": "2"
-                                    },
-                                    "allow_null": 0,
-                                    "other_choice": 0,
-                                    "default_value": 2,
-                                    "layout": "vertical",
-                                    "return_format": "value",
-                                    "save_other_choice": 0
                                 }
                             ]
                         }
@@ -1442,5 +1377,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1681481320
+    "modified": 1682084836
 }

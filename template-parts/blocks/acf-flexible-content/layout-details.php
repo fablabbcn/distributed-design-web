@@ -18,6 +18,7 @@ $sections = get_sub_field( 'sections' ) ?: array();
 		<div class="grid-layout gap-0 lg:gap-4 lg:grid-cols-3 items-baseline -space-y-px">
 			<?php foreach ( $sections as $section ) : ?>
 				<?php
+				$section['items'] = $section['settings']['use_partners'] ? get_field( 'logos', 'options' ) : $section['items'];
 				$_title = $section['items'] && count( $section['items'] )
 					? count( $section['items'] ) . ' ' . $section['title']
 					: $section['title'];
