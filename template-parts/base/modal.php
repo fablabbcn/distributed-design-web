@@ -18,14 +18,14 @@
     </div>
 
     <header class="col-span-full lg:col-span-2">
-      <p class="text-2xl"><?php echo esc_html( $modal['label'] ); ?></p>
+      <p class="text-2xl"><?php echo esc_html( $modal['title'] ?: $item['label'] ); ?></p>
     </header>
 
     <div class="col-span-full lg:col-span-4 grid gap-6">
       <div class="rich-text"><?php echo wp_kses_ddmp( $modal['description'] ); ?></div>
-      <?php if ( array_key_exists( 'button', $modal ) && $modal['button']['label'] ) : ?>
+      <?php if ( array_key_exists( 'link', $modal ) && $modal['link']['url'] ) : ?>
         <div class="">
-          <?php set_query_var( 'button', $modal['button'] ); ?>
+          <?php set_query_var( 'button', array( 'label' => $modal['link']['title'] ?: 'Learn more', 'href' => $modal['link']['url'], 'target' => $modal['link']['target'] ) ); ?>
           <?php get_template_part( 'template-parts/base/button' ); ?>
         </div>
       <?php endif; ?>

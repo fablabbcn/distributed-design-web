@@ -42,10 +42,10 @@ $sections = get_sub_field( 'sections' ) ?: array();
 										:class="index >= maxCount && isCollapsed && 'hidden'"
 										x-data="{ index: <?php echo $key; ?>, isOpen: false }"
 									>
-										<?php if ( ! $item['show_modal_with_details'] ) : ?>
-											<span><?php echo esc_html( $item['label'] ); ?></span>
+										<?php if ( ! $item['description'] ) : ?>
+											<span><?php echo esc_html( $item['title'] ?: $item['label'] ); ?></span>
 										<?php else : ?>
-											<button @click="isOpen = !isOpen"><?php echo esc_html( $item['label'] ); ?></button>
+											<button @click="isOpen = !isOpen"><?php echo esc_html( $item['title'] ?: $item['label'] ); ?></button>
 
 											<template x-teleport="body">
 												<div x-show="isOpen" x-trap.inert.noscroll="isOpen">
