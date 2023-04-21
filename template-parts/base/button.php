@@ -14,6 +14,13 @@ $is_link = isset( $button['href'] );
     <?php echo esc_html( $button['label'] ); ?>
   </a>
 
+<?php elseif ( $button['type'] === 'span' ) : ?>
+  <span
+    class="ddp-button <?php echo $button['theme'] ?: ''; ?>"
+  >
+    <?php echo esc_html( $button['label'] ); ?>
+  </span>
+
 <?php else : ?>
   <button
     class="ddp-button <?php echo $button['theme'] ?: ''; ?>"
