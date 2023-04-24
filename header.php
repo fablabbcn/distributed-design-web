@@ -74,9 +74,9 @@ $theme = array(
 					<ul class="z-10 relative flex flex-col lg:flex-row lg:gap-12 w-full">
 						<?php foreach ( $menu_items as $key => $menu_item ) : ?>
 							<li class="border-t lg:border-none border-black">
-								<?php /* if ( intval( $menu_item->object_id, 10 ) === $post->ID ) : */ ?>
+								<?php $is_current = $_SERVER['REQUEST_URI'] === parse_url( $menu_item->url, PHP_URL_PATH ); ?>
 								<a
-									class="flex justify-start items-center gap-x-8 py-6 lg:py-0 no-underline hover:underline focus:underline"
+									class="flex justify-start items-center gap-x-8 py-6 lg:py-0 <?php echo esc_attr( $is_current ? 'underline' : 'no-underline' ); ?> hover:underline focus:underline"
 									href="<?php echo esc_url( $menu_item->url ); ?>"
 								>
 									<span class="flex lg:hidden justify-center items-center w-12 h-8 border border-black rounded-full" aria-hidden="true">
