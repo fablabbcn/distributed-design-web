@@ -5,8 +5,6 @@
 
 $content = get_sub_field( 'content' );
 $styles  = get_sub_field( 'slider' )['styles'];
-$color   = get_sub_field( 'slider' )['styles']['bg_color'];
-$corner  = get_sub_field( 'slider' )['styles']['corner'];
 
 $slider  = array(
 	'config'    => 'visual',
@@ -30,7 +28,7 @@ $className = array(
 ?>
 
 
-<section class="relative grid grid-cols-1 gap-8 py-8">
+<section class="relative grid grid-cols-1 gap-8 py-8 <?php echo esc_attr( $content['title'] || $content['text'] ? '' : 'bg-transparent lg:py-0' ); ?>">
 
 	<?php if ( $content['title'] || $content['text'] ) : ?>
 		<header class="grid-layout">
@@ -48,10 +46,10 @@ $className = array(
 	<?php endif; ?>
 
 	<figure class="z-0 relative lg:bleed rounded-2xl lg:rounded-none overflow-hidden bg-gray <?php echo esc_attr( $content['title'] || $content['text'] ? 'my-4' : '' ); ?>">
-		<div class="z-10 absolute inset-0 <?php echo esc_attr( $color ?: 'bg-yellow' ); ?> pointer-events-none"></div>
+		<div class="z-10 absolute inset-0 <?php echo esc_attr( $styles['bg_color'] ?: 'bg-yellow' ); ?> pointer-events-none"></div>
 		<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-yellow via-transparent to-transparent"></div> -->
-		<div class="z-30 absolute inset-0 bg-gradient-<?php echo esc_attr( $corner ?: 'tl' ); ?>-<?php echo esc_attr( str_replace( 'bg-', '', $color ) ?: 'yellow' ); ?> pointer-events-none"></div>
-		<div class="z-20 relative bg-gray <?php echo esc_attr( $className['corner'][$corner ?: 'tl'] ); ?> overflow-hidden">
+		<div class="z-30 absolute inset-0 bg-gradient-<?php echo esc_attr( $styles['corner'] ?: 'tl' ); ?>-<?php echo esc_attr( str_replace( 'bg-', '', $styles['bg_color'] ) ?: 'yellow' ); ?> pointer-events-none"></div>
+		<div class="z-20 relative bg-gray <?php echo esc_attr( $className['corner'][ $styles['corner'] ?: 'tl' ] ); ?> overflow-hidden">
 			<?php set_query_var( 'slider', $slider ); ?>
 			<?php get_template_part( 'template-parts/base/slider' ); ?>
 		</div>
