@@ -1331,6 +1331,56 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6448118ee4454": {
+                    "key": "layout_6448118ee4454",
+                    "name": "partners_map",
+                    "label": "✅ Partners Map",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6448118ee4455",
+                            "label": "Title",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_6448118ee4456",
+                            "label": "Description",
+                            "name": "description",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Row",
@@ -1377,5 +1427,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1682084836
+    "modified": 1682444801
 }

@@ -3,6 +3,7 @@
 // Enqueue style and js
 function the_theme_scripts() {
 	$theme_version = wp_get_theme()['Version'];
+	$google_maps_api_key = get_field( 'google_maps_api_key', 'options' );
 
 	wp_enqueue_style( 'tailwindcss', get_stylesheet_directory_uri() . '/assets/css/tailwind.prod.css', null, $theme_version );
 	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.css', null, $theme_version );
@@ -18,6 +19,9 @@ function the_theme_scripts() {
 	wp_enqueue_script( 'alpine-focus', 'https://cdn.jsdelivr.net/npm/@alpinejs/focus@3.11.1/dist/cdn.min.js', null, '3.11.1', true );
 	wp_enqueue_script( 'alpine', 'https://cdn.jsdelivr.net/npm/alpinejs@3.11.1/dist/cdn.min.js', null, '3.11.1', true );
 	wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery', 'swiper' ), $theme_version, true );
+
+	wp_enqueue_script( 'google-maps', "https://maps.googleapis.com/maps/api/js?key=$google_maps_api_key&callback=Function.prototype", null, false, true );
+	wp_enqueue_script( 'acf-maps', get_stylesheet_directory_uri() . '/assets/js/acf-maps.js', array( 'jquery', 'google-maps' ), $theme_version, true );
 
 	$js_names = array(
 		'jquery',
