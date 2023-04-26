@@ -21,11 +21,13 @@ $partners = get_field( 'logos', 'options' ) ?: array();
 		<?php endif; ?>
 	</div>
 
-	<div class="col-span-full lg:col-span-4 flex flex-col gap-8">
+	<div class="col-span-full lg:col-span-4">
 		<div class="flex justify-center items-center invert">
 			<?php get_template_part( 'template-parts/blocks/footer/logos' ); ?>
 		</div>
+	</div>
 
+	<div class="col-span-full lg:col-start-2 lg:col-span-6">
 		<?php if ( get_field( 'logos', 'options' ) ) : ?>
 			<div class="acf-map aspect-w-16 aspect-h-9 w-full rounded-2xl overflow-hidden" data-zoom="16">
 				<?php foreach( $partners as $partner ) : ?>
