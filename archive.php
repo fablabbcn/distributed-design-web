@@ -66,12 +66,36 @@ $slider = array(
 		<?php if ( $facet ) : ?>
 			<?php echo wp_kses_post( $facet ); ?>
 
+		<?php /* elseif ( get_post_type() === 'tribe_events' ) : */ ?>
+
 		<?php else : ?>
 			<section class="">
 				<ul class="grid-layout md:grid-cols-2 lg:grid-cols-3">
 					<?php while ( have_posts() ) : ?>
 						<?php the_post(); ?>
-						<li class=""><?php get_template_part( 'template-parts/base/card' ); ?></li>
+						<?php
+
+						$is_event_upcoming = function () {
+							$date = date( 'Y-m-d' );
+							$date_start = tribe_get_start_date( null, false, 'Y-m-d' );
+							$date_end = tribe_get_end_date( null, false, 'Y-m-d' );
+
+							return DateTime::createFromFormat( 'Y-m-d', $date_end ?: $date_start ) > DateTime::createFromFormat( 'Y-m-d', $date );
+						};
+
+						$card = array(
+							'theme' => get_post_type() === 'tribe_events'
+								? ( $is_event_upcoming() ? '' : 'text-white bg-black' )
+								: ( '' ),
+						);
+
+						?>
+
+						<li class="">
+							<?php set_query_var( 'card', $card ); ?>
+							<?php get_template_part( 'template-parts/base/card' ); ?>
+						</li>
+
 					<?php endwhile ?>
 				</ul>
 			</section>
