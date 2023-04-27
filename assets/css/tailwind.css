@@ -182,20 +182,21 @@ body.page main > article > [class*="bg-"] + [class*="bg-"] {
 
   & .facetwp-checkbox {
     @apply ddp-button;
-    &:is(:hover, .checked) { @apply text-gray bg-black !important; }
+    &:is(.checked) { @apply text-gray bg-black !important; }
   }
 
   & .facetwp-radio {
-    @apply ddp-button;
-    &:is(:hover, .checked) { @apply text-gray bg-black !important; }
+    &[data-value=""] { @apply ddp-button; }
+    &:is(.checked) { @apply text-gray bg-black rounded-full !important; }
   }
 
   & .facetwp-pager {
-    @apply flex items-center justify-center gap-4;
+    @apply flex items-center justify-center gap-2;
 
     & .facetwp-page {
       @apply ddp-button;
-      &:is(:hover, .checked) { @apply text-white bg-black !important; }
+      &:is(.checked) { @apply text-white bg-black !important; }
+      &:is(.disabled) { @apply opacity-50 cursor-not-allowed !important; }
       &.active:not(.prev, .next) { @apply font-bold; }
       &:not(.prev, .next) { @apply hidden; }
     }

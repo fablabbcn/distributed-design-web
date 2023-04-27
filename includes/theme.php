@@ -13,6 +13,7 @@
 // 	}
 // );
 
+
 // FacetWP: Remove front-end styles
 add_filter(
 	'facetwp_assets',
@@ -25,21 +26,33 @@ add_filter(
 	}
 );
 
-// FacetWP: Custom Pagination.
-// add_filter(
-// 	'facetwp_pager_html',
-// 	function ( $output, $params ) {
-// 		return Timber::compile(
-// 			'partials/common/pagination.twig',
-// 			array(
-// 				'post'  => new Timber\Post(),
-// 				'facet' => $params,
-// 			)
-// 		);
-// 	},
-// 	10,
-// 	2
-// );
+// FacetWP: Add icons to taxonomy buttons
+add_filter( 'facetwp_facet_display_value', function( $label, $params ) {
+	if ( $params['facet']['type'] !== 'radio' ) return;
+
+	$source = $params['facet']['source'];
+
+	if ( str_contains( $source, 'tax/' ) ) {
+		$taxonomy = str_replace( 'tax/', '', $source );
+
+		$icon = get_field( 'icon', $taxonomy . '_' . $params['row']['term_id'] );
+		$color = get_field( 'color', $taxonomy . '_' . $params['row']['term_id'] );
+		$icon_url = wp_get_attachment_image_url( $icon, 'icon-thumbnails', false );
+
+		$label = $icon
+			? "<div class=\"ddp-button\" style=\"--icon-url: url('$icon_url'); color: $color;\"><span class=\"-my-2 ddp-button-icon\"></span><span>$label</span></div>"
+			: "<div class=\"ddp-button\" style=\"--icon-url: url('$icon_url'); color: $color;\"><span>$label</span></div>";
+	}
+
+	return $label;
+}, 10, 2 );
+
+// FacetWP: Always show Prev+Next buttons
+add_filter( 'facetwp_facet_types', function( $types ) {
+	include( dirname( __FILE__ ) . '/facetwp/class-pager-ddp.php' );
+	$types['pager'] = new FacetWP_Facet_Pager_DDP();
+	return $types;
+});
 
 
 add_filter(
