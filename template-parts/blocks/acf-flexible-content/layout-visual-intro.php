@@ -52,7 +52,7 @@ $className = array(
 		<div class="z-10 absolute inset-0 <?php echo esc_attr( $styles['bg_color'] ?: 'bg-yellow' ); ?> pointer-events-none"></div>
 		<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-yellow via-transparent to-transparent"></div> -->
 		<div class="z-30 absolute inset-0 bg-gradient-<?php echo esc_attr( $styles['corner'] ?: 'tl' ); ?>-<?php echo esc_attr( str_replace( 'bg-', '', $styles['bg_color'] ) ?: 'yellow' ); ?> pointer-events-none"></div>
-		<div class="z-20 relative bg-gray <?php echo esc_attr( $className['corner'][ $styles['corner'] ?: 'tl' ] ); ?> overflow-hidden">
+		<div class="z-20 relative max-h-[70vh] bg-gray <?php echo esc_attr( $className['corner'][ $styles['corner'] ?: 'tl' ] ); ?> overflow-hidden">
 			<?php set_query_var( 'slider', $slider ); ?>
 			<?php get_template_part( 'template-parts/base/slider' ); ?>
 		</div>
