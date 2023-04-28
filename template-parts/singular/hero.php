@@ -35,13 +35,13 @@ $className = array(
 
 	<?php if ( in_array( $post->post_type, array( 'resources', 'talent' ) ) ) : ?>
 		<div class="grid grid-cols-2 lg:grid-cols-1 col-span-full lg:col-span-2 lg:order-first">
-			<div class="aspect-w-13 aspect-h-7 lg:aspect-none">
-				<div class="flex flex-col justify-start lg:!h-full p-8 pb-6 text-white bg-black">
+			<div class="lg:aspect-none">
+				<div class="flex flex-col justify-start !h-full p-8 pb-6 text-white bg-black">
 					<h1 class="text-2xl leading-tight font-regular"><?php the_title(); ?></h1>
 				</div>
 			</div>
-			<div class="aspect-w-13 aspect-h-7 lg:aspect-none">
-				<div class="flex flex-col justify-end lg:!h-full p-8 pb-6 text-white <?php echo esc_attr( $post->post_type === 'resources' ? 'bg-indigo' : 'bg-green' ); ?>">
+			<div class="lg:aspect-none">
+				<div class="flex flex-col justify-end !h-full p-8 pb-6 text-white <?php echo esc_attr( $post->post_type === 'resources' ? 'bg-indigo' : 'bg-green' ); ?>">
 					<p class="text-xl leading-tight font-light">A project by <br /> <?php the_field( 'name' ); ?></p>
 				</div>
 			</div>
