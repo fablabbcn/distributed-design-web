@@ -37,7 +37,7 @@ $theme = array(
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'text-black bg-gray text-base font-sans' ); ?> >
+<body <?php body_class( 'text-black bg-gray text-base font-sans hyphens-auto [word-break:break-word]' ); ?> >
 	<div class="sr-only" aria-hidden="true"><?php require_once 'assets/img/icons.svg'; ?></div>
 
 	<div class="flex flex-col min-h-screen">
