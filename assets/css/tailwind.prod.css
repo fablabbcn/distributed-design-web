@@ -493,7 +493,14 @@ a:hover, button:hover, a:focus, button:focus {
   }
 .rich-text { display: grid; grid-gap: 1rem; gap: 1rem; }
 .rich-text h1, .rich-text h2, .rich-text h3, .rich-text h4, .rich-text h5, .rich-text h6, .rich-text b, .rich-text strong { font-weight: 600; }
-.rich-text h1:not([class*="mt-"]), .rich-text h2:not([class*="mt-"]), .rich-text h3:not([class*="mt-"]), .rich-text h4:not([class*="mt-"]), .rich-text h5:not([class*="mt-"]), .rich-text h6:not([class*="mt-"]), .rich-text b:not([class*="mt-"]), .rich-text strong:not([class*="mt-"]) { margin-top: 1em; }
+.rich-text h1:not([class*="mt-"]):not(:first-child) { margin-top: 1em; }
+.rich-text h2:not([class*="mt-"]):not(:first-child) { margin-top: 1em; }
+.rich-text h3:not([class*="mt-"]):not(:first-child) { margin-top: 1em; }
+.rich-text h4:not([class*="mt-"]):not(:first-child) { margin-top: 1em; }
+.rich-text h5:not([class*="mt-"]):not(:first-child) { margin-top: 1em; }
+.rich-text h6:not([class*="mt-"]):not(:first-child) { margin-top: 1em; }
+.rich-text b:not([class*="mt-"]):not(:first-child) { margin-top: 1em; }
+.rich-text strong:not([class*="mt-"]):not(:first-child) { margin-top: 1em; }
 .rich-text h1 { font-size: 2.25rem; line-height: 2.5rem; }
 .rich-text h2 { font-size: 1.875rem; line-height: 2.25rem; }
 .rich-text h3 { font-size: 1.5rem; line-height: 2rem; }

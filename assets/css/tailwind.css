@@ -96,7 +96,7 @@
     @apply grid gap-4;
 
     & :is(h1, h2, h3, h4, h5, h6, b, strong) { @apply font-semibold; }
-    & :is(h1, h2, h3, h4, h5, h6, b, strong):not([class*="mt-"]) { @apply mt-[1em]; }
+    & :is(h1, h2, h3, h4, h5, h6, b, strong):not([class*="mt-"]):not(:first-child) { @apply mt-[1em]; }
 
     & h1 { @apply text-4xl; }
     & h2 { @apply text-3xl; }
