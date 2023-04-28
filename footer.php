@@ -19,7 +19,9 @@ $contact = get_field( 'contact', 'options' );
 
 					<div class="grid-layout grid-cols-2 lg:grid-cols-14 text-xs lg:text-sm [&_img]:inline-block [&_img]:w-auto [&_img]:max-h-10 lg:[&_img]:max-h-12 [&_img]:brightness-0 [&_img]:invert [&_p]:hyphens-auto">
 						<div class="grid gap-6 row-start-1 lg:row-start-1 lg:col-start-1 lg:col-end-4">
-							<?php echo wp_get_attachment_image( $contact['left']['image'], 'post-thumbnail', false ); ?>
+							<figure class="flex">
+								<?php echo wp_get_attachment_image( $contact['left']['image'], 'post-thumbnail', false ); ?>
+							</figure>
 						</div>
 						<div class="grid gap-6 row-start-2 lg:row-start-1 lg:col-start-4 lg:col-end-8">
 							<?php echo wp_kses_post( $contact['left']['description'] ); ?>
@@ -28,7 +30,9 @@ $contact = get_field( 'contact', 'options' );
 							<?php echo wp_kses_post( $contact['right']['description'] ); ?>
 						</div>
 						<div class="grid gap-6 row-start-1 lg:row-start-1 lg:col-start-12 lg:col-end-15">
-							<?php echo wp_get_attachment_image( $contact['right']['image'], 'post-thumbnail', false ); ?>
+							<figure class="flex">
+								<?php echo wp_get_attachment_image( $contact['right']['image'], 'post-thumbnail', false ); ?>
+							</figure>
 						</div>
 					</div>
 
