@@ -138,8 +138,8 @@ $s_classes = array(
 						);
 						$definitions = array(
 							'items' => array(
-								array( 'terms' => array('Author'), 'definitions' => array( get_the_author() ?: '—' ) ),
-								array( 'terms' => array('Institution'), 'definitions' => array( 'Name of the institution/s' ?: '—' ) ),
+								array( 'terms' => array('Author'), 'definitions' => array( get_field( 'author' ) ?: get_the_author() ?: '—' ) ),
+								array( 'terms' => array('Institution'), 'definitions' => array( get_field( 'institution' ) ?: '—' ) ),
 								array( 'terms' => array('Tags'), 'definitions' => array( $tags ?: '—' ) ),
 							),
 						);
