@@ -41,15 +41,14 @@ $theme = array(
 	<div class="sr-only" aria-hidden="true"><?php require_once 'assets/img/icons.svg'; ?></div>
 
 	<div class="flex flex-col min-h-screen">
-		<!-- <div class="-z-50 absolute top-full right-0 w-[50vw] h-[50vw] -mt-[12.5vw] -mr-[6.25vw] <?php echo esc_attr( $theme ); ?> rounded-full blur-[128px]"> -->
-		<div class="-z-50 fixed -top-24 -right-48 w-80 h-80 <?php echo esc_attr( $theme ); ?> rounded-full blur-3xl"></div>
+		<div class="-z-50 fixed -top-24 -right-48 w-80 h-80 <?php echo esc_attr( $theme ); ?> rounded-full blur-3xl pointer-events-none"></div>
 
 		<header
 			class="z-50 sticky top-0 grid lg:grid-rows-1 lg:grid-cols-[1fr_auto] lg:h-auto bg-gray lg:px-8 lg:py-4 overflow-hidden will-change-transform"
 			:class="open ? 'grid-rows-[auto_1fr] h-screen' : ''"
 			x-data="{ open: false }"
 		>
-			<div class="-z-10 fixed -top-24 -right-48 w-80 h-80 <?php echo esc_attr( $theme ); ?> rounded-full blur-3xl"></div>
+			<div class="-z-10 fixed -top-24 -right-48 w-80 h-80 <?php echo esc_attr( $theme ); ?> rounded-full blur-3xl pointer-events-none"></div>
 
 			<div class="flex justify-between items-center px-8 py-4 lg:p-0">
 				<a class="no-underline" href="<?php echo esc_url( home_url() ); ?>">
@@ -67,7 +66,7 @@ $theme = array(
 
 			<template x-if="true">
 				<nav class="z-0 relative lg:!flex items-center w-full lg:w-auto px-8 py-12 lg:p-0 overflow-auto" x-show="open" x-transition>
-					<div class="lg:hidden z-0 fixed -bottom-[37.5vw] -right-[6.25vw] w-[50vw] h-[50vw] <?php echo esc_attr( $theme ); ?> rounded-full blur-2xl"></div>
+					<div class="lg:hidden z-0 fixed -bottom-[37.5vw] -right-[6.25vw] w-[50vw] h-[50vw] <?php echo esc_attr( $theme ); ?> rounded-full blur-2xl pointer-events-none"></div>
 
 					<div class="sticky top-[-48px] lg:hidden -mb-px border-t border-black"></div>
 

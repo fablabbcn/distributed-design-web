@@ -6,6 +6,8 @@
 $content = get_sub_field( 'content' );
 $styles  = get_sub_field( 'slider' )['styles'];
 
+$blob_color = get_sub_field( 'styles' )['blob_color'];
+
 $slider  = array(
 	'config'    => 'visual',
 	'slides'    => get_sub_field( 'slider' )['images'],
@@ -38,7 +40,8 @@ $className = array(
 				</div>
 			<?php endif; ?>
 			<?php if ( $content['text'] ) : ?>
-				<div class="col-span-4 col-start-2 lg:col-start-4 lg:col-end-7">
+				<div class="col-span-4 col-start-2 lg:col-start-4 lg:col-end-7 relative">
+					<div class="hidden lg:block -z-10 absolute bottom-full right-16 w-80 h-80 <?php echo esc_attr( $blob_color ); ?> rounded-full blur-3xl pointer-events-none"></div>
 					<div class="lg:mt-12 text-xl lg:text-3xl font-light"><?php echo wp_kses_post( $content['text'] ); ?></div>
 				</div>
 			<?php endif; ?>
