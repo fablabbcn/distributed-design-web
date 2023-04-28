@@ -146,12 +146,14 @@ $s_classes = array(
 						?>
 
 						<div class="<?php the_classes( $s_classes['columns'] ); ?>">
-							<div class="col-span-full lg:col-start-2 lg:col-end-3">
-								<p class="text-xl lg:text-3xl font-light">Blog post credits</p>
-							</div>
-							<div class="col-span-full lg:col-start-3 lg:col-end-7">
-								<?php set_query_var( 'list', $definitions ); ?>
-								<?php get_template_part( 'template-parts/base/list-definitions' ); ?>
+							<div class="grid-layout lg:grid-cols-5 col-span-full lg:col-start-3 lg:col-end-7">
+								<div class="col-span-full lg:col-start-1 lg:col-end-2">
+									<p class="text-xl lg:text-3xl font-light">Blog post credits</p>
+								</div>
+								<div class="col-span-full lg:col-start-2 lg:col-end-6">
+									<?php set_query_var( 'list', $definitions ); ?>
+									<?php get_template_part( 'template-parts/base/list-definitions' ); ?>
+								</div>
 							</div>
 						</div>
 
