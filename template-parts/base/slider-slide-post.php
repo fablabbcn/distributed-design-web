@@ -13,6 +13,14 @@ $button = array(
   'theme' => 'text-black bg-white',
 );
 
+$subtitle = get_field( 'subtitle', $slide->ID ) ?: array(
+  'post' => 'Curated posts',
+  'talent' => 'Rising talents',
+  'tribe_events' => 'Upcoming',
+  'resources' => 'Suggested',
+  'page' => '',
+)[ get_post_type() ];
+
 ?>
 
 
@@ -23,11 +31,14 @@ $button = array(
     </figure>
   </div>
   <div class="container absolute inset-0 grid-layout w-full h-full px-20 lg:px-8 py-12">
-    <div class="col-span-full lg:col-start-3 lg:col-end-6 flex flex-col items-center w-full h-full text-white text-center">
-      <div class="my-auto">
+    <div class="col-span-full lg:col-start-3 lg:col-end-6 flex flex-col justify-center items-center gap-2 w-full h-full text-white text-center">
+      <div class="_mt-auto">
+        <div class="text-base lg:text-lg font-semibold line-clamp-1 uppercase"><?php echo $subtitle; ?></div>
+      </div>
+      <div class="_mb-auto">
         <p class="text-2xl lg:text-3xl font-semibold line-clamp-3"><?php echo get_the_title( $slide->ID ); ?></p>
       </div>
-      <div class="">
+      <div class="mt-4 lg:mt-8">
         <?php set_query_var( 'button', $button ); ?>
         <?php get_template_part( 'template-parts/base/button' ); ?>
       </div>

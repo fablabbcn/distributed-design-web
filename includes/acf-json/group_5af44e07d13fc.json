@@ -34,7 +34,7 @@
             "label": "Subtitle",
             "name": "subtitle",
             "type": "wysiwyg",
-            "instructions": "Only used on Posts and Talent.",
+            "instructions": "Shown in posts sliders above the title. Leave empty to use the default one for each post type.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -42,6 +42,7 @@
                 "class": "",
                 "id": ""
             },
+            "hide_admin": 0,
             "default_value": "",
             "tabs": "all",
             "toolbar": "basic",
@@ -144,5 +145,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1682681530
+    "modified": 1682694221
 }
