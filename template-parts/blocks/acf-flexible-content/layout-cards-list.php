@@ -23,7 +23,7 @@ $description = get_sub_field( 'description' );
 	</div>
 
 	<div class="col-span-full lg:col-span-full">
-		<ul class="grid-layout grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-8 items-baseline">
+		<ul class="grid-layout grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 items-baseline">
 			<?php foreach ( $_items as $_item ) : ?>
 
 				<li class="flex flex-col gap-4 h-full p-6 lg:p-8 bg-white rounded-2xl">
