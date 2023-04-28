@@ -70,7 +70,7 @@ $slider = array(
 
 		<?php else : ?>
 			<section class="">
-				<ul class="grid-layout md:grid-cols-2 lg:grid-cols-3">
+				<ul class="grid-layout <?php echo esc_attr( get_post_type() === 'resources' ? 'grid-cols-1 gap-8 lg:gap-16' : 'md:grid-cols-2 lg:grid-cols-3'); ?>">
 					<?php while ( have_posts() ) : ?>
 						<?php the_post(); ?>
 						<?php
@@ -93,7 +93,7 @@ $slider = array(
 
 						<li class="">
 							<?php set_query_var( 'card', $card ); ?>
-							<?php get_template_part( 'template-parts/base/card' ); ?>
+							<?php get_template_part( get_post_type() === 'resources' ? 'template-parts/base/card-resources' : 'template-parts/base/card' ); ?>
 						</li>
 
 					<?php endwhile ?>
