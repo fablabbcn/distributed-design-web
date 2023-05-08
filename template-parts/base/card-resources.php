@@ -11,7 +11,7 @@
         <div>
           <?php include locate_template( 'template-parts/singular/meta.php' ); ?>
         </div>
-        <div>
+        <div class="rich-text">
           <?php the_field( 'description' ); ?>
         </div>
         <div class="flex gap-2 justify-end items-center lg:justify-start">
