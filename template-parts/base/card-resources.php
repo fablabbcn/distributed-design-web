@@ -5,8 +5,8 @@
 
       <div class="grid-layout grid-cols-1 col-span-full">
         <div>
-          <p class="text-xl font-semibold line-clamp-1"><?php the_title(); ?></p>
-          <p class="text-xl font-normal line-clamp-1"><?php the_field( 'name' ); ?></p>
+          <p class="text-xl font-semibold"><?php the_title(); ?></p>
+          <p class="text-xl font-normal"><?php the_field( 'name' ); ?></p>
         </div>
         <div>
           <?php include locate_template( 'template-parts/singular/meta.php' ); ?>
@@ -24,7 +24,7 @@
 
       <div class="grid-layout grid-cols-3 col-span-full hidden lg:grid pt-4 border-t">
         <div class="col-span-2">
-          <p class="text-lg font-semibold line-clamp-1">Content</p>
+          <p class="text-lg font-semibold">Content</p>
         </div>
         <div class="col-span-2">
           <?php the_field( 'file_contents' ); ?>
