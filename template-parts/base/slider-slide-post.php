@@ -13,13 +13,9 @@ $button = array(
   'theme' => 'text-black bg-white',
 );
 
-$subtitle = get_field( 'subtitle', $slide->ID ) ?: array(
-  'post' => 'Curated posts',
-  'talent' => 'Rising talents',
-  'tribe_events' => 'Upcoming',
-  'resources' => 'Suggested',
-  'page' => '',
-)[ get_post_type() ];
+$subtitle = get_field( 'archive_titles', 'options' )
+  ? get_field( 'archive_titles', 'options' )[ get_post_type() ]
+  : null;
 
 ?>
 
