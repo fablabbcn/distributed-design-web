@@ -78,7 +78,7 @@ get_header();
 					<header>
 						<h3 class="text-xl lg:text-3xl font-light">Featured talents</h3>
 					</header>
-					<div class="grid rounded-2xl overflow-hidden">
+					<div class="grid rounded-2xl overflow-hidden will-change-transform">
 						<?php set_query_var( 'slider', $section_talent ); ?>
 						<?php get_template_part( 'template-parts/base/slider' ); ?>
 					</div>
