@@ -211,3 +211,144 @@ body.single-post main > article {
     }
   }
 }
+
+.wpulike.wpulike-heart {
+  @apply relative flex p-0 leading-none border-none cursor-pointer rounded-full overflow-hidden;
+
+  & .wp_ulike_general_class {
+    @apply flex gap-1 p-0 bg-transparent shadow-none;
+  }
+
+  & .count-box {
+    font: unset;
+    @apply p-0 text-current;
+  }
+
+  & .wp_ulike_btn {
+    @apply static;
+  }
+
+  & .wp_ulike_put_image {
+    @apply w-[1em] h-[1em] p-0 !important;
+
+    &::after { @apply static w-[inherit] h-[inherit] transform-none; }
+
+    &::before {
+      content: '';
+      @apply absolute inset-0 w-full h-full;
+    }
+  }
+}
+
+.af-form.acf-form[id*="form_"], #acf-form {
+  & .af-page-wrap {
+    @apply !m-0 -mx-8 lg:-mx-12;
+
+    & .af-page-button {
+      @apply text-black bg-black/5 border-none;
+
+      &:not(:first-child) { @apply border-l border-r-0 border-solid border-[rgb(235,235,235)]; }
+
+      &::before { @apply content-none; }
+      &::after { @apply content-none; }
+
+      &.enabled {
+        @apply bg-white;
+      }
+
+      & .index {
+        @apply text-black bg-gray/50;
+      }
+    }
+  }
+
+  & .acf-field {
+    @apply px-0 py-8 border-[rgb(235,235,235)];
+
+    & .acf-label label { @apply font-semibold; }
+    & .char-count { @apply block mt-2 text-xs font-semibold text-right not-italic; }
+
+    & :is([type="checkbox"], [type="radio"]) {
+      @apply text-indigo ring-indigo;
+    }
+
+    & :is(input:not([type="checkbox"], [type="radio"]), textarea, select) {
+      font: inherit !important;
+      @apply ddp-button flex w-full text-left rounded-none;
+    }
+
+    & .acf-table {
+      @apply bg-transparent border-[rgb(235,235,235)] border-collapse;
+
+      & :is(th, td) {
+        @apply p-2 text-inherit bg-transparent border-[rgb(235,235,235)];
+      }
+
+      & .acf-row {
+        &:nth-of-type(even) { @apply bg-gray/25; }
+        & .acf-row-number { @apply text-inherit; }
+      }
+    }
+
+    & .acf-actions > .acf-repeater-add-row {
+      @apply min-h-0 px-3 py-2 text-xs leading-none;
+    }
+
+    /* & .acf-repeater .acf-row:is(:hover, .-hover) > .acf-row-handle .acf-icon {
+      @apply flex justify-center items-center;
+    } */
+
+    &.acf-field-group {
+      & .acf-fields { @apply border-none; }
+      & .acf-field {
+        @apply p-2 border-none;
+
+        box-shadow:
+          1px 0 0 0 rgb(235 235 235),
+          0 1px 0 0 rgb(235 235 235),
+          1px 1px 0 0 rgb(235 235 235),
+          1px 0 0 0 rgb(235 235 235) inset,
+          0 1px 0 0 rgb(235 235 235) inset;
+      }
+    }
+
+    & .acf-input-wrap {
+      & i.acf-icon {
+        @apply top-px left-px bottom-px flex justify-end items-center w-4 h-full text-black/50 border-none opacity-100;
+        &::before { @apply m-0; }
+      }
+    }
+  }
+
+  & :is(.af-submit, .acf-form-submit) { @apply flex justify-end gap-2 p-0; }
+
+  & :is(.acf-button, .af-previous-button, .af-next-button, .af-close-button, .acf-gallery-sort) {
+    @apply ddp-button m-0;
+
+    /* &:matches(:hover, :focus) { @apply text-black bg-white-70 !important; }
+    &:matches([disabled]) { @apply opacity-30 cursor-not-allowed; }
+    &:matches([style="display: none;"]) { @apply hidden !important; } */
+  }
+
+  & .acf-notice {
+    @apply m-0 mb-2 text-indigo bg-indigo/10 border-indigo;
+    &.-error { @apply text-red bg-red/10 border-red; }
+
+    & .acf-notice-dismiss { @apply flex justify-center items-center !bg-white; }
+  }
+
+  & .acf-spinner {
+    @apply invisible order-first;
+
+    &::before {
+      content: '';
+      @apply absolute inset-0 w-full h-full visible bg-white/50;
+    }
+
+    &::after {
+      all: inherit;
+      content: '';
+      @apply z-50 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 visible;
+    }
+  }
+}

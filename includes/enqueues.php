@@ -23,13 +23,7 @@ function the_theme_scripts() {
 	wp_enqueue_script( 'google-maps', "https://maps.googleapis.com/maps/api/js?key=$google_maps_api_key&callback=Function.prototype", null, false, true );
 	wp_enqueue_script( 'acf-maps', get_stylesheet_directory_uri() . '/assets/js/acf-maps.js', array( 'jquery', 'google-maps' ), $theme_version, true );
 
-	$js_names = array(
-		'jquery',
-		'bootstrap-min',
-		'slick-min',
-		// 'placeholders',
-		'scripts',
-	);
+	$js_names = array( 'jquery', 'scripts' );
 
 	$localize_arr = array(
 		'homeUrl'  => home_url(),

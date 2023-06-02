@@ -55,7 +55,8 @@ if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
 		$post_id  = array_key_exists( 'id', $attrs ) ? $attrs['id'] : ( $content ?: false );
 		$form_id  = array_key_exists( 'form', $attrs ) ? $attrs['form'] : false;
 		$modal_id = $form_id ? "modal-form-$post_id" : "modal-resources-$post_id";
-		$classes  = 'flex justify-center items-center w-full py-10 px-20 bg-white hocus:text-black hocus:bg-primary text-center no-underline border rounded-full overflow-hidden';
+		$data     = "{ postId: '$post_id', formId: '$form_id' }";
+		$classes  = 'ddp-button bg-white';
 
 		$this_form = $form_id;
 		$this_post = $post_id;
@@ -66,7 +67,7 @@ if ( ! function_exists( 'ddmp_shortcode_modal' ) ) {
 
 		require_once $partial_location;
 
-		return "<p><button data-toggle=\"$modal_id\" class=\"$classes\">$content</button></p>";
+		return "<p><button x-data=\"$data\" @click=\"openModal = formId || postId\" class=\"$classes\">$content</button></p>";
 	} add_shortcode( 'modal_toggle', 'ddmp_shortcode_modal' );
 }
 

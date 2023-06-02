@@ -18,7 +18,11 @@
 						<?php switch ( gettype( $definition ) ) : ?><?php
 							case 'array' : ?>
 								<?php foreach ( $definition as $key => $d ) : ?>
-									<a href="<?php echo esc_url( $d['href'] ); ?>"><?php echo wp_kses_post( $d['label'] ); ?></a>
+									<?php if ( $d['href'] ) : ?>
+										<a href="<?php echo esc_url( $d['href'] ); ?>"><?php echo wp_kses_post( $d['label'] ); ?></a>
+									<?php else : ?>
+										<span><?php echo wp_kses_post( $d['label'] ); ?></span>
+									<?php endif; ?>
 								<?php endforeach; ?>
 								<?php break;
 							default : ?>
