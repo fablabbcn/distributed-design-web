@@ -28,7 +28,7 @@ add_filter(
 
 // FacetWP: Add icons to taxonomy buttons
 add_filter( 'facetwp_facet_display_value', function( $label, $params ) {
-	if ( $params['facet']['type'] !== 'radio' ) return;
+	if ( ! in_array( $params['facet']['type'], array( 'radio', 'checkboxes' ) ) ) return $label;
 
 	$source = $params['facet']['source'];
 
@@ -36,12 +36,12 @@ add_filter( 'facetwp_facet_display_value', function( $label, $params ) {
 		$taxonomy = str_replace( 'tax/', '', $source );
 
 		$icon = get_field( 'icon', $taxonomy . '_' . $params['row']['term_id'] );
-		$color = get_field( 'color', $taxonomy . '_' . $params['row']['term_id'] );
+		$color = get_field( 'color', $taxonomy . '_' . $params['row']['term_id'] ) ?: 'inherit';
 		$icon_url = wp_get_attachment_image_url( $icon, 'icon-thumbnails', false );
 
 		$label = $icon
-			? "<div class=\"ddp-button\" style=\"--icon-url: url('$icon_url'); color: $color;\"><span class=\"-my-2 ddp-button-icon\"></span><span>$label</span></div>"
-			: "<div class=\"ddp-button\" style=\"--icon-url: url('$icon_url'); color: $color;\"><span>$label</span></div>";
+			? "<div class=\"ddp-button\" style=\"--theme: $color; --icon-url: url('$icon_url');\"><span class=\"-my-2 ddp-button-icon\"></span><span>$label</span></div>"
+			: "<div class=\"ddp-button\" style=\"--theme: $color;\"><span>$label</span></div>";
 	}
 
 	return $label;
