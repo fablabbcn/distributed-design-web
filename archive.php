@@ -41,7 +41,7 @@ $slider = array(
 		<?php set_query_var( 'title', $section['title'] ); ?>
 		<?php get_template_part( 'template-parts/page/header' ); ?>
 
-		<nav class="z-0 relative flex max-h-[70vh] bg-gray">
+		<aside class="z-0 relative flex max-h-[70vh] bg-gray">
 			<div class="aspect-w-4 aspect-h-3"></div>
 			<div class="absolute inset-0 w-full h-full">
 				<div class="bleed h-full">
@@ -56,11 +56,13 @@ $slider = array(
 					</div>
 				</div>
 			</div>
-		</nav>
+		</aside>
 
-		<nav class="grid gap-8 text-center">
-			<p class="text-xl lg:text-3xl font-light">Filter and customize your search</p>
-			<?php echo wp_kses_post( do_shortcode( '[facetwp facet="archive_' . get_post_type() . '"]' ) ); ?>
+		<nav class="grid-layout grid-cols-10 gap-8 text-center">
+			<div class="flex flex-col gap-8 col-span-full lg:col-start-2 lg:col-span-8">
+				<p class="text-xl lg:text-3xl font-light">Filter and customize your search</p>
+				<?php echo wp_kses_post( do_shortcode( '[facetwp facet="archive_' . get_post_type() . '"]' ) ); ?>
+			</div>
 		</nav>
 
 		<?php if ( $facet ) : ?>
@@ -93,7 +95,7 @@ $slider = array(
 
 						<li class="">
 							<?php set_query_var( 'card', $card ); ?>
-							<?php get_template_part( get_post_type() === 'resources' ? 'template-parts/base/card-resources' : 'template-parts/base/card' ); ?>
+							<?php get_template_part( in_array( get_post_type(), array( 'resources', 'af_entry' ) ) ? 'template-parts/base/card-' . get_post_type() : 'template-parts/base/card' ); ?>
 						</li>
 
 					<?php endwhile ?>

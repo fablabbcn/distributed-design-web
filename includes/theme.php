@@ -42,6 +42,8 @@ add_filter( 'facetwp_facet_display_value', function( $label, $params ) {
 		$label = $icon
 			? "<div class=\"ddp-button\" style=\"--theme: $color; --icon-url: url('$icon_url');\"><span class=\"-my-2 ddp-button-icon\"></span><span>$label</span></div>"
 			: "<div class=\"ddp-button\" style=\"--theme: $color;\"><span>$label</span></div>";
+	} else {
+		$label = "<div class=\"ddp-button\"><span>$label</span></div>";
 	}
 
 	return $label;
