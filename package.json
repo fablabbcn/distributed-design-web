@@ -1,20 +1,14 @@
 {
-  "name": "llos-template",
+  "name": "ddp-template",
   "version": "0.1.0",
-  "description": "LLOS& WordPress theme template",
+  "description": "DDP WordPress theme template",
   "keywords": [
-    "llos&",
     "template",
     "theme",
     "wordpress"
   ],
-  "homepage": "https://gitlab.com/llos/template#README",
-  "bugs": {
-    "url": "https://gitlab.com/llos/template/issues"
-  },
-  "repository": "git+https://gitlab.com/llos/template.git",
   "license": "ISC",
-  "author": "LLOS&",
+  "author": "Nestor vera",
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production TAILWIND_MODE=build postcss assets/css/tailwind.css -o assets/css/tailwind.prod.css",
