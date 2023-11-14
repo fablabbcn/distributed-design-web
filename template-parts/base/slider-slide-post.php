@@ -32,7 +32,7 @@ $subtitle = get_field( 'archive_titles', 'options' )
         <div class="text-base lg:text-lg font-semibold line-clamp-1 uppercase"><?php echo $subtitle; ?></div>
       </div>
       <div class="_mb-auto">
-        <p class="text-2xl lg:text-3xl font-semibold line-clamp-3"><?php echo get_the_title( $slide->ID ); ?></p>
+        <p class="text-2xl lg:text-3xl font-semibold line-clamp-3 [text-wrap:balance]"><?php echo get_the_title( $slide->ID ); ?></p>
       </div>
       <div class="mt-4 lg:mt-8">
         <?php set_query_var( 'button', $button ); ?>

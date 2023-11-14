@@ -25,7 +25,7 @@ $button = array(
   </div>
   <div class="absolute inset-0 w-full h-full flex flex-col p-4 text-white text-center">
     <div class="grid gap-2 my-auto">
-      <p class="text-2xl font-bold line-clamp-3"><?php the_title(); ?></p>
+      <p class="text-2xl font-bold line-clamp-3 [text-wrap:balance]"><?php the_title(); ?></p>
       <p class="hidden lg:block lg:line-clamp-1 font-bold uppercase"><?php echo esc_html( $label ); ?></p>
     </div>
     <div class="grid lg:hidden">

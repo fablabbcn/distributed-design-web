@@ -6,7 +6,7 @@
   </div>
   <div class="col-span-3">
     <div class="grid grid-cols-3 grid-rows-[auto_1fr] items-end gap-4 h-full py-4 border-t">
-      <p class="col-span-2 -mr-4 text-xl line-clamp-3"><?php the_title(); ?></p>
+      <p class="col-span-2 -mr-4 text-xl line-clamp-3 [text-wrap:balance]"><?php the_title(); ?></p>
       <p class="col-span-2 text-sm uppercase"><?php the_date( 'd F Y' ); ?></p>
       <div class="ml-auto">
         <span class="flex justify-center items-center w-10 h-10 p-2 text-center border rounded-full">
