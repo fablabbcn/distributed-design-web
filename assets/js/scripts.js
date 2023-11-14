@@ -19,7 +19,6 @@
     // initHeader()
     initDefaultSlider()
     // initFundInfo()
-    // initPartnersCarousel()
     // initStatistics()
     // initMemberList()
   })
@@ -107,31 +106,6 @@
         ...config[slider.dataset.swiper],
       })
     })
-
-    // $('.intro-slider, .post-slider').slick({
-    //   arrows: true,
-    //   dots: true,
-    //   fade: true,
-    //   autoplay: true,
-    //   autoplaySpeed: 4000,
-    // })
-    // $('[data-slider="featured-posts"]').slick({
-    //   arrows: true,
-    //   dots: true,
-    //   fade: true,
-    //   autoplay: true,
-    //   autoplaySpeed: 4000,
-    //   prevArrow: '[data-slider="featured-posts"] button.slick-prev',
-    //   nextArrow: '[data-slider="featured-posts"] button.slick-next',
-    //   responsive: [
-    //     {
-    //       breakpoint: 768,
-    //       settings: {
-    //         arrows: false,
-    //       },
-    //     },
-    //   ],
-    // })
   }
 
   function setImageSize ($img) {
@@ -145,12 +119,6 @@
     $('.fund-info img').each(function () {
       var $img = $(this)
       setImageSize($img)
-    })
-  }
-
-  function initPartnersCarousel () {
-    $('.partners-carousel').slick({
-      variableWidth: true,
     })
   }
 
@@ -215,27 +183,6 @@
 
     $('.member-list').find('a, button').on('click', handleOpener)
   }
-
-  // BeefUp
-  // $('.beefup').beefup({
-  //   openSingle: true,
-  //   onInit: function (element) {
-  //     if (location.hash && location.hash.slice(1) === element.parent().attr('id')) {
-  //       element.find('.beefup__head').each(function (index, item) {
-  //         function handler () {
-  //           var filters = jQuery('.tab-filters button')
-  //           var parentId = element.parent().parent().attr('id')
-  //           var targetTab = filters.filter(':not([data-clip*="' + parentId + '"])')
-
-  //           targetTab.click()
-  //           item.click()
-  //         }
-
-  //         setTimeout(handler, 500)
-  //       })
-  //     }
-  //   },
-  // })
 })(jQuery)
 
 /**
