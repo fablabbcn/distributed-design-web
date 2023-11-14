@@ -21,9 +21,8 @@ $n_classes = array(
 			</div>
 		</div>
 
-		<div class="col-span-full lg:col-span-4">
-			<form data-ajaxchimp class="" method="POST"
-				action="//fablabbcn.us2.list-manage.com/subscribe/post?u=d67ba8deb34a23a222ec4eb8a&id=9ece23d947">
+		<div class="col-span-full lg:col-span-4" x-data="{ isOpen: false }">
+			<form data-ajaxchimp class="" method="POST" action="//fablabbcn.us2.list-manage.com/subscribe/post?u=d67ba8deb34a23a222ec4eb8a&id=9ece23d947">
 
 				<div class="grid grid-cols-[1fr_auto] items-baseline gap-4">
 
@@ -48,6 +47,17 @@ $n_classes = array(
 				</div>
 
 			</form>
+
+			<template x-teleport="body">
+				<div x-show="isOpen" x-trap.inert.noscroll="isOpen">
+					<?php set_query_var( 'modal', array(
+						'title'       => 'Welcome to the Distributed Design community!',
+						'description' => 'Thank you for subscribing to the Distributed Design mailing list. Your inbox can now look forward to receiving fascinating news!',
+						'image'       => '/assets/img/mosaic.svg',
+					) ); ?>
+					<?php get_template_part( 'template-parts/base/modal' ); ?>
+				</div>
+			</template>
 		</div>
 
 	</div>

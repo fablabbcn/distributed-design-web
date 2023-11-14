@@ -5,7 +5,7 @@
   ></div>
 
   <div
-    class="z-20 relative grid lg:grid-cols-7 gap-8 max-w-3xl p-8 lg:p-12 bg-white rounded-2xl overflow-hidden"
+    class="z-20 relative grid lg:grid-cols-7 gap-8 max-w-3xl p-8 lg:p-12 bg-white rounded-2xl overflow-hidden <?php echo $modal['image'] ? 'lg:grid-rows-[auto_1fr]' : ''; ?>"
     x-show="isOpen"
     x-transition
   >
@@ -17,11 +17,18 @@
       </button>
     </div>
 
-    <header class="col-span-full lg:col-span-2">
+    <?php if ( $modal['image'] ) : ?>
+      <figure class="col-span-full -mx-8 -mt-8 mb-0 lg:col-span-3 lg:row-span-2 lg:-my-12 lg:-ml-12 lg:mr-0">
+        <?php include get_template_directory() . $modal['image']; ?>
+        <!-- <img class="w-full h-full" src="<?php echo get_template_directory_uri() . $modal['image']; ?>" alt=""> -->
+      </figure>
+    <?php endif; ?>
+
+    <header class="col-span-full <?php echo $modal['image'] ? 'lg:col-span-4 lg:row-span-1' : 'lg:col-span-2'; ?>">
       <p class="text-2xl"><?php echo esc_html( $modal['title'] ?: $item['label'] ); ?></p>
     </header>
 
-    <div class="col-span-full lg:col-span-4 grid gap-6">
+    <div class="col-span-full <?php echo $modal['image'] ? 'lg:col-span-4 lg:row-span-1' : 'lg:col-span-4'; ?> grid gap-6">
       <div class="rich-text"><?php echo wp_kses_ddmp( $modal['description'] ); ?></div>
       <?php if ( array_key_exists( 'link', $modal ) && $modal['link']['url'] ) : ?>
         <div class="">

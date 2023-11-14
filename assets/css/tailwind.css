@@ -352,3 +352,7 @@ body.single-post main > article {
     }
   }
 }
+
+[data-ajaxchimp] {
+  &::after { content: attr(data-content); }
+}
