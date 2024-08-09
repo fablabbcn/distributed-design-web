@@ -1,4 +1,6 @@
-# ddmp-template
+# Distributed Design WP Theme
+
+👉 https://distributeddesign.eu/
 
 ## Usage
 
