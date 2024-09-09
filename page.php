@@ -9,7 +9,7 @@ get_header();
 
 <main class="container flex-grow">
 
-	<article class="grid gap-12 lg:gap-24 px-8 py-12">
+	<article class="grid gap-12 lg:gap-24 px-8 pb-12">
 
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : ?>

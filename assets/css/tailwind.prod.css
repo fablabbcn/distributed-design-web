@@ -891,6 +891,7 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .resize { resize: both; }
 .list-decimal { list-style-type: decimal; }
 .list-disc { list-style-type: disc; }
+.list-none { list-style-type: none; }
 .appearance-none { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
 .columns-1 { -webkit-columns: 1; -moz-columns: 1; columns: 1; }
 .columns-2 { -webkit-columns: 2; -moz-columns: 2; columns: 2; }
@@ -939,6 +940,7 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .gap-5 { gap: 1.25rem; }
 .gap-6 { gap: 1.5rem; }
 .gap-8 { gap: 2rem; }
+.gap-10 { gap: 2.5rem; }
 .gap-x-4 { -webkit-column-gap: 1rem; -moz-column-gap: 1rem; column-gap: 1rem; }
 .gap-x-8 { -webkit-column-gap: 2rem; -moz-column-gap: 2rem; column-gap: 2rem; }
 .gap-y-1 { row-gap: 0.25rem; }
