@@ -1,11 +1,12 @@
 <?php
 
 $contact = get_field( 'contact', 'options' );
+$bgfootercolor = get_field('background_footer_color'); 
 
 ?>
 
 
-		<aside class="mt-auto text-white bg-green">
+		<aside class="mt-auto text-white" style="background: <?php echo $bgfootercolor ?>">
 			<?php get_template_part( 'template-parts/blocks/footer/newsletter' ); ?>
 		</aside>
 

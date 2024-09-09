@@ -7,7 +7,6 @@ get_header();
 
 ?>
 
-
 <main class="container flex-grow">
 		<?php set_query_var( 'title', get_the_title() ); ?>
 		<?php get_template_part( is_front_page() ? 'template-parts/blocks/header' : 'template-parts/page/header' ); ?>
@@ -99,6 +98,7 @@ get_header();
 								<li class="block lg:hidden"><?php get_template_part( 'template-parts/base/card-post' ); ?></li>
 								<li class="hidden lg:block"><?php get_template_part( 'template-parts/base/card' ); ?></li>
 							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
 						<?php endif; ?>
 					</ul>
 					<footer class="text-center">
@@ -116,6 +116,7 @@ get_header();
 							<?php while( $section_events['posts']->have_posts() ) : $section_events['posts']->the_post(); ?>
 								<li><?php get_template_part( 'template-parts/base/card-event' ); ?></li>
 							<?php endwhile; ?>
+							<?php wp_reset_postdata(); ?>
 						<?php endif; ?>
 					</ul>
 					<footer class="text-center">
@@ -129,6 +130,5 @@ get_header();
 	</article>
 
 </main>
-
 
 <?php get_footer(); ?>
