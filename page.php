@@ -8,8 +8,6 @@ get_header();
 ?>
 
 <main class="container flex-grow">
-		<?php set_query_var( 'title', get_the_title() ); ?>
-		<?php get_template_part( is_front_page() ? 'template-parts/blocks/header' : 'template-parts/page/header' ); ?>
 
 	<article class="grid gap-12 lg:gap-24 px-8 py-12">
 
