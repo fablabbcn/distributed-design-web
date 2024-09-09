@@ -17,6 +17,7 @@
     // checkScreenSize()
     // imgToBg()
     // initHeader()
+    ServicesSlider()
     SliderFirstText()
     initDefaultSlider()
     // initFundInfo()
@@ -111,6 +112,21 @@
 
   function SliderFirstText() {
     document.querySelectorAll('.swiper-first-text').forEach((slider) => {
+      const thisSwiper = new Swiper(slider, {
+        slidesPerView: 1.5,
+        spaceBetween: 10,
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+        },
+      });
+    });
+  }
+
+  function ServicesSlider() {
+    document.querySelectorAll('.swiper-services').forEach((slider) => {
       const thisSwiper = new Swiper(slider, {
         slidesPerView: 1.5,
         spaceBetween: 10,

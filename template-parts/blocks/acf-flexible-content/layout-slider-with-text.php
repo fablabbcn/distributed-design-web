@@ -1,6 +1,6 @@
 <?php 
 /**
- * ✅ Template part for Featured Slider With Text layout
+ * ✅ Template part for Slider With Text layout
  */
 $media_slider_with_text = get_sub_field('media');
 $text_slider_with_text = get_sub_field('text');
