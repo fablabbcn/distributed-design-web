@@ -22,6 +22,7 @@ get_header();
 
 		<?php if ( is_front_page() ) : ?>
 			<?php
+			/*
 			$section_talent = array(
 				'config'    => 'featured',
 				'component' => 'template-parts/base/slider-slide-post',
@@ -32,6 +33,7 @@ get_header();
 					),
 				),
 			);
+			
 
 			$section_blog = array(
 				'posts' => new WP_Query(
@@ -62,6 +64,7 @@ get_header();
 					)
 				),
 			);
+			
 			?>
 			<section class="relative grid grid-cols-1 gap-12 lg:gap-24 -mb-12 py-12 lg:py-24 bg-white">
 				<div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] left-[50%]"></div>
@@ -70,7 +73,6 @@ get_header();
 				<header class="lg:-mb-12 text-center">
 					<h2 class="text-4xl lg:text-5xl font-extralight">Stay updated!</h2>
 				</header>
-
 				<section class="grid gap-6">
 					<header>
 						<h3 class="text-xl lg:text-3xl font-light">Featured talents</h3>
@@ -84,7 +86,6 @@ get_header();
 						<?php get_template_part( 'template-parts/base/button' ); ?>
 					</footer>
 				</section>
-
 				<section class="grid gap-6">
 					<header>
 						<h3 class="text-xl lg:text-3xl font-light">Latest blog posts</h3>
@@ -123,7 +124,7 @@ get_header();
 					</footer>
 				</section>
 			</section>
-		<?php endif; ?>
+			<?php */ endif; ?>
 
 	</article>
 

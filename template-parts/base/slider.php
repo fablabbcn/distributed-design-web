@@ -1,5 +1,4 @@
 <?php if ( array_key_exists( 'slides', $slider ) && $slider['slides'] ) : ?>
-
 <div
   data-swiper="<?php echo esc_attr( $slider['config'] ?: 'default' ); ?>"
   class="swiper w-full h-full <?php echo esc_attr( $slider['class'] ?: '' ); ?>"

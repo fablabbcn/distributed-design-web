@@ -44,10 +44,10 @@ $theme = array(
 >
 	<div class="sr-only" aria-hidden="true"><?php require_once 'assets/img/icons.svg'; ?></div>
 
-	<div class="flex flex-col min-h-screen">
+	<div class="flex flex-col min-h-screen w-screen">
 		<div class="-z-50 fixed -top-24 -right-48 w-80 h-80 <?php echo esc_attr( $theme ); ?> rounded-full blur-3xl pointer-events-none"></div>
 		
-		<header class="z-50 sticky top-0">
+		<header class="z-50 sticky top-0 w-full">
 			<ul class="bg-black flex gap-8 py-2 justify-end text-white px-8">
 				<?php foreach ( $menu_items as $key => $menu_item ) : ?>
 					<li class="list-none text-xs">
