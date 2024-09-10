@@ -17,19 +17,18 @@ $button_title_text_button = get_sub_field('button');
         <?php echo $text_title_text_button; ?>
     </div>
     <?php if($button_title_text_button): ?>
-        <button class="text-xs py-2 px-3 bg-white text-black rounded-full">
-            <a 
-                target="<?php $button_title_text_button['target'] ?>" 
-                href="<?php echo $button_title_text_button['url']; ?>"
-            >
-                <?php echo $button_title_text_button['title']; ?>
-            </a>
-        </button>
+        <a 
+            class="ddp-button bg-white border-0 text-black"
+            target="<?php $button_title_text_button['target'] ?>" 
+            href="<?php echo $button_title_text_button['url']; ?>"
+        >
+            <?php echo $button_title_text_button['title']; ?>
+        </a>
     <?php endif; ?>
     <img 
         class="absolute top-0 left-0 w-full h-full object-cover object-center -z-50" 
         width="1920" 
-        src="<?php echo $background_title_text_button['url'] ?>" 
+        src="<?php echo $background_title_text_button['url'] ?>"
         alt="<?php echo $background_title_text_button['alt'] ?>"
     >
 </div>

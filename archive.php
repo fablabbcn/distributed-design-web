@@ -38,9 +38,6 @@ $slider = array(
 <main class="container flex-grow">
 	<article class="grid gap-12 px-8 py-12">
 
-		<?php set_query_var( 'title', $section['title'] ); ?>
-		<?php get_template_part( 'template-parts/page/header' ); ?>
-
 		<aside class="z-0 relative flex max-h-[70vh] bg-gray">
 			<div class="aspect-w-4 aspect-h-3"></div>
 			<div class="absolute inset-0 w-full h-full">
