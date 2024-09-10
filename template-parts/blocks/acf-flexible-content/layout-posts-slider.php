@@ -12,7 +12,7 @@ $slider = array(
 ?>
 
 
-<section class="z-0 relative flex max-h-[70vh] bg-gray">
+<section class="z-0 relative flex max-h-[70vh] bg-gray border">
 	<div class="aspect-w-4 aspect-h-3"></div>
 	<div class="absolute inset-0 w-full h-full">
 		<div class="bleed h-full">

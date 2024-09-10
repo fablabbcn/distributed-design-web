@@ -55,19 +55,54 @@ if ( ! function_exists( 'llos_custom_types_register' ) ) {
 		register_taxonomy( 'city', 'director', $args );
 		*/
 
-		/*
+		
 		// Custom post types.
 		$labels = array(
-			'name'               => _x( 'Publications', 'post type general name', 'nug' ),
-			'singular_name'      => _x( 'Publication', 'post type singular name', 'nug' ),
-			'add_new'            => _x( 'Add New', 'publication', 'nug' ),
-			'add_new_item'       => __( 'Add New Publication', 'nug' ),
-			'edit_item'          => __( 'Edit Publication', 'nug' ),
-			'new_item'           => __( 'New Publication', 'nug' ),
-			'view_item'          => __( 'View Publication', 'nug' ),
-			'search_items'       => __( 'Search Publications', 'nug' ),
-			'not_found'          => __( 'No Publications found', 'nug' ),
-			'not_found_in_trash' => __( 'No Publications found in Trash', 'nug' ),
+			'name'               => _x( 'Services', 'post type general name', 'nug' ),
+			'singular_name'      => _x( 'Service', 'post type singular name', 'nug' ),
+			'add_new'            => _x( 'Add New', 'service', 'nug' ),
+			'add_new_item'       => __( 'Add New Service', 'nug' ),
+			'edit_item'          => __( 'Edit Service', 'nug' ),
+			'new_item'           => __( 'New Service', 'nug' ),
+			'view_item'          => __( 'View Service', 'nug' ),
+			'search_items'       => __( 'Search Services', 'nug' ),
+			'not_found'          => __( 'No Services found', 'nug' ),
+			'not_found_in_trash' => __( 'No Services found in Trash', 'nug' ),
+		);
+
+		$args = array(
+			// 'menu_icon'         => 'dashicons-id',
+			'labels'            => $labels,
+			'public'            => true,
+			'query_var'         => true,
+			'show_ui'           => true,
+			'show_in_menu'      => true,
+			'show_in_nav_menus' => true,
+			'show_in_rest'      => true,
+			'has_archive'       => true,
+			'menu_position'     => 5,
+			'capability_type'   => 'page',
+			'supports'          => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt' ),
+			'rewrite'           => array(
+				'slug'       => 'service',
+				'with_front' => true,
+			),
+		);
+
+		register_post_type( 'service', $args );
+
+		// Custom post types.
+		$labels = array(
+			'name'               => _x( 'Members', 'post type general name', 'nug' ),
+			'singular_name'      => _x( 'Member', 'post type singular name', 'nug' ),
+			'add_new'            => _x( 'Add New', 'member', 'nug' ),
+			'add_new_item'       => __( 'Add New Member', 'nug' ),
+			'edit_item'          => __( 'Edit Member', 'nug' ),
+			'new_item'           => __( 'New Member', 'nug' ),
+			'view_item'          => __( 'View Member', 'nug' ),
+			'search_items'       => __( 'Search Members', 'nug' ),
+			'not_found'          => __( 'No Members found', 'nug' ),
+			'not_found_in_trash' => __( 'No Members found in Trash', 'nug' ),
 		);
 
 		$args = array(
@@ -84,13 +119,13 @@ if ( ! function_exists( 'llos_custom_types_register' ) ) {
 			'capability_type'   => 'page',
 			'supports'          => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
 			'rewrite'           => array(
-				'slug'       => 'publication',
-				'with_front' => false,
+				'slug'       => 'member',
+				'with_front' => true,
 			),
 		);
 
-		register_post_type( 'publication', $args );
-		*/
+		register_post_type( 'member', $args );
+		
 	} add_action( 'init', 'llos_custom_types_register' );
 }
 

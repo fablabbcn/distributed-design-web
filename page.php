@@ -9,7 +9,7 @@ get_header();
 
 <main class="container w-full flex-grow !max-w-full">
 
-	<article class="grid gap-12 lg:gap-24 pb-12">
+	<article class="flex flex-col">
 
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : ?>
