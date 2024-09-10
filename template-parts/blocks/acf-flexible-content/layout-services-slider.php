@@ -16,9 +16,13 @@ $button_services_slider = get_sub_field('button');
                     <h3 class="text-5xl"><?php echo $title_services_slider; ?></h3>
                     <?php echo $description_services_slider; ?>
                 </div>
-                <button class="text-xs px-3 py-2 bg-black text-white rounded-full w-fit">
-                    <a href="<?php echo $button_services_slider['url'] ?>" target="<?php echo $button_services_slider['target'] ?>"><?php echo $button_services_slider['title'] ?></a>
-                </button>
+                <a 
+                    class="ddp-button w-fit bg-black text-white border-0" 
+                    href="<?php echo $button_services_slider['url'] ?>" 
+                    target="<?php echo $button_services_slider['target'] ?>"
+                >
+                    <?php echo $button_services_slider['title'] ?>
+                </a>
                 
             </div>
             <?php foreach( $services_services_slider as $service ): ?>

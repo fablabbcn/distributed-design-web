@@ -38,13 +38,12 @@ $posts_section_posts = get_sub_field('posts');
             </a>
         <?php endforeach; ?>
     </div>
-    <button class="text-xs py-2 px-3 border border-black text-black rounded-full w-fit mx-auto">
-        <a 
-            href="<?php echo $button_section_posts['url'] ?>" 
-            target="<?php echo $button_section_posts['target'] ?>"
-        >
-            <?php echo $button_section_posts['title'] ?>
-        </a>
-    </button>
+    <a 
+        class="ddp-button w-fit mx-auto"
+        href="<?php echo $button_section_posts['url'] ?>" 
+        target="<?php echo $button_section_posts['target'] ?>"
+    >
+        <?php echo $button_section_posts['title'] ?>
+    </a>
 </div>
 <?php wp_reset_postdata(); ?>

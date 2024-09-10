@@ -24,15 +24,13 @@ $contact = get_field( 'contact' );
 						<p class="text-2xl leading-tight font-regular"><?php echo $header['title']; ?></p>
 						<p class="text-xl leading-tight font-light"><?php echo $header['description']; ?></p>
 						<?php if($header['button']): ?>
-						<button class="text-xs py-2 px-3 border border-black text-black rounded-full w-fit">
 							<a	
-								style="text-decoration: none"
+								class="ddp-button w-fit"
 								href="<?php echo $header['button']['url'] ?>" 
 								target="<?php echo $header['button']['target'] ?>"
 							>
 								<?php echo $header['button']['title'] ?>
 							</a>
-						</button>
 						<?php endif; ?>
 					</div>
 				</section>
@@ -49,14 +47,13 @@ $contact = get_field( 'contact' );
 						<?php $social_links = $contact['social']['links']; ?>
 						<?php require locate_template( 'template-parts/blocks/social-links.php' ); ?>
 						<?php if($contact['button']): ?>
-						<button class="text-xs py-2 px-3 border border-black text-black rounded-full w-fit">
 							<a
+								class="ddp-button w-fit"
 								href="<?php echo $contact['button']['url'] ?>" 
 								target="<?php echo $contact['button']['target'] ?>"
 							>
 								<?php echo $contact['button']['title'] ?>
 							</a>
-						</button>
 						<?php endif; ?>
 					</div>
 				</section>
