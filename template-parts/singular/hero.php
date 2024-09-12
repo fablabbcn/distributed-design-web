@@ -20,7 +20,7 @@ $className = array(
 ?>
 
 
-<header class="bleed grid-layout gap-0 min-w-0 <?php echo the_classes( $className['header'] ); ?>">
+<header class="grid-layout gap-0 min-w-0 <?php echo the_classes( $className['header'] ); ?>">
 
 	<?php if ( get_field( 'featured_image_alt' ) ) : ?>
 		<div class="col-span-full <?php echo the_classes( $className['media'] ); ?>">

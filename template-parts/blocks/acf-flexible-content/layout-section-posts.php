@@ -12,7 +12,7 @@ $posts_section_posts = get_sub_field('posts');
         <?php foreach( $posts_section_posts as $post): ?>
             <a class="no-underline" href="<?php echo get_the_permalink( $post->ID ) ?>">
                 <div class="rounded-2xl bg-white">
-                    <div class="w-full aspect-[1.3/1] overflow-hidden">
+                    <div class="w-full aspect-[1.3/1] overflow-hidden rounded-t-2xl">
                         <img 
                             class="w-full h-full object-cover object-center rounded-t-2xl hover:scale-110"
                             src="<?php echo get_the_post_thumbnail_url( $post->ID ) ?>" 

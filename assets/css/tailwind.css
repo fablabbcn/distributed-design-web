@@ -48,6 +48,10 @@
     text-transform: inherit;
   }
 
+  :root {
+      --swiper-theme-color: white !important;
+  }
+
   a, button {
     text-decoration: underline currentcolor solid;
     text-decoration-thickness: 1px;

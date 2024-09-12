@@ -8,8 +8,8 @@ $description_services_slider = get_sub_field('description');
 $button_services_slider = get_sub_field('button');
 ?>
 
-<div class="bg-gray py-16 lg:py-32">
-    <div class="swiper-first-text w-screen">
+<div class="bg-gray py-16 lg:py-32 overflow-x-hidden">
+    <div class="swiper-first-text">
         <div class="swiper-wrapper">
             <div class="swiper-slide !flex flex-col justify-between px-10 !h-auto">
                 <div class="flex flex-col gap-4">

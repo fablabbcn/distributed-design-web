@@ -17,13 +17,11 @@ $className = array(
 ?>
 
 
-<section class="relative grid-layout grid-cols-5 lg:grid-cols-6 gap-x-4 gap-y-8 items-baseline <?php the_classes( $className ); ?>">
-  <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] left-[50%]"></div>
-  <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] right-[50%]"></div>
+<section class="relative grid-layout grid-cols-5 lg:grid-cols-6 gap-x-20 gap-y-8 items-baseline px-10 <?php the_classes( $className ); ?>">
 
 	<?php if ( $title ) : ?>
 		<div class="col-span-full">
-			<div class="lg:mb-4 text-center">
+			<div class="lg:mb-4">
 				<h2 class="text-3xl lg:text-4xl font-extralight"><?php echo wp_kses_post( $title ); ?></h2>
 			</div>
 		</div>

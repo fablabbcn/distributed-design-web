@@ -24,7 +24,7 @@ $is_link = isset( $button['href'] );
 
 <?php else : ?>
   <button
-    class="ddp-button <?php echo $button['theme'] ?: ''; ?>"
+    class="ddp-button <?php echo isset($button['theme']) ? $button['theme'] : ''; ?>"
     type="<?php echo esc_attr( $button['type'] ?? 'button' ); ?>"
   >
     <?php echo esc_html( $button['label'] ); ?>

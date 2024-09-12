@@ -17,6 +17,7 @@
     // checkScreenSize()
     // imgToBg()
     // initHeader()
+    SliderCommon()
     ServicesSlider()
     SliderFirstText()
     initDefaultSlider()
@@ -120,6 +121,24 @@
             slidesPerView: 3,
             spaceBetween: 20,
           },
+        },
+      });
+    });
+  }
+
+  function SliderCommon() {
+    document.querySelectorAll('.swiper-common').forEach((slider) => {
+      const thisSwiper = new Swiper(slider, {
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        navigation: {
+          nextEl: slider.querySelector('.swiper-button-next'),
+          prevEl: slider.querySelector('.swiper-button-prev'),
+        },
+        pagination: {
+          el: slider.querySelector('.swiper-pagination'),
+          clickable: true,
         },
       });
     });

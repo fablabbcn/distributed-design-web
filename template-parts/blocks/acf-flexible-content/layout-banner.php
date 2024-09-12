@@ -15,7 +15,7 @@ $className = array(
 ?>
 
 
-<aside class="<?php echo the_classes( $className ); ?>">
+<aside class="overflow-x-hidden <?php echo the_classes( $className ); ?>">
   <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] left-[50%]"></div>
   <div aria-hidden="true" class="-z-10 absolute inset-y-0 bg-[inherit] w-[50vw] right-[50%]"></div>
 
