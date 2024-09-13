@@ -28,8 +28,6 @@ $s_classes = array(
 
 <main class="container flex-grow">
 	<article class="grid gap-12 px-8 py-12">
-		<?php set_query_var( 'title', $title ); ?>
-		<?php get_template_part( 'template-parts/page/header' ); ?>
 
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>

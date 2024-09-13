@@ -1,21 +1,17 @@
 <?php
-$thumbnail_id    = get_field( 'featured_alt', $slide['post']->ID ) ?: get_post_thumbnail_id( $slide['post']->ID );
+
+$thumbnail_id    = get_field( 'featured_alt', $slide->ID ) ?: get_post_thumbnail_id( $slide->ID );
 $focal_point     = get_post_meta( $thumbnail_id, '_wpsmartcrop_image_focus' );
 $thumbnail_attrs = array(
   'class' => '!w-full !h-full object-cover opacity-70',
   'style' => $focal_point ? "object-position: {$focal_point[0]['left']}% {$focal_point[0]['top']}%;" : '',
 );
 
-if($slide['button']){
-  $button = array(
-    'label' => $slide['button'],
-    'href' => get_permalink( $slide['post']->ID ),
-    'theme' => 'text-black bg-white',
-  );
-} else {
-  $button = '';
-}
-
+$button = array(
+  'label' => 'Read more',
+  'href' => get_permalink( $slide->ID ),
+  'theme' => 'text-black bg-white',
+);
 
 $subtitle = get_field( 'archive_titles', 'options' )
   ? get_field( 'archive_titles', 'options' )[ get_post_type() ]
@@ -36,16 +32,12 @@ $subtitle = get_field( 'archive_titles', 'options' )
         <div class="text-base lg:text-lg font-semibold line-clamp-1 uppercase"><?php echo $subtitle; ?></div>
       </div>
       <div class="_mb-auto">
-        <a class="no-underline" href="<?php echo get_the_permalink( $slide['post']->ID ); ?>">
-          <p class="text-2xl lg:text-4xl font-semibold line-clamp-3 [text-wrap:balance]"><?php echo get_the_title( $slide['post']->ID ); ?></p>
-        </a>
+        <p class="text-2xl lg:text-3xl font-semibold line-clamp-3 [text-wrap:balance]"><?php echo get_the_title( $slide->ID ); ?></p>
       </div>
-      <?php if($button): ?>
-        <div class="mt-4 lg:mt-8">
-          <?php set_query_var( 'button', $button ); ?>
-          <?php get_template_part( 'template-parts/base/button' ); ?>
-        </div>
-      <?php endif; ?>
+      <div class="mt-4 lg:mt-8">
+        <?php set_query_var( 'button', $button ); ?>
+        <?php get_template_part( 'template-parts/base/button' ); ?>
+      </div>
     </div>
   </div>
 </div>

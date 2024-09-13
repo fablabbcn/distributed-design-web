@@ -4,7 +4,7 @@
 		<?php if ( $title ) : ?>
 			<h1 class="text-4xl leading-none font-extralight text-center"><?php echo esc_html( $title ); ?></h1>
 		<?php endif ?>
-		<?php if ( $subtitle ) : ?>
+		<?php if(isset($subtitle)): ?>
 			<p class="text-xl text-center"><?php echo esc_html( $subtitle ); ?></p>
 		<?php endif ?>
 

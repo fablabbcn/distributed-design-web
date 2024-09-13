@@ -34,26 +34,11 @@ $slider = array(
 
 ?>
 
-
+<?php get_template_part( 'template-parts/blocks/acf-flexible-content/content' ); ?>
 <main class="container flex-grow">
 	<article class="grid gap-12 px-8 py-12">
 
-		<aside class="z-0 relative flex max-h-[70vh] bg-gray">
-			<div class="aspect-w-4 aspect-h-3"></div>
-			<div class="absolute inset-0 w-full h-full">
-				<div class="bleed h-full">
-					<div class="relative h-full">
-						<div class="z-10 absolute inset-0 <?php echo $section['color']; ?>"></div>
-						<!-- <div class="z-30 absolute inset-0 bg-gradient-to-br from-blue via-transparent to-transparent"></div> -->
-						<div class="z-30 absolute inset-0 bg-gradient-corner-blue pointer-events-none"></div>
-						<div class="z-20 relative h-full bg-black rounded-br-[8rem] lg:rounded-br-[16rem] overflow-hidden">
-							<?php set_query_var( 'slider', $slider ); ?>
-							<?php get_template_part( 'template-parts/base/slider' ); ?>
-						</div>
-					</div>
-				</div>
-			</div>
-		</aside>
+	
 
 		<nav class="grid-layout grid-cols-10 gap-8 text-center">
 			<div class="flex flex-col gap-8 col-span-full lg:col-start-2 lg:col-span-8">

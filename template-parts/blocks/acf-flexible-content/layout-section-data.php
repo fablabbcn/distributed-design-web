@@ -5,8 +5,12 @@
 $title_section_data = get_sub_field('title');
 $button_section_data = get_sub_field('button');
 $data_section_data = get_sub_field('datas');
+$background_section_data = get_sub_field('background');
 ?> 
-<div class="p-10 grid grid-cols-12 gap-y-5">
+<div 
+    style="background: <?php echo ($background_section_data) ?: 'transparent'; ?>"
+    class="p-10 grid grid-cols-12 gap-y-5"
+>
     <div class="col-span-12 lg:col-span-4 flex flex-row lg:flex-col gap-5">
         <h3 class="text-2xl w-1/2"><?php echo $title_section_data; ?></h3>
         <?php if($button_section_data): ?>

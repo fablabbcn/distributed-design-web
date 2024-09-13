@@ -11,9 +11,9 @@ $description = get_sub_field( 'description' );
 ?>
 
 
-<section class="relative grid-layout gap-x-4 gap-y-8">
+<section class="relative grid-layout gap-x-4 gap-y-8 p-10 pb-20">
 
-	<div class="grid-layout grid-cols-1 lg:grid-cols-3 col-span-full lg:col-span-3">
+	<div class="grid-layout flex flex-col col-span-full lg:col-span-2">
 		<?php if ( $title ) : ?>
 			<h3 class="text-xl lg:text-3xl font-light"><?php wp_kses_ddmp( $title ); ?></h3>
 		<?php endif; ?>
@@ -22,8 +22,8 @@ $description = get_sub_field( 'description' );
 		<?php endif; ?>
 	</div>
 
-	<div class="col-span-full lg:col-span-4">
-		<ul class="grid-layout grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-x-4 gap-y-8 items-start">
+	<div class="col-span-full lg:col-span-5">
+		<ul class="grid-layout grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-8 items-start">
 			<?php foreach ( $_items as $_item ) : ?>
 
 				<li class="grid gap-4">

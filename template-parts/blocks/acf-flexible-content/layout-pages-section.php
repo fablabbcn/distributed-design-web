@@ -4,14 +4,27 @@
  */
 $title_pages_section = get_sub_field('title');
 $pages_pages_section = get_sub_field('pages');
+$background_pages_section = get_sub_field('background');
+$cardscolor_pages_section = get_sub_field('cards_color');
 ?>
-<div class="bg-indigo py-16 lg:py-32">
-    <div class="container px-8">
-        <h2 class="text-5xl text-white mb-8 lg:mb-16"><?php echo esc_html($title_pages_section); ?></h2>
+<div 
+    class="bg-indigo py-16 lg:py-32"
+    style="background: <?php echo ($background_pages_section) ?: 'transparent'; ?>"
+>
+    <div class="px-10">
+        <h2 
+            style="color: <?php echo ($cardscolor_pages_section) ? 'black' : 'white'; ?>"
+            class="text-5xl mb-8 lg:mb-16 lg:w-1/2"
+        >
+            <?php echo esc_html($title_pages_section); ?>
+        </h2>
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
             <?php if( $pages_pages_section ): ?>
                 <?php foreach( $pages_pages_section as $page ): ?>
-                    <div class="w-full bg-white rounded-2xl">
+                    <div 
+                        class="w-full bg-white rounded-2xl"
+                        style="background: <?php echo ($cardscolor_pages_section) ?: 'white'; ?>"
+                    >
                         <?php if( has_post_thumbnail( $page->ID ) ): ?>
                             <img 
                                 src="<?php echo get_the_post_thumbnail_url( $page->ID ); ?>" 
