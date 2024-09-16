@@ -125,6 +125,75 @@ if ( ! function_exists( 'llos_custom_types_register' ) ) {
 		);
 
 		register_post_type( 'member', $args );
+
+		// Custom post types.
+		$labels = array(
+			'name'               => _x( 'Authors', 'post type general name', 'nug' ),
+			'singular_name'      => _x( 'Author', 'post type singular name', 'nug' ),
+			'add_new'            => _x( 'Add New', 'author', 'nug' ),
+			'add_new_item'       => __( 'Add New Author', 'nug' ),
+			'edit_item'          => __( 'Edit Author', 'nug' ),
+			'new_item'           => __( 'New Author', 'nug' ),
+			'view_item'          => __( 'View Author', 'nug' ),
+			'search_items'       => __( 'Search Authors', 'nug' ),
+			'not_found'          => __( 'No Authors found', 'nug' ),
+			'not_found_in_trash' => __( 'No Authors found in Trash', 'nug' ),
+		);
+
+		$args = array(
+			// 'menu_icon'         => 'dashicons-id',
+			'labels'            => $labels,
+			'public'            => true,
+			'query_var'         => true,
+			'show_ui'           => true,
+			'show_in_menu'      => true,
+			'show_in_nav_menus' => true,
+			'show_in_rest'      => true,
+			'has_archive'       => true,
+			'menu_position'     => 5,
+			'capability_type'   => 'page',
+			'supports'          => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+			'rewrite'           => array(
+				'slug'       => 'author',
+				'with_front' => true,
+			),
+		);
+
+		register_post_type( 'author', $args );
+		
+		// Taxonomies.
+		$labels = array(
+			'name'                => _x( 'Categories', 'taxonomy general name', 'nug' ),
+			'singular_name'       => _x( 'Category', 'taxonomy singular name', 'nug' ),
+			'search_items'        => __( 'Search Categories', 'nug' ),
+			'popular_items'       => __( 'Popular Categories', 'nug' ),
+			'all_items'           => __( 'All Categories', 'nug' ),
+			'parent_item'         => __( 'Parent Category', 'nug' ),
+			'edit_item'           => __( 'Edit Category', 'nug' ),
+			'update_item'         => __( 'Update Category', 'nug' ),
+			'add_new_item'        => __( 'Add Category', 'nug' ),
+			'new_item_name'       => __( 'New Category', 'nug' ),
+			'add_or_remove_items' => __( 'Add or remove Category', 'nug' ),
+		);
+
+		$args = array(
+			'label'             => __( 'Category', 'nug' ),
+			'labels'            => $labels,
+			'public'            => true,
+			'hierarchical'      => true,
+			'query_var'         => true,
+			'show_ui'           => true,
+			'show_in_nav_menus' => true,
+			'show_admin_column' => true,
+			'show_in_rest'      => true,
+			'rewrite'           => array(
+				'slug'       => 'category',
+				'with_front' => false,
+			),
+		);
+
+		register_taxonomy( 'category_author', 'author', $args );
+		
 		
 	} add_action( 'init', 'llos_custom_types_register' );
 }
