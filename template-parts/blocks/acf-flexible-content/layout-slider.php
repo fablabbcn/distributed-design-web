@@ -43,7 +43,7 @@ $slides_borderColor = get_sub_field('bordercolor');
                                     <?php if($slide['button']): ?>   
                                         <a 
                                             class="ddp-button w-fit bg-white border-white text-black"
-                                            href="<?php echo $slide['button']['title']; ?>"
+                                            href="<?php echo $slide['button']['url']; ?>"
                                             target="<?php echo $slide['button']['target']; ?>"
                                         >
                                             <?php echo $slide['button']['title']; ?>
