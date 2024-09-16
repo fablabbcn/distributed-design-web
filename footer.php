@@ -1,8 +1,11 @@
 <?php
 
 $contact = get_field( 'contact', 'options' );
-$bgfootercolor = get_field('background_footer_color'); 
-
+if(get_field('background_footer_color')){
+	$bgfootercolor = get_field('background_footer_color');
+} else {
+	$bgfootercolor = '#69a880';
+}
 ?>
 
 
