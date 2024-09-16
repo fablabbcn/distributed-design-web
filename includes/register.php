@@ -160,6 +160,41 @@ if ( ! function_exists( 'llos_custom_types_register' ) ) {
 		);
 
 		register_post_type( 'author', $args );
+
+		// Custom post types.
+		$labels = array(
+			'name'               => _x( 'Partners', 'post type general name', 'nug' ),
+			'singular_name'      => _x( 'Partner', 'post type singular name', 'nug' ),
+			'add_new'            => _x( 'Add New', 'partner', 'nug' ),
+			'add_new_item'       => __( 'Add New Partner', 'nug' ),
+			'edit_item'          => __( 'Edit Partner', 'nug' ),
+			'new_item'           => __( 'New Partner', 'nug' ),
+			'view_item'          => __( 'View Partner', 'nug' ),
+			'search_items'       => __( 'Search Partners', 'nug' ),
+			'not_found'          => __( 'No Partners found', 'nug' ),
+			'not_found_in_trash' => __( 'No Partners found in Trash', 'nug' ),
+		);
+
+		$args = array(
+			// 'menu_icon'         => 'dashicons-id',
+			'labels'            => $labels,
+			'public'            => true,
+			'query_var'         => true,
+			'show_ui'           => true,
+			'show_in_menu'      => true,
+			'show_in_nav_menus' => true,
+			'show_in_rest'      => true,
+			'has_archive'       => true,
+			'menu_position'     => 5,
+			'capability_type'   => 'page',
+			'supports'          => array( 'title', 'editor', 'thumbnail', 'page-attributes', 'excerpt' ),
+			'rewrite'           => array(
+				'slug'       => 'partner',
+				'with_front' => false,
+			),
+		);
+
+		register_post_type( 'partner', $args );
 		
 		// Taxonomies.
 		$labels = array(
@@ -226,6 +261,38 @@ if ( ! function_exists( 'llos_custom_types_register' ) ) {
 		);
 
 		register_taxonomy( 'city_post', 'post', $args );
+
+		$labels = array(
+			'name'                => _x( 'Partner Types', 'taxonomy general name', 'nug' ),
+			'singular_name'       => _x( 'Partner Type', 'taxonomy singular name', 'nug' ),
+			'search_items'        => __( 'Search Partner Types', 'nug' ),
+			'popular_items'       => __( 'Popular Partner Types', 'nug' ),
+			'all_items'           => __( 'All Partner Types', 'nug' ),
+			'parent_item'         => __( 'Parent Partner Type', 'nug' ),
+			'edit_item'           => __( 'Edit Partner Type', 'nug' ),
+			'update_item'         => __( 'Update Partner Type', 'nug' ),
+			'add_new_item'        => __( 'Add Partner Type', 'nug' ),
+			'new_item_name'       => __( 'New Partner Type', 'nug' ),
+			'add_or_remove_items' => __( 'Add or remove Partner Type', 'nug' ),
+		);
+
+		$args = array(
+			'label'             => __( 'Partner Type', 'nug' ),
+			'labels'            => $labels,
+			'public'            => true,
+			'hierarchical'      => true,
+			'query_var'         => true,
+			'show_ui'           => true,
+			'show_in_nav_menus' => true,
+			'show_admin_column' => true,
+			'show_in_rest'      => true,
+			'rewrite'           => array(
+				'slug'       => 'partner-type',
+				'with_front' => false,
+			),
+		);
+
+		register_taxonomy( 'partner_type', 'partner', $args );
 		
 		
 	} add_action( 'init', 'llos_custom_types_register' );

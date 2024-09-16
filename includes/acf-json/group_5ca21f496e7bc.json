@@ -6,6 +6,7 @@
             "key": "field_5db1bebd32439",
             "label": "Newsletter",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -16,12 +17,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5db1bf0104900",
             "label": "Footer CTA",
             "name": "footer_cta",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -37,6 +40,7 @@
                     "key": "field_5db1bf0e04901",
                     "label": "Title",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -56,6 +60,7 @@
                     "key": "field_5db1c9dbdf950",
                     "label": "Email Placeholder",
                     "name": "email_placeholder",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -75,6 +80,7 @@
                     "key": "field_5db1c9b7df94e",
                     "label": "Acceptance Text",
                     "name": "acceptance_text",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -94,6 +100,7 @@
                     "key": "field_5db1c9d4df94f",
                     "label": "Submit Label",
                     "name": "submit_label",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -115,6 +122,7 @@
             "key": "field_5db1bec83243a",
             "label": "Partners",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -125,12 +133,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5ca21f49a729e",
             "label": "Partners",
             "name": "logos",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -151,6 +161,7 @@
                     "key": "field_5ca21f49aab96",
                     "label": "Image",
                     "name": "image",
+                    "aria-label": "",
                     "type": "image",
                     "instructions": "",
                     "required": 0,
@@ -169,12 +180,14 @@
                     "max_width": "",
                     "max_height": "",
                     "max_size": "",
-                    "mime_types": ""
+                    "mime_types": "",
+                    "parent_repeater": "field_5ca21f49a729e"
                 },
                 {
                     "key": "field_644280d1885f3",
                     "label": "Title",
                     "name": "title",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -189,12 +202,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_5ca21f49a729e"
                 },
                 {
                     "key": "field_644280d9885f4",
                     "label": "Description",
                     "name": "description",
+                    "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
@@ -209,12 +224,14 @@
                     "tabs": "all",
                     "toolbar": "full",
                     "media_upload": 1,
-                    "delay": 0
+                    "delay": 0,
+                    "parent_repeater": "field_5ca21f49a729e"
                 },
                 {
                     "key": "field_5ca21f49aabc7",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -224,12 +241,14 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_5ca21f49a729e"
                 },
                 {
                     "key": "field_644280e3885f5",
                     "label": "Location",
                     "name": "location",
+                    "aria-label": "",
                     "type": "google_map",
                     "instructions": "",
                     "required": 0,
@@ -243,14 +262,17 @@
                     "center_lat": "",
                     "center_lng": "",
                     "zoom": "",
-                    "height": ""
+                    "height": "",
+                    "parent_repeater": "field_5ca21f49a729e"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_5db1bedf3243b",
             "label": "Contact Details",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -261,12 +283,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5ca2214941c41",
             "label": "Contact",
             "name": "contact",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -282,6 +306,7 @@
                     "key": "field_5ca2216241c42",
                     "label": "Left",
                     "name": "left",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -298,6 +323,7 @@
                             "key": "field_64397ae51462c",
                             "label": "Image",
                             "name": "image",
+                            "aria-label": "",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
@@ -323,6 +349,7 @@
                             "key": "field_64397af71462d",
                             "label": "Description",
                             "name": "description",
+                            "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -345,6 +372,7 @@
                     "key": "field_64397b071462e",
                     "label": "Right",
                     "name": "right",
+                    "aria-label": "",
                     "type": "group",
                     "instructions": "",
                     "required": 0,
@@ -361,6 +389,7 @@
                             "key": "field_64397b071462f",
                             "label": "Image",
                             "name": "image",
+                            "aria-label": "",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
@@ -386,6 +415,7 @@
                             "key": "field_64397b0714630",
                             "label": "Description",
                             "name": "description",
+                            "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -410,6 +440,7 @@
             "key": "field_5dcc3828095da",
             "label": "Misc",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -420,12 +451,14 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_5dcc382d095db",
             "label": "Google Maps API Key",
             "name": "google_maps_api_key",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -445,6 +478,7 @@
             "key": "field_6458c1bb1fd5f",
             "label": "Archive Settings",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -456,12 +490,14 @@
             },
             "hide_admin": 0,
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6458c3fe55db7",
             "label": "Archive Titles",
             "name": "archive_titles",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -478,6 +514,7 @@
                     "key": "field_6458c3fe55db8",
                     "label": "Post",
                     "name": "post",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -498,6 +535,7 @@
                     "key": "field_6458c3fe55db9",
                     "label": "Talent",
                     "name": "talent",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -518,6 +556,7 @@
                     "key": "field_6458c3fe55dba",
                     "label": "Events",
                     "name": "tribe_events",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -538,6 +577,7 @@
                     "key": "field_6458c3fe55dbb",
                     "label": "Resources",
                     "name": "resources",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -572,7 +612,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1683539135
+    "show_in_rest": 0,
+    "modified": 1726518874
 }
