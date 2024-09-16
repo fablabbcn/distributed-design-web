@@ -6,6 +6,8 @@ $title_section_posts = get_sub_field('title');
 $button_section_posts = get_sub_field('button');
 $posts_section_posts = get_sub_field('posts');
 $show_cat = get_sub_field('show_cat');
+$show_read_more = get_sub_field('show_read_more');
+$hidden_date = get_sub_field('hidden_date');
 ?>
 <div class="py-20 flex flex-col gap-10 px-10">
     <h3 class="text-3xl"><?php echo $title_section_posts; ?></h3>
@@ -20,18 +22,23 @@ $show_cat = get_sub_field('show_cat');
                             alt="<?php echo $post->post_title; ?>"
                         >
                     </div>
-                    <div class="p-5 grow">
+                    <div class="p-5 grow <?php echo ($show_read_more) ? 'pb-12' : '' ?>">
                         <?php 
                             $formatted_date = date('d F Y', strtotime($post->post_date));
                             $city_terms = get_the_terms($post->ID, 'city_post');
                         ?>
+                        <?php if(!$hidden_date): ?>
                         <span class="text-xs">
                             <span><?php echo $formatted_date; ?></span>
                             <?php if($city_terms): ?>
                             <span>| <?php echo $city_terms[0]->name ?></span>
                             <?php endif; ?>
                         </span>
+                        <?php endif; ?>
                         <h4 class="text-base"><?php echo $post->post_title; ?></h4>
+                        <?php if($show_read_more): ?>
+                            <div class="text-xs absolute bottom-5 left-5">Read more</div>
+                        <?php endif; ?>
                     </div>
                     <?php if($show_cat): ?>
                     <?php 
