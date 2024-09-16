@@ -30,14 +30,14 @@ $s_classes = array(
 			<?php $post = isset( $_post ) ? $_post : $post; ?>
 			<?php $author = get_field('author', $post->ID); ?>
 
-<header class="flex flex-col-reverse lg:flex-row lg:max-h-[575px]">
+<header class="flex flex-col-reverse lg:flex-row">
 	<?php if($author): ?>
 		<?php include('template-parts/post/author-info.php') ?>
 	<?php endif; ?>
 	<div class="grow relative">
 		<img 
 			width="1920" 
-			class="rounded-tl-[8rem] lg:rounded-tl-[16rem] w-full h-full object-cover object-center" 
+			class="relative lg:absolute top-0 left-0 rounded-tl-[8rem] lg:rounded-tl-[16rem] w-full h-full object-cover object-center" 
 			src="<?php echo get_the_post_thumbnail_url( $post->ID); ?>" 
 			alt="<?php echo $post->post_title; ?>"
 		>
