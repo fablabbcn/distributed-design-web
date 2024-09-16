@@ -17,7 +17,7 @@ $paginate_links = str_replace(
 ?>
 
 
-<nav class="flex justify-center items-center">
+<nav class="flex justify-end items-center">
 
 	<?php if ( $facet_pager ) : ?>
 		<?php echo wp_kses_post( $facet_pager ); ?>
