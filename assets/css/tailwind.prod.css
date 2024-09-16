@@ -606,6 +606,7 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .top-\[-48px\] { top: -48px; }
 .top-full { top: 100%; }
 .top-px { top: 1px; }
+.top-5 { top: 1.25rem; }
 .-z-10 { z-index: -10; }
 .-z-50 { z-index: -50; }
 .z-0 { z-index: 0; }
@@ -1731,6 +1732,8 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 @media (min-width: 1024px) {
  .lg\:absolute { position: absolute; }
  .lg\:right-\[calc\(100\%\+1rem\)\] { right: -webkit-calc(100% + 1rem); right: -moz-calc(100% + 1rem); right: calc(100% + 1rem); }
+ .lg\:left-0 { left: 0px; }
+ .lg\:top-0 { top: 0px; }
  .lg\:order-first { -webkit-box-ordinal-group: -9998; -webkit-order: -9999; -moz-box-ordinal-group: -9998; -ms-flex-order: -9999; order: -9999; }
  .lg\:col-span-1 { grid-column: span 1 / span 1; }
  .lg\:col-span-2 { grid-column: span 2 / span 2; }

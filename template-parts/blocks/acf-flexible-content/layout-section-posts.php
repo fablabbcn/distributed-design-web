@@ -5,13 +5,14 @@
 $title_section_posts = get_sub_field('title');
 $button_section_posts = get_sub_field('button');
 $posts_section_posts = get_sub_field('posts');
+$show_cat = get_sub_field('show_cat');
 ?>
 <div class="py-20 flex flex-col gap-10 px-10">
     <h3 class="text-3xl"><?php echo $title_section_posts; ?></h3>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <?php foreach( $posts_section_posts as $post): ?>
             <a class="no-underline" href="<?php echo get_the_permalink( $post->ID ) ?>">
-                <div class="rounded-2xl bg-white">
+                <div class="rounded-2xl bg-white flex flex-col h-full relative">
                     <div class="w-full aspect-[1.3/1] overflow-hidden rounded-t-2xl">
                         <img 
                             class="w-full h-full object-cover object-center rounded-t-2xl hover:scale-110"
@@ -19,9 +20,21 @@ $posts_section_posts = get_sub_field('posts');
                             alt="<?php echo $post->post_title; ?>"
                         >
                     </div>
-                    <div class="p-5">
+                    <div class="p-5 grow">
                         <?php 
-                            $formatted_date = date('d F Y', strtotime($post->post_date)); 
+                            $formatted_date = date('d F Y', strtotime($post->post_date));
+                            $city_terms = get_the_terms($post->ID, 'city_post');
+                        ?>
+                        <span class="text-xs">
+                            <span><?php echo $formatted_date; ?></span>
+                            <?php if($city_terms): ?>
+                            <span>| <?php echo $city_terms[0]->name ?></span>
+                            <?php endif; ?>
+                        </span>
+                        <h4 class="text-base"><?php echo $post->post_title; ?></h4>
+                    </div>
+                    <?php if($show_cat): ?>
+                    <?php 
                             $categories = get_the_category( $post->ID );
                             $category_list = [];
                             if ( !empty( $categories ) ) {
@@ -31,9 +44,10 @@ $posts_section_posts = get_sub_field('posts');
                             }
                             $category_names = implode(', ', $category_list);
                         ?>
-                        <span class="text-xs"><?php echo $formatted_date; ?> | <?php echo $category_names; ?></span>
-                        <h4 class="text-base"><?php echo $post->post_title; ?></h4>
+                    <div class="absolute top-5 left-5 rounded-full bg-purple text-white p-2 text-xs font-semibold capitalize">
+                        <?php echo $category_names; ?>
                     </div>
+                    <?php endif; ?>
                 </div>
             </a>
         <?php endforeach; ?>

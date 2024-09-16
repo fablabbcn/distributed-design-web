@@ -28,7 +28,7 @@ $s_classes = array(
 <?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
 			<?php $post = isset( $_post ) ? $_post : $post; ?>
-			<?php $author = get_field('author', $post->ID); ?>
+			<?php $author = (get_field('author', $post->ID)) ? get_field('author', $post->ID) : false ; ?>
 
 <header class="flex flex-col-reverse lg:flex-row">
 	<?php if($author): ?>
@@ -37,7 +37,7 @@ $s_classes = array(
 	<div class="grow relative">
 		<img 
 			width="1920" 
-			class="relative lg:absolute top-0 left-0 rounded-tl-[8rem] lg:rounded-tl-[16rem] w-full h-full object-cover object-center" 
+			class="relative rounded-tl-[8rem] lg:rounded-tl-[16rem] w-full h-full object-cover object-center <?php echo ($author) ? 'lg:absolute lg:top-0 lg:left-0' : '' ?>" 
 			src="<?php echo get_the_post_thumbnail_url( $post->ID); ?>" 
 			alt="<?php echo $post->post_title; ?>"
 		>

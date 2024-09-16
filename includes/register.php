@@ -193,6 +193,39 @@ if ( ! function_exists( 'llos_custom_types_register' ) ) {
 		);
 
 		register_taxonomy( 'category_author', 'author', $args );
+
+		// Taxonomies.
+		$labels = array(
+			'name'                => _x( 'Cities', 'taxonomy general name', 'nug' ),
+			'singular_name'       => _x( 'City', 'taxonomy singular name', 'nug' ),
+			'search_items'        => __( 'Search Cities', 'nug' ),
+			'popular_items'       => __( 'Popular Cities', 'nug' ),
+			'all_items'           => __( 'All Cities', 'nug' ),
+			'parent_item'         => __( 'Parent City', 'nug' ),
+			'edit_item'           => __( 'Edit City', 'nug' ),
+			'update_item'         => __( 'Update City', 'nug' ),
+			'add_new_item'        => __( 'Add City', 'nug' ),
+			'new_item_name'       => __( 'New City', 'nug' ),
+			'add_or_remove_items' => __( 'Add or remove City', 'nug' ),
+		);
+
+		$args = array(
+			'label'             => __( 'City', 'nug' ),
+			'labels'            => $labels,
+			'public'            => true,
+			'hierarchical'      => true,
+			'query_var'         => true,
+			'show_ui'           => true,
+			'show_in_nav_menus' => true,
+			'show_admin_column' => true,
+			'show_in_rest'      => true,
+			'rewrite'           => array(
+				'slug'       => 'city',
+				'with_front' => false,
+			),
+		);
+
+		register_taxonomy( 'city_post', 'post', $args );
 		
 		
 	} add_action( 'init', 'llos_custom_types_register' );
