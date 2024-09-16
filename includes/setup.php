@@ -16,7 +16,7 @@ function load_the_theme_settings() {
 		add_image_size( 'icon-thumbnails', 300, null, true );
 
 		// Add supports
-		add_theme_support( 'html5' );
+		//add_theme_support( 'html5' );
 		add_theme_support( 'custom-background' );
 	}
 
