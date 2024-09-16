@@ -25,34 +25,29 @@ $s_classes = array(
 
 ?>
 
-
-<main class="container flex-grow">
-	<article class="grid gap-12 px-8 py-12">
-
-		<?php while ( have_posts() ) : ?>
+<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
 			<?php $post = isset( $_post ) ? $_post : $post; ?>
+			<?php $author = get_field('author', $post->ID); ?>
 
-			<header class="min-w-0">
-				<div data-layout="hero" class="<?php the_classes( $s_classes['layout'] ); ?>">
+<header class="flex flex-col-reverse lg:flex-row lg:max-h-[575px]">
+	<?php if($author): ?>
+		<?php include('template-parts/post/author-info.php') ?>
+	<?php endif; ?>
+	<div class="grow relative">
+		<img 
+			width="1920" 
+			class="rounded-tl-[8rem] lg:rounded-tl-[16rem] w-full h-full object-cover object-center" 
+			src="<?php echo get_the_post_thumbnail_url( $post->ID); ?>" 
+			alt="<?php echo $post->post_title; ?>"
+		>
+		<div class="absolute top-0 left-0 w-[8rem] h-[8rem] lg:w-[16rem] lg:h-[16rem] z-10 bg-gradient-to-tl from-transparent to-blue rounded-br-full lg:rounded-br-full blur-lg"></div>
+	</div>
+	
+</header>
 
-					<?php include locate_template( 'template-parts/singular/hero.php' ); ?>
-
-					<div class="<?php the_classes( $s_classes['columns'] ); ?>">
-						<?php include locate_template( 'template-parts/singular/meta.php' ); ?>
-					</div>
-
-					<?php if ( 'post' === $post->post_type ) : ?>
-						<div class="<?php the_classes( $s_classes['columns'] ); ?>">
-							<div class="grid-layout grid-cols-1 col-span-full lg:col-start-3 lg:col-end-7">
-								<h1 class="mt-4 -mb-4 text-2xl leading-tight"><?php the_title(); ?></h1>
-							</div>
-						</div>
-					<?php endif; ?>
-
-				</div>
-			</header>
-
+<main class="container flex-grow overflow-x-hidden">
+	<article class="grid gap-12 px-8 py-12">
 			<?php if ( 'talent' === $post->post_type ) : ?>
 				<?php
 				$definitions = array(
@@ -207,9 +202,9 @@ $s_classes = array(
 				</nav>
 			<?php endif; ?>
 
-		<?php endwhile; ?>
 	</article>
 </main>
 
+<?php endwhile; ?>
 
 <?php get_footer(); ?>
