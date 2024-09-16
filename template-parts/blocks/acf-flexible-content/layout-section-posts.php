@@ -52,6 +52,7 @@ $show_cat = get_sub_field('show_cat');
             </a>
         <?php endforeach; ?>
     </div>
+    <?php if($button_section_posts): ?>
     <a 
         class="ddp-button w-fit mx-auto"
         href="<?php echo $button_section_posts['url'] ?>" 
@@ -59,5 +60,6 @@ $show_cat = get_sub_field('show_cat');
     >
         <?php echo $button_section_posts['title'] ?>
     </a>
+    <?php endif; ?>
 </div>
 <?php wp_reset_postdata(); ?>
