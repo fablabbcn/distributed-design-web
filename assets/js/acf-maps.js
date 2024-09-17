@@ -62,8 +62,8 @@ function initMap($el) {
 
     // Set minimum zoom level
     var listener = google.maps.event.addListener(map, "idle", function () {
-      if (map.getZoom() > 16 && visibleMarkers === 1) {
-        map.setZoom(16);
+      if (map.getZoom() > 8 && visibleMarkers === 1) {
+        map.setZoom(8);
       }
       google.maps.event.removeListener(listener);
     });
