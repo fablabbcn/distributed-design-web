@@ -13,11 +13,11 @@ $gallery = get_field('gallery', $partner->ID);
         <?php endif; ?>
     </div>
     <div class="flex flex-col lg:flex-1 gap-y-4 lg:gap-y-6 leading-normal">
-        <div class="pb-4 lg:pb-6 border-b text-base">
+        <div class="text-base">
             <?php echo wp_kses_ddmp( get_field('description', $partner->ID) ); ?>
         </div>
         <?php if ( get_field('modal_what', $partner->ID) ) : ?>
-            <div class="flex flex-col lg:flex-row gap-4 lg:gap-10">
+            <div class="pt-4 lg:pt-6 border-t  flex flex-col lg:flex-row gap-4 lg:gap-10">
                 <div class="min-w-[210px] max-w-[30%] text-2xl"><?php get_field('modal_what_title', $partner->ID) ? wp_kses_ddmp( get_field('modal_what_title', $partner->ID) ) : 'What do they do?'; ?></div>
                 <div class="text-sm flex flex-col gap-y-2"><?php echo wp_kses_ddmp( get_field('modal_what', $partner->ID) ); ?></div>
             </div>

@@ -1665,6 +1665,7 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .lg\:pb-6 { padding-bottom: 1.5rem; }
  .lg\:pr-16 { padding-right: 4rem; }
  .lg\:pt-8 { padding-top: 2rem; }
+ .lg\:pt-6 { padding-top: 1.5rem; }
  .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
  .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
  .lg\:text-base { font-size: 1rem; line-height: 1.5rem; }
