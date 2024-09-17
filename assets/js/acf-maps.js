@@ -30,7 +30,7 @@ function initMap($el) {
 
   // Center map based on markers.
   centerMap(map);
-  addFiltersEvents(map);
+  initMapFilters(map);
   // Return map instance.
   return map;
 }
@@ -117,7 +117,7 @@ function centerMap(map) {
   }
 }
 
-function addFiltersEvents(map) {
+function initMapFilters(map) {
   const $filters = $(".partners-map-filter");
   $filters.on("click", function () {
     var filter = $(this).data("filter");
