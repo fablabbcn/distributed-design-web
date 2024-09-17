@@ -22,7 +22,7 @@ $image = get_post_thumbnail_id() ?: array_filter(
 ?>
 
 
-<a class="group grid grid-cols-1 rounded-2xl overflow-hidden no-underline will-change-transform" href="<?php the_permalink(); ?>">
+<a class="group grid grid-cols-1 rounded-2xl overflow-hidden no-underline h-full will-change-transform" href="<?php the_permalink(); ?>">
   <div class="relative">
     <?php if ( $is_post_new() ) : ?>
       <div class="z-10 absolute m-4 ddp-button font-semibold <?php echo $bg_color[ get_post_type() ] ?: 'bg-black'; ?>">New!</div>
@@ -31,8 +31,10 @@ $image = get_post_thumbnail_id() ?: array_filter(
       <?php echo wp_get_attachment_image( $image, 'post-thumbnail', false, array( 'class' => 'w-full h-full object-cover group-hover:scale-105 group-focus:scale-105	transition-transform will-change-transform' ) ); ?>
     </figure>
   </div>
-  <div class="grid items-end px-6 py-5 <?php echo $card['theme'] ?: 'bg-white'; ?>">
-    <p class="line-clamp-1"><?php the_title(); ?></p>
-    <!-- <p class="text-xl font-regular line-clamp-1"><?php the_title(); ?></p> -->
+  <div class="grid items-end px-6 py-5 bg-white">
+    <div class="text-base font-semibold"><?php the_title(); ?></div>
+    <?php if( get_field('author', get_the_ID()) ): ?>
+      <div class="text-sm"><?php echo get_field('author', get_the_ID())->post_title; ?></div>
+    <?php endif; ?>
   </div>
 </a>
