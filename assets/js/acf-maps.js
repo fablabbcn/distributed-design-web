@@ -83,9 +83,18 @@ function initMarker($marker, map) {
 
     // Show info window when marker is clicked.
     google.maps.event.addListener(marker, "click", function () {
+      closeAllInfoWindows(map); // Close all other info windows
       infowindow.open(map, marker);
     });
   }
+}
+
+function closeAllInfoWindows(map) {
+  map.markers.forEach(function (marker) {
+    if (marker.infowindow) {
+      marker.infowindow.close();
+    }
+  });
 }
 
 /**
