@@ -358,3 +358,7 @@ body.single-post main > article {
 [data-ajaxchimp] {
   &::after { content: attr(data-content); }
 }
+
+.gm-style .gm-style-iw-c {
+  @apply !w-full lg:!w-[1200px] !max-h-[250px] !max-w-[70vw] lg:!max-h-[70vh] overflow-auto;
+}
