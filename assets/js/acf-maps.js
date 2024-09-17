@@ -19,6 +19,7 @@ function initMap($el) {
   var mapArgs = {
     zoom: $el.data("zoom") || 16,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
+    mapTypeControl: false,
   };
   var map = new google.maps.Map($el[0], mapArgs);
   // Add markers.
