@@ -27,7 +27,7 @@ $partner_types = get_terms( array(
             <div class="rich-text lg:col-span-8 lg:pr-16">
                 <?php wp_kses_ddmp( $description ); ?>
                 <?php if ($partner_types) : ?>
-                    <div class="flex flex-wrap gap-2">
+                    <div class="flex flex-wrap gap-y-2 gap-x-2 lg:gap-x-10">
                         <button
                             class="bg-white partners-map-filter py-1 px-2 rounded-full leading-none no-underline border border-black hover:border-black"
                             data-filter="all"
