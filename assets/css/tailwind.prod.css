@@ -1472,7 +1472,7 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .gm-style .gm-style-iw-c { max-height: 250px !important; width: 100% !important; max-width: 70vw !important; }
 .gm-style .gm-style-iw-c { overflow: auto; }
 @media (min-width: 1024px) {
- .gm-style .gm-style-iw-c { max-height: 70vh !important; } }
+ .gm-style .gm-style-iw-c { max-height: 70vh !important; width: 1200px !important; } }
 @media (min-width: 768px) {
  .md\:aspect-h-2 { --tw-aspect-h: 2; }
  .md\:aspect-w-3 { position: relative; padding-bottom: -webkit-calc(var(--tw-aspect-h) / 3 * 100%); padding-bottom: -moz-calc(var(--tw-aspect-h) / 3 * 100%); padding-bottom: calc(var(--tw-aspect-h) / 3 * 100%); padding-bottom: -webkit-calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); padding-bottom: -moz-calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); --tw-aspect-w: 3; }
@@ -1602,6 +1602,7 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .lg\:h-\[70vh\] { height: 70vh; }
  .lg\:h-auto { height: auto; }
  .lg\:\!max-h-\[70vh\] { max-height: 70vh !important; }
+ .lg\:\!w-\[1200px\] { width: 1200px !important; }
  .lg\:w-1\/2 { width: 50%; }
  .lg\:w-8 { width: 2rem; }
  .lg\:w-\[16rem\] { width: 16rem; }

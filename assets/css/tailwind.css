@@ -360,5 +360,5 @@ body.single-post main > article {
 }
 
 .gm-style .gm-style-iw-c {
-  @apply !w-full !max-h-[250px] !max-w-[70vw] lg:!max-h-[70vh] overflow-auto;
+  @apply !w-full lg:!w-[1200px] !max-h-[250px] !max-w-[70vw] lg:!max-h-[70vh] overflow-auto;
 }
