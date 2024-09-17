@@ -79,6 +79,8 @@ function initMarker($marker, map) {
       content: $marker.html(),
     });
 
+    marker.infowindow = infowindow; 
+
     // Show info window when marker is clicked.
     google.maps.event.addListener(marker, "click", function () {
       infowindow.open(map, marker);
@@ -145,6 +147,13 @@ function initMapFilters(map) {
         } else {
           marker.setVisible(false);
         }
+      }
+    });
+
+    // close all info windows
+    map.markers.forEach(function (marker) {
+      if (marker.infowindow) {
+        marker.infowindow.close();
       }
     });
 
