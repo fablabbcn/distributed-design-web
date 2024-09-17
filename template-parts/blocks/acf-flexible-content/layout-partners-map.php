@@ -51,7 +51,7 @@ $partner_types = get_terms( array(
 
     <div class="col-span-full">
         <?php if ( $partners ) : ?>
-            <div class="acf-map w-full h-[400px] lg:aspect-w-16 lg:aspect-h-9 overflow-hidden" data-zoom="16">
+            <div class="acf-map w-full h-[400px] lg:aspect-w-16 lg:aspect-h-7 overflow-hidden" data-zoom="16">
                 <?php foreach( $partners as $partner ) : ?>
                     <?php 
                     $location = get_field('location', $partner->ID);

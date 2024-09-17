@@ -472,6 +472,8 @@ a:hover, button:hover, a:focus, button:focus {
 .aspect-w-3 > * { position: absolute; height: 100%; width: 100%; top: 0; right: 0; bottom: 0; left: 0; }
 .aspect-w-4 { position: relative; padding-bottom: -webkit-calc(var(--tw-aspect-h) / 4 * 100%); padding-bottom: -moz-calc(var(--tw-aspect-h) / 4 * 100%); padding-bottom: calc(var(--tw-aspect-h) / 4 * 100%); padding-bottom: -webkit-calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); padding-bottom: -moz-calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); --tw-aspect-w: 4; }
 .aspect-w-4 > * { position: absolute; height: 100%; width: 100%; top: 0; right: 0; bottom: 0; left: 0; }
+.aspect-h-8 { --tw-aspect-h: 8; }
+.aspect-h-7 { --tw-aspect-h: 7; }
 .aspect-none { position: static; padding-bottom: 0; }
 .aspect-none > * { position: static; height: auto; width: auto; top: auto; right: auto; bottom: auto; left: auto; }
 body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; line-height: 1; font-family: "Source code Pro", ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; -webkit-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); -moz-box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); background-color: #111827; -webkit-border-top-right-radius: 0.5rem; -moz-border-radius-topright: 0.5rem; border-top-right-radius: 0.5rem; position: fixed; z-index: 2147483647; bottom: 0; left: 0; }
@@ -1377,6 +1379,8 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .lg\:aspect-w-4 > * { position: absolute; height: 100%; width: 100%; top: 0; right: 0; bottom: 0; left: 0; }
  .lg\:aspect-w-16 { position: relative; padding-bottom: -webkit-calc(var(--tw-aspect-h) / 16 * 100%); padding-bottom: -moz-calc(var(--tw-aspect-h) / 16 * 100%); padding-bottom: calc(var(--tw-aspect-h) / 16 * 100%); padding-bottom: -webkit-calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); padding-bottom: -moz-calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%); --tw-aspect-w: 16; }
  .lg\:aspect-w-16 > * { position: absolute; height: 100%; width: 100%; top: 0; right: 0; bottom: 0; left: 0; }
+ .lg\:aspect-h-8 { --tw-aspect-h: 8; }
+ .lg\:aspect-h-7 { --tw-aspect-h: 7; }
  .lg\:aspect-none { position: static; padding-bottom: 0; }
  .lg\:aspect-none > * { position: static; height: auto; width: auto; top: auto; right: auto; bottom: auto; left: auto; }
 
