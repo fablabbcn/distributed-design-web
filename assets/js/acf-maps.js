@@ -30,46 +30,7 @@ function initMap($el) {
 
   // Center map based on markers.
   centerMap(map);
-  $(".partners-map-filter").on("click", function () {
-    var filter = $(this).data("filter");
-    var bounds = new google.maps.LatLngBounds();
-    var visibleMarkers = 0;
-
-    // Remove active class from all filter buttons
-    $(".partners-map-filter").removeClass("border-black");
-    $(".partners-map-filter").addClass("border-transparent");
-
-    // Add active class to the clicked filter button
-    $(this).removeClass("border-transparent");
-    $(this).addClass("border-black");
-
-    map.markers.forEach(function (marker) {
-      if (filter == "all") {
-        marker.setVisible(true);
-        bounds.extend(marker.getPosition());
-        visibleMarkers++;
-      } else {
-        if (marker.filter == filter) {
-          marker.setVisible(true);
-          bounds.extend(marker.getPosition());
-          visibleMarkers++;
-        } else {
-          marker.setVisible(false);
-        }
-      }
-    });
-
-    map.fitBounds(bounds);
-
-    // Set minimum zoom level
-    var listener = google.maps.event.addListener(map, "idle", function () {
-      if (map.getZoom() > 8 && visibleMarkers === 1) {
-        map.setZoom(8);
-      }
-      google.maps.event.removeListener(listener);
-    });
-  });
-
+  addFiltersEvents(map);
   // Return map instance.
   return map;
 }
@@ -154,6 +115,49 @@ function centerMap(map) {
   } else {
     map.fitBounds(bounds);
   }
+}
+
+function addFiltersEvents(map) {
+  const $filters = $(".partners-map-filter");
+  $filters.on("click", function () {
+    var filter = $(this).data("filter");
+    var bounds = new google.maps.LatLngBounds();
+    var visibleMarkers = 0;
+
+    // Remove active class from all filter buttons
+    $filters.removeClass("border-black");
+    $filters.addClass("border-transparent");
+
+    // Add active class to the clicked filter button
+    $(this).removeClass("border-transparent");
+    $(this).addClass("border-black");
+
+    map.markers.forEach(function (marker) {
+      if (filter == "all") {
+        marker.setVisible(true);
+        bounds.extend(marker.getPosition());
+        visibleMarkers++;
+      } else {
+        if (marker.filter == filter) {
+          marker.setVisible(true);
+          bounds.extend(marker.getPosition());
+          visibleMarkers++;
+        } else {
+          marker.setVisible(false);
+        }
+      }
+    });
+
+    map.fitBounds(bounds);
+
+    // Set minimum zoom level
+    var listener = google.maps.event.addListener(map, "idle", function () {
+      if (map.getZoom() > 8 && visibleMarkers === 1) {
+        map.setZoom(8);
+      }
+      google.maps.event.removeListener(listener);
+    });
+  });
 }
 
 // Render maps on page load.
