@@ -51,7 +51,7 @@ $partner_types = get_terms( array(
 
     <div class="col-span-full">
         <?php if ( $partners ) : ?>
-            <div class="acf-map aspect-w-16 aspect-h-9 w-full overflow-hidden" data-zoom="16">
+            <div class="acf-map w-full h-[400px] lg:aspect-w-16 lg:aspect-h-9 overflow-hidden" data-zoom="16">
                 <?php foreach( $partners as $partner ) : ?>
                     <?php 
                     $location = get_field('location', $partner->ID);
@@ -68,20 +68,20 @@ $partner_types = get_terms( array(
                             data-color="<?php echo esc_attr( get_field('type_color', $partner_type) ); ?>"
                             data-filter="<?php echo esc_attr( $partner_type->slug ); ?>"
                         >
-                            <div class="flex gap-6 p-4">
+                            <div class="flex flex-col lg:flex-row gap-4 lg:gap-6 p-1 lg:p-4">
                                 <div class="w-full lg:max-w-[200px]">
 									<div class="text-xl lg:text-3xl"><?php echo wp_kses_ddmp( $modal_title ); ?></div>
 									<?php if ( get_field('link', $partner->ID) ) : ?>
 									<?php $link = get_field('link', $partner->ID); ?>
-										<a target="_blank" class="absolute bottom-4 left-4 text-sm leading-none border px-6 py-2 rounded-full no-underline hover:bg-black hover:text-white transition-colors"  href="<?php echo esc_url( $link['url'] ); ?>">Website</a>
+										<a target="_blank" class="absolute top-4 left-4 lg:top-auto lg:bottom-4 text-sm leading-none border border-black focus-visible:outline-none focus-visible:border-black px-4 lg:px-6 py-1 lg:py-2 rounded-full no-underline hover:bg-black hover:text-white transition-colors"  href="<?php echo esc_url( $link['url'] ); ?>">Website</a>
 									<?php endif; ?>
 								</div>
-                                <div class="flex flex-col lg:flex-1 gap-y-6 leading-normal">
-                                    <div class="pb-6 border-b text-base">
+                                <div class="flex flex-col lg:flex-1 gap-y-4 lg:gap-y-6 leading-normal">
+                                    <div class="pb-4 lg:pb-6 border-b text-base">
 										<?php echo wp_kses_ddmp( get_field('description', $partner->ID) ); ?>
 									</div>
 									<?php if ( get_field('modal_what', $partner->ID) ) : ?>
-										<div class="flex gap-10">
+										<div class="flex flex-col lg:flex-row gap-4 lg:gap-10">
 											<div class="min-w-[210px] max-w-[30%] text-2xl"><?php get_field('modal_what_title', $partner->ID) ? wp_kses_ddmp( get_field('modal_what_title', $partner->ID) ) : 'What do they do?'; ?></div>
 											<div class="text-sm flex flex-col gap-y-2"><?php echo wp_kses_ddmp( get_field('modal_what', $partner->ID) ); ?></div>
 										</div>
