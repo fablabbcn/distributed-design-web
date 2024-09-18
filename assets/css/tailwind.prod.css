@@ -994,6 +994,10 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .pt-1 { padding-top: 0.25rem; }
 .pt-\[2px\] { padding-top: 2px; }
 .pt-\[3px\] { padding-top: 3px; }
+.pt-20 { padding-top: 5rem; }
+.pt-0 { padding-top: 0px; }
+.pt-14 { padding-top: 3.5rem; }
+.pt-12 { padding-top: 3rem; }
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
@@ -1586,6 +1590,7 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
  .lg\:pr-16 { padding-right: 4rem; }
  .lg\:pt-6 { padding-top: 1.5rem; }
  .lg\:pt-8 { padding-top: 2rem; }
+ .lg\:pt-0 { padding-top: 0px; }
  .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
  .lg\:text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
  .lg\:text-base { font-size: 1rem; line-height: 1.5rem; }
