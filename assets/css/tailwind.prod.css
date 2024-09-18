@@ -685,6 +685,7 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .-mt-40 { margin-top: -10rem; }
 .-mt-10 { margin-top: -2.5rem; }
 .-mt-12 { margin-top: -3rem; }
+.mt-1 { margin-top: 0.25rem; }
 .box-border { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 .line-clamp-1 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 1; }
 .line-clamp-3 { overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
@@ -722,6 +723,10 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .h-fit { height: -webkit-fit-content; height: -moz-fit-content; height: fit-content; }
 .h-full { height: 100%; }
 .h-screen { height: 100vh; }
+.h-\[200vh\] { height: 200vh; }
+.h-\[70vh\] { height: 70vh; }
+.h-\[calc\(100vh-80px\)\] { height: -webkit-calc(100vh - 80px); height: -moz-calc(100vh - 80px); height: calc(100vh - 80px); }
+.h-\[calc\(100vh-82px\)\] { height: -webkit-calc(100vh - 82px); height: -moz-calc(100vh - 82px); height: calc(100vh - 82px); }
 .\!max-h-\[250px\] { max-height: 250px !important; }
 .max-h-10 { max-height: 2.5rem; }
 .max-h-12 { max-height: 3rem; }
@@ -848,8 +853,10 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .overflow-auto { overflow: auto; }
 .overflow-hidden { overflow: hidden; }
 .\!overflow-visible { overflow: visible !important; }
+.overflow-scroll { overflow: scroll; }
 .overflow-y-auto { overflow-y: auto; }
 .overflow-x-hidden { overflow-x: hidden; }
+.overflow-y-scroll { overflow-y: scroll; }
 .scroll-smooth { scroll-behavior: smooth; }
 .truncate { overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; }
 .hyphens-none { -webkit-hyphens: none; -moz-hyphens: none; -ms-hyphens: none; hyphens: none; }
@@ -984,6 +991,9 @@ body::before { content: '-'; padding: 0.5rem; color: #fff; font-size: 0.75rem; l
 .pt-4 { padding-top: 1rem; }
 .pt-6 { padding-top: 1.5rem; }
 .pt-8 { padding-top: 2rem; }
+.pt-1 { padding-top: 0.25rem; }
+.pt-\[2px\] { padding-top: 2px; }
+.pt-\[3px\] { padding-top: 3px; }
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
