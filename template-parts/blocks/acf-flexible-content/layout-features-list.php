@@ -26,13 +26,13 @@ $description = get_sub_field( 'description' );
 		<ul class="grid-layout grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 gap-y-8 items-start">
 			<?php foreach ( $_items as $_item ) : ?>
 
-				<li class="grid gap-4">
+				<li class="grid gap-16 border-t pt-8">
 					<div class="grid gap-2">
 						<figure class="rounded-2xl overflow-hidden">
 							<?php echo wp_get_attachment_image( $_item['image'], 'thumbnail', false, array( 'class' => 'w-full' ) ); ?>
 						</figure>
 					</div>
-					<div class="grid gap-2">
+					<div class="grid gap-4">
 						<div class="font-semibold"><?php echo esc_html( $_item['title'] ); ?></div>
 						<div class=""><?php echo wp_kses_post( $_item['text'] ); ?></div>
 					</div>
