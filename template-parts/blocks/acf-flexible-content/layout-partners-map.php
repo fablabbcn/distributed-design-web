@@ -29,14 +29,14 @@ $partner_types = get_terms( array(
                 <?php if ($partner_types) : ?>
                     <div class="flex flex-wrap gap-y-2 gap-x-2 lg:gap-x-10">
                         <button
-                            class="bg-white partners-map-filter py-1 px-2 rounded-full leading-none no-underline border border-black hover:border-black"
+                            class="bg-white partners-map-filter ddp-button"
                             data-filter="all"
                         >
                             Show all
                         </button>
                         <?php foreach ($partner_types as $partner_type) : ?>
                         <button 
-                            class="partners-map-filter py-1 px-2 rounded-full leading-none no-underline border border-transparent hover:border-black"
+                            class="partners-map-filter ddp-button"
                             style="background-color: <?php echo esc_attr(get_field('type_color', $partner_type)); ?>;"
                             data-filter="<?php echo esc_attr($partner_type->slug); ?>"
                         >
