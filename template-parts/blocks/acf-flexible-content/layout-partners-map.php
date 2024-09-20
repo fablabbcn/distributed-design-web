@@ -36,7 +36,7 @@ $partner_types = get_terms( array(
                         </button>
                         <?php foreach ($partner_types as $partner_type) : ?>
                         <button 
-                            class="partners-map-filter ddp-button"
+                            class="partners-map-filter ddp-button border-transparent"
                             style="background-color: <?php echo esc_attr(get_field('type_color', $partner_type)); ?>;"
                             data-filter="<?php echo esc_attr($partner_type->slug); ?>"
                         >
