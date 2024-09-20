@@ -2743,6 +2743,71 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_66ea9b88ff8d7": {
+                    "key": "layout_66ea9b88ff8d7",
+                    "name": "section_members",
+                    "label": "Section Members",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66ea9ba6ff8da",
+                            "label": "Title",
+                            "name": "title",
+                            "aria-label": "",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "default_value": "",
+                            "allow_in_bindings": 0,
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_66ea9b96ff8d9",
+                            "label": "Members",
+                            "name": "members",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "post_type": [
+                                "member"
+                            ],
+                            "post_status": "",
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": "",
+                            "max": "",
+                            "allow_in_bindings": 0,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -2768,5 +2833,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1726504670
+    "modified": 1726652005
 }

@@ -1,6 +1,6 @@
 {
     "key": "group_66e8964754472",
-    "title": "Partners",
+    "title": "Partners | Members",
     "fields": [
         {
             "key": "field_66e8b2442d4eb",
@@ -166,6 +166,13 @@
                 "operator": "==",
                 "value": "partner"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "member"
+            }
         ]
     ],
     "menu_order": 0,
@@ -189,5 +196,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1726528655
+    "modified": 1726651416
 }

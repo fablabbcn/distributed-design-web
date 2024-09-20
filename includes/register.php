@@ -126,6 +126,39 @@ if ( ! function_exists( 'llos_custom_types_register' ) ) {
 
 		register_post_type( 'member', $args );
 
+		// Taxonomies.
+		$labels = array(
+			'name'                => _x( 'Places', 'taxonomy general name', 'nug' ),
+			'singular_name'       => _x( 'Place', 'taxonomy singular name', 'nug' ),
+			'search_items'        => __( 'Search Places', 'nug' ),
+			'popular_items'       => __( 'Popular Places', 'nug' ),
+			'all_items'           => __( 'All Places', 'nug' ),
+			'parent_item'         => __( 'Parent Place', 'nug' ),
+			'edit_item'           => __( 'Edit Place', 'nug' ),
+			'update_item'         => __( 'Update Place', 'nug' ),
+			'add_new_item'        => __( 'Add Place', 'nug' ),
+			'new_item_name'       => __( 'New Place', 'nug' ),
+			'add_or_remove_items' => __( 'Add or remove Place', 'nug' ),
+		);
+
+		$args = array(
+			'label'             => __( 'Place', 'nug' ),
+			'labels'            => $labels,
+			'public'            => true,
+			'hierarchical'      => true,
+			'query_var'         => true,
+			'show_ui'           => true,
+			'show_in_nav_menus' => true,
+			'show_admin_column' => true,
+			'show_in_rest'      => true,
+			'rewrite'           => array(
+				'slug'       => 'place',
+				'with_front' => false,
+			),
+		);
+
+		register_taxonomy( 'place_member', 'member', $args );
+
 		// Custom post types.
 		$labels = array(
 			'name'               => _x( 'Authors', 'post type general name', 'nug' ),

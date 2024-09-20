@@ -21,14 +21,43 @@
     ServicesSlider()
     SliderFirstText()
     initDefaultSlider()
+    MembersSection()
     // initFundInfo()
     // initStatistics()
     // initMemberList()
+    document.body.style.overflow = 'unset';
   })
 
   // $(window).on('resize', function () {
   //   checkScreenSize()
   // })
+
+  function MembersSection (){
+    const grid = document.querySelector('.grid-members-section');
+    if(grid){
+      grid.querySelectorAll('.col-member').forEach(member => {
+        member.addEventListener('mouseenter', () => {
+          member.querySelector('img').style.opacity = 1;
+        })
+        member.addEventListener('mouseleave', () => {
+          member.querySelector('img').style.opacity = 0;
+        })
+        member.addEventListener('click', () => {
+          const index = member.getAttribute('data-membernum')
+          const popup = grid.querySelector(`[data-membermap='${index}'`)
+          popup.classList.remove('pointer-events-none')
+          popup.style.opacity = 1;
+          document.body.style.overflow = 'hidden';
+          const close = grid.querySelector(`[data-closemap='${index}'`)
+          close.addEventListener('click', () => {
+            popup.classList.add('pointer-events-none')
+            popup.style.opacity = 0;
+            document.body.style.overflow = 'unset';
+          })
+        })
+      })
+    }
+  }
 
   function checkScreenSize () {
     var winWidth = $(window).outerWidth()
