@@ -14,7 +14,7 @@ $index_slider_with_text = 0;
                 <?php $index_slider_with_text++; ?>
                 <div class="swiper-slide">
                     <img 
-                        class="rounded-2xl <?= ($index_slider_with_text == 1) ? 'ml-auto w-4/5' : 'w-full' ?>" 
+                        class="rounded-2xl aspect-[0.80] object-cover object-center <?= ($index_slider_with_text == 1) ? 'ml-auto w-4/5' : 'w-full' ?>" 
                         width="1024" 
                         src="<?php echo $img['url'] ?>" 
                         alt="<?php echo $img['alt'] ?>"
