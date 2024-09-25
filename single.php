@@ -31,7 +31,7 @@ $s_classes = array(
 			<?php $author = (get_field('author', $post->ID)) ? get_field('author', $post->ID) : false ; ?>
 
 <header class="flex flex-col-reverse lg:flex-row">
-	<?php if($author): ?>
+	<?php if('talent' === $post->post_type): ?>
 		<?php include('template-parts/post/author-info.php') ?>
 	<?php endif; ?>
 	<div class="grow relative">
@@ -50,23 +50,8 @@ $s_classes = array(
 	<main class="container flex-grow">
 		<article class="grid gap-12 px-8 py-12">
 				<?php if ( 'talent' === $post->post_type ) : ?>
-					<?php
-					$definitions = array(
-						'items' => array(
-							array( 'terms' => array('Profession'), 'definitions' => array( get_field( 'profession' ) ?: '—' ) ),
-							array( 'terms' => array('Project'), 'definitions' => array( get_field( 'project' ) ?: '—' ) ),
-							array( 'terms' => array('Based in'), 'definitions' => array( get_field( 'city' ) ?: '—' ) ),
-							array( 'terms' => array('Platform Member'), 'definitions' => array( get_field( 'organization' ) ?: '—' ) ),
-							array( 'terms' => array('Works at'), 'definitions' => array( get_field( 'workplace' ) ?: '—' ) ),
-						),
-					);
-					?>
-
-					<section class="<?php the_classes( $s_classes['section'] ); ?>">
-						<div data-layout="talent-details" class="<?php the_classes( $s_classes['layout'] ); ?>">
-							<div class="<?php the_classes( $s_classes['columns'] ); ?>"><?php include locate_template( 'template-parts/singular/talent.php' ); ?></div>
-						</div>
-					</section>
+					
+				<!-- -->
 
 				<?php elseif ( 'tribe_events' === $post->post_type ) : ?>
 					<section class="<?php the_classes( $s_classes['section'] ); ?>">
