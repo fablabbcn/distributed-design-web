@@ -1,17 +1,17 @@
 <?php
 
-/* Template Name: Talents Archive */
+/* Template Name: Talent Archive */
 
-$post->post_type = 'talents';
+$post->post_type = 'talent';
 
 query_posts( array(
 	'facetwp'          => true,
 	'suppress_filters' => true,
-	'post_type'        => 'talents',
+	'post_type'        => 'talent',
 	// 'posts_per_page'   => -1,
 	'order'            => 'desc',
 	'orderby'          => 'meta_value',
-	'meta_key'         => '_EventStartDate',
+	//'meta_key'         => '_EventStartDate',
 	// 'meta_query'       => array(
 	// 	array(
 	// 		'key'     => '_EventEndDate',

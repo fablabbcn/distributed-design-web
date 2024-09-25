@@ -4,7 +4,7 @@ acf_form_head();
 get_header();
 
 $facet = do_shortcode( '[facetwp template="archive_' . get_post_type() . '"]' );
-
+var_dump(get_post_type());
 $section = array(
 	'title' => array(
 		'post' => get_the_title( get_option('page_for_posts', true) ),
@@ -31,8 +31,6 @@ $slider = array(
 	'component'  => 'template-parts/base/slider-slide-post',
 	'pagination' => true,
 );
-
-var_dump(get_post_type());
 
 ?>
 
