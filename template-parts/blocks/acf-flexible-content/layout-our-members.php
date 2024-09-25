@@ -27,7 +27,7 @@ $members_our_members = new WP_Query( $args_our_members );
             <a href="<?php the_permalink(); ?>">
                 <img 
                     width="480" 
-                    class="w-14 h-auto hover:opacity-50" 
+                    class="max-h-8 w-auto hover:opacity-50" 
                     src="<?php echo get_field('logo', get_the_ID())['url'] ?>" 
                     alt="<?php echo get_field('logo', get_the_ID())['alt'] ?>"
                 >

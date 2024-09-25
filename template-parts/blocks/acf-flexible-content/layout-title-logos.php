@@ -11,7 +11,7 @@ $logos_title_logos= get_sub_field('logos');
     <div class="flex flex-wrap justify-center max-w-[1100px] mx-auto gap-5 py-10">
         <?php foreach($logos_title_logos as $logo): ?>
             <img 
-                class="w-20"
+                class="max-h-8 w-auto"
                 src="<?php echo $logo['url']; ?>" 
                 alt="<?php echo $logo['alt']; ?>">
         <?php endforeach; ?>

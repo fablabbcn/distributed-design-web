@@ -32,6 +32,8 @@ $slider = array(
 	'pagination' => true,
 );
 
+var_dump(get_post_type());
+
 ?>
 
 <?php get_template_part( 'template-parts/blocks/acf-flexible-content/content' ); ?>
