@@ -51,6 +51,6 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
-    require('@vicgutt/tailwindcss-debug'),
+    //require('@vicgutt/tailwindcss-debug'),
   ],
 }
