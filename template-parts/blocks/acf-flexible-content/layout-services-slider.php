@@ -29,7 +29,7 @@ $disable_info_slider = get_sub_field('disable_info');
             <?php foreach( $services_services_slider as $service ): ?>
                 <div class="swiper-slide rounded-2xl overflow-hidden">
                     <a class="relative" href="<?php echo get_the_permalink( $service->ID ) ?>">
-                        <img class="aspect-[1/1]" src="<?php echo get_the_post_thumbnail_url( $service->ID ) ?>" alt="<?php echo $service->post_title; ?>">
+                        <img class="aspect-[1/1] object-cover" src="<?php echo get_the_post_thumbnail_url( $service->ID ) ?>" alt="<?php echo $service->post_title; ?>">
                         <div class="absolute top-0 left-0 w-full h-full flex flex-col gap-y-1 justify-center items-center bg-[#00000060] text-white px-10 text-center">
                             <?php if(!$disable_info_slider): ?>
                             <span class="text-2xl"><?php echo $service->post_title; ?></span>

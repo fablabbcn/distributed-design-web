@@ -91,7 +91,16 @@ $theme = array(
 						<ul class="z-10 relative flex flex-col lg:flex-row lg:gap-12 w-full">
 							<?php foreach ( $second_menu_items as $key => $menu_item ) : ?>
 								<li class="border-t lg:border-none border-black">
-									<?php $is_current = $_SERVER['REQUEST_URI'] === parse_url( $menu_item->url, PHP_URL_PATH ); ?>
+									<?php 
+									$current_uri = $_SERVER['REQUEST_URI']; 
+									$menu_uri = parse_url($menu_item->url, PHP_URL_PATH); 
+
+									// Obtener el dominio actual
+									$current_host = parse_url($_SERVER['HTTP_HOST'], PHP_URL_HOST);
+
+									// Verificar si el dominio es el mismo y no es un subdominio
+									$is_current = $current_uri === $menu_uri && ($current_host === 'distributeddesign.eu');
+									?>
 									<a
 										class="flex justify-start items-center gap-x-8 py-6 lg:py-0 <?php echo esc_attr( $is_current ? 'underline' : 'no-underline' ); ?> hover:underline focus:underline"
 										href="<?php echo esc_url( $menu_item->url ); ?>"

@@ -10,10 +10,11 @@ $button_title_text_button = get_sub_field('button');
 
 ?>
 <div class="py-40 flex flex-col items-center gap-y-10 relative text-white">
-    <h3 class="text-5xl">
+    <div class="bg-[#00000060] absolute top-0 left-0 w-full h-full"></div>
+    <h3 class="text-5xl relative z-50">
         <?php echo $title_title_text_button; ?>
     </h3>
-    <div class="text-base text-center max-w-[650px]">
+    <div class="text-base text-center max-w-[650px] relative z-50">
         <?php echo $text_title_text_button; ?>
     </div>
     <?php if($button_title_text_button): ?>
