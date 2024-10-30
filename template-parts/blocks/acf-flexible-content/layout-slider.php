@@ -6,7 +6,7 @@ $slides_slider = get_sub_field('slides');
 $slides_hasBorder = get_sub_field('hasborder');
 $slides_borderColor = get_sub_field('bordercolor');
 ?>
-<div style="background: <?php echo ($slides_borderColor && $slides_hasBorder) ? $slides_borderColor : 'transparent' ?>" >
+<div class="section-slider-container" style="background: <?php echo ($slides_borderColor && $slides_hasBorder) ? $slides_borderColor : 'transparent' ?>" >
     <div class="overflow-x-hidden <?php echo ($slides_hasBorder) ? 'rounded-br-[8rem] lg:rounded-br-[16rem]' : '' ?>">
         <div class="swiper-common relative">
             <div class="swiper-wrapper aspect-[1/1.5] lg:aspect-[16/7] relative">

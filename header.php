@@ -34,6 +34,9 @@ $theme = array(
 		gtag('js', new Date());
 		gtag('config', 'UA-108533710-2');
 	</script>
+	<style>
+		.section-data-container:has(+ .section-slider-container){ padding-bottom: 120px }
+	</style>
 
 	<?php wp_head(); ?>
 </head>
