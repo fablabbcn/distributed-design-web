@@ -23,7 +23,7 @@ $image = get_post_thumbnail_id() ?: array_filter(
 
 
 <a class="group grid grid-cols-1 rounded-2xl overflow-hidden no-underline h-full will-change-transform" href="<?php the_permalink(); ?>">
-  <div class="relative">
+  <div class="relative bg-white">
     <?php if ( $is_post_new() ) : ?>
       <div class="z-10 absolute m-4 ddp-button font-semibold <?php echo $bg_color[ get_post_type() ] ?: 'bg-black'; ?>">New!</div>
     <?php endif; ?>

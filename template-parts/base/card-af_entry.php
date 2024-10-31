@@ -20,7 +20,7 @@ $image = get_field( 'images' )[0]['image']['ID'];
 
 
 <a class="group grid grid-cols-1 rounded-2xl overflow-hidden no-underline will-change-transform" href="<?php the_permalink(); ?>">
-  <div class="relative">
+  <div class="relative <?php echo $card['theme'] ?: 'bg-white'; ?>">
     <?php if ( true || $is_post_new() ) : ?>
       <div class="z-10 absolute m-4 left-0 ddp-button font-semibold <?php echo $bg_color[ get_post_type() ] ?: 'bg-white'; ?>">New!</div>
     <?php endif; ?>
