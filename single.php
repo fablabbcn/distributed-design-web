@@ -158,6 +158,7 @@ $s_classes = array(
 								'post__not_in'   => array( $post->ID ),
 								'post_type'      => $post->post_type,
 								'posts_per_page' => '3',
+								'orderby'        => 'rand',
 						) ),
 						'button' => array(
 							'label' => array(
