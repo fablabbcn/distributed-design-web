@@ -1668,6 +1668,9 @@ a:hover, button:hover, a:focus, button:focus {
 .min-h-full { min-height: 100%; }
 .min-h-screen { min-height: 100vh; }
 .min-h-\[350px\] { min-height: 350px; }
+.min-h-\[150px\] { min-height: 150px; }
+.min-h-\[250px\] { min-height: 250px; }
+.min-h-\[200px\] { min-height: 200px; }
 .\!w-full { width: 100% !important; }
 .w-0 { width: 0px; }
 .w-1 { width: 0.25rem; }
