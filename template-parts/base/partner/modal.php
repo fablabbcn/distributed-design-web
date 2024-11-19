@@ -4,7 +4,7 @@ $partner_type = $args['partner_type'];
 $modal_title = get_field('modal_title', $partner->ID) ? get_field('modal_title', $partner->ID) : get_the_title($partner->ID);
 $gallery = get_field('gallery', $partner->ID);
 ?>
-<div class="flex flex-col lg:flex-row gap-4 lg:gap-6 p-1 lg:p-4">
+<div class="flex flex-col lg:flex-row gap-4 lg:gap-6 p-1 lg:p-4 min-h-[350px]">
     <div class="w-full lg:max-w-[200px]">
         <div class="text-xl lg:text-3xl"><?php echo wp_kses_ddmp( $modal_title ); ?></div>
         <?php if ( get_field('link', $partner->ID) ) : ?>

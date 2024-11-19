@@ -1667,6 +1667,7 @@ a:hover, button:hover, a:focus, button:focus {
 .min-h-\[2rem\] { min-height: 2rem; }
 .min-h-full { min-height: 100%; }
 .min-h-screen { min-height: 100vh; }
+.min-h-\[350px\] { min-height: 350px; }
 .\!w-full { width: 100% !important; }
 .w-0 { width: 0px; }
 .w-1 { width: 0.25rem; }
