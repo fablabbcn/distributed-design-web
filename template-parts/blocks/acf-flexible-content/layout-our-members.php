@@ -21,17 +21,14 @@ $members_our_members = new WP_Query( $args_our_members );
             <?php echo $text_our_members; ?>
         </div>
     </div>
-    <div class="col-span-12 lg:col-span-8 flex justify-center gap-5 flex-wrap brightness-0">
+    <div class="col-span-12 lg:col-span-8 flex justify-center items-center gap-4 flex-wrap brightness-0 max-w-[1000px] mx-auto">
         <?php if($members_our_members->have_posts()): ?>
             <?php while($members_our_members->have_posts()): $members_our_members->the_post(); ?>
-            <a href="<?php the_permalink(); ?>">
-                <img 
-                    width="480" 
-                    class="max-h-8 w-auto hover:opacity-50" 
-                    src="<?php echo get_field('logo', get_the_ID())['url'] ?>" 
-                    alt="<?php echo get_field('logo', get_the_ID())['alt'] ?>"
-                >
-            </a>
+            <figure class="flex">
+                <a href="<?php echo (get_field('external_link', get_the_ID())) ? (get_field('external_link', get_the_ID())) : the_permalink(); ?>" <?php echo (get_field('external_link', get_the_ID())) ? 'target="_blank"' : '' ?> >
+                    <img class="w-auto max-h-8" src="<?php echo get_field('logo', get_the_ID())['url'] ?>" alt="<?php echo get_field('logo', get_the_ID())['alt'] ?>">
+                </a>
+            </figure>
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
         <?php endif; ?>    
