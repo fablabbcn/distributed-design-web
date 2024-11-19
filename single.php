@@ -52,7 +52,15 @@ $s_classes = array(
 				<?php if ( 'talent' === $post->post_type ) : ?>
 					
 				<!-- -->
-
+				<?php elseif ( 'member' === $post->$post_type) : ?>
+					<?php get_template_part(
+                        'template-parts/base/partner/modal',
+                        'partner-modal', 
+                        array(
+                            'partner' => $post,
+                            'partner_type' => null,
+                        ));
+                    ?> 
 				<?php elseif ( 'tribe_events' === $post->post_type ) : ?>
 					<section class="<?php the_classes( $s_classes['section'] ); ?>">
 						<div data-layout="event-details" class="<?php the_classes( $s_classes['layout'] ); ?>">

@@ -42,19 +42,6 @@
         member.addEventListener('mouseleave', () => {
           member.querySelector('img').style.opacity = 0;
         })
-        member.addEventListener('click', () => {
-          const index = member.getAttribute('data-membernum')
-          const popup = grid.querySelector(`[data-membermap='${index}'`)
-          popup.classList.remove('pointer-events-none')
-          popup.style.opacity = 1;
-          document.body.style.overflow = 'hidden';
-          const close = grid.querySelector(`[data-closemap='${index}'`)
-          close.addEventListener('click', () => {
-            popup.classList.add('pointer-events-none')
-            popup.style.opacity = 0;
-            document.body.style.overflow = 'unset';
-          })
-        })
       })
     }
   }
