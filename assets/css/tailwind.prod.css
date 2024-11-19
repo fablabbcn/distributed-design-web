@@ -1619,7 +1619,6 @@ a:hover, button:hover, a:focus, button:focus {
 .h-\[400px\] { height: 400px; }
 .h-\[50vw\] { height: 50vw; }
 .h-\[8rem\] { height: 8rem; }
-.h-\[calc\(100vh-80px\)\] { height: -webkit-calc(100vh - 80px); height: -moz-calc(100vh - 80px); height: calc(100vh - 80px); }
 .h-\[inherit\] { height: inherit; }
 .h-auto { height: auto; }
 .h-fit { height: -webkit-fit-content; height: -moz-fit-content; height: fit-content; }
@@ -1664,13 +1663,10 @@ a:hover, button:hover, a:focus, button:focus {
 .max-h-px { max-height: 1px; }
 .max-h-screen { max-height: 100vh; }
 .min-h-0 { min-height: 0px; }
+.min-h-\[210px\] { min-height: 210px; }
 .min-h-\[2rem\] { min-height: 2rem; }
 .min-h-full { min-height: 100%; }
 .min-h-screen { min-height: 100vh; }
-.min-h-\[350px\] { min-height: 350px; }
-.min-h-\[150px\] { min-height: 150px; }
-.min-h-\[250px\] { min-height: 250px; }
-.min-h-\[200px\] { min-height: 200px; }
 .\!w-full { width: 100% !important; }
 .w-0 { width: 0px; }
 .w-1 { width: 0.25rem; }
@@ -3877,7 +3873,6 @@ a:hover, button:hover, a:focus, button:focus {
  .lg\:py-4 { padding-top: 1rem; padding-bottom: 1rem; }
  .lg\:pb-32 { padding-bottom: 8rem; }
  .lg\:pr-16 { padding-right: 4rem; }
- .lg\:pt-0 { padding-top: 0px; }
  .lg\:pt-6 { padding-top: 1.5rem; }
  .lg\:pt-8 { padding-top: 2rem; }
  .lg\:text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
