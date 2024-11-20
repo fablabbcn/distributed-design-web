@@ -5,6 +5,29 @@
 $title_section_posts = get_sub_field('title');
 $button_section_posts = get_sub_field('button');
 $posts_section_posts = get_sub_field('posts');
+$taxonomySelected = get_sub_field('recent_posts');
+if($taxonomySelected){
+    $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => 3,
+        'tax_query'      => array(
+            array(
+                'taxonomy' => 'category',
+                'field'    => 'term_id',
+                'terms'    => $taxonomySelected[0],
+            ),
+        ),
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    );
+    $query = new WP_Query($args);
+    $posts_section_posts = $query->posts;
+}
+
+
+
+wp_reset_postdata(); // Siempre que uses WP_Query, resetea la data global
+
 $show_cat = get_sub_field('show_cat');
 $show_read_more = get_sub_field('show_read_more');
 $hidden_date = get_sub_field('hidden_date');

@@ -1688,28 +1688,6 @@
                             "allow_in_bindings": 0
                         },
                         {
-                            "key": "field_66f3e68ac2527",
-                            "label": "Disable info",
-                            "name": "disable_info",
-                            "aria-label": "",
-                            "type": "true_false",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "hide_admin": 0,
-                            "message": "",
-                            "default_value": 0,
-                            "allow_in_bindings": 0,
-                            "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
-                        },
-                        {
                             "key": "field_66df0ff4bcd55",
                             "label": "Services",
                             "name": "services",
@@ -1846,195 +1824,6 @@
                             "elements": "",
                             "bidirectional": 0,
                             "bidirectional_target": []
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_66f3e81f702d6": {
-                    "key": "layout_66f3e81f702d6",
-                    "name": "cards_section",
-                    "label": "Cards Section",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_66f3e81f702db",
-                            "label": "Background",
-                            "name": "background",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "hide_admin": 0,
-                            "default_value": "",
-                            "enable_opacity": 0,
-                            "return_format": "string",
-                            "allow_in_bindings": 0
-                        },
-                        {
-                            "key": "field_66f3e81f702dc",
-                            "label": "Cards Color",
-                            "name": "cards_color",
-                            "aria-label": "",
-                            "type": "color_picker",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "hide_admin": 0,
-                            "default_value": "",
-                            "enable_opacity": 0,
-                            "return_format": "string",
-                            "allow_in_bindings": 0
-                        },
-                        {
-                            "key": "field_66f3e81f702dd",
-                            "label": "Title",
-                            "name": "title",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "hide_admin": 0,
-                            "default_value": "",
-                            "maxlength": "",
-                            "allow_in_bindings": 0,
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_66f3e81f702de",
-                            "label": "Cards",
-                            "name": "cards",
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "hide_admin": 0,
-                            "layout": "table",
-                            "min": 0,
-                            "max": 0,
-                            "collapsed": "",
-                            "button_label": "Add Row",
-                            "rows_per_page": 20,
-                            "sub_fields": [
-                                {
-                                    "key": "field_66f3e855702df",
-                                    "label": "Title",
-                                    "name": "title",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "hide_admin": 0,
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "allow_in_bindings": 0,
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "parent_repeater": "field_66f3e81f702de"
-                                },
-                                {
-                                    "key": "field_66f3e859702e0",
-                                    "label": "Text",
-                                    "name": "text",
-                                    "aria-label": "",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "hide_admin": 0,
-                                    "default_value": "",
-                                    "allow_in_bindings": 0,
-                                    "tabs": "all",
-                                    "toolbar": "full",
-                                    "media_upload": 1,
-                                    "delay": 0,
-                                    "parent_repeater": "field_66f3e81f702de"
-                                },
-                                {
-                                    "key": "field_66f3e863702e1",
-                                    "label": "Button",
-                                    "name": "button",
-                                    "aria-label": "",
-                                    "type": "link",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "hide_admin": 0,
-                                    "return_format": "array",
-                                    "allow_in_bindings": 0,
-                                    "parent_repeater": "field_66f3e81f702de"
-                                },
-                                {
-                                    "key": "field_66f3e86e702e2",
-                                    "label": "Image",
-                                    "name": "image",
-                                    "aria-label": "",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "hide_admin": 0,
-                                    "return_format": "array",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": "",
-                                    "allow_in_bindings": 0,
-                                    "preview_size": "medium",
-                                    "parent_repeater": "field_66f3e81f702de"
-                                }
-                            ]
                         }
                     ],
                     "min": "",
@@ -2288,8 +2077,26 @@
                             "ui_off_text": ""
                         },
                         {
-                            "key": "field_66e03c888fc39",
-                            "label": "Posts",
+                            "key": "field_66e8464101d64",
+                            "label": "Button",
+                            "name": "button",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "hide_admin": 0,
+                            "return_format": "array",
+                            "allow_in_bindings": 0
+                        },
+                        {
+                            "key": "field_67236d58f2b2b",
+                            "label": "posts",
                             "name": "posts",
                             "aria-label": "",
                             "type": "relationship",
@@ -2319,11 +2126,11 @@
                             "bidirectional_target": []
                         },
                         {
-                            "key": "field_66e8464101d64",
-                            "label": "Button",
-                            "name": "button",
+                            "key": "field_673dd0b643a9c",
+                            "label": "Recent posts",
+                            "name": "recent_posts",
                             "aria-label": "",
-                            "type": "link",
+                            "type": "taxonomy",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -2333,8 +2140,17 @@
                                 "id": ""
                             },
                             "hide_admin": 0,
-                            "return_format": "array",
-                            "allow_in_bindings": 0
+                            "taxonomy": "category",
+                            "add_term": 1,
+                            "save_terms": 0,
+                            "load_terms": 0,
+                            "return_format": "id",
+                            "field_type": "checkbox",
+                            "allow_in_bindings": 0,
+                            "bidirectional": 0,
+                            "multiple": 0,
+                            "allow_null": 0,
+                            "bidirectional_target": []
                         }
                     ],
                     "min": "",
@@ -2955,18 +2771,18 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_66ea9b88ff8d7": {
-                    "key": "layout_66ea9b88ff8d7",
+                "layout_672371bc03810": {
+                    "key": "layout_672371bc03810",
                     "name": "section_members",
                     "label": "Section Members",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_66ea9ba6ff8da",
-                            "label": "Title",
+                            "key": "field_672371c803812",
+                            "label": "title",
                             "name": "title",
                             "aria-label": "",
-                            "type": "wysiwyg",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -2977,15 +2793,15 @@
                             },
                             "hide_admin": 0,
                             "default_value": "",
+                            "maxlength": "",
                             "allow_in_bindings": 0,
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         },
                         {
-                            "key": "field_66ea9b96ff8d9",
-                            "label": "Members",
+                            "key": "field_672371ce03813",
+                            "label": "members",
                             "name": "members",
                             "aria-label": "",
                             "type": "relationship",
@@ -3044,5 +2860,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727261042
+    "modified": 1732104472
 }
