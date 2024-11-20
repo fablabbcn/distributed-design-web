@@ -1625,6 +1625,7 @@ a:hover, button:hover, a:focus, button:focus {
 .h-full { height: 100%; }
 .h-px { height: 1px; }
 .h-screen { height: 100vh; }
+.\!h-fit { height: -webkit-fit-content !important; height: -moz-fit-content !important; height: fit-content !important; }
 .\!max-h-\[250px\] { max-height: 250px !important; }
 .max-h-0 { max-height: 0px; }
 .max-h-1 { max-height: 0.25rem; }

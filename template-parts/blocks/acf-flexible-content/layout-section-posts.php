@@ -36,9 +36,11 @@ $hidden_date = get_sub_field('hidden_date');
     <h3 class="text-3xl"><?php echo $title_section_posts; ?></h3>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
         <?php foreach( $posts_section_posts as $post): ?>
+            <?php if($post->post_type != 'service'): ?>
             <a class="no-underline" href="<?php echo get_the_permalink( $post->ID ) ?>">
-                <div class="rounded-2xl bg-white flex flex-col h-full relative">
-                    <div class="w-full aspect-[1.3/1] overflow-hidden rounded-t-2xl">
+            <?php endif; ?>
+                <div class="rounded-2xl bg-white flex flex-col h-full relative <?php echo ($post->post_type == 'service') ? '!h-fit is-service-post' : '' ?>">
+                    <div class="w-full aspect-[1.3/1] overflow-hidden rounded-t-2xl ">
                         <img 
                             class="w-full h-full object-cover object-center rounded-t-2xl hover:scale-110"
                             src="<?php echo get_the_post_thumbnail_url( $post->ID ) ?>" 
@@ -59,8 +61,13 @@ $hidden_date = get_sub_field('hidden_date');
                         </span>
                         <?php endif; ?>
                         <h4 class="text-base"><?php echo $post->post_title; ?></h4>
+                        <?php if($post->post_type == 'service'): ?>
+                            <div class="text-sm more-info overflow-hidden h-0 transition-all duration-500 ease-in-out">
+                                <div class="wrapper"><?php echo $post->post_excerpt; ?></div>
+                            </div>
+                        <?php endif; ?>
                         <?php if($show_read_more): ?>
-                            <div class="text-xs absolute bottom-5 left-5">Read more</div>
+                            <div class="text-xs absolute bottom-5 left-5 button-read-more cursor-pointer">Read more</div>
                         <?php endif; ?>
                     </div>
                     <?php if($show_cat): ?>
@@ -79,7 +86,9 @@ $hidden_date = get_sub_field('hidden_date');
                     </div>
                     <?php endif; ?>
                 </div>
+        <?php if($post->post_type != 'service'): ?>
             </a>
+        <?php endif; ?>
         <?php endforeach; ?>
     </div>
     <?php if($button_section_posts): ?>

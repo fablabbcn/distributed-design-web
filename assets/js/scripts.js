@@ -22,6 +22,7 @@
     SliderFirstText()
     initDefaultSlider()
     MembersSection()
+    ServicePostsReadMore()
     // initFundInfo()
     // initStatistics()
     // initMemberList()
@@ -31,6 +32,24 @@
   // $(window).on('resize', function () {
   //   checkScreenSize()
   // })
+
+  function ServicePostsReadMore(){
+    const posts = document.querySelectorAll('.is-service-post');
+    if(posts){
+      posts.forEach(post => {
+        const button = post.querySelector('.button-read-more');
+        if(button){
+          button.addEventListener('click', () => {
+            const info = post.querySelector('.more-info');
+            if(info){
+              info.style.height = info.querySelector('.wrapper').offsetHeight + 'px'
+              button.style.display = 'none'
+            }
+          })
+        }
+      })
+    }
+  }
 
   function MembersSection (){
     const grid = document.querySelector('.grid-members-section');
