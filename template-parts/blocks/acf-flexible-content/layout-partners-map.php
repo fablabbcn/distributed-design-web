@@ -15,6 +15,20 @@ $partner_types = get_terms( array(
     'taxonomy' => 'partner_type',
     'hide_empty' => true,
 ) );
+
+$talents = get_posts(array(
+    'post_type' => 'talent',
+    'posts_per_page' => -1,
+    'meta_query' => array(
+        array(
+            'key' => 'location',
+            'compare' => 'EXISTS',
+        ),
+    ),
+));
+
+$PartnersAndTalents = array_merge($partners, $talents);
+
 ?>
 
 <section class="relative grid-layout flex flex-col gap-y-10 p-10">
@@ -40,7 +54,7 @@ $partner_types = get_terms( array(
                             style="background-color: <?php echo esc_attr(get_field('type_color', $partner_type)); ?>;"
                             data-filter="<?php echo esc_attr($partner_type->slug); ?>"
                         >
-                            <?php echo esc_html($partner_type->name); ?>
+                            <?php echo ($partner_type->name == 'Talents') ? 'Creative Talents' : esc_attr($partner_type->name); ?>
                         </button>
                         <?php endforeach; ?>
                     </div>
@@ -52,10 +66,13 @@ $partner_types = get_terms( array(
     <div class="col-span-full">
         <?php if ( $partners ) : ?>
             <div class="acf-map w-full h-[400px] lg:aspect-w-16 lg:aspect-h-7 overflow-hidden" data-zoom="16">
-                <?php foreach( $partners as $partner ) : ?>
+                <?php foreach( $PartnersAndTalents as $partner ) : ?>
                     <?php 
                     $location = get_field('location', $partner->ID);
-                    $partner_type = get_the_terms($partner->ID, 'partner_type') ? get_the_terms($partner->ID, 'partner_type')[0] : null;
+                    $partner_type = 'talents';
+                    if($partner->post_type != 'talent'){
+                        $partner_type = get_the_terms($partner->ID, 'partner_type') ? get_the_terms($partner->ID, 'partner_type')[0] : null;
+                    }
                     if ( $location ) : 
                     ?>
                         <div

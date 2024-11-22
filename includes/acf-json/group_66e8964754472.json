@@ -173,6 +173,13 @@
                 "operator": "==",
                 "value": "member"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "talent"
+            }
         ]
     ],
     "menu_order": 0,
@@ -196,5 +203,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1726651416
+    "modified": 1732293321
 }
