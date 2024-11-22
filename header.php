@@ -27,12 +27,12 @@ $theme = array(
 	<title><?php wp_title( ' | ', true, 'right' ); ?></title>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-108533710-2"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZRJPDPB6SN"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag () { dataLayer.push(arguments); }
 		gtag('js', new Date());
-		gtag('config', 'UA-108533710-2');
+		gtag('config', 'G-ZRJPDPB6SN');
 	</script>
 	<style>
 		.section-data-container:has(+ .section-slider-container){ padding-bottom: 120px }
