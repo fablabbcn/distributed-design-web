@@ -26,6 +26,7 @@ $talents = get_posts(array(
         ),
     ),
 ));
+$talents_type;
 
 $PartnersAndTalents = array_merge($partners, $talents);
 
@@ -49,6 +50,9 @@ $PartnersAndTalents = array_merge($partners, $talents);
                             Show all
                         </button>
                         <?php foreach ($partner_types as $partner_type) : ?>
+                            <?php if($partner_type->name == 'Talents'){
+                                $talents_type = $partner_type;
+                            } ?>
                         <button 
                             class="partners-map-filter ddp-button border-transparent"
                             style="background-color: <?php echo esc_attr(get_field('type_color', $partner_type)); ?>;"
@@ -69,7 +73,7 @@ $PartnersAndTalents = array_merge($partners, $talents);
                 <?php foreach( $PartnersAndTalents as $partner ) : ?>
                     <?php 
                     $location = get_field('location', $partner->ID);
-                    $partner_type = 'talents';
+                    $partner_type = $talents_type;
                     if($partner->post_type != 'talent'){
                         $partner_type = get_the_terms($partner->ID, 'partner_type') ? get_the_terms($partner->ID, 'partner_type')[0] : null;
                     }
