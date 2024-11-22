@@ -37,7 +37,7 @@ $s_classes = array(
 	<div class="grow relative">
 		<img 
 			width="1920" 
-			class="relative rounded-tl-[8rem] lg:rounded-tl-[16rem] w-full h-full object-cover object-center <?php echo ($author) ? 'lg:absolute lg:top-0 lg:left-0' : '' ?>" 
+			class="relative rounded-tl-[8rem] lg:rounded-tl-[16rem] w-full h-full object-cover object-center <?php echo ($author && 'talent' === $post->post_type) ? 'lg:absolute lg:top-0 lg:left-0' : '' ?>" 
 			src="<?php echo get_the_post_thumbnail_url( $post->ID); ?>" 
 			alt="<?php echo $post->post_title; ?>"
 		>

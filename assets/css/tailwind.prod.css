@@ -1584,6 +1584,7 @@ a:hover, button:hover, a:focus, button:focus {
 .aspect-\[1\/1\] { aspect-ratio: 1/1; }
 .aspect-\[16\/9\] { aspect-ratio: 16/9; }
 .\!h-auto { height: auto !important; }
+.\!h-fit { height: -webkit-fit-content !important; height: -moz-fit-content !important; height: fit-content !important; }
 .\!h-full { height: 100% !important; }
 .h-0 { height: 0px; }
 .h-1 { height: 0.25rem; }
@@ -1625,7 +1626,6 @@ a:hover, button:hover, a:focus, button:focus {
 .h-full { height: 100%; }
 .h-px { height: 1px; }
 .h-screen { height: 100vh; }
-.\!h-fit { height: -webkit-fit-content !important; height: -moz-fit-content !important; height: fit-content !important; }
 .\!max-h-\[250px\] { max-height: 250px !important; }
 .max-h-0 { max-height: 0px; }
 .max-h-1 { max-height: 0.25rem; }
